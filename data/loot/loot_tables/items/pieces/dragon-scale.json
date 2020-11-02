@@ -1,0 +1,30 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "minecraft:prismarine_crystals",
+                    "weight": 1,
+                    "functions": [
+                        {
+                            "function": "minecraft:set_name",
+                            "name": {"text":"竜の鱗","color":"gold"}
+                        },
+                        {
+                            "function": "set_lore",
+                            "lore": [
+                                {"text":"航空機の開発に使う素材","color":"white"}
+                            ]
+                        },
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{item-type:dragon-scale}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

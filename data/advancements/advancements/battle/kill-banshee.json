@@ -1,0 +1,32 @@
+{
+  "parent": "advancements:battle/destroy-message-root",
+  "display": {
+    "icon": {
+      "item": "minecraft:phantom_membrane",
+      "nbt":"{}"
+    },
+    "title": {
+      "translate": "敵機撃墜:バンシー"
+    },
+    "description": {
+      "translate": "敵機撃墜:バンシー"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "kill_enemy": {
+      "trigger": "minecraft:impossible"
+    }    
+  },
+  "requirements": [
+    [
+      "kill_enemy"
+    ]
+  ],
+  "rewards": {
+    "function": "advancements:schedule-revoke-kill-enemy"
+  }
+}

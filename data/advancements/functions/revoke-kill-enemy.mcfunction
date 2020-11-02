@@ -1,0 +1,1 @@
+advancement revoke @a from advancements:battle/destroy-message-root

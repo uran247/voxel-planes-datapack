@@ -1,0 +1,46 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "minecraft:blue_ice",
+                    "weight": 1,
+                    "functions": [
+                        {
+                            "function":"set_name",
+                            "name":{"text":"氷の島 -制空-"}
+                        },
+                        {
+                            "function":"set_lore",
+                            "lore":[
+                                {"translate":"敵機を一定数撃墜せよ","color":"green"},
+                                {"translate":""},
+                                {"translate":"出撃条件：航空機がTier2以下","color":"blue"},
+                                {"translate":""},
+                                {"translate":"クリックでステージ開始"}
+                            ]
+                        },
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag":"{item-type:stage-select,stage:4,tier:2,CustomModelData:1,HideFlags:18}"
+                        },
+                        {
+                            "function": "minecraft:set_attributes",
+                            "modifiers":[
+                                {
+                                    "name":"cannot_stack",
+                                    "attribute":"cannot_stack",
+                                    "operation":"multiply_base",
+                                    "amount":1.0,
+                                    "slot":"mainhand"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

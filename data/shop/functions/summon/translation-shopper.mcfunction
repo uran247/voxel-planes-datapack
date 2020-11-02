@@ -1,0 +1,1 @@
+summon minecraft:villager ~ ~ ~ {NoAI:1,Silent:1b,Tags:[shopper,translation-shop],Rotation:[90f,0f]}

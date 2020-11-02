@@ -1,0 +1,32 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "minecraft:bat_spawn_egg",
+                    "weight": 1,
+                    "functions": [
+                        {
+                            "function":"set_name",
+                            "name":{"text":"Re.2005"}
+                        },
+                        {
+                            "function":"set_lore",
+                            "lore":[
+                                {"translate":"戦闘機","color":"green","bold":true},
+                                {"translate":" 武装"},
+                                {"translate":"  MG151/20×1","color":"blue"}
+                            ]
+                        },
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag":"{item-type:re2005,tier:4,CustomModelData:13,CanPlaceOn:[\"minecraft:stone\",\"minecraft:grass_path\"],HideFlags:18,EntityTag:{Silent:1b,Tags:[re2005-spawner,plane-spawner],ActiveEffects:[{Id:14b,Amplifier:1b,Duration:100,ShowParticles:0b}]}}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

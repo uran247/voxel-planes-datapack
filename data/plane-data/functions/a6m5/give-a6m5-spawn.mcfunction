@@ -1,0 +1,1 @@
+loot spawn ~ ~ ~ loot plane-data:a6m5

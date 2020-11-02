@@ -1,0 +1,32 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "minecraft:carrot_on_a_stick",
+                    "weight": 1,
+                    "functions": [
+                        {
+                            "function":"set_name",
+                            "name":{"text":"操縦桿"}
+                        },
+                        {
+                            "function":"set_lore",
+                            "lore":[
+                                {"translate":"武器の操作を行うときに使用","color":"blue"},
+                                [{"translate":"  ","color":"yellow"},{"keybind":"key.use","color":"yellow"},{"translate":"：武器使用","color":"yellow"}],
+                                [{"translate":"  ","color":"yellow"},{"keybind":"key.swapHands","color":"yellow"},{"translate":"キー：武器切り替え","color":"yellow"}]
+                            ]
+                        },
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag":"{item-type:controll-rod,CustomModelData:1}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

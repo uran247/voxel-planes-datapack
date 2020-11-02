@@ -1,0 +1,32 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "minecraft:bat_spawn_egg",
+                    "weight": 1,
+                    "functions": [
+                        {
+                            "function":"set_name",
+                            "name":{"text":"紫電二一型"}
+                        },
+                        {
+                            "function":"set_lore",
+                            "lore":[
+                                {"translate":"戦闘機","color":"green","bold":true},
+                                {"translate":" 武装"},
+                                {"translate":"  九九式20mm二号機銃二型×4","color":"blue"}
+                            ]
+                        },
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag":"{item-type:n1k2,tier:3,CustomModelData:13,CanPlaceOn:[\"minecraft:stone\",\"minecraft:grass_path\"],HideFlags:18,EntityTag:{Silent:1b,Tags:[n1k2-spawner,plane-spawner],ActiveEffects:[{Id:14b,Amplifier:1b,Duration:100,ShowParticles:0b}]}}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

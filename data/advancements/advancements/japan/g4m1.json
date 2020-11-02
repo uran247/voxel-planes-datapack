@@ -1,0 +1,44 @@
+{
+  "parent": "advancements:japan/ki-21",
+  "display": {
+    "icon": {
+      "item": "minecraft:bat_spawn_egg",
+      "nbt":"{CustomModelData:10}"
+    },
+    "title": {
+      "translate": "         一式陸上攻撃機         "
+    },
+    "description": [
+      {
+        "text": "日本海軍の陸上攻撃機。\n長い航続距離が長所で、防弾性能の低さが弱点であった。\n太平洋戦争序盤ではプリンス・オブ・ウェールズを撃沈するなどの戦果を上げた。",
+        "color":"white"
+      },
+      {
+        "text":"爆撃機 Tier2\n",
+        "color":"green"
+      }
+    ],
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "get_g4m1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+              "item": "minecraft:bat_spawn_egg",
+              "nbt": "{CustomModelData:10}"
+          }
+      ]
+      }
+    }    
+  },
+  "requirements": [
+    [
+      "get_g4m1"
+    ]
+  ]
+}

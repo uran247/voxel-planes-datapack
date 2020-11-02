@@ -1,0 +1,32 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "minecraft:bat_spawn_egg",
+                    "weight": 1,
+                    "functions": [
+                        {
+                            "function":"set_name",
+                            "name":{"text":"一式戦闘機 隼"}
+                        },
+                        {
+                            "function":"set_lore",
+                            "lore":[
+                                {"translate":"戦闘機","color":"green","bold":true},
+                                {"translate":" 武装"},
+                                {"translate":"  九七式7.7mm機銃×2","color":"blue"}
+                            ]
+                        },
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag":"{item-type:ki-43,weapon:7p7mm,tier:1,CustomModelData:2,CanPlaceOn:[\"minecraft:stone\",\"minecraft:grass_path\"],HideFlags:18,EntityTag:{Silent:1b,Tags:[ki43-spawner,plane-spawner],ActiveEffects:[{Id:14b,Amplifier:1b,Duration:100,ShowParticles:0b}]}}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

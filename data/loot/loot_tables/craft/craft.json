@@ -1,0 +1,164 @@
+{
+    "comment":"check slot 0-4, 9-13, 18-22",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "loot_table",
+                    "name": "plane-data:a6m2",
+                    "weight": 1,
+                    "conditions": [
+                        {
+                            "comment":"check slot 0-4",
+                            "condition": "minecraft:match_tool",
+                            "predicate": {"nbt": "{BlockEntityTag:{Items:[{Slot:0b,id:\"minecraft:tnt\"},{Slot:1b,id:\"minecraft:tnt\"},{Slot:2b,tag:{item-type:piece-of-wind}},{Slot:3b,id:\"minecraft:tnt\"},{Slot:4b,id:\"minecraft:tnt\"}]}}"}
+                        },
+                        {
+                            "comment":"check slot 9-13",
+                            "condition": "minecraft:match_tool",
+                            "predicate": {"nbt": "{BlockEntityTag:{Items:[{Slot:9b,id:\"minecraft:tnt\"},{Slot:10b,tag:{item-type:blueprint-tier2}},{Slot:11b,tag:{item-type:a5m}},{Slot:12b,tag:{item-type:piece-of-wind}},{Slot:13b,id:\"minecraft:tnt\"}]}}"}
+                        },
+                        {
+                            "comment":"check slot 18-22",
+                            "condition": "minecraft:match_tool",
+                            "predicate": {"nbt": "{BlockEntityTag:{Items:[{Slot:18b,id:\"minecraft:tnt\"},{Slot:19b,id:\"minecraft:tnt\"},{Slot:20b,tag:{item-type:piece-of-wind}},{Slot:21b,id:\"minecraft:tnt\"},{Slot:22b,id:\"minecraft:tnt\"}]}}"}
+                        }
+                    ]
+                },
+                {
+                    "type": "loot_table",
+                    "name": "plane-data:ki-44",
+                    "weight": 1,
+                    "conditions": [
+                        {
+                            "comment":"check slot 0-4",
+                            "condition": "minecraft:match_tool",
+                            "predicate": {"nbt": "{BlockEntityTag:{Items:[{Slot:0b,id:\"minecraft:tnt\"},{Slot:1b,id:\"minecraft:tnt\"},{Slot:2b,tag:{item-type:piece-of-spirit}},{Slot:3b,id:\"minecraft:tnt\"},{Slot:4b,id:\"minecraft:tnt\"}]}}"}
+                        },
+                        {
+                            "comment":"check slot 9-13",
+                            "condition": "minecraft:match_tool",
+                            "predicate": {"nbt": "{BlockEntityTag:{Items:[{Slot:9b,id:\"minecraft:tnt\"},{Slot:10b,tag:{item-type:blueprint-tier2}},{Slot:11b,tag:{item-type:ki-43}},{Slot:12b,tag:{item-type:piece-of-spirit}},{Slot:13b,id:\"minecraft:tnt\"}]}}"}
+                        },
+                        {
+                            "comment":"check slot 18-22",
+                            "condition": "minecraft:match_tool",
+                            "predicate": {"nbt": "{BlockEntityTag:{Items:[{Slot:18b,id:\"minecraft:tnt\"},{Slot:19b,id:\"minecraft:tnt\"},{Slot:20b,tag:{item-type:piece-of-spirit}},{Slot:21b,id:\"minecraft:tnt\"},{Slot:22b,id:\"minecraft:tnt\"}]}}"}
+                        }
+                    ]
+                },
+                {
+                    "type": "loot_table",
+                    "name": "plane-data:j2m3",
+                    "weight": 1,
+                    "conditions": [
+                        {
+                            "comment":"check slot 0-4",
+                            "condition": "minecraft:match_tool",
+                            "predicate": {"nbt": "{BlockEntityTag:{Items:[{Slot:0b,id:\"minecraft:tnt\"},{Slot:1b,id:\"minecraft:tnt\"},{Slot:2b,tag:{item-type:piece-of-thunder}},{Slot:3b,id:\"minecraft:tnt\"},{Slot:4b,id:\"minecraft:tnt\"}]}}"}
+                        },
+                        {
+                            "comment":"check slot 9-13",
+                            "condition": "minecraft:match_tool",
+                            "predicate": {"nbt": "{BlockEntityTag:{Items:[{Slot:9b,id:\"minecraft:tnt\"},{Slot:10b,tag:{item-type:blueprint-tier2}},{Slot:11b,tag:{item-type:a5m}},{Slot:12b,tag:{item-type:piece-of-thunder}},{Slot:13b,id:\"minecraft:tnt\"}]}}"}
+                        },
+                        {
+                            "comment":"check slot 18-22",
+                            "condition": "minecraft:match_tool",
+                            "predicate": {"nbt": "{BlockEntityTag:{Items:[{Slot:18b,id:\"minecraft:tnt\"},{Slot:19b,id:\"minecraft:tnt\"},{Slot:20b,tag:{item-type:piece-of-thunder}},{Slot:21b,id:\"minecraft:tnt\"},{Slot:22b,id:\"minecraft:tnt\"}]}}"}
+                        }
+                    ]
+                },
+                {
+                    "type": "loot_table",
+                    "name": "plane-data:d4y2",
+                    "weight": 1,
+                    "conditions": [
+                        {
+                            "comment":"check slot 0-4",
+                            "condition": "minecraft:match_tool",
+                            "predicate": {"nbt": "{BlockEntityTag:{Items:[{Slot:0b,id:\"minecraft:tnt\"},{Slot:1b,id:\"minecraft:tnt\"},{Slot:2b,tag:{item-type:piece-of-star}},{Slot:3b,id:\"minecraft:tnt\"},{Slot:4b,id:\"minecraft:tnt\"}]}}"}
+                        },
+                        {
+                            "comment":"check slot 9-13",
+                            "condition": "minecraft:match_tool",
+                            "predicate": {"nbt": "{BlockEntityTag:{Items:[{Slot:9b,id:\"minecraft:tnt\"},{Slot:10b,tag:{item-type:blueprint-tier2}},{Slot:11b,tag:{item-type:d3a}},{Slot:12b,tag:{item-type:piece-of-star}},{Slot:13b,id:\"minecraft:tnt\"}]}}"}
+                        },
+                        {
+                            "comment":"check slot 18-22",
+                            "condition": "minecraft:match_tool",
+                            "predicate": {"nbt": "{BlockEntityTag:{Items:[{Slot:18b,id:\"minecraft:tnt\"},{Slot:19b,id:\"minecraft:tnt\"},{Slot:20b,tag:{item-type:piece-of-star}},{Slot:21b,id:\"minecraft:tnt\"},{Slot:22b,id:\"minecraft:tnt\"}]}}"}
+                        }
+                    ]
+                },
+                {
+                    "type": "loot_table",
+                    "name": "plane-data:g4m1",
+                    "weight": 1,
+                    "conditions": [
+                        {
+                            "comment":"check slot 0-4",
+                            "condition": "minecraft:match_tool",
+                            "predicate": {"nbt": "{BlockEntityTag:{Items:[{Slot:0b,id:\"minecraft:tnt\"},{Slot:1b,id:\"minecraft:tnt\"},{Slot:2b,tag:{item-type:piece-of-water}},{Slot:3b,id:\"minecraft:tnt\"},{Slot:4b,id:\"minecraft:tnt\"}]}}"}
+                        },
+                        {
+                            "comment":"check slot 9-13",
+                            "condition": "minecraft:match_tool",
+                            "predicate": {"nbt": "{BlockEntityTag:{Items:[{Slot:9b,id:\"minecraft:tnt\"},{Slot:10b,tag:{item-type:blueprint-tier2}},{Slot:11b,tag:{item-type:ki-21}},{Slot:12b,tag:{item-type:piece-of-water}},{Slot:13b,id:\"minecraft:tnt\"}]}}"}
+                        },
+                        {
+                            "comment":"check slot 18-22",
+                            "condition": "minecraft:match_tool",
+                            "predicate": {"nbt": "{BlockEntityTag:{Items:[{Slot:18b,id:\"minecraft:tnt\"},{Slot:19b,id:\"minecraft:tnt\"},{Slot:20b,tag:{item-type:piece-of-water}},{Slot:21b,id:\"minecraft:tnt\"},{Slot:22b,id:\"minecraft:tnt\"}]}}"}
+                        }
+                    ]
+                },
+                {
+                    "type": "loot_table",
+                    "name": "loot:craft/equip-weapon/ki43-with-12p7mm",
+                    "weight": 1,
+                    "conditions": [
+                        {
+                            "comment":"check slot 0-4",
+                            "condition": "minecraft:match_tool",
+                            "predicate": {"nbt": "{BlockEntityTag:{Items:[{Slot:0b,id:\"minecraft:tnt\"},{Slot:1b,id:\"minecraft:tnt\"},{Slot:2b,id:\"minecraft:tnt\"},{Slot:3b,id:\"minecraft:tnt\"},{Slot:4b,id:\"minecraft:tnt\"}]}}"}
+                        },
+                        {
+                            "comment":"check slot 9-13",
+                            "condition": "minecraft:match_tool",
+                            "predicate": {"nbt": "{BlockEntityTag:{Items:[{Slot:9b,id:\"minecraft:tnt\"},{Slot:10b,tag:{item-type:ho103}},{Slot:11b,tag:{item-type:ki-43,weapon:7p7mm}},{Slot:12b,id:\"minecraft:tnt\"},{Slot:13b,id:\"minecraft:tnt\"}]}}"}
+                        },
+                        {
+                            "comment":"check slot 18-22",
+                            "condition": "minecraft:match_tool",
+                            "predicate": {"nbt": "{BlockEntityTag:{Items:[{Slot:18b,id:\"minecraft:tnt\"},{Slot:19b,id:\"minecraft:tnt\"},{Slot:20b,id:\"minecraft:tnt\"},{Slot:21b,id:\"minecraft:tnt\"},{Slot:22b,id:\"minecraft:tnt\"}]}}"}
+                        }
+                    ]
+                },
+                {
+                    "type": "loot_table",
+                    "name": "loot:craft/equip-weapon/g4m1-with-torpedo",
+                    "weight": 1,
+                    "conditions": [
+                        {
+                            "comment":"check slot 0-4",
+                            "condition": "minecraft:match_tool",
+                            "predicate": {"nbt": "{BlockEntityTag:{Items:[{Slot:0b,id:\"minecraft:tnt\"},{Slot:1b,id:\"minecraft:tnt\"},{Slot:2b,id:\"minecraft:tnt\"},{Slot:3b,id:\"minecraft:tnt\"},{Slot:4b,id:\"minecraft:tnt\"}]}}"}
+                        },
+                        {
+                            "comment":"check slot 9-13",
+                            "condition": "minecraft:match_tool",
+                            "predicate": {"nbt": "{BlockEntityTag:{Items:[{Slot:9b,id:\"minecraft:tnt\"},{Slot:10b,tag:{item-type:type91-torpedo}},{Slot:11b,tag:{item-type:g4m1,weapon:250kg}},{Slot:12b,id:\"minecraft:tnt\"},{Slot:13b,id:\"minecraft:tnt\"}]}}"}
+                        },
+                        {
+                            "comment":"check slot 18-22",
+                            "condition": "minecraft:match_tool",
+                            "predicate": {"nbt": "{BlockEntityTag:{Items:[{Slot:18b,id:\"minecraft:tnt\"},{Slot:19b,id:\"minecraft:tnt\"},{Slot:20b,id:\"minecraft:tnt\"},{Slot:21b,id:\"minecraft:tnt\"},{Slot:22b,id:\"minecraft:tnt\"}]}}"}
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,2 @@
+execute if score #is-in-game stage-id matches 1.. if score #clear-flag clear-score matches ..0 run function game:game-manager
+execute positioned 4 141 17 if entity @p[distance=..7] run function game:select-stage/select-stage

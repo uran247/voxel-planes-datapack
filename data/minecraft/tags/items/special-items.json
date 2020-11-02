@@ -1,0 +1,8 @@
+{
+    "replace": false,
+    "values": [
+      "minecraft:bat_spawn_egg",
+      "minecraft:paper",
+      "minecraft:tipped_arrow"
+    ]
+  }

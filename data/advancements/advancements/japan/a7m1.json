@@ -1,0 +1,30 @@
+{
+  "parent": "advancements:japan/a6m5",
+  "display": {
+    "icon": {
+      "item": "minecraft:diamond_sword",
+      "nbt":"{HideFlags:4,Damage:0}"
+    },
+    "title": {
+      "translate": "試製烈風"
+    },
+    "description": {
+      "translate": "A7M1"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "get_a5m": {
+      "trigger": "minecraft:impossible",
+      "conditions": {}
+    }    
+  },
+  "requirements": [
+    [
+      "get_a5m"
+    ]
+  ]
+}

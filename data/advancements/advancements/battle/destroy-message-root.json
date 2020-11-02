@@ -1,0 +1,29 @@
+{
+    "display": {
+      "icon": {
+        "item": "minecraft:snowball",
+        "nbt":"{CustomModelData:1}"
+      },
+      "title": {
+        "translate": "destroy message"
+      },
+      "description": {
+        "translate": "destroy message"
+      },
+      "frame": "task",
+      "show_toast": false,
+      "announce_to_chat": false,
+      "hidden": false,
+      "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png"
+    },
+    "criteria": {
+        "impossible": {
+          "trigger": "minecraft:impossible"
+        }    
+    },
+    "requirements": [
+        [
+          "impossible"
+        ]
+    ]
+}
