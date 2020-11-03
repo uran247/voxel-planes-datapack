@@ -1,22 +1,22 @@
 #処理：チェストに突っ込まれた余計なアイテムを弾き返す,バリアブロックを配置
 
 #チェストに突っ込まれた余計なアイテムを弾き返す
-data modify block 0 6 0 Items append from block ~ ~ ~ Items[{Slot:5b}]
-data modify block 0 6 0 Items append from block ~ ~ ~ Items[{Slot:6b}]
-data modify block 0 6 0 Items append from block ~ ~ ~ Items[{Slot:7b}]
-data modify block 0 6 0 Items append from block ~ ~ ~ Items[{Slot:8b}]
-data modify block 0 6 0 Items append from block ~ ~ ~ Items[{Slot:14b}]
-data modify block 0 6 0 Items append from block ~ ~ ~ Items[{Slot:15b}]
-data modify block 0 6 0 Items append from block ~ ~ ~ Items[{Slot:16b}]
-data modify block 0 6 0 Items append from block ~ ~ ~ Items[{Slot:17b}]
-data modify block 0 6 0 Items append from block ~ ~ ~ Items[{Slot:23b}]
-data modify block 0 6 0 Items append from block ~ ~ ~ Items[{Slot:24b}]
-data modify block 0 6 0 Items append from block ~ ~ ~ Items[{Slot:25b}]
-data modify block 0 6 0 Items append from block ~ ~ ~ Items[{Slot:26b}]
-#tellraw @p [{"nbt":"Items","block":"0 6 0"}] 
-data modify block 0 6 0 Items[{tag:{dummy-item:1b}}].Count set value 0
-loot spawn ~ ~ ~1 mine 0 6 0 air{load:1b}
-data merge block 0 6 0 {Items:[]}
+data modify block 0 1 0 Items append from block ~ ~ ~ Items[{Slot:5b}]
+data modify block 0 1 0 Items append from block ~ ~ ~ Items[{Slot:6b}]
+data modify block 0 1 0 Items append from block ~ ~ ~ Items[{Slot:7b}]
+data modify block 0 1 0 Items append from block ~ ~ ~ Items[{Slot:8b}]
+data modify block 0 1 0 Items append from block ~ ~ ~ Items[{Slot:14b}]
+data modify block 0 1 0 Items append from block ~ ~ ~ Items[{Slot:15b}]
+data modify block 0 1 0 Items append from block ~ ~ ~ Items[{Slot:16b}]
+data modify block 0 1 0 Items append from block ~ ~ ~ Items[{Slot:17b}]
+data modify block 0 1 0 Items append from block ~ ~ ~ Items[{Slot:23b}]
+data modify block 0 1 0 Items append from block ~ ~ ~ Items[{Slot:24b}]
+data modify block 0 1 0 Items append from block ~ ~ ~ Items[{Slot:25b}]
+data modify block 0 1 0 Items append from block ~ ~ ~ Items[{Slot:26b}]
+#tellraw @p [{"nbt":"Items","block":"0 1 0"}] 
+data modify block 0 1 0 Items[{tag:{dummy-item:1b}}].Count set value 0
+loot spawn ~ ~ ~1 mine 0 1 0 air{load:1b}
+data merge block 0 1 0 {Items:[]}
 replaceitem block ~ ~ ~ container.6 minecraft:air
 replaceitem block ~ ~ ~ container.7 minecraft:air
 replaceitem block ~ ~ ~ container.8 minecraft:air

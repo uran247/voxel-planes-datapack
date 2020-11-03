@@ -41,7 +41,9 @@ scoreboard players set @e[tag=block-detector,tag=19,x=0,y=1,z=0,distance=..1] Nu
 scoreboard players set @e[tag=block-detector,tag=20,x=0,y=1,z=0,distance=..1] Num 20
 
 forceload add 0 0
-summon minecraft:armor_stand -0.5 0 -0.5 {Markar:1,Tags:[Trigonometric],NoGravity:1,Invulnerable:1,UUID:[I;0,0,0,32]}
-summon minecraft:armor_stand 0 0 0 {Markar:1,Tags:[Trigonometric2],NoGravity:1,Invulnerable:1,UUID:[I;0,0,0,33]}
+summon minecraft:armor_stand -0.5 0 -0.5 {Marker:1b,Tags:[Trigonometric],NoGravity:1,Invulnerable:1,UUID:[I;0,0,0,32]}
+summon minecraft:armor_stand 0 0 0 {Marker:1b,Tags:[Trigonometric2],NoGravity:1,Invulnerable:1,UUID:[I;0,0,0,33]}
 data merge entity @e[tag=Trigonometric,limit=1] {Pos:[0d,0d,0d]}
 replaceitem entity 0-0-0-0-5 weapon.mainhand minecraft:shulker_box
+
+setblock 0 1 0 shulker_box
