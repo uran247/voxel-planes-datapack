@@ -6,11 +6,11 @@
 #execute store result score @s sin run data get entity @e[tag=Trigonometric2,limit=1] Pos[0] -200
 #kill @e[tag=Trigonometric]
 
-#execute store result entity 0-0-20-0-0 Rotation[0] float 0.01 run scoreboard players get @s input1
-#execute at 0-0-20-0-0 positioned ^ ^ ^5 run tp 0-0-21-0-0 ~ ~ ~
-#execute store result score @s sin run data get entity 0-0-21-0-0 Pos[0] -200
+#execute store result entity 0-0-0-0-20 Rotation[0] float 0.01 run scoreboard players get @s input1
+#execute at 0-0-0-0-20 positioned ^ ^ ^5 run tp 0-0-0-0-21 ~ ~ ~
+#execute store result score @s sin run data get entity 0-0-0-0-21 Pos[0] -200
 
 
-execute store result entity 0-0-20-0-0 Rotation[0] float 0.01 run scoreboard players get @s input1
-execute rotated as 0-0-20-0-0 positioned 0.0 0.0 0.0 positioned ^ ^ ^5 run tp 0-0-20-0-0 ~ ~ ~
-execute store result score @s sin run data get entity 0-0-20-0-0 Pos[0] -200
+execute store result entity 0-0-0-0-20 Rotation[0] float 0.01 run scoreboard players get @s input1
+execute rotated as 0-0-0-0-20 positioned 0.0 0.0 0.0 positioned ^ ^ ^5 run tp 0-0-0-0-20 ~ ~ ~
+execute store result score @s sin run data get entity 0-0-0-0-20 Pos[0] -200

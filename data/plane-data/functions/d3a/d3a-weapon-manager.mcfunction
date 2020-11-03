@@ -21,7 +21,7 @@ execute unless entity @s[scores={ammunition1=..-1,ammunition2=..-1,ammunition3=.
 
 
 #ボム選択時に照準を出す
-execute if entity @s[scores={AngX=1..,plane-weapon=2,w2-reload=..0,ammunition2=1..}] at @s run tp 0-0-a-0-0 ~ ~ ~ ~ ~10
+execute if entity @s[scores={AngX=1..,plane-weapon=2,w2-reload=..0,ammunition2=1..}] at @s run tp 0-0-0-0-a ~ ~ ~ ~ ~10
 execute if entity @s[scores={AngX=1..,plane-weapon=2,w2-reload=..0,ammunition2=1..}] run function plane:weapon/util/bomb-aim
-#execute if entity @s[scores={plane-weapon=2,w1-reload=..0,ammunition1=2..}] at 0-0-4-0-0 as @s run function debug:test-chk-blk
-#execute if entity @s[scores={plane-weapon=2,w1-reload=..0,ammunition1=2..}] run tp 0-0-4-0-0 0 1 0
+#execute if entity @s[scores={plane-weapon=2,w1-reload=..0,ammunition1=2..}] at 0-0-0-0-4 as @s run function debug:test-chk-blk
+#execute if entity @s[scores={plane-weapon=2,w1-reload=..0,ammunition1=2..}] run tp 0-0-0-0-4 0 1 0

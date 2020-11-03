@@ -20,19 +20,19 @@ execute store result score #pos-z reg1 run data get entity @s Pos[2] 100
 scoreboard players operation #pos-x reg1 += @s speedX
 scoreboard players operation #pos-y reg1 += @s speedY
 scoreboard players operation #pos-z reg1 += @s speedZ
-execute store result entity 0-0-4-0-0 Pos[0] double 0.01 run scoreboard players get #pos-x reg1
-execute store result entity 0-0-4-0-0 Pos[1] double 0.01 run scoreboard players get #pos-y reg1
-execute store result entity 0-0-4-0-0 Pos[2] double 0.01 run scoreboard players get #pos-z reg1
-tp @s ~ ~ ~ facing entity 0-0-4-0-0
+execute store result entity 0-0-0-0-4 Pos[0] double 0.01 run scoreboard players get #pos-x reg1
+execute store result entity 0-0-0-0-4 Pos[1] double 0.01 run scoreboard players get #pos-y reg1
+execute store result entity 0-0-0-0-4 Pos[2] double 0.01 run scoreboard players get #pos-z reg1
+tp @s ~ ~ ~ facing entity 0-0-0-0-4
 
 #tellraw @p [{"score" : {"name":"@s", "objective":"speedX"}}, {"text":" "}, {"score" : {"name":"@s", "objective":"speedY"}}, {"text":" "}, {"score" : {"name":"@s", "objective":"speedZ"}}]
-#tellraw @p [{"nbt":"Pos","entity":"@s"},{"nbt":"Pos","entity":"0-0-4-0-0"}] 
+#tellraw @p [{"nbt":"Pos","entity":"@s"},{"nbt":"Pos","entity":"0-0-0-0-4"}] 
 #tellraw @p [{"score" : {"name":"@s", "objective":"age"}}]
 
 #移動予定先までの間にブロックがあるか判定
-execute as @s at 0-0-4-0-0 run function weapon:util/check-block
+execute as @s at 0-0-0-0-4 run function weapon:util/check-block
 execute unless score #x return matches 50 unless score #y return matches 100 unless score #z return matches 50 run scoreboard players set #hit-flag reg1 1
-execute if score #hit-flag reg1 matches 1 run tag 0-0-9-0-0 add hit-aagun
+execute if score #hit-flag reg1 matches 1 run tag 0-0-0-0-9 add hit-aagun
 
 #移動予定先までの間にエンティティがいるか判定
 execute as @s at @s run function weapon:util/check-entity
@@ -40,7 +40,7 @@ execute at @s if entity @e[tag=hit-on-line,tag=!aaguner,tag=!entity-nohit] unles
 execute if score #hit-flag reg1 matches 2 run tag @e[tag=hit-on-line,tag=!aaguner,tag=!entity-nohit] add hit-aagun
 
 #命中していない場合移動予定先へ移動
-execute if score #hit-flag reg1 matches 0 at 0-0-4-0-0 run tp @s ~ ~ ~
+execute if score #hit-flag reg1 matches 0 at 0-0-0-0-4 run tp @s ~ ~ ~
 
 #命中してた場合命中してたところに移動
 execute if score #hit-flag reg1 matches 1.. at @e[tag=hit-aagun,limit=1,sort=nearest] run tp @s ~ ~ ~
@@ -71,5 +71,5 @@ tag @e[tag=hit-on-line] remove hit-on-line
 tag @e[tag=hit-aagun] remove hit-aagun
 
 #エンティティ返却
-tp 0-0-4-0-0 0 1 0
-tp 0-0-9-0-0 0 1 0
+tp 0-0-0-0-4 0 1 0
+tp 0-0-0-0-9 0 1 0

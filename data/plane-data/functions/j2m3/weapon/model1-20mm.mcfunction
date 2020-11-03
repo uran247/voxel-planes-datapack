@@ -33,8 +33,8 @@ execute at @s as @e[tag=gun-init,distance=..5] run function plane:position/util/
 
 #向きを機体方向に向ける
 #summon minecraft:area_effect_cloud ^ ^ ^200  {Duration:0,Tags:[gun-indicator,entity-nohit],CustomName:"{\"text\":\"gun-indicator\",\"color\":\"aqua\"}"}
-tp 0-0-4-0-0 ^ ^ ^300
-execute as @e[tag=gun-init,limit=2,distance=..20] at @s run tp @s ~ ~ ~ facing entity 0-0-4-0-0
+tp 0-0-0-0-4 ^ ^ ^300
+execute as @e[tag=gun-init,limit=2,distance=..20] at @s run tp @s ~ ~ ~ facing entity 0-0-0-0-4
 
 #発射したならreload時間設定
 execute if entity @e[tag=gun-init,distance=..20] run scoreboard players set @s w1-reload 2
@@ -62,6 +62,6 @@ tag @e[tag=gun-init,distance=..20] remove gun-init
 #scoreboard players set @p rightClick 0
 
 #エンティティ返却
-tp 0-0-4-0-0 0 1 0
+tp 0-0-0-0-4 0 1 0
 
 

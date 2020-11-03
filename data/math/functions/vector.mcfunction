@@ -8,12 +8,12 @@
 #execute store result score #z reg1 run data get entity @s Pos[2] 100
 
 #向いてる方向に測距エンティティTP
-execute rotated as @s positioned 0.0 0.0 0.0 positioned ^ ^ ^1 run tp 0-0-1-0-0 ~ ~ ~
+execute rotated as @s positioned 0.0 0.0 0.0 positioned ^ ^ ^1 run tp 0-0-0-0-1 ~ ~ ~
 
 #測距エンティティの現在座標取得
-execute store result score @s speedX run data get entity 0-0-1-0-0 Pos[0] 100
-execute store result score @s speedY run data get entity 0-0-1-0-0 Pos[1] 100
-execute store result score @s speedZ run data get entity 0-0-1-0-0 Pos[2] 100
+execute store result score @s speedX run data get entity 0-0-0-0-1 Pos[0] 100
+execute store result score @s speedY run data get entity 0-0-0-0-1 Pos[1] 100
+execute store result score @s speedZ run data get entity 0-0-0-0-1 Pos[2] 100
 
-tp 0-0-1-0-0 0 1 0
+tp 0-0-0-0-1 0 1 0
 

@@ -2,7 +2,7 @@
 #処理　offer-itemを回収したらインベントリを全削除する
 
 execute as @a store success score @s reg1 run clear @s #minecraft:special-items{offer-item:1b} 0
-execute as 0-0-5-0-0 run loot give @a[scores={reg1=1..}] fish loot:craft/craft ~ ~ ~ mainhand
+execute as 0-0-0-0-5 run loot give @a[scores={reg1=1..}] fish loot:craft/craft ~ ~ ~ mainhand
 execute as @a[scores={reg1=1..}] run clear @s #minecraft:special-items{offer-item:1b} 1
 
 #全クラフトフィールドのcountを-1

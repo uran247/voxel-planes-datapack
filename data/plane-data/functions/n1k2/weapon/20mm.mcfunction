@@ -42,8 +42,8 @@ execute at @s as @e[tag=gun-init,distance=..5] run function plane:position/calc-
 execute at @s as @e[tag=gun-init,distance=..5] run function plane:position/util/move-parts
 
 #向きを機体方向に向ける
-tp 0-0-4-0-0 ^ ^ ^300
-execute as @e[tag=gun-init,limit=4,distance=..20] at @s run tp @s ~ ~ ~ facing entity 0-0-4-0-0
+tp 0-0-0-0-4 ^ ^ ^300
+execute as @e[tag=gun-init,limit=4,distance=..20] at @s run tp @s ~ ~ ~ facing entity 0-0-0-0-4
 
 #音
 playsound minecraft:weapon.heavy-muchingun.fire master @a ~ ~ ~ 1 1 1
@@ -70,5 +70,5 @@ scoreboard players operation @e[tag=gun-init,distance=..20] speedZ /= #10 Num
 tag @e[tag=gun-init,distance=..20] remove gun-init
 
 #エンティティ返却
-tp 0-0-4-0-0 0 1 0
+tp 0-0-0-0-4 0 1 0
 

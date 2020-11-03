@@ -89,13 +89,6 @@ execute at @s unless block ~ ~1 ~ air run kill @s
 execute at @s unless block ~ ~1 ~ air run kill @e[tag=target-parts,distance=..20]
 execute at @s unless block ~ ~1 ~ air run kill @a[distance=..10]
 
-#ステージの壁を乗り越えようとしたら爆発（配布マップ用）
-execute at @s if block ~ 255 ~ minecraft:glass run playsound minecraft:entity.generic.explode ambient @a ~ ~ ~ 1 0
-execute at @s if block ~ 255 ~ minecraft:glass run particle minecraft:explosion ~ ~ ~ 2 2 2 1 50 force
-execute at @s if block ~ 255 ~ minecraft:glass run kill @s
-execute at @s if block ~ 255 ~ minecraft:glass run kill @e[tag=target-parts,distance=..20]
-execute at @s if block ~ 255 ~ minecraft:glass run kill @a[distance=..10]
-
 #登場者無しで奈落に行ったらキル
 execute at @s[tag=!has-rider] if entity @s[y=-50,dy=-100] run playsound minecraft:entity.generic.explode ambient @a ~ ~ ~ 1 0
 execute at @s[tag=!has-rider] if entity @s[y=-50,dy=-100] run particle minecraft:explosion ~ ~ ~ 2 2 2 1 50 force
