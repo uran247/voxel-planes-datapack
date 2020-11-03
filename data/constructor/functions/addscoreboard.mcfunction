@@ -6,7 +6,7 @@ scoreboard objectives add reg3 dummy
 #定数
 scoreboard objectives add Num dummy
 
-#数学関連
+#計算関連
 scoreboard objectives add cos dummy
 scoreboard objectives add sin dummy
 scoreboard objectives add tan dummy
@@ -129,41 +129,9 @@ scoreboard objectives add max-ammo-reload4 dummy
 scoreboard objectives add max-ammo-reload5 dummy
 scoreboard objectives add max-ammo-reload6 dummy
 
-#サウンド関連
-scoreboard objectives add sound dummy
-scoreboard objectives add bgm-bunretsu dummy
-scoreboard objectives add bgm-repeat dummy
-
-#ステージのイベント管理用
-scoreboard objectives add summon-plane minecraft.used:minecraft.bat_spawn_egg
-scoreboard objectives add max-entity dummy
-scoreboard objectives add stage-id dummy
-scoreboard objectives add clear-score dummy
-scoreboard objectives add game-id dummy
-scoreboard objectives add event-flag dummy
-
-#敵mob関連
-scoreboard objectives add max-w1-reload dummy
-scoreboard objectives add fuse-height dummy
-scoreboard objectives add forget-time dummy
-scoreboard objectives add max-forget-time dummy
-scoreboard objectives add min-forget-time dummy
-scoreboard objectives add sight-range dummy
-scoreboard objectives add fire-angle dummy
-scoreboard objectives add target-planeid dummy
-scoreboard objectives add skill-ct dummy
-scoreboard objectives add fire-power dummy
-scoreboard objectives add accuracy dummy
-scoreboard objectives add max-skill-ct dummy
-scoreboard objectives add gun-speed dummy
-scoreboard objectives add defence dummy
-scoreboard objectives add default-pos-y dummy
-
-#ショップ関連
-scoreboard objectives add open-shop minecraft.custom:minecraft.talked_to_villager
-
 #ダメージ関連
 scoreboard objectives add taken-damage dummy
+scoreboard objectives add total-damage dummy
 scoreboard objectives add shootdown dummy {"text":"スコア"}
 
 #その他

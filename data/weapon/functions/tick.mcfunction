@@ -6,6 +6,7 @@ execute as @e[tag=aagun] at @s run function weapon:aagun/aagun-manager
 execute as @e[tag=torpedo] at @s run function weapon:torpedo/torpedo-manager
 execute as @e[tag=he] at @s run function weapon:howitzer/howitzer-manager
 execute as @e[tag=weapon-summoner] at @s run function weapon:equip/equip-manager
+execute as @a[tag=get-damage] at @a run function weapon:util/damage-tick
 
 
 #execute as @e[tag=a6m-root] at @s run function math:vector-3input
