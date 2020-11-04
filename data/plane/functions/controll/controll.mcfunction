@@ -11,7 +11,7 @@ execute as @s[tag=!plane-rider] run scoreboard players reset @s drop-cont-stick
 execute as @s[tag=!plane-rider] run loot replace entity @s weapon.offhand loot loot:items/tools/controll-stick
 
 #seatを参照して実行者にid、タグ付け
-execute store result score @s plane-id run data get entity @s RootVehicle.Entity.Attributes[{Name:"generic.knockbackResistance"}].Base
+execute store result score @s plane-id run data get entity @s RootVehicle.Entity.Attributes[{Name:"minecraft:generic.movement_speed"}].Base
 tag @s add plane-rider
 tag @s add entity-nohit
 

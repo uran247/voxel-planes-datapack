@@ -1,1 +1,0 @@
-advancement revoke @a only advancements:battle/kill-phantom-i

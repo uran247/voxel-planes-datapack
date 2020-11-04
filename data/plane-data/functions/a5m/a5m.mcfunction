@@ -14,10 +14,10 @@ summon armor_stand ~ ~ ~ {Tags:["a5m-hitbox","a5m",plane-init,plane,plane-hitbox
 summon armor_stand ~ ~ ~ {Tags:["a5m-hitbox","a5m",plane-init,plane,plane-hitbox,has-offset,cockpit,offset-base],NoGravity:1b,Invisible:1,Marker:1,Glowing:1,CustomName:"{\"text\":\"cockpit\"}",Health:50f,Attributes:[{Name:generic.maxHealth,Base:50}]}
 
 #ID付与
-execute as @e[tag=plane-init,tag=a5m-root,limit=1] store result score @s plane-id run data get entity @s UUIDMost 0.000000000233
+execute as @e[tag=plane-init,tag=a5m-root,limit=1] store result score @s plane-id run data get entity @s UUID[0]
 scoreboard players operation @e[tag=plane-init,tag=a5m-root,limit=1,scores={plane-id=..-1}] plane-id *= #-1 Num
 scoreboard players operation @e[tag=plane-init] plane-id = @e[tag=plane-init,tag=a5m-root,limit=1] plane-id
-execute as @e[tag=plane-init] store result entity @s Attributes[{Name:"generic.knockbackResistance"}].Base double 1 run scoreboard players get @s plane-id
+execute as @e[tag=plane-init] store result entity @s Attributes[{Name:"minecraft:generic.movement_speed"}].Base double 1 run scoreboard players get @s plane-id
 
 #スピード・滑走/角度/旋回速度/加速度/最高速度/離陸速度/形態スコア・存在座標・設定
 scoreboard players set @e[tag=plane-init,tag=a5m-root] rolling 0

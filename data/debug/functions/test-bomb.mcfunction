@@ -4,7 +4,7 @@
 summon armor_stand ~ ~ ~ {Tags:[test-bomb-init,plane-bomb,entity-nohit,250kg,bomb-normal,dropping,drop-init],NoGravity:1b,Invisible:1,HandItems:[{id:"minecraft:diamond_sword",Count:1b,tag:{Damage:77,Unbreakable:1}},{}],Pose:{RightArm:[0f,0f,0f]},DisabledSlots:256}
 scoreboard players set @e[tag=test-bomb-init] damage 1250
 scoreboard players set @e[tag=test-bomb-init] plane-id 1
-execute as @e[tag=test-bomb-init] store result entity @s Attributes[{Name:"generic.knockbackResistance"}].Base double 1 run scoreboard players get @s plane-id
+execute as @e[tag=test-bomb-init] store result entity @s Attributes[{Name:"minecraft:generic.movement_speed"}].Base double 1 run scoreboard players get @s plane-id
 tag @e[tag=test-bomb-init] remove test-bomb-init
 
 #スコア付与

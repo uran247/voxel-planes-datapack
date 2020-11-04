@@ -1,1 +1,0 @@
-schedule function advancements:revoke-kill-enemy 2

@@ -1,4 +1,5 @@
 #1-3:vector 4:measurement 5:craft 6:damage 7,8,9:check block a,b:measurement
+kill @e[tag=block-detector]
 summon minecraft:armor_stand 0 1 0 {NoGravity:1,Marker:1,Invisible:1,Tags:[entity-nohit,block-detector,"1"],UUID:[I;0,0,0,1],Invulnerable:1} 
 summon minecraft:armor_stand 0 1 0 {NoGravity:1,Marker:1,Invisible:1,Tags:[entity-nohit,block-detector,"2"],UUID:[I;0,0,0,2],Invulnerable:1}
 summon minecraft:armor_stand 0 1 0 {NoGravity:1,Marker:1,Invisible:1,Tags:[entity-nohit,block,axis,block-detector,"3"],UUID:[I;0,0,0,3],Invulnerable:1}

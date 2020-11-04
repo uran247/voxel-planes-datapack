@@ -15,7 +15,7 @@ execute as @e[tag=controll-target,distance=..1,limit=1] run scoreboard players o
 #墜落してた場合スロットル0
 scoreboard players set @e[tag=controll-target,tag=destroyed,distance=..1,limit=1] throttle 0
 
-#プレイヤーが右を向いているか左を向いているか取得(0未満なら左、0以上なら右)
+#プレイヤーがどれくらい右を向いているか左を向いているか取得(0未満なら左、0以上なら右)
 execute store result score #source-rot input run data get entity @s Rotation[0] 100
 scoreboard players operation #target-rot input = @e[tag=controll-target,distance=..1,limit=1] AngY
 function util:get-angle-defference

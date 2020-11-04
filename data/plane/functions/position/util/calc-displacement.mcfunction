@@ -1,11 +1,9 @@
 #ロール角度に応じた変位計算 変位=^(x*cosθ-y*sinθ) ^(y*cosθ+x*sinθ) ^z
 #入力 entity: target, score: #sin reg1 #cos reg1
 
-#三角関数計算
-#function math:sin
-#function math:cos
-
 #displacement算出
+#tellraw @p [{"score" : {"name":"#cos", "objective":"reg1"}}, {"text":" "}, {"score" : {"name":"#sin", "objective":"reg1"}}]
+
 scoreboard players operation @s new-offsetX = @s offsetX
 scoreboard players operation @s new-offsetY = @s offsetY
 

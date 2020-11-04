@@ -15,5 +15,4 @@ execute store result score @s speedX run data get entity 0-0-0-0-1 Pos[0] 100
 execute store result score @s speedY run data get entity 0-0-0-0-1 Pos[1] 100
 execute store result score @s speedZ run data get entity 0-0-0-0-1 Pos[2] 100
 
-tp 0-0-0-0-1 0 1 0
-
+execute as 0-0-0-0-1 run tp @s 0.0 1.0 0.0

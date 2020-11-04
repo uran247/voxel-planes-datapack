@@ -12,7 +12,7 @@ scoreboard players set @e[tag=ki21-bomb-1,tag=ki21-init] damage 250
 scoreboard players set @e[tag=ki21-bomb-1,tag=ki21-init] pitch-speed-cor -3
 scoreboard players set @e[tag=ki21-bomb-1,tag=ki21-init] yaw-speed-cor -3
 scoreboard players operation @e[tag=ki21-bomb-1,tag=ki21-init] plane-id = @s plane-id
-execute as @e[tag=ki21-bomb-1,tag=ki21-init] store result entity @s Attributes[{Name:"generic.knockbackResistance"}].Base double 1 run scoreboard players get @s plane-id
+execute as @e[tag=ki21-bomb-1,tag=ki21-init] store result entity @s Attributes[{Name:"minecraft:generic.movement_speed"}].Base double 1 run scoreboard players get @s plane-id
 tag @e[tag=ki21-bomb-1,tag=ki21-init] remove ki21-init
 
 #### 50kg爆弾2個目召喚 ####
@@ -24,7 +24,7 @@ scoreboard players set @e[tag=ki21-bomb-2,tag=ki21-init] damage 250
 scoreboard players set @e[tag=ki21-bomb-2,tag=ki21-init] pitch-speed-cor -2
 scoreboard players set @e[tag=ki21-bomb-2,tag=ki21-init] yaw-speed-cor -2
 scoreboard players operation @e[tag=ki21-bomb-2,tag=ki21-init] plane-id = @s plane-id
-execute as @e[tag=ki21-bomb-2,tag=ki21-init] store result entity @s Attributes[{Name:"generic.knockbackResistance"}].Base double 1 run scoreboard players get @s plane-id
+execute as @e[tag=ki21-bomb-2,tag=ki21-init] store result entity @s Attributes[{Name:"minecraft:generic.movement_speed"}].Base double 1 run scoreboard players get @s plane-id
 tag @e[tag=ki21-bomb-2,tag=ki21-init] remove ki21-init
 
 #### 50kg爆弾3個目召喚 ####
@@ -37,7 +37,7 @@ scoreboard players set @e[tag=ki21-bomb-3,tag=ki21-init] accelerate-cor -1
 scoreboard players set @e[tag=ki21-bomb-3,tag=ki21-init] pitch-speed-cor -3
 scoreboard players set @e[tag=ki21-bomb-3,tag=ki21-init] yaw-speed-cor -3
 scoreboard players operation @e[tag=ki21-bomb-3,tag=ki21-init] plane-id = @s plane-id
-execute as @e[tag=ki21-bomb-3,tag=ki21-init] store result entity @s Attributes[{Name:"generic.knockbackResistance"}].Base double 1 run scoreboard players get @s plane-id
+execute as @e[tag=ki21-bomb-3,tag=ki21-init] store result entity @s Attributes[{Name:"minecraft:generic.movement_speed"}].Base double 1 run scoreboard players get @s plane-id
 tag @e[tag=ki21-bomb-3,tag=ki21-init] remove ki21-init
 
 #### 50kg爆弾4個目召喚 ####
@@ -50,7 +50,7 @@ scoreboard players set @e[tag=ki21-bomb-4,tag=ki21-init] damage 250
 scoreboard players set @e[tag=ki21-bomb-4,tag=ki21-init] pitch-speed-cor -2
 scoreboard players set @e[tag=ki21-bomb-4,tag=ki21-init] yaw-speed-cor -2
 scoreboard players operation @e[tag=ki21-bomb-4,tag=ki21-init] plane-id = @s plane-id
-execute as @e[tag=ki21-bomb-4,tag=ki21-init] store result entity @s Attributes[{Name:"generic.knockbackResistance"}].Base double 1 run scoreboard players get @s plane-id
+execute as @e[tag=ki21-bomb-4,tag=ki21-init] store result entity @s Attributes[{Name:"minecraft:generic.movement_speed"}].Base double 1 run scoreboard players get @s plane-id
 tag @e[tag=ki21-bomb-4,tag=ki21-init] remove ki21-init
 
 #### 50kg爆弾5個目召喚 ####
@@ -62,7 +62,7 @@ scoreboard players set @e[tag=ki21-bomb-5,tag=ki21-init] damage 250
 scoreboard players set @e[tag=ki21-bomb-5,tag=ki21-init] pitch-speed-cor -3
 scoreboard players set @e[tag=ki21-bomb-5,tag=ki21-init] yaw-speed-cor -3
 scoreboard players operation @e[tag=ki21-bomb-5,tag=ki21-init] plane-id = @s plane-id
-execute as @e[tag=ki21-bomb-5,tag=ki21-init] store result entity @s Attributes[{Name:"generic.knockbackResistance"}].Base double 1 run scoreboard players get @s plane-id
+execute as @e[tag=ki21-bomb-5,tag=ki21-init] store result entity @s Attributes[{Name:"minecraft:generic.movement_speed"}].Base double 1 run scoreboard players get @s plane-id
 tag @e[tag=ki21-bomb-5,tag=ki21-init] remove ki21-init
 
 #### 50kg爆弾6個目召喚 ####
@@ -75,7 +75,7 @@ scoreboard players set @e[tag=ki21-bomb-6,tag=ki21-init] accelerate-cor -1
 scoreboard players set @e[tag=ki21-bomb-6,tag=ki21-init] pitch-speed-cor -3
 scoreboard players set @e[tag=ki21-bomb-6,tag=ki21-init] yaw-speed-cor -3
 scoreboard players operation @e[tag=ki21-bomb-6,tag=ki21-init] plane-id = @s plane-id
-execute as @e[tag=ki21-bomb-6,tag=ki21-init] store result entity @s Attributes[{Name:"generic.knockbackResistance"}].Base double 1 run scoreboard players get @s plane-id
+execute as @e[tag=ki21-bomb-6,tag=ki21-init] store result entity @s Attributes[{Name:"minecraft:generic.movement_speed"}].Base double 1 run scoreboard players get @s plane-id
 tag @e[tag=ki21-bomb-6,tag=ki21-init] remove ki21-init
 
 #召喚しない爆弾の速度低下スコアをボディに付与

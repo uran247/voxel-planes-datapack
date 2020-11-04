@@ -3,8 +3,6 @@
 
 #自分と同じIDを判定しタグ付け
 tag @s add plane-position-executer
-#scoreboard players operation #plane-id reg1 = @s plane-id
-#execute as @e[tag=plane,tag=!plane-root] if score @s plane-id = #plane-id reg1 run tag @s add target-parts
 
 #角度スコアが前tickから変化したか判定しタグ付け
 execute if score @s AngX-old = @s AngX if score @s AngY-old = @s AngY if score @s AngZ-old = @s AngZ run tag @s add angle-not-changed
@@ -53,10 +51,8 @@ tag @s remove need-calc-offset
 #角度スコアが変化していた場合ベクトル計算
 execute if entity @s[tag=!angle-not-changed] run function math:vector
 
-
 #角度補正
 execute at @s[tag=!angle-not-changed] run function plane:position/util/modify-angle
-
 
 #seatの位置表示
 execute if entity @s[tag=!has-rider,tag=!no-move] at @e[tag=target-parts,tag=plane-seat,tag=!no-particle,type=minecraft:armor_stand] run particle minecraft:happy_villager ~ ~2.8 ~ 0.1 0.1 0.1 1 1 force @a[tag=!plane-rider]

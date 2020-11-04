@@ -13,7 +13,7 @@ scoreboard players set @e[tag=d3a-bomb-right,tag=d3a-init] accelerate-cor -1
 scoreboard players set @e[tag=d3a-bomb-right,tag=d3a-init] pitch-speed-cor -2
 scoreboard players set @e[tag=d3a-bomb-right,tag=d3a-init] yaw-speed-cor -2
 scoreboard players operation @e[tag=d3a-bomb-right,tag=d3a-init] plane-id = @s plane-id
-execute as @e[tag=d3a-bomb-right,tag=d3a-init] store result entity @s Attributes[{Name:"generic.knockbackResistance"}].Base double 1 run scoreboard players get @s plane-id
+execute as @e[tag=d3a-bomb-right,tag=d3a-init] store result entity @s Attributes[{Name:"minecraft:generic.movement_speed"}].Base double 1 run scoreboard players get @s plane-id
 tag @e[tag=d3a-bomb-right,tag=d3a-init] remove d3a-init
 
 
@@ -27,7 +27,7 @@ scoreboard players set @e[tag=d3a-bomb-left,tag=d3a-init] accelerate-cor -1
 scoreboard players set @e[tag=d3a-bomb-left,tag=d3a-init] pitch-speed-cor -2
 scoreboard players set @e[tag=d3a-bomb-left,tag=d3a-init] yaw-speed-cor -2
 scoreboard players operation @e[tag=d3a-bomb-left,tag=d3a-init] plane-id = @s plane-id
-execute as @e[tag=d3a-bomb-left,tag=d3a-init] store result entity @s Attributes[{Name:"generic.knockbackResistance"}].Base double 1 run scoreboard players get @s plane-id
+execute as @e[tag=d3a-bomb-left,tag=d3a-init] store result entity @s Attributes[{Name:"minecraft:generic.movement_speed"}].Base double 1 run scoreboard players get @s plane-id
 tag @e[tag=d3a-bomb-left,tag=d3a-init] remove d3a-init
 
 #### 250kg爆弾1個目召喚 ####
@@ -40,7 +40,7 @@ scoreboard players set @e[tag=d3a-bomb-center,tag=d3a-init] accelerate-cor -3
 scoreboard players set @e[tag=d3a-bomb-center,tag=d3a-init] pitch-speed-cor -10
 scoreboard players set @e[tag=d3a-bomb-center,tag=d3a-init] yaw-speed-cor -7
 scoreboard players operation @e[tag=d3a-bomb-center,tag=d3a-init] plane-id = @s plane-id
-execute as @e[tag=d3a-bomb-center,tag=d3a-init] store result entity @s Attributes[{Name:"generic.knockbackResistance"}].Base double 1 run scoreboard players get @s plane-id
+execute as @e[tag=d3a-bomb-center,tag=d3a-init] store result entity @s Attributes[{Name:"minecraft:generic.movement_speed"}].Base double 1 run scoreboard players get @s plane-id
 tag @e[tag=d3a-bomb-center,tag=d3a-init] remove d3a-init
 
 #残弾スコア付与

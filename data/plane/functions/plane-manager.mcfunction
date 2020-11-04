@@ -3,7 +3,7 @@
 
 #パーツにタグ付け
 scoreboard players operation #plane-id reg1 = @s plane-id
-execute as @e[tag=plane,tag=!plane-root,tag=!position-processed] if score @s plane-id = #plane-id reg1 run tag @s add target-parts
+execute at @s as @e[tag=plane,tag=!plane-root,tag=!position-processed] if score @s plane-id = #plane-id reg1 run tag @s add target-parts
 
 #移動、位置補正実行
 execute as @s[tag=!no-move] at @s run function plane:move/plane-move

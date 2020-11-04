@@ -27,7 +27,7 @@
                             "modifiers":[
                                 {
                                     "name":"cannot_stack",
-                                    "attribute":"cannot_stack",
+                                    "attribute":"generic.follow_range",
                                     "operation":"multiply_base",
                                     "amount":1.0,
                                     "slot":"mainhand"

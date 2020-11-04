@@ -4,16 +4,19 @@
 
 
 #座標取得エンティティtp
-execute positioned 0.0 0.0 0.0 positioned ^1 ^ ^ run tp 0-0-0-0-1 ~ ~ ~
+execute positioned 0.0 0.0 0.0 positioned ^1 ^ ^ run tp 0-0-0-0-6 ~ ~ ~
 execute positioned 0.0 0.0 0.0 positioned ^ ^1 ^ run tp 0-0-0-0-2 ~ ~ ~
 execute positioned 0.0 0.0 0.0 positioned ^ ^ ^1 run tp 0-0-0-0-3 ~ ~ ~
+#tellraw @p [{"nbt":"Pos[0]","entity":"0-0-0-0-6"},{"nbt":"Pos[1]","entity":"0-0-0-0-6"},{"nbt":"Pos[2]","entity":"0-0-0-0-6"}] 
+#tellraw @p [{"nbt":"Pos[0]","entity":"0-0-0-0-2"},{"nbt":"Pos[1]","entity":"0-0-0-0-2"},{"nbt":"Pos[2]","entity":"0-0-0-0-2"}] 
+#tellraw @p [{"nbt":"Pos[0]","entity":"0-0-0-0-3"},{"nbt":"Pos[1]","entity":"0-0-0-0-3"},{"nbt":"Pos[2]","entity":"0-0-0-0-3"}] 
 
 
 #座標計算
 #X方向のベクトル算出
-execute store result score #x-direction-dx reg1 run data get entity 0-0-0-0-1 Pos[0] 1000
-execute store result score #x-direction-dy reg1 run data get entity 0-0-0-0-1 Pos[1] 1000
-execute store result score #x-direction-dz reg1 run data get entity 0-0-0-0-1 Pos[2] 1000
+execute store result score #x-direction-dx reg1 run data get entity 0-0-0-0-6 Pos[0] 1000
+execute store result score #x-direction-dy reg1 run data get entity 0-0-0-0-6 Pos[1] 1000
+execute store result score #x-direction-dz reg1 run data get entity 0-0-0-0-6 Pos[2] 1000
 scoreboard players operation #x-direction-dx reg1 *= @s new-offsetX
 scoreboard players operation #x-direction-dy reg1 *= @s new-offsetX
 scoreboard players operation #x-direction-dz reg1 *= @s new-offsetX
@@ -58,8 +61,3 @@ scoreboard players operation @s displacementZ += #z-direction-dz reg1
 
 #底面をベースにするタグがついてた場合、底面が腕の高さに来るように補正
 execute if entity @s[tag=offset-base] run scoreboard players add @s displacementY 1500
-
-#後処理
-#execute positioned 0 1 0 run tp 0-0-0-0-1 ~ ~ ~
-#execute positioned 0 1 0 run tp 0-0-0-0-2 ~ ~ ~
-#execute positioned 0 1 0 run tp 0-0-0-0-3 ~ ~ ~

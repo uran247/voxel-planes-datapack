@@ -13,7 +13,7 @@ scoreboard players set @e[tag=a6m2-bomb-right,tag=a6m2-init] accelerate-cor -1
 scoreboard players set @e[tag=a6m2-bomb-right,tag=a6m2-init] pitch-speed-cor -2
 scoreboard players set @e[tag=a6m2-bomb-right,tag=a6m2-init] yaw-speed-cor -2
 scoreboard players operation @e[tag=a6m2-bomb-right,tag=a6m2-init] plane-id = @s plane-id
-execute as @e[tag=a6m2-bomb-right,tag=a6m2-init] store result entity @s Attributes[{Name:"generic.knockbackResistance"}].Base double 1 run scoreboard players get @s plane-id
+execute as @e[tag=a6m2-bomb-right,tag=a6m2-init] store result entity @s Attributes[{Name:"minecraft:generic.movement_speed"}].Base double 1 run scoreboard players get @s plane-id
 tag @e[tag=a6m2-bomb-right,tag=a6m2-init] remove a6m2-init
 
 
@@ -27,7 +27,7 @@ scoreboard players set @e[tag=a6m2-bomb-left,tag=a6m2-init] accelerate-cor -1
 scoreboard players set @e[tag=a6m2-bomb-left,tag=a6m2-init] pitch-speed-cor -2
 scoreboard players set @e[tag=a6m2-bomb-left,tag=a6m2-init] yaw-speed-cor -2
 scoreboard players operation @e[tag=a6m2-bomb-left,tag=a6m2-init] plane-id = @s plane-id
-execute as @e[tag=a6m2-bomb-left,tag=a6m2-init] store result entity @s Attributes[{Name:"generic.knockbackResistance"}].Base double 1 run scoreboard players get @s plane-id
+execute as @e[tag=a6m2-bomb-left,tag=a6m2-init] store result entity @s Attributes[{Name:"minecraft:generic.movement_speed"}].Base double 1 run scoreboard players get @s plane-id
 tag @e[tag=a6m2-bomb-left,tag=a6m2-init] remove a6m2-init
 
 #残弾スコア付与
