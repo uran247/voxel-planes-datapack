@@ -62,7 +62,6 @@ execute if score #hit-flag reg1 matches 1.. at @s run particle minecraft:explosi
 #execute if score #hit-flag reg1 matches 1 run say block
 #execute if score #hit-flag reg1 matches 2 run say entity
 
-
 #hitしてたら弾を削除
 execute if score #hit-flag reg1 matches 1.. run kill @s
 
@@ -79,7 +78,6 @@ tag @e[tag=hit-weapon] remove hit-weapon
 tag @e[tag=hit-on-line] remove hit-on-line
 execute at @s run tag @s remove gun-move-executer
 tag @e[tag=gunner,distance=..25] remove gunner
-
 
 #エンティティ返却
 tp 0-0-0-0-4 0.0 1.0 0.0
