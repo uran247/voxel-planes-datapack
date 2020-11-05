@@ -46,8 +46,6 @@ execute as @e[tag=drop-init,distance=..20] run scoreboard players operation @s s
 scoreboard players operation @e[tag=drop-init,distance=..20] speedX /= #10 Num
 scoreboard players operation @e[tag=drop-init,distance=..20] speedY /= #10 Num
 scoreboard players operation @e[tag=drop-init,distance=..20] speedZ /= #10 Num
-#tellraw @p [{"score" : {"name":"@s", "objective":"speedX"}}, {"text":" "}, {"score" : {"name":"@s", "objective":"speedY"}}, {"text":" "}, {"score" : {"name":"@s", "objective":"speedZ"}}]
-#execute as @e[tag=drop-init,distance=..20] run tellraw @p [{"score" : {"name":"@s", "objective":"speedX"}}, {"text":" "}, {"score" : {"name":"@s", "objective":"speedY"}}, {"text":" "}, {"score" : {"name":"@s", "objective":"speedZ"}}]
 
 #終了処理
 tag @s remove bombing-executer

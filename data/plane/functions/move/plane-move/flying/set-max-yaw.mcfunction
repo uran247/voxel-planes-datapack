@@ -60,4 +60,4 @@ execute if entity @s[tag=destroyed] run scoreboard players set #max-yaw return 0
 #tellraw @p [{"score" : {"name":"#max-yaw", "objective":"return"}}, {"text":" "}, {"score" : {"name":"@s", "objective":"cos"}}, {"text":" "}, {"score" : {"name":"@s", "objective":"sin"}}]
 
 #tellraw @p [{"score" : {"name":"#max-yaw", "objective":"return"}}]
-#ztellraw @p [{"score" : {"name":"@s", "objective":"speedY"}}]
+#tellraw @p [{"score" : {"name":"@s", "objective":"speedY"}}]

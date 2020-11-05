@@ -19,10 +19,7 @@ execute if entity @e[tag=ki43-spawner,distance=..0.1,tag=12p7mm] run tag @e[tag=
 execute if entity @e[tag=ki43-spawner,distance=..0.1,tag=12p7mm] run data modify entity @e[tag=plane-init,tag=ki43-root,limit=1] HandItems[0].tag.weapons[0] set value "12.7mm gun"
 
 #ID付与
-execute as @e[tag=plane-init,tag=ki43-root,limit=1] store result score @s plane-id run data get entity @s UUID[0]
-scoreboard players operation @e[tag=plane-init,tag=ki43-root,limit=1,scores={plane-id=..-1}] plane-id *= #-1 Num
-scoreboard players operation @e[tag=plane-init] plane-id = @e[tag=plane-init,tag=ki43-root,limit=1] plane-id
-execute as @e[tag=plane-init] store result entity @s Attributes[{Name:"minecraft:generic.movement_speed"}].Base double 1 run scoreboard players get @s plane-id
+execute as @e[tag=plane-init,tag=plane-root,limit=1] at @s run function plane:summon/set-plane-id
 
 #スピード・滑走/角度/旋回速度/加速度/最高速度/離陸速度/形態スコア・存在座標・設定
 scoreboard players set @e[tag=plane-init,tag=ki43-root] rolling 0

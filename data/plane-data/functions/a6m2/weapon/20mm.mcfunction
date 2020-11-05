@@ -32,7 +32,7 @@ execute at @s as @e[tag=gun-init,distance=..5] run function plane:position/calc-
 execute at @s as @e[tag=gun-init,distance=..5] run function plane:position/util/move-parts
 
 #向きを機体方向に向ける
-summon minecraft:area_effect_cloud ^ ^ ^200 {Duration:0,Tags:[gun-indicator,entity-nohit],CustomName:"{\"text\":\"gun-indicator\",\"color\":\"aqua\"}"}
+execute at @s run summon minecraft:area_effect_cloud ^ ^ ^200 {Duration:0,Tags:[gun-indicator,entity-nohit],CustomName:'{"text":"gun-indicator","color":"aqua"}'}
 execute as @e[tag=gun-init,limit=2,distance=..20] at @s run tp @s ~ ~ ~ facing entity @e[tag=gun-indicator,distance=..220,limit=1]
 
 #発射したならreload時間設定
@@ -55,6 +55,8 @@ execute as @e[tag=gun-init,distance=..20] run scoreboard players operation @s sp
 scoreboard players operation @e[tag=gun-init,distance=..20] speedX /= #10 Num
 scoreboard players operation @e[tag=gun-init,distance=..20] speedY /= #10 Num
 scoreboard players operation @e[tag=gun-init,distance=..20] speedZ /= #10 Num
+#tellraw @p [{"score" : {"name":"@e[tag=gun-init,distance=..20,limit=1]", "objective":"speedX"}}, {"text":" "}, {"score" : {"name":"@e[tag=gun-init,distance=..20,limit=1]", "objective":"speedZ"}}]
+
 
 #終了処理
 tag @e[tag=gun-init,distance=..20] remove gun-init

@@ -1,5 +1,5 @@
 #1-3:vector 4:measurement 5:craft 6:damage 7,8,9:check block a,b:measurement
-kill @e[tag=block-detector]
+#kill @e[tag=block-detector]
 summon minecraft:armor_stand 0 1 0 {NoGravity:1,Marker:1,Invisible:1,Tags:[entity-nohit,block-detector,"1"],UUID:[I;0,0,0,1],Invulnerable:1} 
 summon minecraft:armor_stand 0 1 0 {NoGravity:1,Marker:1,Invisible:1,Tags:[entity-nohit,block-detector,"2"],UUID:[I;0,0,0,2],Invulnerable:1}
 summon minecraft:armor_stand 0 1 0 {NoGravity:1,Marker:1,Invisible:1,Tags:[entity-nohit,block,axis,block-detector,"3"],UUID:[I;0,0,0,3],Invulnerable:1}
@@ -41,7 +41,10 @@ scoreboard players set @e[tag=block-detector,tag=18,x=0,y=1,z=0,distance=..1] Nu
 scoreboard players set @e[tag=block-detector,tag=19,x=0,y=1,z=0,distance=..1] Num 19
 scoreboard players set @e[tag=block-detector,tag=20,x=0,y=1,z=0,distance=..1] Num 20
 
-forceload add 0 0
+execute in overworld run forceload add 0 0
+execute in the_nether run forceload add 0 0
+execute in the_end run forceload add 0 0
+
 summon minecraft:armor_stand -0.5 0 -0.5 {Marker:1b,Tags:[Trigonometric],NoGravity:1,Invulnerable:1,UUID:[I;0,0,0,32]}
 summon minecraft:armor_stand 0 0 0 {Marker:1b,Tags:[Trigonometric2],NoGravity:1,Invulnerable:1,UUID:[I;0,0,0,33]}
 data merge entity @e[tag=Trigonometric,limit=1] {Pos:[0d,0d,0d]}

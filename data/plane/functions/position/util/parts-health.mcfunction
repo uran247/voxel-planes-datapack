@@ -24,4 +24,3 @@ scoreboard players operation #total-health reg1 += @e[tag=target-parts,distance=
 scoreboard players operation #total-health reg1 /= #50 Num
 execute if score #total-health reg1 matches ..0 run scoreboard players set #total-health reg1 1
 execute as @e[tag=target-parts,distance=..30,tag=plane-seat,type=minecraft:donkey] unless score @s reg1 = #total-health reg1 store result entity @s Health float 1 run scoreboard players get #total-health reg1
-#execute as @e[tag=target-parts,distance=..30,tag=plane-seat,type=minecraft:donkey] run tellraw @p [{"score" : {"name":"@s", "objective":"reg1"}}, {"text":" "}, {"score" : {"name":"#total-health", "objective":"reg1"}}]
