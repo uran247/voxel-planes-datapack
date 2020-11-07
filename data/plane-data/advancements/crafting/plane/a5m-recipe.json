@@ -1,0 +1,35 @@
+{
+  "parent": "plane-data:crafting/root",
+  "display": {
+    "icon": {
+      "item": "minecraft:tnt",
+      "nbt":"{}"
+    },
+    "title": {
+      "translate": "test1"
+    },
+    "description": {
+      "translate": "test1"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "test1": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "plane-data:plane/a5m-recipe"
+      }
+    }    
+  },
+  "requirements": [
+    [
+      "test1"
+    ]
+  ],
+  "rewards": {
+    "function": "advancements:recipie-manager"
+  }
+}

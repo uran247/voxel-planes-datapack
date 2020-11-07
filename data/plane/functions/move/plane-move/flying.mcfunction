@@ -39,24 +39,27 @@ scoreboard players set @s[scores={speed=..-1}] speed 0
 #speedが最高速度を超えないようにする
 execute if score @s speed > @s max-speed run scoreboard players operation @s speed = @s max-speed
 
-#x方向ベクトル×speedをPosに代入
+#x方向ベクトル×speedを座標に代入
 scoreboard players operation #displacementX reg1 = @s speedX
 scoreboard players operation #displacementX reg1 *= @s speed
 scoreboard players operation #displacementX reg1 /= #100 Num
-execute store result entity @s Pos[0] double 0.0001 run scoreboard players operation @s PosX += #displacementX reg1
+execute store result storage plane-datapack temporary.Pos[0] double 0.0001 run scoreboard players operation @s PosX += #displacementX reg1
 
-#y方向ベクトル×speedをMotionに代入(滑走中の場合は実行しない、失速の場合下降させる)
+#y方向ベクトル×speedを座標に代入(失速の場合下降させる)
 scoreboard players operation #displacementY reg1 = @s speedY
 scoreboard players operation #displacementY reg1 *= @s speed
 scoreboard players operation #displacementY reg1 /= #100 Num
-execute store result entity @s[tag=!stall] Pos[1] double 0.0001 run scoreboard players operation @s PosY += #displacementY reg1
-execute store result entity @s[tag=stall] Pos[1] double 0.0001 run scoreboard players remove @s PosY 1250
+execute as @s[tag=!stall] store result storage plane-datapack temporary.Pos[1] double 0.0001 run scoreboard players operation @s PosY += #displacementY reg1
+execute as @s[tag=stall] store result storage plane-datapack temporary.Pos[1] double 0.0001 run scoreboard players remove @s PosY 1250
 
-#z方向ベクトル×speedをMotionに代入
+#z方向ベクトル×speedを座標に代入
 scoreboard players operation #displacementZ reg1 = @s speedZ
 scoreboard players operation #displacementZ reg1 *= @s speed
 scoreboard players operation #displacementZ reg1 /= #100 Num
-execute store result entity @s Pos[2] double 0.0001 run scoreboard players operation @s PosZ += #displacementZ reg1
+execute store result storage plane-datapack temporary.Pos[2] double 0.0001 run scoreboard players operation @s PosZ += #displacementZ reg1
+
+#作成した座標をPosに代入
+data modify entity @s Pos set from storage minecraft:plane-datapack temporary.Pos
 
 #speedが離陸速度未満だったら失速タグをつける
 execute if score @s[tag=!stall] speed < @s stall-speed run tag @s add stall

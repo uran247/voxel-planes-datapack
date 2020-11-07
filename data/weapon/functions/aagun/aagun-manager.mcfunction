@@ -17,12 +17,10 @@ scoreboard players set #hit-flag reg1 0
 execute store result score #pos-x reg1 run data get entity @s Pos[0] 100
 execute store result score #pos-y reg1 run data get entity @s Pos[1] 100
 execute store result score #pos-z reg1 run data get entity @s Pos[2] 100
-scoreboard players operation #pos-x reg1 += @s speedX
-scoreboard players operation #pos-y reg1 += @s speedY
-scoreboard players operation #pos-z reg1 += @s speedZ
-execute store result entity 0-0-0-0-4 Pos[0] double 0.01 run scoreboard players get #pos-x reg1
-execute store result entity 0-0-0-0-4 Pos[1] double 0.01 run scoreboard players get #pos-y reg1
-execute store result entity 0-0-0-0-4 Pos[2] double 0.01 run scoreboard players get #pos-z reg1
+execute store result storage plane-datapack temporary.Pos[0] double 0.01 run scoreboard players operation #pos-x reg1 += @s speedX
+execute store result storage plane-datapack temporary.Pos[1] double 0.01 run scoreboard players operation #pos-y reg1 += @s speedY
+execute store result storage plane-datapack temporary.Pos[2] double 0.01 run scoreboard players operation #pos-z reg1 += @s speedZ
+data modify entity 0-0-0-0-4 Pos set from storage minecraft:plane-datapack temporary.Pos
 tp @s ~ ~ ~ facing entity 0-0-0-0-4
 
 #tellraw @p [{"score" : {"name":"@s", "objective":"speedX"}}, {"text":" "}, {"score" : {"name":"@s", "objective":"speedY"}}, {"text":" "}, {"score" : {"name":"@s", "objective":"speedZ"}}]
@@ -58,10 +56,6 @@ execute if score #pos-y reg1 > @s fuse-height run scoreboard players set #hit-fl
 #hit-flagが立ったらダメージ処理を発生させ砲弾削除
 execute if score #hit-flag reg1 matches 1.. run function weapon:aagun/damage/damage
 execute if score #hit-flag reg1 matches 1.. run kill @s
-
-#execute if score #hit-flag reg1 matches 1 run say block
-#execute if score #hit-flag reg1 matches 2 run say entity
-#execute if score #hit-flag reg1 matches 3 run say fuse
 
 #終了処理
 tag @e[tag=aaguner,distance=..20] remove aaguner

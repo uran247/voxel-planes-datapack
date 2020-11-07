@@ -18,15 +18,11 @@ scoreboard players set #hit-flag reg1 0
 execute store result score #pos-x reg1 run data get entity @s Pos[0] 100
 execute store result score #pos-y reg1 run data get entity @s Pos[1] 100
 execute store result score #pos-z reg1 run data get entity @s Pos[2] 100
-scoreboard players operation #pos-x reg1 += @s speedX
-scoreboard players operation #pos-y reg1 += @s speedY
-scoreboard players operation #pos-z reg1 += @s speedZ
-execute store result entity 0-0-0-0-4 Pos[0] double 0.01 run scoreboard players get #pos-x reg1
-execute store result entity 0-0-0-0-4 Pos[1] double 0.01 run scoreboard players get #pos-y reg1
-execute store result entity 0-0-0-0-4 Pos[2] double 0.01 run scoreboard players get #pos-z reg1
+execute store result storage plane-datapack temporary.Pos[0] double 0.01 run scoreboard players operation #pos-x reg1 += @s speedX
+execute store result storage plane-datapack temporary.Pos[1] double 0.01 run scoreboard players operation #pos-y reg1 += @s speedY
+execute store result storage plane-datapack temporary.Pos[2] double 0.01 run scoreboard players operation #pos-z reg1 += @s speedZ
+data modify entity 0-0-0-0-4 Pos set from storage minecraft:plane-datapack temporary.Pos
 tp @s ~ ~ ~ facing entity 0-0-0-0-4
-#tellraw @p [{"score" : {"name":"@s", "objective":"speedX"}}, {"text":" "}, {"score" : {"name":"@s", "objective":"speedY"}}, {"text":" "}, {"score" : {"name":"@s", "objective":"speedZ"}}]
-#tellraw @p [{"nbt":"Pos","entity":"@s"},{"nbt":"Pos","entity":"0-0-0-0-4"}] 
 
 #移動予定先までの間にブロックがあるか判定
 execute as @s at 0-0-0-0-4 run function weapon:util/check-block
@@ -51,7 +47,6 @@ scoreboard players remove @s speedY 1
 #ダメージを与える
 execute if score #hit-flag reg1 matches 1.. at @s run function weapon:dropping/damage/damage
 execute if score #hit-flag reg1 matches 1.. run kill @s
-#execute if score #hit-flag reg1 matches 1.. run say hit
 
 
 #向き修正

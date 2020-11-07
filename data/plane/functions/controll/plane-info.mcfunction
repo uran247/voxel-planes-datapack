@@ -80,4 +80,3 @@ execute if entity @s[tag=stall] run title @p[tag=controller] title [{"text":"失
 #墜落判定が出たら表示
 execute if entity @s[tag=destroyed,tag=flying] run title @p[tag=controller] times 0 2 0
 execute if entity @s[tag=destroyed,tag=flying] run title @p[tag=controller] title [{"text":"墜落！！操作不能","color":"dark_red"}]
-

@@ -22,16 +22,16 @@ scoreboard players operation #speedZ reg1 *= @s speed
 scoreboard players operation #speedX reg1 /= #10 Num
 scoreboard players operation #speedY reg1 /= #10 Num
 scoreboard players operation #speedZ reg1 /= #10 Num
+
 execute store result score #pos-x reg1 run data get entity @s Pos[0] 100
 execute store result score #pos-y reg1 run data get entity @s Pos[1] 100
 execute store result score #pos-z reg1 run data get entity @s Pos[2] 100
-scoreboard players operation #pos-x reg1 += #speedX reg1
-scoreboard players operation #pos-y reg1 += #speedY reg1
-scoreboard players operation #pos-z reg1 += #speedZ reg1
 scoreboard players operation #pos-y reg1 -= @s fall-speed
-execute store result entity 0-0-0-0-4 Pos[0] double 0.01 run scoreboard players get #pos-x reg1
-execute store result entity 0-0-0-0-4 Pos[1] double 0.01 run scoreboard players get #pos-y reg1
-execute store result entity 0-0-0-0-4 Pos[2] double 0.01 run scoreboard players get #pos-z reg1
+execute store result storage plane-datapack temporary.Pos[0] double 0.01 run scoreboard players operation #pos-x reg1 += #speedX reg1
+execute store result storage plane-datapack temporary.Pos[1] double 0.01 run scoreboard players operation #pos-y reg1 += #speedY reg1
+execute store result storage plane-datapack temporary.Pos[2] double 0.01 run scoreboard players operation #pos-z reg1 += #speedZ reg1
+data modify entity 0-0-0-0-4 Pos set from storage minecraft:plane-datapack temporary.Pos
+
 tp @s ~ ~ ~ facing entity 0-0-0-0-4
 #tellraw @p [{"score" : {"name":"@s", "objective":"speedX"}}, {"text":" "}, {"score" : {"name":"@s", "objective":"speedY"}}, {"text":" "}, {"score" : {"name":"@s", "objective":"speedZ"}}]
 #tellraw @p [{"nbt":"Pos","entity":"@s"},{"nbt":"Pos","entity":"0-0-0-0-4"}] 

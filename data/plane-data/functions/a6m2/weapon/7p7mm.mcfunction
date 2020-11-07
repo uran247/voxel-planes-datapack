@@ -39,7 +39,6 @@ execute at @s as @e[tag=gun-init] run function plane:position/util/move-parts
 #銃弾の向きを機体方向に向ける
 #execute as @e[tag=gun-init,tag=right] run tellraw @p [{"nbt":"Rotation","entity":"@s"},{"nbt":"Tags","entity":"@s"}] 
 execute at @s positioned ^ ^ ^200 run summon minecraft:area_effect_cloud ~ ~ ~ {Duration:0,Tags:[gun-indicator,entity-nohit]}
-#say @e[tag=gun-indicator]
 execute as @e[tag=gun-init,limit=2] at @s facing entity @e[tag=gun-indicator,limit=1,sort=nearest] feet run tp @s ~ ~ ~ ~ ~
 #execute as @e[tag=gun-init,tag=right] run tellraw @p [{"nbt":"Rotation","entity":"@s"},{"nbt":"Pos","entity":"@e[tag=gun-indicator,limit=1]"}]
 #execute as @s run tellraw @p [{"nbt":"Rotation","entity":"@s"},{"nbt":"Pos","entity":"@e[tag=gun-indicator,limit=1]"}] 

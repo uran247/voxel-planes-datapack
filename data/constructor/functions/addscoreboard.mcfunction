@@ -136,3 +136,6 @@ scoreboard objectives add shootdown dummy {"text":"スコア"}
 
 #その他
 scoreboard objectives add time dummy
+
+#storage作成
+data merge storage minecraft:plane-datapack {temporary:{Pos:[0d,2.0d,0d]}}
