@@ -20,7 +20,7 @@
     "get_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "plane-data:plane/a5m-recipe"
+        "recipe": "plane-data:plane/ki-49-recipe"
       }
     }    
   },

@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "##G",
+        "RB ",
+        "##i"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:iron_trapdoor"
+        },
+        "G": {
+            "item": "minecraft:gunpowder"
+        },
+        "R": {
+            "item": "minecraft:red_dye"
+        },
+        "B": {
+            "item": "minecraft:brown_dye"
+        },
+        "i": {
+            "item": "minecraft:iron_ingot"
+        }
+    },
+    "result": {
+        "item": "minecraft:phantom_spawn_egg",
+        "count": 1
+    }
+}

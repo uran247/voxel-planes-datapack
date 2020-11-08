@@ -1,2 +1,3 @@
-.datapack/cache.json
-dev_tips.txt
+/.datapack/cache.json
+/recipe/
+/dev_tips.md

@@ -1,13 +1,16 @@
 {
     "type": "minecraft:crafting_shaped",
     "pattern": [
-        "iii",
+        "iiG",
         "RW ",
         "iii"
     ],
     "key": {
         "i": {
             "item": "minecraft:iron_ingot"
+        },
+        "G": {
+            "item": "minecraft:gunpowder"
         },
         "R": {
             "item": "minecraft:red_dye"

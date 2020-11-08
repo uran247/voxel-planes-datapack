@@ -1,14 +1,13 @@
 {
-  "parent": "minecraft:story/root",
   "display": {
     "icon": {
       "item": "minecraft:crafting_table"
     },
     "title": {
-      "translate": "recipes"
+      "translate": "plane-craft"
     },
     "description": {
-      "translate": "recipes"
+      "translate": "plane-craft"
     },
     "frame": "task",
     "show_toast": false,

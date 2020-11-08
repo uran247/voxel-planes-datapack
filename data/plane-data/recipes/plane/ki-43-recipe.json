@@ -2,7 +2,7 @@
     "type": "minecraft:crafting_shaped",
     "pattern": [
         "iii",
-        "RW ",
+        "RG ",
         "iii"
     ],
     "key": {
@@ -12,8 +12,8 @@
         "R": {
             "item": "minecraft:red_dye"
         },
-        "W": {
-            "item": "minecraft:white_dye"
+        "G": {
+            "item": "minecraft:green_dye"
         }
     },
     "result": {
