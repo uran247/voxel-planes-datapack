@@ -51,8 +51,9 @@ scoreboard objectives add ammo-reload1 dummy
 scoreboard objectives add ammo-reload2 dummy
 scoreboard objectives add ammo-reload3 dummy
 scoreboard objectives add ammo-reload4 dummy
-scoreboard objectives add ammo-reload6 dummy
 scoreboard objectives add ammo-reload5 dummy
+scoreboard objectives add ammo-reload6 dummy
+scoreboard objectives add ammo-reload7 dummy
 scoreboard objectives add throttle dummy
 scoreboard objectives add yaw-gap dummy
 scoreboard objectives add pitch-gap dummy
@@ -65,6 +66,7 @@ scoreboard objectives add w3-reload dummy
 scoreboard objectives add w4-reload dummy
 scoreboard objectives add w5-reload dummy
 scoreboard objectives add w6-reload dummy
+scoreboard objectives add w7-reload dummy
 scoreboard objectives add torp-speed dummy
 scoreboard objectives add fall-speed dummy
 scoreboard objectives add damage dummy
@@ -110,12 +112,14 @@ scoreboard objectives add ammunition3 dummy
 scoreboard objectives add ammunition4 dummy
 scoreboard objectives add ammunition5 dummy
 scoreboard objectives add ammunition6 dummy
+scoreboard objectives add ammunition7 dummy
 scoreboard objectives add max-ammunition1 dummy
 scoreboard objectives add max-ammunition2 dummy
 scoreboard objectives add max-ammunition3 dummy
 scoreboard objectives add max-ammunition4 dummy
 scoreboard objectives add max-ammunition5 dummy
 scoreboard objectives add max-ammunition6 dummy
+scoreboard objectives add max-ammunition7 dummy
 scoreboard objectives add offsetX dummy
 scoreboard objectives add offsetY dummy
 scoreboard objectives add offsetZ dummy
@@ -128,6 +132,7 @@ scoreboard objectives add max-ammo-reload3 dummy
 scoreboard objectives add max-ammo-reload4 dummy
 scoreboard objectives add max-ammo-reload5 dummy
 scoreboard objectives add max-ammo-reload6 dummy
+scoreboard objectives add max-ammo-reload7 dummy
 
 #ダメージ関連
 scoreboard objectives add taken-damage dummy

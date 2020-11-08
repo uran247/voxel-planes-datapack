@@ -26,6 +26,7 @@ execute as @e[tag=controll-target,distance=..1] if entity @s[tag=g4m1] at @s run
 execute as @e[tag=controll-target,distance=..1] if entity @s[tag=a6m5] at @s run function plane-data:a6m5/a6m5-weapon-manager
 execute as @e[tag=controll-target,distance=..1] if entity @s[tag=ki61] at @s run function plane-data:ki-61/ki61-weapon-manager
 execute as @e[tag=controll-target,distance=..1] if entity @s[tag=n1k2] at @s run function plane-data:n1k2/n1k2-weapon-manager
+execute as @e[tag=controll-target,distance=..1] if entity @s[tag=ki49] at @s run function plane-data:ki-49/ki49-weapon-manager
 
 #残弾補充時間減算
 execute as @e[tag=controll-target,distance=..1] run function plane:controll/weapon/decrease-reload-time

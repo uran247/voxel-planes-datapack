@@ -1,7 +1,7 @@
 #実行条件無し
 
 #機体召喚
-summon armor_stand ~ ~ ~ {Invisible:1,NoGravity:0,Tags:[ki49-root,ki49,plane-init,plane-root,plane,entity-nohit,need-calc-offset,delay-rotation,bombed,normal,50kg,has-weapon1,has-weapon2,has-weapon3,has-weapon4,main-weapon1,tier1],CustomName:"{\"text\":\"ki49\"}",Pose:{LeftArm:[0f,0f,0f],RightArm:[0f,0f,0f]},DisabledSlots:256,NoGravity:0b,HandItems:[{id:"snowball",Count:1b,tag:{CustomModelData:1,weapons:["bomb"]}},{}]}
+summon armor_stand ~ ~ ~ {Invisible:1,NoGravity:0,Tags:[ki49-root,ki49,plane-init,plane-root,plane,entity-nohit,need-calc-offset,delay-rotation,bombed,normal,250kg,has-weapon1,has-weapon2,has-weapon3,has-weapon4,main-weapon1,tier3],CustomName:"{\"text\":\"ki49\"}",Pose:{LeftArm:[0f,0f,0f],RightArm:[0f,0f,0f]},DisabledSlots:256,NoGravity:0b,HandItems:[{id:"snowball",Count:1b,tag:{CustomModelData:1,weapons:["bomb"]}},{}]}
 summon armor_stand ~ ~ ~ {Invisible:1,NoGravity:0,Tags:[ki49,plane-init,plane,entity-nohit,plane-seat],CustomName:"{\"text\":\"seat\"}",Pose:{LeftArm:[0f,0f,0f],RightArm:[0f,0f,0f]},Passengers:[{id:donkey,Health:11f,Attributes:[{Name:generic.maxHealth,Base:11}],Invulnerable:1b,DeathLootTable:"minecraft:entities/bat",SaddleItem:{id:"minecraft:saddle",Count:1b},Tame:1,NoAI:1,Silent:1,ChestedHorse:1b,ActiveEffects:[{Id:14,Amplifier:0,Duration:1000000,ShowParticles:0b}],Tags:[ki49,plane-init,plane,plane-seat,entity-nohit]}],DisabledSlots:256,NoGravity:0b}
 summon armor_stand ~ ~ ~ {Tags:["ki49-body","ki49",plane-init,plane,has-model,model-changeable,plane-parts,entity-nohit],NoGravity:1b,Invisible:1,HandItems:[{id:"minecraft:diamond_sword",Count:1b,tag:{Damage:110,Unbreakable:1}},{}],Pose:{LeftArm:[0f,0f,0f],RightArm:[0f,0f,0f]},DisabledSlots:256}
 summon armor_stand ~ ~ ~ {Tags:["ki49-tail","ki49",plane-init,plane,has-model,plane-parts,entity-nohit],NoGravity:1b,Invisible:1,HandItems:[{id:"minecraft:diamond_sword",Count:1b,tag:{Damage:113,Unbreakable:1}},{}],Pose:{LeftArm:[0f,0f,0f],RightArm:[0f,0f,0f]},DisabledSlots:256}
@@ -24,31 +24,31 @@ execute as @e[tag=plane-init,tag=plane-root,limit=1] at @s run function plane:su
 #スピード・滑走/角度/旋回速度/加速度/最高速度/離陸速度/形態スコア・存在座標・設定
 scoreboard players set @e[tag=plane-init,tag=ki49-root] speed 0
 scoreboard players set @e[tag=plane-init,tag=ki49-root] rolling 0
-scoreboard players set @e[tag=plane-init,tag=ki49-root] accelerate 54
-scoreboard players set @e[tag=plane-init,tag=ki49-root] resistance 42
-scoreboard players set @e[tag=plane-init,tag=ki49-root] energy-loss 17
-scoreboard players set @e[tag=plane-init,tag=ki49-root] deaccelerate 100
-scoreboard players set @e[tag=plane-init,tag=ki49-root] max-speed 16600
-scoreboard players set @e[tag=plane-init,tag=ki49-root] cruise-speed 13200
-scoreboard players set @e[tag=plane-init,tag=ki49-root] takeoff-speed 5200
-scoreboard players set @e[tag=plane-init,tag=ki49-root] stall-speed 5000
+scoreboard players set @e[tag=plane-init,tag=ki49-root] accelerate 43
+scoreboard players set @e[tag=plane-init,tag=ki49-root] resistance 30
+scoreboard players set @e[tag=plane-init,tag=ki49-root] energy-loss 19
+scoreboard players set @e[tag=plane-init,tag=ki49-root] deaccelerate 49
+scoreboard players set @e[tag=plane-init,tag=ki49-root] max-speed 17000
+scoreboard players set @e[tag=plane-init,tag=ki49-root] cruise-speed 12200
+scoreboard players set @e[tag=plane-init,tag=ki49-root] takeoff-speed 6100
+scoreboard players set @e[tag=plane-init,tag=ki49-root] stall-speed 5900
 scoreboard players set @e[tag=plane-init,tag=ki49-root] plpr-start-min 1500
 scoreboard players set @e[tag=plane-init,tag=ki49-root] plpr-start-max 1530
 scoreboard players set @e[tag=plane-init,tag=ki49-root] plpr-stop-min 1400
 scoreboard players set @e[tag=plane-init,tag=ki49-root] plpr-stop-max 1430
-scoreboard players set @e[tag=plane-init,tag=ki49-root] gear-retract-min 5700
-scoreboard players set @e[tag=plane-init,tag=ki49-root] gear-retract-max 5900
-scoreboard players set @e[tag=plane-init,tag=ki49-root] gear-pullout-min 5400
-scoreboard players set @e[tag=plane-init,tag=ki49-root] gear-pullout-max 5600
+scoreboard players set @e[tag=plane-init,tag=ki49-root] gear-retract-min 7400
+scoreboard players set @e[tag=plane-init,tag=ki49-root] gear-retract-max 7600
+scoreboard players set @e[tag=plane-init,tag=ki49-root] gear-pullout-min 7100
+scoreboard players set @e[tag=plane-init,tag=ki49-root] gear-pullout-max 7300
 
 scoreboard players set @e[tag=plane-init,tag=ki49-root] landing-pitch -600
 scoreboard players set @e[tag=plane-init,tag=ki49-root] AngX -600
 scoreboard players set @e[tag=plane-init,tag=ki49-root] AngY 0
 scoreboard players set @e[tag=plane-init,tag=ki49-root] AngZ 0
 scoreboard players set @e[tag=plane-init,tag=ki49-root] AngY-old 0
-scoreboard players set @e[tag=plane-init,tag=ki49-root] pitch-speed 300
-scoreboard players set @e[tag=plane-init,tag=ki49-root] yaw-speed 260
-scoreboard players set @e[tag=plane-init,tag=ki49-root] roll-speed 240
+scoreboard players set @e[tag=plane-init,tag=ki49-root] pitch-speed 124
+scoreboard players set @e[tag=plane-init,tag=ki49-root] yaw-speed 95
+scoreboard players set @e[tag=plane-init,tag=ki49-root] roll-speed 90
 
 scoreboard players set @e[tag=plane-init,tag=ki49-body] parking-udvm 110
 scoreboard players set @e[tag=plane-init,tag=ki49-body] rolling-udvm 111
@@ -61,18 +61,30 @@ scoreboard players set @e[tag=plane-init,tag=ki49-root] w1-reload 0
 scoreboard players set @e[tag=plane-init,tag=ki49-root] w2-reload 0
 scoreboard players set @e[tag=plane-init,tag=ki49-root] w3-reload 0
 scoreboard players set @e[tag=plane-init,tag=ki49-root] w4-reload 0
-scoreboard players set @e[tag=plane-init,tag=ki49-root] ammunition1 20
+scoreboard players set @e[tag=plane-init,tag=ki49-root] w5-reload 0
+scoreboard players set @e[tag=plane-init,tag=ki49-root] w6-reload 0
+scoreboard players set @e[tag=plane-init,tag=ki49-root] w7-reload 0
+scoreboard players set @e[tag=plane-init,tag=ki49-root] ammunition1 4
 scoreboard players set @e[tag=plane-init,tag=ki49-root] ammunition2 500
 scoreboard players set @e[tag=plane-init,tag=ki49-root] ammunition3 500
 scoreboard players set @e[tag=plane-init,tag=ki49-root] ammunition4 500
-scoreboard players set @e[tag=plane-init,tag=ki49-root] max-ammunition1 20
+scoreboard players set @e[tag=plane-init,tag=ki49-root] ammunition5 500
+scoreboard players set @e[tag=plane-init,tag=ki49-root] ammunition6 500
+scoreboard players set @e[tag=plane-init,tag=ki49-root] ammunition7 500
+scoreboard players set @e[tag=plane-init,tag=ki49-root] max-ammunition1 4
 scoreboard players set @e[tag=plane-init,tag=ki49-root] max-ammunition2 500
 scoreboard players set @e[tag=plane-init,tag=ki49-root] max-ammunition3 500
 scoreboard players set @e[tag=plane-init,tag=ki49-root] max-ammunition4 500
-scoreboard players set @e[tag=plane-init,tag=ki49-root] max-ammo-reload1 600
+scoreboard players set @e[tag=plane-init,tag=ki49-root] max-ammunition5 500
+scoreboard players set @e[tag=plane-init,tag=ki49-root] max-ammunition6 500
+scoreboard players set @e[tag=plane-init,tag=ki49-root] max-ammunition7 500
+scoreboard players set @e[tag=plane-init,tag=ki49-root] max-ammo-reload1 60
 scoreboard players set @e[tag=plane-init,tag=ki49-root] max-ammo-reload2 140
 scoreboard players set @e[tag=plane-init,tag=ki49-root] max-ammo-reload3 140
 scoreboard players set @e[tag=plane-init,tag=ki49-root] max-ammo-reload4 140
+scoreboard players set @e[tag=plane-init,tag=ki49-root] max-ammo-reload5 140
+scoreboard players set @e[tag=plane-init,tag=ki49-root] max-ammo-reload6 140
+scoreboard players set @e[tag=plane-init,tag=ki49-root] max-ammo-reload7 140
 scoreboard players set @e[tag=plane-init,tag=ki49-root] plane-weapon 1
 scoreboard players set @e[tag=plane-init,tag=ki49-root] weapon-types 2
 

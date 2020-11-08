@@ -15,3 +15,4 @@ execute if entity @s[tag=ki61-root] run function plane-data:ki-61/ki61-equip
 #execute if entity @s[tag=j100b-root] run 
 execute if entity @s[tag=a6m5-root] run function plane-data:a6m5/a6m5-equip
 execute if entity @s[tag=n1k2-root] run function plane-data:n1k2/n1k2-equip
+execute if entity @s[tag=ki49-root] run function plane-data:ki-49/ki49-equip
