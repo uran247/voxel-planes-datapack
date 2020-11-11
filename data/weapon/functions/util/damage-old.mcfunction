@@ -12,12 +12,12 @@ scoreboard players operation #hp reg1 -= @s taken-damage
 scoreboard players operation #new-hp reg1 = #hp reg1
 scoreboard players operation #hp reg1 > #1 Num
 
-execute store result entity @s Inventory[{Slot:103b}].tag.AttributeModifiers[{AttributeName:"generic.maxHealth",Name:"w",UUIDLeast:1,UUIDMost:1,Operation:0,Slot:"head"}].Amount double 1 run scoreboard players remove #hp reg1 20
+execute store result entity @s Inventory[{Slot:103b}].tag.AttributeModifiers[{AttributeName:""generic.max_health"",Name:"w",UUIDLeast:1,UUIDMost:1,Operation:0,Slot:"head"}].Amount double 1 run scoreboard players remove #hp reg1 20
 
 effect give @s minecraft:health_boost 1 0 true
 effect clear @s minecraft:health_boost
 
-data modify entity @s Inventory[{Slot:103b}].tag.AttributeModifiers[{AttributeName:"generic.maxHealth",Name:"w",UUIDLeast:1,UUIDMost:1,Operation:0,Slot:"head"}].Amount set value 0
+data modify entity @s Inventory[{Slot:103b}].tag.AttributeModifiers[{AttributeName:""generic.max_health"",Name:"w",UUIDLeast:1,UUIDMost:1,Operation:0,Slot:"head"}].Amount set value 0
 
 effect give @s minecraft:health_boost 1 0 true
 effect clear @s minecraft:health_boost

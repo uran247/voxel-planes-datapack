@@ -7,8 +7,8 @@ execute unless data entity @s Inventory[{Slot:5b,tag:{item-type:indicator}}] run
 execute unless data entity @s Inventory[{Slot:7b,tag:{item-type:indicator}}] run data modify block 0 1 0 Items append from entity @s Inventory[{Slot:7b}]
 execute unless data entity @s Inventory[{Slot:8b,tag:{item-type:indicator}}] run data modify block 0 1 0 Items append from entity @s Inventory[{Slot:8b}]
 
-execute unless data entity @s Inventory[{Slot:5b,tag:{item-type:indicator}}] run loot replace entity @s hotbar.5 loot loot:items/dummy/throttle-down
-execute unless data entity @s Inventory[{Slot:7b,tag:{item-type:indicator}}] run loot replace entity @s hotbar.7 loot loot:items/dummy/lock-turning
-execute unless data entity @s Inventory[{Slot:8b,tag:{item-type:indicator}}] run loot replace entity @s hotbar.8 loot loot:items/dummy/throttle-up
+execute unless data entity @s Inventory[{Slot:5b,tag:{item-type:indicator}}] run loot replace entity @s hotbar.5 loot item:dummy/throttle-down
+execute unless data entity @s Inventory[{Slot:7b,tag:{item-type:indicator}}] run loot replace entity @s hotbar.7 loot item:dummy/lock-turning
+execute unless data entity @s Inventory[{Slot:8b,tag:{item-type:indicator}}] run loot replace entity @s hotbar.8 loot item:dummy/throttle-up
 
 loot give @s mine 0 1 0 air{load:1b}

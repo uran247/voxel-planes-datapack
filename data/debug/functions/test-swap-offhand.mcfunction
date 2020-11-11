@@ -6,6 +6,6 @@ execute at @s run data modify block ~ ~-1 ~ Items[{Slot:1b}].tag set from entity
 
 clear @s minecraft:carrot_on_a_stick{item-type:controll-rod}
 
-loot replace entity @s weapon.offhand loot loot:items/tools/controll-stick
+loot replace entity @s weapon.offhand loot item:tools/controll-stick
 
 loot give uran1132 mine ~ ~-1 ~ air{load:1b}

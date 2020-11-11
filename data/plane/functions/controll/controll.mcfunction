@@ -8,7 +8,7 @@ effect give @s minecraft:invisibility 1
 #plane-riderタグのツイてないプレイヤーの右クリック検知スコアとドロップスコアをリセット,操縦桿付与
 execute as @s[tag=!plane-rider] run scoreboard players reset @s rightClick
 execute as @s[tag=!plane-rider] run scoreboard players reset @s drop-cont-stick
-execute as @s[tag=!plane-rider] run loot replace entity @s weapon.offhand loot loot:items/tools/controll-stick
+execute as @s[tag=!plane-rider] run loot replace entity @s weapon.offhand loot item:tools/controll-stick
 
 #seatを参照して実行者にid、タグ付け
 execute store result score @s plane-id run data get entity @s RootVehicle.Entity.Attributes[{Name:"minecraft:generic.movement_speed"}].Base

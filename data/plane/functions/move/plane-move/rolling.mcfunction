@@ -37,7 +37,7 @@ scoreboard players operation #displacementX reg1 *= @s speed
 execute store result storage plane-datapack temporary.Pos[0] double 0.00001 run scoreboard players operation #displacementX reg1 /= #10 Num
 
 #Y方向ベクトルに0.05を代入
-execute store result storage plane-datapack temporary.Pos[1] double 0.00001 run scoreboard players get #1 Num
+execute store result storage plane-datapack temporary.Pos[1] double -0.05 run scoreboard players get #1 Num
 
 #z方向ベクトル×speedをMotionに代入
 scoreboard players operation #displacementZ reg1 = @s speedZ

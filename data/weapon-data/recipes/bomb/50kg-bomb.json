@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " # ",
+        "#T#",
+        " # "
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:firework_star"
+        },
+        "T": {
+            "item": "minecraft:tnt"
+        }
+    },
+    "result": {}
+}
