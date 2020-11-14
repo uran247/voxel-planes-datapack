@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "# F",
+        "Gi ",
+        "VG "
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:black_dye"
+        },
+        "F": {
+            "item": "minecraft:fire_charge"
+        },
+        "G": {
+            "item": "minecraft:gunpowder"
+        },
+        "i": {
+            "item": "minecraft:iron_ingot"
+        },
+        "V": {
+            "item": "minecraft:flint_and_steel"
+        }
+    },
+    "result": {
+        "item": "minecraft:phantom_spawn_egg",
+        "count": 1
+    }
+}

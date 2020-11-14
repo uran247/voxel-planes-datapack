@@ -30,6 +30,6 @@
     ]
   ],
   "rewards": {
-    "function": "advancements:plane-recipie-manager"
+    "function": "advancements:weapon-recipie-manager"
   }
 }

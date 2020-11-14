@@ -20,7 +20,7 @@
     "get_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "weapon-data:bomb/50kg-bomb"
+        "recipe": "weapon-data:bomb/250kg-bomb"
       }
     }    
   },
