@@ -1,4 +1,4 @@
-#入力　エンティティ：弾丸　スコア：#speed reg1(tick/m)　座標：弾丸　タグ：gunner,gun-move-executer
+#入力　エンティティ：弾丸　スコア：#speed vp.reg1(tick/m)　座標：弾丸　タグ：gunner,gun-move-executer
 #処理　命中エンティティにhit-gunをつける
 #戻り　hit-gunタグのついた命中対象
 

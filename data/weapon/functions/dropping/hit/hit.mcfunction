@@ -11,7 +11,7 @@
 #実行者：弾体
 
 #衝突判定フラグを0に
-scoreboard players set #hit-flag reg1 0
+scoreboard players set #hit-flag vp.reg1 0
 
 #ブロック衝突判定、衝突判定が出たら衝突判定#hit-flagのフラグが1に
 function weapon:dropping/hit/hit-block
@@ -21,4 +21,4 @@ function weapon:dropping/hit/hit-block
 execute at @s[tag=bomb-normal] run function weapon:dropping/hit/hit-entity-bomb
 
 #命中エンティティがいたら#hit-flagのフラグを立てる
-execute if entity @e[tag=hit-bomb,distance=..20] run scoreboard players set #hit-flag reg1 2
+execute if entity @e[tag=hit-bomb,distance=..20] run scoreboard players set #hit-flag vp.reg1 2

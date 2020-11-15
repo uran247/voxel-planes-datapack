@@ -7,25 +7,25 @@ summon minecraft:armor_stand ~ ~ ~ {NoGravity:1,Tags:[projectile,gun,12p7mm,gun-
 summon minecraft:armor_stand ~ ~ ~ {NoGravity:1,Tags:[projectile,gun,12p7mm,gun-init,left3],Invisible:1,Marker:1}
 
 #スコア付与
-scoreboard players operation @e[tag=gun-init,distance=..5] plane-id = @s plane-id
-scoreboard players set @e[tag=gun-init,tag=left1,distance=..5] offsetX 3000
-scoreboard players set @e[tag=gun-init,tag=left1,distance=..5] offsetY -870
-scoreboard players set @e[tag=gun-init,tag=left1,distance=..5] offsetZ 0
-scoreboard players set @e[tag=gun-init,tag=right1,distance=..5] offsetX -2300
-scoreboard players set @e[tag=gun-init,tag=right1,distance=..5] offsetY -870
-scoreboard players set @e[tag=gun-init,tag=right1,distance=..5] offsetZ 0
-scoreboard players set @e[tag=gun-init,tag=left2,distance=..5] offsetX 3200
-scoreboard players set @e[tag=gun-init,tag=left2,distance=..5] offsetY -920
-scoreboard players set @e[tag=gun-init,tag=left2,distance=..5] offsetZ 0
-scoreboard players set @e[tag=gun-init,tag=right2,distance=..5] offsetX -2500
-scoreboard players set @e[tag=gun-init,tag=right2,distance=..5] offsetY -920
-scoreboard players set @e[tag=gun-init,tag=right2,distance=..5] offsetZ 0
-scoreboard players set @e[tag=gun-init,tag=left3,distance=..5] offsetX 3400
-scoreboard players set @e[tag=gun-init,tag=left3,distance=..5] offsetY -970
-scoreboard players set @e[tag=gun-init,tag=left3,distance=..5] offsetZ 0
-scoreboard players set @e[tag=gun-init,tag=right3,distance=..5] offsetX -2700
-scoreboard players set @e[tag=gun-init,tag=right3,distance=..5] offsetY -970
-scoreboard players set @e[tag=gun-init,tag=right3,distance=..5] offsetZ 0
+scoreboard players operation @e[tag=gun-init,distance=..5] vp.plane-id = @s vp.plane-id
+scoreboard players set @e[tag=gun-init,tag=left1,distance=..5] vp.offsetX 3000
+scoreboard players set @e[tag=gun-init,tag=left1,distance=..5] vp.offsetY -870
+scoreboard players set @e[tag=gun-init,tag=left1,distance=..5] vp.offsetZ 0
+scoreboard players set @e[tag=gun-init,tag=right1,distance=..5] vp.offsetX -2300
+scoreboard players set @e[tag=gun-init,tag=right1,distance=..5] vp.offsetY -870
+scoreboard players set @e[tag=gun-init,tag=right1,distance=..5] vp.offsetZ 0
+scoreboard players set @e[tag=gun-init,tag=left2,distance=..5] vp.offsetX 3200
+scoreboard players set @e[tag=gun-init,tag=left2,distance=..5] vp.offsetY -920
+scoreboard players set @e[tag=gun-init,tag=left2,distance=..5] vp.offsetZ 0
+scoreboard players set @e[tag=gun-init,tag=right2,distance=..5] vp.offsetX -2500
+scoreboard players set @e[tag=gun-init,tag=right2,distance=..5] vp.offsetY -920
+scoreboard players set @e[tag=gun-init,tag=right2,distance=..5] vp.offsetZ 0
+scoreboard players set @e[tag=gun-init,tag=left3,distance=..5] vp.offsetX 3400
+scoreboard players set @e[tag=gun-init,tag=left3,distance=..5] vp.offsetY -970
+scoreboard players set @e[tag=gun-init,tag=left3,distance=..5] vp.offsetZ 0
+scoreboard players set @e[tag=gun-init,tag=right3,distance=..5] vp.offsetX -2700
+scoreboard players set @e[tag=gun-init,tag=right3,distance=..5] vp.offsetY -970
+scoreboard players set @e[tag=gun-init,tag=right3,distance=..5] vp.offsetZ 0
 
 #発射位置に移動
 execute at @s positioned ~ ~ ~ as @e[tag=gun-init,distance=..5] run function plane:position/calc-offset

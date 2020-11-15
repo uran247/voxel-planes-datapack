@@ -14,5 +14,5 @@ loot give @s[advancements={plane-data:crafting/plane/ki-61-recipe=true}] loot pl
 loot give @s[advancements={plane-data:crafting/plane/n1k2-recipe=true}] loot plane-data:n1k2
 
 clear @s phantom_spawn_egg 1
-execute store success score @s reg1 run clear @s phantom_spawn_egg 0
-execute if score @s reg1 matches 1.. run function advancements:give-planes
+execute store success score @s vp.reg1 run clear @s phantom_spawn_egg 0
+execute if score @s vp.reg1 matches 1.. run function advancements:give-planes

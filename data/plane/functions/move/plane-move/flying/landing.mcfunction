@@ -12,8 +12,8 @@ tag @s remove stall
 scoreboard players set @s sound 0
 
 #AngX,Zを初期値にする
-scoreboard players set @s AngZ 0
-scoreboard players operation @s AngX = @s landing-pitch
+scoreboard players set @s vp.AngZ 0
+scoreboard players operation @s vp.AngX = @s vp.landing-pitch
 
 #flyingタグ削除
 tag @s remove flying

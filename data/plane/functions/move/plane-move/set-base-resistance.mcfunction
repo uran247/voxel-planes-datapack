@@ -1,16 +1,16 @@
 #基本減速量決定 speed*resistance/cruise-speed
-#入力 #speed input, #cruise-speed input, #resistance input, #energy-loss input, #ang-z input
-#返り score #base-resistance return
-scoreboard players operation #base-resistance return = #speed input
-scoreboard players operation #base-resistance return *= #resistance input
-scoreboard players operation #base-resistance return /= #cruise-speed input
+#入力 #speed vp.input, #cruise-speed vp.input, #resistance vp.input, #energy-loss vp.input, #ang-z vp.input
+#返り score #base-resistance vp.return
+scoreboard players operation #base-resistance vp.return = #speed vp.input
+scoreboard players operation #base-resistance vp.return *= #resistance vp.input
+scoreboard players operation #base-resistance vp.return /= #cruise-speed vp.input
 
-execute unless score #ang-z input matches 0 run scoreboard players operation #energy-loss reg1 = #energy-loss input
-execute unless score #ang-z input matches 0 run scoreboard players operation #energy-loss reg1 *= #ang-z input
-execute if score #ang-z input matches ..-1 run scoreboard players operation #energy-loss reg1 *= #-1 Num
-execute unless score #ang-z input matches 0 run scoreboard players operation #energy-loss reg1 /= #9000 Num
-execute unless score #ang-z input matches 0 run scoreboard players operation #base-resistance return += #energy-loss reg1
+execute unless score #ang-z vp.input matches 0 run scoreboard players operation #energy-loss vp.reg1 = #energy-loss vp.input
+execute unless score #ang-z vp.input matches 0 run scoreboard players operation #energy-loss vp.reg1 *= #ang-z vp.input
+execute if score #ang-z vp.input matches ..-1 run scoreboard players operation #energy-loss vp.reg1 *= #-1 vp.Num
+execute unless score #ang-z vp.input matches 0 run scoreboard players operation #energy-loss vp.reg1 /= #9000 vp.Num
+execute unless score #ang-z vp.input matches 0 run scoreboard players operation #base-resistance vp.return += #energy-loss vp.reg1
 
-scoreboard players operation #min-registance reg1 = #resistance input
-scoreboard players operation #min-registance reg1 /= #2 Num
-execute if score #base-resistance return < #min-registance reg1 run scoreboard players operation #base-resistance return = #min-registance reg1
+scoreboard players operation #min-registance vp.reg1 = #resistance vp.input
+scoreboard players operation #min-registance vp.reg1 /= #2 vp.Num
+execute if score #base-resistance vp.return < #min-registance vp.reg1 run scoreboard players operation #base-resistance vp.return = #min-registance vp.reg1

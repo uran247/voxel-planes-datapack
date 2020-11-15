@@ -4,6 +4,6 @@
 #scoreboard players set @s offsetY -2000
 #scoreboard players set @s offsetZ -1000
 
-scoreboard players set @e[tag=ki44-bomb-right] offsetX -2600
-scoreboard players set @e[tag=ki44-bomb-right] offsetY -700
-scoreboard players set @e[tag=ki44-bomb-right] offsetZ 1500
+scoreboard players set @e[tag=ki44-bomb-right] vp.offsetX -2600
+scoreboard players set @e[tag=ki44-bomb-right] vp.offsetY -700
+scoreboard players set @e[tag=ki44-bomb-right] vp.offsetZ 1500

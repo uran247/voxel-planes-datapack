@@ -20,26 +20,26 @@ summon minecraft:armor_stand 0 1 0 {NoGravity:1,Marker:1,Invisible:1,Tags:[entit
 summon minecraft:armor_stand 0 1 0 {NoGravity:1,Marker:1,Invisible:1,Tags:[entity-nohit,block-detector,"18"],UUID:[I;0,0,0,18],Invulnerable:1}
 summon minecraft:armor_stand 0 1 0 {NoGravity:1,Marker:1,Invisible:1,Tags:[entity-nohit,block-detector,"19"],UUID:[I;0,0,0,19],Invulnerable:1}
 summon minecraft:armor_stand 0 1 0 {NoGravity:1,Marker:1,Invisible:1,Tags:[entity-nohit,block-detector,"20"],UUID:[I;0,0,0,20],Invulnerable:1}
-scoreboard players set @e[tag=block-detector,tag=1,x=0,y=1,z=0,distance=..1] Num 1
-scoreboard players set @e[tag=block-detector,tag=2,x=0,y=1,z=0,distance=..1] Num 2
-scoreboard players set @e[tag=block-detector,tag=3,x=0,y=1,z=0,distance=..1] Num 3
-scoreboard players set @e[tag=block-detector,tag=4,x=0,y=1,z=0,distance=..1] Num 4
-scoreboard players set @e[tag=block-detector,tag=5,x=0,y=1,z=0,distance=..1] Num 5
-scoreboard players set @e[tag=block-detector,tag=6,x=0,y=1,z=0,distance=..1] Num 6
-scoreboard players set @e[tag=block-detector,tag=7,x=0,y=1,z=0,distance=..1] Num 7
-scoreboard players set @e[tag=block-detector,tag=8,x=0,y=1,z=0,distance=..1] Num 8
-scoreboard players set @e[tag=block-detector,tag=9,x=0,y=1,z=0,distance=..1] Num 9
-scoreboard players set @e[tag=block-detector,tag=10,x=0,y=1,z=0,distance=..1] Num 10
-scoreboard players set @e[tag=block-detector,tag=11,x=0,y=1,z=0,distance=..1] Num 11
-scoreboard players set @e[tag=block-detector,tag=12,x=0,y=1,z=0,distance=..1] Num 12
-scoreboard players set @e[tag=block-detector,tag=13,x=0,y=1,z=0,distance=..1] Num 13
-scoreboard players set @e[tag=block-detector,tag=14,x=0,y=1,z=0,distance=..1] Num 14
-scoreboard players set @e[tag=block-detector,tag=15,x=0,y=1,z=0,distance=..1] Num 15
-scoreboard players set @e[tag=block-detector,tag=16,x=0,y=1,z=0,distance=..1] Num 16
-scoreboard players set @e[tag=block-detector,tag=17,x=0,y=1,z=0,distance=..1] Num 17
-scoreboard players set @e[tag=block-detector,tag=18,x=0,y=1,z=0,distance=..1] Num 18
-scoreboard players set @e[tag=block-detector,tag=19,x=0,y=1,z=0,distance=..1] Num 19
-scoreboard players set @e[tag=block-detector,tag=20,x=0,y=1,z=0,distance=..1] Num 20
+scoreboard players set @e[tag=block-detector,tag=1,x=0,y=1,z=0,distance=..1] vp.Num 1
+scoreboard players set @e[tag=block-detector,tag=2,x=0,y=1,z=0,distance=..1] vp.Num 2
+scoreboard players set @e[tag=block-detector,tag=3,x=0,y=1,z=0,distance=..1] vp.Num 3
+scoreboard players set @e[tag=block-detector,tag=4,x=0,y=1,z=0,distance=..1] vp.Num 4
+scoreboard players set @e[tag=block-detector,tag=5,x=0,y=1,z=0,distance=..1] vp.Num 5
+scoreboard players set @e[tag=block-detector,tag=6,x=0,y=1,z=0,distance=..1] vp.Num 6
+scoreboard players set @e[tag=block-detector,tag=7,x=0,y=1,z=0,distance=..1] vp.Num 7
+scoreboard players set @e[tag=block-detector,tag=8,x=0,y=1,z=0,distance=..1] vp.Num 8
+scoreboard players set @e[tag=block-detector,tag=9,x=0,y=1,z=0,distance=..1] vp.Num 9
+scoreboard players set @e[tag=block-detector,tag=10,x=0,y=1,z=0,distance=..1] vp.Num 10
+scoreboard players set @e[tag=block-detector,tag=11,x=0,y=1,z=0,distance=..1] vp.Num 11
+scoreboard players set @e[tag=block-detector,tag=12,x=0,y=1,z=0,distance=..1] vp.Num 12
+scoreboard players set @e[tag=block-detector,tag=13,x=0,y=1,z=0,distance=..1] vp.Num 13
+scoreboard players set @e[tag=block-detector,tag=14,x=0,y=1,z=0,distance=..1] vp.Num 14
+scoreboard players set @e[tag=block-detector,tag=15,x=0,y=1,z=0,distance=..1] vp.Num 15
+scoreboard players set @e[tag=block-detector,tag=16,x=0,y=1,z=0,distance=..1] vp.Num 16
+scoreboard players set @e[tag=block-detector,tag=17,x=0,y=1,z=0,distance=..1] vp.Num 17
+scoreboard players set @e[tag=block-detector,tag=18,x=0,y=1,z=0,distance=..1] vp.Num 18
+scoreboard players set @e[tag=block-detector,tag=19,x=0,y=1,z=0,distance=..1] vp.Num 19
+scoreboard players set @e[tag=block-detector,tag=20,x=0,y=1,z=0,distance=..1] vp.Num 20
 
 execute in overworld run forceload add 0 0
 execute in the_nether run forceload add 0 0

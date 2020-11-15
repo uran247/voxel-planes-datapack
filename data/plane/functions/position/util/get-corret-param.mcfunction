@@ -1,16 +1,16 @@
 #処理：rootにparam-corスコアの合計値を入れる
 #入力：entity: plane-root
-scoreboard players set @s max-speed-cor 0
-scoreboard players operation @s max-speed-cor += @e[tag=target-parts,distance=..30] max-speed-cor
+scoreboard players set @s vp.max-speed-cor 0
+scoreboard players operation @s vp.max-speed-cor += @e[tag=target-parts,distance=..30] vp.max-speed-cor
 
-scoreboard players set @s accelerate-cor 0
-scoreboard players operation @s accelerate-cor += @e[tag=target-parts,distance=..30] accelerate-cor
+scoreboard players set @s vp.acc-cor 0
+scoreboard players operation @s vp.acc-cor += @e[tag=target-parts,distance=..30] vp.acc-cor
 
-scoreboard players set @s pitch-speed-cor 0
-scoreboard players operation @s pitch-speed-cor += @e[tag=target-parts,distance=..30] pitch-speed-cor
+scoreboard players set @s vp.pitch-spd-cor 0
+scoreboard players operation @s vp.pitch-spd-cor += @e[tag=target-parts,distance=..30] vp.pitch-spd-cor
 
-scoreboard players set @s yaw-speed-cor 0
-scoreboard players operation @s yaw-speed-cor += @e[tag=target-parts,distance=..30] yaw-speed-cor
+scoreboard players set @s vp.yaw-spd-cor 0
+scoreboard players operation @s vp.yaw-spd-cor += @e[tag=target-parts,distance=..30] vp.yaw-spd-cor
 
-scoreboard players set @s roll-speed-cor 0
-scoreboard players operation @s roll-speed-cor += @e[tag=target-parts,distance=..30] roll-speed-cor
+scoreboard players set @s vp.roll-spd-cor 0
+scoreboard players operation @s vp.roll-spd-cor += @e[tag=target-parts,distance=..30] vp.roll-spd-cor

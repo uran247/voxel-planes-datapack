@@ -3,18 +3,18 @@
 #弾薬数が0のEntityにリロード時間をセット
 #ammunitionに-1を入れてリロード中とわかるようにする
 #帰り値：なし
-execute if entity @s[tag=has-weapon1,scores={ammunition1=0}] unless score @s ammo-reload1 matches 1.. run scoreboard players operation @s ammo-reload1 = @s max-ammo-reload1
-execute if entity @s[tag=has-weapon2,scores={ammunition2=0}] unless score @s ammo-reload2 matches 1.. run scoreboard players operation @s ammo-reload2 = @s max-ammo-reload2
-execute if entity @s[tag=has-weapon3,scores={ammunition3=0}] unless score @s ammo-reload3 matches 1.. run scoreboard players operation @s ammo-reload3 = @s max-ammo-reload3
-execute if entity @s[tag=has-weapon4,scores={ammunition4=0}] unless score @s ammo-reload4 matches 1.. run scoreboard players operation @s ammo-reload4 = @s max-ammo-reload4
-execute if entity @s[tag=has-weapon5,scores={ammunition5=0}] unless score @s ammo-reload5 matches 1.. run scoreboard players operation @s ammo-reload5 = @s max-ammo-reload5
-execute if entity @s[tag=has-weapon6,scores={ammunition6=0}] unless score @s ammo-reload6 matches 1.. run scoreboard players operation @s ammo-reload6 = @s max-ammo-reload6
-execute if entity @s[tag=has-weapon7,scores={ammunition7=0}] unless score @s ammo-reload7 matches 1.. run scoreboard players operation @s ammo-reload7 = @s max-ammo-reload7
+execute if entity @s[tag=has-weapon1,scores={vp.ammunition1=0}] unless score @s vp.ammo-reload1 matches 1.. run scoreboard players operation @s vp.ammo-reload1 = @s vp.max-ammo-rel1
+execute if entity @s[tag=has-weapon2,scores={vp.ammunition2=0}] unless score @s vp.ammo-reload2 matches 1.. run scoreboard players operation @s vp.ammo-reload2 = @s vp.max-ammo-rel2
+execute if entity @s[tag=has-weapon3,scores={vp.ammunition3=0}] unless score @s vp.ammo-reload3 matches 1.. run scoreboard players operation @s vp.ammo-reload3 = @s vp.max-ammo-rel3
+execute if entity @s[tag=has-weapon4,scores={vp.ammunition4=0}] unless score @s vp.ammo-reload4 matches 1.. run scoreboard players operation @s vp.ammo-reload4 = @s vp.max-ammo-rel4
+execute if entity @s[tag=has-weapon5,scores={vp.ammunition5=0}] unless score @s vp.ammo-reload5 matches 1.. run scoreboard players operation @s vp.ammo-reload5 = @s vp.max-ammo-rel5
+execute if entity @s[tag=has-weapon6,scores={vp.ammunition6=0}] unless score @s vp.ammo-reload6 matches 1.. run scoreboard players operation @s vp.ammo-reload6 = @s vp.max-ammo-rel6
+execute if entity @s[tag=has-weapon7,scores={vp.ammunition7=0}] unless score @s vp.ammo-reload7 matches 1.. run scoreboard players operation @s vp.ammo-reload7 = @s vp.max-ammo-rel7
 
-execute if entity @s[tag=has-weapon1,scores={ammunition1=0}] if score @s ammo-reload1 matches 1.. run scoreboard players set @s ammunition1 -1
-execute if entity @s[tag=has-weapon2,scores={ammunition2=0}] if score @s ammo-reload2 matches 1.. run scoreboard players set @s ammunition2 -1
-execute if entity @s[tag=has-weapon3,scores={ammunition3=0}] if score @s ammo-reload3 matches 1.. run scoreboard players set @s ammunition3 -1
-execute if entity @s[tag=has-weapon4,scores={ammunition4=0}] if score @s ammo-reload4 matches 1.. run scoreboard players set @s ammunition4 -1
-execute if entity @s[tag=has-weapon5,scores={ammunition5=0}] if score @s ammo-reload5 matches 1.. run scoreboard players set @s ammunition5 -1
-execute if entity @s[tag=has-weapon6,scores={ammunition6=0}] if score @s ammo-reload6 matches 1.. run scoreboard players set @s ammunition6 -1
-execute if entity @s[tag=has-weapon7,scores={ammunition7=0}] if score @s ammo-reload7 matches 1.. run scoreboard players set @s ammunition7 -1
+execute if entity @s[tag=has-weapon1,scores={vp.ammunition1=0}] if score @s vp.ammo-reload1 matches 1.. run scoreboard players set @s vp.ammunition1 -1
+execute if entity @s[tag=has-weapon2,scores={vp.ammunition2=0}] if score @s vp.ammo-reload2 matches 1.. run scoreboard players set @s vp.ammunition2 -1
+execute if entity @s[tag=has-weapon3,scores={vp.ammunition3=0}] if score @s vp.ammo-reload3 matches 1.. run scoreboard players set @s vp.ammunition3 -1
+execute if entity @s[tag=has-weapon4,scores={vp.ammunition4=0}] if score @s vp.ammo-reload4 matches 1.. run scoreboard players set @s vp.ammunition4 -1
+execute if entity @s[tag=has-weapon5,scores={vp.ammunition5=0}] if score @s vp.ammo-reload5 matches 1.. run scoreboard players set @s vp.ammunition5 -1
+execute if entity @s[tag=has-weapon6,scores={vp.ammunition6=0}] if score @s vp.ammo-reload6 matches 1.. run scoreboard players set @s vp.ammunition6 -1
+execute if entity @s[tag=has-weapon7,scores={vp.ammunition7=0}] if score @s vp.ammo-reload7 matches 1.. run scoreboard players set @s vp.ammunition7 -1

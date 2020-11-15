@@ -4,10 +4,10 @@
 #戻り：
 
 #倒したのが敵航空機カウント
-execute store result score #kill-num reg1 if entity @e[tag=!entity-nohit,distance=..3,scores={reg1=0},tag=!enemy-target,type=!minecraft:player]
+execute store result score #kill-num vp.reg1 if entity @e[tag=!entity-nohit,distance=..3,scores={vp.reg1=0},tag=!enemy-target,type=!minecraft:player]
 
 #スコア増加
-scoreboard players operation #destroy-num reg1 *= #5 Num
-scoreboard players operation #global shootdown += #destroy-num reg1
-scoreboard players operation @s shootdown += #destroy-num reg1
-scoreboard players operation @s shootdown += #kill-num reg1
+scoreboard players operation #destroy-num vp.reg1 *= #5 vp.Num
+scoreboard players operation #global vp.shootdown += #destroy-num vp.reg1
+scoreboard players operation @s vp.shootdown += #destroy-num vp.reg1
+scoreboard players operation @s vp.shootdown += #kill-num vp.reg1

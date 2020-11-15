@@ -11,7 +11,7 @@ tag @e[type=armor_stand,tag=plane-root] remove has-rider
 execute as @a[nbt={RootVehicle:{Entity:{Tags:[plane-seat]}}}] at @s run function plane:controll/controll
 
 #飛行機操作(降機時)
-execute as @a[scores={rightClick=1..},nbt=!{RootVehicle:{Entity:{Tags:[plane-seat]}}},nbt={SelectedItem:{tag:{item-type:wrench}}}] at @s run function plane:controll/controll-ground
+execute as @a[scores={vp.rightClick=1..},nbt=!{RootVehicle:{Entity:{Tags:[plane-seat]}}},nbt={SelectedItem:{tag:{item-type:wrench}}}] at @s run function plane:controll/controll-ground
 
 #飛行機移動、向き修正
 execute as @e[type=armor_stand,tag=plane-root] at @s run function plane:plane-manager

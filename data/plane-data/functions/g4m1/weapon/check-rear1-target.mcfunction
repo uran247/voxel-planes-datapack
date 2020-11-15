@@ -10,17 +10,17 @@ execute as @s at @s run tp 0-0-0-0-4 ^ ^ ^ ~90 ~
 execute as @s at @s run tp 0-0-0-0-a ^ ^ ^ ~90 ~
 
 #スコア付与
-execute as 0-0-0-0-4 run scoreboard players set @s offsetX 220
-execute as 0-0-0-0-4 run scoreboard players set @s offsetY 100
-execute as 0-0-0-0-4 run scoreboard players set @s offsetZ 11000
-execute as 0-0-0-0-a run scoreboard players set @s offsetX 220
-execute as 0-0-0-0-a run scoreboard players set @s offsetY 0
-execute as 0-0-0-0-a run scoreboard players set @s offsetZ 11300
+execute as 0-0-0-0-4 run scoreboard players set @s vp.offsetX 220
+execute as 0-0-0-0-4 run scoreboard players set @s vp.offsetY 100
+execute as 0-0-0-0-4 run scoreboard players set @s vp.offsetZ 11000
+execute as 0-0-0-0-a run scoreboard players set @s vp.offsetX 220
+execute as 0-0-0-0-a run scoreboard players set @s vp.offsetY 0
+execute as 0-0-0-0-a run scoreboard players set @s vp.offsetZ 11300
 
 #位置移動
 function plane:position/util/calc-triangle-ratio
-scoreboard players operation #sin reg1 = #sin return
-scoreboard players operation #cos reg1 = #cos return
+scoreboard players operation #sin vp.reg1 = #sin vp.return
+scoreboard players operation #cos vp.reg1 = #cos vp.return
 execute at @s as 0-0-0-0-4 run function plane:position/util/calc-displacement
 execute at @s as 0-0-0-0-4 run function plane:position/calc-offset
 execute at @s as 0-0-0-0-4 run function plane:position/util/move-parts

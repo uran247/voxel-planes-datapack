@@ -5,7 +5,7 @@
 tag @s add plane-position-executer
 
 #角度スコアが前tickから変化したか判定しタグ付け
-execute if score @s AngX-old = @s AngX if score @s AngY-old = @s AngY if score @s AngZ-old = @s AngZ run tag @s add angle-not-changed
+execute if score @s vp.AngX-old = @s vp.AngX if score @s vp.AngY-old = @s vp.AngY if score @s vp.AngZ-old = @s vp.AngZ run tag @s add angle-not-changed
 tag @s[tag=!angle-not-changed] add need-calc-offset
 
 #自分と同じIDのパーツを自分の位置へ
@@ -37,12 +37,12 @@ execute as @s[tag=ki49-root] run function plane-data:ki-49/ki-49-position
 execute as @s[tag=j100b-root] run function plane:position/j-100b-position
 
 #パーツをオフセット位置へ
-#execute at @s run scoreboard players operation @e[tag=has-offset,tag=target-parts,distance=..30] input1 = @s AngZ
+#execute at @s run scoreboard players operation @e[tag=has-offset,tag=target-parts,distance=..30] vp.input1 = @s AngZ
 execute at @s[tag=need-calc-offset] run function plane:position/util/calc-triangle-ratio
-scoreboard players operation #sin reg1 = #sin return
-scoreboard players operation #cos reg1 = #cos return
-scoreboard players operation @s[tag=need-calc-offset] sin = #sin return
-scoreboard players operation @s[tag=need-calc-offset] cos = #cos return
+scoreboard players operation #sin vp.reg1 = #sin vp.return
+scoreboard players operation #cos vp.reg1 = #cos vp.return
+scoreboard players operation @s[tag=need-calc-offset] vp.sin = #sin vp.return
+scoreboard players operation @s[tag=need-calc-offset] vp.cos = #cos vp.return
 execute at @s[tag=need-calc-offset] as @e[tag=has-offset,tag=target-parts,distance=..30] run function plane:position/util/calc-displacement
 execute at @s[tag=need-calc-offset] as @e[tag=has-offset,tag=target-parts,distance=..30] at @s rotated ~-90 ~ run function plane:position/calc-offset
 execute at @s as @e[tag=has-offset,tag=target-parts,distance=..30] at @s run function plane:position/util/move-parts
@@ -58,9 +58,9 @@ execute at @s[tag=!angle-not-changed] run function plane:position/util/modify-an
 execute if entity @s[tag=!has-rider,tag=!no-move] at @e[tag=target-parts,tag=plane-seat,tag=!no-particle,type=minecraft:armor_stand] run particle minecraft:happy_villager ~ ~2.8 ~ 0.1 0.1 0.1 1 1 force @a[tag=!plane-rider]
 
 #Ang-oldに現在のAng代入
-scoreboard players operation @s AngX-old = @s AngX
-scoreboard players operation @s AngY-old = @s AngY
-scoreboard players operation @s AngZ-old = @s AngZ
+scoreboard players operation @s vp.AngX-old = @s vp.AngX
+scoreboard players operation @s vp.AngY-old = @s vp.AngY
+scoreboard players operation @s vp.AngZ-old = @s vp.AngZ
 
 #処理済みタグ付与
 tag @e[tag=target-parts] add position-processed

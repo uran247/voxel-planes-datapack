@@ -2,11 +2,11 @@
   "parent": "advancements:japan/j2m3",
   "display": {
     "icon": {
-      "item": "minecraft:diamond_sword",
-      "nbt":"{HideFlags:4,Damage:0}"
+      "item": "minecraft:bat_spawn_egg",
+      "nbt":"{CustomModelData:13}"
     },
     "title": {
-      "translate": "           紫電二一型           "
+      "translate": "紫電二一型"
     },
     "description": {
       "translate": "n1k2"
@@ -17,14 +17,21 @@
     "hidden": true
   },
   "criteria": {
-    "get_a5m": {
-      "trigger": "minecraft:impossible",
-      "conditions": {}
+    "get_n1k2": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+              "item": "minecraft:bat_spawn_egg",
+              "nbt": "{CustomModelData:13}"
+          }
+        ]
+      }
     }    
   },
   "requirements": [
     [
-      "get_a5m"
+      "get_n1k2"
     ]
   ]
 }

@@ -5,4 +5,4 @@
 execute as @e[tag=plane-root,tag=!has-rider,limit=1,sort=nearest,distance=..10] at @s run function item:plane2item/plane2item
 
 #スコアリセット
-scoreboard players reset @s rightClick
+scoreboard players reset @s vp.rightClick

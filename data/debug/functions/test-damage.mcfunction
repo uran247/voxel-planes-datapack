@@ -1,2 +1,2 @@
-scoreboard players set @s total-damage 4
+scoreboard players set @s vp.total-damage 4
 tag @s add get-damage

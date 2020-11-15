@@ -2,17 +2,17 @@
 #実行者：機体
 
 #選択に応じて武器ファンクション実行
-execute if entity @p[tag=weapon-user,scores={rightClick=1..}] if entity @s[scores={plane-weapon=1,w1-reload=..0,ammunition1=1..}] at @s run function plane-data:j2m3/weapon/model1-20mm
-execute if entity @p[tag=weapon-user,scores={rightClick=1..}] if entity @s[scores={plane-weapon=2,w2-reload=..0,ammunition2=1..}] at @s run function plane-data:j2m3/weapon/model2-20mm
-execute if entity @p[tag=weapon-user,scores={rightClick=1..}] if entity @s[scores={plane-weapon=1,w1-reload=..0,ammunition1=..0}] at @s run scoreboard players set @p[tag=weapon-user,scores={rightClick=1..}] rightClick 0
-execute if entity @p[tag=weapon-user,scores={rightClick=1..}] if entity @s[scores={plane-weapon=2,w2-reload=..0,ammunition2=..0}] at @s run scoreboard players set @p[tag=weapon-user,scores={rightClick=1..}] rightClick 0
+execute if entity @p[tag=weapon-user,scores={vp.rightClick=1..}] if entity @s[scores={vp.plane-weapon=1,vp.w1-reload=..0,vp.ammunition1=1..}] at @s run function plane-data:j2m3/weapon/model1-20mm
+execute if entity @p[tag=weapon-user,scores={vp.rightClick=1..}] if entity @s[scores={vp.plane-weapon=2,vp.w2-reload=..0,vp.ammunition2=1..}] at @s run function plane-data:j2m3/weapon/model2-20mm
+execute if entity @p[tag=weapon-user,scores={vp.rightClick=1..}] if entity @s[scores={vp.plane-weapon=1,vp.w1-reload=..0,vp.ammunition1=..0}] at @s run scoreboard players set @p[tag=weapon-user,scores={vp.rightClick=1..}] vp.rightClick 0
+execute if entity @p[tag=weapon-user,scores={vp.rightClick=1..}] if entity @s[scores={vp.plane-weapon=2,vp.w2-reload=..0,vp.ammunition2=..0}] at @s run scoreboard players set @p[tag=weapon-user,scores={vp.rightClick=1..}] vp.rightClick 0
 
 #reload時間減算
 function plane:weapon/util/cooltime-weapon
 
 #残弾数が0になったら補充時間をセット
-execute unless entity @s[scores={ammunition1=1..,ammunition2=1..}] as @s run function plane:weapon/util/set-reloadtime
+execute unless entity @s[scores={vp.ammunition1=1..,vp.ammunition2=1..}] as @s run function plane:weapon/util/set-reloadtime
 
 #execute if entity @s[scores={ammunition1=..0,ammo-reload1=..0}] run scoreboard players set @s ammunition1 100
-execute unless entity @s[scores={ammunition1=1..,ammunition2=1..}] unless entity @s[scores={ammo-reload1=1..,ammo-reload2=1..}] as @s run function plane:weapon/util/reset-ammunition
+execute unless entity @s[scores={vp.ammunition1=1..,vp.ammunition2=1..}] unless entity @s[scores={vp.ammo-reload1=1..,vp.ammo-reload2=1..}] as @s run function plane:weapon/util/reset-ammunition
 

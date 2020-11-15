@@ -4,14 +4,14 @@
 #戻り　スコア：#hit-flag タグ：hit-gun
 
 #衝突判定フラグを0に
-scoreboard players set #hit-flag reg1 0
+scoreboard players set #hit-flag vp.reg1 0
 
 #ブロック衝突判定、衝突判定が出たら衝突判定フラグが1に
 function weapon:gun/hit/hit-block
 
 #hit候補判定
-execute if score #speed-decimal reg1 matches 0 run function weapon:gun/hit/set-hit-candidate
-execute if score #speed-decimal reg1 matches 5 positioned ^ ^ ^0.5 run function weapon:gun/hit/set-hit-candidate
+execute if score #speed-decimal vp.reg1 matches 0 run function weapon:gun/hit/set-hit-candidate
+execute if score #speed-decimal vp.reg1 matches 5 positioned ^ ^ ^0.5 run function weapon:gun/hit/set-hit-candidate
 
 #エンティティ衝突判定　衝突エンティティにhit-gunタグをつける
 #execute at @s[tag=7p7mm] run function weapon:gun/hit/hit-entity-7p7mm
@@ -20,4 +20,4 @@ execute if score #speed-decimal reg1 matches 5 positioned ^ ^ ^0.5 run function 
 execute at @s run function weapon:gun/hit/hit-entity
 
 #命中エンティティがいたらhitフラグに2を立てる
-execute if entity @e[tag=hit-gun,distance=..20] run scoreboard players set #hit-flag reg1 2
+execute if entity @e[tag=hit-gun,distance=..20] run scoreboard players set #hit-flag vp.reg1 2

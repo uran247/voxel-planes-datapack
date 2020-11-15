@@ -11,7 +11,7 @@ tag @s[nbt={Inventory:[{Slot:-106b,tag:{item-type:controll-rod}}]}] add weapon-u
 execute if entity @s[nbt=!{Inventory:[{Slot:-106b,tag:{item-type:controll-rod}}]}] at @s run function plane:controll/weapon/switch-weapon
 
 #右クリック判定
-execute if score @s rightClick matches 2.. run scoreboard players set @s rightClick 0
+execute if score @s vp.rightClick matches 2.. run scoreboard players set @s vp.rightClick 0
 
 #weaponfunctionを実行
 execute as @e[tag=controll-target,distance=..1] if entity @s[tag=d3a] at @s run function plane-data:d3a/d3a-weapon-manager

@@ -3,11 +3,11 @@
 #帰り：score:@s now-hp
 
 #合計ダメージ計算
-scoreboard players operation @s total-damage += @s taken-damage
+scoreboard players operation @s vp.total-damage += @s vp.taken-damage
 
 #ダメージを受けたフラグをつける
 tag @s add get-damage
 
 #taken-damege削除
-scoreboard players reset @s taken-damage
+scoreboard players reset @s vp.taken-damage
 

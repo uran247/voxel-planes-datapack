@@ -2,11 +2,11 @@
   "parent": "advancements:japan/ki-44",
   "display": {
     "icon": {
-      "item": "minecraft:diamond_sword",
-      "nbt":"{HideFlags:4,Damage:0}"
+      "item": "minecraft:bat_spawn_egg",
+      "nbt":"{CustomModelData:12}"
     },
     "title": {
-      "translate": "        三式戦闘機  飛燕        "
+      "translate": "三式戦闘機  飛燕"
     },
     "description": {
       "translate": "ki-61"
@@ -17,14 +17,21 @@
     "hidden": true
   },
   "criteria": {
-    "get_a5m": {
-      "trigger": "minecraft:impossible",
-      "conditions": {}
+    "get_ki61": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+              "item": "minecraft:bat_spawn_egg",
+              "nbt": "{CustomModelData:12}"
+          }
+        ]
+      }
     }    
   },
   "requirements": [
     [
-      "get_a5m"
+      "get_ki61"
     ]
   ]
 }

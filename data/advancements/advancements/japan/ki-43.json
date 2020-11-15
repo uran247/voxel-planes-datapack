@@ -6,7 +6,7 @@
       "nbt":"{CustomModelData:2}"
     },
     "title": {
-      "translate": "         一式戦闘機  隼         "
+      "translate": "一式戦闘機  隼"
     },
     "description": [
       {
@@ -24,14 +24,21 @@
     "hidden": false
   },
   "criteria": {
-    "get_a5m": {
-      "trigger": "minecraft:location",
-      "conditions": {}
+    "get_ki43": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+              "item": "minecraft:bat_spawn_egg",
+              "nbt": "{CustomModelData:2}"
+          }
+        ]
+      }
     }    
   },
   "requirements": [
     [
-      "get_a5m"
+      "get_ki43"
     ]
   ]
 }

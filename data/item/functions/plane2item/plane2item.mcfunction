@@ -2,8 +2,8 @@
 #処理　機種に応じたplane2itemを実行
 
 #同じIDのパーツ取得
-scoreboard players operation #plane-id reg1 = @s plane-id
-execute as @e[tag=plane] if score @s plane-id = #plane-id reg1 run tag @s add plane2item-plane-parts
+scoreboard players operation #plane-id vp.reg1 = @s vp.plane-id
+execute as @e[tag=plane] if score @s vp.plane-id = #plane-id vp.reg1 run tag @s add plane2item-plane-parts
 
 #個別処理
 execute as @s[tag=a5m-root] at @s run function plane-data:a5m/a5m-2-item

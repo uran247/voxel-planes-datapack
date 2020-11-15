@@ -25,8 +25,15 @@
   },
   "criteria": {
     "get_a5m": {
-      "trigger": "minecraft:location",
-      "conditions": {}
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+              "item": "minecraft:bat_spawn_egg",
+              "nbt": "{CustomModelData:1}"
+          }
+        ]
+      }
     }    
   },
   "requirements": [

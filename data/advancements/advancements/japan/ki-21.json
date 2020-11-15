@@ -6,7 +6,7 @@
       "nbt":"{CustomModelData:4}"
     },
     "title": {
-      "translate": "         九七式重爆撃機         "
+      "translate": "九七式重爆撃機"
     },
     "description": [
       {
@@ -24,14 +24,21 @@
     "hidden": false
   },
   "criteria": {
-    "get_a5m": {
-      "trigger": "minecraft:location",
-      "conditions": {}
+    "get_ki21": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+              "item": "minecraft:bat_spawn_egg",
+              "nbt": "{CustomModelData:4}"
+          }
+        ]
+      }
     }    
   },
   "requirements": [
     [
-      "get_a5m"
+      "get_ki21"
     ]
   ]
 }

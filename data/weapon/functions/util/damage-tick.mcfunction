@@ -4,9 +4,9 @@
 
 #新HP計算
 execute store result score @s ScoreToHealth run data get entity @s Health
-scoreboard players operation @s ScoreToHealth -= @s total-damage
-scoreboard players operation @s ScoreToHealth *= #100 Num
+scoreboard players operation @s ScoreToHealth -= @s vp.total-damage
+scoreboard players operation @s ScoreToHealth *= #100 vp.Num
 
 #ダメージリセット
-scoreboard players reset @s total-damage
+scoreboard players reset @s vp.total-damage
 tag @s remove get-damage

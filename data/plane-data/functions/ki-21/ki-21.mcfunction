@@ -23,97 +23,97 @@ summon armor_stand ~ ~ ~ {Tags:["ki21-hitbox","ki21",plane-init,plane,has-offset
 execute as @e[tag=plane-init,tag=plane-root,limit=1] at @s run function plane:summon/set-plane-id
 
 #スピード・滑走/角度/旋回速度/加速度/最高速度/離陸速度/形態スコア・存在座標・設定
-scoreboard players set @e[tag=plane-init,tag=ki21-root] speed 0
-scoreboard players set @e[tag=plane-init,tag=ki21-root] rolling 0
-scoreboard players set @e[tag=plane-init,tag=ki21-root] accelerate 54
-scoreboard players set @e[tag=plane-init,tag=ki21-root] resistance 42
-scoreboard players set @e[tag=plane-init,tag=ki21-root] energy-loss 17
-scoreboard players set @e[tag=plane-init,tag=ki21-root] deaccelerate 100
-scoreboard players set @e[tag=plane-init,tag=ki21-root] max-speed 16600
-scoreboard players set @e[tag=plane-init,tag=ki21-root] cruise-speed 13200
-scoreboard players set @e[tag=plane-init,tag=ki21-root] takeoff-speed 5200
-scoreboard players set @e[tag=plane-init,tag=ki21-root] stall-speed 5000
-scoreboard players set @e[tag=plane-init,tag=ki21-root] plpr-start-min 1500
-scoreboard players set @e[tag=plane-init,tag=ki21-root] plpr-start-max 1530
-scoreboard players set @e[tag=plane-init,tag=ki21-root] plpr-stop-min 1400
-scoreboard players set @e[tag=plane-init,tag=ki21-root] plpr-stop-max 1430
-scoreboard players set @e[tag=plane-init,tag=ki21-root] gear-retract-min 5700
-scoreboard players set @e[tag=plane-init,tag=ki21-root] gear-retract-max 5900
-scoreboard players set @e[tag=plane-init,tag=ki21-root] gear-pullout-min 5400
-scoreboard players set @e[tag=plane-init,tag=ki21-root] gear-pullout-max 5600
+scoreboard players set @e[tag=plane-init,tag=ki21-root] vp.speed 0
+scoreboard players set @e[tag=plane-init,tag=ki21-root] vp.rolling 0
+scoreboard players set @e[tag=plane-init,tag=ki21-root] vp.accelerate 54
+scoreboard players set @e[tag=plane-init,tag=ki21-root] vp.resistance 42
+scoreboard players set @e[tag=plane-init,tag=ki21-root] vp.energy-loss 17
+scoreboard players set @e[tag=plane-init,tag=ki21-root] vp.deaccelerate 100
+scoreboard players set @e[tag=plane-init,tag=ki21-root] vp.max-speed 16600
+scoreboard players set @e[tag=plane-init,tag=ki21-root] vp.cruise-speed 13200
+scoreboard players set @e[tag=plane-init,tag=ki21-root] vp.takeoff-speed 5200
+scoreboard players set @e[tag=plane-init,tag=ki21-root] vp.stall-speed 5000
+scoreboard players set @e[tag=plane-init,tag=ki21-root] vp.prop-strt-min 1500
+scoreboard players set @e[tag=plane-init,tag=ki21-root] vp.prop-strt-max 1530
+scoreboard players set @e[tag=plane-init,tag=ki21-root] vp.prop-stop-min 1400
+scoreboard players set @e[tag=plane-init,tag=ki21-root] vp.prop-stop-max 1430
+scoreboard players set @e[tag=plane-init,tag=ki21-root] vp.gear-ret-min 5700
+scoreboard players set @e[tag=plane-init,tag=ki21-root] vp.gear-ret-max 5900
+scoreboard players set @e[tag=plane-init,tag=ki21-root] vp.gear-po-min 5400
+scoreboard players set @e[tag=plane-init,tag=ki21-root] vp.gear-po-max 5600
 
-scoreboard players set @e[tag=plane-init,tag=ki21-root] landing-pitch -750
-scoreboard players set @e[tag=plane-init,tag=ki21-root] AngX -750
-scoreboard players set @e[tag=plane-init,tag=ki21-root] AngY 0
-scoreboard players set @e[tag=plane-init,tag=ki21-root] AngZ 0
-scoreboard players set @e[tag=plane-init,tag=ki21-root] AngY-old 0
-scoreboard players set @e[tag=plane-init,tag=ki21-root] pitch-speed 300
-scoreboard players set @e[tag=plane-init,tag=ki21-root] yaw-speed 260
-scoreboard players set @e[tag=plane-init,tag=ki21-root] roll-speed 240
+scoreboard players set @e[tag=plane-init,tag=ki21-root] vp.landing-pitch -750
+scoreboard players set @e[tag=plane-init,tag=ki21-root] vp.AngX -750
+scoreboard players set @e[tag=plane-init,tag=ki21-root] vp.AngY 0
+scoreboard players set @e[tag=plane-init,tag=ki21-root] vp.AngZ 0
+scoreboard players set @e[tag=plane-init,tag=ki21-root] vp.AngY-old 0
+scoreboard players set @e[tag=plane-init,tag=ki21-root] vp.pitch-speed 300
+scoreboard players set @e[tag=plane-init,tag=ki21-root] vp.yaw-speed 260
+scoreboard players set @e[tag=plane-init,tag=ki21-root] vp.roll-speed 240
 
-scoreboard players set @e[tag=plane-init,tag=ki21-body] parking-udvm 78
-scoreboard players set @e[tag=plane-init,tag=ki21-body] rolling-udvm 79
-scoreboard players set @e[tag=plane-init,tag=ki21-body] flying-udvm 80
+scoreboard players set @e[tag=plane-init,tag=ki21-body] vp.parking-udvm 78
+scoreboard players set @e[tag=plane-init,tag=ki21-body] vp.rolling-udvm 79
+scoreboard players set @e[tag=plane-init,tag=ki21-body] vp.flying-udvm 80
 
-scoreboard players set @e[tag=plane-init,tag=ki21-root] w1-reload 0
-scoreboard players set @e[tag=plane-init,tag=ki21-root] w2-reload 0
-scoreboard players set @e[tag=plane-init,tag=ki21-root] w3-reload 0
-scoreboard players set @e[tag=plane-init,tag=ki21-root] w4-reload 0
-scoreboard players set @e[tag=plane-init,tag=ki21-root] ammunition1 20
-scoreboard players set @e[tag=plane-init,tag=ki21-root] ammunition2 500
-scoreboard players set @e[tag=plane-init,tag=ki21-root] ammunition3 500
-scoreboard players set @e[tag=plane-init,tag=ki21-root] ammunition4 500
-scoreboard players set @e[tag=plane-init,tag=ki21-root] max-ammunition1 20
-scoreboard players set @e[tag=plane-init,tag=ki21-root] max-ammunition2 500
-scoreboard players set @e[tag=plane-init,tag=ki21-root] max-ammunition3 500
-scoreboard players set @e[tag=plane-init,tag=ki21-root] max-ammunition4 500
-scoreboard players set @e[tag=plane-init,tag=ki21-root] max-ammo-reload1 600
-scoreboard players set @e[tag=plane-init,tag=ki21-root] max-ammo-reload2 140
-scoreboard players set @e[tag=plane-init,tag=ki21-root] max-ammo-reload3 140
-scoreboard players set @e[tag=plane-init,tag=ki21-root] max-ammo-reload4 140
-scoreboard players set @e[tag=plane-init,tag=ki21-root] plane-weapon 1
-scoreboard players set @e[tag=plane-init,tag=ki21-root] weapon-types 2
+scoreboard players set @e[tag=plane-init,tag=ki21-root] vp.w1-reload 0
+scoreboard players set @e[tag=plane-init,tag=ki21-root] vp.w2-reload 0
+scoreboard players set @e[tag=plane-init,tag=ki21-root] vp.w3-reload 0
+scoreboard players set @e[tag=plane-init,tag=ki21-root] vp.w4-reload 0
+scoreboard players set @e[tag=plane-init,tag=ki21-root] vp.ammunition1 20
+scoreboard players set @e[tag=plane-init,tag=ki21-root] vp.ammunition2 500
+scoreboard players set @e[tag=plane-init,tag=ki21-root] vp.ammunition3 500
+scoreboard players set @e[tag=plane-init,tag=ki21-root] vp.ammunition4 500
+scoreboard players set @e[tag=plane-init,tag=ki21-root] vp.max-ammo1 20
+scoreboard players set @e[tag=plane-init,tag=ki21-root] vp.max-ammo2 500
+scoreboard players set @e[tag=plane-init,tag=ki21-root] vp.max-ammo3 500
+scoreboard players set @e[tag=plane-init,tag=ki21-root] vp.max-ammo4 500
+scoreboard players set @e[tag=plane-init,tag=ki21-root] vp.max-ammo-rel1 600
+scoreboard players set @e[tag=plane-init,tag=ki21-root] vp.max-ammo-rel2 140
+scoreboard players set @e[tag=plane-init,tag=ki21-root] vp.max-ammo-rel3 140
+scoreboard players set @e[tag=plane-init,tag=ki21-root] vp.max-ammo-rel4 140
+scoreboard players set @e[tag=plane-init,tag=ki21-root] vp.plane-weapon 1
+scoreboard players set @e[tag=plane-init,tag=ki21-root] vp.weapon-types 2
 
-scoreboard players set @e[tag=plane-init,tag=ki21-root] max-engine 2
+scoreboard players set @e[tag=plane-init,tag=ki21-root] vp.max-engine 2
 
-execute store result score @e[tag=plane-init,tag=ki21-root,limit=1] PosX run data get entity @e[tag=plane-init,tag=ki21-root,limit=1] Pos[0] 10000
-execute store result score @e[tag=plane-init,tag=ki21-root,limit=1] PosY run data get entity @e[tag=plane-init,tag=ki21-root,limit=1] Pos[1] 10000
-execute store result score @e[tag=plane-init,tag=ki21-root,limit=1] PosZ run data get entity @e[tag=plane-init,tag=ki21-root,limit=1] Pos[2] 10000
+execute store result score @e[tag=plane-init,tag=ki21-root,limit=1] vp.PosX run data get entity @e[tag=plane-init,tag=ki21-root,limit=1] Pos[0] 10000
+execute store result score @e[tag=plane-init,tag=ki21-root,limit=1] vp.PosY run data get entity @e[tag=plane-init,tag=ki21-root,limit=1] Pos[1] 10000
+execute store result score @e[tag=plane-init,tag=ki21-root,limit=1] vp.PosZ run data get entity @e[tag=plane-init,tag=ki21-root,limit=1] Pos[2] 10000
 
 #offset設定
-scoreboard players set @e[tag=body,tag=plane-init] offsetX 0
-scoreboard players set @e[tag=body,tag=plane-init] offsetY 0
-scoreboard players set @e[tag=body,tag=plane-init] offsetZ 0
-scoreboard players set @e[tag=ki21-rightwing,tag=plane-init] offsetX -5740
-scoreboard players set @e[tag=ki21-rightwing,tag=plane-init] offsetY 0
-scoreboard players set @e[tag=ki21-rightwing,tag=plane-init] offsetZ 0
-scoreboard players set @e[tag=ki21-leftwing,tag=plane-init] offsetX 5660
-scoreboard players set @e[tag=ki21-leftwing,tag=plane-init] offsetY 0
-scoreboard players set @e[tag=ki21-leftwing,tag=plane-init] offsetZ 0
-scoreboard players set @e[tag=engine-l,tag=plane-init] offsetX 3000
-scoreboard players set @e[tag=engine-l,tag=plane-init] offsetY 250
-scoreboard players set @e[tag=engine-l,tag=plane-init] offsetZ 6800
-scoreboard players set @e[tag=engine-r,tag=plane-init] offsetX -3000
-scoreboard players set @e[tag=engine-r,tag=plane-init] offsetY 250
-scoreboard players set @e[tag=engine-r,tag=plane-init] offsetZ 6800
-scoreboard players set @e[tag=aileron-r,tag=plane-init] offsetX -7400
-scoreboard players set @e[tag=aileron-r,tag=plane-init] offsetY 700
-scoreboard players set @e[tag=aileron-r,tag=plane-init] offsetZ 3000
-scoreboard players set @e[tag=aileron-l,tag=plane-init] offsetX 7300
-scoreboard players set @e[tag=aileron-l,tag=plane-init] offsetY 700
-scoreboard players set @e[tag=aileron-l,tag=plane-init] offsetZ 3000
-scoreboard players set @e[tag=elevator-r,tag=plane-init] offsetX -2300
-scoreboard players set @e[tag=elevator-r,tag=plane-init] offsetY 600
-scoreboard players set @e[tag=elevator-r,tag=plane-init] offsetZ -6500
-scoreboard players set @e[tag=elevator-l,tag=plane-init] offsetX 2300
-scoreboard players set @e[tag=elevator-l,tag=plane-init] offsetY 600
-scoreboard players set @e[tag=elevator-l,tag=plane-init] offsetZ -6500
-scoreboard players set @e[tag=radder,tag=plane-init] offsetX 0
-scoreboard players set @e[tag=radder,tag=plane-init] offsetY 2400
-scoreboard players set @e[tag=radder,tag=plane-init] offsetZ -6800
-scoreboard players set @e[tag=cockpit,tag=plane-init] offsetX 0
-scoreboard players set @e[tag=cockpit,tag=plane-init] offsetY 1600
-scoreboard players set @e[tag=cockpit,tag=plane-init] offsetZ 6600
+scoreboard players set @e[tag=body,tag=plane-init] vp.offsetX 0
+scoreboard players set @e[tag=body,tag=plane-init] vp.offsetY 0
+scoreboard players set @e[tag=body,tag=plane-init] vp.offsetZ 0
+scoreboard players set @e[tag=ki21-rightwing,tag=plane-init] vp.offsetX -5740
+scoreboard players set @e[tag=ki21-rightwing,tag=plane-init] vp.offsetY 0
+scoreboard players set @e[tag=ki21-rightwing,tag=plane-init] vp.offsetZ 0
+scoreboard players set @e[tag=ki21-leftwing,tag=plane-init] vp.offsetX 5660
+scoreboard players set @e[tag=ki21-leftwing,tag=plane-init] vp.offsetY 0
+scoreboard players set @e[tag=ki21-leftwing,tag=plane-init] vp.offsetZ 0
+scoreboard players set @e[tag=engine-l,tag=plane-init] vp.offsetX 3000
+scoreboard players set @e[tag=engine-l,tag=plane-init] vp.offsetY 250
+scoreboard players set @e[tag=engine-l,tag=plane-init] vp.offsetZ 6800
+scoreboard players set @e[tag=engine-r,tag=plane-init] vp.offsetX -3000
+scoreboard players set @e[tag=engine-r,tag=plane-init] vp.offsetY 250
+scoreboard players set @e[tag=engine-r,tag=plane-init] vp.offsetZ 6800
+scoreboard players set @e[tag=aileron-r,tag=plane-init] vp.offsetX -7400
+scoreboard players set @e[tag=aileron-r,tag=plane-init] vp.offsetY 700
+scoreboard players set @e[tag=aileron-r,tag=plane-init] vp.offsetZ 3000
+scoreboard players set @e[tag=aileron-l,tag=plane-init] vp.offsetX 7300
+scoreboard players set @e[tag=aileron-l,tag=plane-init] vp.offsetY 700
+scoreboard players set @e[tag=aileron-l,tag=plane-init] vp.offsetZ 3000
+scoreboard players set @e[tag=elevator-r,tag=plane-init] vp.offsetX -2300
+scoreboard players set @e[tag=elevator-r,tag=plane-init] vp.offsetY 600
+scoreboard players set @e[tag=elevator-r,tag=plane-init] vp.offsetZ -6500
+scoreboard players set @e[tag=elevator-l,tag=plane-init] vp.offsetX 2300
+scoreboard players set @e[tag=elevator-l,tag=plane-init] vp.offsetY 600
+scoreboard players set @e[tag=elevator-l,tag=plane-init] vp.offsetZ -6500
+scoreboard players set @e[tag=radder,tag=plane-init] vp.offsetX 0
+scoreboard players set @e[tag=radder,tag=plane-init] vp.offsetY 2400
+scoreboard players set @e[tag=radder,tag=plane-init] vp.offsetZ -6800
+scoreboard players set @e[tag=cockpit,tag=plane-init] vp.offsetX 0
+scoreboard players set @e[tag=cockpit,tag=plane-init] vp.offsetY 1600
+scoreboard players set @e[tag=cockpit,tag=plane-init] vp.offsetZ 6600
 
 #プレイヤーと同じAngYにする
 schedule function plane:summon/util/delay-rotation 2

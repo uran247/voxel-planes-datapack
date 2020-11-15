@@ -6,40 +6,40 @@
 
 #### 射手取得 ####
 #砲弾のplane-id取得
-scoreboard players operation #bullet-id reg1 = @s plane-id
+scoreboard players operation #bullet-id vp.reg1 = @s vp.plane-id
 #射手判定
-execute as @a if score @s plane-id = #bullet-id reg1 run tag @s add weapon-owner
+execute as @a if score @s vp.plane-id = #bullet-id vp.reg1 run tag @s add weapon-owner
 #### ダメージ判定 ####
 #hp取得
 execute as @e[tag=!entity-nohit,distance=..3] run function weapon:util/set-entity-hp
 
 #hpからダメージを引く 防御率分だけダメージを下げる
-scoreboard players operation @e[tag=!entity-nohit,distance=..3] reg2 = @s damage
+scoreboard players operation @e[tag=!entity-nohit,distance=..3] vp.reg2 = @s vp.damage
 execute as @e[tag=!entity-nohit,distance=..3] run function weapon:util/calc-entity-damage
 
 ### メッセージ処理 ###
 #メッセージを表示(title)
 title @p[tag=weapon-owner] times 0 20 20
-execute as @e[tag=!entity-nohit,distance=..3,scores={reg1=0},tag=!enemy-target,sort=nearest,limit=1] run function weapon:util/set-kill-mob-message
-execute as @e[tag=!entity-nohit,distance=..3,scores={reg1=0},tag=enemy-target,sort=nearest,limit=1] run function weapon:util/set-kill-target-message
-execute if entity @e[tag=!entity-nohit,distance=..3,scores={reg1=0}] run title @p[tag=weapon-owner] title {"text":""}
+execute as @e[tag=!entity-nohit,distance=..3,scores={vp.reg1=0},tag=!enemy-target,sort=nearest,limit=1] run function weapon:util/set-kill-mob-message
+execute as @e[tag=!entity-nohit,distance=..3,scores={vp.reg1=0},tag=enemy-target,sort=nearest,limit=1] run function weapon:util/set-kill-target-message
+execute if entity @e[tag=!entity-nohit,distance=..3,scores={vp.reg1=0}] run title @p[tag=weapon-owner] title {"text":""}
 #メッセージを表示(tellraw)
 execute if entity @e[tag=!entity-nohit,distance=..3] run function weapon:util/hit-message
-execute as @e[tag=plane-hitbox,distance=..3,scores={reg1=0}] run function weapon:util/destroy-hitbox-message
+execute as @e[tag=plane-hitbox,distance=..3,scores={vp.reg1=0}] run function weapon:util/destroy-hitbox-message
 
 #### ダメージ処理 ####
 #撃墜者/クリアスコアをプラス
 execute as @p[tag=weapon-owner] run function weapon:aagun/damage/set-shotdown-score
 
 #スコアをHPに反映
-execute if score #bullet-id reg1 matches 1.. as @e[tag=!entity-nohit,distance=..3,type=!minecraft:spawner_minecart,type=!minecraft:player] store result entity @s Health float 1 run scoreboard players get @s reg1
-execute if score #bullet-id reg1 matches ..0 as @e[tag=!entity-nohit,distance=..3,type=!minecraft:spawner_minecart,type=!minecraft:player] unless score @s plane-id matches ..0 store result entity @s Health float 1 run scoreboard players get @s reg1
-execute as @e[tag=!entity-nohit,distance=..3,type=minecraft:spawner_minecart] store result entity @s MaxNearbyEntities short 1 run scoreboard players get @s reg1
-execute as @a[tag=!entity-nohit,distance=..3] run scoreboard players operation @s taken-damage -= @s reg1
+execute if score #bullet-id vp.reg1 matches 1.. as @e[tag=!entity-nohit,distance=..3,type=!minecraft:spawner_minecart,type=!minecraft:player] store result entity @s Health float 1 run scoreboard players get @s vp.reg1
+execute if score #bullet-id vp.reg1 matches ..0 as @e[tag=!entity-nohit,distance=..3,type=!minecraft:spawner_minecart,type=!minecraft:player] unless score @s vp.plane-id matches ..0 store result entity @s Health float 1 run scoreboard players get @s vp.reg1
+execute as @e[tag=!entity-nohit,distance=..3,type=minecraft:spawner_minecart] store result entity @s MaxNearbyEntities short 1 run scoreboard players get @s vp.reg1
+execute as @a[tag=!entity-nohit,distance=..3] run scoreboard players operation @s vp.taken-damage -= @s vp.reg1
 execute as @a[tag=!entity-nohit,distance=..3] run function weapon:util/damage
 
 #破壊されたスポナーをキル
-kill @e[tag=!entity-nohit,distance=..20,scores={reg1=0},type=minecraft:spawner_minecart]
+kill @e[tag=!entity-nohit,distance=..20,scores={vp.reg1=0},type=minecraft:spawner_minecart]
 
 #### ダメージ時エフェクト ####
 #命中地点にパーティクル

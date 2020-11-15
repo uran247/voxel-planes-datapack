@@ -1,10 +1,10 @@
-#入力：entity [tag=plane-hitbox,scores={reg1=0}]
+#入力：entity [tag=plane-hitbox,scores={vp.reg1=0}]
 #処理：パーツが破壊されたことを持ち主に表示
 #戻り：
 
 #持ち主判定
-scoreboard players operation #parts-id reg1 = @s plane-id
-execute as @a if score @s plane-id = #parts-id reg1 run tag @s add parts-owner
+scoreboard players operation #parts-id vp.reg1 = @s vp.plane-id
+execute as @a if score @s vp.plane-id = #parts-id vp.reg1 run tag @s add parts-owner
 
 #メッセージ
 execute if entity @s[tag=engine] run tellraw @p[tag=parts-owner] [{"text":"エンジンが破壊されました","color":"dark_red"}]

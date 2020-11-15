@@ -10,5 +10,5 @@ loot give @s[advancements={weapon-data:gun/mg151=true}] loot weapon-data:mg151
 loot give @s[advancements={weapon-data:torpedo/torpedo=true}] loot weapon-data:torpedo
 
 clear @s phantom_spawn_egg 1
-execute store success score @s reg1 run clear @s phantom_spawn_egg 0
-execute if score @s reg1 matches 1.. run function advancements:give-weapons
+execute store success score @s vp.reg1 run clear @s phantom_spawn_egg 0
+execute if score @s vp.reg1 matches 1.. run function advancements:give-weapons

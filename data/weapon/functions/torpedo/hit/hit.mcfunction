@@ -12,7 +12,7 @@
 #実行者：弾体
 
 #衝突判定フラグを0に
-scoreboard players set #hit-flag reg1 0
+scoreboard players set #hit-flag vp.reg1 0
 
 #ブロック衝突判定、衝突判定が出たら衝突判定#hit-flagのフラグが1に
 function weapon:torpedo/hit/hit-block
@@ -22,4 +22,4 @@ function weapon:torpedo/hit/hit-block
 execute at @s[tag=torpedo-normal] run function weapon:torpedo/hit/hit-entity-torpedo
 
 #命中エンティティがいたら#hit-flagのフラグを立てる
-execute if entity @e[tag=hit-torpedo,distance=..20] run scoreboard players set #hit-flag reg1 2
+execute if entity @e[tag=hit-torpedo,distance=..20] run scoreboard players set #hit-flag vp.reg1 2

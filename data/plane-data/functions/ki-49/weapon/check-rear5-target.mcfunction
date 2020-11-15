@@ -10,12 +10,12 @@ execute as @s at @s run tp 0-0-0-0-4 ^ ^ ^ ~90 ~
 execute as @s at @s run tp 0-0-0-0-a ^ ^ ^ ~90 ~
 
 #スコア付与
-execute as 0-0-0-0-4 run scoreboard players set @s offsetX 50
-execute as 0-0-0-0-4 run scoreboard players set @s offsetY 1900
-execute as 0-0-0-0-4 run scoreboard players set @s offsetZ 4000
-execute as 0-0-0-0-a run scoreboard players set @s offsetX 50
-execute as 0-0-0-0-a run scoreboard players set @s offsetY 2000
-execute as 0-0-0-0-a run scoreboard players set @s offsetZ 3500
+execute as 0-0-0-0-4 run scoreboard players set @s vp.offsetX 50
+execute as 0-0-0-0-4 run scoreboard players set @s vp.offsetY 1900
+execute as 0-0-0-0-4 run scoreboard players set @s vp.offsetZ 4000
+execute as 0-0-0-0-a run scoreboard players set @s vp.offsetX 50
+execute as 0-0-0-0-a run scoreboard players set @s vp.offsetY 2000
+execute as 0-0-0-0-a run scoreboard players set @s vp.offsetZ 3500
 
 #位置移動
 execute at @s as 0-0-0-0-4 run function plane:position/util/calc-displacement

@@ -5,22 +5,22 @@
 summon minecraft:area_effect_cloud ~ ~ ~ {NoGravity:1,Tags:[projectile,gun,7p7mm,gun-init,tracer-lightblue,entity-nohit,offset-base],Duration:25}
 
 #スコア付与
-scoreboard players set @e[tag=gun-init,distance=..5] speed 95
-scoreboard players set @e[tag=gun-init,distance=..5] damage 2
-scoreboard players operation @e[tag=gun-init,distance=..5] plane-id = @s plane-id
-scoreboard players set @e[tag=gun-init,distance=..5] offsetX 0
-scoreboard players set @e[tag=gun-init,distance=..5] offsetY 1000
-scoreboard players set @e[tag=gun-init,distance=..5] offsetZ 0
+scoreboard players set @e[tag=gun-init,distance=..5] vp.speed 95
+scoreboard players set @e[tag=gun-init,distance=..5] vp.damage 2
+scoreboard players operation @e[tag=gun-init,distance=..5] vp.plane-id = @s vp.plane-id
+scoreboard players set @e[tag=gun-init,distance=..5] vp.offsetX 0
+scoreboard players set @e[tag=gun-init,distance=..5] vp.offsetY 1000
+scoreboard players set @e[tag=gun-init,distance=..5] vp.offsetZ 0
 
 #5発目の弾なら曳光弾化
-scoreboard players operation @s reg1 = @s ammunition3
-scoreboard players operation @s reg1 %= #5 Num
-execute if score @s reg1 matches 0 run tag @e[tag=gun-init,distance=..10] add tracer
+scoreboard players operation @s vp.reg1 = @s vp.ammunition3
+scoreboard players operation @s vp.reg1 %= #5 vp.Num
+execute if score @s vp.reg1 matches 0 run tag @e[tag=gun-init,distance=..10] add tracer
 
 #発射位置に移動
 function plane:position/util/calc-triangle-ratio
-scoreboard players operation #sin reg1 = #sin return
-scoreboard players operation #cos reg1 = #cos return
+scoreboard players operation #sin vp.reg1 = #sin vp.return
+scoreboard players operation #cos vp.reg1 = #cos vp.return
 execute at @s as @e[tag=gun-init,distance=..5] run function plane:position/util/calc-displacement
 execute at @s as @e[tag=gun-init,distance=..5] run function plane:position/calc-offset
 execute at @s as @e[tag=gun-init,distance=..5] run function plane:position/util/move-parts
@@ -32,35 +32,35 @@ execute as @e[tag=gun-init,limit=2,distance=..20] at @s run tp @s ~ ~ ~ facing e
 ####ランダムに角度変更####
 ###Y軸###
 #現在の角度取得(3600 - -3600)
-execute as @e[tag=gun-init,distance=..20] store result score #angle-Y reg1 run data get entity @s Rotation[0] 10
+execute as @e[tag=gun-init,distance=..20] store result score #angle-Y vp.reg1 run data get entity @s Rotation[0] 10
 #-100 - 100の乱数生成
-execute as @e[tag=gun-init,distance=..20] run scoreboard players operation #random reg1 += #rand rand
-execute as @e[tag=gun-init,distance=..20] run scoreboard players operation #random reg1 %= #200 Num
-execute as @e[tag=gun-init,distance=..20] run scoreboard players remove #random reg1 100
+execute as @e[tag=gun-init,distance=..20] run scoreboard players operation #random vp.reg1 += #rand vp.rand
+execute as @e[tag=gun-init,distance=..20] run scoreboard players operation #random vp.reg1 %= #200 vp.Num
+execute as @e[tag=gun-init,distance=..20] run scoreboard players remove #random vp.reg1 100
 #元々の角度に乱数を足す
-execute as @e[tag=gun-init,distance=..20] run scoreboard players operation #angle-Y reg1 += #random reg1
+execute as @e[tag=gun-init,distance=..20] run scoreboard players operation #angle-Y vp.reg1 += #random vp.reg1
 #-3600 - 3600に補正
-execute as @e[tag=gun-init,distance=..20,scores={reg1=..-3600}] run scoreboard players add #angle-Y reg1 3600
-execute as @e[tag=gun-init,distance=..20,scores={reg1=3600..}] run scoreboard players remove #angle-Y reg1 3600
+execute as @e[tag=gun-init,distance=..20,scores={vp.reg1=..-3600}] run scoreboard players add #angle-Y vp.reg1 3600
+execute as @e[tag=gun-init,distance=..20,scores={vp.reg1=3600..}] run scoreboard players remove #angle-Y vp.reg1 3600
 #代入
-execute as @e[tag=gun-init,distance=..20] store result entity @s Rotation[0] float 0.1 run scoreboard players get #angle-Y reg1
+execute as @e[tag=gun-init,distance=..20] store result entity @s Rotation[0] float 0.1 run scoreboard players get #angle-Y vp.reg1
 
 ###X軸###
 #乱数再生性
 function math:rand
 #現在の角度取得(3600 - -3600)
-execute as @e[tag=gun-init,distance=..20] store result score #angle-X reg1 run data get entity @s Rotation[1] 10
+execute as @e[tag=gun-init,distance=..20] store result score #angle-X vp.reg1 run data get entity @s Rotation[1] 10
 #-100 - 100の乱数生成
-execute as @e[tag=gun-init,distance=..20] run scoreboard players operation #random reg1 += #rand rand
-execute as @e[tag=gun-init,distance=..20] run scoreboard players operation #random reg1 %= #200 Num
-execute as @e[tag=gun-init,distance=..20] run scoreboard players remove #random reg1 100
+execute as @e[tag=gun-init,distance=..20] run scoreboard players operation #random vp.reg1 += #rand vp.rand
+execute as @e[tag=gun-init,distance=..20] run scoreboard players operation #random vp.reg1 %= #200 vp.Num
+execute as @e[tag=gun-init,distance=..20] run scoreboard players remove #random vp.reg1 100
 #元々の角度に乱数を足す
-execute as @e[tag=gun-init,distance=..20] run scoreboard players operation #angle-X reg1 += #random reg1
+execute as @e[tag=gun-init,distance=..20] run scoreboard players operation #angle-X vp.reg1 += #random vp.reg1
 #-3600 - 3600に補正
-execute as @e[tag=gun-init,distance=..20,scores={reg1=..-3600}] run scoreboard players add #angle-X reg1 3600
-execute as @e[tag=gun-init,distance=..20,scores={reg1=3600..}] run scoreboard players remove #angle-X reg1 3600
+execute as @e[tag=gun-init,distance=..20,scores={vp.reg1=..-3600}] run scoreboard players add #angle-X vp.reg1 3600
+execute as @e[tag=gun-init,distance=..20,scores={vp.reg1=3600..}] run scoreboard players remove #angle-X vp.reg1 3600
 #代入
-execute as @e[tag=gun-init,distance=..20] store result entity @s Rotation[1] float 0.1 run scoreboard players get #angle-X reg1
+execute as @e[tag=gun-init,distance=..20] store result entity @s Rotation[1] float 0.1 run scoreboard players get #angle-X vp.reg1
 
 
 #発射したならreload時間設定
@@ -73,7 +73,7 @@ playsound minecraft:weapon.muchingun.fire master @a ~ ~ ~ 1 1 1
 #execute as @e[tag=gun-init,distance=..10] at @s run particle minecraft:cloud ^ ^ ^ 0.1 0.1 0.1 0.1 1 force
 
 #残弾数減算
-scoreboard players remove @s ammunition3 1
+scoreboard players remove @s vp.ammunition3 1
 
 #終了処理
 tag @e[tag=gun-init,distance=..20] remove gun-init

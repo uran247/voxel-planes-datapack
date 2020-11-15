@@ -1,6 +1,6 @@
 #キャリー付き乗算で乱数生成
-# #rand rand:乱数　#carry rand:キャリー
-scoreboard players operation #rand rand *= #31743 Num
-execute store result score #carry rand run scoreboard players operation #rand rand += #carry rand
-scoreboard players operation #carry rand /= #65536 Num
-scoreboard players operation #rand rand %= #65536 Num
+# #rand vp.rand:乱数　#carry vp.rand:キャリー
+scoreboard players operation #rand vp.rand *= #31743 vp.Num
+execute store result score #carry vp.rand run scoreboard players operation #rand vp.rand += #carry vp.rand
+scoreboard players operation #carry vp.rand /= #65536 vp.Num
+scoreboard players operation #rand vp.rand %= #65536 vp.Num
