@@ -3,7 +3,7 @@
 #使用可能タグ target-parts ki61-position-executer
 
 #### 250kg爆弾1個目召喚 ####
-execute if entity @s[tag=250kg-normal] run summon armor_stand ~ ~ ~ {Tags:["ki61-bomb-right","ki61",ki61-init,plane,has-offset,has-model,plane-bomb,plane-parts,entity-nohit,250kg,bomb-normal],NoGravity:1b,Invisible:1,HandItems:[{id:"minecraft:diamond_sword",Count:1b,tag:{Damage:77,Unbreakable:1}},{}],Pose:{RightArm:[0f,0f,0f]},DisabledSlots:256}
+execute if entity @s[tag=250kg-normal] run summon armor_stand ~ ~ ~ {Tags:["ki61-bomb-right","ki61",ki61-init,plane,has-offset,has-model,plane-bomb,plane-parts,entity-nohit,250kg,bomb-normal],NoGravity:1b,Invisible:1,HandItems:[{id:"minecraft:diamond_sword",Count:1b,tag:{CustomModelData:77,Unbreakable:1}},{}],Pose:{RightArm:[0f,0f,0f]},DisabledSlots:256}
 #スコアセット
 scoreboard players set @e[tag=ki61-bomb-right,tag=ki61-init] vp.offsetX -2600
 scoreboard players set @e[tag=ki61-bomb-right,tag=ki61-init] vp.offsetY -500
@@ -18,7 +18,7 @@ tag @e[tag=ki61-bomb-right,tag=ki61-init] remove ki61-init
 
 
 #### 250kg爆弾2個目召喚 ####
-execute if entity @s[tag=250kg-normal] run summon armor_stand ~ ~ ~ {Tags:["ki61-bomb-left","ki61",ki61-init,plane,has-offset,has-model,plane-bomb,plane-parts,entity-nohit,250kg,bomb-normal],NoGravity:1b,Invisible:1,HandItems:[{id:"minecraft:diamond_sword",Count:1b,tag:{Damage:77,Unbreakable:1}},{}],Pose:{RightArm:[0f,0f,0f]},DisabledSlots:256}
+execute if entity @s[tag=250kg-normal] run summon armor_stand ~ ~ ~ {Tags:["ki61-bomb-left","ki61",ki61-init,plane,has-offset,has-model,plane-bomb,plane-parts,entity-nohit,250kg,bomb-normal],NoGravity:1b,Invisible:1,HandItems:[{id:"minecraft:diamond_sword",Count:1b,tag:{CustomModelData:77,Unbreakable:1}},{}],Pose:{RightArm:[0f,0f,0f]},DisabledSlots:256}
 scoreboard players set @e[tag=ki61-bomb-left,tag=ki61-init] vp.offsetX 2600
 scoreboard players set @e[tag=ki61-bomb-left,tag=ki61-init] vp.offsetY -500
 scoreboard players set @e[tag=ki61-bomb-left,tag=ki61-init] vp.offsetZ 500

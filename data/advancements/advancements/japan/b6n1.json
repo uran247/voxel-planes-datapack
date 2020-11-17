@@ -3,7 +3,7 @@
   "display": {
     "icon": {
       "item": "minecraft:diamond_sword",
-      "nbt":"{HideFlags:4,Damage:44}"
+      "nbt":"{HideFlags:4,CustomModelData:44}"
     },
     "title": {
       "translate": "天山一一型"

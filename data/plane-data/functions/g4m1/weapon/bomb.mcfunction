@@ -25,15 +25,15 @@ tag @e[distance=..10,tag=plane-parts-target] remove plane-parts-target
 #対象召喚
 scoreboard players operation #offset vp.reg1 = @s vp.ammunition1
 scoreboard players operation #offset vp.reg1 %= #2 vp.Num
-execute as @s[tag=250kg] if score #offset vp.reg1 matches 0 run summon armor_stand ^-0.5 ^-1 ^ {Tags:["g4m1-bomb",drop-init,dropping,plane-bomb,plane-parts,entity-nohit,250kg,bomb-normal],NoGravity:1b,Invisible:1,HandItems:[{id:"minecraft:diamond_sword",Count:1b,tag:{Damage:77,Unbreakable:1}},{}],Pose:{RightArm:[0f,0f,0f]},DisabledSlots:256}
-execute as @s[tag=250kg] if score #offset vp.reg1 matches 1 run summon armor_stand ^0.5 ^-1 ^ {Tags:["g4m1-bomb",drop-init,dropping,plane-bomb,plane-parts,entity-nohit,250kg,bomb-normal],NoGravity:1b,Invisible:1,HandItems:[{id:"minecraft:diamond_sword",Count:1b,tag:{Damage:77,Unbreakable:1}},{}],Pose:{RightArm:[0f,0f,0f]},DisabledSlots:256}
+execute as @s[tag=250kg] if score #offset vp.reg1 matches 0 run summon armor_stand ^-0.5 ^-1 ^ {Tags:["g4m1-bomb",drop-init,dropping,plane-bomb,plane-parts,entity-nohit,250kg,bomb-normal],NoGravity:1b,Invisible:1,HandItems:[{id:"minecraft:diamond_sword",Count:1b,tag:{CustomModelData:77,Unbreakable:1}},{}],Pose:{RightArm:[0f,0f,0f]},DisabledSlots:256}
+execute as @s[tag=250kg] if score #offset vp.reg1 matches 1 run summon armor_stand ^0.5 ^-1 ^ {Tags:["g4m1-bomb",drop-init,dropping,plane-bomb,plane-parts,entity-nohit,250kg,bomb-normal],NoGravity:1b,Invisible:1,HandItems:[{id:"minecraft:diamond_sword",Count:1b,tag:{CustomModelData:77,Unbreakable:1}},{}],Pose:{RightArm:[0f,0f,0f]},DisabledSlots:256}
 scoreboard players set @e[tag=g4m1-bomb,tag=drop-init,tag=250kg] vp.damage 1250
 
-execute as @s[tag=has-torpedo] run summon armor_stand ^ ^-1 ^ {Tags:["g4m1-torpedo",drop-init,torpedo,plane-torpedo,plane-parts,entity-nohit,torpedo,bomb-normal],NoGravity:1b,Invisible:1,HandItems:[{id:"minecraft:diamond_sword",Count:1b,tag:{Damage:48,Unbreakable:1}},{}],Pose:{RightArm:[0f,0f,0f]},DisabledSlots:256}
+execute as @s[tag=has-torpedo] run summon armor_stand ^ ^-1 ^ {Tags:["g4m1-torpedo",drop-init,torpedo,plane-torpedo,plane-parts,entity-nohit,torpedo,bomb-normal],NoGravity:1b,Invisible:1,HandItems:[{id:"minecraft:diamond_sword",Count:1b,tag:{CustomModelData:48,Unbreakable:1}},{}],Pose:{RightArm:[0f,0f,0f]},DisabledSlots:256}
 scoreboard players set @e[tag=g4m1-torpedo,tag=drop-init,tag=torpedo] vp.torp-damage 4000
 scoreboard players set @e[tag=g4m1-torpedo,tag=drop-init,tag=torpedo] vp.torp-speed 3
 
-execute as @s[tag=800kg] run summon armor_stand ^ ^-1 ^ {Tags:["g4m1-bomb",drop-init,dropping,plane-bomb,plane-parts,entity-nohit,800kg,bomb-normal],NoGravity:1b,Invisible:1,HandItems:[{id:"minecraft:diamond_sword",Count:1b,tag:{Damage:118,Unbreakable:1}},{}],Pose:{RightArm:[0f,0f,0f]},DisabledSlots:256}
+execute as @s[tag=800kg] run summon armor_stand ^ ^-1 ^ {Tags:["g4m1-bomb",drop-init,dropping,plane-bomb,plane-parts,entity-nohit,800kg,bomb-normal],NoGravity:1b,Invisible:1,HandItems:[{id:"minecraft:diamond_sword",Count:1b,tag:{CustomModelData:118,Unbreakable:1}},{}],Pose:{RightArm:[0f,0f,0f]},DisabledSlots:256}
 scoreboard players set @e[tag=g4m1-torpedo,tag=drop-init,tag=torpedo] vp.torp-damage 4000
 
 

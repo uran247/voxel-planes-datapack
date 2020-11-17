@@ -67,3 +67,4 @@ tp 0-0-0-0-4 0 1 0
 #終了処理
 tag @e[tag=gun-init,distance=..20] remove gun-init
 #scoreboard players set @p rightClick 0
+
