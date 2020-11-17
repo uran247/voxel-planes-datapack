@@ -94,9 +94,9 @@ scoreboard objectives add vp.accelerate dummy
 scoreboard objectives add vp.deaccelerate dummy
 scoreboard objectives add vp.resistance dummy
 scoreboard objectives add vp.energy-loss dummy
-scoreboard objectives add vp.parking-udvm dummy
-scoreboard objectives add vp.rolling-udvm dummy
-scoreboard objectives add vp.flying-udvm dummy
+scoreboard objectives add vp.parking-cmd dummy
+scoreboard objectives add vp.rolling-cmd dummy
+scoreboard objectives add vp.flying-cmd dummy
 scoreboard objectives add vp.prop-strt-max dummy
 scoreboard objectives add vp.prop-strt-min dummy
 scoreboard objectives add vp.prop-stop-max dummy

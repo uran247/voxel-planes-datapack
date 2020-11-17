@@ -45,9 +45,9 @@ scoreboard players set @e[tag=plane-init,tag=re2005-root] vp.pitch-speed 195
 scoreboard players set @e[tag=plane-init,tag=re2005-root] vp.yaw-speed 130
 scoreboard players set @e[tag=plane-init,tag=re2005-root] vp.roll-speed 600
 
-scoreboard players set @e[tag=plane-init,tag=re2005-body] vp.parking-udvm 119
-scoreboard players set @e[tag=plane-init,tag=re2005-body] vp.rolling-udvm 120
-scoreboard players set @e[tag=plane-init,tag=re2005-body] vp.flying-udvm 121
+scoreboard players set @e[tag=plane-init,tag=re2005-body] vp.parking-cmd 119
+scoreboard players set @e[tag=plane-init,tag=re2005-body] vp.rolling-cmd 120
+scoreboard players set @e[tag=plane-init,tag=re2005-body] vp.flying-cmd 121
 
 scoreboard players set @e[tag=plane-init,tag=re2005-root] vp.w1-reload 0
 scoreboard players set @e[tag=plane-init,tag=re2005-root] vp.ammunition1 225

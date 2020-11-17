@@ -20,9 +20,9 @@ scoreboard players set @s vp.AngY-old 0
 scoreboard players set @s vp.pitch-speed 200
 scoreboard players set @s vp.yaw-speed 220
 scoreboard players set @s vp.roll-speed 400
-scoreboard players set @s vp.parking-udvm 7
-scoreboard players set @s vp.rolling-udvm 8
-scoreboard players set @s vp.flying-udvm 9
+scoreboard players set @s vp.parking-cmd 7
+scoreboard players set @s vp.rolling-cmd 8
+scoreboard players set @s vp.flying-cmd 9
 scoreboard players set @s vp.prop-strt-min 150
 scoreboard players set @s vp.prop-strt-max 154
 scoreboard players set @s vp.prop-stop-min 140
