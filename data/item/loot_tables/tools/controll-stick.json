@@ -22,7 +22,7 @@
                         },
                         {
                             "function": "minecraft:set_nbt",
-                            "tag":"{item-type:controll-rod,CustomModelData:1}"
+                            "tag":"{item-type:controll-rod,CustomModelData:1,volatile:1}"
                         }
                     ]
                 }

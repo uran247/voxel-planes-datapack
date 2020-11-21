@@ -17,7 +17,7 @@ tag @s add entity-nohit
 #実行者と対象機体にタグ付け
 tag @s add controller
 scoreboard players operation #plane-id vp.reg1 = @s vp.plane-id
-execute as @e[tag=plane-root] if score @s vp.plane-id = #plane-id vp.reg1 run tag @s add controll-target
+execute as @e[tag=plane-root,type=armor_stand] if score @s vp.plane-id = #plane-id vp.reg1 run tag @s add controll-target
 
 #飛行機に搭乗者がいることをタグ付け
 tag @e[tag=controll-target,limit=1] add has-rider
@@ -32,18 +32,11 @@ scoreboard players operation @s vp.key-input = #selected-slot vp.return
 #移動、武器使用
 execute at @e[tag=controll-target,limit=1,sort=nearest,distance=..20] run function plane:controll/plane-controll
 
-#移動操作
-#execute at @e[tag=controll-target,tag=!flying,limit=1,sort=nearest,distance=..20] run function plane:controll/rolling
-#execute at @e[tag=controll-target,tag=flying,limit=1,sort=nearest,distance=..20] run function plane:controll/flying
-
-#武器使用
-#execute at @e[tag=controll-target,limit=1,sort=nearest,distance=..20] run function plane:controll/weapon
-
 #スコア情報をActionbarに表示 
 execute at @s as @e[tag=controll-target,distance=..20,limit=1] run function plane:controll/plane-info
 
-#アイテム欄に操作説明パネルセット
-execute as @s run function plane:controll/set-indicator-items
+#アイテム欄を掃除して操作説明アイテムをセット
+execute as @s run function plane:controll/clean-inventory
 
 #タグ削除
 tag @e[tag=controll-target,tag=plane-root,limit=1,sort=nearest,distance=..20] remove controll-target

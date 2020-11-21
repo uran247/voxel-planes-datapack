@@ -14,7 +14,7 @@
                         },
                         {
                             "function": "minecraft:set_nbt",
-                            "tag":"{item-type:indicator,CustomModelData:13}"
+                            "tag":"{item-type:indicator,CustomModelData:13,volatile:1}"
                         }
                     ]
                 }

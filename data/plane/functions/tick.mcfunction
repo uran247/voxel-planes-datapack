@@ -20,5 +20,8 @@ execute as @e[type=armor_stand,tag=plane-root] at @s run function plane:plane-ma
 kill @e[tag=plane,tag=!plane-root,tag=!position-processed,tag=!no-delete]
 tag @e[tag=position-processed] remove position-processed
 
+#揮発性アイテムを削除
+execute at @a run kill @e[type=item,nbt={Item:{tag:{volatile:1}}},distance=..32]
+
 #スポナー使用時に飛行機召喚
-function plane:summon/spawner-manager
+execute if entity @e[type=bat,tag=plane-spawner] run function plane:summon/spawner-manager
