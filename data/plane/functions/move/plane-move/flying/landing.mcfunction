@@ -9,7 +9,7 @@ data merge entity @s {NoGravity:0b}
 tag @s remove stall
 
 #sound管理スコアを0に
-scoreboard players set @s sound 0
+scoreboard players set @s vp.sound 0
 
 #AngX,Zを初期値にする
 scoreboard players set @s vp.AngZ 0

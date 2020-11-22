@@ -57,6 +57,7 @@ scoreboard objectives add vp.ammo-reload7 dummy
 scoreboard objectives add vp.throttle dummy
 scoreboard objectives add vp.yaw-gap dummy
 scoreboard objectives add vp.pitch-gap dummy
+scoreboard objectives add vp.sound dummy
 
 #武器関連
 scoreboard objectives add vp.max-age dummy

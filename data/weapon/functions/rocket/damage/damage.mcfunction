@@ -55,7 +55,7 @@ execute as @e[tag=!entity-nohit,distance=..32,scores={vp.reg1=0},sort=nearest,li
 execute as @e[tag=!entity-nohit,distance=..32,scores={vp.reg1=0},tag=enemy-target,sort=nearest,limit=1] run function weapon:rocket/damage/set-kill-target-message
 execute if entity @e[tag=!entity-nohit,distance=..32,scores={vp.reg1=0}] run title @p[tag=rocket-owner] title {"text":""}
 #メッセージを表示(tellraw)
-execute if entity @e[tag=!entity-nohit,distance=..32] run function weapon:rocket/damage/hit-message
+#execute if entity @e[tag=!entity-nohit,distance=..32] run function weapon:rocket/damage/hit-message
 execute as @e[tag=plane-hitbox,distance=..32,scores={vp.reg1=0}] run function weapon:util/destroy-hitbox-message
 
 #撃墜者/クリアスコアをプラス

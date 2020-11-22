@@ -78,11 +78,11 @@ execute at @s[tag=destroyed,scores={vp.AngX=..9000}] run scoreboard players oper
 scoreboard players operation @s[scores={vp.AngX=..9000},tag=!has-rider] vp.AngX += @s vp.pitch-speed
 
 #音
-scoreboard players set @s[scores={sound=30..}] sound 0
-execute if entity @s[scores={sound=0,vp.speed=-1..}] at @s run playsound minecraft:plane.engine.recipro-flying ambient @a ~ ~ ~ 1 1 1
+scoreboard players set @s[scores={vp.sound=30..}] vp.sound 0
+execute if entity @s[scores={vp.sound=0,vp.speed=-1..}] at @s run playsound minecraft:plane.engine.recipro-flying ambient @a ~ ~ ~ 1 1 1
 scoreboard players operation @s vp.reg1 = #rand vp.rand
 scoreboard players operation @s vp.reg1 %= #4 vp.Num
-scoreboard players operation @s sound += @s vp.reg1
+scoreboard players operation @s vp.sound += @s vp.reg1
 #tellraw @p [{"score":{"name":"@s","objective":"vp.reg1"}}]
 
 #飛行状態でブロックにめり込んだら爆発

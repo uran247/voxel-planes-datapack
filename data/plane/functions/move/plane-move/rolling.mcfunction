@@ -54,12 +54,12 @@ execute as @s[scores={vp.throttle=20..}] if score @s vp.takeoff-speed < @s vp.sp
 function plane:move/plane-move/rolling/change-plpr-model
 
 #音
-scoreboard players set @s[scores={sound=33..}] sound 0
-execute if entity @s[scores={sound=0,vp.speed=1..}] at @s run playsound minecraft:plane.engine.recipro-rolling ambient @a ~ ~ ~ 1 1 1
+scoreboard players set @s[scores={vp.sound=33..}] vp.sound 0
+execute if entity @s[scores={vp.sound=0,vp.speed=1..}] at @s run playsound minecraft:plane.engine.recipro-rolling ambient @a ~ ~ ~ 1 1 1
 scoreboard players operation @s vp.reg1 = #rand vp.rand
 scoreboard players operation @s vp.reg1 %= #3 vp.Num
-scoreboard players operation @s sound += @s vp.reg1
-scoreboard players add @s sound 1
+scoreboard players operation @s vp.sound += @s vp.reg1
+scoreboard players add @s vp.sound 1
 #speedが1になったらエンジン始動音を鳴らす
 function plane:move/plane-move/rolling/engine-start-sound
 
