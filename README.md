@@ -2,13 +2,14 @@
 minecraftに航空機を追加するデータパックです。
 
 ## インストール方法
-1. 右記のresourcepackを適用する(WIP)
-1. detapackフォルダにDLしたdetapackを配置する
+1. releaseよりvoxel-planesとvoxel-planes-resourcepackをDL
+1. voxel-planes-resourcepackをリソースパックフォルダに配置し適用
+1. detapackフォルダにDLしたdetapackを配置
 1. minecraft内で`/reload`実行
 
 ## 使い方
 ### 航空機のクラフト
-- 作業台で航空機および武器、レンチをクラフトできます。レシピは右記(WIP)
+- 作業台で航空機および武器、レンチをクラフトできます。レシピはvoxel-planes内のrecipeフォルダに記載
 
 ### 航空機の召喚/アイテムへ戻す
 - 航空機アイテムを持って地面を右クリックすると航空機を召喚できます
