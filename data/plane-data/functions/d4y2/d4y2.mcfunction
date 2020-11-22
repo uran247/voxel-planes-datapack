@@ -66,7 +66,7 @@ scoreboard players set @e[tag=plane-init,tag=d4y2-root] vp.max-ammo4 4
 scoreboard players set @e[tag=plane-init,tag=d4y2-root] vp.max-ammo-rel1 140
 scoreboard players set @e[tag=plane-init,tag=d4y2-root] vp.max-ammo-rel2 500
 scoreboard players set @e[tag=plane-init,tag=d4y2-root] vp.max-ammo-rel3 140
-scoreboard players set @e[tag=plane-init,tag=d4y2-root] vp.max-ammo-rel4 140
+scoreboard players set @e[tag=plane-init,tag=d4y2-root] vp.max-ammo-rel4 500
 scoreboard players set @e[tag=plane-init,tag=d4y2-root] vp.plane-weapon 1
 scoreboard players set @e[tag=plane-init,tag=d4y2-root] vp.weapon-types 6
 
