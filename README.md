@@ -1,6 +1,9 @@
 # Voxel Planes Datapack
 minecraftに航空機を追加するデータパックです。
 
+## 対応バージョン
+minecraft 1.16
+
 ## インストール方法
 1. releaseよりvoxel-planesとvoxel-planes-resourcepackをDL
 1. voxel-planes-resourcepackをリソースパックフォルダに配置し適用
