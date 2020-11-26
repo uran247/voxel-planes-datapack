@@ -2,4 +2,3 @@
 recipe take @s[advancements={item:tools/wrench=true}] item:tools/wrench
 
 advancement revoke @s from plane-data:crafting/root
-say take
