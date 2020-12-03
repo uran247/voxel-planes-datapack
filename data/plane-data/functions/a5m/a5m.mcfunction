@@ -60,9 +60,10 @@ scoreboard players set @e[tag=plane-init,tag=a5m-root] vp.weapon-types 2
 
 scoreboard players set @e[tag=plane-init,tag=a5m-root] vp.max-engine 1
 
-execute store result score @e[tag=plane-init,tag=a5m-root,limit=1] vp.PosX run data get entity @e[tag=plane-init,tag=a5m-root,limit=1] Pos[0] 10000
-execute store result score @e[tag=plane-init,tag=a5m-root,limit=1] vp.PosY run data get entity @e[tag=plane-init,tag=a5m-root,limit=1] Pos[1] 10000
-execute store result score @e[tag=plane-init,tag=a5m-root,limit=1] vp.PosZ run data get entity @e[tag=plane-init,tag=a5m-root,limit=1] Pos[2] 10000
+data modify storage minecraft:plane-datapack temporary.Pos set from entity @e[tag=plane-init,tag=a5m-root,limit=1] Pos
+execute store result score @e[tag=plane-init,tag=a5m-root,limit=1] vp.PosX run data get storage minecraft:plane-datapack temporary.Pos[0] 10000
+execute store result score @e[tag=plane-init,tag=a5m-root,limit=1] vp.PosY run data get storage minecraft:plane-datapack temporary.Pos[1] 10000
+execute store result score @e[tag=plane-init,tag=a5m-root,limit=1] vp.PosZ run data get storage minecraft:plane-datapack temporary.Pos[2] 10000
 
 #hitbocのスコア設定
 scoreboard players set @e[tag=body,tag=plane-init] vp.offsetX 0

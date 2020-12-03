@@ -14,13 +14,13 @@ scoreboard players set #hit-flag vp.reg1 0
 #### 移動&ヒット判定 ####
 #ベクトル方向へエンティティの向きを向ける
 execute at @s run tp 0-0-0-0-4 ~ ~ ~ ~ ~
-execute store result score #pos-x vp.reg1 run data get entity @s Pos[0] 100
-execute store result score #pos-y vp.reg1 run data get entity @s Pos[1] 100
-execute store result score #pos-z vp.reg1 run data get entity @s Pos[2] 100
+data modify storage minecraft:plane-datapack temporary.Pos set from entity @s Pos
+execute store result score #pos-x vp.reg1 run data get storage minecraft:plane-datapack temporary.Pos[0] 100
+execute store result score #pos-y vp.reg1 run data get storage minecraft:plane-datapack temporary.Pos[1] 100
+execute store result score #pos-z vp.reg1 run data get storage minecraft:plane-datapack temporary.Pos[2] 100
 execute store result storage plane-datapack temporary.Pos[0] double 0.01 run scoreboard players operation #pos-x vp.reg1 += @s vp.speedX
 execute store result storage plane-datapack temporary.Pos[1] double 0.01 run scoreboard players operation #pos-y vp.reg1 += @s vp.speedY
 execute store result storage plane-datapack temporary.Pos[2] double 0.01 run scoreboard players operation #pos-z vp.reg1 += @s vp.speedZ
-
 data modify entity 0-0-0-0-4 Pos set from storage minecraft:plane-datapack temporary.Pos
 
 tp @s ~ ~ ~ facing entity 0-0-0-0-4
