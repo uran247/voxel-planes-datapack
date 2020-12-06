@@ -45,4 +45,4 @@ minecraft 1.16
     - 使える武器は飛行機によって異なります。
 
 ## 連絡先
-twitter：![@uran2471](https://twitter.com/uran2471)
+twitter：[@uran2471](https://twitter.com/uran2471)
