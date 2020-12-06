@@ -6,7 +6,7 @@ minecraftに航空機を追加するデータパックです。
 minecraft 1.16
 
 ## インストール方法
-1. releaseよりvoxel-planesとvoxel-planes-resourcepackをDL
+1. [release](https://github.com/uran247/voxel-planes-datapack/releases)よりvoxel-planesとvoxel-planes-resourcepackをDL
 1. voxel-planes-resourcepackをリソースパックフォルダに配置し適用
 1. detapackフォルダにDLしたdetapackを配置
 1. minecraft内で`/reload`実行
