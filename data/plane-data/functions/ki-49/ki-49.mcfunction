@@ -78,7 +78,7 @@ scoreboard players set @e[tag=plane-init,tag=ki49-root] vp.max-ammo4 500
 scoreboard players set @e[tag=plane-init,tag=ki49-root] vp.max-ammo5 500
 scoreboard players set @e[tag=plane-init,tag=ki49-root] vp.max-ammo6 500
 scoreboard players set @e[tag=plane-init,tag=ki49-root] vp.max-ammo7 500
-scoreboard players set @e[tag=plane-init,tag=ki49-root] vp.max-ammo-rel1 60
+scoreboard players set @e[tag=plane-init,tag=ki49-root] vp.max-ammo-rel1 1200
 scoreboard players set @e[tag=plane-init,tag=ki49-root] vp.max-ammo-rel2 140
 scoreboard players set @e[tag=plane-init,tag=ki49-root] vp.max-ammo-rel3 140
 scoreboard players set @e[tag=plane-init,tag=ki49-root] vp.max-ammo-rel4 140

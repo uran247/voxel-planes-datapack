@@ -87,6 +87,9 @@ execute at @s[tag=250kg] run particle minecraft:flame ~ ~1 ~ 2 2.4 2 0.25 500 fo
 execute at @s[tag=500kg] run particle minecraft:large_smoke ~ ~1 ~ 4 2 4 0.25 5000 force
 execute at @s[tag=500kg] run particle minecraft:flame ~ ~1 ~ 4 5 4 0.25 2000 force
 
+execute at @s[tag=1000lb] run particle minecraft:large_smoke ~ ~1 ~ 4 2 4 0.25 5000 force
+execute at @s[tag=1000lb] run particle minecraft:flame ~ ~1 ~ 4 5 4 0.25 2000 force
+
 execute at @s[tag=800kg] run particle minecraft:large_smoke ~ ~1 ~ 5 1.5 5 0.25 5000 force
 execute at @s[tag=800kg] run particle minecraft:flame ~ ~1 ~ 5 6 5 0.25 2000 force
 

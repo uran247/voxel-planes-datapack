@@ -12,4 +12,7 @@ execute at @e[tag=a6m5-spawner] as @p run function plane-data:a6m5/a6m5
 execute at @e[tag=ki49-spawner] as @p run function plane-data:ki-49/ki-49
 execute at @e[tag=ki61-spawner] as @p run function plane-data:ki-61/ki-61
 execute at @e[tag=re2005-spawner] as @p run function plane-data:re2005/re2005
+execute at @e[tag=f4u1-spawner] as @p run function plane-data:f4u-1/f4u1
+
+
 kill @e[tag=plane-spawner]

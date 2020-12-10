@@ -6,8 +6,6 @@ tag @s add bombing-executer
 
 #id記録
 scoreboard players operation #plane-id vp.reg1 = @s vp.plane-id
-#execute as @e[tag=plane-bomb,tag=plane,distance=..20,limit=1] if score @s plane-id = #plane-id vp.reg1 run tag @s add drop-init
-#tag @e[tag=drop-init,distance=..20] add dropping
 
 #ki49タグ削除
 tag @e[tag=drop-init,distance=..20] remove plane
@@ -27,10 +25,10 @@ scoreboard players operation #offset vp.reg1 = @s vp.ammunition1
 scoreboard players operation #offset vp.reg1 %= #2 vp.Num
 execute as @s[tag=250kg] if score #offset vp.reg1 matches 0 run summon armor_stand ^-0.5 ^-1 ^ {Tags:["ki49-bomb",drop-init,dropping,plane-bomb,plane-parts,entity-nohit,250kg,bomb-normal],NoGravity:1b,Invisible:1,HandItems:[{id:"minecraft:diamond_sword",Count:1b,tag:{CustomModelData:77,Unbreakable:1}},{}],Pose:{RightArm:[0f,0f,0f]},DisabledSlots:256}
 execute as @s[tag=250kg] if score #offset vp.reg1 matches 1 run summon armor_stand ^0.5 ^-1 ^ {Tags:["ki49-bomb",drop-init,dropping,plane-bomb,plane-parts,entity-nohit,250kg,bomb-normal],NoGravity:1b,Invisible:1,HandItems:[{id:"minecraft:diamond_sword",Count:1b,tag:{CustomModelData:77,Unbreakable:1}},{}],Pose:{RightArm:[0f,0f,0f]},DisabledSlots:256}
-scoreboard players set @e[tag=ki49-bomb,tag=drop-init,tag=250kg] vp.damage 1250
+scoreboard players set @e[tag=drop-init] vp.damage 1250
 
 execute as @s[tag=500kg] run summon armor_stand ^ ^-1 ^ {Tags:["ki49-bomb",drop-init,dropping,plane-bomb,plane-parts,entity-nohit,500kg,bomb-normal],NoGravity:1b,Invisible:1,HandItems:[{id:"minecraft:diamond_sword",Count:1b,tag:{CustomModelData:118,Unbreakable:1}},{}],Pose:{RightArm:[0f,0f,0f]},DisabledSlots:256}
-scoreboard players set @e[tag=ki49-torpedo,tag=drop-init,tag=torpedo] vp.torp-damage 2500
+scoreboard players set @e[tag=drop-init] vp.torp-damage 2500
 
 
 #スコア付与

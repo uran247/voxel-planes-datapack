@@ -31,6 +31,7 @@ execute as @s[tag=ki61-root] run function plane-data:ki-61/ki-61-position
 execute as @s[tag=n1k2-root] run function plane-data:n1k2/n1k2-position
 execute as @s[tag=a6m5-root] run function plane-data:a6m5/a6m5-position
 execute as @s[tag=ki49-root] run function plane-data:ki-49/ki-49-position
+execute as @s[tag=f4u1-root] run function plane-data:f4u-1/f4u1-position
 #execute as @s[tag=spitfire-root] run function plane:position/spitfire-position
 #execute as @s[tag=ju87-root] run function plane:position/ju87-position
 #execute as @s[tag=f4u-root] run function plane:position/f4u-position
