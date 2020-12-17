@@ -48,7 +48,7 @@ execute at @s if entity @e[tag=hit-on-line,tag=!rocket-gunner,tag=!entity-nohit]
 execute if score #hit-flag vp.reg1 matches 2 run tag @e[tag=hit-on-line,tag=!rocket-gunner,tag=!entity-nohit] add hit-weapon
 
 #命中していない場合移動予定先へ移動
-execute if score #hit-flag vp.reg1 matches 0 at 0-0-0-0-4 run tp @s ~ ~ ~ ~-90 ~
+execute if score #hit-flag vp.reg1 matches 0 positioned as 0-0-0-0-4 run tp @s ~ ~ ~ ~ ~
 
 #命中してた場合命中してたところに移動
 execute if score #hit-flag vp.reg1 matches 1.. at @e[tag=hit-weapon,limit=1,sort=nearest] run tp @s ~ ~ ~ ~-90 ~
@@ -67,8 +67,8 @@ execute if score #hit-flag vp.reg1 matches 1.. run kill @s
 playsound minecraft:entity.horse.breathe ambient @a ~ ~ ~ 1 0
 
 #particle
-execute at @s rotated ~-90 ~ anchored eyes positioned ~ ~-1.5 ~ run particle minecraft:cloud ^ ^ ^-2 0 0 0 0 3 force
-execute at @s rotated ~-90 ~ anchored eyes positioned ~ ~-1.5 ~ run particle minecraft:flame ^ ^ ^-2 0 0 0 0.03 3 force
+execute at @s rotated ~-90 ~ anchored eyes positioned ~ ~ ~ run particle minecraft:cloud ^ ^ ^-2 0 0 0 0 3 force
+execute at @s rotated ~-90 ~ anchored eyes positioned ~ ~ ~ run particle minecraft:flame ^ ^ ^-2 0 0 0 0.03 3 force
 
 #タグ削除
 tag @e[tag=hit-weapon] remove hit-weapon
@@ -80,5 +80,4 @@ tag @e[tag=rocket-gunner,distance=..25] remove rocket-gunner
 #エンティティ返却
 tp 0-0-0-0-4 0 1 0
 tp 0-0-0-0-9 0 1 0
-
 

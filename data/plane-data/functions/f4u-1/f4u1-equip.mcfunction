@@ -20,12 +20,10 @@ execute if score #1000lb vp.reg1 matches 1.. run tag @s add bombed
 execute if score #1000lb vp.reg1 matches 1.. run tag @s add 1000lb-normal
 execute if score #1000lb vp.reg1 matches 1.. run tag @s add has-weapon2
 execute if score #1000lb vp.reg1 matches 1.. run tag @s add main-weapon2
-execute unless score #1000lb vp.reg1 matches 1.. if score #ag-rocket vp.reg1 matches 1.. run tag @s add rocketted
-execute unless score #1000lb vp.reg1 matches 1.. if score #ag-rocket vp.reg1 matches 1.. run tag @s add rocket-normal
-execute unless score #1000lb vp.reg1 matches 1.. if score #ag-rocket vp.reg1 matches 1.. run tag @s add has-weapon3
-execute unless score #1000lb vp.reg1 matches 1.. if score #ag-rocket vp.reg1 matches 1.. run tag @s add main-weapon3
-
-execute if score #1000lb vp.reg1 matches 1.. run say test
+execute if score #ag-rocket vp.reg1 matches 1.. run tag @s add rocketted
+execute if score #ag-rocket vp.reg1 matches 1.. run tag @s add rocket-normal
+execute if score #ag-rocket vp.reg1 matches 1.. run tag @s add has-weapon3
+execute if score #ag-rocket vp.reg1 matches 1.. run tag @s add main-weapon3
 
 #装備種別変更
 scoreboard players set @s vp.weapon-types 2

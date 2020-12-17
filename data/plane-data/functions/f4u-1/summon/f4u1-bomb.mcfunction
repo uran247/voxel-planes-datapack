@@ -9,9 +9,9 @@ scoreboard players set @e[tag=f4u1-bomb-right,tag=f4u1-init] vp.offsetX -400
 scoreboard players set @e[tag=f4u1-bomb-right,tag=f4u1-init] vp.offsetY -1000
 scoreboard players set @e[tag=f4u1-bomb-right,tag=f4u1-init] vp.offsetZ 2100
 scoreboard players set @e[tag=f4u1-bomb-right,tag=f4u1-init] vp.damage 2300
-scoreboard players set @e[tag=f4u1-bomb-right,tag=f4u1-init] vp.acc-cor -1
-scoreboard players set @e[tag=f4u1-bomb-right,tag=f4u1-init] vp.pitch-spd-cor -2
-scoreboard players set @e[tag=f4u1-bomb-right,tag=f4u1-init] vp.yaw-spd-cor -2
+scoreboard players set @e[tag=f4u1-bomb-right,tag=f4u1-init] vp.acc-cor -5
+scoreboard players set @e[tag=f4u1-bomb-right,tag=f4u1-init] vp.pitch-spd-cor -8
+scoreboard players set @e[tag=f4u1-bomb-right,tag=f4u1-init] vp.yaw-spd-cor -4
 scoreboard players operation @e[tag=f4u1-bomb-right,tag=f4u1-init] vp.plane-id = @s vp.plane-id
 execute as @e[tag=f4u1-bomb-right,tag=f4u1-init] store result entity @s Attributes[{Name:"minecraft:generic.movement_speed"}].Base double 1 run scoreboard players get @s vp.plane-id
 tag @e[tag=f4u1-bomb-right,tag=f4u1-init] remove f4u1-init
@@ -23,9 +23,9 @@ scoreboard players set @e[tag=f4u1-bomb-left,tag=f4u1-init] vp.offsetX 1200
 scoreboard players set @e[tag=f4u1-bomb-left,tag=f4u1-init] vp.offsetY -1000
 scoreboard players set @e[tag=f4u1-bomb-left,tag=f4u1-init] vp.offsetZ 2100
 scoreboard players set @e[tag=f4u1-bomb-left,tag=f4u1-init] vp.damage 2300
-scoreboard players set @e[tag=f4u1-bomb-left,tag=f4u1-init] vp.acc-cor -1
-scoreboard players set @e[tag=f4u1-bomb-left,tag=f4u1-init] vp.pitch-spd-cor -2
-scoreboard players set @e[tag=f4u1-bomb-left,tag=f4u1-init] vp.yaw-spd-cor -2
+scoreboard players set @e[tag=f4u1-bomb-left,tag=f4u1-init] vp.acc-cor -5
+scoreboard players set @e[tag=f4u1-bomb-left,tag=f4u1-init] vp.pitch-spd-cor -8
+scoreboard players set @e[tag=f4u1-bomb-left,tag=f4u1-init] vp.yaw-spd-cor -4
 scoreboard players operation @e[tag=f4u1-bomb-left,tag=f4u1-init] vp.plane-id = @s vp.plane-id
 execute as @e[tag=f4u1-bomb-left,tag=f4u1-init] store result entity @s Attributes[{Name:"minecraft:generic.movement_speed"}].Base double 1 run scoreboard players get @s vp.plane-id
 tag @e[tag=f4u1-bomb-left,tag=f4u1-init] remove f4u1-init

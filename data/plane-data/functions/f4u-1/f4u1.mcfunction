@@ -21,14 +21,14 @@ execute as @e[tag=plane-init,tag=plane-root,limit=1] at @s run function plane:su
 #スピード・滑走/角度/旋回速度/加速度/最高速度/離陸速度/形態スコア・存在座標・設定
 scoreboard players set @e[tag=plane-init] vp.rolling 0
 scoreboard players set @e[tag=plane-init] vp.speed 0
-scoreboard players set @e[tag=plane-init] vp.accelerate 69
-scoreboard players set @e[tag=plane-init] vp.resistance 33
-scoreboard players set @e[tag=plane-init] vp.energy-loss 20
-scoreboard players set @e[tag=plane-init] vp.deaccelerate 131
+scoreboard players set @e[tag=plane-init] vp.accelerate 70
+scoreboard players set @e[tag=plane-init] vp.resistance 37
+scoreboard players set @e[tag=plane-init] vp.energy-loss 22
+scoreboard players set @e[tag=plane-init] vp.deaccelerate 107
 scoreboard players set @e[tag=plane-init] vp.max-speed 23300
-scoreboard players set @e[tag=plane-init] vp.cruise-speed 11200
-scoreboard players set @e[tag=plane-init] vp.takeoff-speed 5300
+scoreboard players set @e[tag=plane-init] vp.cruise-speed 12000
 scoreboard players set @e[tag=plane-init] vp.stall-speed 5100
+scoreboard players set @e[tag=plane-init] vp.takeoff-speed 5300
 scoreboard players set @e[tag=plane-init] vp.gear-ret-min 6600
 scoreboard players set @e[tag=plane-init] vp.gear-ret-max 6800
 scoreboard players set @e[tag=plane-init] vp.gear-po-min 6300
@@ -43,8 +43,8 @@ scoreboard players set @e[tag=plane-init] vp.AngX -1200
 scoreboard players set @e[tag=plane-init] vp.AngY 0
 scoreboard players set @e[tag=plane-init] vp.AngZ 0
 scoreboard players set @e[tag=plane-init] vp.AngY-old 0
-scoreboard players set @e[tag=plane-init] vp.pitch-speed 160
-scoreboard players set @e[tag=plane-init] vp.yaw-speed 80
+scoreboard players set @e[tag=plane-init] vp.pitch-speed 170
+scoreboard players set @e[tag=plane-init] vp.yaw-speed 90
 scoreboard players set @e[tag=plane-init] vp.roll-speed 460
 
 scoreboard players set @e[tag=plane-init] vp.parking-cmd 1
