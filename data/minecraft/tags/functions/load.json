@@ -1,3 +1,3 @@
 {
-    "values": ["constructor:addscoreboard","constructor:setdummyentity","constructor:setscore","constructor:reset-score/get-plane-score","constructor:set-tag","constructor:take-recipes","score_to_health:load"]
+    "values": ["constructor:addscoreboard","constructor:addstorage","constructor:setdummyentity","constructor:setscore","constructor:reset-score/get-plane-score","constructor:set-tag","constructor:take-recipes","score_to_health:load"]
 }

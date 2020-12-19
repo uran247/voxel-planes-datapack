@@ -1,19 +1,16 @@
 #スコア分向いてる方向にTP
 #実行者：弾体
+#input as @e[tag=gun] at @s
 
 #実行者にタグ付け
 tag @s add gun-move-executer
-
-#自分と同じID持ちのエンティティでno-hit無しに当たらないようにタグ付け
-scoreboard players operation #plane-id vp.reg1 = @s vp.plane-id
-execute as @e[distance=..20,tag=!entity-nohit] if score @s vp.plane-id = #plane-id vp.reg1 run tag @s add gunner
 
 #ヒットフラグ初期化
 scoreboard players set #hit-flag vp.reg1 0
 
 #### 移動&ヒット判定 ####
 #ベクトル方向へエンティティの向きを向ける
-execute at @s run tp 0-0-0-0-4 ~ ~ ~ ~ ~
+tp 0-0-0-0-4 ~ ~ ~ ~ ~
 data modify storage minecraft:plane-datapack temporary.Pos set from entity @s Pos
 execute store result score #pos-x vp.reg1 run data get storage minecraft:plane-datapack temporary.Pos[0] 100
 execute store result score #pos-y vp.reg1 run data get storage minecraft:plane-datapack temporary.Pos[1] 100
@@ -29,20 +26,22 @@ tp @s ~ ~ ~ facing entity 0-0-0-0-4
 #tellraw @p [{"nbt":"Pos","entity":"@s"},{"nbt":"Pos","entity":"0-0-0-0-4"}] 
 
 #移動予定先までの間にブロックがあるか判定
-execute as @s at 0-0-0-0-4 run function weapon:util/check-block
+execute at 0-0-0-0-4 run function weapon:util/check-block
 execute unless score #x vp.return matches 50 unless score #y vp.return matches 100 unless score #z vp.return matches 50 run scoreboard players set #hit-flag vp.reg1 1
 execute if score #hit-flag vp.reg1 matches 1 run tag 0-0-0-0-9 add hit-weapon
 
 #移動予定先までの間にエンティティがいるか判定
-execute as @s at @s run function weapon:util/check-entity
-execute at @s if entity @e[tag=hit-on-line,tag=!gunner,tag=!entity-nohit] unless entity @e[tag=gunner,distance=..3] run scoreboard players set #hit-flag vp.reg1 2
-execute if score #hit-flag vp.reg1 matches 2 run tag @e[tag=hit-on-line,tag=!gunner,tag=!entity-nohit] add hit-weapon
+function weapon:util/check-entity
+execute if entity @e[distance=..20,tag=hit-on-line,tag=!entity-nohit] run scoreboard players set #hit-flag vp.reg1 2
+execute if score #hit-flag vp.reg1 matches 2 run scoreboard players operation #plane-id vp.reg1 = @s vp.plane-id
+execute if score #hit-flag vp.reg1 matches 2 as @e[distance=..20,tag=hit-on-line,tag=!entity-nohit] unless score @s vp.plane-id = #plane-id vp.reg1 run tag @s add hit-weapon
+execute if score #hit-flag vp.reg1 matches 2 unless entity @e[tag=hit-weapon,distance=..20] run scoreboard players set #hit-flag vp.reg1 0
 
 #命中していない場合移動予定先へ移動
 execute if score #hit-flag vp.reg1 matches 0 positioned as 0-0-0-0-4 run tp @s ~ ~ ~
 
 #命中してた場合命中してたところに移動
-execute if score #hit-flag vp.reg1 matches 1.. at @e[tag=hit-weapon,limit=1,sort=nearest] run tp @s ~ ~ ~
+execute if score #hit-flag vp.reg1 matches 1.. at @e[distance=..20,tag=hit-weapon,limit=1,sort=nearest] run tp @s ~ ~ ~
 
 #命中してた場合ダメージ処理
 execute if score #hit-flag vp.reg1 matches 2 run function weapon:gun/damage/damage
@@ -66,9 +65,6 @@ execute if score #hit-flag vp.reg1 matches 1.. run kill @s
 scoreboard players add @s vp.age 1
 execute if score @s[type=armor_stand] vp.age > @s vp.max-age run kill @s
 #tellraw @p [{"score" : {"name":"@s", "objective":"age"}}]
-
-#scoreboard players add @s[tag=banshee-gun] age 1
-#execute if entity @s[tag=banshee-gun] run tellraw @p [{"score" : {"name":"@s", "objective":"age"}}, {"text":" "}]
 
 #タグ削除
 tag @e[tag=hit-weapon] remove hit-weapon

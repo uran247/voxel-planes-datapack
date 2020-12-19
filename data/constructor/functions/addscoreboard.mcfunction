@@ -140,5 +140,3 @@ scoreboard objectives add vp.taken-damage dummy
 scoreboard objectives add vp.total-damage dummy
 scoreboard objectives add vp.shootdown dummy {"text":"スコア"}
 
-#storage作成
-data merge storage minecraft:plane-datapack {temporary:{Pos:[0.0d,0.0d,0.0d]},Items:[]}
