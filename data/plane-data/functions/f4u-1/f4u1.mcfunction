@@ -61,8 +61,8 @@ scoreboard players set @e[tag=plane-init] vp.max-ammo1 400
 scoreboard players set @e[tag=plane-init] vp.max-ammo2 2
 scoreboard players set @e[tag=plane-init] vp.max-ammo3 8
 scoreboard players set @e[tag=plane-init] vp.max-ammo-rel1 220
-scoreboard players set @e[tag=plane-init] vp.max-ammo-rel2 3600
-scoreboard players set @e[tag=plane-init] vp.max-ammo-rel3 1200
+scoreboard players set @e[tag=plane-init] vp.max-ammo-rel2 1200
+scoreboard players set @e[tag=plane-init] vp.max-ammo-rel3 3600
 scoreboard players set @e[tag=plane-init] vp.plane-weapon 1
 scoreboard players set @e[tag=plane-init] vp.weapon-types 2
 

@@ -17,12 +17,12 @@
                             "lore":[
                                 {"translate":"戦闘機","color":"green","bold":true},
                                 {"translate":" 武装"},
-                                {"translate":"  50kg爆弾×20","color":"blue"}
+                                {"translate":"  250kg爆弾×4","color":"blue"}
                             ]
                         },
                         {
                             "function": "minecraft:set_nbt",
-                            "tag":"{item-type:ki-49,tier:3,CustomModelData:4,CanPlaceOn:[\"minecraft:stone\",\"minecraft:grass_path\"],HideFlags:18,EntityTag:{Silent:1b,Tags:[ki49-spawner,plane-spawner],ActiveEffects:[{Id:14b,Amplifier:1b,Duration:100,ShowParticles:0b}]}}"
+                            "tag":"{item-type:ki-49,tier:3,CustomModelData:14,CanPlaceOn:[\"minecraft:stone\",\"minecraft:grass_path\"],HideFlags:18,EntityTag:{Silent:1b,Tags:[ki49-spawner,plane-spawner],ActiveEffects:[{Id:14b,Amplifier:1b,Duration:100,ShowParticles:0b}]}}"
                         }
                     ]
                 }

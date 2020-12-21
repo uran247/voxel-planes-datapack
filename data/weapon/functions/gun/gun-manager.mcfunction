@@ -1,6 +1,7 @@
 #スコア分向いてる方向にTP
 #実行者：弾体
 #input as @e[tag=gun] at @s
+# #hit-flag=1:hit block #hit-flag=2: hit entity
 
 #実行者にタグ付け
 tag @s add gun-move-executer
@@ -70,7 +71,6 @@ execute if score @s[type=armor_stand] vp.age > @s vp.max-age run kill @s
 tag @e[tag=hit-weapon] remove hit-weapon
 tag @e[tag=hit-on-line] remove hit-on-line
 execute at @s run tag @s remove gun-move-executer
-tag @e[tag=gunner,distance=..25] remove gunner
 
 #エンティティ返却
 tp 0-0-0-0-4 0.0 1.0 0.0
