@@ -39,7 +39,7 @@ execute as @e[tag=rocket-init,distance=..10,limit=1] at @s run tp @s ~ ~ ~ ~90 ~
 #tellraw @p [{"score" : {"name":"@e[tag=rocket-init,distance=..5,limit=1]", "objective":"speed"}}, {"text":" "}, {"score" : {"name":"@e[tag=rocket-init,distance=..5,limit=1]", "objective":"age"}}]
 
 #発射したならreload時間設定
-execute if entity @e[tag=rocket-init,distance=..20] run scoreboard players set @s vp.w4-reload 2
+execute if entity @e[tag=rocket-init,distance=..20] run scoreboard players set @s vp.w4-cooltime 2
 
 #残弾数減算
 scoreboard players remove @s vp.ammunition4 1

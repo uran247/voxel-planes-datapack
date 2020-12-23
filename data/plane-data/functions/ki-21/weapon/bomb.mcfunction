@@ -41,7 +41,7 @@ execute store result entity @e[tag=drop-init,distance=..20,limit=1] Pose.RightAr
 execute as @e[tag=drop-init,distance=..20,limit=1] at @s run tp @s ~ ~ ~ ~90 ~
 
 #発射したならreload時間設定
-execute if entity @e[tag=gun-init,distance=..20] run scoreboard players set @s vp.w1-reload 2
+execute if entity @e[tag=gun-init,distance=..20] run scoreboard players set @s vp.w1-cooltime 2
 
 #残弾数減算
 scoreboard players remove @s vp.ammunition1 1

@@ -59,15 +59,15 @@ execute unless entity @s[tag=main-weapon4] run scoreboard players reset #ammunit
 execute unless entity @s[tag=main-weapon5] run scoreboard players reset #ammunition5 vp.reg1
 
 #残弾数0の場合リロード時間を取得
-execute if entity @s[scores={vp.ammunition1=..0}] run scoreboard players operation #ammunition1 vp.reg1 = @s vp.ammo-reload1
+execute if entity @s[scores={vp.ammunition1=..0}] run scoreboard players operation #ammunition1 vp.reg1 = @s vp.w1-reload
 execute if entity @s[scores={vp.ammunition1=..0}] run scoreboard players operation #ammunition1 vp.reg1 /= #20 vp.Num
-execute if entity @s[scores={vp.ammunition2=..0}] run scoreboard players operation #ammunition2 vp.reg1 = @s vp.ammo-reload2
+execute if entity @s[scores={vp.ammunition2=..0}] run scoreboard players operation #ammunition2 vp.reg1 = @s vp.w2-reload
 execute if entity @s[scores={vp.ammunition2=..0}] run scoreboard players operation #ammunition2 vp.reg1 /= #20 vp.Num
-execute if entity @s[scores={vp.ammunition3=..0}] run scoreboard players operation #ammunition3 vp.reg1 = @s vp.ammo-reload3
+execute if entity @s[scores={vp.ammunition3=..0}] run scoreboard players operation #ammunition3 vp.reg1 = @s vp.w3-reload
 execute if entity @s[scores={vp.ammunition3=..0}] run scoreboard players operation #ammunition3 vp.reg1 /= #20 vp.Num
-execute if entity @s[scores={vp.ammunition4=..0}] run scoreboard players operation #ammunition4 vp.reg1 = @s vp.ammo-reload4
+execute if entity @s[scores={vp.ammunition4=..0}] run scoreboard players operation #ammunition4 vp.reg1 = @s vp.w4-reload
 execute if entity @s[scores={vp.ammunition4=..0}] run scoreboard players operation #ammunition4 vp.reg1 /= #20 vp.Num
-execute if entity @s[scores={vp.ammunition5=..0}] run scoreboard players operation #ammunition5 vp.reg1 = @s vp.ammo-reload5
+execute if entity @s[scores={vp.ammunition5=..0}] run scoreboard players operation #ammunition5 vp.reg1 = @s vp.w5-reload
 execute if entity @s[scores={vp.ammunition5=..0}] run scoreboard players operation #ammunition5 vp.reg1 /= #20 vp.Num
 
 #飛行機情報表示

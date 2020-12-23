@@ -42,7 +42,7 @@ scoreboard players operation @e[tag=drop-init,distance=..20] vp.speedZ /= #10 vp
 playsound minecraft:block.piston.contract ambient @a ~ ~ ~ 1 1.5
 
 #発射したならreload時間設定
-execute if entity @e[tag=drop-init,distance=..20] run scoreboard players set @s vp.w2-reload 2
+execute if entity @e[tag=drop-init,distance=..20] run scoreboard players set @s vp.w2-cooltime 2
 
 #残弾数減算
 scoreboard players remove @s vp.ammunition2 1

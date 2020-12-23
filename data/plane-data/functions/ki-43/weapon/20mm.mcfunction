@@ -34,7 +34,7 @@ execute as @e[tag=gun-init,limit=2,distance=..20] at @s run tp @s ~ ~ ~ facing e
 
 
 #発射したならreload時間設定
-execute if entity @e[tag=gun-init,distance=..20] run scoreboard players set @s vp.w1-reload 2
+execute if entity @e[tag=gun-init,distance=..20] run scoreboard players set @s vp.w1-cooltime 2
 
 #音
 playsound minecraft:weapon.heavy-muchingun.fire master @a ~ ~ ~ 1 1

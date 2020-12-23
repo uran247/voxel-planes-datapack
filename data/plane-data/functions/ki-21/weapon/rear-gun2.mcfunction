@@ -67,7 +67,7 @@ execute as @e[tag=gun-init,distance=..20,scores={vp.reg1=3600..}] run scoreboard
 execute as @e[tag=gun-init,distance=..20] store result entity @s Rotation[1] float 0.1 run scoreboard players get #angle-X vp.reg1
 
 #発射したならreload時間設定
-execute if entity @e[tag=gun-init,distance=..20] run scoreboard players set @s vp.w3-reload 2
+execute if entity @e[tag=gun-init,distance=..20] run scoreboard players set @s vp.w3-cooltime 2
 
 #音
 playsound minecraft:weapon.muchingun.fire master @a ~ ~ ~ 1 1 1

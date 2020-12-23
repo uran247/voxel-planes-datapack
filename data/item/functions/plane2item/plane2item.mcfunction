@@ -20,6 +20,7 @@ execute as @s[tag=a6m5-root] at @s run function plane-data:a6m5/a6m5-2-item
 execute as @s[tag=ki61-root] at @s run function plane-data:ki-61/ki61-2-item
 execute as @s[tag=ki49-root] at @s run function plane-data:ki-49/ki49-2-item
 execute as @s[tag=f4u1-root] at @s run function plane-data:f4u-1/f4u1-2-item
+execute as @s[tag=fw190d9-root] at @s run function plane-data:fw190d-9/fw190d9-2-item
 
 #ロバチェスト内のアイテム放出
 data merge block 0 1 0 {Items:[]}

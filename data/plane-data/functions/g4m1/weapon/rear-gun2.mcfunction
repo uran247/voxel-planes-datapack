@@ -77,7 +77,7 @@ scoreboard players operation @e[tag=gun-init,distance=..20] vp.speedZ /= #10 vp.
 
 
 #発射したならreload時間設定
-execute if entity @e[tag=gun-init,distance=..20] run scoreboard players set @s vp.w3-reload 2
+execute if entity @e[tag=gun-init,distance=..20] run scoreboard players set @s vp.w3-cooltime 2
 
 #音
 playsound minecraft:weapon.muchingun.fire master @a ~ ~ ~ 1 1 1

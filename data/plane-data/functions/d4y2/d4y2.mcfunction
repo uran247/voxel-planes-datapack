@@ -51,10 +51,10 @@ scoreboard players set @e[tag=plane-init,tag=d4y2-body] vp.parking-cmd 27
 scoreboard players set @e[tag=plane-init,tag=d4y2-body] vp.rolling-cmd 28
 scoreboard players set @e[tag=plane-init,tag=d4y2-body] vp.flying-cmd 29
 
-scoreboard players set @e[tag=plane-init,tag=d4y2-root] vp.w1-reload 0
-scoreboard players set @e[tag=plane-init,tag=d4y2-root] vp.w2-reload 0
-scoreboard players set @e[tag=plane-init,tag=d4y2-root] vp.w3-reload 0
-scoreboard players set @e[tag=plane-init,tag=d4y2-root] vp.w4-reload 0
+scoreboard players set @e[tag=plane-init,tag=d4y2-root] vp.w1-cooltime 0
+scoreboard players set @e[tag=plane-init,tag=d4y2-root] vp.w2-cooltime 0
+scoreboard players set @e[tag=plane-init,tag=d4y2-root] vp.w3-cooltime 0
+scoreboard players set @e[tag=plane-init,tag=d4y2-root] vp.w4-cooltime 0
 scoreboard players set @e[tag=plane-init,tag=d4y2-root] vp.ammunition1 400
 scoreboard players set @e[tag=plane-init,tag=d4y2-root] vp.ammunition2 3
 scoreboard players set @e[tag=plane-init,tag=d4y2-root] vp.ammunition3 500
@@ -63,10 +63,10 @@ scoreboard players set @e[tag=plane-init,tag=d4y2-root] vp.max-ammo1 400
 scoreboard players set @e[tag=plane-init,tag=d4y2-root] vp.max-ammo2 3
 scoreboard players set @e[tag=plane-init,tag=d4y2-root] vp.max-ammo3 500
 scoreboard players set @e[tag=plane-init,tag=d4y2-root] vp.max-ammo4 4
-scoreboard players set @e[tag=plane-init,tag=d4y2-root] vp.max-ammo-rel1 140
-scoreboard players set @e[tag=plane-init,tag=d4y2-root] vp.max-ammo-rel2 500
-scoreboard players set @e[tag=plane-init,tag=d4y2-root] vp.max-ammo-rel3 140
-scoreboard players set @e[tag=plane-init,tag=d4y2-root] vp.max-ammo-rel4 500
+scoreboard players set @e[tag=plane-init,tag=d4y2-root] vp.max-w1-reload 140
+scoreboard players set @e[tag=plane-init,tag=d4y2-root] vp.max-w2-reload 500
+scoreboard players set @e[tag=plane-init,tag=d4y2-root] vp.max-w3-reload 140
+scoreboard players set @e[tag=plane-init,tag=d4y2-root] vp.max-w4-reload 500
 scoreboard players set @e[tag=plane-init,tag=d4y2-root] vp.plane-weapon 1
 scoreboard players set @e[tag=plane-init,tag=d4y2-root] vp.weapon-types 6
 

@@ -33,7 +33,7 @@ scoreboard players operation #cos vp.reg1 = #cos vp.return
 execute as @e[tag=gun-init,distance=..5] run function plane-data:util/gun-set-position
 
 #発射したならreload時間設定
-execute if entity @e[tag=gun-init,distance=..20] run scoreboard players set @s vp.w1-reload 3
+execute if entity @e[tag=gun-init,distance=..20] run scoreboard players set @s vp.w1-cooltime 3
 
 #音
 execute if entity @s[tag=mg151] run playsound minecraft:weapon.heavy-muchingun.fire master @a ~ ~ ~ 1 0.943874 1

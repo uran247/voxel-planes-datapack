@@ -49,17 +49,17 @@ scoreboard players set @e[tag=plane-init,tag=a6m5-body] vp.parking-cmd 7
 scoreboard players set @e[tag=plane-init,tag=a6m5-body] vp.rolling-cmd 8
 scoreboard players set @e[tag=plane-init,tag=a6m5-body] vp.flying-cmd 9
 
-scoreboard players set @e[tag=plane-init,tag=a6m5-root] vp.w1-reload 0
-scoreboard players set @e[tag=plane-init,tag=a6m5-root] vp.w2-reload 0
+scoreboard players set @e[tag=plane-init,tag=a6m5-root] vp.w1-cooltime 0
+scoreboard players set @e[tag=plane-init,tag=a6m5-root] vp.w2-cooltime 0
 scoreboard players set @e[tag=plane-init,tag=a6m5-root] vp.ammunition1 125
 scoreboard players set @e[tag=plane-init,tag=a6m5-root] vp.ammunition2 700
 scoreboard players set @e[tag=plane-init,tag=a6m5-root] vp.ammunition3 0
 scoreboard players set @e[tag=plane-init,tag=a6m5-root] vp.max-ammo1 125
 scoreboard players set @e[tag=plane-init,tag=a6m5-root] vp.max-ammo2 700
 scoreboard players set @e[tag=plane-init,tag=a6m5-root] vp.max-ammo3 2
-scoreboard players set @e[tag=plane-init,tag=a6m5-root] vp.max-ammo-rel1 280
-scoreboard players set @e[tag=plane-init,tag=a6m5-root] vp.max-ammo-rel2 140
-scoreboard players set @e[tag=plane-init,tag=a6m5-root] vp.max-ammo-rel3 3000
+scoreboard players set @e[tag=plane-init,tag=a6m5-root] vp.max-w1-reload 280
+scoreboard players set @e[tag=plane-init,tag=a6m5-root] vp.max-w2-reload 140
+scoreboard players set @e[tag=plane-init,tag=a6m5-root] vp.max-w3-reload 3000
 scoreboard players set @e[tag=plane-init,tag=a6m5-root] vp.plane-weapon 1
 scoreboard players set @e[tag=plane-init,tag=a6m5-root] vp.weapon-types 6
 

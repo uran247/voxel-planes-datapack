@@ -17,3 +17,4 @@ execute if entity @s[tag=a6m5-root] run function plane-data:a6m5/a6m5-equip
 execute if entity @s[tag=n1k2-root] run function plane-data:n1k2/n1k2-equip
 execute if entity @s[tag=ki49-root] run function plane-data:ki-49/ki49-equip
 execute if entity @s[tag=f4u1-root] run function plane-data:f4u-1/f4u1-equip
+execute if entity @s[tag=fw190d9-root] run function plane-data:fw190d-9/fw190d9-equip

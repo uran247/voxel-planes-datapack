@@ -49,13 +49,13 @@ scoreboard players set @e[tag=plane-init,tag=ki44-body] vp.parking-cmd 90
 scoreboard players set @e[tag=plane-init,tag=ki44-body] vp.rolling-cmd 91
 scoreboard players set @e[tag=plane-init,tag=ki44-body] vp.flying-cmd 92
 
-scoreboard players set @e[tag=plane-init,tag=ki44-root] vp.w1-reload 0
+scoreboard players set @e[tag=plane-init,tag=ki44-root] vp.w1-cooltime 0
 scoreboard players set @e[tag=plane-init,tag=ki44-root] vp.ammunition1 250
 scoreboard players set @e[tag=plane-init,tag=ki44-root] vp.max-ammo1 250
-scoreboard players set @e[tag=plane-init,tag=ki44-root] vp.max-ammo-rel1 140
+scoreboard players set @e[tag=plane-init,tag=ki44-root] vp.max-w1-reload 140
 scoreboard players set @e[tag=plane-init,tag=ki44-root] vp.ammunition2 2
 scoreboard players set @e[tag=plane-init,tag=ki44-root] vp.max-ammo2 2
-scoreboard players set @e[tag=plane-init,tag=ki44-root] vp.max-ammo-rel2 3600
+scoreboard players set @e[tag=plane-init,tag=ki44-root] vp.max-w2-reload 3600
 scoreboard players set @e[tag=plane-init,tag=ki44-root] vp.plane-weapon 1
 scoreboard players set @e[tag=plane-init,tag=ki44-root] vp.weapon-types 2
 

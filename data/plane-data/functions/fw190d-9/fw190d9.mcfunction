@@ -3,7 +3,7 @@
 #機体召喚
 summon minecraft:armor_stand ~ ~ ~ {Invisible:1,NoGravity:0,Tags:[fw190d9-root,fw190d9,plane-init,plane-root,plane,entity-nohit,need-calc-offset,delay-rotation,has-weapon1,has-weapon2,main-weapon1,main-weapon2,main-weapon3,tier4],CustomName:'{"text":"fw190d9"}',Pose:{LeftArm:[0f,0f,0f],RightArm:[0f,0f,0f]},DisabledSlots:256,HandItems:[{id:"snowball",Count:1b,tag:{CustomModelData:1,weapons:["20mm gun","13mm gun","bomb"]}},{}]}
 summon minecraft:armor_stand ~ ~ ~ {Invisible:1,NoGravity:0,Tags:[fw190d9,plane-init,plane,entity-nohit,plane-seat],CustomName:'{"text":"seat"}',Pose:{LeftArm:[0f,0f,0f],RightArm:[0f,0f,0f]},Passengers:[{id:"donkey",Health:35f,Attributes:[{Name:"generic.max_health",Base:35}],Invulnerable:1b,DeathLootTable:"minecraft:entities/bat",SaddleItem:{id:"minecraft:saddle",Count:1b},Tame:1,NoAI:1,Silent:1,ChestedHorse:1b,ActiveEffects:[{Id:14,Amplifier:0,Duration:1000000,ShowParticles:0b}],Tags:[fw190d9,plane-init,plane,plane-seat,entity-nohit]}],DisabledSlots:256}
-summon armor_stand ~ ~ ~ {Tags:["fw190d9-body","fw190d9",plane-init,plane,has-model,model-changeable,entity-nohit],NoGravity:1b,Invisible:1,HandItems:[{id:"minecraft:diamond_sword",Count:1b,tag:{CustomModelData:1,Unbreakable:1}},{}],Pose:{LeftArm:[0f,0f,0f],RightArm:[-12f,0f,0f]},DisabledSlots:256}
+summon armor_stand ~ ~ ~ {Tags:["fw190d9-body","fw190d9",plane-init,plane,has-model,model-changeable,entity-nohit],NoGravity:1b,Invisible:1,HandItems:[{id:"minecraft:diamond_sword",Count:1b,tag:{CustomModelData:4,Unbreakable:1}},{}],Pose:{LeftArm:[0f,0f,0f],RightArm:[-12f,0f,0f]},DisabledSlots:256}
 summon armor_stand ~ ~ ~ {Tags:["fw190d9-hitbox","fw190d9",plane-init,plane,plane-hitbox,has-offset,body,offset-base],NoGravity:1b,Invisible:1,Marker:1,Glowing:1,CustomName:'{"text":"body"}',Health:330f,Attributes:[{Name:"generic.max_health",Base:330}]}
 summon armor_stand ~ ~ ~ {Tags:["fw190d9-hitbox","fw190d9",plane-init,plane,plane-hitbox,has-offset,engine,offset-base],NoGravity:1b,Invisible:1,Marker:1,Glowing:1,CustomName:'{"text":"engine"}',Health:300f,Attributes:[{Name:"generic.max_health",Base:300}]}
 summon armor_stand ~ ~ ~ {Tags:["fw190d9-hitbox","fw190d9",plane-init,plane,plane-hitbox,has-offset,aileron-r,aileron,offset-base],NoGravity:1b,Invisible:1,Marker:1,Glowing:1,CustomName:'{"text":"aileron-right"}',Health:240f,Attributes:[{Name:"generic.max_health",Base:240}]}
@@ -43,24 +43,24 @@ scoreboard players set @e[tag=plane-init] vp.AngZ 0
 scoreboard players set @e[tag=plane-init] vp.AngY-old 0
 scoreboard players set @e[tag=plane-init] vp.pitch-speed 190
 scoreboard players set @e[tag=plane-init] vp.yaw-speed 110
-scoreboard players set @e[tag=plane-init] vp.roll-speed 460
+scoreboard players set @e[tag=plane-init] vp.roll-speed 1300
 
-scoreboard players set @e[tag=plane-init] vp.parking-cmd 1
-scoreboard players set @e[tag=plane-init] vp.rolling-cmd 2
-scoreboard players set @e[tag=plane-init] vp.flying-cmd 3
+scoreboard players set @e[tag=plane-init] vp.parking-cmd 4
+scoreboard players set @e[tag=plane-init] vp.rolling-cmd 5
+scoreboard players set @e[tag=plane-init] vp.flying-cmd 6
 
-scoreboard players set @e[tag=plane-init] vp.w1-reload 0
-scoreboard players set @e[tag=plane-init] vp.w2-reload 0
-scoreboard players set @e[tag=plane-init] vp.w3-reload 0
+scoreboard players set @e[tag=plane-init] vp.w1-cooltime 0
+scoreboard players set @e[tag=plane-init] vp.w2-cooltime 0
+scoreboard players set @e[tag=plane-init] vp.w3-cooltime 0
 scoreboard players set @e[tag=plane-init] vp.ammunition1 250
 scoreboard players set @e[tag=plane-init] vp.ammunition2 450
 scoreboard players set @e[tag=plane-init] vp.ammunition3 0
 scoreboard players set @e[tag=plane-init] vp.max-ammo1 250
 scoreboard players set @e[tag=plane-init] vp.max-ammo2 450
 scoreboard players set @e[tag=plane-init] vp.max-ammo3 1
-scoreboard players set @e[tag=plane-init] vp.max-ammo-rel1 280
-scoreboard players set @e[tag=plane-init] vp.max-ammo-rel2 220
-scoreboard players set @e[tag=plane-init] vp.max-ammo-rel3 3600
+scoreboard players set @e[tag=plane-init] vp.max-w1-reload 280
+scoreboard players set @e[tag=plane-init] vp.max-w2-reload 220
+scoreboard players set @e[tag=plane-init] vp.max-w3-reload 3600
 scoreboard players set @e[tag=plane-init] vp.plane-weapon 1
 scoreboard players set @e[tag=plane-init] vp.weapon-types 6
 

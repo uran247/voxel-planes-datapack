@@ -1,1 +1,1 @@
-loot spawn ~ ~ ~ loot plane-data:f4u-1
+loot spawn ~ ~ ~ loot plane-data:fw190d9

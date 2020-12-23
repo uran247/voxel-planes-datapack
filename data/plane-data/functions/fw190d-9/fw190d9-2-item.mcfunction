@@ -2,4 +2,4 @@
 #処理　a6m2をアイテム化
 
 #アイテムをsummon
-function plane-data:f4u-1/give-f4u1-spawn
+function plane-data:fw190d-9/give-fw190d9-spawn

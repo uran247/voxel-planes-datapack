@@ -47,20 +47,6 @@ scoreboard objectives add vp.aileron dummy
 scoreboard objectives add vp.engine dummy
 scoreboard objectives add vp.body dummy
 scoreboard objectives add vp.max-engine dummy
-scoreboard objectives add vp.ammo-reload1 dummy
-scoreboard objectives add vp.ammo-reload2 dummy
-scoreboard objectives add vp.ammo-reload3 dummy
-scoreboard objectives add vp.ammo-reload4 dummy
-scoreboard objectives add vp.ammo-reload5 dummy
-scoreboard objectives add vp.ammo-reload6 dummy
-scoreboard objectives add vp.ammo-reload7 dummy
-scoreboard objectives add vp.throttle dummy
-scoreboard objectives add vp.yaw-gap dummy
-scoreboard objectives add vp.pitch-gap dummy
-scoreboard objectives add vp.sound dummy
-
-#武器関連
-scoreboard objectives add vp.max-age dummy
 scoreboard objectives add vp.w1-reload dummy
 scoreboard objectives add vp.w2-reload dummy
 scoreboard objectives add vp.w3-reload dummy
@@ -68,6 +54,20 @@ scoreboard objectives add vp.w4-reload dummy
 scoreboard objectives add vp.w5-reload dummy
 scoreboard objectives add vp.w6-reload dummy
 scoreboard objectives add vp.w7-reload dummy
+scoreboard objectives add vp.throttle dummy
+scoreboard objectives add vp.yaw-gap dummy
+scoreboard objectives add vp.pitch-gap dummy
+scoreboard objectives add vp.sound dummy
+
+#武器関連
+scoreboard objectives add vp.max-age dummy
+scoreboard objectives add vp.w1-cooltime dummy
+scoreboard objectives add vp.w2-cooltime dummy
+scoreboard objectives add vp.w3-cooltime dummy
+scoreboard objectives add vp.w4-cooltime dummy
+scoreboard objectives add vp.w5-cooltime dummy
+scoreboard objectives add vp.w6-cooltime dummy
+scoreboard objectives add vp.w7-cooltime dummy
 scoreboard objectives add vp.torp-speed dummy
 scoreboard objectives add vp.fall-speed dummy
 scoreboard objectives add vp.damage dummy
@@ -127,13 +127,13 @@ scoreboard objectives add vp.offsetZ dummy
 scoreboard objectives add vp.new-offsetX dummy
 scoreboard objectives add vp.new-offsetY dummy
 scoreboard objectives add vp.new-offsetZ dummy
-scoreboard objectives add vp.max-ammo-rel1 dummy
-scoreboard objectives add vp.max-ammo-rel2 dummy
-scoreboard objectives add vp.max-ammo-rel3 dummy
-scoreboard objectives add vp.max-ammo-rel4 dummy
-scoreboard objectives add vp.max-ammo-rel5 dummy
-scoreboard objectives add vp.max-ammo-rel6 dummy
-scoreboard objectives add vp.max-ammo-rel7 dummy
+scoreboard objectives add vp.max-w1-reload dummy
+scoreboard objectives add vp.max-w2-reload dummy
+scoreboard objectives add vp.max-w3-reload dummy
+scoreboard objectives add vp.max-w4-reload dummy
+scoreboard objectives add vp.max-w5-reload dummy
+scoreboard objectives add vp.max-w6-reload dummy
+scoreboard objectives add vp.max-w7-reload dummy
 
 #ダメージ関連
 scoreboard objectives add vp.taken-damage dummy

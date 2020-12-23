@@ -58,7 +58,7 @@ playsound minecraft:weapon.gun-7p7m.fire master @a ~ ~ ~ 1 1 1
 #execute as @e[tag=gun-init,distance=..10] at @s run particle minecraft:cloud ^ ^ ^ 0.1 0.1 0.1 0.1 1 force
 
 #発射したならreload時間設定
-execute if entity @e[tag=gun-init] run scoreboard players set @s vp.w1-reload 2
+execute if entity @e[tag=gun-init] run scoreboard players set @s vp.w1-cooltime 2
 
 #残弾数減算
 scoreboard players remove @s vp.ammunition1 1

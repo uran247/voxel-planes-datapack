@@ -23,8 +23,8 @@ scoreboard players set @s[tag=7p7mm] vp.max-ammo1 500
 scoreboard players set @s[tag=12p7mm] vp.max-ammo1 270
 
 #リロード時間変更
-scoreboard players set @s[tag=7p7mm] vp.max-ammo-rel1 140
-scoreboard players set @s[tag=12p7mm] vp.max-ammo-rel1 210
+scoreboard players set @s[tag=7p7mm] vp.max-w1-reload 140
+scoreboard players set @s[tag=12p7mm] vp.max-w1-reload 210
 
 #武器名変更
 data modify entity @s[tag=7p7mm] HandItems[0].tag.weapons[0] set value "7.7mm gun"
