@@ -1,12 +1,28 @@
-#爆弾の落下処理
-#実行者：爆弾
+#> weapon:dropping/dropping-manager
+#
+# 爆弾の落下処理
+# 実行者：爆弾
+#
+# @within function weapon:tick
+
+#> private
+# @private
+    #declare tag bomb-move-executer #実行者につくタグ
+    #declare tag hit-weapon #武器がヒットしたエンティティにつく
+    #
+    #declare score_holder #pos-x #実行者のx座標
+    #declare score_holder #pos-y #実行者のy座標
+    #declare score_holder #pos-z #実行者のz座標
+    #declare score_holder #x #ブロック命中地点のx座標
+    #declare score_holder #y #ブロック命中地点のy座標
+    #declare score_holder #z #ブロック命中地点のz座標
+    #declare score_holder #x-ang #爆弾のピッチ角度
+    #declare score_holder #hit-flag #当たったことのフラグ 1:ブロック命中 2:エンティティ命中
+    #declare score_holder #plane-id #実行者のplane-id
+
 
 #実行者にタグ付け
 tag @s add bomb-move-executer
-
-#自分と同じID持ちのエンティティにタグ付け
-scoreboard players operation #plane-id vp.reg1 = @s vp.plane-id
-execute as @e[distance=..20] if score @s vp.plane-id = #plane-id vp.reg1 run tag @s add bomber
 
 #移動と判定のため一時的に向きを90度回転
 execute at @s run tp @s ~ ~ ~ ~-90 ~
@@ -31,15 +47,17 @@ execute unless score #x vp.return matches 50 unless score #y vp.return matches 1
 execute if score #hit-flag vp.reg1 matches 1 run tag 0-0-0-0-9 add hit-weapon
 
 #移動予定先までの間にエンティティがいるか判定
-execute as @s at @s run function weapon:util/check-entity
-execute at @s if entity @e[tag=hit-on-line,tag=!bomber,tag=!entity-nohit] unless entity @e[tag=bomber,distance=..3] run scoreboard players set #hit-flag vp.reg1 2
-execute if score #hit-flag vp.reg1 matches 2 run tag @e[tag=hit-on-line,tag=!bomber,tag=!entity-nohit] add hit-weapon
+function weapon:util/check-entity
+execute if entity @e[tag=hit-on-line,tag=!entity-nohit,distance=..20] run scoreboard players set #hit-flag vp.reg1 2
+execute if score #hit-flag vp.reg1 matches 2 run scoreboard players operation #plane-id vp.reg1 = @s vp.plane-id
+execute if score #hit-flag vp.reg1 matches 2 as @e[tag=hit-on-line,tag=!entity-nohit,distance=..20] unless score @s vp.plane-id = #plane-id vp.reg1 run tag @s add hit-weapon
+execute if score #hit-flag vp.reg1 matches 2 unless entity @e[tag=hit-weapon,distance=..20] run scoreboard players set #hit-flag vp.reg1 0
 
 #命中していない場合移動予定先へ移動
 execute if score #hit-flag vp.reg1 matches 0 at 0-0-0-0-4 run tp @s ~ ~ ~
 
 #命中してた場合命中してたところに移動
-execute if score #hit-flag vp.reg1 matches 1.. at @e[tag=hit-weapon,limit=1,sort=nearest] run tp @s ~ ~ ~
+execute if score #hit-flag vp.reg1 matches 1.. at @e[tag=hit-weapon,sort=nearest,limit=1] run tp @s ~ ~ ~
 
 #y方向の速度更新
 scoreboard players remove @s vp.speedY 1
@@ -48,7 +66,6 @@ scoreboard players remove @s vp.speedY 1
 #ダメージを与える
 execute if score #hit-flag vp.reg1 matches 1.. at @s run function weapon:dropping/damage/damage
 execute if score #hit-flag vp.reg1 matches 1.. run kill @s
-
 
 #向き修正
 execute at @s run tp @s ~ ~ ~ ~90 ~0.4
@@ -62,7 +79,6 @@ scoreboard players remove @s vp.age 1
 
 #終了処理
 tag @e[tag=hit-weapon,distance=..20] remove hit-weapon
-tag @e[tag=bomber,distance=..40] remove bomber
 tag @s remove bomb-move-executer
 tag @e[tag=hit-on-line] remove hit-on-line
 kill @s[scores={vp.age=0}]

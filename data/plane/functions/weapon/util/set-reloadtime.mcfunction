@@ -1,8 +1,13 @@
-#入力：機体enthity
-#処理：
-#弾薬数が0のEntityにリロード時間をセット
-#ammunitionに-1を入れてリロード中とわかるようにする
-#帰り値：なし
+#> plane:weapon/util/set-reloadtime
+#
+# @input
+#   executer @e[tag=plane-root]
+#
+# 弾薬数が0のEntityにリロード時間をセット
+# ammunitionに-1を入れてリロード中とわかるようにする
+#
+# @within function plane:weapon/weapon-manager
+
 execute if entity @s[tag=has-weapon1,scores={vp.ammunition1=0}] unless score @s vp.w1-reload matches 1.. run scoreboard players operation @s vp.w1-reload = @s vp.max-w1-reload
 execute if entity @s[tag=has-weapon2,scores={vp.ammunition2=0}] unless score @s vp.w2-reload matches 1.. run scoreboard players operation @s vp.w2-reload = @s vp.max-w2-reload
 execute if entity @s[tag=has-weapon3,scores={vp.ammunition3=0}] unless score @s vp.w3-reload matches 1.. run scoreboard players operation @s vp.w3-reload = @s vp.max-w3-reload

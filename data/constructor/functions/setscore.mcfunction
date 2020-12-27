@@ -1,3 +1,14 @@
+#> constructor:setscore
+#
+# 定数スコアをセット
+#
+# @within function weapon:load
+
+#> public
+# @public
+    #declare score_holder *
+
+
 scoreboard players set #0 vp.Num 0
 scoreboard players set #1 vp.Num 1
 scoreboard players set #2 vp.Num 2

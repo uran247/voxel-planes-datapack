@@ -1,8 +1,25 @@
-#処理：装備の変更処理
-#入力：entity plane-root
+#> plane-data:ki-43/ki-43-equip
+#
+# 装備の変更処理
+# @input
+#   executer @e[tag=plane-root]
+#
+# @within function plane:equip/equip-manager
+#
+
+#> within
+# @within
+#   plane-data:ki-43/ki-43-equip
+#   plane-data:ki-43/ki43-weapon-manager
+       #declare tag 12p7mm #12.7mm機銃を装備していることを示す
+       #declare tag 7p7mm #7.7mm機銃を装備していることを示す
+
+#> private
+# @private
+    #declare score_holder #12p7mm-gun #12.7mm機銃アイテムを装備していることを示す
 
 #装備品チェック
-execute store success score #12p7mm-gun vp.reg1 if entity @e[distance=..30,type=minecraft:donkey,tag=target-parts,nbt={Items:[{tag:{item-type:ho-103}}]}]
+execute store success score #12p7mm-gun vp.reg1 if entity @e[type=minecraft:donkey,tag=target-parts,nbt={Items:[{tag:{item-type:ho-103}}]},distance=..30]
 
 #初期タグ設定
 tag @s remove 12p7mm

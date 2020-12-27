@@ -1,5 +1,18 @@
-#爆弾投下 a6m2
-#実行者：機体
+#> plane-data:a6m2/weapon/bomb
+#
+# 爆弾投下
+#
+# @input
+#   execute @e[tag=plane-root]
+#
+# @within function plane-data:a6m2/a6m2-weapon-manager
+
+#> private
+# @private
+    #declare tag bombing-executer #爆撃実行機体を示す
+    #declare tag drop-init #初期化処理中の爆弾であることを示す
+    #
+    #declare score_holder #plane-id #実行者のplane-idを示す
 
 #実行者タグ付け
 tag @s add bombing-executer
@@ -9,11 +22,8 @@ scoreboard players operation #plane-id vp.reg1 = @s vp.plane-id
 execute as @e[tag=plane-bomb,tag=plane,distance=..20,limit=1] if score @s vp.plane-id = #plane-id vp.reg1 run tag @s add drop-init
 tag @e[tag=drop-init,distance=..20] add dropping
 
-#a6m2タグ削除
+#planeタグ削除
 tag @e[tag=drop-init,distance=..20] remove plane
-tag @e[tag=drop-init,distance=..20] remove plane-parts
-tag @e[tag=drop-init,distance=..20] remove has-offset
-tag @e[tag=drop-init,distance=..20] remove has-model
 
 #スコア付与
 scoreboard players operation @e[tag=drop-init,distance=..20] vp.speed = @s vp.speed
@@ -26,9 +36,6 @@ execute store result entity @e[tag=drop-init,distance=..20,limit=1] Rotation[0] 
 execute as @e[tag=drop-init,distance=..20,limit=1] at @s run tp @s ~ ~ ~ ~90 ~
 
 #tellraw @p [{"score" : {"name":"@e[tag=drop-init,distance=..5,limit=1]", "objective":"speed"}}, {"text":" "}, {"score" : {"name":"@e[tag=drop-init,distance=..5,limit=1]", "objective":"age"}}]
-
-#発射したならreload時間設定
-execute if entity @e[tag=drop-init,distance=..20] run scoreboard players set @s vp.w3-cooltime 2
 
 #残弾数減算
 scoreboard players remove @s vp.ammunition3 1

@@ -7,7 +7,7 @@ execute if entity @s[tag=rocketted,tag=rocket-normal] run summon armor_stand ~ ~
 scoreboard players set @e[tag=f4u1-init] vp.offsetX 2900
 scoreboard players set @e[tag=f4u1-init] vp.offsetY -1000
 scoreboard players set @e[tag=f4u1-init] vp.offsetZ 2800
-scoreboard players set @e[tag=f4u1-init] vp.damage 50
+scoreboard players set @e[tag=f4u1-init] vp.damage 500
 scoreboard players set @e[tag=f4u1-init] vp.acc-cor -1
 scoreboard players set @e[tag=f4u1-init] vp.pitch-spd-cor -1
 scoreboard players set @e[tag=f4u1-init] vp.yaw-spd-cor -1
@@ -20,7 +20,7 @@ execute if entity @s[tag=rocketted,tag=rocket-normal] run summon armor_stand ~ ~
 scoreboard players set @e[tag=f4u1-init] vp.offsetX 3300
 scoreboard players set @e[tag=f4u1-init] vp.offsetY -910
 scoreboard players set @e[tag=f4u1-init] vp.offsetZ 2800
-scoreboard players set @e[tag=f4u1-init] vp.damage 50
+scoreboard players set @e[tag=f4u1-init] vp.damage 500
 scoreboard players set @e[tag=f4u1-init] vp.acc-cor -1
 scoreboard players set @e[tag=f4u1-init] vp.pitch-spd-cor -1
 scoreboard players set @e[tag=f4u1-init] vp.yaw-spd-cor -1
@@ -33,7 +33,7 @@ execute if entity @s[tag=rocketted,tag=rocket-normal] run summon armor_stand ~ ~
 scoreboard players set @e[tag=f4u1-init] vp.offsetX 3700
 scoreboard players set @e[tag=f4u1-init] vp.offsetY -820
 scoreboard players set @e[tag=f4u1-init] vp.offsetZ 2800
-scoreboard players set @e[tag=f4u1-init] vp.damage 50
+scoreboard players set @e[tag=f4u1-init] vp.damage 500
 scoreboard players set @e[tag=f4u1-init] vp.acc-cor -1
 scoreboard players set @e[tag=f4u1-init] vp.pitch-spd-cor -1
 scoreboard players set @e[tag=f4u1-init] vp.yaw-spd-cor 0
@@ -46,7 +46,7 @@ execute if entity @s[tag=rocketted,tag=rocket-normal] run summon armor_stand ~ ~
 scoreboard players set @e[tag=f4u1-init] vp.offsetX 4100
 scoreboard players set @e[tag=f4u1-init] vp.offsetY -730
 scoreboard players set @e[tag=f4u1-init] vp.offsetZ 2800
-scoreboard players set @e[tag=f4u1-init] vp.damage 50
+scoreboard players set @e[tag=f4u1-init] vp.damage 500
 scoreboard players set @e[tag=f4u1-init] vp.acc-cor -1
 scoreboard players set @e[tag=f4u1-init] vp.pitch-spd-cor -1
 scoreboard players set @e[tag=f4u1-init] vp.yaw-spd-cor 0
@@ -60,7 +60,7 @@ execute if entity @s[tag=rocketted,tag=rocket-normal] run summon armor_stand ~ ~
 scoreboard players set @e[tag=f4u1-init] vp.offsetX -2900
 scoreboard players set @e[tag=f4u1-init] vp.offsetY -1000
 scoreboard players set @e[tag=f4u1-init] vp.offsetZ 2800
-scoreboard players set @e[tag=f4u1-init] vp.damage 50
+scoreboard players set @e[tag=f4u1-init] vp.damage 500
 scoreboard players set @e[tag=f4u1-init] vp.acc-cor -1
 scoreboard players set @e[tag=f4u1-init] vp.pitch-spd-cor -1
 scoreboard players set @e[tag=f4u1-init] vp.yaw-spd-cor -1
@@ -73,7 +73,7 @@ execute if entity @s[tag=rocketted,tag=rocket-normal] run summon armor_stand ~ ~
 scoreboard players set @e[tag=f4u1-init] vp.offsetX -3300
 scoreboard players set @e[tag=f4u1-init] vp.offsetY -910
 scoreboard players set @e[tag=f4u1-init] vp.offsetZ 2800
-scoreboard players set @e[tag=f4u1-init] vp.damage 50
+scoreboard players set @e[tag=f4u1-init] vp.damage 500
 scoreboard players set @e[tag=f4u1-init] vp.acc-cor -1
 scoreboard players set @e[tag=f4u1-init] vp.pitch-spd-cor -1
 scoreboard players set @e[tag=f4u1-init] vp.yaw-spd-cor -1
@@ -86,7 +86,7 @@ execute if entity @s[tag=rocketted,tag=rocket-normal] run summon armor_stand ~ ~
 scoreboard players set @e[tag=f4u1-init] vp.offsetX -3700
 scoreboard players set @e[tag=f4u1-init] vp.offsetY -820
 scoreboard players set @e[tag=f4u1-init] vp.offsetZ 2800
-scoreboard players set @e[tag=f4u1-init] vp.damage 50
+scoreboard players set @e[tag=f4u1-init] vp.damage 500
 scoreboard players set @e[tag=f4u1-init] vp.acc-cor -1
 scoreboard players set @e[tag=f4u1-init] vp.pitch-spd-cor -1
 scoreboard players set @e[tag=f4u1-init] vp.yaw-spd-cor 0
@@ -99,7 +99,7 @@ execute if entity @s[tag=rocketted,tag=rocket-normal] run summon armor_stand ~ ~
 scoreboard players set @e[tag=f4u1-init] vp.offsetX -4100
 scoreboard players set @e[tag=f4u1-init] vp.offsetY -730
 scoreboard players set @e[tag=f4u1-init] vp.offsetZ 2800
-scoreboard players set @e[tag=f4u1-init] vp.damage 50
+scoreboard players set @e[tag=f4u1-init] vp.damage 500
 scoreboard players set @e[tag=f4u1-init] vp.acc-cor -1
 scoreboard players set @e[tag=f4u1-init] vp.pitch-spd-cor -1
 scoreboard players set @e[tag=f4u1-init] vp.yaw-spd-cor 0

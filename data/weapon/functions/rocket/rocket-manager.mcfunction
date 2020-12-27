@@ -1,12 +1,33 @@
-#スコア分向いてる方向にTP
-#実行者：弾体
+#> weapon:rocket/rocket-manager
+#
+# スコア分向いてる方向にTP
+# 実行者：弾体
+#
+# @within function weapon:tick
+
+#> private
+# @private
+    #declare tag rocket-move-executer #実行者につくタグ
+    #declare tag hit-weapon #武器がヒットしたエンティティにつく
+    #declare tag tracer-lightblue #曳光弾
+    #declare tag tracer-orange #曳光弾
+    #declare tag tracer-yellow #曳光弾
+    #
+    #declare score_holder #speedX #実行者のxベクトル
+    #declare score_holder #speedY #実行者のyベクトル
+    #declare score_holder #speedZ #実行者のzベクトル
+    #declare score_holder #pos-x #実行者のx座標
+    #declare score_holder #pos-y #実行者のy座標
+    #declare score_holder #pos-z #実行者のz座標
+    #declare score_holder #x #ブロック命中地点のx座標
+    #declare score_holder #y #ブロック命中地点のy座標
+    #declare score_holder #z #ブロック命中地点のz座標
+    #declare score_holder #hit-flag #当たったことのフラグ 1:ブロック命中 2:エンティティ命中
+    #declare score_holder #plane-id #実行者のplane-id
+
 
 #実行者にタグ付け
 tag @s add rocket-move-executer
-
-#自分と同じID持ちのエンティティでno-hit無しに当たらないようにタグ付け
-scoreboard players operation #plane-id vp.reg1 = @s vp.plane-id
-execute as @e[distance=..20,tag=!entity-nohit] if score @s vp.plane-id = #plane-id vp.reg1 run tag @s add rocket-gunner
 
 #ヒットフラグ初期化
 scoreboard players set #hit-flag vp.reg1 0
@@ -43,15 +64,17 @@ execute unless score #x vp.return matches 50 unless score #y vp.return matches 1
 execute if score #hit-flag vp.reg1 matches 1 run tag 0-0-0-0-9 add hit-weapon
 
 #移動予定先までの間にエンティティがいるか判定
-execute as @s at @s run function weapon:util/check-entity
-execute at @s if entity @e[tag=hit-on-line,tag=!rocket-gunner,tag=!entity-nohit] unless entity @e[tag=rocket-gunner,distance=..3] run scoreboard players set #hit-flag vp.reg1 2
-execute if score #hit-flag vp.reg1 matches 2 run tag @e[tag=hit-on-line,tag=!rocket-gunner,tag=!entity-nohit] add hit-weapon
+function weapon:util/check-entity
+execute if entity @e[tag=hit-on-line,tag=!entity-nohit,distance=..20] run scoreboard players set #hit-flag vp.reg1 2
+execute if score #hit-flag vp.reg1 matches 2 run scoreboard players operation #plane-id vp.reg1 = @s vp.plane-id
+execute if score #hit-flag vp.reg1 matches 2 as @e[tag=hit-on-line,tag=!entity-nohit,distance=..20] unless score @s vp.plane-id = #plane-id vp.reg1 run tag @s add hit-weapon
+execute if score #hit-flag vp.reg1 matches 2 unless entity @e[tag=hit-weapon,distance=..20] run scoreboard players set #hit-flag vp.reg1 0
 
 #命中していない場合移動予定先へ移動
 execute if score #hit-flag vp.reg1 matches 0 positioned as 0-0-0-0-4 run tp @s ~ ~ ~ ~ ~
 
 #命中してた場合命中してたところに移動
-execute if score #hit-flag vp.reg1 matches 1.. at @e[tag=hit-weapon,limit=1,sort=nearest] run tp @s ~ ~ ~ ~-90 ~
+execute if score #hit-flag vp.reg1 matches 1.. at @e[tag=hit-weapon,sort=nearest,limit=1] run tp @s ~ ~ ~ ~-90 ~
 
 #速度更新
 scoreboard players add @s[scores={vp.speed=..48}] vp.speed 2
@@ -74,8 +97,6 @@ execute at @s rotated ~-90 ~ anchored eyes positioned ~ ~ ~ run particle minecra
 tag @e[tag=hit-weapon] remove hit-weapon
 tag @e[tag=hit-on-line] remove hit-on-line
 execute at @s run tag @s remove rocket-move-executer
-tag @e[tag=rocket-gunner,distance=..25] remove rocket-gunner
-
 
 #エンティティ返却
 tp 0-0-0-0-4 0 1 0

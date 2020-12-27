@@ -1,10 +1,14 @@
-#自由に使える変数
-scoreboard objectives add vp.reg1 dummy
-scoreboard objectives add vp.reg2 dummy
-scoreboard objectives add vp.reg3 dummy
+#> constructor:addscoreboard
 
-#定数
-scoreboard objectives add vp.Num dummy
+#> 自由に使える変数
+# @public
+    scoreboard objectives add vp.reg1 dummy
+    scoreboard objectives add vp.reg2 dummy
+    scoreboard objectives add vp.reg3 dummy
+
+#> 定数
+# @public
+    scoreboard objectives add vp.Num dummy
 
 #計算関連
 scoreboard objectives add vp.cos dummy

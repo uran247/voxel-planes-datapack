@@ -10,65 +10,65 @@ execute as @a if score @s vp.plane-id = #rocket-id vp.reg1 run tag @s add rocket
 
 #### ダメージ判定 ####
 #hpからダメージを引く]
-execute as @e[tag=!entity-nohit,distance=..32] run function weapon:util/set-entity-hp
+execute as @e[tag=!entity-nohit,distance=..16] run function weapon:util/set-entity-hp
 scoreboard players operation #damage vp.reg1 = @s vp.damage
 execute as @e[tag=base,distance=..50] run function weapon:rocket/damage/base-damage
-scoreboard players set @e[tag=!entity-nohit,distance=..32] vp.reg2 0
+scoreboard players set @e[tag=!entity-nohit,distance=..16] vp.reg2 0
+scoreboard players operation #damage vp.reg1 /= #2 vp.Num
+scoreboard players operation @e[tag=!entity-nohit,distance=..1] vp.reg2 += #damage vp.reg1
 scoreboard players operation #damage vp.reg1 /= #2 vp.Num
 scoreboard players operation @e[tag=!entity-nohit,distance=..2] vp.reg2 += #damage vp.reg1
 scoreboard players operation #damage vp.reg1 /= #2 vp.Num
+scoreboard players operation @e[tag=!entity-nohit,distance=..3] vp.reg2 += #damage vp.reg1
+scoreboard players operation #damage vp.reg1 /= #2 vp.Num
 scoreboard players operation @e[tag=!entity-nohit,distance=..4] vp.reg2 += #damage vp.reg1
+scoreboard players operation #damage vp.reg1 /= #2 vp.Num
+scoreboard players operation @e[tag=!entity-nohit,distance=..5] vp.reg2 += #damage vp.reg1
 scoreboard players operation #damage vp.reg1 /= #2 vp.Num
 scoreboard players operation @e[tag=!entity-nohit,distance=..6] vp.reg2 += #damage vp.reg1
 scoreboard players operation #damage vp.reg1 /= #2 vp.Num
+scoreboard players operation @e[tag=!entity-nohit,distance=..7] vp.reg2 += #damage vp.reg1
+scoreboard players operation #damage vp.reg1 /= #2 vp.Num
 scoreboard players operation @e[tag=!entity-nohit,distance=..8] vp.reg2 += #damage vp.reg1
+scoreboard players operation #damage vp.reg1 /= #2 vp.Num
+scoreboard players operation @e[tag=!entity-nohit,distance=..9] vp.reg2 += #damage vp.reg1
 scoreboard players operation #damage vp.reg1 /= #2 vp.Num
 scoreboard players operation @e[tag=!entity-nohit,distance=..10] vp.reg2 += #damage vp.reg1
 scoreboard players operation #damage vp.reg1 /= #2 vp.Num
+scoreboard players operation @e[tag=!entity-nohit,distance=..11] vp.reg2 += #damage vp.reg1
+scoreboard players operation #damage vp.reg1 /= #2 vp.Num
 scoreboard players operation @e[tag=!entity-nohit,distance=..12] vp.reg2 += #damage vp.reg1
+scoreboard players operation #damage vp.reg1 /= #2 vp.Num
+scoreboard players operation @e[tag=!entity-nohit,distance=..13] vp.reg2 += #damage vp.reg1
 scoreboard players operation #damage vp.reg1 /= #2 vp.Num
 scoreboard players operation @e[tag=!entity-nohit,distance=..14] vp.reg2 += #damage vp.reg1
 scoreboard players operation #damage vp.reg1 /= #2 vp.Num
+scoreboard players operation @e[tag=!entity-nohit,distance=..15] vp.reg2 += #damage vp.reg1
+scoreboard players operation #damage vp.reg1 /= #2 vp.Num
 scoreboard players operation @e[tag=!entity-nohit,distance=..16] vp.reg2 += #damage vp.reg1
-scoreboard players operation #damage vp.reg1 /= #2 vp.Num
-scoreboard players operation @e[tag=!entity-nohit,distance=..18] vp.reg2 += #damage vp.reg1
-scoreboard players operation #damage vp.reg1 /= #2 vp.Num
-scoreboard players operation @e[tag=!entity-nohit,distance=..20] vp.reg2 += #damage vp.reg1
-scoreboard players operation #damage vp.reg1 /= #2 vp.Num
-scoreboard players operation @e[tag=!entity-nohit,distance=..22] vp.reg2 += #damage vp.reg1
-scoreboard players operation #damage vp.reg1 /= #2 vp.Num
-scoreboard players operation @e[tag=!entity-nohit,distance=..24] vp.reg2 += #damage vp.reg1
-scoreboard players operation #damage vp.reg1 /= #2 vp.Num
-scoreboard players operation @e[tag=!entity-nohit,distance=..26] vp.reg2 += #damage vp.reg1
-scoreboard players operation #damage vp.reg1 /= #2 vp.Num
-scoreboard players operation @e[tag=!entity-nohit,distance=..28] vp.reg2 += #damage vp.reg1
-scoreboard players operation #damage vp.reg1 /= #2 vp.Num
-scoreboard players operation @e[tag=!entity-nohit,distance=..30] vp.reg2 += #damage vp.reg1
-scoreboard players operation #damage vp.reg1 /= #2 vp.Num
-scoreboard players operation @e[tag=!entity-nohit,distance=..32] vp.reg2 += #damage vp.reg1
-execute as @e[tag=!entity-nohit,distance=..32] run function weapon:util/calc-entity-damage
+execute as @e[tag=!entity-nohit,distance=..16] run function weapon:util/calc-entity-damage
 
 ### メッセージ処理 ###
 #メッセージを表示(title)
 title @p[tag=rocket-owner] times 0 20 20
-execute as @e[tag=!entity-nohit,distance=..32,scores={vp.reg1=0},sort=nearest,limit=1] run function weapon:rocket/damage/set-kill-mob-message
-execute as @e[tag=!entity-nohit,distance=..32,scores={vp.reg1=0},tag=enemy-target,sort=nearest,limit=1] run function weapon:rocket/damage/set-kill-target-message
-execute if entity @e[tag=!entity-nohit,distance=..32,scores={vp.reg1=0}] run title @p[tag=rocket-owner] title {"text":""}
+execute as @e[tag=!entity-nohit,distance=..16,scores={vp.reg1=0},sort=nearest,limit=1] run function weapon:rocket/damage/set-kill-mob-message
+execute as @e[tag=!entity-nohit,distance=..16,scores={vp.reg1=0},tag=enemy-target,sort=nearest,limit=1] run function weapon:rocket/damage/set-kill-target-message
+execute if entity @e[tag=!entity-nohit,distance=..16,scores={vp.reg1=0}] run title @p[tag=rocket-owner] title {"text":""}
 #メッセージを表示(tellraw)
-#execute if entity @e[tag=!entity-nohit,distance=..32] run function weapon:rocket/damage/hit-message
-execute as @e[tag=plane-hitbox,distance=..32,scores={vp.reg1=0}] run function weapon:util/destroy-hitbox-message
+#execute if entity @e[tag=!entity-nohit,distance=..16] run function weapon:rocket/damage/hit-message
+execute as @e[tag=plane-hitbox,distance=..16,scores={vp.reg1=0}] run function weapon:util/destroy-hitbox-message
 
 #撃墜者/クリアスコアをプラス
 execute as @p[tag=rocket-owner] run function weapon:rocket/damage/set-shotdown-score
 
 #ダメージ処理、破壊されたスポナーをキル
-execute as @e[tag=!entity-nohit,distance=..32,type=spawner_minecart] store result entity @s MaxNearbyEntities short 1 run scoreboard players get @s vp.reg1
-execute as @e[tag=!entity-nohit,distance=..32,type=!spawner_minecart,type=!player] store result entity @s Health short 1 run scoreboard players get @s vp.reg1
-execute as @a[tag=!entity-nohit,distance=..32] run scoreboard players operation @s vp.taken-damage -= @s vp.reg1
-execute as @a[tag=!entity-nohit,distance=..32] run function weapon:util/damage
+execute as @e[tag=!entity-nohit,distance=..16,type=spawner_minecart] store result entity @s MaxNearbyEntities short 1 run scoreboard players get @s vp.reg1
+execute as @e[tag=!entity-nohit,distance=..16,type=!spawner_minecart,type=!player] store result entity @s Health short 1 run scoreboard players get @s vp.reg1
+execute as @a[tag=!entity-nohit,distance=..16] run scoreboard players operation @s vp.taken-damage -= @s vp.reg1
+execute as @a[tag=!entity-nohit,distance=..16] run function weapon:util/damage
 
 
-kill @e[tag=!entity-nohit,distance=..32,scores={vp.reg1=0},tag=enemy-target,type=spawner_minecart]
+kill @e[tag=!entity-nohit,distance=..16,scores={vp.reg1=0},tag=enemy-target,type=spawner_minecart]
 
 #### ダメージ時エフェクト ####
 #命中地点にパーティクル

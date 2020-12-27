@@ -23,7 +23,7 @@ execute if score #is-bullet vp.reg1 matches 0 unless score #is-tracer vp.reg1 ma
 
 #スコア付与
 scoreboard players set @e[tag=gun-init] vp.speed 110
-scoreboard players set @e[tag=gun-init] vp.damage 8
+scoreboard players set @e[tag=gun-init] vp.damage 38
 scoreboard players set @e[tag=gun-init,type=armor_stand] vp.max-age 20
 scoreboard players operation @e[tag=gun-init] vp.plane-id = @s vp.plane-id
 scoreboard players set @e[tag=gun-init,tag=left1] vp.offsetX 2930

@@ -1,7 +1,15 @@
-#武器使用操作を検知し、機体に応じてweaponfunctionを呼び分け
-#実行者：機体
-#入力：エンティティ：plane-root　座標：plane-root
-#利用可能タグ controll-target:機体
+#> plane:weapon/weapon-manager
+#
+# 機体に応じてweaponfunctionを呼び分け
+# リロード時間とクールタイムのセット/減産をする
+#
+# @input
+#   executer @e[tag=plane-root]
+#   position at @e[tag=plane-root]
+#
+# @within function plane:controll/weapon
+#
+# 利用可能タグ controll-target:機体
 
 execute if entity @s[tag=d3a] run function plane-data:d3a/d3a-weapon-manager
 execute if entity @s[tag=ki21] run function plane-data:ki-21/ki21-weapon-manager

@@ -1,7 +1,27 @@
-#角度/速度スコアからベクトルを計算して機体のMotionに反映する
-#条件:plane-moveから実行 execute as @e[type=armor_stand,tag=plane-root,scores={speed=1..}] at @s run function plane:move/move
-#実行者：機体
-#利用可能タグスコア　スコア：#plane-id vp.reg1 
+#> plane:move/plane-move/rolling
+#
+# 角度/速度スコアからベクトルを計算して機体のMotionに反映する
+# 条件:plane-moveから実行 execute as @e[type=armor_stand,tag=plane-root,scores={speed=1..}] at @s run function plane:move/move
+# 実行者：機体
+# 利用可能タグスコア　スコア：#plane-id vp.reg1 
+
+#> private
+# @private
+    #declare tag flying-executer #function実行者を示す
+    #
+    #declare score_holder #accelerate #加速度の最大値を示す
+    #declare score_holder #accelerate-cor #爆弾装備などによる加速度の減少値を示す
+    #declare score_holder #throttle #現在のスロットルを示す
+    #declare score_holder #base-accelerate #現在の加速度を示す
+    #declare score_holder #speed #現在の速度を示す
+    #declare score_holder #cruise-speed #巡航速度を示す
+    #declare score_holder #resistance #空気抵抗の基礎値を示す
+    #declare score_holder #base-resistance #現在の空気抵抗を示す
+    #declare score_holder #speedY #現在のY方向のベクトルを示す
+    #declare score_holder #deaccelerate #角度による減速量の基礎値を示す
+    #declare score_holder #base-deaccelerate #現在の角度による減速量を示す
+    #declare score_holder #displacementX #現在のX方向の1tickの移動量を示す
+    #declare score_holder #displacementZ #現在のX方向の1tickの移動量を示す
 
 #実行者にタグ付け
 tag @s add flying-executer

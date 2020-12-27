@@ -1,6 +1,13 @@
+#> plane:weapon/util/reset-ammunition
+#
+# @input
+#   executer @e[tag=plane-root]
+#
 #入力：機体entity
 #処理：リロード時間を迎えたEntityの弾薬数をリセット
-#帰り値：なし
+#
+# @within function plane:weapon/weapon-manager
+
 execute if entity @s[tag=has-weapon1,scores={vp.ammunition1=..0,vp.w1-reload=..0}] run scoreboard players operation @s vp.ammunition1 = @s vp.max-ammo1
 execute if entity @s[tag=has-weapon2,scores={vp.ammunition2=..0,vp.w2-reload=..0}] run scoreboard players operation @s vp.ammunition2 = @s vp.max-ammo2
 execute if entity @s[tag=has-weapon3,scores={vp.ammunition3=..0,vp.w3-reload=..0}] run scoreboard players operation @s vp.ammunition3 = @s vp.max-ammo3

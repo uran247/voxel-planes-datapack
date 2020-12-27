@@ -1,5 +1,18 @@
-#爆弾投下 d4y2
-#実行者：機体
+#> plane-data:d4y2/weapon/rocket
+#
+# 爆弾投下
+#
+# @input
+#   execute @e[tag=plane-root]
+#
+# @within function plane-data:d4y2/d4y2-weapon-manager
+
+#> private
+# @private
+    #declare tag rocket-launting-executer #爆撃実行機体を示す
+    #declare tag rocket-init #初期化処理中の爆弾であることを示す
+    #
+    #declare score_holder #plane-id #実行者のplane-idを示す
 
 #実行者タグ付け
 tag @s add rocket-launting-executer
@@ -11,9 +24,6 @@ tag @e[tag=rocket-init,distance=..10] add rocket-moving
 
 #d4y2タグ削除
 tag @e[tag=rocket-init,distance=..10] remove plane
-tag @e[tag=rocket-init,distance=..10] remove plane-parts
-tag @e[tag=rocket-init,distance=..10] remove has-offset
-tag @e[tag=rocket-init,distance=..10] remove has-model
 
 #スコア付与
 scoreboard players operation @e[tag=rocket-init,distance=..10] vp.speed = @s vp.speed
@@ -52,14 +62,6 @@ playsound minecraft:entity.generic.explode ambient @a ~ ~ ~ 1 1.5
 scoreboard players operation @e[tag=rocket-init,distance=..20] vp.speedX = @s vp.speedX
 scoreboard players operation @e[tag=rocket-init,distance=..20] vp.speedY = @s vp.speedY
 scoreboard players operation @e[tag=rocket-init,distance=..20] vp.speedZ = @s vp.speedZ
-#execute as @e[tag=rocket-init,distance=..20] run scoreboard players operation @s speedX *= @s speed
-#execute as @e[tag=rocket-init,distance=..20] run scoreboard players operation @s speedY *= @s speed
-#execute as @e[tag=rocket-init,distance=..20] run scoreboard players operation @s speedZ *= @s speed
-#scoreboard players operation @e[tag=rocket-init,distance=..20] speedX /= #10 vp.Num
-#scoreboard players operation @e[tag=rocket-init,distance=..20] speedY /= #10 vp.Num
-#scoreboard players operation @e[tag=rocket-init,distance=..20] speedZ /= #10 vp.Num
-#tellraw @p [{"score" : {"name":"@s", "objective":"speedX"}}, {"text":" "}, {"score" : {"name":"@s", "objective":"speedY"}}, {"text":" "}, {"score" : {"name":"@s", "objective":"speedZ"}}]
-#execute as @e[tag=rocket-init,distance=..20] run tellraw @p [{"score" : {"name":"@s", "objective":"speedX"}}, {"text":" "}, {"score" : {"name":"@s", "objective":"speedY"}}, {"text":" "}, {"score" : {"name":"@s", "objective":"speedZ"}}]
 
 #終了処理
 tag @s remove rocket-launting-executer

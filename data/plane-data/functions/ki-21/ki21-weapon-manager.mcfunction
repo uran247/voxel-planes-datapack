@@ -1,8 +1,14 @@
-#武器を使用　controll:weapon経由で実行
-#実行者：機体
+#> plane-data:ki-21/ki21-weapon-manager
+#
+# @input
+#   executer @e[tag=plane-root]
+#
+# 武器を使用
+#
+# @within function plane:weapon/weapon-manager
 
 #選択に応じて武器ファンクション実行
-execute if entity @p[tag=weapon-user,scores={vp.rightClick=1..}] if entity @s[scores={vp.plane-weapon=1,vp.w1-cooltime=..0,vp.ammunition1=1..,vp.AngX=..1600,vp.AngZ=-1000..1000},tag=flying] at @s run function plane-data:ki-21/weapon/bomb
+execute if entity @p[tag=weapon-user,scores={vp.rightClick=1..}] if entity @s[tag=flying,scores={vp.plane-weapon=1,vp.w1-cooltime=..0,vp.ammunition1=1..,vp.AngX=..1600,vp.AngZ=-1000..1000}] at @s run function plane-data:ki-21/weapon/bomb
 execute if entity @p[tag=weapon-user,scores={vp.rightClick=1..}] unless entity @s[scores={vp.AngX=..1600,vp.AngZ=-1000..1000}] at @s run tellraw @p[tag=weapon-user,scores={vp.rightClick=1..}] [{"text":"投下可能な姿勢になっていません","color":"yellow"}]
 
 #右クリックリセット

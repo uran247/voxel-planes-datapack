@@ -1,5 +1,11 @@
-#武器を使用　controll:weapon経由で実行
-#実行者：機体
+#> plane-data:ki-43/ki43-weapon-manager
+#
+# @input
+#   executer @e[tag=plane-root]
+#
+# 武器を使用
+#
+# @within function plane:weapon/weapon-manager
 
 #選択に応じて武器ファンクション実行
 execute if entity @p[tag=weapon-user,scores={vp.rightClick=1..}] if entity @s[tag=12p7mm,scores={vp.plane-weapon=1,vp.w1-cooltime=..0,vp.ammunition1=1..}] at @s run function plane-data:ki-43/weapon/12p7mm

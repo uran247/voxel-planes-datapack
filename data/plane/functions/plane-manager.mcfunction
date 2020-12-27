@@ -1,5 +1,18 @@
-#move, positionを実行
-#入力 entity:plane-root
+#> plane:plane-manager
+#
+# move, position,equipを実行
+#
+# @input
+#   executer @e[tag=plane-root]
+#
+# @within plane:**
+    #declare tag target-parts #操作対象飛行機のパーツであることを示す
+
+#> private
+# @private
+    #declare tag check-plane-equip #装備変更処理を実行すべきであることを示す
+    #
+    #declare score_holder #plane-id #実行者のplane-idを示す
 
 #パーツにタグ付け
 scoreboard players operation #plane-id vp.reg1 = @s vp.plane-id

@@ -1,5 +1,15 @@
-###射程内に敵がいるか判定###
-#実行者：機体
+#> plane-data:d3a/weapon/check-rear-target
+#
+# @input
+#   executer @e[tag=plane-root]
+#
+# 射程内に敵がいるか判定 
+#
+# @within
+#   function plane-data:d3a/d3a-weapon-manager
+#   plane-data:d3a/weapon/rear-gun
+        #declare tag rear-gun-target #後部機銃の攻撃対象であることを示す
+        #declare tag rear-gun-target-candidate #後部機銃の攻撃対象候補であることを示す
 
 #以前の実行でついてたタグ除去
 tag @e[tag=rear-gun-target-candidate,distance=..32] remove rear-gun-target-candidate
@@ -33,7 +43,7 @@ execute at @s as @e[tag=rear-gun-target-candidate,distance=..32] positioned ^ ^ 
 execute at @s facing entity 0-0-0-0-4 feet as @e[tag=rear-gun-target-candidate,distance=..32] positioned ^ ^ ^512 run tag @s[distance=..512] remove rear-gun-target-candidate
 
 #判定内にいて一番近い敵にタグ付け
-tag @e[tag=rear-gun-target-candidate,distance=..32,limit=1,sort=nearest] add rear-gun-target
+tag @e[tag=rear-gun-target-candidate,distance=..32,sort=nearest,limit=1] add rear-gun-target
 
 #エンティティ返却
 tp 0-0-0-0-4 0 1 0

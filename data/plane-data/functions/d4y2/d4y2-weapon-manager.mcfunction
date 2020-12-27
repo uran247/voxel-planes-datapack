@@ -1,9 +1,15 @@
-#武器を使用　controll:weapon経由で実行
-#実行者：機体
+#> plane-data:d4y2/d4y2-weapon-manager
+#
+# @input
+#   executer @e[tag=plane-root]
+#
+# 武器を使用
+#
+# @within function plane:weapon/weapon-manager
 
 #選択に応じて武器ファンクション実行,弾薬選択武器の弾薬が0だったら右クリック値を0に
 execute if entity @p[tag=weapon-user,scores={vp.rightClick=1..}] if entity @s[scores={vp.plane-weapon=1,vp.w1-cooltime=..0,vp.ammunition1=1..}] at @s run function plane-data:d4y2/weapon/7p7mm
-execute if entity @p[tag=weapon-user,scores={vp.rightClick=1..}] if entity @s[scores={vp.plane-weapon=2,vp.w2-cooltime=..0,vp.ammunition2=1..},tag=flying] at @s run function plane-data:d4y2/weapon/bomb
+execute if entity @p[tag=weapon-user,scores={vp.rightClick=1..}] if entity @s[tag=flying,scores={vp.plane-weapon=2,vp.w2-cooltime=..0,vp.ammunition2=1..}] at @s run function plane-data:d4y2/weapon/bomb
 execute if entity @p[tag=weapon-user,scores={vp.rightClick=1..}] if entity @s[scores={vp.plane-weapon=3,vp.w4-cooltime=..0,vp.ammunition4=1..}] at @s run function plane-data:d4y2/weapon/rocket
 
 #右クリックリセット

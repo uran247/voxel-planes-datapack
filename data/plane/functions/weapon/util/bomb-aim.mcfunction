@@ -1,5 +1,12 @@
-#照準点を表示
-#入力 entity 0-0-0-0-a{Rotation:[~,任意の角度]}
+#> plane:weapon/util/bomb-aim
+#
+# 照準点を表示
+#
+# @input
+#   entity 0-0-0-0-a{Rotation:[~,任意の角度]}
+#
+# @within
+#   plane-data:**
 
 execute at @s rotated as 0-0-0-0-a run tp 0-0-0-0-4 ^ ^ ^200 ~ ~
 #tellraw @p [{"nbt":"Pos[1]","entity":"0-0-0-0-4"}] 

@@ -1,5 +1,11 @@
-#処理：装備の変更処理
-#入力：entity plane-root
+#> plane:equip/equip-manager
+#
+# 装備の変更処理
+#
+# @input
+#   executer @e[tag=plane-root]
+#
+# @within plane:plane-manager
 
 #航空機ごとの個別処理
 #execute if entity @s[tag=d3a-root] run 

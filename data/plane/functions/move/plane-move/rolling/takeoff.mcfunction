@@ -1,5 +1,14 @@
-#controll/rollingからのみ呼び出される
-#離陸時のタグ付、スコア取得処理を行う
+#> plane:move/plane-move/rolling/takeoff
+#
+# 離陸時のタグ付、スコア取得処理を行う
+#
+# @within function plane:move/plane-move/rolling
+
+#>
+# @within
+#   plane:**
+#   plane-data:**
+        #declare tag flying
 
 #飛行中フラグを付ける
 tag @s add flying

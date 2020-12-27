@@ -1,5 +1,22 @@
-#tickタグで指定して実行
-#搭乗時、降機時の飛行機に関連するコマンド
+#> plane:tick
+# 
+# 搭乗時、降機時の飛行機に関連するコマンド
+#
+# @within tag/function minecraft:tick
+
+#> tag
+# @within plane:**
+    #declare tag has-rider #飛行機にパイロットがいるかどうか
+    #declare tag plane-root #planeのrootを示すタグ
+    #declare tag plane-rider #パイロットを示すタグ
+    #declare tag position-processed #rootを起点にした位置修正の処理対象になったかどうか示す、タグがない場合rootを失ったパーツとされる
+    #declare tag plane #飛行機を構成するエンティティのいずれかであることを示す
+    #declare tag plane-spawner #飛行機スポナーから出たエンティティであることを示す
+
+#> private
+#   @private
+    #declare tag no-delete #削除禁止飛行機パーツであることを示す
+
 
 #プレイヤーのplaneid、rider、keyinputタグリセット アイテム削除
 execute as @a[tag=plane-rider,nbt=!{RootVehicle:{Entity:{Tags:[plane-seat]}}}] run function plane:controll/plane-leave
@@ -11,7 +28,7 @@ tag @e[type=armor_stand,tag=plane-root] remove has-rider
 execute as @a[nbt={RootVehicle:{Entity:{Tags:[plane-seat]}}}] at @s run function plane:controll/controll
 
 #飛行機操作(降機時)
-execute as @a[scores={vp.rightClick=1..},nbt=!{RootVehicle:{Entity:{Tags:[plane-seat]}}},nbt={SelectedItem:{tag:{item-type:wrench}}}] at @s run function plane:controll/controll-ground
+execute as @a[scores={vp.rightClick=1..},nbt={SelectedItem:{tag:{item-type:wrench}}},nbt=!{RootVehicle:{Entity:{Tags:[plane-seat]}}}] at @s run function plane:controll/controll-ground
 
 #飛行機移動、向き修正
 execute as @e[type=armor_stand,tag=plane-root] at @s run function plane:plane-manager

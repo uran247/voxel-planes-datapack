@@ -1,5 +1,22 @@
-#12.7mm機銃を使用 ki43
-#実行者：機体
+#> plane-data:ki-44/weapon/12p7mm
+#
+# 7.7mm機銃を使用
+#
+# @input
+#   execute @e[tag=plane-root]
+#
+# @within function plane-data:ki-44/ki44-weapon-manager
+
+#> private
+# @private
+    #declare tag gun-init #銃弾の初期化処理中であることを示す
+    #declare tag left1 #左側1番目の機銃弾であることを示す
+    #declare tag right1 #右側1番目の機銃弾であることを示す
+    #declare tag left2 #左側1番目の機銃弾であることを示す
+    #declare tag right2 #右側1番目の機銃弾であることを示す
+    #
+    #declare score_holder #is-bullet #銃弾を発射すべきかどうかを示す
+    #declare score_holder #is-tracer #曳光弾を発射すべきかどうかを示す
 
 #曳光弾化判定
 scoreboard players operation #is-bullet vp.reg1 = @s vp.ammunition1
@@ -12,15 +29,15 @@ execute if score #is-bullet vp.reg1 matches 0 unless score #is-tracer vp.reg1 ma
 execute if score #is-bullet vp.reg1 matches 0 unless score #is-tracer vp.reg1 matches 0 run summon area_effect_cloud ~ ~ ~ {Tags:[projectile,gun,12p7mm,gun-init,left1,tracer-orange,entity-nohit,offset-base],Duration:20}
 execute if score #is-bullet vp.reg1 matches 0 unless score #is-tracer vp.reg1 matches 0 run summon area_effect_cloud ~ ~ ~ {Tags:[projectile,gun,12p7mm,gun-init,right2,tracer-orange,entity-nohit,offset-base],Duration:20}
 execute if score #is-bullet vp.reg1 matches 0 unless score #is-tracer vp.reg1 matches 0 run summon area_effect_cloud ~ ~ ~ {Tags:[projectile,gun,12p7mm,gun-init,left2,tracer-orange,entity-nohit,offset-base],Duration:20}
-execute if score #is-tracer vp.reg1 matches 0 run summon armor_stand ~ ~ ~ {NoGravity:1,Tags:[projectile,gun,12p7mm,gun-init,right1,tracer-orange,entity-nohit,tracer,offset-base,offset-base],Invisible:1}
-execute if score #is-tracer vp.reg1 matches 0 run summon armor_stand ~ ~ ~ {NoGravity:1,Tags:[projectile,gun,12p7mm,gun-init,left1,tracer-orange,entity-nohit,tracer,offset-base,offset-base],Invisible:1}
-execute if score #is-tracer vp.reg1 matches 0 run summon armor_stand ~ ~ ~ {NoGravity:1,Tags:[projectile,gun,12p7mm,gun-init,right2,tracer-orange,entity-nohit,tracer,offset-base,offset-base],Invisible:1}
-execute if score #is-tracer vp.reg1 matches 0 run summon armor_stand ~ ~ ~ {NoGravity:1,Tags:[projectile,gun,12p7mm,gun-init,left2,tracer-orange,entity-nohit,tracer,offset-base,offset-base],Invisible:1}
+execute if score #is-tracer vp.reg1 matches 0 run summon armor_stand ~ ~ ~ {NoGravity:1b,Tags:[projectile,gun,12p7mm,gun-init,right1,tracer-orange,entity-nohit,tracer,offset-base,offset-base],Invisible:1b}
+execute if score #is-tracer vp.reg1 matches 0 run summon armor_stand ~ ~ ~ {NoGravity:1b,Tags:[projectile,gun,12p7mm,gun-init,left1,tracer-orange,entity-nohit,tracer,offset-base,offset-base],Invisible:1b}
+execute if score #is-tracer vp.reg1 matches 0 run summon armor_stand ~ ~ ~ {NoGravity:1b,Tags:[projectile,gun,12p7mm,gun-init,right2,tracer-orange,entity-nohit,tracer,offset-base,offset-base],Invisible:1b}
+execute if score #is-tracer vp.reg1 matches 0 run summon armor_stand ~ ~ ~ {NoGravity:1b,Tags:[projectile,gun,12p7mm,gun-init,left2,tracer-orange,entity-nohit,tracer,offset-base,offset-base],Invisible:1b}
 
 #スコア付与
 scoreboard players set @e[tag=gun-init,distance=..5] vp.speed 100
 scoreboard players set @e[tag=gun-init,distance=..5] vp.damage 32
-scoreboard players set @e[tag=gun-init,distance=..5,type=armor_stand] vp.max-age 20
+scoreboard players set @e[type=armor_stand,tag=gun-init,distance=..5] vp.max-age 20
 scoreboard players operation @e[tag=gun-init,distance=..5] vp.plane-id = @s vp.plane-id
 scoreboard players set @e[tag=gun-init,tag=left1,distance=..5] vp.offsetX 200
 scoreboard players set @e[tag=gun-init,tag=left1,distance=..5] vp.offsetY 600
