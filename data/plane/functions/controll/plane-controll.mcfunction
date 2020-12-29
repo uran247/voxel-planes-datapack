@@ -2,8 +2,8 @@
 #入力：pos plane-root
 
 #移動操作
-execute at @e[tag=controll-target,tag=!flying,limit=1,sort=nearest,distance=..1] run function plane:controll/rolling
-execute at @e[tag=controll-target,tag=flying,limit=1,sort=nearest,distance=..1] run function plane:controll/flying
+execute at @e[tag=controll-target,tag=!flying,distance=..1,sort=nearest,limit=1] run function plane:controll/rolling
+execute at @e[tag=controll-target,tag=flying,distance=..1,sort=nearest,limit=1] run function plane:controll/flying
 
 #武器使用
-execute at @e[tag=controll-target,limit=1,sort=nearest,distance=..1] run function plane:controll/weapon
+execute at @e[tag=controll-target,distance=..1,sort=nearest,limit=1] run function plane:controll/weapon

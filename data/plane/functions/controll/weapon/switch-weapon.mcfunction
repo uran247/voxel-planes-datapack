@@ -1,5 +1,12 @@
-#操縦桿を捨てたのをトリガーに武装切り替え
-#入力： entity: player position: player
+#> plane:controll/weapon/switch-weapon
+#
+# 武器使用操作を検知し、機体に応じてweaponfunctionを呼び分け
+# 利用可能タグ controll-target:機体
+#
+# @input
+#   executer @p
+#
+# @within plane:controll/weapon
 
 #オフハンド入れ直し
 execute if data entity @s Inventory[{Slot:-106b}] unless data entity @s Inventory[{Slot:-106b,tag:{item-type:indicator}}] run replaceitem block 0 1 0 container.1 minecraft:stone_button

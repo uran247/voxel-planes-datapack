@@ -1,5 +1,20 @@
-#爆弾投下 
-#実行者：機体
+#> plane-data:f4u-1/weapon/rocket
+#
+# 爆弾投下
+#
+# @input
+#   execute @e[tag=plane-root]
+#
+# @within function plane-data:d4y2/d4y2-weapon-manager
+
+#> private
+# @private
+    #declare tag rocket-launting-executer #爆撃実行機体を示す
+    #declare tag rocket-init #初期化処理中の爆弾であることを示す
+    #
+    #declare score_holder #plane-id #実行者のplane-idを示す
+    #declare score_holder #AngX #ロケットのピッチ角を示す
+    #declare score_holder #AngY #ロケットのヨー角を示す
 
 #実行者タグ付け
 tag @s add rocket-launting-executer
@@ -11,9 +26,6 @@ tag @e[tag=rocket-init,distance=..10] add rocket-moving
 
 #機体タグ削除
 tag @e[tag=rocket-init,distance=..10] remove plane
-tag @e[tag=rocket-init,distance=..10] remove plane-parts
-tag @e[tag=rocket-init,distance=..10] remove has-offset
-tag @e[tag=rocket-init,distance=..10] remove has-model
 
 #スコア付与
 scoreboard players operation @e[tag=rocket-init,distance=..10] vp.speed = @s vp.speed

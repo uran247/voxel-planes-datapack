@@ -15,7 +15,7 @@
     #declare tag plane-init #初期化処理中のエンティティであることを示す
 
 #機体召喚
-summon minecraft:armor_stand ~ ~ ~ {Invisible:1b,NoGravity:0b,Tags:[d3a-root,d3a,plane-init,plane-root,plane,entity-nohit,need-calc-offset,delay-rotation,bombed,normal,250kg,60kg,has-weapon1,has-weapon2,has-weapon3,main-weapon1,main-weapon2,tier1],CustomName:'{"text":"d3a"}',Pose:{LeftArm:[0f,0f,0f],RightArm:[0f,0f,0f]},DisabledSlots:256,HandItems:[{id:"snowball",Count:1b,tag:{CustomModelData:1,weapons:["7.7mm gun","bomb"]}},{}]}
+summon minecraft:armor_stand ~ ~ ~ {Invisible:1b,NoGravity:0b,Tags:[d3a-root,d3a,plane-init,plane-root,plane,entity-nohit,need-calc-offset,delay-rotation,has-bomb,normal,250kg,60kg,has-weapon1,has-weapon2,has-weapon3,main-weapon1,main-weapon2,tier1],CustomName:'{"text":"d3a"}',Pose:{LeftArm:[0f,0f,0f],RightArm:[0f,0f,0f]},DisabledSlots:256,HandItems:[{id:"snowball",Count:1b,tag:{CustomModelData:1,weapons:["7.7mm gun","bomb"]}},{}]}
 summon minecraft:armor_stand ~ ~ ~ {Invisible:1b,NoGravity:0b,Tags:[d3a,plane-init,plane,entity-nohit,plane-seat],CustomName:'{"text":"seat"}',Pose:{LeftArm:[0f,0f,0f],RightArm:[0f,0f,0f]},Passengers:[{id:"donkey",Health:6f,Attributes:[{Name:"generic.max_health",Base:6d}],Invulnerable:1b,DeathLootTable:"minecraft:entities/bat",SaddleItem:{id:"minecraft:saddle",Count:1b},Tame:1b,NoAI:1b,Silent:1b,ChestedHorse:1b,ActiveEffects:[{Id:14b,Amplifier:0b,Duration:1000000,ShowParticles:0b}],Tags:[d3a,plane-init,plane,plane-seat,entity-nohit]}],DisabledSlots:256}
 summon armor_stand ~ ~ ~ {Tags:[d3a-body,d3a,plane-init,plane,has-model,model-changeable,plane-parts,entity-nohit],NoGravity:1b,Invisible:1b,HandItems:[{id:"minecraft:diamond_sword",Count:1b,tag:{CustomModelData:73,Unbreakable:1b}},{}],Pose:{LeftArm:[0f,0f,0f],RightArm:[0f,0f,0f]},DisabledSlots:256}
 summon armor_stand ~ ~ ~ {Tags:[d3a-rightwing,d3a,plane-init,plane,has-model,plane-parts,entity-nohit],NoGravity:1b,Invisible:1b,HandItems:[{id:"minecraft:diamond_sword",Count:1b,tag:{CustomModelData:75,Unbreakable:1b}},{}],Pose:{LeftArm:[0f,0f,0f],RightArm:[0f,0f,0f]},DisabledSlots:256}
@@ -79,7 +79,7 @@ scoreboard players set @e[tag=plane-init,tag=plane-root] vp.max-ammo3 500
 scoreboard players set @e[tag=plane-init,tag=plane-root] vp.max-w1-reload 140
 scoreboard players set @e[tag=plane-init,tag=plane-root] vp.max-w2-reload 500
 scoreboard players set @e[tag=plane-init,tag=plane-root] vp.max-w3-reload 140
-scoreboard players set @e[tag=plane-init,tag=plane-root] vp.plane-weapon 1
+scoreboard players set @e[tag=plane-init,tag=plane-root] vp.curr-weapon 1
 scoreboard players set @e[tag=plane-init,tag=plane-root] vp.weapon-types 6
 
 scoreboard players set @e[tag=plane-init,tag=plane-root] vp.max-engine 1

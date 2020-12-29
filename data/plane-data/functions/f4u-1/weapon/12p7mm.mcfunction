@@ -1,5 +1,24 @@
-#12.7mm機銃を使用
-#実行者：機体
+#> plane-data:f4u-1/weapon/12p7mm
+#
+# 12.7mm機銃を使用
+#
+# @input
+#   execute @e[tag=plane-root]
+#
+# @within function plane-data:f4u-1/f4u1-weapon-manager
+
+#> private
+# @private
+    #declare tag gun-init #銃弾の初期化処理中であることを示す
+    #declare tag left1 #左側1番目の機銃弾であることを示す
+    #declare tag right1 #右側1番目の機銃弾であることを示す
+    #declare tag left2 #左側1番目の機銃弾であることを示す
+    #declare tag right2 #右側1番目の機銃弾であることを示す
+    #declare tag left3 #左側1番目の機銃弾であることを示す
+    #declare tag right3 #右側1番目の機銃弾であることを示す
+    #
+    #declare score_holder #is-bullet #銃弾を発射すべきかどうかを示す
+    #declare score_holder #is-tracer #曳光弾を発射すべきかどうかを示す
 
 #曳光弾判定
 scoreboard players operation #is-bullet vp.reg1 = @s vp.ammunition1
@@ -8,23 +27,23 @@ scoreboard players operation #is-bullet vp.reg1 %= #4 vp.Num
 scoreboard players operation #is-tracer vp.reg1 %= #8 vp.Num
 
 #召喚
-execute if score #is-tracer vp.reg1 matches 0 run summon minecraft:armor_stand ~ ~ ~ {Invisible:1,NoGravity:1,Tags:[projectile,gun,12p7mm,gun-init,right1,tracer-lightblue,entity-nohit,offset-base,tracer]}
-execute if score #is-tracer vp.reg1 matches 0 run summon minecraft:armor_stand ~ ~ ~ {Invisible:1,NoGravity:1,Tags:[projectile,gun,12p7mm,gun-init,right2,tracer-lightblue,entity-nohit,offset-base,tracer]}
-execute if score #is-tracer vp.reg1 matches 0 run summon minecraft:armor_stand ~ ~ ~ {Invisible:1,NoGravity:1,Tags:[projectile,gun,12p7mm,gun-init,right3,tracer-lightblue,entity-nohit,offset-base,tracer]}
-execute if score #is-tracer vp.reg1 matches 0 run summon minecraft:armor_stand ~ ~ ~ {Invisible:1,NoGravity:1,Tags:[projectile,gun,12p7mm,gun-init,left1,tracer-lightblue,entity-nohit,offset-base,tracer]}
-execute if score #is-tracer vp.reg1 matches 0 run summon minecraft:armor_stand ~ ~ ~ {Invisible:1,NoGravity:1,Tags:[projectile,gun,12p7mm,gun-init,left2,tracer-lightblue,entity-nohit,offset-base,tracer]}
-execute if score #is-tracer vp.reg1 matches 0 run summon minecraft:armor_stand ~ ~ ~ {Invisible:1,NoGravity:1,Tags:[projectile,gun,12p7mm,gun-init,left3,tracer-lightblue,entity-nohit,offset-base,tracer]}
-execute if score #is-bullet vp.reg1 matches 0 unless score #is-tracer vp.reg1 matches 0 run summon minecraft:area_effect_cloud ~ ~ ~ {NoGravity:1,Tags:[projectile,gun,12p7mm,gun-init,right1,tracer-lightblue,entity-nohit,offset-base],Duration:20}
-execute if score #is-bullet vp.reg1 matches 0 unless score #is-tracer vp.reg1 matches 0 run summon minecraft:area_effect_cloud ~ ~ ~ {NoGravity:1,Tags:[projectile,gun,12p7mm,gun-init,right2,tracer-lightblue,entity-nohit,offset-base],Duration:20}
-execute if score #is-bullet vp.reg1 matches 0 unless score #is-tracer vp.reg1 matches 0 run summon minecraft:area_effect_cloud ~ ~ ~ {NoGravity:1,Tags:[projectile,gun,12p7mm,gun-init,right3,tracer-lightblue,entity-nohit,offset-base],Duration:20}
-execute if score #is-bullet vp.reg1 matches 0 unless score #is-tracer vp.reg1 matches 0 run summon minecraft:area_effect_cloud ~ ~ ~ {NoGravity:1,Tags:[projectile,gun,12p7mm,gun-init,left1,tracer-lightblue,entity-nohit,offset-base],Duration:20}
-execute if score #is-bullet vp.reg1 matches 0 unless score #is-tracer vp.reg1 matches 0 run summon minecraft:area_effect_cloud ~ ~ ~ {NoGravity:1,Tags:[projectile,gun,12p7mm,gun-init,left2,tracer-lightblue,entity-nohit,offset-base],Duration:20}
-execute if score #is-bullet vp.reg1 matches 0 unless score #is-tracer vp.reg1 matches 0 run summon minecraft:area_effect_cloud ~ ~ ~ {NoGravity:1,Tags:[projectile,gun,12p7mm,gun-init,left3,tracer-lightblue,entity-nohit,offset-base],Duration:20}
+execute if score #is-tracer vp.reg1 matches 0 run summon minecraft:armor_stand ~ ~ ~ {Invisible:1b,NoGravity:1b,Tags:[projectile,gun,12p7mm,gun-init,right1,tracer-lightblue,entity-nohit,offset-base,tracer]}
+execute if score #is-tracer vp.reg1 matches 0 run summon minecraft:armor_stand ~ ~ ~ {Invisible:1b,NoGravity:1b,Tags:[projectile,gun,12p7mm,gun-init,right2,tracer-lightblue,entity-nohit,offset-base,tracer]}
+execute if score #is-tracer vp.reg1 matches 0 run summon minecraft:armor_stand ~ ~ ~ {Invisible:1b,NoGravity:1b,Tags:[projectile,gun,12p7mm,gun-init,right3,tracer-lightblue,entity-nohit,offset-base,tracer]}
+execute if score #is-tracer vp.reg1 matches 0 run summon minecraft:armor_stand ~ ~ ~ {Invisible:1b,NoGravity:1b,Tags:[projectile,gun,12p7mm,gun-init,left1,tracer-lightblue,entity-nohit,offset-base,tracer]}
+execute if score #is-tracer vp.reg1 matches 0 run summon minecraft:armor_stand ~ ~ ~ {Invisible:1b,NoGravity:1b,Tags:[projectile,gun,12p7mm,gun-init,left2,tracer-lightblue,entity-nohit,offset-base,tracer]}
+execute if score #is-tracer vp.reg1 matches 0 run summon minecraft:armor_stand ~ ~ ~ {Invisible:1b,NoGravity:1b,Tags:[projectile,gun,12p7mm,gun-init,left3,tracer-lightblue,entity-nohit,offset-base,tracer]}
+execute if score #is-bullet vp.reg1 matches 0 unless score #is-tracer vp.reg1 matches 0 run summon minecraft:area_effect_cloud ~ ~ ~ {NoGravity:1b,Tags:[projectile,gun,12p7mm,gun-init,right1,tracer-lightblue,entity-nohit,offset-base],Duration:20}
+execute if score #is-bullet vp.reg1 matches 0 unless score #is-tracer vp.reg1 matches 0 run summon minecraft:area_effect_cloud ~ ~ ~ {NoGravity:1b,Tags:[projectile,gun,12p7mm,gun-init,right2,tracer-lightblue,entity-nohit,offset-base],Duration:20}
+execute if score #is-bullet vp.reg1 matches 0 unless score #is-tracer vp.reg1 matches 0 run summon minecraft:area_effect_cloud ~ ~ ~ {NoGravity:1b,Tags:[projectile,gun,12p7mm,gun-init,right3,tracer-lightblue,entity-nohit,offset-base],Duration:20}
+execute if score #is-bullet vp.reg1 matches 0 unless score #is-tracer vp.reg1 matches 0 run summon minecraft:area_effect_cloud ~ ~ ~ {NoGravity:1b,Tags:[projectile,gun,12p7mm,gun-init,left1,tracer-lightblue,entity-nohit,offset-base],Duration:20}
+execute if score #is-bullet vp.reg1 matches 0 unless score #is-tracer vp.reg1 matches 0 run summon minecraft:area_effect_cloud ~ ~ ~ {NoGravity:1b,Tags:[projectile,gun,12p7mm,gun-init,left2,tracer-lightblue,entity-nohit,offset-base],Duration:20}
+execute if score #is-bullet vp.reg1 matches 0 unless score #is-tracer vp.reg1 matches 0 run summon minecraft:area_effect_cloud ~ ~ ~ {NoGravity:1b,Tags:[projectile,gun,12p7mm,gun-init,left3,tracer-lightblue,entity-nohit,offset-base],Duration:20}
 
 #スコア付与
 scoreboard players set @e[tag=gun-init] vp.speed 110
 scoreboard players set @e[tag=gun-init] vp.damage 38
-scoreboard players set @e[tag=gun-init,type=armor_stand] vp.max-age 20
+scoreboard players set @e[type=armor_stand,tag=gun-init] vp.max-age 20
 scoreboard players operation @e[tag=gun-init] vp.plane-id = @s vp.plane-id
 scoreboard players set @e[tag=gun-init,tag=left1] vp.offsetX 2930
 scoreboard players set @e[tag=gun-init,tag=left1] vp.offsetY -560

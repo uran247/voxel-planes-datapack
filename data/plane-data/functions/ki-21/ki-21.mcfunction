@@ -17,7 +17,7 @@
     #declare tag plane-init #初期化処理中のエンティティであることを示す
 
 #機体召喚
-summon armor_stand ~ ~ ~ {Invisible:1b,NoGravity:0b,Tags:[ki21-root,ki21,plane-init,plane-root,plane,entity-nohit,need-calc-offset,delay-rotation,bombed,normal,50kg,has-weapon1,has-weapon2,has-weapon3,has-weapon4,main-weapon1,tier1],CustomName:'{"text":"ki21"}',Pose:{LeftArm:[0f,0f,0f],RightArm:[0f,0f,0f]},DisabledSlots:256,HandItems:[{id:"snowball",Count:1b,tag:{CustomModelData:1,weapons:["bomb"]}},{}]}
+summon armor_stand ~ ~ ~ {Invisible:1b,NoGravity:0b,Tags:[ki21-root,ki21,plane-init,plane-root,plane,entity-nohit,need-calc-offset,delay-rotation,has-bomb,normal,50kg,has-weapon1,has-weapon2,has-weapon3,has-weapon4,main-weapon1,tier1],CustomName:'{"text":"ki21"}',Pose:{LeftArm:[0f,0f,0f],RightArm:[0f,0f,0f]},DisabledSlots:256,HandItems:[{id:"snowball",Count:1b,tag:{CustomModelData:1,weapons:["bomb"]}},{}]}
 summon armor_stand ~ ~ ~ {Invisible:1b,NoGravity:0b,Tags:[ki21,plane-init,plane,entity-nohit,plane-seat],CustomName:'{"text":"seat"}',Pose:{LeftArm:[0f,0f,0f],RightArm:[0f,0f,0f]},Passengers:[{id:"donkey",Health:11f,Attributes:[{Name:"generic.max_health",Base:11d}],Invulnerable:1b,DeathLootTable:"minecraft:entities/bat",SaddleItem:{id:"minecraft:saddle",Count:1b},Tame:1b,NoAI:1b,Silent:1b,ChestedHorse:1b,ActiveEffects:[{Id:14b,Amplifier:0b,Duration:1000000,ShowParticles:0b}],Tags:[ki21,plane-init,plane,plane-seat,entity-nohit]}],DisabledSlots:256}
 summon armor_stand ~ ~ ~ {Tags:[ki21-body,ki21,plane-init,plane,has-model,model-changeable,plane-parts,entity-nohit],NoGravity:1b,Invisible:1b,HandItems:[{id:"minecraft:diamond_sword",Count:1b,tag:{CustomModelData:78,Unbreakable:1b}},{}],Pose:{LeftArm:[0f,0f,0f],RightArm:[0f,0f,0f]},DisabledSlots:256}
 summon armor_stand ~ ~ ~ {Tags:[ki21-tail,ki21,plane-init,plane,has-model,plane-parts,entity-nohit],NoGravity:1b,Invisible:1b,HandItems:[{id:"minecraft:diamond_sword",Count:1b,tag:{CustomModelData:83,Unbreakable:1b}},{}],Pose:{LeftArm:[0f,0f,0f],RightArm:[0f,0f,0f]},DisabledSlots:256}
@@ -87,7 +87,7 @@ scoreboard players set @e[tag=plane-init,tag=plane-root] vp.max-w1-reload 600
 scoreboard players set @e[tag=plane-init,tag=plane-root] vp.max-w2-reload 140
 scoreboard players set @e[tag=plane-init,tag=plane-root] vp.max-w3-reload 140
 scoreboard players set @e[tag=plane-init,tag=plane-root] vp.max-w4-reload 140
-scoreboard players set @e[tag=plane-init,tag=plane-root] vp.plane-weapon 1
+scoreboard players set @e[tag=plane-init,tag=plane-root] vp.curr-weapon 1
 scoreboard players set @e[tag=plane-init,tag=plane-root] vp.weapon-types 2
 
 scoreboard players set @e[tag=plane-init,tag=plane-root] vp.max-engine 2

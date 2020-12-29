@@ -68,7 +68,7 @@ scoreboard players set @e[tag=plane-init,tag=plane-root] vp.w2-cooltime 0
 scoreboard players set @e[tag=plane-init,tag=plane-root] vp.ammunition1 500
 scoreboard players set @e[tag=plane-init,tag=plane-root] vp.max-ammo1 500
 scoreboard players set @e[tag=plane-init,tag=plane-root] vp.max-w1-reload 140
-scoreboard players set @e[tag=plane-init,tag=plane-root] vp.plane-weapon 1
+scoreboard players set @e[tag=plane-init,tag=plane-root] vp.curr-weapon 1
 scoreboard players set @e[tag=plane-init,tag=plane-root] vp.weapon-types 2
 
 scoreboard players set @e[tag=plane-init,tag=plane-root] vp.max-engine 1

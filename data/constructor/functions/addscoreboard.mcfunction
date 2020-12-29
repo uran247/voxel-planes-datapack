@@ -42,7 +42,7 @@ scoreboard objectives add vp.speed dummy
 scoreboard objectives add vp.age dummy
 scoreboard objectives add vp.rolling dummy
 scoreboard objectives add vp.key-input dummy
-scoreboard objectives add vp.plane-weapon dummy
+scoreboard objectives add vp.curr-weapon dummy
 scoreboard objectives add vp.rightClick minecraft.used:minecraft.carrot_on_a_stick
 scoreboard objectives add vp.plane-parts dummy
 scoreboard objectives add vp.radder dummy

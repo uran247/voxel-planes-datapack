@@ -8,9 +8,9 @@ execute at @s[tag=!has-rider] run tp @e[tag=plane-seat,tag=target-parts] ^ ^-0.3
 
 
 #爆弾装備タグがついていて爆弾が0なら召喚
-execute store result score @s[tag=bombed] vp.reg1 if entity @e[tag=target-parts,tag=plane-bomb]
+execute store result score @s[tag=has-bomb] vp.reg1 if entity @e[tag=target-parts,tag=plane-bomb]
 
-execute as @s[tag=bombed,scores={vp.reg1=0}] if score @s vp.ammunition2 = @s vp.max-ammo2 at @s store success score #summoned-bomb vp.reg1 run function plane-data:n1k2/summon/n1k2-bomb
+execute as @s[tag=has-bomb,scores={vp.reg1=0}] if score @s vp.ammunition2 = @s vp.max-ammo2 at @s store success score #summoned-bomb vp.reg1 run function plane-data:n1k2/summon/n1k2-bomb
 execute if score #summoned-bomb vp.reg1 matches 1.. as @e[tag=n1k2,tag=!dropping,tag=plane-bomb,distance=..10] if score @s vp.plane-id = #plane-id vp.reg1 run tag @s add target-parts
 execute if score #summoned-bomb vp.reg1 matches 1.. run tag @s add need-calc-offset
 scoreboard players set #summoned-bomb vp.reg1 0

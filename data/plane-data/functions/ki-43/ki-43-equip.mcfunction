@@ -31,7 +31,7 @@ execute if score #12p7mm-gun vp.reg1 matches 1.. run tag @s remove 7p7mm
 
 #装備種別変更
 #scoreboard players set @s weapon-types 6
-#scoreboard players operation @s[tag=bombed] weapon-types *= #5 vp.Num
+#scoreboard players operation @s[tag=has-bomb] weapon-types *= #5 vp.Num
 #weapon-id
 # 2: gun
 

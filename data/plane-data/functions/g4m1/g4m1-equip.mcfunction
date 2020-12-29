@@ -28,8 +28,8 @@ scoreboard players set @s[tag=250kg] vp.max-ammo1 4
 scoreboard players set @s[tag=800kg] vp.max-ammo1 1
 
 #弾薬リセット
-execute if score #remove-800kg vp.reg1 matches 1.. run scoreboard players operation @s[tag=bombed] vp.ammunition1 = @s vp.max-ammo1
-execute if score #remove-250kg vp.reg1 matches 1.. run scoreboard players operation @s[tag=bombed] vp.ammunition1 = @s vp.max-ammo1
+execute if score #remove-800kg vp.reg1 matches 1.. run scoreboard players operation @s[tag=has-bomb] vp.ammunition1 = @s vp.max-ammo1
+execute if score #remove-250kg vp.reg1 matches 1.. run scoreboard players operation @s[tag=has-bomb] vp.ammunition1 = @s vp.max-ammo1
 
 #ステータス変更
 #装備に応じて右記ステータス変更：最高速度　巡航速度　旋回力

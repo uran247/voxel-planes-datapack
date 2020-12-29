@@ -13,6 +13,8 @@
     #declare tag rocket-init #初期化処理中の爆弾であることを示す
     #
     #declare score_holder #plane-id #実行者のplane-idを示す
+    #declare score_holder #AngX #ロケットのピッチ角を示す
+    #declare score_holder #AngY #ロケットのヨー角を示す
 
 #実行者タグ付け
 tag @s add rocket-launting-executer

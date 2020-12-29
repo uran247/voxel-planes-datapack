@@ -1,19 +1,35 @@
-#実行条件無し
+#> plane-data:f4u-1/f4u1
+#
+# @within
+#   plane:**
+#   weapon:**
+        #declare tag f4u1-hitbox
+        #declare tag f4u1-body
+
+#> public
+# @public
+    #declare tag f4u1
+
+#> private
+# @private
+    #declare tag f4u1-rightwing #右主翼を示す
+    #declare tag f4u1-leftwing #左主翼を示す
+    #declare tag plane-init #初期化処理中のエンティティであることを示す
 
 #機体召喚
-summon minecraft:armor_stand ~ ~ ~ {Invisible:1,NoGravity:0,Tags:[f4u1-root,f4u1,plane-init,plane-root,plane,entity-nohit,need-calc-offset,delay-rotation,has-weapon1,main-weapon1,main-weapon2,main-weapon3,tier2],CustomName:"{\"text\":\"f4u1\"}",Pose:{LeftArm:[0f,0f,0f],RightArm:[0f,0f,0f]},DisabledSlots:256,NoGravity:0b,HandItems:[{id:"snowball",Count:1b,tag:{CustomModelData:1,weapons:["12.7mm gun","bomb","rocket"]}},{}]}
-summon minecraft:armor_stand ~ ~ ~ {Invisible:1,NoGravity:0,Tags:[f4u1,plane-init,plane,entity-nohit,plane-seat],CustomName:"{\"text\":\"seat\"}",Pose:{LeftArm:[0f,0f,0f],RightArm:[0f,0f,0f]},Passengers:[{id:donkey,Health:35f,Attributes:[{Name:"generic.max_health",Base:35}],Invulnerable:1b,DeathLootTable:"minecraft:entities/bat",SaddleItem:{id:"minecraft:saddle",Count:1b},Tame:1,NoAI:1,Silent:1,ChestedHorse:1b,ActiveEffects:[{Id:14,Amplifier:0,Duration:1000000,ShowParticles:0b}],Tags:[f4u1,plane-init,plane,plane-seat,entity-nohit]}],DisabledSlots:256,NoGravity:0b}
-summon armor_stand ~ ~ ~ {Tags:["f4u1-body","f4u1",plane-init,plane,has-model,model-changeable,entity-nohit],NoGravity:1b,Invisible:1,HandItems:[{id:"minecraft:diamond_sword",Count:1b,tag:{CustomModelData:1,Unbreakable:1}},{}],Pose:{LeftArm:[0f,0f,0f],RightArm:[-12f,0f,0f]},DisabledSlots:256}
-summon armor_stand ~ ~ ~ {Tags:["f4u1-rightwing","f4u1",plane-init,plane,has-model,has-offset,plane-parts,entity-nohit],NoGravity:1b,Invisible:1,HandItems:[{id:"minecraft:diamond_sword",Count:1b,tag:{CustomModelData:64,Unbreakable:1}},{}],Pose:{LeftArm:[0f,0f,0f],RightArm:[0f,0f,0f]},DisabledSlots:256}
-summon armor_stand ~ ~ ~ {Tags:["f4u1-leftwing","f4u1",plane-init,plane,has-model,has-offset,plane-parts,entity-nohit],NoGravity:1b,Invisible:1,HandItems:[{id:"minecraft:diamond_sword",Count:1b,tag:{CustomModelData:65,Unbreakable:1}},{}],Pose:{LeftArm:[0f,0f,0f],RightArm:[0f,0f,0f]},DisabledSlots:256}
-summon armor_stand ~ ~ ~ {Tags:["f4u1-hitbox","f4u1",plane-init,plane,plane-hitbox,has-offset,body,offset-base],NoGravity:1b,Invisible:1,Marker:1,Glowing:1,CustomName:"{\"text\":\"body\"}",Health:330f,Attributes:[{Name:"generic.max_health",Base:330}]}
-summon armor_stand ~ ~ ~ {Tags:["f4u1-hitbox","f4u1",plane-init,plane,plane-hitbox,has-offset,engine,offset-base],NoGravity:1b,Invisible:1,Marker:1,Glowing:1,CustomName:"{\"text\":\"engine\"}",Health:300f,Attributes:[{Name:"generic.max_health",Base:300}]}
-summon armor_stand ~ ~ ~ {Tags:["f4u1-hitbox","f4u1",plane-init,plane,plane-hitbox,has-offset,aileron-r,aileron,offset-base],NoGravity:1b,Invisible:1,Marker:1,Glowing:1,CustomName:"{\"text\":\"aileron-right\"}",Health:240f,Attributes:[{Name:"generic.max_health",Base:240}]}
-summon armor_stand ~ ~ ~ {Tags:["f4u1-hitbox","f4u1",plane-init,plane,plane-hitbox,has-offset,aileron-l,aileron,offset-base],NoGravity:1b,Invisible:1,Marker:1,Glowing:1,CustomName:"{\"text\":\"aileron-left\"}",Health:240f,Attributes:[{Name:"generic.max_health",Base:240}]}
-summon armor_stand ~ ~ ~ {Tags:["f4u1-hitbox","f4u1",plane-init,plane,plane-hitbox,has-offset,elevator-r,elevetor,offset-base],NoGravity:1b,Invisible:1,Marker:1,Glowing:1,CustomName:"{\"text\":\"elevator-right\"}",Health:210f,Attributes:[{Name:"generic.max_health",Base:210}]}
-summon armor_stand ~ ~ ~ {Tags:["f4u1-hitbox","f4u1",plane-init,plane,plane-hitbox,has-offset,elevator-l,elevetor,offset-base],NoGravity:1b,Invisible:1,Marker:1,Glowing:1,CustomName:"{\"text\":\"elevator-left\"}",Health:210f,Attributes:[{Name:"generic.max_health",Base:210}]}
-summon armor_stand ~ ~ ~ {Tags:["f4u1-hitbox","f4u1",plane-init,plane,plane-hitbox,has-offset,radder,offset-base],NoGravity:1b,Invisible:1,Marker:1,Glowing:1,CustomName:"{\"text\":\"radder\"}",Health:210f,Attributes:[{Name:"generic.max_health",Base:210}]}
-summon armor_stand ~ ~ ~ {Tags:["f4u1-hitbox","f4u1",plane-init,plane,plane-hitbox,has-offset,cockpit,offset-base],NoGravity:1b,Invisible:1,Marker:1,Glowing:1,CustomName:"{\"text\":\"cockpit\"}",Health:360f,Attributes:[{Name:"generic.max_health",Base:360}]}
+summon minecraft:armor_stand ~ ~ ~ {Invisible:1b,NoGravity:0b,Tags:[f4u1-root,f4u1,plane-init,plane-root,plane,entity-nohit,need-calc-offset,delay-rotation,has-weapon1,main-weapon1,main-weapon2,main-weapon3,tier2],CustomName:'{"text":"f4u1"}',Pose:{LeftArm:[0f,0f,0f],RightArm:[0f,0f,0f]},DisabledSlots:256,HandItems:[{id:"snowball",Count:1b,tag:{CustomModelData:1,weapons:["12.7mm gun","bomb","rocket"]}},{}]}
+summon minecraft:armor_stand ~ ~ ~ {Invisible:1b,NoGravity:0b,Tags:[f4u1,plane-init,plane,entity-nohit,plane-seat],CustomName:'{"text":"seat"}',Pose:{LeftArm:[0f,0f,0f],RightArm:[0f,0f,0f]},Passengers:[{id:"donkey",Health:35f,Attributes:[{Name:"generic.max_health",Base:35d}],Invulnerable:1b,DeathLootTable:"minecraft:entities/bat",SaddleItem:{id:"minecraft:saddle",Count:1b},Tame:1b,NoAI:1b,Silent:1b,ChestedHorse:1b,ActiveEffects:[{Id:14b,Amplifier:0b,Duration:1000000,ShowParticles:0b}],Tags:[f4u1,plane-init,plane,plane-seat,entity-nohit]}],DisabledSlots:256}
+summon armor_stand ~ ~ ~ {Tags:["f4u1-body","f4u1",plane-init,plane,has-model,model-changeable,entity-nohit],NoGravity:1b,Invisible:1b,HandItems:[{id:"minecraft:diamond_sword",Count:1b,tag:{CustomModelData:1,Unbreakable:1b}},{}],Pose:{LeftArm:[0f,0f,0f],RightArm:[-12f,0f,0f]},DisabledSlots:256}
+summon armor_stand ~ ~ ~ {Tags:["f4u1-rightwing","f4u1",plane-init,plane,has-model,has-offset,plane-parts,entity-nohit],NoGravity:1b,Invisible:1b,HandItems:[{id:"minecraft:diamond_sword",Count:1b,tag:{CustomModelData:64,Unbreakable:1b}},{}],Pose:{LeftArm:[0f,0f,0f],RightArm:[0f,0f,0f]},DisabledSlots:256}
+summon armor_stand ~ ~ ~ {Tags:["f4u1-leftwing","f4u1",plane-init,plane,has-model,has-offset,plane-parts,entity-nohit],NoGravity:1b,Invisible:1b,HandItems:[{id:"minecraft:diamond_sword",Count:1b,tag:{CustomModelData:65,Unbreakable:1b}},{}],Pose:{LeftArm:[0f,0f,0f],RightArm:[0f,0f,0f]},DisabledSlots:256}
+summon armor_stand ~ ~ ~ {Tags:["f4u1-hitbox","f4u1",plane-init,plane,plane-hitbox,has-offset,body,offset-base],NoGravity:1b,Invisible:1b,Marker:1b,Glowing:1b,CustomName:'{"text":"body"}',Health:330f,Attributes:[{Name:"generic.max_health",Base:330d}]}
+summon armor_stand ~ ~ ~ {Tags:["f4u1-hitbox","f4u1",plane-init,plane,plane-hitbox,has-offset,engine,offset-base],NoGravity:1b,Invisible:1b,Marker:1b,Glowing:1b,CustomName:'{"text":"engine"}',Health:300f,Attributes:[{Name:"generic.max_health",Base:300d}]}
+summon armor_stand ~ ~ ~ {Tags:["f4u1-hitbox","f4u1",plane-init,plane,plane-hitbox,has-offset,aileron-r,aileron,offset-base],NoGravity:1b,Invisible:1b,Marker:1b,Glowing:1b,CustomName:'{"text":"aileron-right"}',Health:240f,Attributes:[{Name:"generic.max_health",Base:240d}]}
+summon armor_stand ~ ~ ~ {Tags:["f4u1-hitbox","f4u1",plane-init,plane,plane-hitbox,has-offset,aileron-l,aileron,offset-base],NoGravity:1b,Invisible:1b,Marker:1b,Glowing:1b,CustomName:'{"text":"aileron-left"}',Health:240f,Attributes:[{Name:"generic.max_health",Base:240d}]}
+summon armor_stand ~ ~ ~ {Tags:["f4u1-hitbox","f4u1",plane-init,plane,plane-hitbox,has-offset,elevator-r,elevetor,offset-base],NoGravity:1b,Invisible:1b,Marker:1b,Glowing:1b,CustomName:'{"text":"elevator-right"}',Health:210f,Attributes:[{Name:"generic.max_health",Base:210d}]}
+summon armor_stand ~ ~ ~ {Tags:["f4u1-hitbox","f4u1",plane-init,plane,plane-hitbox,has-offset,elevator-l,elevetor,offset-base],NoGravity:1b,Invisible:1b,Marker:1b,Glowing:1b,CustomName:'{"text":"elevator-left"}',Health:210f,Attributes:[{Name:"generic.max_health",Base:210d}]}
+summon armor_stand ~ ~ ~ {Tags:["f4u1-hitbox","f4u1",plane-init,plane,plane-hitbox,has-offset,radder,offset-base],NoGravity:1b,Invisible:1b,Marker:1b,Glowing:1b,CustomName:'{"text":"radder"}',Health:210f,Attributes:[{Name:"generic.max_health",Base:210d}]}
+summon armor_stand ~ ~ ~ {Tags:["f4u1-hitbox","f4u1",plane-init,plane,plane-hitbox,has-offset,cockpit,offset-base],NoGravity:1b,Invisible:1b,Marker:1b,Glowing:1b,CustomName:'{"text":"cockpit"}',Health:360f,Attributes:[{Name:"generic.max_health",Base:360d}]}
 
 #ID付与
 execute as @e[tag=plane-init,tag=plane-root,limit=1] at @s run function plane:summon/set-plane-id
@@ -63,12 +79,12 @@ scoreboard players set @e[tag=plane-init] vp.max-ammo3 8
 scoreboard players set @e[tag=plane-init] vp.max-w1-reload 220
 scoreboard players set @e[tag=plane-init] vp.max-w2-reload 1200
 scoreboard players set @e[tag=plane-init] vp.max-w3-reload 3600
-scoreboard players set @e[tag=plane-init] vp.plane-weapon 1
+scoreboard players set @e[tag=plane-init] vp.curr-weapon 1
 scoreboard players set @e[tag=plane-init] vp.weapon-types 2
 
 scoreboard players set @e[tag=plane-init] vp.max-engine 1
 
-data modify storage minecraft:plane-datapack temporary.Pos set from entity @e[tag=plane-init,tag=f4u1-root,limit=1] Pos
+data modify storage minecraft:plane-datapack temporary.Pos set from entity @e[tag=plane-init,tag=plane-root,limit=1] Pos
 execute store result score @e[tag=plane-init,limit=1] vp.PosX run data get storage minecraft:plane-datapack temporary.Pos[0] 10000
 execute store result score @e[tag=plane-init,limit=1] vp.PosY run data get storage minecraft:plane-datapack temporary.Pos[1] 10000
 execute store result score @e[tag=plane-init,limit=1] vp.PosZ run data get storage minecraft:plane-datapack temporary.Pos[2] 10000

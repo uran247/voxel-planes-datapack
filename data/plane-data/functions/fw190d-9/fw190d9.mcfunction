@@ -79,7 +79,7 @@ scoreboard players set @e[tag=plane-init] vp.max-ammo3 1
 scoreboard players set @e[tag=plane-init] vp.max-w1-reload 280
 scoreboard players set @e[tag=plane-init] vp.max-w2-reload 220
 scoreboard players set @e[tag=plane-init] vp.max-w3-reload 3600
-scoreboard players set @e[tag=plane-init] vp.plane-weapon 1
+scoreboard players set @e[tag=plane-init] vp.curr-weapon 1
 scoreboard players set @e[tag=plane-init] vp.weapon-types 6
 
 scoreboard players set @e[tag=plane-init] vp.max-engine 1

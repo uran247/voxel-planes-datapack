@@ -1,5 +1,22 @@
-#爆弾投下 ki49
-#実行者：機体
+#> plane-data:ki-49/weapon/bomb
+#
+# 爆弾投下
+#
+# @input
+#   execute @e[tag=plane-root]
+#
+# @within function plane-data:ki-49/ki49-weapon-manager
+
+#> private
+# @private
+    #declare tag bombing-executer #爆撃実行機体を示す
+    #declare tag drop-init #初期化処理中の爆弾であることを示す
+    #declare tag bomb-drop-origin #爆弾が存在せず召喚する場合、召喚位置の起点となるエンティティを示す
+    #declare tag ki49-bomb-7 #新たに召喚した爆弾であることを示す
+    #
+    #declare score_holder #plane-id #実行者のplane-idを示す
+    #declare score_holder #ang-x #爆弾のピッチ角を示す
+    #declare score_holder #offset #爆弾を起点からどこまでずらすかを指定するindex番号
 
 #実行者タグ付け
 tag @s add bombing-executer
@@ -11,23 +28,23 @@ scoreboard players operation #plane-id vp.reg1 = @s vp.plane-id
 tag @e[tag=drop-init,distance=..20] remove plane
 
 #機動力補正解除
-execute as @e[distance=..10,tag=body] if score @s vp.plane-id = #plane-id vp.reg1 run tag @s add plane-parts-target
-execute as @s[tag=250kg] as @e[distance=..10,tag=plane-parts-target,scores={vp.acc-cor=..-1}] run scoreboard players add @s vp.acc-cor 1
-execute as @s[tag=250kg] as @e[distance=..10,tag=plane-parts-target,scores={vp.pitch-spd-cor=..-1}] run scoreboard players add @s vp.pitch-spd-cor 2
-execute as @s[tag=250kg] as @e[distance=..10,tag=plane-parts-target,scores={vp.yaw-spd-cor=..-1}] run scoreboard players add @s vp.yaw-spd-cor 2
-execute as @s[tag=500kg] as @e[distance=..10,tag=plane-parts-target,scores={vp.acc-cor=..-1}] run scoreboard players add @s vp.acc-cor 2
-execute as @s[tag=500kg] as @e[distance=..10,tag=plane-parts-target,scores={vp.pitch-spd-cor=..-1}] run scoreboard players add @s vp.pitch-spd-cor 4
-execute as @s[tag=500kg] as @e[distance=..10,tag=plane-parts-target,scores={vp.yaw-spd-cor=..-1}] run scoreboard players add @s vp.yaw-spd-cor 4
-tag @e[distance=..10,tag=plane-parts-target] remove plane-parts-target
+execute as @e[tag=body,distance=..10] if score @s vp.plane-id = #plane-id vp.reg1 run tag @s add bomb-drop-origin
+execute as @s[tag=250kg] as @e[tag=bomb-drop-origin,scores={vp.acc-cor=..-1},distance=..10] run scoreboard players add @s vp.acc-cor 1
+execute as @s[tag=250kg] as @e[tag=bomb-drop-origin,scores={vp.pitch-spd-cor=..-1},distance=..10] run scoreboard players add @s vp.pitch-spd-cor 2
+execute as @s[tag=250kg] as @e[tag=bomb-drop-origin,scores={vp.yaw-spd-cor=..-1},distance=..10] run scoreboard players add @s vp.yaw-spd-cor 2
+execute as @s[tag=500kg] as @e[tag=bomb-drop-origin,scores={vp.acc-cor=..-1},distance=..10] run scoreboard players add @s vp.acc-cor 2
+execute as @s[tag=500kg] as @e[tag=bomb-drop-origin,scores={vp.pitch-spd-cor=..-1},distance=..10] run scoreboard players add @s vp.pitch-spd-cor 4
+execute as @s[tag=500kg] as @e[tag=bomb-drop-origin,scores={vp.yaw-spd-cor=..-1},distance=..10] run scoreboard players add @s vp.yaw-spd-cor 4
+tag @e[tag=bomb-drop-origin,distance=..10] remove bomb-drop-origin
 
 #対象召喚
 scoreboard players operation #offset vp.reg1 = @s vp.ammunition1
 scoreboard players operation #offset vp.reg1 %= #2 vp.Num
-execute as @s[tag=250kg] if score #offset vp.reg1 matches 0 run summon armor_stand ^-0.5 ^-1 ^ {Tags:["ki49-bomb",drop-init,dropping,plane-bomb,plane-parts,entity-nohit,250kg,bomb-normal],NoGravity:1b,Invisible:1,HandItems:[{id:"minecraft:diamond_sword",Count:1b,tag:{CustomModelData:77,Unbreakable:1}},{}],Pose:{RightArm:[0f,0f,0f]},DisabledSlots:256}
-execute as @s[tag=250kg] if score #offset vp.reg1 matches 1 run summon armor_stand ^0.5 ^-1 ^ {Tags:["ki49-bomb",drop-init,dropping,plane-bomb,plane-parts,entity-nohit,250kg,bomb-normal],NoGravity:1b,Invisible:1,HandItems:[{id:"minecraft:diamond_sword",Count:1b,tag:{CustomModelData:77,Unbreakable:1}},{}],Pose:{RightArm:[0f,0f,0f]},DisabledSlots:256}
+execute as @s[tag=250kg] if score #offset vp.reg1 matches 0 run summon armor_stand ^-0.5 ^-1 ^ {Tags:[ki49-bomb,drop-init,dropping,plane-bomb,plane-parts,entity-nohit,250kg,bomb-normal],NoGravity:1b,Invisible:1b,HandItems:[{id:"minecraft:diamond_sword",Count:1b,tag:{CustomModelData:77,Unbreakable:1b}},{}],Pose:{RightArm:[0f,0f,0f]},DisabledSlots:256}
+execute as @s[tag=250kg] if score #offset vp.reg1 matches 1 run summon armor_stand ^0.5 ^-1 ^ {Tags:[ki49-bomb,drop-init,dropping,plane-bomb,plane-parts,entity-nohit,250kg,bomb-normal],NoGravity:1b,Invisible:1b,HandItems:[{id:"minecraft:diamond_sword",Count:1b,tag:{CustomModelData:77,Unbreakable:1b}},{}],Pose:{RightArm:[0f,0f,0f]},DisabledSlots:256}
 scoreboard players set @e[tag=drop-init] vp.damage 1250
 
-execute as @s[tag=500kg] run summon armor_stand ^ ^-1 ^ {Tags:["ki49-bomb",drop-init,dropping,plane-bomb,plane-parts,entity-nohit,500kg,bomb-normal],NoGravity:1b,Invisible:1,HandItems:[{id:"minecraft:diamond_sword",Count:1b,tag:{CustomModelData:118,Unbreakable:1}},{}],Pose:{RightArm:[0f,0f,0f]},DisabledSlots:256}
+execute as @s[tag=500kg] run summon armor_stand ^ ^-1 ^ {Tags:[ki49-bomb,drop-init,dropping,plane-bomb,plane-parts,entity-nohit,500kg,bomb-normal],NoGravity:1b,Invisible:1b,HandItems:[{id:"minecraft:diamond_sword",Count:1b,tag:{CustomModelData:118,Unbreakable:1b}},{}],Pose:{RightArm:[0f,0f,0f]},DisabledSlots:256}
 scoreboard players set @e[tag=drop-init] vp.torp-damage 2500
 
 
@@ -44,9 +61,6 @@ scoreboard players operation #ang-x vp.reg1 = @s vp.AngX
 scoreboard players remove #ang-x vp.reg1 9000
 execute store result entity @e[tag=drop-init,distance=..20,limit=1] Pose.RightArm[2] float 0.01 run scoreboard players get #ang-x vp.reg1
 execute as @e[tag=drop-init,distance=..20,limit=1] at @s run tp @s ~ ~ ~ ~90 ~
-
-#発射したならreload時間設定
-execute if entity @e[tag=gun-init,distance=..20] run scoreboard players set @s vp.w1-cooltime 2
 
 #残弾数減算
 scoreboard players remove @s vp.ammunition1 1

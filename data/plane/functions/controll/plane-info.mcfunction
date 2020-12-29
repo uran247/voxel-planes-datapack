@@ -40,10 +40,10 @@ execute if entity @s[tag=main-weapon5,scores={vp.ammunition5=1..}] run data modi
 execute if entity @s[tag=main-weapon5,scores={vp.ammunition5=..0}] run data modify storage plane-datapack plane-info append value "[{\"text\":\" reloading:\",\"color\":\"white\"},{\"score\":{\"name\":\"#ammunition5\",\"objective\":\"vp.reg1\"},\"color\":\"white\"}]"
 execute unless entity @s[tag=main-weapon5] run data modify storage plane-datapack plane-info append value ""
 
-execute if entity @s[scores={vp.plane-weapon=1}] run data modify storage plane-datapack plane-info append from entity @s HandItems[0].tag.weapons[0]
-execute if entity @s[scores={vp.plane-weapon=2}] run data modify storage plane-datapack plane-info append from entity @s HandItems[0].tag.weapons[1]
-execute if entity @s[scores={vp.plane-weapon=3}] run data modify storage plane-datapack plane-info append from entity @s HandItems[0].tag.weapons[2]
-execute if entity @s[scores={vp.plane-weapon=4}] run data modify storage plane-datapack plane-info append from entity @s HandItems[0].tag.weapons[3]
+execute if entity @s[scores={vp.curr-weapon=1}] run data modify storage plane-datapack plane-info append from entity @s HandItems[0].tag.weapons[0]
+execute if entity @s[scores={vp.curr-weapon=2}] run data modify storage plane-datapack plane-info append from entity @s HandItems[0].tag.weapons[1]
+execute if entity @s[scores={vp.curr-weapon=3}] run data modify storage plane-datapack plane-info append from entity @s HandItems[0].tag.weapons[2]
+execute if entity @s[scores={vp.curr-weapon=4}] run data modify storage plane-datapack plane-info append from entity @s HandItems[0].tag.weapons[3]
 
 
 #wepon残弾数取得

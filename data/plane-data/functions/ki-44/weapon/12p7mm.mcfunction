@@ -29,10 +29,10 @@ execute if score #is-bullet vp.reg1 matches 0 unless score #is-tracer vp.reg1 ma
 execute if score #is-bullet vp.reg1 matches 0 unless score #is-tracer vp.reg1 matches 0 run summon area_effect_cloud ~ ~ ~ {Tags:[projectile,gun,12p7mm,gun-init,left1,tracer-orange,entity-nohit,offset-base],Duration:20}
 execute if score #is-bullet vp.reg1 matches 0 unless score #is-tracer vp.reg1 matches 0 run summon area_effect_cloud ~ ~ ~ {Tags:[projectile,gun,12p7mm,gun-init,right2,tracer-orange,entity-nohit,offset-base],Duration:20}
 execute if score #is-bullet vp.reg1 matches 0 unless score #is-tracer vp.reg1 matches 0 run summon area_effect_cloud ~ ~ ~ {Tags:[projectile,gun,12p7mm,gun-init,left2,tracer-orange,entity-nohit,offset-base],Duration:20}
-execute if score #is-tracer vp.reg1 matches 0 run summon armor_stand ~ ~ ~ {NoGravity:1b,Tags:[projectile,gun,12p7mm,gun-init,right1,tracer-orange,entity-nohit,tracer,offset-base,offset-base],Invisible:1b}
-execute if score #is-tracer vp.reg1 matches 0 run summon armor_stand ~ ~ ~ {NoGravity:1b,Tags:[projectile,gun,12p7mm,gun-init,left1,tracer-orange,entity-nohit,tracer,offset-base,offset-base],Invisible:1b}
-execute if score #is-tracer vp.reg1 matches 0 run summon armor_stand ~ ~ ~ {NoGravity:1b,Tags:[projectile,gun,12p7mm,gun-init,right2,tracer-orange,entity-nohit,tracer,offset-base,offset-base],Invisible:1b}
-execute if score #is-tracer vp.reg1 matches 0 run summon armor_stand ~ ~ ~ {NoGravity:1b,Tags:[projectile,gun,12p7mm,gun-init,left2,tracer-orange,entity-nohit,tracer,offset-base,offset-base],Invisible:1b}
+execute if score #is-tracer vp.reg1 matches 0 run summon armor_stand ~ ~ ~ {NoGravity:1b,Tags:[projectile,gun,12p7mm,gun-init,right1,tracer,tracer-orange,entity-nohit,tracer,offset-base,offset-base],Invisible:1b}
+execute if score #is-tracer vp.reg1 matches 0 run summon armor_stand ~ ~ ~ {NoGravity:1b,Tags:[projectile,gun,12p7mm,gun-init,left1,tracer,tracer-orange,entity-nohit,tracer,offset-base,offset-base],Invisible:1b}
+execute if score #is-tracer vp.reg1 matches 0 run summon armor_stand ~ ~ ~ {NoGravity:1b,Tags:[projectile,gun,12p7mm,gun-init,right2,tracer,tracer-orange,entity-nohit,tracer,offset-base,offset-base],Invisible:1b}
+execute if score #is-tracer vp.reg1 matches 0 run summon armor_stand ~ ~ ~ {NoGravity:1b,Tags:[projectile,gun,12p7mm,gun-init,left2,tracer,tracer-orange,entity-nohit,tracer,offset-base,offset-base],Invisible:1b}
 
 #スコア付与
 scoreboard players set @e[tag=gun-init,distance=..5] vp.speed 100

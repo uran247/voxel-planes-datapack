@@ -25,8 +25,8 @@ scoreboard players operation #is-tracer vp.reg1 %= #6 vp.Num
 #召喚
 execute if score #is-tracer vp.reg1 matches 0 run summon minecraft:armor_stand ~ ~ ~ {Invisible:1b,NoGravity:1b,Tags:[projectile,gun,20mm,gun-init,right1,tracer-lightblue,entity-nohit,offset-base,tracer]}
 execute if score #is-tracer vp.reg1 matches 0 run summon minecraft:armor_stand ~ ~ ~ {Invisible:1b,NoGravity:1b,Tags:[projectile,gun,20mm,gun-init,left1,tracer-lightblue,entity-nohit,offset-base,tracer]}
-execute if score #is-bullet vp.reg1 matches 0 unless score #is-tracer vp.reg1 matches 0 run summon minecraft:area_effect_cloud ~ ~ ~ {NoGravity:1b,Tags:[projectile,gun,20mm,gun-init,right1,tracer-lightblue,entity-nohit,offset-base],Duration:30}
-execute if score #is-bullet vp.reg1 matches 0 unless score #is-tracer vp.reg1 matches 0 run summon minecraft:area_effect_cloud ~ ~ ~ {NoGravity:1b,Tags:[projectile,gun,20mm,gun-init,left1,tracer-lightblue,entity-nohit,offset-base],Duration:30}
+execute if score #is-bullet vp.reg1 matches 0 unless score #is-tracer vp.reg1 matches 0 run summon minecraft:area_effect_cloud ~ ~ ~ {NoGravity:1b,Tags:[projectile,gun,20mm,gun-init,right1,tracer,tracer-lightblue,entity-nohit,offset-base],Duration:30}
+execute if score #is-bullet vp.reg1 matches 0 unless score #is-tracer vp.reg1 matches 0 run summon minecraft:area_effect_cloud ~ ~ ~ {NoGravity:1b,Tags:[projectile,gun,20mm,gun-init,left1,tracer,tracer-lightblue,entity-nohit,offset-base],Duration:30}
 
 #スコア付与
 scoreboard players set @e[tag=gun-init,distance=..5] vp.speed 75

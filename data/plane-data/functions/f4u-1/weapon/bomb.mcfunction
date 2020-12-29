@@ -1,5 +1,18 @@
-#爆弾投下
-#実行者：機体
+#> plane-data:f4u-1/weapon/bomb
+#
+# 爆弾投下
+#
+# @input
+#   execute @e[tag=plane-root]
+#
+# @within function plane-data:f4u-1/f4u1-weapon-manager
+
+#> private
+# @private
+    #declare tag bombing-executer #爆撃実行機体を示す
+    #declare tag drop-init #初期化処理中の爆弾であることを示す
+    #
+    #declare score_holder #plane-id #実行者のplane-idを示す
 
 #実行者タグ付け
 tag @s add bombing-executer
@@ -11,9 +24,6 @@ tag @e[tag=drop-init,distance=..20] add dropping
 
 #機体タグ削除
 tag @e[tag=drop-init,distance=..20] remove plane
-tag @e[tag=drop-init,distance=..20] remove plane-parts
-tag @e[tag=drop-init,distance=..20] remove has-offset
-tag @e[tag=drop-init,distance=..20] remove has-model
 
 #スコア付与
 scoreboard players operation @e[tag=drop-init,distance=..20] vp.speed = @s vp.speed
