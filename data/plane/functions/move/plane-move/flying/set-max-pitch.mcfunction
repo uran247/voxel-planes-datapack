@@ -1,7 +1,27 @@
+#> plane:move/plane-move/flying/set-max-pitch
+#
+# ピッチの変化量を設定
+# pitch-speed = pitch-speed * cos^2(roll) + yaw-speed * sin^2(roll)
+#
+# @input
+#   executer @e[tag=plane-root]
+#
+# @output
+#   score #max-pitch vp.return
+#       1tickにできる最大旋回角度
+#
+# @within
+#   function plane:move/plane-move/turn-rolling
+#   function plane:move/plane-move/turn-flying
+    #declare score_holder #max-pitch #1tickにできる最大旋回角度
+
+#> private
+# @private
+    #declare score_holder #yaw-speed #デフォルトのヨー速度を表す
+
 #ピッチの変化量を設定
 #input: entity:機体
 #return: スコア:#max-pitch vp.return
-#TODO: ピッチ速度をsin * vp.sin * yaw + vp.cos * vp.cos * pitchにする
 
 #yaw,roll,pitch速度取得
 scoreboard players operation #max-pitch vp.return = @s vp.pitch-speed

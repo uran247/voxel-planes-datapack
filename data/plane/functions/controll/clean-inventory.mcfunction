@@ -1,5 +1,10 @@
-#入力：entity プレイヤー
-#処理：アイテム欄を掃除して操作説明アイテムをセット
+#> plane:controll/clean-inventory
+#
+# アイテム欄を掃除して操作説明アイテムをセット
+# 装備品を剥がしてインベントリへ送る
+#
+# @input
+#   executer @p
 
 #ストレージ初期化
 data merge block 0 1 0 {Items:[]}
@@ -18,12 +23,14 @@ replaceitem entity @s armor.chest air
 replaceitem entity @s armor.legs air
 replaceitem entity @s armor.feet air
 
-#ストレージのスロットを書き換えシュルカーボックスに入れる
+#ストレージのスロットを書き換えチェストに入るようにする
 execute if data storage minecraft:plane-datapack Items[{Slot:100b}] run data modify storage minecraft:plane-datapack Items[{Slot:100b}].Slot set value 0b
 execute if data storage minecraft:plane-datapack Items[{Slot:101b}] run data modify storage minecraft:plane-datapack Items[{Slot:101b}].Slot set value 1b
 execute if data storage minecraft:plane-datapack Items[{Slot:102b}] run data modify storage minecraft:plane-datapack Items[{Slot:102b}].Slot set value 2b
 execute if data storage minecraft:plane-datapack Items[{Slot:103b}] run data modify storage minecraft:plane-datapack Items[{Slot:103b}].Slot set value 3b
 execute if data storage minecraft:plane-datapack Items[{Slot:-106b}] run data modify storage minecraft:plane-datapack Items[{Slot:-106b}].Slot set value 4b
+
+#ストレージをシュルカーボックスに入れる
 data modify block 0 1 0 Items set from storage minecraft:plane-datapack Items
 #tellraw @p [{"nbt":"Items","storage":"minecraft:plane-datapack"}] 
 

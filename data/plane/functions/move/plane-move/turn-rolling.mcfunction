@@ -1,8 +1,15 @@
-#### 角度変化量決定 ####
-#入力 entity:機体
-#処理 機体をangle-gapを打ち消すように旋回させる
+#> plane:move/plane-move/turn-rolling
+#
+# 機体をangle-gapを打ち消すように旋回させる
+#
+# @input
+#   executer @e[tag=plane-root,tag=!flying]
+#
+# @within function plane:move/plane-move
+    #declare score_holder #base-angle #機体の現在のY軸角度
+    #declare score_holder #change-ammount #現在のY軸旋回角度
 
-#radderがなかったら変化量は半分 撃墜されてたら変化量は0
+#radderがなかったら旋回角度は半分 撃墜されてたら0
 function plane:move/plane-move/flying/set-max-yaw
 scoreboard players operation #max-yaw vp.reg1 = #max-yaw vp.return
 
@@ -12,7 +19,11 @@ scoreboard players operation #delta-angle vp.input = @s vp.yaw-gap
 scoreboard players operation #base-angle vp.input = @s vp.AngY
 scoreboard players operation #change-ammount vp.input = #max-yaw vp.reg1
 function util:fill-angle-gap
+
+#yaw-gapをdelta-angle分減少
 scoreboard players operation @s vp.yaw-gap -= #delta-angle vp.return
+
+#delta-angleを現在のY軸角度に加算
 scoreboard players operation @s vp.AngY += #delta-angle vp.return
 
 #AngYを-18000 - 18000に補正

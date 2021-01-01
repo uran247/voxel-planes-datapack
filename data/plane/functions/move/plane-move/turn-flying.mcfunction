@@ -1,6 +1,19 @@
-#### 角度変化量決定 ####
-#入力 entity:機体
-#処理 機体をangle-gapを打ち消すように旋回させる
+#> plane:move/plane-move/turn-flying
+#
+# 機体をangle-gapを打ち消すように旋回させる
+#
+# @input
+#   executer @e[tag=plane-root,tag=!flying]
+#
+# @within function plane:move/plane-move
+    #declare score_holder #base-angle #機体の現在のY軸角度
+    #declare score_holder #change-ammount #現在のY軸旋回角度
+
+#> private
+# @private
+    #declare score_holder #yaw-gap #Y軸角度の目標角度と現在角度の差分
+    #declare score_holder #pitch-gap #X軸角度の目標角度と現在角度の差分
+    #declare score_holder #roll-speed #機体のロール速度
 
 #angle-gap取得
 scoreboard players operation #yaw-gap vp.reg1 = @s vp.yaw-gap
@@ -36,10 +49,10 @@ scoreboard players operation @s[tag=!stall] vp.AngX += #delta-angle vp.return
 
 #yawが変化してたらrollも変化(-9000..9000)
 scoreboard players operation #roll-speed vp.reg1 = @s vp.roll-speed
-execute if score #yaw-gap vp.reg1 matches -17800..-200 as @s[scores={vp.AngZ=-8999..},tag=!stall,tag=!destroyed] run scoreboard players operation @s vp.AngZ -= #roll-speed vp.reg1
-execute if score #yaw-gap vp.reg1 matches 300..17800 as @s[scores={vp.AngZ=..8999},tag=!stall,tag=!destroyed] run scoreboard players operation @s vp.AngZ += #roll-speed vp.reg1
-execute if score #yaw-gap vp.reg1 matches -17800..-200 as @s[scores={vp.AngZ=..-9000},tag=!stall,tag=!destroyed] run scoreboard players set @s vp.AngZ -9000
-execute if score #yaw-gap vp.reg1 matches 300..17800 as @s[scores={vp.AngZ=9000..},tag=!stall,tag=!destroyed] run scoreboard players set @s vp.AngZ 9000
+execute if score #yaw-gap vp.reg1 matches -17800..-200 as @s[tag=!stall,tag=!destroyed,scores={vp.AngZ=-8999..}] run scoreboard players operation @s vp.AngZ -= #roll-speed vp.reg1
+execute if score #yaw-gap vp.reg1 matches 300..17800 as @s[tag=!stall,tag=!destroyed,scores={vp.AngZ=..8999}] run scoreboard players operation @s vp.AngZ += #roll-speed vp.reg1
+execute if score #yaw-gap vp.reg1 matches -17800..-200 as @s[tag=!stall,tag=!destroyed,scores={vp.AngZ=..-9000}] run scoreboard players set @s vp.AngZ -9000
+execute if score #yaw-gap vp.reg1 matches 300..17800 as @s[tag=!stall,tag=!destroyed,scores={vp.AngZ=9000..}] run scoreboard players set @s vp.AngZ 9000
 
 #rollをもとに戻す
 execute if score #yaw-gap vp.reg1 matches -200..300 as @s[scores={vp.AngZ=1..18000}] at @s run scoreboard players operation @s vp.AngZ -= #roll-speed vp.reg1

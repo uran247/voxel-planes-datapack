@@ -5,7 +5,9 @@
 # @within tag/function minecraft:tick
 
 #> tag
-# @within plane:**
+# @within
+#   plane:**
+#   plane-data:**
     #declare tag has-rider #飛行機にパイロットがいるかどうか
     #declare tag plane-root #planeのrootを示すタグ
     #declare tag plane-rider #パイロットを示すタグ
@@ -41,4 +43,4 @@ tag @e[tag=position-processed] remove position-processed
 execute at @a run kill @e[type=item,nbt={Item:{tag:{volatile:1}}},distance=..32]
 
 #スポナー使用時に飛行機召喚
-execute if entity @e[type=bat,tag=plane-spawner] run function plane:summon/spawner-manager
+execute as @e[type=bat,tag=plane-spawner] run function plane:summon/spawner-manager

@@ -1,7 +1,14 @@
-#モデルの角度修正
-#入力　エンティティ：@s[tag=!angle-not-changed]　
-#処理　モデルとrootの角度を修正
-#返り
+#> plane:position/util/modify-angle
+#
+# モデルとrootの角度を修正
+#
+# @input
+#   executer @e[tag=plane-root,tag=!angle-not-changed]
+#
+# @within plane:position/position
+# @private
+    #declare score_holder #ang-x #モデルのピッチ角度
+    #declare score_holder #ang-z #モデルのロール角度
 
 #角度スコアが変化していた場合NBT補正(なぜかAngXを変更できなくなるバグ防止)
 execute as @e[tag=target-parts] run data merge entity @s {Pose:{RightArm:[0.0f,-90.0f,-102.0f]}}

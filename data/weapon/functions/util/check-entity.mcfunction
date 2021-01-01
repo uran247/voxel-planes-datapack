@@ -1,17 +1,31 @@
-#入力 entity:@e 0-0-0-0-4
-#処理：0-0-0-0-4と実行者の間にエンティティがいるかチェック
-#　　　実効最大半径25block、25block先でのチェック幅20b
-#　　　半径512の円で切り取り、25block先での精度：0.1block/幅10block
-#返り値：エンティティにhit-on-line付与
+#> weapon:util/check-entity
+#
+# エンティティの視線上にエンティティがいるかを調べる　最大半径25block
+# 直線状にいるエンティティにタグ付け
+#
+# @input
+#   executer @e
+#       視線主エンティティ
+#   entity 0-0-0-0-4
+#       視線終端点entity
+#
+# @output
+#   entity @e[tag=hit-on-line]
+#       直線状にいるエンティティ
+#
+# @public
 
-#実効者と目印にタグ付け
+#> private
+# @private
+    #declare tag check-executer #実行者を示す
+
+#実効者にタグ付け
 tag @s add check-executer
-
 
 #実効者-0-0-0-0-4の直線上にいるエンティティにタグ付け
 tp 0-0-0-0-b @s
 
-execute positioned ^ ^ ^12.5 as @e[tag=!check-executer,distance=..13] positioned as @s positioned ^ ^ ^1000 facing entity 0-0-0-0-b feet positioned ^ ^ ^1000 positioned ~-0.5 ~-0.5 ~-0.5 if entity @s[dx=1,dz=1,dy=1] run tag @s add hit-on-line
+execute positioned ^ ^ ^12.5 as @e[tag=!check-executer,distance=..13] positioned as @s positioned ^ ^ ^1000 facing entity 0-0-0-0-b feet positioned ^ ^ ^1000 positioned ~-0.5 ~-0.5 ~-0.5 if entity @s[dx=1,dy=1,dz=1] run tag @s add hit-on-line
 
 #実効者と目印にタグ削除
 tag @s remove check-executer

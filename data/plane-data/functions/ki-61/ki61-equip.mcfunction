@@ -13,7 +13,7 @@
 #   plane-data:ki-61/ki61-weapon-manager
        #declare tag mg151 #mg151機銃を装備していることを示す
        #declare tag has-bomb #爆弾を装備していることを示す
-       #declare tag 250kg-normal #250kg通常爆弾を装備していることを示す
+       #declare tag 250kg #250kg通常爆弾を装備していることを示す
 
 #> private
 # @private
@@ -26,7 +26,7 @@ execute store success score #250kg vp.reg1 if entity @e[type=minecraft:donkey,ta
 execute store success score #mg151 vp.reg1 if entity @e[type=minecraft:donkey,tag=target-parts,nbt={Items:[{tag:{item-type:mg151}}]},distance=..30]
 
 #初期タグ設定
-tag @s remove 250kg-normal
+tag @s remove 250kg
 tag @s remove has-bomb
 tag @s remove has-weapon3
 tag @s remove main-weapon3
@@ -34,7 +34,7 @@ tag @s remove mg151
 
 #装備
 execute if score #250kg vp.reg1 matches 1.. run tag @s add has-bomb
-execute if score #250kg vp.reg1 matches 1.. run tag @s add 250kg-normal
+execute if score #250kg vp.reg1 matches 1.. run tag @s add 250kg
 execute if score #250kg vp.reg1 matches 1.. run tag @s add has-weapon3
 execute if score #250kg vp.reg1 matches 1.. run tag @s add main-weapon3
 execute if score #mg151 vp.reg1 matches 1.. run tag @s add mg151
@@ -49,7 +49,7 @@ scoreboard players operation @s[tag=has-bomb] vp.weapon-types *= #5 vp.Num
 
 #装備済み爆弾削除
 scoreboard players set #kill-weapon vp.reg1 0
-execute if entity @s[tag=!250kg-normal] if entity @e[tag=target-parts,tag=250kg,tag=bomb-normal] run scoreboard players set #kill-weapon vp.reg1 1
+execute if entity @s[tag=!250kg] if entity @e[tag=target-parts,tag=250kg,tag=bomb-normal] run scoreboard players set #kill-weapon vp.reg1 1
 execute if score #kill-weapon vp.reg1 matches 1.. run kill @e[tag=target-parts,tag=plane-bomb]
 
 #弾薬リセット

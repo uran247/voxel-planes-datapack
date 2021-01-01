@@ -1,3 +1,21 @@
+#> plane:position/util/move-parts
+#
+# パーツを実行点+(vp.displacementX,vp.displacementY,vp.displacementZ)に移動
+#
+# @input
+#   executer @e[tag=has-offset,tag=target-parts]
+#   score @s vp.displacementX
+#   score @s vp.displacementY
+#   score @s vp.displacementZ
+#
+# @public
+
+#> private
+# @private
+    #declare score_holder #current-x #現在のx座標
+    #declare score_holder #current-y #現在のy座標
+    #declare score_holder #current-z #現在のz座標
+
 #パーツを移動
 #入力：entity　@e[plane-parts] score: @s displacementX,Y,Z
 

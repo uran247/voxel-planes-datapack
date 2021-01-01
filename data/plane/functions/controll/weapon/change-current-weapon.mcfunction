@@ -7,7 +7,7 @@
 # @input
 #   executer @e[tag=plane-root]
 #
-# @within plane:controll/weapon
+# @within plane:controll/weapon/switch-weapon
 
 #> private
 # @private

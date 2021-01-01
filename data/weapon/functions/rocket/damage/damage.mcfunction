@@ -1,3 +1,29 @@
+#> weapon:rocket/damage/damage
+#
+# hitしたエンティティにダメージを与える
+# 撃墜メッセージやダメージエフェクトを出す
+#
+# @input
+#   executer @e[tag=gun-move-executer]
+#   entity @e[tag=hit-weapon]
+#
+# @within weapon:rocket/rocket-manager
+#
+
+#> within
+# @within
+#   function weapon:rocket/damage/damage
+#   function weapon:rocket/damage/**
+    #declare tag enemy-target #撃墜するとメッセージが出るターゲットを示す
+
+#> private
+# @private
+    #declare tag rocket-owner #ロケットを発射したプレイヤーを示す
+    #
+    #declare score_holder #rocket-id #ロケットのplane-id
+    #declare score_holder #damage #与えるダメージ量 半径2増加するごとに半減
+
+
 #hitした周囲のエンティティにダメージを与える
 #撃墜メッセージやダメージエフェクトも出す
 #使えるタグ　rocket-move-executer：弾体  rocket-gunner:発射母体
@@ -51,24 +77,22 @@ execute as @e[tag=!entity-nohit,distance=..16] run function weapon:util/calc-ent
 ### メッセージ処理 ###
 #メッセージを表示(title)
 title @p[tag=rocket-owner] times 0 20 20
-execute as @e[tag=!entity-nohit,distance=..16,scores={vp.reg1=0},sort=nearest,limit=1] run function weapon:rocket/damage/set-kill-mob-message
-execute as @e[tag=!entity-nohit,distance=..16,scores={vp.reg1=0},tag=enemy-target,sort=nearest,limit=1] run function weapon:rocket/damage/set-kill-target-message
-execute if entity @e[tag=!entity-nohit,distance=..16,scores={vp.reg1=0}] run title @p[tag=rocket-owner] title {"text":""}
+#execute as @e[tag=!entity-nohit,scores={vp.reg1=0},distance=..16,sort=nearest,limit=1] run function weapon:rocket/damage/set-kill-mob-message
+#execute as @e[tag=enemy-target,tag=!entity-nohit,scores={vp.reg1=0},distance=..16,sort=nearest,limit=1] run function weapon:rocket/damage/set-kill-target-message
+execute if entity @e[tag=!entity-nohit,scores={vp.reg1=0},distance=..16] run title @p[tag=rocket-owner] title {"text":""}
 #メッセージを表示(tellraw)
 #execute if entity @e[tag=!entity-nohit,distance=..16] run function weapon:rocket/damage/hit-message
-execute as @e[tag=plane-hitbox,distance=..16,scores={vp.reg1=0}] run function weapon:util/destroy-hitbox-message
+execute as @e[tag=plane-hitbox,scores={vp.reg1=0},distance=..16] run function weapon:util/destroy-hitbox-message
 
 #撃墜者/クリアスコアをプラス
-execute as @p[tag=rocket-owner] run function weapon:rocket/damage/set-shotdown-score
+#execute as @p[tag=rocket-owner] run function weapon:rocket/damage/set-shotdown-score
 
 #ダメージ処理、破壊されたスポナーをキル
-execute as @e[tag=!entity-nohit,distance=..16,type=spawner_minecart] store result entity @s MaxNearbyEntities short 1 run scoreboard players get @s vp.reg1
-execute as @e[tag=!entity-nohit,distance=..16,type=!spawner_minecart,type=!player] store result entity @s Health short 1 run scoreboard players get @s vp.reg1
+execute as @e[type=spawner_minecart,tag=!entity-nohit,distance=..16] store result entity @s MaxNearbyEntities short 1 run scoreboard players get @s vp.reg1
+execute as @e[type=!spawner_minecart,type=!player,tag=!entity-nohit,distance=..16] store result entity @s Health short 1 run scoreboard players get @s vp.reg1
 execute as @a[tag=!entity-nohit,distance=..16] run scoreboard players operation @s vp.taken-damage -= @s vp.reg1
 execute as @a[tag=!entity-nohit,distance=..16] run function weapon:util/damage
-
-
-kill @e[tag=!entity-nohit,distance=..16,scores={vp.reg1=0},tag=enemy-target,type=spawner_minecart]
+#kill @e[type=spawner_minecart,tag=enemy-target,tag=!entity-nohit,scores={vp.reg1=0},distance=..16]
 
 #### ダメージ時エフェクト ####
 #命中地点にパーティクル

@@ -1,8 +1,20 @@
-#処理：装備の変更処理
-#入力：entity plane-root
+#> plane-data:g4m1/g4m1-equip
+#
+# 装備の変更処理
+# @input
+#   executer @e[tag=plane-root]
+#
+# @within function plane:equip/equip-manager
+
+#> private
+# @private
+    #declare score_holder #800kg #800kg爆弾アイテムを装備していることを示す
+    #declare score_holder #kill-weapon #現在装備中の爆弾を消すべきであるとのフラグ
+    #declare score_holder #remove-800kg #800kg爆弾を外したことを示す
+    #declare score_holder #remove-250kg #250kg爆弾を外したことを示す
 
 #装備品チェック
-execute store success score #800kg vp.reg1 if entity @e[distance=..30,type=minecraft:donkey,tag=target-parts,nbt={Items:[{tag:{item-type:800kg-bomb}}]}]
+execute store success score #800kg vp.reg1 if entity @e[type=minecraft:donkey,tag=target-parts,nbt={Items:[{tag:{item-type:800kg-bomb}}]},distance=..30]
 
 #初期タグ設定
 execute store success score #remove-800kg vp.reg1 run tag @s remove 800kg
@@ -33,4 +45,3 @@ execute if score #remove-250kg vp.reg1 matches 1.. run scoreboard players operat
 
 #ステータス変更
 #装備に応じて右記ステータス変更：最高速度　巡航速度　旋回力
-

@@ -1,7 +1,16 @@
-#plane:controll/rolling経由で実行　実行者/座標はplane-root
-#入力　エンティティ：機体
-#処理　向いてる方向の単位ベクトル計算
-#返り　スコア：@s speedX,@s speedY,@s speedZ
+#> math:vector
+#
+# 向いてる方向の単位ベクトル計算
+#
+# @input
+#   executer @e[tag=plane-root]
+#
+# @output
+#   score @s speedX #X方向の単位ベクトル
+#   score @s speedY #Y方向の単位ベクトル
+#   score @s speedZ #Z方向の単位ベクトル
+#
+# @public
 
 #向いてる方向に測距エンティティTP
 execute rotated as @s positioned 0.0 0.0 0.0 positioned ^ ^ ^1 run tp 0-0-0-0-1 ~ ~ ~ ~ ~

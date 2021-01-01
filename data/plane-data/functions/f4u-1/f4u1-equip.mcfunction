@@ -1,15 +1,25 @@
-#処理：装備の変更処理
-#入力：entity plane-root
+#> plane-data:f4u-1/f4u1-equip
+#
+# 装備の変更処理
+# @input
+#   executer @e[tag=plane-root]
+#
+# @within function plane:equip/equip-manager
+
+#> private
+# @private
+    #declare score_holder #1000lb #1000lb爆弾アイテムを装備していることを示す
+    #declare score_holder #ag-rocket #ag-rocket爆弾アイテムを装備していることを示す
+    #declare score_holder #kill-weapon #現在装備中の爆弾を消すべきであるとのフラグ
 
 #装備品チェック
-execute store success score #1000lb vp.reg1 if entity @e[distance=..30,type=minecraft:donkey,tag=target-parts,nbt={Items:[{tag:{item-type:1000lb-bomb}}]}]
-execute store success score #ag-rocket vp.reg1 if entity @e[distance=..30,type=minecraft:donkey,tag=target-parts,nbt={Items:[{tag:{item-type:ag-rocket}}]}]
+execute store success score #1000lb vp.reg1 if entity @e[type=minecraft:donkey,tag=target-parts,nbt={Items:[{tag:{item-type:1000lb-bomb}}]},distance=..30]
+execute store success score #ag-rocket vp.reg1 if entity @e[type=minecraft:donkey,tag=target-parts,nbt={Items:[{tag:{item-type:ag-rocket}}]},distance=..30]
 
 #初期タグ設定
-tag @s remove 1000lb-normal
+tag @s remove 1000lb
 tag @s remove has-bomb
 tag @s remove has-rocket
-tag @s remove rocket-normal
 tag @s remove has-weapon2
 tag @s remove main-weapon2
 tag @s remove has-weapon3
@@ -17,11 +27,10 @@ tag @s remove main-weapon3
 
 #装備
 execute if score #1000lb vp.reg1 matches 1.. run tag @s add has-bomb
-execute if score #1000lb vp.reg1 matches 1.. run tag @s add 1000lb-normal
+execute if score #1000lb vp.reg1 matches 1.. run tag @s add 1000lb
 execute if score #1000lb vp.reg1 matches 1.. run tag @s add has-weapon2
 execute if score #1000lb vp.reg1 matches 1.. run tag @s add main-weapon2
 execute if score #ag-rocket vp.reg1 matches 1.. run tag @s add has-rocket
-execute if score #ag-rocket vp.reg1 matches 1.. run tag @s add rocket-normal
 execute if score #ag-rocket vp.reg1 matches 1.. run tag @s add has-weapon3
 execute if score #ag-rocket vp.reg1 matches 1.. run tag @s add main-weapon3
 
@@ -36,8 +45,8 @@ scoreboard players operation @s[tag=has-rocket] vp.weapon-types *= #5 vp.Num
 
 #装備済み爆弾削除
 scoreboard players set #kill-weapon vp.reg1 0
-execute if entity @s[tag=!1000lb-normal] if entity @e[tag=target-parts,tag=1000lb,tag=bomb-normal] run scoreboard players set #kill-weapon vp.reg1 1
-execute if entity @s[tag=!rocket-normal] if entity @e[tag=target-parts,tag=rocket-normal] run scoreboard players set #kill-weapon vp.reg1 1
+execute if entity @s[tag=!1000lb] if entity @e[tag=target-parts,tag=1000lb,tag=bomb-normal] run scoreboard players set #kill-weapon vp.reg1 1
+execute if entity @s[tag=!has-rocket] if entity @e[tag=target-parts,tag=has-rocket] run scoreboard players set #kill-weapon vp.reg1 1
 execute if score #kill-weapon vp.reg1 matches 1.. run kill @e[tag=target-parts,tag=plane-bomb]
 execute if score #kill-weapon vp.reg1 matches 1.. run kill @e[tag=target-parts,tag=plane-rocket]
 

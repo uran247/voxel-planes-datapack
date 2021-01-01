@@ -1,6 +1,34 @@
-#オフセット位置を計算
-#入力：entity: target score:@s vp.input1:AngZ #calc-offset-move vp.input1:move or not(default 1)
-#実行者：パーツ　実行位置：パーツ score: @s new-offsetX,Y,Z
+#> plane:position/calc-offset
+#
+# オフセット位置を計算
+# ^vp.displacementX ^vp.displacementY ^vp.displacementZを計算
+# (displacementX,displacementY,displacementZ) = offsetX*unit_vecttorX + offsetY*unit_vecttorY + offsetZ*unit_vecttorZ
+#
+# @input
+#   executer @e[tag=has-offset,tag=target-parts]
+#   position @e[tag=has-offset,tag=target-parts] rotated ~-90 ~
+#   score @s vp.new-offsetX
+#   score @s vp.new-offsetY
+#   score @s vp.offsetZ
+#
+# @output
+#   score @s vp.displacementX
+#   score @s vp.displacementY
+#   score @s vp.displacementZ
+#
+# @public
+
+#> private
+# @private
+    #declare score_holder #x-direction-dx #x軸方向の単位ベクトルx
+    #declare score_holder #x-direction-dy #x軸方向の単位ベクトルy
+    #declare score_holder #x-direction-dz #x軸方向の単位ベクトルz
+    #declare score_holder #y-direction-dx #y軸方向の単位ベクトルx
+    #declare score_holder #y-direction-dy #y軸方向の単位ベクトルy
+    #declare score_holder #y-direction-dz #y軸方向の単位ベクトルz
+    #declare score_holder #z-direction-dx #z軸方向の単位ベクトルx
+    #declare score_holder #z-direction-dy #z軸方向の単位ベクトルy
+    #declare score_holder #z-direction-dz #z軸方向の単位ベクトルz
 
 
 #座標取得エンティティtp
@@ -10,7 +38,6 @@ execute positioned 0.0 0.0 0.0 positioned ^ ^ ^1 run tp 0-0-0-0-3 ~ ~ ~
 #tellraw @p [{"nbt":"Pos[0]","entity":"0-0-0-0-6"},{"nbt":"Pos[1]","entity":"0-0-0-0-6"},{"nbt":"Pos[2]","entity":"0-0-0-0-6"}] 
 #tellraw @p [{"nbt":"Pos[0]","entity":"0-0-0-0-2"},{"nbt":"Pos[1]","entity":"0-0-0-0-2"},{"nbt":"Pos[2]","entity":"0-0-0-0-2"}] 
 #tellraw @p [{"nbt":"Pos[0]","entity":"0-0-0-0-3"},{"nbt":"Pos[1]","entity":"0-0-0-0-3"},{"nbt":"Pos[2]","entity":"0-0-0-0-3"}] 
-
 
 #座標計算
 #X方向のベクトル算出

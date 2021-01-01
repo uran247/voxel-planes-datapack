@@ -7,13 +7,6 @@
 # @within function plane:equip/equip-manager
 #
 
-#> within
-# @within
-#   plane-data:ki-43/ki-43-equip
-#   plane-data:ki-43/ki43-weapon-manager
-       #declare tag 12p7mm #12.7mm機銃を装備していることを示す
-       #declare tag 7p7mm #7.7mm機銃を装備していることを示す
-
 #> private
 # @private
     #declare score_holder #12p7mm-gun #12.7mm機銃アイテムを装備していることを示す

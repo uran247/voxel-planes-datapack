@@ -1,9 +1,27 @@
-#ヨーの変化量を設定
-#input: entity:機体
-#処理：#max-yaw = yaw-speed * (1-speedy^16) + roll-speed * speedy^16
-#return: スコア:#max-yaw vp.return
-#TODO: ピッチ速度をsin * vp.sin * pitch + vp.cos * vp.cos * yawにする
+#> plane:move/plane-move/flying/set-max-yaw
+#
+# ヨーの変化量を設定
+# yaw-speed = pitch-speed * sin^2(roll) + yaw-speed * cos^2(roll)
+# #max-yaw = yaw-speed * (1-speedy^16) + roll-speed * speedy^16
+#
+# @input
+#   executer @e[tag=plane-root,tag=!flying]
+#
+# @output
+#   score #max-yaw vp.return
+#       1tickにできる最大旋回角度
+#
+# @within
+#   function plane:move/plane-move/turn-rolling
+#   function plane:move/plane-move/turn-flying
+    #declare score_holder #max-yaw #1tickにできる最大旋回角度
 
+#> private
+# @private
+    #declare score_holder #pitch-speed #デフォルトのピッチ速度を表す
+    #declare score_holder #roll-spped #デフォルトのロール速度を表す
+    #declare score_holder #pow16speedy #Y方向単位ベクトルの16乗を示す
+    #declare score_holder #1-pow16speedy #1-Y方向単位ベクトル^16を示す
 
 #yaw,roll,pitch速度取得
 scoreboard players operation #max-yaw vp.return = @s vp.yaw-speed
@@ -34,21 +52,21 @@ scoreboard players operation #max-yaw vp.return /= #1000 vp.Num
 scoreboard players operation #max-yaw vp.return += #pitch-speed vp.reg1
 
 ## Pitch角に合わせてRollとyawをスワップ
-#speedy絶対値取得
-scoreboard players operation #abs-speedy vp.reg1 = @s vp.speedY
-scoreboard players operation #abs-speedy vp.reg1 *= @s vp.speedY
-scoreboard players operation #abs-speedy vp.reg1 /= #100 vp.Num
-scoreboard players operation #abs-speedy vp.reg1 *= #abs-speedy vp.reg1 
-scoreboard players operation #abs-speedy vp.reg1 /= #100 vp.Num
-scoreboard players operation #abs-speedy vp.reg1 *= #abs-speedy vp.reg1 
-scoreboard players operation #abs-speedy vp.reg1 /= #100 vp.Num
-scoreboard players operation #abs-speedy vp.reg1 *= #abs-speedy vp.reg1 
+#speedy^16取得
+scoreboard players operation #pow16speedy vp.reg1 = @s vp.speedY
+scoreboard players operation #pow16speedy vp.reg1 *= @s vp.speedY
+scoreboard players operation #pow16speedy vp.reg1 /= #100 vp.Num
+scoreboard players operation #pow16speedy vp.reg1 *= #pow16speedy vp.reg1 
+scoreboard players operation #pow16speedy vp.reg1 /= #100 vp.Num
+scoreboard players operation #pow16speedy vp.reg1 *= #pow16speedy vp.reg1 
+scoreboard players operation #pow16speedy vp.reg1 /= #100 vp.Num
+scoreboard players operation #pow16speedy vp.reg1 *= #pow16speedy vp.reg1 
 
 #sin vp.cosかける
-scoreboard players operation #roll-spped vp.reg1 *= #abs-speedy vp.reg1
-scoreboard players set #1-speedy vp.reg1 10000
-scoreboard players operation #1-speedy vp.reg1 -= #abs-speedy vp.reg1
-scoreboard players operation #max-yaw vp.return *= #1-speedy vp.reg1
+scoreboard players operation #roll-spped vp.reg1 *= #pow16speedy vp.reg1
+scoreboard players set #1-pow16speedy vp.reg1 10000
+scoreboard players operation #1-pow16speedy vp.reg1 -= #pow16speedy vp.reg1
+scoreboard players operation #max-yaw vp.return *= #1-pow16speedy vp.reg1
 
 #足して1000で割る
 scoreboard players operation #max-yaw vp.return += #roll-spped vp.reg1

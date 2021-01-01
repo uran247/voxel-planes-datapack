@@ -1,6 +1,18 @@
-#入力：entity [tag=plane-hitbox,scores={vp.reg1=0}]
-#処理：パーツが破壊されたことを持ち主に表示
-#戻り：
+#> weapon:util/destroy-hitbox-message
+#
+# パーツが破壊されたことを持ち主に表示
+#
+# @input
+#   executer @e[tag=plane-hitbox,scores={vp.reg1=0}]
+#
+# @within weapon:**
+#
+
+#> private
+# @private
+    #declare tag parts-owner #パーツの持ち主を示す
+    #
+    #declare score_holder #parts-id #パーツのplane-idを示す
 
 #持ち主判定
 scoreboard players operation #parts-id vp.reg1 = @s vp.plane-id

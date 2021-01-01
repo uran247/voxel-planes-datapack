@@ -1,6 +1,25 @@
-##ピッチによって減速量調整 上向き：#deaccelerate*#speedY/100 下向き：#resistance*#speedY/200
-#入力 entity:機体　score:#speedY vp.input, #deaccelerate vp.input, #resistance vp.input
-#返り score #base-deaccelerate vp.return
+#> plane:move/plane-move/set-base-deaccelerate
+#
+# ピッチによって減速量調整 上向き：#deaccelerate*#speedY/100 下向き：#resistance*#speedY/200
+# 最低値はresistancenの半分
+#
+# @input
+#   score #speedY vp.input
+#       現在のY方向の単位ベクトル
+#   score #deaccelerate vp.input
+#       角度による減速量
+#   score #resistance vp.input
+#       空気抵抗
+#
+# @output
+#   score #base-resistance vp.return
+#       現在の空気抵抗
+#
+# @within
+#   function plane:move/plane-move/rolling
+#   function plane:move/plane-move/flying
+    #declare score_holder #base-deaccelerate #現在の原則料
+
 execute if score #speedY vp.input matches 0.. run scoreboard players operation #base-deaccelerate vp.return = #deaccelerate vp.input
 execute if score #speedY vp.input matches 0.. run scoreboard players operation #base-deaccelerate vp.return *= #speedY vp.input
 execute if score #speedY vp.input matches 0.. run scoreboard players operation #base-deaccelerate vp.return /= #100 vp.Num

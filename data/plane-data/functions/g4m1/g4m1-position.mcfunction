@@ -1,9 +1,14 @@
-#角度スコアを航空機に反映する、パーツの位置を調整する
-#実行方法:execute as @e[tag=g4m1-root] at @s run function plane:position/g4m1-position
-#実行者：機体　実行位置：機体
+#> plane-data:g4m1/g4m1-position
+#
+# plane-seatの位置を調整する
+#
+# @input
+#   executer @e[tag=plane-root]
+#
+# @within plane:position/position
 
 #seatの位置修正
-execute at @s[tag=has-rider] run tp @e[tag=plane-seat,tag=target-parts,type=armor_stand] ^ ^2.5 ^-5
+execute at @s[tag=has-rider] run tp @e[type=armor_stand,tag=plane-seat,tag=target-parts] ^ ^2.5 ^-5
 execute at @s[tag=!has-rider] run tp @e[tag=plane-seat,tag=target-parts] ^0.5 ^0.7 ^8
 
 #爆弾装備タグがついていて爆弾が0なら召喚 爆弾召喚無しのため機動力補正のみつける

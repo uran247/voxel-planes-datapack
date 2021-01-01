@@ -1,11 +1,27 @@
-#飛行中の機体について、プレイヤーの入力に応じて機体の角度/速度スコアを変更する
-#実行者はプレイヤー　plane:controll/controll経由で実行　操作対象の機体にはcontroll-targetタグがついている
-#入力：　エンティティ：プレイヤー　座標：機体　タグ：controll-target controll-parts
-#ふぃくしょん方式
+#> plane:controll/flying
+#
+# 飛行中の機体について、プレイヤーの入力に応じて機体の角度/速度スコアを変更する
+# ふぃくしょん方式
+#
+# @input
+#   entity @p
+#   position @e[tag=plane-toor,tag=controll-target]
+#
+# @output
+#   score @e[tag=controll-target] vp.yaw-gap
+#       Y軸の現在の機体の角度とプレイヤーが向いている角度の差分
+#
+# @within function plane:controll/plane-controll
+
+#> private
+# @private
+    #declare tag overlook #旋回をロックしていることを示す
+    #declare score_holder #source-rot #プレイヤーの向いている角度[degree*100]を示す
+    #declare score_holder #target-rot #機体の向いている角度[degree*100]を示す
+    #declare score_holder #defference #Y軸の現在の機体の角度とプレイヤーが向いている角度の差分を示す
 
 #周囲見渡しスロットを選択してたらタグ付け
 tag @s[scores={vp.key-input=8}] add overlook
-
 
 #プレイヤーが右を向いているか左を向いているか取得(0未満なら左、0以上なら右)
 execute store result score #source-rot vp.input run data get entity @s Rotation[0] 100
@@ -31,7 +47,7 @@ execute as @e[tag=controll-target,distance=..1,limit=1] run scoreboard players o
 scoreboard players set @e[tag=controll-target,tag=destroyed,distance=..1,limit=1] vp.throttle 0
 
 #1ブロック下が空気以外かつspeedがギア引き出し速度未満、失速してない、throttlが50%未満ならならなら着陸モードへ
-execute as @e[tag=controll-target,distance=..1,limit=1,tag=!stall,tag=!destroyed,scores={vp.throttle=..10}] at @s if score @s vp.gear-po-max > @s vp.speed unless block ~ ~-1 ~ minecraft:air run function plane:controll/flying/landing
+execute as @e[tag=controll-target,tag=!stall,tag=!destroyed,scores={vp.throttle=..10},distance=..1,limit=1] at @s if score @s vp.gear-po-max > @s vp.speed unless block ~ ~-1 ~ minecraft:air run function plane:controll/flying/landing
 
 #周囲見渡しタグ削除
 tag @s[tag=overlook] remove overlook

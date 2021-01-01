@@ -1,5 +1,23 @@
-#ロール角度に応じた変位計算 変位=^(x*cosθ-y*sinθ) ^(y*cosθ+x*sinθ) ^z
-#入力 entity: target, score: #sin vp.reg1 #cos vp.reg1
+#> plane:position/util/calc-displacement
+#
+# ロール角度に応じたオフセット計算 x:(x*cosθ-y*sinθ) y:(y*cosθ+x*sinθ)
+# オフセット座標は^x ^y ^zになる
+#
+# @input
+#   executer @e[tag=plane-root]
+#   score #sin vp.reg1
+#   score #cos vp.reg1
+#
+# @output
+#   score @s vp.new-offsetX
+#   score @s vp.new-offsetY
+#
+# @public 
+
+#> private
+# @private
+    #declare score_holder #sin-x-offsetX #X方向のオフセット
+    #declare score_holder #sin-x-offsetY #Y方向のオフセット
 
 #displacement算出
 #tellraw @p [{"score" : {"name":"#cos", "objective":"vp.reg1"}}, {"text":" "}, {"score" : {"name":"#sin", "objective":"vp.reg1"}}]

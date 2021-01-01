@@ -1,5 +1,14 @@
-#処理：rootにparam-corスコアの合計値を入れる
-#入力：entity: plane-root
+#> plane:position/util/get-corret-param
+#
+# rootにparam-corスコアの合計値を入れる
+#
+# @input
+#   executer @e[tag=plane-root]
+#   position @e[tag=plane-root]
+#
+# @within plane:position/position
+#
+
 scoreboard players set @s vp.max-speed-cor 0
 scoreboard players operation @s vp.max-speed-cor += @e[tag=target-parts,distance=..30] vp.max-speed-cor
 

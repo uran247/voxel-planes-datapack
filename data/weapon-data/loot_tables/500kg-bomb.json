@@ -21,7 +21,7 @@
                         },
                         {
                             "function": "minecraft:set_nbt",
-                            "tag":"{CustomModelData:3,item-type:500kg-bomb}"
+                            "tag":"{CustomModelData:9,item-type:500kg-bomb}"
                         },
                         {
                             "function": "minecraft:set_attributes",

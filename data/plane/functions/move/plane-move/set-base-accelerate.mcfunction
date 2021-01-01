@@ -1,6 +1,22 @@
-#基本加速量決定 throttle*accelerate/20
-#入力 #accelerate vp.input, #throttle vp.input
-#返り score #base-accelerate vp.return
+#> plane:move/plane-move/set-base-accelerate
+#
+# 基本加速量決定 throttle*accelerate/20
+#
+# @input
+#   #accelerate vp.input
+#       基本加速度
+#   #throttle vp.input
+#       現在のスロットル
+#
+# @output
+#   #base-accelerate vp.return
+#       現在の加速度
+#
+# @within
+#   function plane:move/plane-move/rolling
+#   function plane:move/plane-move/flying
+    #declare score_holder #base-accelerate #現在の加速度
+
 scoreboard players operation #base-accelerate vp.return = #accelerate vp.input
 scoreboard players operation #base-accelerate vp.return += #accelerate-cor vp.input
 scoreboard players operation #base-accelerate vp.return *= #throttle vp.input

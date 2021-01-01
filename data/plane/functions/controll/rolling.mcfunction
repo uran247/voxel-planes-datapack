@@ -1,5 +1,23 @@
-#滑走中の機体について、プレイヤーの入力に応じて機体の角度/速度スコアを変更する
-#入力：　エンティティ：プレイヤー　座標：機体　タグ：controll-target controll-parts
+#> plane:controll/rolling
+#
+# 滑走中の機体について、プレイヤーの入力に応じて機体の角度/速度スコアを変更する
+#
+# @input
+#   entity @p
+#   position @e[tag=plane-toor,tag=controll-target]
+#
+# @output
+#   score @e[tag=controll-target] vp.yaw-gap
+#       Y軸の現在の機体の角度とプレイヤーが向いている角度の差分
+#
+# @within function plane:controll/plane-controll
+
+#> private
+# @private
+    #declare tag overlook #旋回をロックしていることを示す
+    #declare score_holder #source-rot #プレイヤーの向いている角度[degree*100]を示す
+    #declare score_holder #target-rot #機体の向いている角度[degree*100]を示す
+    #declare score_holder #defference #Y軸の現在の機体の角度とプレイヤーが向いている角度の差分を示す
 
 #周囲見渡しスロットを選択してたらタグ付け
 tag @s[scores={vp.key-input=8}] add overlook

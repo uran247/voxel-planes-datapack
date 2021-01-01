@@ -5,10 +5,15 @@
 #
 # @within function weapon:tick
 
+#> within
+# @within
+#   weapon:gun/**
+#   weapon:util/**
+    #declare tag hit-weapon #武器がヒットしたエンティティにつく
+
 #> private
 # @private
     #declare tag gun-move-executer #実行者につくタグ
-    #declare tag hit-weapon #武器がヒットしたエンティティにつく
     #declare tag tracer-lightblue #曳光弾
     #declare tag tracer-orange #曳光弾
     #declare tag tracer-yellow #曳光弾
@@ -30,6 +35,7 @@ scoreboard players set #hit-flag vp.reg1 0
 
 #### 移動&ヒット判定 ####
 #ベクトル方向へエンティティの向きを向ける
+execute unless entity 0-0-0-0-4 run summon minecraft:armor_stand 0 1 0 {NoGravity:1b,Marker:1b,Invisible:1b,Tags:[entity-nohit,block,axis,block-detector,"4"],UUID:[I;0,0,0,4],Invulnerable:1b}
 tp 0-0-0-0-4 ~ ~ ~ ~ ~
 data modify storage minecraft:plane-datapack temporary.Pos set from entity @s Pos
 execute store result score #pos-x vp.reg1 run data get storage minecraft:plane-datapack temporary.Pos[0] 100
@@ -80,7 +86,7 @@ execute if score #hit-flag vp.reg1 matches 1.. at @s run particle minecraft:expl
 #hitしてたら弾を削除
 execute if score #hit-flag vp.reg1 matches 1.. run kill @s
 
-#age減算、０になったら削除
+#age減算、0になったら削除
 scoreboard players add @s vp.age 1
 execute if score @s[type=armor_stand] vp.age > @s vp.max-age run kill @s
 #tellraw @p [{"score" : {"name":"@s", "objective":"age"}}]

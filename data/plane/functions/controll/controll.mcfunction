@@ -4,8 +4,12 @@
 # 実行例:execute as @a[nbt={RootVehicle:{Entity:{Tags:[plane-root]}}}] at @s run function plane:controll/controll
 # 実行者：プレイヤー
 #
+# @input
+#   executer @p
+#
 # @within
 #   plane:tick
+#
 
 #> a
 # @within function plane:controll/**

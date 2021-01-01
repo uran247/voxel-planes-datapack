@@ -1,6 +1,33 @@
-#基本減速量決定 speed*resistance/cruise-speed
-#入力 #speed vp.input, #cruise-speed vp.input, #resistance vp.input, #energy-loss vp.input, #ang-z vp.input
-#返り score #base-resistance vp.return
+#> plane:move/plane-move/set-base-resistance
+#
+# 基本減速量決定 speed*resistance/cruise-speed
+# 最低値はresistancenの半分
+#
+# @input
+#   score #speed vp.input
+#       現在の速度
+#   score #cruise-speed vp.input
+#       巡航速度
+#   score #resistance vp.input
+#       空気抵抗
+#   score #energy-loss vp.input
+#       エネルギーロス値
+#   score #ang-z vp.input
+#       現在のロール角
+#
+# @output
+#   score #base-resistance vp.return
+#       現在の空気抵抗
+#
+# @within
+#   function plane:move/plane-move/rolling
+#   function plane:move/plane-move/flying
+    #declare score_holder #base-resistance #現在の空気抵抗
+
+#> private
+# @private
+    #declare score_holder #min-registance #最低空気抵抗
+
 scoreboard players operation #base-resistance vp.return = #speed vp.input
 scoreboard players operation #base-resistance vp.return *= #resistance vp.input
 scoreboard players operation #base-resistance vp.return /= #cruise-speed vp.input

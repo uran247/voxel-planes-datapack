@@ -1,3 +1,23 @@
+#> plane:controll/plane-info
+#
+# スコア情報をActionbarに表示
+#
+# @input
+#   executer @e[tag=plane-root,tag=controll-target]
+#
+# @within function plane:controll/controll
+
+#> private
+# @private
+    #declare score_holder #speed #飛行機の現在速度を示す
+    #declare score_holder #throttle #飛行機の現在スロットルを示す
+    #declare score_holder #altitude #飛行機の現在高度を示す
+    #declare score_holder #ammunition1 #飛行機の武器1の弾薬を示す
+    #declare score_holder #ammunition2 #飛行機の武器2の弾薬を示す
+    #declare score_holder #ammunition3 #飛行機の武器3の弾薬を示す
+    #declare score_holder #ammunition4 #飛行機の武器4の弾薬を示す
+    #declare score_holder #ammunition5 #飛行機の武器5の弾薬を示す
+
 #### スコア情報をActionbarに表示 ####
 #入力：entity 機体
 

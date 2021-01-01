@@ -1,6 +1,13 @@
-#flyingタグで実行するfunctionを選別
-#飛行機を動かすファンクション
-#条件:tickで実行 execute as @e[type=armor_stand,tag=plane-root,scores={speed=1..}] at @s run function plane:move/move
+#> plane:move/plane-move
+#
+# 飛行機の移動を実行
+#
+# @input
+#   executer @e[tag=plane-root,scores={speed=1..}]
+#
+# @within plane:plane-manager
+    #declare tag plane-move-executer #操作対象飛行機のルートであることを示す
+#
 
 #実行者にタグ付け
 tag @s add plane-move-executer

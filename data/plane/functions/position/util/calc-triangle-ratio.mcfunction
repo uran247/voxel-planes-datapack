@@ -1,13 +1,18 @@
 #> plane:position/util/calc-triangle-ratio
 #
-# sinとcosを計算してhas-offsetに代入
-# 入力：entity: plane-root
-# 返り：score #sin vp.return, #cos vp.return
+# sinとcosを計算
 #
-# @public
+# @input
+#   executer @e[tag=plane-root]
+#
 # @output
 #   score #sin vp.reg1
+#       sinの値
 #   score #cos vp.reg1
+#       cosの値
+#
+# @public
+
 
 #>
 # @within

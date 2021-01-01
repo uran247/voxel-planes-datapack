@@ -1,8 +1,20 @@
-#処理：装備の変更処理
-#入力：entity plane-root
+#> plane-data:ki-49/ki49-equip
+#
+# 装備の変更処理
+# @input
+#   executer @e[tag=plane-root]
+#
+# @within function plane:equip/equip-manager
+
+#> private
+# @private
+    #declare score_holder #500kg #500kg爆弾アイテムを装備していることを示す
+    #declare score_holder #kill-weapon #現在装備中の爆弾を消すべきであるとのフラグ
+    #declare score_holder #remove-500kg #800kg爆弾を外したことを示す
+    #declare score_holder #remove-250kg #250kg爆弾を外したことを示す
 
 #装備品チェック
-execute store success score #500kg vp.reg1 if entity @e[distance=..30,type=minecraft:donkey,tag=target-parts,nbt={Items:[{tag:{item-type:500kg-bomb}}]}]
+execute store success score #500kg vp.reg1 if entity @e[type=minecraft:donkey,tag=target-parts,nbt={Items:[{tag:{item-type:500kg-bomb}}]},distance=..30]
 
 #初期タグ設定
 execute store success score #remove-500kg vp.reg1 run tag @s remove 500kg

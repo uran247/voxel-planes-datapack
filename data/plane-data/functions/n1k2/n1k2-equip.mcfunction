@@ -1,18 +1,28 @@
-#処理：装備の変更処理
-#入力：entity plane-root
+#> plane-data:n1k2/n1k2-equip
+#
+# 装備の変更処理
+# @input
+#   executer @e[tag=plane-root]
+#
+# @within function plane:equip/equip-manager
+
+#> private
+# @private
+    #declare score_holder #250kg #250kg爆弾アイテムを装備していることを示す
+    #declare score_holder #kill-weapon #現在装備中の爆弾を消すべきであるとのフラグ
 
 #装備品チェック
-execute store success score #250kg vp.reg1 if entity @e[distance=..30,type=minecraft:donkey,tag=target-parts,nbt={Items:[{tag:{item-type:250kg-bomb}}]}]
+execute store success score #250kg vp.reg1 if entity @e[type=minecraft:donkey,tag=target-parts,nbt={Items:[{tag:{item-type:250kg-bomb}}]},distance=..30]
 
 #初期タグ設定
-tag @s remove 250kg-normal
+tag @s remove 250kg
 tag @s remove has-bomb
 tag @s remove has-weapon2
 tag @s remove main-weapon2
 
 #装備
 execute if score #250kg vp.reg1 matches 1.. run tag @s add has-bomb
-execute if score #250kg vp.reg1 matches 1.. run tag @s add 250kg-normal
+execute if score #250kg vp.reg1 matches 1.. run tag @s add 250kg
 execute if score #250kg vp.reg1 matches 1.. run tag @s add has-weapon2
 execute if score #250kg vp.reg1 matches 1.. run tag @s add main-weapon2
 
@@ -25,7 +35,7 @@ scoreboard players operation @s[tag=has-bomb] vp.weapon-types *= #3 vp.Num
 
 #装備済み爆弾削除
 scoreboard players set #kill-weapon vp.reg1 0
-execute if entity @s[tag=!250kg-normal] if entity @e[tag=target-parts,tag=250kg,tag=bomb-normal] run scoreboard players set #kill-weapon vp.reg1 1
+execute if entity @s[tag=!250kg] if entity @e[tag=target-parts,tag=250kg,tag=bomb-normal] run scoreboard players set #kill-weapon vp.reg1 1
 execute if score #kill-weapon vp.reg1 matches 1.. run kill @e[tag=target-parts,tag=plane-bomb]
 
 #弾薬リセット
