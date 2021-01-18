@@ -95,28 +95,29 @@ scoreboard players set @e[tag=body,tag=plane-init] vp.offsetY 0
 scoreboard players set @e[tag=body,tag=plane-init] vp.offsetZ 0
 scoreboard players set @e[tag=engine,tag=plane-init] vp.offsetX 0
 scoreboard players set @e[tag=engine,tag=plane-init] vp.offsetY 0
-scoreboard players set @e[tag=engine,tag=plane-init] vp.offsetZ 2700
+scoreboard players set @e[tag=engine,tag=plane-init] vp.offsetZ 3000
 scoreboard players set @e[tag=aileron-r,tag=plane-init] vp.offsetX -3200
-scoreboard players set @e[tag=aileron-r,tag=plane-init] vp.offsetY -300
-scoreboard players set @e[tag=aileron-r,tag=plane-init] vp.offsetZ 900
+scoreboard players set @e[tag=aileron-r,tag=plane-init] vp.offsetY 0
+scoreboard players set @e[tag=aileron-r,tag=plane-init] vp.offsetZ 500
 scoreboard players set @e[tag=aileron-l,tag=plane-init] vp.offsetX 3200
-scoreboard players set @e[tag=aileron-l,tag=plane-init] vp.offsetY -300
-scoreboard players set @e[tag=aileron-l,tag=plane-init] vp.offsetZ 900
+scoreboard players set @e[tag=aileron-l,tag=plane-init] vp.offsetY 0
+scoreboard players set @e[tag=aileron-l,tag=plane-init] vp.offsetZ 500
 scoreboard players set @e[tag=elevator-r,tag=plane-init] vp.offsetX -1300
-scoreboard players set @e[tag=elevator-r,tag=plane-init] vp.offsetY 0
-scoreboard players set @e[tag=elevator-r,tag=plane-init] vp.offsetZ -3800
+scoreboard players set @e[tag=elevator-r,tag=plane-init] vp.offsetY 500
+scoreboard players set @e[tag=elevator-r,tag=plane-init] vp.offsetZ -5000
 scoreboard players set @e[tag=elevator-l,tag=plane-init] vp.offsetX 1300
-scoreboard players set @e[tag=elevator-l,tag=plane-init] vp.offsetY 0
-scoreboard players set @e[tag=elevator-l,tag=plane-init] vp.offsetZ -3800
+scoreboard players set @e[tag=elevator-l,tag=plane-init] vp.offsetY 500
+scoreboard players set @e[tag=elevator-l,tag=plane-init] vp.offsetZ -5000
 scoreboard players set @e[tag=radder,tag=plane-init] vp.offsetX 0
-scoreboard players set @e[tag=radder,tag=plane-init] vp.offsetY 800
-scoreboard players set @e[tag=radder,tag=plane-init] vp.offsetZ -4200
+scoreboard players set @e[tag=radder,tag=plane-init] vp.offsetY 1300
+scoreboard players set @e[tag=radder,tag=plane-init] vp.offsetZ -5200
 scoreboard players set @e[tag=cockpit,tag=plane-init] vp.offsetX 0
-scoreboard players set @e[tag=cockpit,tag=plane-init] vp.offsetY 700
-scoreboard players set @e[tag=cockpit,tag=plane-init] vp.offsetZ 1100
+scoreboard players set @e[tag=cockpit,tag=plane-init] vp.offsetY 1000
+scoreboard players set @e[tag=cockpit,tag=plane-init] vp.offsetZ 500
 
 #プレイヤーと同じAngYにする
 schedule function plane:summon/util/delay-rotation 2
 
 #処理終了
 tag @e[tag=plane-init] remove plane-init
+

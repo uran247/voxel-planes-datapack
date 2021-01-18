@@ -11,6 +11,7 @@ recipe take @a plane-data:plane/ki-44-recipe
 recipe take @a plane-data:plane/ki-49-recipe
 recipe take @a plane-data:plane/ki-61-recipe
 recipe take @a plane-data:plane/n1k2-recipe
+recipe take @a plane-data:plane/fw190d-9-recipe
 
 recipe take @a weapon-data:bomb/60kg-bomb
 recipe take @a weapon-data:bomb/100kg-bomb
