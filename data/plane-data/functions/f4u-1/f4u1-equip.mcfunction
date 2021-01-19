@@ -13,7 +13,7 @@
     #declare score_holder #kill-weapon #現在装備中の爆弾を消すべきであるとのフラグ
 
 #装備品チェック
-execute store success score #1000lb vp.reg1 if entity @e[type=minecraft:donkey,tag=target-parts,nbt={Items:[{tag:{item-type:1000lb-bomb}}]},distance=..30]
+execute store success score #1000lb vp.reg1 if entity @e[type=minecraft:donkey,tag=target-parts,nbt={Items:[{tag:{item-type:500kg-bomb}}]},distance=..30]
 execute store success score #ag-rocket vp.reg1 if entity @e[type=minecraft:donkey,tag=target-parts,nbt={Items:[{tag:{item-type:ag-rocket}}]},distance=..30]
 
 #初期タグ設定
