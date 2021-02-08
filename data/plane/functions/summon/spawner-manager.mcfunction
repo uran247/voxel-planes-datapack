@@ -26,6 +26,7 @@
     #declare tag re2005-spawner
     #declare tag f4u1-spawner
     #declare tag fw190d9-spawner
+    #declare tag seafuryfb11-spawner
 
 execute at @s[tag=a5m-spawner] as @p run function plane-data:a5m/a5m
 execute at @s[tag=d3a-spawner] as @p run function plane-data:d3a/d3a
@@ -43,5 +44,6 @@ execute at @s[tag=ki61-spawner] as @p run function plane-data:ki-61/ki-61
 execute at @s[tag=re2005-spawner] as @p run function plane-data:re2005/re2005
 execute at @s[tag=f4u1-spawner] as @p run function plane-data:f4u-1/f4u1
 execute at @s[tag=fw190d9-spawner] as @p run function plane-data:fw190d-9/fw190d9
+execute at @s[tag=seafuryfb11-spawner] as @p run function plane-data:seafuryfb11/seafuryfb11
 
 kill @s[tag=plane-spawner]

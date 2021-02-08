@@ -44,5 +44,8 @@ minecraft 1.16
 - 飛行機のインベントリに武器アイテムを入れることで、使用できる武器を切り替えできます
     - 使える武器は飛行機によって異なります。
 
+## 航空機の詳細/レシピ
+wiki参照(https://github.com/uran247/voxel-planes-datapack/wiki)
+
 ## 連絡先
 twitter：[@uran2471](https://twitter.com/uran2471)
