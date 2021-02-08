@@ -26,6 +26,7 @@ execute if entity @s[tag=n1k2] run function plane-data:n1k2/n1k2-weapon-manager
 execute if entity @s[tag=ki49] run function plane-data:ki-49/ki49-weapon-manager
 execute if entity @s[tag=f4u1] run function plane-data:f4u-1/f4u1-weapon-manager
 execute if entity @s[tag=fw190d9] run function plane-data:fw190d-9/fw190d9-weapon-manager
+execute if entity @s[tag=seafuryfb11] run function plane-data:seafuryfb11/seafuryfb11-weapon-manager
 
 #発射クールタイム減算
 function plane:weapon/util/cooltime-weapon
