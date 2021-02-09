@@ -5,6 +5,7 @@ loot give @s[advancements={weapon-data:bomb/250kg-bomb=true}] loot weapon-data:2
 loot give @s[advancements={weapon-data:bomb/500kg-bomb=true}] loot weapon-data:500kg-bomb
 loot give @s[advancements={weapon-data:bomb/800kg-bomb=true}] loot weapon-data:800kg-bomb
 loot give @s[advancements={weapon-data:rocket/aa-rocket=true}] loot weapon-data:aa-rocket
+loot give @s[advancements={weapon-data:rocket/ag-rocket=true}] loot weapon-data:ag-rocket
 loot give @s[advancements={weapon-data:gun/ho-103=true}] loot weapon-data:ho-103
 loot give @s[advancements={weapon-data:gun/mg151=true}] loot weapon-data:mg151
 loot give @s[advancements={weapon-data:torpedo/torpedo=true}] loot weapon-data:torpedo

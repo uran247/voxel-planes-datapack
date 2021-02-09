@@ -20,17 +20,11 @@ execute store success score #50kg vp.reg1 if entity @e[type=minecraft:donkey,tag
 
 #初期タグ設定
 tag @s remove 500kg
-tag @s remove 50kg
 tag @s remove has-bomb
 tag @s remove has-weapon3
 tag @s remove main-weapon3
 
 #装備
-execute if score #50kg vp.reg1 matches 1.. run tag @s add has-bomb
-execute if score #50kg vp.reg1 matches 1.. run tag @s add has-weapon3
-execute if score #50kg vp.reg1 matches 1.. run tag @s add main-weapon3
-execute if score #50kg vp.reg1 matches 1.. run tag @s add 50kg
-
 execute if score #500kg vp.reg1 matches 1.. run tag @s add has-bomb
 execute if score #500kg vp.reg1 matches 1.. run tag @s add has-weapon3
 execute if score #500kg vp.reg1 matches 1.. run tag @s add main-weapon3
@@ -45,17 +39,12 @@ scoreboard players operation @s[tag=has-bomb] vp.weapon-types *= #5 vp.Num
 # 5: bomb
 
 #装備済み爆弾削除
-scoreboard players set #remove-50kg vp.reg1 0
-execute if entity @s[tag=!50kg] if entity @e[tag=target-parts,tag=50kg,tag=bomb-normal] run scoreboard players set #remove-50kg vp.reg1 1
-execute if score #remove-50kg vp.reg1 matches 1.. run kill @e[tag=target-parts,tag=50kg,tag=plane-bomb]
-
 scoreboard players set #remove-500kg vp.reg1 0
 execute if entity @s[tag=!500kg] if entity @e[tag=target-parts,tag=500kg,tag=bomb-normal] run scoreboard players set #remove-500kg vp.reg1 1
 execute if score #remove-500kg vp.reg1 matches 1.. run kill @e[tag=target-parts,tag=500kg,tag=plane-bomb]
 
 #弾薬リセット
 scoreboard players set @s vp.max-ammo3 0
-scoreboard players add @s[tag=has-bomb,tag=50kg] vp.max-ammo3 4
 scoreboard players add @s[tag=has-bomb,tag=500kg] vp.max-ammo3 1
 scoreboard players operation @s[tag=has-bomb] vp.ammunition3 = @s vp.max-ammo3
 
