@@ -1,4 +1,4 @@
-#> plane:controll/weapon/change-current-weapon
+#> plane:weapon/change-current-weapon
 #
 # 現在武器を変更
 # 利用可能タグ controll-target:機体
@@ -7,7 +7,7 @@
 # @input
 #   executer @e[tag=plane-root]
 #
-# @within plane:controll/weapon/switch-weapon
+# @within plane:plane-manager
 
 #> private
 # @private
@@ -51,3 +51,5 @@ execute if score @s vp.curr-weapon matches 8 if score #weapon-types vp.reg1 matc
 execute if score @s vp.curr-weapon matches 9 run scoreboard players operation #weapon-types vp.reg1 = @s vp.weapon-types
 execute if score @s vp.curr-weapon matches 9 run scoreboard players operation #weapon-types vp.reg1 %= #23 vp.Num
 execute if score @s vp.curr-weapon matches 9 if score #weapon-types vp.reg1 matches 1.. run scoreboard players set @s vp.curr-weapon 1
+
+tag @s remove need-change-weapon
