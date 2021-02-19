@@ -2,7 +2,7 @@
 #
 # 定数スコアをセット
 #
-# @within function weapon:load
+# @within tag/function load
 
 #> public
 # @public

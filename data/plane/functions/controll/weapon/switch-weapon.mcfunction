@@ -18,6 +18,7 @@ loot replace entity @s weapon.offhand loot item:tools/controll-stick
 loot give @s mine 0 1 0 air{load:1b}
 replaceitem block 0 1 0 container.1 minecraft:air
 
-#武装変更
-execute as @e[tag=controll-target,distance=..20] run function plane:controll/weapon/change-current-weapon
+#武装変更フラグを立てる
+tag @e[type=armor_stand,tag=controll-target,distance=..20,sort=nearest,limit=1] add need-change-weapon
+#run  function plane:controll/weapon/change-current-weapon
 

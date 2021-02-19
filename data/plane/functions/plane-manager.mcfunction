@@ -23,7 +23,11 @@ execute at @s as @e[tag=plane,tag=!plane-root,tag=!position-processed] if score 
 execute as @s[tag=!no-move] at @s run function plane:move/plane-move
 execute as @s at @s run function plane:position/position
 
+#武器使用
+function plane:weapon/weapon-manager
+
 #装備管理
+execute as @e[tag=need-change-weapon] run function plane:weapon/change-current-weapon
 execute if score @s vp.speed matches ..0 as @a[tag=plane-rider,tag=change-inventory] if score #plane-id vp.reg1 = @s vp.plane-id run tag @s add check-plane-equip
 execute if entity @a[tag=plane-rider,tag=check-plane-equip] at @s[scores={vp.speed=..0}] run function plane:equip/equip-manager
 tag @a[tag=check-plane-equip] remove change-inventory

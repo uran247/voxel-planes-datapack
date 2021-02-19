@@ -20,7 +20,7 @@ execute if entity @s[nbt=!{Inventory:[{Slot:-106b,tag:{item-type:controll-rod}}]
 execute if score @s vp.rightClick matches 2.. run scoreboard players set @s vp.rightClick 0
 
 #weaponfunctionを実行
-execute as @e[tag=controll-target,distance=..1] at @s run function plane:weapon/weapon-manager
+execute if score @s vp.rightClick matches 1 run tag @e[tag=controll-target,distance=..1] add need-use-weapon
 
 #使用者タグ削除
 tag @s remove weapon-user

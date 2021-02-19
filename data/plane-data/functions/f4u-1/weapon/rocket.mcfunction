@@ -5,7 +5,7 @@
 # @input
 #   execute @e[tag=plane-root]
 #
-# @within function plane-data:d4y2/d4y2-weapon-manager
+# @within function plane-data:f4u-1/f4u1-weapon-manager
 
 #> private
 # @private
