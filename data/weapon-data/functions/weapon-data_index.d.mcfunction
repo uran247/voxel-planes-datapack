@@ -2,7 +2,7 @@
 #
 # @within
 #   function plane:weapon/**
-#   function plane:controll/plane-info
+#   function plane:plane-info
 
 #> public
     #declare tag gun #銃弾であることを示す

@@ -2,17 +2,16 @@
 #
 # @input
 #   executer @e[tag=plane-root]
+#   score #weapon-number vp.reg1 #武器種類数
 #
-#入力：機体entity
-#処理：リロード時間を迎えたEntityの弾薬数をリセット
+# リロード時間を迎えたEntityの弾薬数をリセット
 #
 # @within function plane:weapon/weapon-manager
 
-execute if entity @s[tag=has-weapon1,scores={vp.ammunition1=..0,vp.w1-reload=..0}] run scoreboard players operation @s vp.ammunition1 = @s vp.max-ammo1
-execute if entity @s[tag=has-weapon2,scores={vp.ammunition2=..0,vp.w2-reload=..0}] run scoreboard players operation @s vp.ammunition2 = @s vp.max-ammo2
-execute if entity @s[tag=has-weapon3,scores={vp.ammunition3=..0,vp.w3-reload=..0}] run scoreboard players operation @s vp.ammunition3 = @s vp.max-ammo3
-execute if entity @s[tag=has-weapon4,scores={vp.ammunition4=..0,vp.w4-reload=..0}] run scoreboard players operation @s vp.ammunition4 = @s vp.max-ammo4
-execute if entity @s[tag=has-weapon5,scores={vp.ammunition5=..0,vp.w5-reload=..0}] run scoreboard players operation @s vp.ammunition5 = @s vp.max-ammo5
-execute if entity @s[tag=has-weapon6,scores={vp.ammunition6=..0,vp.w6-reload=..0}] run scoreboard players operation @s vp.ammunition6 = @s vp.max-ammo6
-execute if entity @s[tag=has-weapon7,scores={vp.ammunition7=..0,vp.w7-reload=..0}] run scoreboard players operation @s vp.ammunition7 = @s vp.max-ammo7
-
+execute if score #weapon-number vp.reg1 matches 1.. if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[0].data{current-ammunition:-1,current-reload:0} run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[0].data.current-ammunition set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[0].data.max-ammunition
+execute if score #weapon-number vp.reg1 matches 2.. if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[1].data{current-ammunition:-1,current-reload:0} run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[1].data.current-ammunition set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[1].data.max-ammunition
+execute if score #weapon-number vp.reg1 matches 3.. if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[2].data{current-ammunition:-1,current-reload:0} run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[2].data.current-ammunition set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[2].data.max-ammunition
+execute if score #weapon-number vp.reg1 matches 4.. if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[3].data{current-ammunition:-1,current-reload:0} run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[3].data.current-ammunition set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[3].data.max-ammunition
+execute if score #weapon-number vp.reg1 matches 5.. if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[4].data{current-ammunition:-1,current-reload:0} run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[4].data.current-ammunition set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[4].data.max-ammunition
+execute if score #weapon-number vp.reg1 matches 6.. if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[5].data{current-ammunition:-1,current-reload:0} run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[5].data.current-ammunition set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[5].data.max-ammunition
+execute if score #weapon-number vp.reg1 matches 7.. if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[6].data{current-ammunition:-1,current-reload:0} run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[6].data.current-ammunition set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[6].data.max-ammunition

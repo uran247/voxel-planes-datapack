@@ -2,7 +2,7 @@
 #
 # @within
 #   function plane:weapon/**
-#   function plane:controll/plane-info
+#   function plane:plane-info
     #declare tag has-weapon1 #武器1を所持していることを示す
     #declare tag has-weapon2 #武器2を所持していることを示す
     #declare tag has-weapon3 #武器3を所持していることを示す
@@ -62,3 +62,4 @@
     #declare tag 1000lb #100lb爆弾を装備していることを示す
     #declare tag mg151 #mg151を装備していることを示す
     #declare tag bomb-normal #通常爆弾であることを示す
+    #declare tag normal #通常爆弾であることを示す

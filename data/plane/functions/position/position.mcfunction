@@ -59,6 +59,9 @@ execute at @s[tag=seafuryfb11] run function plane-data:seafuryfb11/seafuryfb11-p
 #execute as @s[tag=ju87] run function plane:position/ju87-position
 #execute as @s[tag=j100b] run function plane:position/j-100b-position
 
+#武器召喚
+function plane:position/summon-weapon
+
 #パーツをオフセット位置へ
 #execute at @s run scoreboard players operation @e[tag=has-offset,tag=target-parts,distance=..30] vp.input1 = @s AngZ
 execute at @s[tag=need-calc-offset] run function plane:position/util/calc-triangle-ratio

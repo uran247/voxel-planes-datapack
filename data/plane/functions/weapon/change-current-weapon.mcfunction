@@ -12,44 +12,36 @@
 #> private
 # @private
     #declare score_holder #weapon-types #飛行機の選択可能武器フラグを示す
+    #declare score_holder #weapon-list-num #武器配列数を示す
+    #declare score_holder #current-weapon vp.reg1 #選択中武器の配列番号を示す
 
+#配列要素数取得
+execute store result score #weapon-list-num vp.reg1 run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list
 
-scoreboard players add @s vp.curr-weapon 1
+#current index取得
+execute store result score #current-weapon vp.reg1 run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.current-weapon-index
 
-execute if score @s vp.curr-weapon matches 1 run scoreboard players operation #weapon-types vp.reg1 = @s vp.weapon-types
-execute if score @s vp.curr-weapon matches 1 run scoreboard players operation #weapon-types vp.reg1 %= #2 vp.Num
-execute if score @s vp.curr-weapon matches 1 if score #weapon-types vp.reg1 matches 1.. run scoreboard players add @s vp.curr-weapon 1
+#indexを1進める
+scoreboard players add #current-weapon vp.reg1 1
+execute if score #current-weapon vp.reg1 >= #weapon-list-num vp.reg1 run scoreboard players set #current-weapon vp.reg1 0
 
-execute if score @s vp.curr-weapon matches 2 run scoreboard players operation #weapon-types vp.reg1 = @s vp.weapon-types
-execute if score @s vp.curr-weapon matches 2 run scoreboard players operation #weapon-types vp.reg1 %= #3 vp.Num
-execute if score @s vp.curr-weapon matches 2 if score #weapon-types vp.reg1 matches 1.. run scoreboard players add @s vp.curr-weapon 1
+#index代入
+execute store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.current-weapon-index int 1 run scoreboard players get #current-weapon vp.reg1
 
-execute if score @s vp.curr-weapon matches 3 run scoreboard players operation #weapon-types vp.reg1 = @s vp.weapon-types
-execute if score @s vp.curr-weapon matches 3 run scoreboard players operation #weapon-types vp.reg1 %= #5 vp.Num
-execute if score @s vp.curr-weapon matches 3 if score #weapon-types vp.reg1 matches 1.. run scoreboard players add @s vp.curr-weapon 1
+#current-weapon変更
+data remove storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:true}].current-weapon
+execute if score #current-weapon vp.reg1 matches 0 run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[0] merge value {current-weapon:1b}
+execute if score #current-weapon vp.reg1 matches 1 run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[1] merge value {current-weapon:1b}
+execute if score #current-weapon vp.reg1 matches 2 run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[2] merge value {current-weapon:1b}
+execute if score #current-weapon vp.reg1 matches 3 run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[3] merge value {current-weapon:1b}
+execute if score #current-weapon vp.reg1 matches 4 run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[4] merge value {current-weapon:1b}
+execute if score #current-weapon vp.reg1 matches 5 run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[5] merge value {current-weapon:1b}
+execute if score #current-weapon vp.reg1 matches 6 run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[6] merge value {current-weapon:1b}
+execute if score #current-weapon vp.reg1 matches 7 run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[7] merge value {current-weapon:1b}
+execute if score #current-weapon vp.reg1 matches 8 run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[8] merge value {current-weapon:1b}
+execute if score #current-weapon vp.reg1 matches 9 run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[9] merge value {current-weapon:1b}
 
-execute if score @s vp.curr-weapon matches 4 run scoreboard players operation #weapon-types vp.reg1 = @s vp.weapon-types
-execute if score @s vp.curr-weapon matches 4 run scoreboard players operation #weapon-types vp.reg1 %= #7 vp.Num
-execute if score @s vp.curr-weapon matches 4 if score #weapon-types vp.reg1 matches 1.. run scoreboard players add @s vp.curr-weapon 1
-
-execute if score @s vp.curr-weapon matches 5 run scoreboard players operation #weapon-types vp.reg1 = @s vp.weapon-types
-execute if score @s vp.curr-weapon matches 5 run scoreboard players operation #weapon-types vp.reg1 %= #11 vp.Num
-execute if score @s vp.curr-weapon matches 5 if score #weapon-types vp.reg1 matches 1.. run scoreboard players add @s vp.curr-weapon 1
-
-execute if score @s vp.curr-weapon matches 6 run scoreboard players operation #weapon-types vp.reg1 = @s vp.weapon-types
-execute if score @s vp.curr-weapon matches 6 run scoreboard players operation #weapon-types vp.reg1 %= #13 vp.Num
-execute if score @s vp.curr-weapon matches 6 if score #weapon-types vp.reg1 matches 1.. run scoreboard players add @s vp.curr-weapon 1
-
-execute if score @s vp.curr-weapon matches 7 run scoreboard players operation #weapon-types vp.reg1 = @s vp.weapon-types
-execute if score @s vp.curr-weapon matches 7 run scoreboard players operation #weapon-types vp.reg1 %= #17 vp.Num
-execute if score @s vp.curr-weapon matches 7 if score #weapon-types vp.reg1 matches 1.. run scoreboard players add @s vp.curr-weapon 1
-
-execute if score @s vp.curr-weapon matches 8 run scoreboard players operation #weapon-types vp.reg1 = @s vp.weapon-types
-execute if score @s vp.curr-weapon matches 8 run scoreboard players operation #weapon-types vp.reg1 %= #19 vp.Num
-execute if score @s vp.curr-weapon matches 8 if score #weapon-types vp.reg1 matches 1.. run scoreboard players add @s vp.curr-weapon 1
-
-execute if score @s vp.curr-weapon matches 9 run scoreboard players operation #weapon-types vp.reg1 = @s vp.weapon-types
-execute if score @s vp.curr-weapon matches 9 run scoreboard players operation #weapon-types vp.reg1 %= #23 vp.Num
-execute if score @s vp.curr-weapon matches 9 if score #weapon-types vp.reg1 matches 1.. run scoreboard players set @s vp.curr-weapon 1
+#tellraw @p [{"score" : {"name":"#current-weapon", "objective":"vp.reg1"}}, {"text":" "},{"nbt":"_[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:true}].type","storage": "oh_my_dat:"}]
 
 tag @s remove need-change-weapon
+

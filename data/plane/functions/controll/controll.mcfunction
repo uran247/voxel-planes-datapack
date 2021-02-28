@@ -49,9 +49,6 @@ scoreboard players operation @s vp.key-input = #selected-slot vp.return
 #移動、武器使用
 execute at @e[tag=controll-target,distance=..20,sort=nearest,limit=1] run function plane:controll/plane-controll
 
-#スコア情報をActionbarに表示 
-execute at @s as @e[tag=controll-target,distance=..20,limit=1] run function plane:controll/plane-info
-
 #アイテム欄を掃除して操作説明アイテムをセット
 execute as @s run function plane:controll/clean-inventory
 
