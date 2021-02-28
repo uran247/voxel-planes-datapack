@@ -1,12 +1,12 @@
-#> plane-data:f4u-1/weapon/rocket
+#> plane:weapon/use-weapon/use-rocket
 #
 # 爆弾投下
 #
 # @input
 #   execute @e[tag=plane-root]
 #
-# @within function plane-data:f4u-1/f4u1-weapon-manager
-
+# @within function plane:weapon/use-weapon
+#
 #> private
 # @private
     #declare tag rocket-launting-executer #爆撃実行機体を示す
@@ -58,11 +58,9 @@ playsound minecraft:entity.generic.explode ambient @a ~ ~ ~ 1 1.5
 
 #tellraw @p [{"score" : {"name":"@e[tag=rocket-init,distance=..5,limit=1]", "objective":"speed"}}, {"text":" "}, {"score" : {"name":"@e[tag=rocket-init,distance=..5,limit=1]", "objective":"age"}}]
 
-#発射したならreload時間設定
-execute if entity @e[tag=rocket-init,distance=..20] run scoreboard players set @s vp.w3-cooltime 2
-
 #残弾数減算
-scoreboard players remove @s vp.ammunition3 1
+scoreboard players remove #ammunition vp.reg1 1
+execute store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data.current-ammunition int 1 run scoreboard players get #ammunition vp.reg1
 
 #終了処理
 tag @s remove rocket-launting-executer

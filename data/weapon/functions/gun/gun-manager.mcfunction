@@ -14,9 +14,9 @@
 #> private
 # @private
     #declare tag gun-move-executer #実行者につくタグ
-    #declare tag tracer-lightblue #曳光弾
-    #declare tag tracer-orange #曳光弾
-    #declare tag tracer-yellow #曳光弾
+    #declare tag lightblue #曳光弾
+    #declare tag orange #曳光弾
+    #declare tag yellow #曳光弾
     #
     #declare score_holder #pos-x #実行者のx座標
     #declare score_holder #pos-y #実行者のy座標
@@ -75,9 +75,9 @@ execute if score #hit-flag vp.reg1 matches 2 run function weapon:gun/damage/dama
 #scoreboard players remove @s speedY 5
 
 #曳光弾ならモデル表示
-execute as @s[tag=tracer-lightblue,scores={vp.age=1}] run data merge entity @s {Pose:{Head:[0f,0f,0f]},ArmorItems:[{},{},{},{id:"minecraft:potion",Count:1b,tag:{CustomPotionColor:65535,CustomModelData:1,Enchantments:[{id:"fire_aspect",lvl:1}]}}]}
-execute as @s[tag=tracer-orange,scores={vp.age=1}] run data merge entity @s {Pose:{Head:[0f,0f,0f]},ArmorItems:[{},{},{},{id:"minecraft:potion",Count:1b,tag:{CustomPotionColor:16747622,CustomModelData:1,Enchantments:[{id:"fire_aspect",lvl:1}]}}]}
-execute as @s[tag=tracer-yellow,scores={vp.age=1}] run data merge entity @s {Pose:{Head:[0f,0f,0f]},ArmorItems:[{},{},{},{id:"minecraft:potion",Count:1b,tag:{CustomPotionColor:16776960,CustomModelData:1,Enchantments:[{id:"fire_aspect",lvl:1}]}}]}
+execute as @s[tag=lightblue,scores={vp.age=1}] run data merge entity @s {Pose:{Head:[0f,0f,0f]},ArmorItems:[{},{},{},{id:"minecraft:potion",Count:1b,tag:{CustomPotionColor:65535,CustomModelData:1,Enchantments:[{id:"fire_aspect",lvl:1}]}}]}
+execute as @s[tag=orange,scores={vp.age=1}] run data merge entity @s {Pose:{Head:[0f,0f,0f]},ArmorItems:[{},{},{},{id:"minecraft:potion",Count:1b,tag:{CustomPotionColor:16747622,CustomModelData:1,Enchantments:[{id:"fire_aspect",lvl:1}]}}]}
+execute as @s[tag=yellow,scores={vp.age=1}] run data merge entity @s {Pose:{Head:[0f,0f,0f]},ArmorItems:[{},{},{},{id:"minecraft:potion",Count:1b,tag:{CustomPotionColor:16776960,CustomModelData:1,Enchantments:[{id:"fire_aspect",lvl:1}]}}]}
 #execute as @s at @s run particle minecraft:dust 1 0 0 2 ~ ~ ~ 0 0 0 20000 1 force
 
 #particle
