@@ -17,7 +17,6 @@
 execute if entity @s[tag=d3a,tag=need-use-weapon] run function plane-data:d3a/d3a-weapon-manager
 execute if entity @s[tag=ki21,tag=need-use-weapon] run function plane-data:ki-21/ki21-weapon-manager
 execute if entity @s[tag=ki43,tag=need-use-weapon] run function plane-data:ki-43/ki43-weapon-manager
-execute if entity @s[tag=a5m,tag=need-use-weapon] run function plane-data:a5m/a5m-weapon-manager
 execute if entity @s[tag=a6m2,tag=need-use-weapon] run function plane-data:a6m2/a6m2-weapon-manager
 execute if entity @s[tag=ki44,tag=need-use-weapon] run function plane-data:ki-44/ki44-weapon-manager
 execute if entity @s[tag=d4y2,tag=need-use-weapon] run function plane-data:d4y2/d4y2-weapon-manager
