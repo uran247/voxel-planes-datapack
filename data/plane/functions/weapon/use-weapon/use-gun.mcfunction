@@ -20,8 +20,10 @@
 #曳光弾判定
 scoreboard players operation #is-bullet vp.reg1 = #ammunition vp.reg1
 scoreboard players operation #is-tracer vp.reg1 = #ammunition vp.reg1
-scoreboard players operation #is-bullet vp.reg1 %= #4 vp.Num
-scoreboard players operation #is-tracer vp.reg1 %= #8 vp.Num
+execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data{size:7p7mm} run scoreboard players operation #is-bullet vp.reg1 %= #3 vp.Num
+execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data{size:7p7mm} run scoreboard players operation #is-tracer vp.reg1 %= #6 vp.Num
+execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data{size:12p7mm} run scoreboard players operation #is-bullet vp.reg1 %= #4 vp.Num
+execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data{size:12p7mm} run scoreboard players operation #is-tracer vp.reg1 %= #8 vp.Num
 
 #召喚弾数取得
 execute store result score #bullet-number vp.reg1 run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data.bullets
@@ -70,6 +72,7 @@ scoreboard players operation #cos vp.reg1 = #cos vp.return
 execute as @e[tag=gun-init,distance=..5] run function plane-data:util/gun-set-position
 
 #音
+execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data{size:7p7mm} run playsound minecraft:weapon.gun-7p7m.fire master @a ~ ~ ~ 1 1 1
 execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data{size:12p7mm} run playsound minecraft:weapon.gun-7p7m.fire master @a ~ ~ ~ 1 1 1
 
 #発射炎

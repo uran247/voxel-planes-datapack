@@ -79,6 +79,14 @@ execute store result score @e[tag=plane-init,tag=plane-root,limit=1] vp.PosX run
 execute store result score @e[tag=plane-init,tag=plane-root,limit=1] vp.PosY run data get storage minecraft:plane-datapack temporary.Pos[1] 10000
 execute store result score @e[tag=plane-init,tag=plane-root,limit=1] vp.PosZ run data get storage minecraft:plane-datapack temporary.Pos[2] 10000
 
+#ohmydat呼び出し
+execute as @e[tag=plane-init,tag=plane-root] run function oh_my_dat:please
+
+#武器データセット
+data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon set value {current-weapon-index:0}
+data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list set value []
+data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list append from storage voxel-planes:weapon a5m.base.gun
+
 #hitbocのスコア設定
 scoreboard players set @e[tag=body,tag=plane-init] vp.offsetX 0
 scoreboard players set @e[tag=body,tag=plane-init] vp.offsetY 0
