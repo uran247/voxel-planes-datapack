@@ -19,9 +19,9 @@ execute if score #is-tracer vp.reg1 matches 0 run summon minecraft:armor_stand ~
 execute unless score #is-tracer vp.reg1 matches 0 run summon minecraft:area_effect_cloud ~ ~ ~ {NoGravity:1b,Tags:[gun,gun-init,bullet-init,entity-nohit,offset-base],Duration:20}
 
 #データセット
-execute store result score @e[type=armor_stand,tag=bullet-init,distance=..1,limit=1] vp.offsetX run data get storage minecraft:plane-datapack temporary.weapon.offset[0]
-execute store result score @e[type=armor_stand,tag=bullet-init,distance=..1,limit=1] vp.offsetY run data get storage minecraft:plane-datapack temporary.weapon.offset[1]
-execute store result score @e[type=armor_stand,tag=bullet-init,distance=..1,limit=1] vp.offsetZ run data get storage minecraft:plane-datapack temporary.weapon.offset[2]
+execute store result score @e[type=armor_stand,tag=bullet-init,distance=..1,limit=1] vp.offsetX run data get storage minecraft:plane-datapack temporary.weapon.offset[0] 1000
+execute store result score @e[type=armor_stand,tag=bullet-init,distance=..1,limit=1] vp.offsetY run data get storage minecraft:plane-datapack temporary.weapon.offset[1] 1000
+execute store result score @e[type=armor_stand,tag=bullet-init,distance=..1,limit=1] vp.offsetZ run data get storage minecraft:plane-datapack temporary.weapon.offset[2] 1000
 
 #初期化タグ削除
 tag @e[type=armor_stand,tag=bullet-init,distance=..1,limit=1] remove bullet-init

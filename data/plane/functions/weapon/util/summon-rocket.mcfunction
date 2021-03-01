@@ -16,9 +16,9 @@
 summon armor_stand ~ ~ ~ {Tags:[weapon-init,plane,has-offset,has-model,plane-parts,entity-nohit,rocket-init,plane-rocket],NoGravity:1b,Invisible:1b,HandItems:[{id:"minecraft:diamond_sword",Count:1b,tag:{CustomModelData:0}},{}],Pose:{RightArm:[0f,0f,0f]},DisabledSlots:256}
 
 #データセット
-execute store result score @e[type=armor_stand,tag=rocket-init,distance=..1,limit=1] vp.offsetX run data get storage minecraft:plane-datapack temporary.weapon.offset[0]
-execute store result score @e[type=armor_stand,tag=rocket-init,distance=..1,limit=1] vp.offsetY run data get storage minecraft:plane-datapack temporary.weapon.offset[1]
-execute store result score @e[type=armor_stand,tag=rocket-init,distance=..1,limit=1] vp.offsetZ run data get storage minecraft:plane-datapack temporary.weapon.offset[2]
+execute store result score @e[type=armor_stand,tag=rocket-init,distance=..1,limit=1] vp.offsetX run data get storage minecraft:plane-datapack temporary.weapon.offset[0] 1000
+execute store result score @e[type=armor_stand,tag=rocket-init,distance=..1,limit=1] vp.offsetY run data get storage minecraft:plane-datapack temporary.weapon.offset[1] 1000
+execute store result score @e[type=armor_stand,tag=rocket-init,distance=..1,limit=1] vp.offsetZ run data get storage minecraft:plane-datapack temporary.weapon.offset[2] 1000
 execute store result score @e[type=armor_stand,tag=rocket-init,distance=..1,limit=1] vp.damage run data get storage minecraft:plane-datapack temporary.weapon.damage
 execute store result score @e[type=armor_stand,tag=rocket-init,distance=..1,limit=1] vp.acc-cor run data get storage minecraft:plane-datapack temporary.weapon.acc-cor
 execute store result score @e[type=armor_stand,tag=rocket-init,distance=..1,limit=1] vp.pitch-spd-cor run data get storage minecraft:plane-datapack temporary.weapon.pitch-cor
