@@ -14,34 +14,15 @@
 #装備品チェック
 execute store success score #60kg vp.reg1 if entity @e[type=minecraft:donkey,tag=target-parts,nbt={Items:[{tag:{item-type:60kg-bomb}}]},distance=..30]
 
-#初期タグ設定
-tag @s remove 60kg
-tag @s remove has-bomb
-tag @s remove has-weapon3
-tag @s remove main-weapon3
+#ストレージリセット
+data remove storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{data:{type:bomb}}]
 
-#装備
-execute if score #60kg vp.reg1 matches 1.. run tag @s add has-bomb
-execute if score #60kg vp.reg1 matches 1.. run tag @s add 60kg
-execute if score #60kg vp.reg1 matches 1.. run tag @s add has-weapon3
-execute if score #60kg vp.reg1 matches 1.. run tag @s add main-weapon3
+#weapon-listに武器データアペンド
+execute if score #60kg vp.reg1 matches 1.. run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list append from storage voxel-planes:weapon a6m5.base.bomb
+execute if score #60kg vp.reg1 matches 1.. run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{data:{type:bomb}}].data.bombs append from storage voxel-planes:weapon a6m5.additional.60kg[]
 
-#装備種別変更
-scoreboard players set @s vp.weapon-types 6
-scoreboard players operation @s[tag=has-bomb] vp.weapon-types *= #5 vp.Num
-#weapon-id
-# 2: 20mm gun
-# 3: 7.7mm bomb 
-# 5: bomb
-
-#装備済み爆弾削除
-scoreboard players set #kill-weapon vp.reg1 0
-execute if entity @s[tag=!60kg] if entity @e[tag=target-parts,tag=60kg,tag=bomb-normal] run scoreboard players set #kill-weapon vp.reg1 1
-execute if score #kill-weapon vp.reg1 matches 1.. run kill @e[tag=target-parts,tag=plane-bomb]
-
-#弾薬リセット
-scoreboard players operation @s[tag=has-bomb] vp.ammunition3 = @s vp.max-ammo3
-scoreboard players set @s[tag=!has-bomb] vp.ammunition3 0
+#不要爆弾削除
+execute unless score #60kg vp.reg1 matches 1.. if entity @e[tag=target-parts,tag=60kg,tag=normal] run kill @e[tag=target-parts,tag=plane-bomb]
 
 #ステータス変更
 #装備に応じて右記ステータス変更：最高速度　巡航速度　旋回力

@@ -2,4 +2,4 @@
 #処理　a6m2をアイテム化
 
 #アイテムをsummon
-function plane-data:a6m5/give-a6m5-spawn
+loot spawn ~ ~ ~ loot plane-data:a6m5
