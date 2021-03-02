@@ -63,26 +63,21 @@ scoreboard players set @e[tag=plane-init,tag=a6m5-body] vp.parking-cmd 7
 scoreboard players set @e[tag=plane-init,tag=a6m5-body] vp.rolling-cmd 8
 scoreboard players set @e[tag=plane-init,tag=a6m5-body] vp.flying-cmd 9
 
-scoreboard players set @e[tag=plane-init,tag=plane-root] vp.w1-cooltime 0
-scoreboard players set @e[tag=plane-init,tag=plane-root] vp.w2-cooltime 0
-scoreboard players set @e[tag=plane-init,tag=plane-root] vp.ammunition1 125
-scoreboard players set @e[tag=plane-init,tag=plane-root] vp.ammunition2 700
-scoreboard players set @e[tag=plane-init,tag=plane-root] vp.ammunition3 0
-scoreboard players set @e[tag=plane-init,tag=plane-root] vp.max-ammo1 125
-scoreboard players set @e[tag=plane-init,tag=plane-root] vp.max-ammo2 700
-scoreboard players set @e[tag=plane-init,tag=plane-root] vp.max-ammo3 2
-scoreboard players set @e[tag=plane-init,tag=plane-root] vp.max-w1-reload 280
-scoreboard players set @e[tag=plane-init,tag=plane-root] vp.max-w2-reload 140
-scoreboard players set @e[tag=plane-init,tag=plane-root] vp.max-w3-reload 3000
-scoreboard players set @e[tag=plane-init,tag=plane-root] vp.curr-weapon 1
-scoreboard players set @e[tag=plane-init,tag=plane-root] vp.weapon-types 6
-
 scoreboard players set @e[tag=plane-init,tag=plane-root] vp.max-engine 1
 
 data modify storage minecraft:plane-datapack temporary.Pos set from entity @e[tag=plane-init,tag=plane-root,limit=1] Pos
 execute store result score @e[tag=plane-init,tag=plane-root,limit=1] vp.PosX run data get storage minecraft:plane-datapack temporary.Pos[0] 10000
 execute store result score @e[tag=plane-init,tag=plane-root,limit=1] vp.PosY run data get storage minecraft:plane-datapack temporary.Pos[1] 10000
 execute store result score @e[tag=plane-init,tag=plane-root,limit=1] vp.PosZ run data get storage minecraft:plane-datapack temporary.Pos[2] 10000
+
+#ohmydat呼び出し
+execute as @e[tag=plane-init,tag=plane-root] run function oh_my_dat:please
+
+#武器データセット
+data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon set value {current-weapon-index:0}
+data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list set value []
+data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list append from storage voxel-planes:weapon a6m5.base.20mm
+data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list append from storage voxel-planes:weapon a6m5.base.7p7mm
 
 #hitboxのスコア設定
 scoreboard players set @e[tag=body,tag=plane-init] vp.offsetX 0
