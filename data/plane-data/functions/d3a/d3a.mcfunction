@@ -15,7 +15,7 @@
     #declare tag plane-init #初期化処理中のエンティティであることを示す
 
 #機体召喚
-summon minecraft:armor_stand ~ ~ ~ {Invisible:1b,NoGravity:0b,Tags:[d3a-root,d3a,plane-init,plane-root,plane,entity-nohit,need-calc-offset,delay-rotation,has-bomb,normal,250kg,60kg,has-weapon1,has-weapon2,has-weapon3,main-weapon1,main-weapon2,tier1],CustomName:'{"text":"d3a"}',Pose:{LeftArm:[0f,0f,0f],RightArm:[0f,0f,0f]},DisabledSlots:256,HandItems:[{id:"snowball",Count:1b,tag:{CustomModelData:1,weapons:["7.7mm gun","bomb"]}},{}]}
+summon minecraft:armor_stand ~ ~ ~ {Invisible:1b,NoGravity:0b,Tags:[d3a-root,d3a,plane-init,plane-root,plane,entity-nohit,need-calc-offset,delay-rotation,has-bomb,normal,has-weapon1,has-weapon2,has-weapon3,main-weapon1,main-weapon2,tier1],CustomName:'{"text":"d3a"}',Pose:{LeftArm:[0f,0f,0f],RightArm:[0f,0f,0f]},DisabledSlots:256,HandItems:[{id:"snowball",Count:1b,tag:{CustomModelData:1,weapons:["7.7mm gun","bomb"]}},{}]}
 summon minecraft:armor_stand ~ ~ ~ {Invisible:1b,NoGravity:0b,Tags:[d3a,plane-init,plane,entity-nohit,plane-seat],CustomName:'{"text":"seat"}',Pose:{LeftArm:[0f,0f,0f],RightArm:[0f,0f,0f]},Passengers:[{id:"donkey",Health:6f,Attributes:[{Name:"generic.max_health",Base:6d}],Invulnerable:1b,DeathLootTable:"minecraft:entities/bat",SaddleItem:{id:"minecraft:saddle",Count:1b},Tame:1b,NoAI:1b,Silent:1b,ChestedHorse:1b,ActiveEffects:[{Id:14b,Amplifier:0b,Duration:1000000,ShowParticles:0b}],Tags:[d3a,plane-init,plane,plane-seat,entity-nohit]}],DisabledSlots:256}
 summon armor_stand ~ ~ ~ {Tags:[d3a-body,d3a,plane-init,plane,has-model,model-changeable,plane-parts,entity-nohit],NoGravity:1b,Invisible:1b,HandItems:[{id:"minecraft:diamond_sword",Count:1b,tag:{CustomModelData:73,Unbreakable:1b}},{}],Pose:{LeftArm:[0f,0f,0f],RightArm:[0f,0f,0f]},DisabledSlots:256}
 summon armor_stand ~ ~ ~ {Tags:[d3a-rightwing,d3a,plane-init,plane,has-model,plane-parts,entity-nohit],NoGravity:1b,Invisible:1b,HandItems:[{id:"minecraft:diamond_sword",Count:1b,tag:{CustomModelData:75,Unbreakable:1b}},{}],Pose:{LeftArm:[0f,0f,0f],RightArm:[0f,0f,0f]},DisabledSlots:256}
@@ -67,27 +67,21 @@ scoreboard players set @e[tag=plane-init,tag=d3a-body] vp.parking-cmd 73
 scoreboard players set @e[tag=plane-init,tag=d3a-body] vp.rolling-cmd 74
 scoreboard players set @e[tag=plane-init,tag=d3a-body] vp.flying-cmd 74
 
-scoreboard players set @e[tag=plane-init,tag=plane-root] vp.w1-cooltime 0
-scoreboard players set @e[tag=plane-init,tag=plane-root] vp.w2-cooltime 0
-scoreboard players set @e[tag=plane-init,tag=plane-root] vp.w3-cooltime 0
-scoreboard players set @e[tag=plane-init,tag=plane-root] vp.ammunition1 500
-scoreboard players set @e[tag=plane-init,tag=plane-root] vp.ammunition2 3
-scoreboard players set @e[tag=plane-init,tag=plane-root] vp.ammunition3 500
-scoreboard players set @e[tag=plane-init,tag=plane-root] vp.max-ammo1 500
-scoreboard players set @e[tag=plane-init,tag=plane-root] vp.max-ammo2 3
-scoreboard players set @e[tag=plane-init,tag=plane-root] vp.max-ammo3 500
-scoreboard players set @e[tag=plane-init,tag=plane-root] vp.max-w1-reload 140
-scoreboard players set @e[tag=plane-init,tag=plane-root] vp.max-w2-reload 500
-scoreboard players set @e[tag=plane-init,tag=plane-root] vp.max-w3-reload 140
-scoreboard players set @e[tag=plane-init,tag=plane-root] vp.curr-weapon 1
-scoreboard players set @e[tag=plane-init,tag=plane-root] vp.weapon-types 6
-
 scoreboard players set @e[tag=plane-init,tag=plane-root] vp.max-engine 1
 
 data modify storage minecraft:plane-datapack temporary.Pos set from entity @e[tag=plane-init,tag=plane-root,limit=1] Pos
 execute store result score @e[tag=plane-init,tag=plane-root,limit=1] vp.PosX run data get storage minecraft:plane-datapack temporary.Pos[0] 10000
 execute store result score @e[tag=plane-init,tag=plane-root,limit=1] vp.PosY run data get storage minecraft:plane-datapack temporary.Pos[1] 10000
 execute store result score @e[tag=plane-init,tag=plane-root,limit=1] vp.PosZ run data get storage minecraft:plane-datapack temporary.Pos[2] 10000
+
+#ohmydat呼び出し
+execute as @e[tag=plane-init,tag=plane-root] run function oh_my_dat:please
+
+#武器データセット
+data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon set value {current-weapon-index:0}
+data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list set value []
+data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list append from storage voxel-planes:weapon d3a.base.7p7mm
+data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list append from storage voxel-planes:weapon d3a.base.bomb
 
 #hitboxのスコア設定
 scoreboard players set @e[tag=body,tag=plane-init] vp.offsetX 0
