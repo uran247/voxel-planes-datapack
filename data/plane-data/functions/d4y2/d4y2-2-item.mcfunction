@@ -2,4 +2,4 @@
 #処理　d3aをアイテム化
 
 #アイテムをsummon
-function plane-data:d4y2/give-d4y2-spawn
+loot spawn ~ ~ ~ loot plane-data:d4y2

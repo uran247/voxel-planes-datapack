@@ -15,7 +15,7 @@
     #declare tag plane-init #初期化処理中のエンティティであることを示す
 
 #機体召喚
-summon minecraft:armor_stand ~ ~ ~ {Invisible:1b,NoGravity:0b,Tags:[d4y2-root,d4y2,plane-init,plane-root,plane,entity-nohit,need-calc-offset,delay-rotation,has-bomb,60kg,250kg,has-weapon1,has-weapon2,has-weapon3,main-weapon1,main-weapon2,tier2],CustomName:'{"text":"d4y2"}',Pose:{LeftArm:[0f,0f,0f],RightArm:[0f,0f,0f]},DisabledSlots:256,HandItems:[{id:"snowball",Count:1b,tag:{CustomModelData:1,weapons:["7.7mm gun","bomb","rocket"]}},{}]}
+summon minecraft:armor_stand ~ ~ ~ {Invisible:1b,NoGravity:0b,Tags:[d4y2-root,d4y2,plane-init,plane-root,plane,entity-nohit,need-calc-offset,delay-rotation,has-bomb,has-weapon1,has-weapon2,has-weapon3,main-weapon1,main-weapon2,tier2],CustomName:'{"text":"d4y2"}',Pose:{LeftArm:[0f,0f,0f],RightArm:[0f,0f,0f]},DisabledSlots:256,HandItems:[{id:"snowball",Count:1b,tag:{CustomModelData:1,weapons:["7.7mm gun","bomb","rocket"]}},{}]}
 summon minecraft:armor_stand ~ ~ ~ {Invisible:1b,NoGravity:0b,Tags:[d4y2,plane-init,plane,entity-nohit,plane-seat],CustomName:'{"text":"seat"}',Pose:{LeftArm:[0f,0f,0f],RightArm:[0f,0f,0f]},Passengers:[{id:"donkey",Health:13f,Attributes:[{Name:"generic.max_health",Base:13d}],Invulnerable:1b,DeathLootTable:"minecraft:entities/bat",SaddleItem:{id:"minecraft:saddle",Count:1b},Tame:1b,NoAI:1b,Silent:1b,ChestedHorse:1b,ActiveEffects:[{Id:14b,Amplifier:0b,Duration:1000000,ShowParticles:0b}],Tags:[d4y2,plane-init,plane,plane-seat,entity-nohit]}],DisabledSlots:256}
 summon armor_stand ~ ~ ~ {Tags:["d4y2-body","d4y2",plane-init,plane,has-model,model-changeable,plane-parts,entity-nohit],NoGravity:1b,Invisible:1b,HandItems:[{id:"minecraft:diamond_sword",Count:1b,tag:{CustomModelData:27,Unbreakable:1b}},{}],Pose:{LeftArm:[0f,0f,0f],RightArm:[0f,0f,0f]},DisabledSlots:256}
 
@@ -65,24 +65,16 @@ scoreboard players set @e[tag=plane-init,tag=d4y2-body] vp.parking-cmd 27
 scoreboard players set @e[tag=plane-init,tag=d4y2-body] vp.rolling-cmd 28
 scoreboard players set @e[tag=plane-init,tag=d4y2-body] vp.flying-cmd 29
 
-scoreboard players set @e[tag=plane-init,tag=plane-root] vp.w1-cooltime 0
-scoreboard players set @e[tag=plane-init,tag=plane-root] vp.w2-cooltime 0
-scoreboard players set @e[tag=plane-init,tag=plane-root] vp.w3-cooltime 0
-scoreboard players set @e[tag=plane-init,tag=plane-root] vp.w4-cooltime 0
-scoreboard players set @e[tag=plane-init,tag=plane-root] vp.ammunition1 400
-scoreboard players set @e[tag=plane-init,tag=plane-root] vp.ammunition2 3
-scoreboard players set @e[tag=plane-init,tag=plane-root] vp.ammunition3 500
-scoreboard players set @e[tag=plane-init,tag=plane-root] vp.ammunition4 4
-scoreboard players set @e[tag=plane-init,tag=plane-root] vp.max-ammo1 400
-scoreboard players set @e[tag=plane-init,tag=plane-root] vp.max-ammo2 3
-scoreboard players set @e[tag=plane-init,tag=plane-root] vp.max-ammo3 500
-scoreboard players set @e[tag=plane-init,tag=plane-root] vp.max-ammo4 4
-scoreboard players set @e[tag=plane-init,tag=plane-root] vp.max-w1-reload 140
-scoreboard players set @e[tag=plane-init,tag=plane-root] vp.max-w2-reload 500
-scoreboard players set @e[tag=plane-init,tag=plane-root] vp.max-w3-reload 140
-scoreboard players set @e[tag=plane-init,tag=plane-root] vp.max-w4-reload 500
-scoreboard players set @e[tag=plane-init,tag=plane-root] vp.curr-weapon 1
-scoreboard players set @e[tag=plane-init,tag=plane-root] vp.weapon-types 6
+
+#ohmydat呼び出し
+execute as @e[tag=plane-init,tag=plane-root] run function oh_my_dat:please
+
+#武器データセット
+data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon set value {current-weapon-index:0}
+data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list set value []
+data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list append from storage voxel-planes:weapon d4y2.base.gun
+data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list append from storage voxel-planes:weapon d4y2.base.bomb
+
 
 scoreboard players set @e[tag=plane-init,tag=plane-root] vp.max-engine 1
 

@@ -1,1 +1,0 @@
-loot spawn ~ ~ ~ loot plane-data:d4y2
