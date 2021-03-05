@@ -1,1 +1,0 @@
-loot spawn ~ ~ ~ loot plane-data:j2m3
