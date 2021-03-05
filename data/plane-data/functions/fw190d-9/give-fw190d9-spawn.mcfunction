@@ -1,1 +1,0 @@
-loot spawn ~ ~ ~ loot plane-data:fw190d9

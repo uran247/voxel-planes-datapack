@@ -17,3 +17,5 @@ execute unless data storage voxel-planes:weapon a6m5 run function plane-data:a6m
 execute unless data storage voxel-planes:weapon d3a run function plane-data:d3a/d3a-storage
 execute unless data storage voxel-planes:weapon d4y2 run function plane-data:d4y2/d4y2-storage
 execute unless data storage voxel-planes:weapon f4u1 run function plane-data:f4u-1/f4u1-storage
+execute unless data storage voxel-planes:weapon fw190d9 run function plane-data:fw190d-9/fw190d9-storage
+execute unless data storage voxel-planes:weapon g4m1 run function plane-data:g4m1/g4m1-storage

@@ -2,4 +2,4 @@
 #処理　ki21をアイテム化
 
 #アイテムをsummon
-function plane-data:g4m1/give-g4m1-spawn
+loot spawn ~ ~ ~ loot plane-data:g4m1

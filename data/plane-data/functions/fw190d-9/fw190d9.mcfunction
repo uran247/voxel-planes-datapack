@@ -67,27 +67,21 @@ scoreboard players set @e[tag=plane-init] vp.parking-cmd 4
 scoreboard players set @e[tag=plane-init] vp.rolling-cmd 5
 scoreboard players set @e[tag=plane-init] vp.flying-cmd 6
 
-scoreboard players set @e[tag=plane-init] vp.w1-cooltime 0
-scoreboard players set @e[tag=plane-init] vp.w2-cooltime 0
-scoreboard players set @e[tag=plane-init] vp.w3-cooltime 0
-scoreboard players set @e[tag=plane-init] vp.ammunition1 250
-scoreboard players set @e[tag=plane-init] vp.ammunition2 450
-scoreboard players set @e[tag=plane-init] vp.ammunition3 0
-scoreboard players set @e[tag=plane-init] vp.max-ammo1 250
-scoreboard players set @e[tag=plane-init] vp.max-ammo2 450
-scoreboard players set @e[tag=plane-init] vp.max-ammo3 1
-scoreboard players set @e[tag=plane-init] vp.max-w1-reload 280
-scoreboard players set @e[tag=plane-init] vp.max-w2-reload 220
-scoreboard players set @e[tag=plane-init] vp.max-w3-reload 3600
-scoreboard players set @e[tag=plane-init] vp.curr-weapon 1
-scoreboard players set @e[tag=plane-init] vp.weapon-types 6
-
 scoreboard players set @e[tag=plane-init] vp.max-engine 1
 
 data modify storage minecraft:plane-datapack temporary.Pos set from entity @e[tag=plane-init,tag=plane-root,limit=1] Pos
 execute store result score @e[tag=plane-init,limit=1] vp.PosX run data get storage minecraft:plane-datapack temporary.Pos[0] 10000
 execute store result score @e[tag=plane-init,limit=1] vp.PosY run data get storage minecraft:plane-datapack temporary.Pos[1] 10000
 execute store result score @e[tag=plane-init,limit=1] vp.PosZ run data get storage minecraft:plane-datapack temporary.Pos[2] 10000
+
+#ohmydat呼び出し
+execute as @e[tag=plane-init,tag=plane-root] run function oh_my_dat:please
+
+#武器データセット
+data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon set value {current-weapon-index:0}
+data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list set value []
+data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list append from storage voxel-planes:weapon fw190d9.base.20mm
+data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list append from storage voxel-planes:weapon fw190d9.base.13mm
 
 #hitboxのスコア設定
 scoreboard players set @e[tag=body,tag=plane-init] vp.offsetX 0

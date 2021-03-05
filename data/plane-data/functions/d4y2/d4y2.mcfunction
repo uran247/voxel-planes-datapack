@@ -65,6 +65,12 @@ scoreboard players set @e[tag=plane-init,tag=d4y2-body] vp.parking-cmd 27
 scoreboard players set @e[tag=plane-init,tag=d4y2-body] vp.rolling-cmd 28
 scoreboard players set @e[tag=plane-init,tag=d4y2-body] vp.flying-cmd 29
 
+scoreboard players set @e[tag=plane-init,tag=plane-root] vp.max-engine 1
+
+data modify storage minecraft:plane-datapack temporary.Pos set from entity @e[tag=plane-init,tag=plane-root,limit=1] Pos
+execute store result score @e[tag=plane-init,tag=plane-root,limit=1] vp.PosX run data get storage minecraft:plane-datapack temporary.Pos[0] 10000
+execute store result score @e[tag=plane-init,tag=plane-root,limit=1] vp.PosY run data get storage minecraft:plane-datapack temporary.Pos[1] 10000
+execute store result score @e[tag=plane-init,tag=plane-root,limit=1] vp.PosZ run data get storage minecraft:plane-datapack temporary.Pos[2] 10000
 
 #ohmydat呼び出し
 execute as @e[tag=plane-init,tag=plane-root] run function oh_my_dat:please
@@ -74,14 +80,6 @@ data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon set valu
 data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list set value []
 data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list append from storage voxel-planes:weapon d4y2.base.gun
 data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list append from storage voxel-planes:weapon d4y2.base.bomb
-
-
-scoreboard players set @e[tag=plane-init,tag=plane-root] vp.max-engine 1
-
-data modify storage minecraft:plane-datapack temporary.Pos set from entity @e[tag=plane-init,tag=plane-root,limit=1] Pos
-execute store result score @e[tag=plane-init,tag=plane-root,limit=1] vp.PosX run data get storage minecraft:plane-datapack temporary.Pos[0] 10000
-execute store result score @e[tag=plane-init,tag=plane-root,limit=1] vp.PosY run data get storage minecraft:plane-datapack temporary.Pos[1] 10000
-execute store result score @e[tag=plane-init,tag=plane-root,limit=1] vp.PosZ run data get storage minecraft:plane-datapack temporary.Pos[2] 10000
 
 #hitboxのスコア設定
 scoreboard players set @e[tag=body,tag=plane-init] vp.offsetX 0
