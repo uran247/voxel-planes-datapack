@@ -9,7 +9,6 @@
 #> private
 # @private
     #declare score_holder #60kg #60kg爆弾アイテムを装備していることを示す
-    #declare score_holder #kill-weapon #現在装備中の爆弾を消すべきであるとのフラグ
 
 #装備品チェック
 execute store success score #60kg vp.reg1 if entity @e[type=minecraft:donkey,tag=target-parts,nbt={Items:[{tag:{item-type:60kg-bomb}}]},distance=..30]

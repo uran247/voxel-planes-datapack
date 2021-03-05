@@ -24,6 +24,8 @@ execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weap
 execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data{size:7p7mm} run scoreboard players operation #is-tracer vp.reg1 %= #6 vp.Num
 execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data{size:12p7mm} run scoreboard players operation #is-bullet vp.reg1 %= #4 vp.Num
 execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data{size:12p7mm} run scoreboard players operation #is-tracer vp.reg1 %= #8 vp.Num
+execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data{size:13mm} run scoreboard players operation #is-bullet vp.reg1 %= #4 vp.Num
+execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data{size:13mm} run scoreboard players operation #is-tracer vp.reg1 %= #8 vp.Num
 execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data{size:20mm} run scoreboard players operation #is-bullet vp.reg1 %= #3 vp.Num
 execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data{size:20mm} run scoreboard players operation #is-tracer vp.reg1 %= #6 vp.Num
 
@@ -76,6 +78,7 @@ execute as @e[tag=gun-init,distance=..5] run function plane-data:util/gun-set-po
 #音
 execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data{size:7p7mm} run playsound minecraft:weapon.gun-7p7m.fire master @a ~ ~ ~ 1 1 1
 execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data{size:12p7mm} run playsound minecraft:weapon.gun-7p7m.fire master @a ~ ~ ~ 1 1 1
+execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data{size:13mm} run playsound minecraft:weapon.gun-7p7m.fire master @a ~ ~ ~ 1 1 1
 execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data{size:20mm} run playsound minecraft:weapon.heavy-muchingun.fire master @a ~ ~ ~ 1 1 1
 
 #発射炎
