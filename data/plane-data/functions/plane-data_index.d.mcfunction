@@ -63,3 +63,5 @@
     #declare tag mg151 #mg151を装備していることを示す
     #declare tag bomb-normal #通常爆弾であることを示す
     #declare tag normal #通常爆弾であることを示す
+    #declare tag normal-bomber #水平爆撃機であることを示す
+    #declare tag dive-bomber #急降下爆撃機であることを示す
