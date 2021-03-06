@@ -2,4 +2,4 @@
 #処理　ki21をアイテム化
 
 #アイテムをsummon
-function plane-data:ki-21/give-ki21-spawn
+loot spawn ~ ~ ~ loot plane-data:ki-21
