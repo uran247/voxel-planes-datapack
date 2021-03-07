@@ -14,10 +14,6 @@
 #
 # 利用可能タグ controll-target:機体
 
-#execute if entity @s[tag=n1k2,tag=need-use-weapon] run function plane-data:n1k2/n1k2-weapon-manager
-execute if entity @s[tag=ki49,tag=need-use-weapon] run function plane-data:ki-49/ki49-weapon-manager
-execute if entity @s[tag=seafuryfb11,tag=need-use-weapon] run function plane-data:seafuryfb11/seafuryfb11-weapon-manager
-
 #選択武器が爆弾の場合照準を出す
 execute if entity @s[tag=flying] if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data{type:bomb} run function plane:weapon/util/display-aim
 
