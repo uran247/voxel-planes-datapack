@@ -14,8 +14,6 @@
 #
 # 利用可能タグ controll-target:機体
 
-#execute if entity @s[tag=ki44,tag=need-use-weapon] run function plane-data:ki-44/ki44-weapon-manager
-execute if entity @s[tag=ki61,tag=need-use-weapon] run function plane-data:ki-61/ki61-weapon-manager
 execute if entity @s[tag=n1k2,tag=need-use-weapon] run function plane-data:n1k2/n1k2-weapon-manager
 execute if entity @s[tag=ki49,tag=need-use-weapon] run function plane-data:ki-49/ki49-weapon-manager
 execute if entity @s[tag=seafuryfb11,tag=need-use-weapon] run function plane-data:seafuryfb11/seafuryfb11-weapon-manager
