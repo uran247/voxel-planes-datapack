@@ -6,14 +6,15 @@
 #   entity 0-0-0-0-a{Rotation:[~,任意の角度]}
 #   executer @e[tag=plane-root]
 #
-# @private
-    #declare tag aim-viewer #aimを見る人を示す
-
-#> within
-#
 # @within
 #   plane-data:**
 #   plane:weapon/util/display-aim
+
+#> prv
+#
+# @private
+    #declare tag aim-viewer #aimを見る人を示す
+
 
 tag @p[tag=plane-rider] add aim-viewer
 

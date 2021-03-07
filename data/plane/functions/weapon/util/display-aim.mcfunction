@@ -7,4 +7,5 @@
 
 execute if entity @s[tag=normal-bomber] at @s run tp 0-0-0-0-a ~ ~ ~ ~ ~15
 execute if entity @s[tag=dive-bomber] at @s run tp 0-0-0-0-a ~ ~ ~ ~ ~30
-function plane:weapon/util/bomb-aim
+execute if entity @s[tag=normal-bomber] run function plane:weapon/util/bomb-aim
+execute if entity @s[tag=dive-bomber] run function plane:weapon/util/bomb-aim

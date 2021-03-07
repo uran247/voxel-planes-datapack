@@ -63,14 +63,6 @@ scoreboard players set @e[tag=plane-init,tag=ki43-body] vp.parking-cmd 67
 scoreboard players set @e[tag=plane-init,tag=ki43-body] vp.rolling-cmd 68
 scoreboard players set @e[tag=plane-init,tag=ki43-body] vp.flying-cmd 69
 
-scoreboard players set @e[tag=plane-init,tag=plane-root] vp.w1-cooltime 0
-scoreboard players set @e[tag=plane-init,tag=plane-root] vp.w2-cooltime 0
-scoreboard players set @e[tag=plane-init,tag=plane-root] vp.ammunition1 500
-scoreboard players set @e[tag=plane-init,tag=plane-root] vp.max-ammo1 500
-scoreboard players set @e[tag=plane-init,tag=plane-root] vp.max-w1-reload 140
-scoreboard players set @e[tag=plane-init,tag=plane-root] vp.curr-weapon 1
-scoreboard players set @e[tag=plane-init,tag=plane-root] vp.weapon-types 2
-
 scoreboard players set @e[tag=plane-init,tag=plane-root] vp.max-engine 1
 
 data modify storage minecraft:plane-datapack temporary.Pos set from entity @e[tag=plane-init,tag=plane-root,limit=1] Pos
@@ -84,7 +76,7 @@ execute as @e[tag=plane-init,tag=plane-root] run function oh_my_dat:please
 #武器データセット
 data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon set value {current-weapon-index:0}
 data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list set value []
-data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list append from storage voxel-planes:weapon ki43.base.7.7mm
+data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list append from storage voxel-planes:weapon ki43.base.7p7mm
 
 #hitboxのスコア設定
 scoreboard players set @e[tag=body,tag=plane-init] vp.offsetX 0
