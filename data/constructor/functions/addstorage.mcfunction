@@ -25,3 +25,4 @@ execute unless data storage voxel-planes:weapon ki43 run function plane-data:ki-
 execute unless data storage voxel-planes:weapon ki44 run function plane-data:ki-44/ki44-storage
 execute unless data storage voxel-planes:weapon ki61 run function plane-data:ki-61/ki61-storage
 execute unless data storage voxel-planes:weapon n1k2 run function plane-data:n1k2/n1k2-storage
+execute unless data storage voxel-planes:weapon ki49 run function plane-data:ki-49/ki49-storage
