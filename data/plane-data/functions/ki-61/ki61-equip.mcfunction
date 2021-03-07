@@ -25,27 +25,15 @@
 execute store success score #250kg vp.reg1 if entity @e[type=minecraft:donkey,tag=target-parts,nbt={Items:[{tag:{item-type:250kg-bomb}}]},distance=..30]
 execute store success score #mg151 vp.reg1 if entity @e[type=minecraft:donkey,tag=target-parts,nbt={Items:[{tag:{item-type:mg151}}]},distance=..30]
 
-#初期タグ設定
-tag @s remove 250kg
-tag @s remove has-bomb
-tag @s remove has-weapon3
-tag @s remove main-weapon3
-tag @s remove mg151
+#ストレージリセット
+data remove storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{data:{size:20mm}}]
+data remove storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{data:{type:bomb}}]
 
 #装備
-execute if score #250kg vp.reg1 matches 1.. run tag @s add has-bomb
-execute if score #250kg vp.reg1 matches 1.. run tag @s add 250kg
-execute if score #250kg vp.reg1 matches 1.. run tag @s add has-weapon3
-execute if score #250kg vp.reg1 matches 1.. run tag @s add main-weapon3
-execute if score #mg151 vp.reg1 matches 1.. run tag @s add mg151
-
-#装備種別変更
-scoreboard players set @s vp.weapon-types 6
-scoreboard players operation @s[tag=has-bomb] vp.weapon-types *= #5 vp.Num
-#weapon-id
-# 2: 20mm gun
-# 3: 12.7mm gun
-# 5: bomb
+execute unless score #mg151 vp.reg1 matches 1.. run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list append from storage voxel-planes:weapon ki61.base.20mm
+execute if score #mg151 vp.reg1 matches 1.. run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list append from storage voxel-planes:weapon ki61.additional.20mm
+execute if score #250kg vp.reg1 matches 1.. run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list append from storage voxel-planes:weapon ki61.base.bomb
+execute if score #250kg vp.reg1 matches 1.. run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{data:{type:bomb}}].data.bombs append from storage voxel-planes:weapon ki61.additional.250kg[]
 
 #装備済み爆弾削除
 scoreboard players set #kill-weapon vp.reg1 0
