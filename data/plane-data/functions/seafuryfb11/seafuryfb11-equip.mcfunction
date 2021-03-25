@@ -30,7 +30,6 @@ execute if score #500kg vp.reg1 matches 1.. run tag @s add main-weapon2
 
 #装備種別変更
 scoreboard players set @s vp.weapon-types 2
-scoreboard players operation @s[tag=has-bomb] vp.weapon-types *= #3 vp.Num
 #weapon-id
 # 2: 20mm gun
 # 3: bomb
@@ -41,7 +40,6 @@ execute if entity @s[tag=!500kg] if entity @e[tag=target-parts,tag=500kg,tag=bom
 execute if score #kill-weapon vp.reg1 matches 1.. run kill @e[tag=target-parts,tag=plane-bomb]
 
 #弾薬リセット
-scoreboard players operation @s[tag=has-bomb] vp.ammunition2 = @s vp.max-ammo2
 scoreboard players set @s[tag=!has-bomb] vp.ammunition2 0
 
 #ステータス変更

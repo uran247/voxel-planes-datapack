@@ -22,10 +22,11 @@ execute as @s[tag=ki49] at @s run function plane-data:ki-49/ki49-2-item
 execute as @s[tag=f4u1] at @s run function plane-data:f4u-1/f4u1-2-item
 execute as @s[tag=fw190d9] at @s run function plane-data:fw190d-9/fw190d9-2-item
 execute as @s[tag=seafuryfb11] at @s run function plane-data:seafuryfb11/seafuryfb11-2-item
+execute as @s[tag=me262a1a] at @s run function plane-data:me262a-1a/me262a1a-2-item
 
 #ロバチェスト内のアイテム放出
 data merge block 0 1 0 {Items:[]}
-data modify block 0 1 0 Items set from entity @e[tag=plane2item-plane-parts,tag=plane-seat,type=minecraft:donkey,limit=1] Items
+data modify block 0 1 0 Items set from entity @e[type=minecraft:donkey,tag=plane2item-plane-parts,tag=plane-seat,limit=1] Items
 execute at @s run loot spawn ~ ~ ~ mine 0 1 0 air{load:1b}
 data merge block 0 1 0 {Items:[]}
 

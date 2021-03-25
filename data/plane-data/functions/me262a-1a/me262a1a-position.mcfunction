@@ -1,4 +1,4 @@
-#> plane-data:seafuryfb11/seafuryfb11-position
+#> plane-data:me262a-1a/me262a1a-position
 #
 # plane-seatの位置を調整する
 #
