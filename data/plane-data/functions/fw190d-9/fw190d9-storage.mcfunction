@@ -2,7 +2,7 @@
 #
 # @within function constructor:addstorage
 
-data modify storage voxel-planes:weapon f4u1 set value {base:{},additional:{}}
+data modify storage voxel-planes:weapon fw190d9 set value {base:{},additional:{}}
 
 #デフォルト機銃データセット
 data modify storage voxel-planes:weapon fw190d9.base.20mm set value {data:{name:"20mm gun",type:gun,size:20mm,max-ammunition:250,current-ammunition:250,max-cooltime:2,current-cooltime:0,max-reload:280,current-reload:0,tracer:"lightgreen",damage:90,speed:9d,bullets:[{offset:[0.96d,-0.1d,2.2d]},{offset:[-1d,-0.1d,2.2d]}]}}

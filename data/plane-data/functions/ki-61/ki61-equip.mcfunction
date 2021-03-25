@@ -40,9 +40,5 @@ scoreboard players set #kill-weapon vp.reg1 0
 execute if entity @s[tag=!250kg] if entity @e[tag=target-parts,tag=250kg,tag=bomb-normal] run scoreboard players set #kill-weapon vp.reg1 1
 execute if score #kill-weapon vp.reg1 matches 1.. run kill @e[tag=target-parts,tag=plane-bomb]
 
-#弾薬リセット
-scoreboard players operation @s[tag=has-bomb] vp.ammunition3 = @s vp.max-ammo3
-scoreboard players set @s[tag=!has-bomb] vp.ammunition3 0
-
 #ステータス変更
 #装備に応じて右記ステータス変更：最高速度　巡航速度　旋回力

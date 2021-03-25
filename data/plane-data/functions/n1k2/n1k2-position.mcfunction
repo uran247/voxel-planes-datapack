@@ -1,5 +1,5 @@
 #角度スコアを航空機に反映する、パーツの位置を調整する
-#実行方法:execute as @e[tag=a6m2-root] at @s run function plane:position/a6m2-position
+#実行方法:execute as @e[tag=plane-root] at @s run function plane:position/a6m2-position
 #実行者：機体　実行位置：機体
 
 #seatの位置修正
