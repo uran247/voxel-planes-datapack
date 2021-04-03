@@ -3,20 +3,6 @@
 # @within
 #   function plane:weapon/**
 #   function plane:plane-info
-    #declare tag has-weapon1 #武器1を所持していることを示す
-    #declare tag has-weapon2 #武器2を所持していることを示す
-    #declare tag has-weapon3 #武器3を所持していることを示す
-    #declare tag has-weapon4 #武器4を所持していることを示す
-    #declare tag has-weapon5 #武器5を所持していることを示す
-    #declare tag has-weapon6 #武器6を所持していることを示す
-    #declare tag has-weapon7 #武器7を所持していることを示す
-    #declare tag main-weapon1 #武器1が手動で使用可能であることを示す
-    #declare tag main-weapon2 #武器2が手動で使用可能であることを示す
-    #declare tag main-weapon3 #武器3が手動で使用可能であることを示す
-    #declare tag main-weapon4 #武器4が手動で使用可能であることを示す
-    #declare tag main-weapon5 #武器5が手動で使用可能であることを示す
-    #declare tag main-weapon6 #武器6が手動で使用可能であることを示す
-    #declare tag main-weapon7 #武器7が手動で使用可能であることを示す
     #declare tag enemy-plane #後部機銃の攻撃対象にできるエンティティであることを示す
 
 #> public
@@ -47,7 +33,6 @@
     #declare tag plane #飛行機構成エンティティであることを示す
     #declare tag plane-bomb #爆弾であることを示す
     #declare tag plane-rocket #ロケット弾であることを示す
-    #declare tag has-bomb #爆弾を持っていることを示す
     #declare tag has-torpedo #魚雷を持っていることを示す
     #declare tag has-rocket #ロケット弾を持っていることを示す
     #declare tag 7p7mm #7.7mm機銃を装備していることを示す

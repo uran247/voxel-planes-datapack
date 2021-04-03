@@ -106,8 +106,10 @@ scoreboard objectives add vp.prop-strt-max dummy
 scoreboard objectives add vp.prop-strt-min dummy
 scoreboard objectives add vp.prop-stop-max dummy
 scoreboard objectives add vp.prop-stop-min dummy
+scoreboard objectives add vp.gear-ret dummy
 scoreboard objectives add vp.gear-ret-max dummy
 scoreboard objectives add vp.gear-ret-min dummy
+scoreboard objectives add vp.gear-po dummy
 scoreboard objectives add vp.gear-po-min dummy
 scoreboard objectives add vp.gear-po-max dummy
 scoreboard objectives add vp.weapon-types dummy

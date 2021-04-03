@@ -30,6 +30,8 @@ scoreboard players operation #speed vp.reg1 *= #288 vp.Num
 scoreboard players operation #speed vp.reg1 /= #10000 vp.Num
 execute if score @s vp.speed <= @s vp.gear-po-max run data modify storage plane-datapack plane-info[0] set value "[{\"score\":{\"name\":\"#speed\",\"objective\":\"vp.reg1\"},\"color\":\"blue\"},{\"text\":\"km/h\",\"color\":\"blue\"}]"
 execute if score @s vp.speed > @s vp.gear-po-max run data modify storage plane-datapack plane-info[0] set value "[{\"score\":{\"name\":\"#speed\",\"objective\":\"vp.reg1\"},\"color\":\"red\"},{\"text\":\"km/h\",\"color\":\"red\"}]"
+execute if score @s vp.speed <= @s vp.gear-po run data modify storage plane-datapack plane-info[0] set value "[{\"score\":{\"name\":\"#speed\",\"objective\":\"vp.reg1\"},\"color\":\"blue\"},{\"text\":\"km/h\",\"color\":\"blue\"}]"
+execute if score @s vp.speed > @s vp.gear-po run data modify storage plane-datapack plane-info[0] set value "[{\"score\":{\"name\":\"#speed\",\"objective\":\"vp.reg1\"},\"color\":\"red\"},{\"text\":\"km/h\",\"color\":\"red\"}]"
 
 #throt計算
 scoreboard players operation #throttle vp.reg1 = @s vp.throttle

@@ -4,6 +4,7 @@
 #
 # @input
 #   executer @p
+#   score @s vp.taken-damage
 #
 # @output
 #   score @s vp.total-damage
