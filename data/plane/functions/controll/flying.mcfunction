@@ -46,8 +46,5 @@ execute as @e[tag=controll-target,distance=..1,limit=1] run scoreboard players o
 #墜落してた場合スロットル0
 scoreboard players set @e[tag=controll-target,tag=destroyed,distance=..1,limit=1] vp.throttle 0
 
-#1ブロック下が空気以外かつspeedがギア引き出し速度未満、失速してない、throttlが50%未満ならならなら着陸モードへ
-execute as @e[tag=controll-target,tag=!stall,tag=!destroyed,scores={vp.throttle=..10},distance=..1,limit=1] at @s if score @s vp.gear-po-max > @s vp.speed unless block ~ ~-1 ~ minecraft:air run function plane:controll/flying/landing
-
 #周囲見渡しタグ削除
 tag @s[tag=overlook] remove overlook

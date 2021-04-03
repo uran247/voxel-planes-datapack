@@ -4,7 +4,9 @@
     #declare storage minecraft:plane-datapack
     #declare storage minecraft:plane-datapack-weapon
     #declare storage voxel-planes:weapon
+    #declare storage voxel-planes:plane
     #declare storage oh_my_dat:
+    #declare storage voxel-planes:input
 
 #storage作成
 data merge storage minecraft:plane-datapack {temporary:{Pos:[0.0d,0.0d,0.0d]},Items:[]}

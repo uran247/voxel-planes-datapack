@@ -12,7 +12,6 @@
 #   plane-data:ki-61/ki61-equip
 #   plane-data:ki-61/ki61-weapon-manager
        #declare tag mg151 #mg151機銃を装備していることを示す
-       #declare tag has-bomb #爆弾を装備していることを示す
        #declare tag 250kg #250kg通常爆弾を装備していることを示す
 
 #> private

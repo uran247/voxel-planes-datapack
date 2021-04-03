@@ -128,7 +128,7 @@ function plane:move/plane-move/flying/change-gear-model
 
 #1ブロック下が空気以外かつspeedがギア引き出し速度未満、throttlが50%未満ならならなら着陸モードへ
 execute as @s[tag=!destroyed,scores={vp.throttle=..10,vp.AngX=..3000}] at @s if score @s vp.gear-po-max > @s vp.speed unless block ~ ~-1 ~ minecraft:air run function plane:move/plane-move/flying/landing
-
+execute as @s[tag=!destroyed,scores={vp.throttle=..10,vp.AngX=..3000}] at @s if score @s vp.gear-po > @s vp.speed unless block ~ ~-1 ~ minecraft:air run function plane:move/plane-move/flying/landing
 
 #タグ解除
 tag @s remove flying-executer

@@ -32,30 +32,41 @@ summon armor_stand ~ ~ ~ {Tags:["f4u1-hitbox","f4u1",plane-init,plane,plane-hitb
 #ID付与
 execute as @e[tag=plane-init,tag=plane-root,limit=1] at @s run function plane:summon/set-plane-id
 
+#ohmydat呼び出し
+execute as @e[tag=plane-init,tag=plane-root] run function oh_my_dat:please
+
 #スピード・滑走/角度/旋回速度/加速度/最高速度/離陸速度/形態スコア・存在座標・設定
-scoreboard players set @e[tag=plane-init,tag=plane-root] vp.rolling 0
-scoreboard players set @e[tag=plane-init,tag=plane-root] vp.speed 0
-scoreboard players set @e[tag=plane-init,tag=plane-root] vp.accelerate 70
-scoreboard players set @e[tag=plane-init,tag=plane-root] vp.resistance 37
-scoreboard players set @e[tag=plane-init,tag=plane-root] vp.energy-loss 22
-scoreboard players set @e[tag=plane-init,tag=plane-root] vp.deaccelerate 107
-scoreboard players set @e[tag=plane-init,tag=plane-root] vp.max-speed 23300
-scoreboard players set @e[tag=plane-init,tag=plane-root] vp.cruise-speed 12000
-scoreboard players set @e[tag=plane-init,tag=plane-root] vp.stall-speed 5100
-scoreboard players set @e[tag=plane-init,tag=plane-root] vp.takeoff-speed 5300
-scoreboard players set @e[tag=plane-init,tag=plane-root] vp.gear-ret-min 6600
-scoreboard players set @e[tag=plane-init,tag=plane-root] vp.gear-ret-max 6800
-scoreboard players set @e[tag=plane-init,tag=plane-root] vp.gear-po-min 6300
-scoreboard players set @e[tag=plane-init,tag=plane-root] vp.gear-po-max 6500
+data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].plane-data set from storage voxel-planes:plane f4u1.plane-data
+
+execute store result score @e[tag=plane-init,tag=plane-root] vp.max-speed run data get storage voxel-planes:plane f4u1.plane-data.flight-model.speed.max-speed 34.72
+execute store result score @e[tag=plane-init,tag=plane-root] vp.cruise-speed run data get storage voxel-planes:plane f4u1.plane-data.flight-model.speed.cruise-speed 34.72
+execute store result score @e[tag=plane-init,tag=plane-root] vp.stall-speed run data get storage voxel-planes:plane f4u1.plane-data.flight-model.speed.stall-speed 34.72
+
+execute as @e[tag=plane-init,tag=plane-root] store result score @s vp.takeoff-speed run scoreboard players get @s vp.stall-speed
+scoreboard players add @e[tag=plane-init,tag=plane-root] vp.takeoff-speed 200
+execute as @e[tag=plane-init,tag=plane-root] store result score @s vp.gear-ret run scoreboard players get @s vp.stall-speed
+scoreboard players add @e[tag=plane-init,tag=plane-root] vp.gear-ret 1500
+execute as @e[tag=plane-init,tag=plane-root] store result score @s vp.gear-po run scoreboard players get @s vp.stall-speed
+scoreboard players add @e[tag=plane-init,tag=plane-root] vp.gear-po 1200
+
+data remove storage voxel-planes:input input
+data modify storage voxel-planes:input input set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].plane-data
+function plane-data:util/culc-resistance
+scoreboard players operation @e[tag=plane-init,tag=plane-root] vp.resistance = #resistance vp.return
+
+execute store result storage voxel-planes:input input.resistance int 1 run scoreboard players get #resistance vp.return
+function plane-data:util/culc-deaccelerate
+scoreboard players operation @e[tag=plane-init,tag=plane-root] vp.deaccelerate = #deaccelerate vp.return
+
+function plane-data:util/culc-energy-loss
+scoreboard players operation @e[tag=plane-init,tag=plane-root] vp.energy-loss = #energy-loss vp.return
+
 scoreboard players set @e[tag=plane-init,tag=plane-root] vp.prop-strt-min 1600
 scoreboard players set @e[tag=plane-init,tag=plane-root] vp.prop-strt-max 1700
 scoreboard players set @e[tag=plane-init,tag=plane-root] vp.prop-stop-min 1400
 scoreboard players set @e[tag=plane-init,tag=plane-root] vp.prop-stop-max 1500
 
 scoreboard players set @e[tag=plane-init,tag=plane-root] vp.landing-pitch -1200
-scoreboard players set @e[tag=plane-init,tag=plane-root] vp.AngX -1200
-scoreboard players set @e[tag=plane-init,tag=plane-root] vp.AngY 0
-scoreboard players set @e[tag=plane-init,tag=plane-root] vp.AngZ 0
 scoreboard players set @e[tag=plane-init,tag=plane-root] vp.AngY-old 0
 scoreboard players set @e[tag=plane-init,tag=plane-root] vp.pitch-speed 170
 scoreboard players set @e[tag=plane-init,tag=plane-root] vp.yaw-speed 90
@@ -67,13 +78,16 @@ scoreboard players set @e[tag=plane-init,tag=f4u1-body] vp.flying-cmd 3
 
 scoreboard players set @e[tag=plane-init] vp.max-engine 1
 
+scoreboard players set @e[tag=plane-init,tag=plane-root] vp.AngX -1200
+scoreboard players set @e[tag=plane-init,tag=plane-root] vp.AngY 0
+scoreboard players set @e[tag=plane-init,tag=plane-root] vp.AngZ 0
+scoreboard players set @e[tag=plane-init,tag=plane-root] vp.rolling 0
+scoreboard players set @e[tag=plane-init,tag=plane-root] vp.speed 0
+
 data modify storage minecraft:plane-datapack temporary.Pos set from entity @e[tag=plane-init,tag=plane-root,limit=1] Pos
 execute store result score @e[tag=plane-init,tag=plane-root,limit=1] vp.PosX run data get storage minecraft:plane-datapack temporary.Pos[0] 10000
 execute store result score @e[tag=plane-init,tag=plane-root,limit=1] vp.PosY run data get storage minecraft:plane-datapack temporary.Pos[1] 10000
 execute store result score @e[tag=plane-init,tag=plane-root,limit=1] vp.PosZ run data get storage minecraft:plane-datapack temporary.Pos[2] 10000
-
-#ohmydat呼び出し
-execute as @e[tag=plane-init,tag=plane-root] run function oh_my_dat:please
 
 #武器データセット
 data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon set value {current-weapon-index:0}
