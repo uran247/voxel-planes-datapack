@@ -60,8 +60,8 @@ execute as @p[tag=hit-weapon,distance=..20] run function weapon:util/damage
 #ダメージエフェクト
 effect give @e[type=!player,tag=hit-weapon,distance=..20] minecraft:instant_damage 1 126 true
 
-#スコアをHPに反映
-execute as @e[type=!spawner_minecart,tag=hit-weapon,distance=..20] store result entity @s Health float 1 run scoreboard players get @s vp.reg1
+#スコアをHPに反映(cockpitにはダメージを与えない)
+execute as @e[type=!spawner_minecart,tag=hit-weapon,tag=!cockpit,distance=..20] store result entity @s Health float 1 run scoreboard players get @s vp.reg1
 execute as @e[type=spawner_minecart,tag=hit-weapon,distance=..20] store result entity @s MaxNearbyEntities float 1 run scoreboard players get @s vp.reg1
 
 #破壊音

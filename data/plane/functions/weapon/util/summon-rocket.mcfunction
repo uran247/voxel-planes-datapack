@@ -20,10 +20,8 @@ execute store result score @e[type=armor_stand,tag=rocket-init,distance=..1,limi
 execute store result score @e[type=armor_stand,tag=rocket-init,distance=..1,limit=1] vp.offsetY run data get storage minecraft:plane-datapack temporary.weapon.offset[1] 1000
 execute store result score @e[type=armor_stand,tag=rocket-init,distance=..1,limit=1] vp.offsetZ run data get storage minecraft:plane-datapack temporary.weapon.offset[2] 1000
 execute store result score @e[type=armor_stand,tag=rocket-init,distance=..1,limit=1] vp.damage run data get storage minecraft:plane-datapack temporary.weapon.damage
-execute store result score @e[type=armor_stand,tag=rocket-init,distance=..1,limit=1] vp.acc-cor run data get storage minecraft:plane-datapack temporary.weapon.acc-cor
-execute store result score @e[type=armor_stand,tag=rocket-init,distance=..1,limit=1] vp.pitch-spd-cor run data get storage minecraft:plane-datapack temporary.weapon.pitch-cor
-execute store result score @e[type=armor_stand,tag=rocket-init,distance=..1,limit=1] vp.yaw-spd-cor run data get storage minecraft:plane-datapack temporary.weapon.yaw-cor
-data modify entity @e[type=armor_stand,tag=rocket-init,distance=..1,limit=1] Tags append from storage minecraft:plane-datapack temporary.weapon.weight
+execute store result score @e[type=armor_stand,tag=rocket-init,distance=..1,limit=1] vp.weight run data get storage minecraft:plane-datapack temporary.weapon.weight
+data modify entity @e[type=armor_stand,tag=rocket-init,distance=..1,limit=1] Tags append from storage minecraft:plane-datapack temporary.weapon.weight-tag
 data modify entity @e[type=armor_stand,tag=rocket-init,distance=..1,limit=1] Tags append from storage minecraft:plane-datapack temporary.weapon.type
 execute store result entity @e[type=armor_stand,tag=rocket-init,distance=..1,limit=1] HandItems[0].tag.CustomModelData int 1 run data get storage minecraft:plane-datapack temporary.weapon.cmd
 

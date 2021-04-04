@@ -66,21 +66,6 @@ scoreboard players set @e[tag=plane-init] vp.parking-cmd 125
 scoreboard players set @e[tag=plane-init] vp.rolling-cmd 126
 scoreboard players set @e[tag=plane-init] vp.flying-cmd 127
 
-scoreboard players set @e[tag=plane-init] vp.w1-cooltime 0
-scoreboard players set @e[tag=plane-init] vp.w2-cooltime 0
-scoreboard players set @e[tag=plane-init] vp.w3-cooltime 0
-scoreboard players set @e[tag=plane-init] vp.ammunition1 250
-scoreboard players set @e[tag=plane-init] vp.ammunition2 450
-scoreboard players set @e[tag=plane-init] vp.ammunition3 0
-scoreboard players set @e[tag=plane-init] vp.max-ammo1 250
-scoreboard players set @e[tag=plane-init] vp.max-ammo2 450
-scoreboard players set @e[tag=plane-init] vp.max-ammo3 1
-scoreboard players set @e[tag=plane-init] vp.max-w1-reload 280
-scoreboard players set @e[tag=plane-init] vp.max-w2-reload 220
-scoreboard players set @e[tag=plane-init] vp.max-w3-reload 3600
-scoreboard players set @e[tag=plane-init] vp.curr-weapon 1
-scoreboard players set @e[tag=plane-init] vp.weapon-types 6
-
 scoreboard players set @e[tag=plane-init] vp.max-engine 1
 
 data modify storage minecraft:plane-datapack temporary.Pos set from entity @e[tag=plane-init,tag=plane-root,limit=1] Pos

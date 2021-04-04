@@ -11,12 +11,16 @@
     #declare score_holder #accelerate-cor #爆弾装備などによる加速度の減少値を示す
     #declare score_holder #throttle #現在のスロットルを示す
     #declare score_holder #cruise-speed #巡航速度を示す
+    #declare score_holder #max-speed #最高速度を示す
     #declare score_holder #resistance #空気抵抗の基礎値を示す
     #declare score_holder #speed #現在の速度を示す
     #declare score_holder #speedY #現在のY方向の単位ベクトルを示す
     #declare score_holder #deaccelerate #角度による減速量の基礎値を示す
     #declare score_holder #energy-loss #エネルギー減少係数を示す
     #declare score_holder #ang-z #ロール角を示す
+    #declare score_holder #horse-power #現在の速度を示す
+    #declare score_holder #weight #現在の速度を示す
+
 
 #> private
 # @private
@@ -31,15 +35,18 @@
 tag @s add flying-executer
 
 #### 基本加速量決定####
-scoreboard players operation #accelerate vp.input = @s vp.accelerate
-scoreboard players operation #accelerate-cor vp.input = @s vp.acc-cor
+scoreboard players operation #speed vp.input = @s vp.speed
+scoreboard players operation #horse-power vp.input = @s vp.horse-power
+scoreboard players operation #weight vp.input = @s vp.weight
+scoreboard players operation #weight vp.input += @s vp.add-weight 
 scoreboard players operation #throttle vp.input = @s vp.throttle
 function plane:move/plane-move/set-base-accelerate
 scoreboard players operation #base-accelerate vp.reg1 = #base-accelerate vp.return
+#tellraw @p [{"score" : {"name":"#weight", "objective":"vp.input"}}]
 
 ####減速量決定####
 scoreboard players operation #speed vp.input = @s vp.speed
-scoreboard players operation #cruise-speed vp.input = @s vp.cruise-speed
+scoreboard players operation #max-speed vp.input = @s vp.max-speed
 scoreboard players operation #resistance vp.input = @s vp.resistance
 scoreboard players operation #energy-loss vp.input = @s vp.energy-loss
 scoreboard players operation #ang-z vp.input = @s vp.AngZ
@@ -117,18 +124,18 @@ execute at @s unless block ~ ~1 ~ air run kill @e[tag=target-parts,distance=..20
 execute at @s unless block ~ ~1 ~ air run kill @a[distance=..10]
 
 #登場者無しで奈落に行ったらキル
-execute at @s[tag=!has-rider] if entity @s[y=-50,dy=-100] run playsound minecraft:entity.generic.explode ambient @a ~ ~ ~ 1 0
-execute at @s[tag=!has-rider] if entity @s[y=-50,dy=-100] run particle minecraft:explosion ~ ~ ~ 2 2 2 1 50 force
-execute at @s[tag=!has-rider] if entity @s[y=-50,dy=-100] run kill @s
-execute at @s[tag=!has-rider] if entity @s[y=-50,dy=-100] run kill @e[tag=target-parts,distance=..20]
-execute at @s[tag=!has-rider] if entity @s[y=-50,dy=-100] run kill @a[distance=..10]
+execute at @s[tag=!has-rider] if entity @s[y=-100,dy=-100] run playsound minecraft:entity.generic.explode ambient @a ~ ~ ~ 1 0
+execute at @s[tag=!has-rider] if entity @s[y=-100,dy=-100] run particle minecraft:explosion ~ ~ ~ 2 2 2 1 50 force
+execute at @s[tag=!has-rider] if entity @s[y=-100,dy=-100] run kill @s
+execute at @s[tag=!has-rider] if entity @s[y=-100,dy=-100] run kill @e[tag=target-parts,distance=..20]
+execute at @s[tag=!has-rider] if entity @s[y=-100,dy=-100] run kill @a[distance=..10]
 
 #speedがgear-pull-outだったら滑走モデル、gear-retractingだったら飛行モデルに切り替え(失速中の場合はギアを出さない)
 function plane:move/plane-move/flying/change-gear-model
 
 #1ブロック下が空気以外かつspeedがギア引き出し速度未満、throttlが50%未満ならならなら着陸モードへ
-execute as @s[tag=!destroyed,scores={vp.throttle=..10,vp.AngX=..3000}] at @s if score @s vp.gear-po-max > @s vp.speed unless block ~ ~-1 ~ minecraft:air run function plane:move/plane-move/flying/landing
-execute as @s[tag=!destroyed,scores={vp.throttle=..10,vp.AngX=..3000}] at @s if score @s vp.gear-po > @s vp.speed unless block ~ ~-1 ~ minecraft:air run function plane:move/plane-move/flying/landing
+#execute as @s[tag=!destroyed,scores={vp.throttle=..10,vp.AngX=..3000}] at @s if score @s vp.gear-po-max > @s vp.speed unless block ~ ~-1 ~ minecraft:air run function plane:move/plane-move/flying/landing
+execute as @s[tag=!destroyed,scores={vp.throttle=..10,vp.AngX=..3000}] at @s if score @s vp.gear-ret > @s vp.speed unless block ~ ~-1 ~ minecraft:air run function plane:move/plane-move/flying/landing
 
 #タグ解除
 tag @s remove flying-executer
