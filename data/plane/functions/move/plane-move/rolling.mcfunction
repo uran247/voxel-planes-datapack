@@ -26,16 +26,20 @@
 tag @s add flying-executer
 
 #### 基本加速量決定  #base-accelerate vp.reg1に代入される ####
-scoreboard players operation #accelerate vp.input = @s vp.accelerate
-scoreboard players operation #accelerate-cor vp.input = @s vp.acc-cor
+scoreboard players operation #speed vp.input = @s vp.stall-speed
+scoreboard players operation #horse-power vp.input = @s vp.horse-power
+scoreboard players operation #weight vp.input = @s vp.weight
+scoreboard players operation #weight vp.input += @s vp.add-weight 
 scoreboard players operation #throttle vp.input = @s vp.throttle
 function plane:move/plane-move/set-base-accelerate
 scoreboard players operation #base-accelerate vp.reg1 = #base-accelerate vp.return
 
 ####減速量決定　#base-resistance vp.reg1に代入される ####
 scoreboard players operation #speed vp.input = @s vp.speed
-scoreboard players operation #cruise-speed vp.input = @s vp.cruise-speed
+scoreboard players operation #max-speed vp.input = @s vp.max-speed
 scoreboard players operation #resistance vp.input = @s vp.resistance
+scoreboard players operation #energy-loss vp.input = @s vp.energy-loss
+scoreboard players set #ang-z vp.input 0
 function plane:move/plane-move/set-base-resistance
 scoreboard players operation #base-resistance vp.reg1 = #base-resistance vp.return
 

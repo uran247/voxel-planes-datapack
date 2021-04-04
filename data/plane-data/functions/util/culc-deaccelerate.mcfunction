@@ -10,8 +10,16 @@
 # @within
 #   function plane-data:**
 
+#> private
+#
+# @private
+    #declare score_holder #weight
+    #declare score_holder #horse-power
+    #declare score_holder #max-speed
+    #declare score_holder #climb-rate
+
 #巡航速度での加速度計算
-execute store result score #weight vp.reg1 run data get storage voxel-planes:input input.weight
+execute store result score #weight vp.reg1 run data get storage voxel-planes:input input.flight-model.weight
 execute store result score #horse-power vp.reg1 run data get storage voxel-planes:input input.flight-model.engine.horse-power
 execute store result score #cruise-speed vp.reg1 run data get storage voxel-planes:input input.flight-model.speed.cruise-speed 34.72
 scoreboard players set #deaccelerate vp.return 1837500

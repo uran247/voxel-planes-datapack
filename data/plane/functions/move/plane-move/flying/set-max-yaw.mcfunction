@@ -22,17 +22,23 @@
     #declare score_holder #roll-spped #デフォルトのロール速度を表す
     #declare score_holder #pow16speedy #Y方向単位ベクトルの16乗を示す
     #declare score_holder #1-pow16speedy #1-Y方向単位ベクトル^16を示す
+    #declare score_holder #gross-weight #機体の総重量を示す
 
 #yaw,roll,pitch速度取得
 scoreboard players operation #max-yaw vp.return = @s vp.yaw-speed
 scoreboard players operation #pitch-speed vp.reg1 = @s vp.pitch-speed
 scoreboard players operation #roll-spped vp.reg1 = @s vp.roll-speed
 
-#yaw,roll,pitch速度補正
-scoreboard players operation #max-yaw vp.return += @s vp.yaw-spd-cor
-scoreboard players operation #pitch-speed vp.reg1 += @s vp.pitch-spd-cor
-scoreboard players operation #roll-spped vp.reg1 += @s vp.roll-spd-cor
-#tellraw @p [{"score" : {"name":"#max-yaw", "objective":"return"}}]
+#yaw,roll,pitch速度補正(旋回速度*通常時重量/総重量)
+scoreboard players operation #gross-weight vp.reg1 = @s vp.weight
+scoreboard players operation #gross-weight vp.reg1 += @s vp.add-weight
+scoreboard players operation #max-yaw vp.return *= @s vp.weight
+scoreboard players operation #max-yaw vp.return /= #gross-weight vp.reg1
+scoreboard players operation #pitch-speed vp.reg1 *= @s vp.weight
+scoreboard players operation #pitch-speed vp.reg1 /= #gross-weight vp.reg1
+
+#scoreboard players operation #roll-spped vp.reg1 += @s vp.roll-spd-cor
+#tellraw @p [{"score" : {"name":"#max-yaw", "objective":"vp.reg1"}}]
 
 #radder, pitch破損時補正
 execute if entity @s[scores={vp.radder=0}] run scoreboard players operation #max-yaw vp.return /= #2 vp.Num
@@ -68,7 +74,7 @@ scoreboard players set #1-pow16speedy vp.reg1 10000
 scoreboard players operation #1-pow16speedy vp.reg1 -= #pow16speedy vp.reg1
 scoreboard players operation #max-yaw vp.return *= #1-pow16speedy vp.reg1
 
-#足して1000で割る
+#yawとrollを足して10000で割る
 scoreboard players operation #max-yaw vp.return += #roll-spped vp.reg1
 scoreboard players operation #max-yaw vp.return /= #10000 vp.Num
 

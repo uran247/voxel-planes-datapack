@@ -87,9 +87,9 @@ execute as @e[tag=plane-hitbox,scores={vp.reg1=0},distance=..32] run function we
 #撃墜者/クリアスコアをプラス
 #execute as @p[tag=bomb-owner] run function weapon:dropping/damage/set-shotdown-score
 
-#ダメージ処理、破壊されたスポナーをキル
+#ダメージ処理、破壊されたスポナーをキル(cockpitにはダメージを与えない)
 execute as @e[type=spawner_minecart,tag=!entity-nohit,distance=..32] store result entity @s MaxNearbyEntities short 1 run scoreboard players get @s vp.reg1
-execute as @e[type=!spawner_minecart,type=!player,tag=!entity-nohit,distance=..32] store result entity @s Health short 1 run scoreboard players get @s vp.reg1
+execute as @e[type=!spawner_minecart,type=!player,tag=!cockpit,tag=!entity-nohit,distance=..32] store result entity @s Health short 1 run scoreboard players get @s vp.reg1
 execute as @a[tag=!entity-nohit,distance=..32] run scoreboard players operation @s vp.taken-damage -= @s vp.reg1
 execute as @a[tag=!entity-nohit,distance=..32] run function weapon:util/damage
 kill @e[type=spawner_minecart,tag=enemy-target,tag=!entity-nohit,scores={vp.reg1=0},distance=..32]

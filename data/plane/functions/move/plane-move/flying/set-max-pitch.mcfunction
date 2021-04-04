@@ -14,6 +14,7 @@
 #   function plane:move/plane-move/turn-rolling
 #   function plane:move/plane-move/turn-flying
     #declare score_holder #max-pitch #1tickにできる最大旋回角度
+    #declare score_holder #gross-weight #機体の総重量を示す
 
 #> private
 # @private
@@ -27,9 +28,13 @@
 scoreboard players operation #max-pitch vp.return = @s vp.pitch-speed
 scoreboard players operation #yaw-speed vp.reg1 = @s vp.yaw-speed
 
-#yaw,roll,pitch速度補正
-scoreboard players operation #max-pitch vp.return += @s vp.pitch-spd-cor
-scoreboard players operation #yaw-speed vp.reg1 += @s vp.yaw-spd-cor
+#yaw,roll,pitch速度補正(旋回速度*通常時重量/総重量)
+scoreboard players operation #gross-weight vp.reg1 = @s vp.weight
+scoreboard players operation #gross-weight vp.reg1 += @s vp.add-weight
+scoreboard players operation #max-pitch vp.return *= @s vp.weight
+scoreboard players operation #max-pitch vp.return /= #gross-weight vp.reg1
+scoreboard players operation #yaw-speed vp.reg1 *= @s vp.weight
+scoreboard players operation #yaw-speed vp.reg1 /= #gross-weight vp.reg1
 
 #radder, pitch破損時補正
 execute if entity @s[scores={vp.elevetor=0}] run scoreboard players operation #max-pitch vp.return /= #2 vp.Num
