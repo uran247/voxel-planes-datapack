@@ -18,8 +18,8 @@
     #declare score_holder #deaccelerate #角度による減速量の基礎値を示す
     #declare score_holder #energy-loss #エネルギー減少係数を示す
     #declare score_holder #ang-z #ロール角を示す
-    #declare score_holder #horse-power #現在の速度を示す
-    #declare score_holder #weight #現在の速度を示す
+    #declare score_holder #horse-power #エンジン馬力を示す
+    #declare score_holder #weight #機体重量を示す
 
 
 #> private
