@@ -2,6 +2,7 @@
 #
 # @within function constructor:addstorage
 
+#ストレージリセット
 data modify storage voxel-planes:weapon f4u1 set value {base:{},additional:{}}
 data modify storage voxel-planes:plane f4u1 set value {}
 
@@ -13,7 +14,7 @@ data modify storage voxel-planes:plane f4u1.plane-data.flight-model.speed set va
 data modify storage voxel-planes:plane f4u1.plane-data.flight-model.engine set value {type:recipro,horse-power:2000f,number:1}
 data modify storage voxel-planes:plane f4u1.plane-data.flight-model.turn-rate set value {pitch:34f,yaw:18f,roll:92f}
 data modify storage voxel-planes:plane f4u1.plane-data.flight-model.energy-loss-rate set value 0.6
-data modify storage voxel-planes:plane f4u1.plane-data.model-data.body set value {flying-cmd:3,rolling-cmd:2,parking-cmd:1}
+data modify storage voxel-planes:plane f4u1.plane-data.model-data.body set value {parking-cmd:1,rolling-cmd:2,flying-cmd:3}
 data modify storage voxel-planes:plane f4u1.plane-data.model-data.landing-pitch set value -12.0
 data modify storage voxel-planes:plane f4u1.plane-data.hp set value {engine:300d,body:330d,aileron:240d,elevetor:210d,radder:210d}
 

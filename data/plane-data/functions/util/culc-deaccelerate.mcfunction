@@ -38,9 +38,11 @@ scoreboard players operation #resistance vp.reg1 /= #max-speed vp.reg1
 #上昇力計算
 execute store result score #climb-rate vp.reg1 run data get storage voxel-planes:input input.flight-model.speed.climb-rate 125
 
+#上昇時の減速量計算
 scoreboard players operation #deaccelerate vp.return -= #resistance vp.reg1
 scoreboard players operation #deaccelerate vp.return *= #cruise-speed vp.reg1
 scoreboard players operation #deaccelerate vp.return /= #climb-rate vp.reg1
+scoreboard players operation #deaccelerate vp.return /= #2 vp.Num
 
 #tellraw @p [{"score":{"name":"#deaccelerate","objective":"vp.return"}}]
 
