@@ -21,7 +21,7 @@ execute store result score @e[type=armor_stand,tag=bomb-init,distance=..1,limit=
 execute store result score @e[type=armor_stand,tag=bomb-init,distance=..1,limit=1] vp.offsetZ run data get storage minecraft:plane-datapack temporary.weapon.offset[2] 1000
 execute store result score @e[type=armor_stand,tag=bomb-init,distance=..1,limit=1] vp.damage run data get storage minecraft:plane-datapack temporary.weapon.damage
 execute store result score @e[type=armor_stand,tag=bomb-init,distance=..1,limit=1] vp.weight run data get storage minecraft:plane-datapack temporary.weapon.weight
-data modify entity @e[type=armor_stand,tag=bomb-init,distance=..1,limit=1] Tags append from storage minecraft:plane-datapack temporary.weapon.weight-tag
+data modify entity @e[type=armor_stand,tag=bomb-init,distance=..1,limit=1] Tags append from storage minecraft:plane-datapack temporary.weapon.kind
 data modify entity @e[type=armor_stand,tag=bomb-init,distance=..1,limit=1] Tags append from storage minecraft:plane-datapack temporary.weapon.type
 execute store result entity @e[type=armor_stand,tag=bomb-init,distance=..1,limit=1] HandItems[0].tag.CustomModelData int 1 run data get storage minecraft:plane-datapack temporary.weapon.cmd
 

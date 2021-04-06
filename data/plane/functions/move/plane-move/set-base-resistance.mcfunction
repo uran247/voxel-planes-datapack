@@ -43,6 +43,6 @@ execute unless score #ang-z vp.input matches 0 run scoreboard players operation 
 execute unless score #ang-z vp.input matches 0 run scoreboard players operation #base-resistance vp.return += #energy-loss vp.reg1
 
 #抵抗が最低値(抵抗/2)を下回っていた場合最低値にする
-scoreboard players operation #min-registance vp.reg1 = #resistance vp.input
-scoreboard players operation #min-registance vp.reg1 /= #2 vp.Num
-execute if score #base-resistance vp.return < #min-registance vp.reg1 run scoreboard players operation #base-resistance vp.return = #min-registance vp.reg1
+#scoreboard players operation #min-registance vp.reg1 = #resistance vp.input
+#scoreboard players operation #min-registance vp.reg1 /= #2 vp.Num
+#execute if score #base-resistance vp.return < #min-registance vp.reg1 run scoreboard players operation #base-resistance vp.return = #min-registance vp.reg1
