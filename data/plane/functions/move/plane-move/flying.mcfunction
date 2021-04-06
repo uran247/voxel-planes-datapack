@@ -30,12 +30,16 @@
     #declare score_holder #displacementY #現在のY方向の1tickの移動量を示す
     #declare score_holder #displacementZ #現在のX方向の1tickの移動量を示す
     #declare score_holder #down-pitch #墜落時のピッチ下げ量を示す(ピッチ速度/2)
+    #declare score_holder #half-cruise-speed #巡航速度の半分を示す、加速度計算時の速度最定値
 
 #実行者にタグ付け
 tag @s add flying-executer
 
 #### 基本加速量決定####
+scoreboard players operation #half-cruise-speed vp.reg1 = @s vp.cruise-speed
+scoreboard players operation #half-cruise-speed vp.reg1 /= #2 vp.Num
 scoreboard players operation #speed vp.input = @s vp.speed
+execute if score #speed vp.input < #half-cruise-speed vp.reg1 run scoreboard players operation #speed vp.input = #half-cruise-speed vp.reg1 
 scoreboard players operation #horse-power vp.input = @s vp.horse-power
 scoreboard players operation #weight vp.input = @s vp.weight
 scoreboard players operation #weight vp.input += @s vp.add-weight 

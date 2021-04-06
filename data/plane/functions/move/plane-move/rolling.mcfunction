@@ -25,8 +25,9 @@
 #実行者にタグ付け
 tag @s add flying-executer
 
-#### 基本加速量決定  #base-accelerate vp.reg1に代入される ####
-scoreboard players operation #speed vp.input = @s vp.stall-speed
+# 基本加速量決定  #base-accelerate vp.reg1に代入される
+scoreboard players operation #speed vp.input = @s vp.cruise-speed
+scoreboard players operation #speed vp.input /= #2 vp.Num
 scoreboard players operation #horse-power vp.input = @s vp.horse-power
 scoreboard players operation #weight vp.input = @s vp.weight
 scoreboard players operation #weight vp.input += @s vp.add-weight 
@@ -34,7 +35,7 @@ scoreboard players operation #throttle vp.input = @s vp.throttle
 function plane:move/plane-move/set-base-accelerate
 scoreboard players operation #base-accelerate vp.reg1 = #base-accelerate vp.return
 
-####減速量決定　#base-resistance vp.reg1に代入される ####
+#減速量決定　#base-resistance vp.reg1に代入される
 scoreboard players operation #speed vp.input = @s vp.speed
 scoreboard players operation #max-speed vp.input = @s vp.max-speed
 scoreboard players operation #resistance vp.input = @s vp.resistance
@@ -42,13 +43,10 @@ scoreboard players operation #energy-loss vp.input = @s vp.energy-loss
 scoreboard players set #ang-z vp.input 0
 function plane:move/plane-move/set-base-resistance
 scoreboard players operation #base-resistance vp.reg1 = #base-resistance vp.return
+#転がり抵抗加算(転がり抵抗係数0.125*9.8N*10000/400/0.7)
+scoreboard players add #base-resistance vp.reg1 30
 
-scoreboard players operation #speedY vp.input = @s vp.speedY
-scoreboard players operation #deaccelerate vp.input = @s vp.deaccelerate
-function plane:move/plane-move/set-base-deaccelerate
-scoreboard players operation #base-deaccelerate vp.reg1 = #base-deaccelerate vp.return
-
-#### speed決定 ####
+# speed決定 
 scoreboard players operation @s vp.speed += #base-accelerate vp.reg1
 scoreboard players operation @s vp.speed -= #base-resistance vp.reg1
 #speedが0未満だったら0にする
