@@ -41,12 +41,13 @@ scoreboard players operation #half-cruise-speed vp.reg1 /= #2 vp.Num
 scoreboard players operation #speed vp.input = @s vp.speed
 execute if score #speed vp.input < #half-cruise-speed vp.reg1 run scoreboard players operation #speed vp.input = #half-cruise-speed vp.reg1 
 scoreboard players operation #horse-power vp.input = @s vp.horse-power
+scoreboard players operation #horse-power vp.input *= @s vp.engine
 scoreboard players operation #weight vp.input = @s vp.weight
 scoreboard players operation #weight vp.input += @s vp.add-weight 
 scoreboard players operation #throttle vp.input = @s vp.throttle
 function plane:move/plane-move/set-base-accelerate
 scoreboard players operation #base-accelerate vp.reg1 = #base-accelerate vp.return
-#tellraw @p [{"score" : {"name":"#weight", "objective":"vp.input"}}]
+#tellraw @p [{"score" : {"name":"#base-accelerate", "objective":"vp.reg1"}}]
 
 ####減速量決定####
 scoreboard players operation #speed vp.input = @s vp.speed
@@ -56,6 +57,7 @@ scoreboard players operation #energy-loss vp.input = @s vp.energy-loss
 scoreboard players operation #ang-z vp.input = @s vp.AngZ
 function plane:move/plane-move/set-base-resistance
 scoreboard players operation #base-resistance vp.reg1 = #base-resistance vp.return
+tellraw @p [{"score" : {"name":"#base-resistance", "objective":"vp.reg1"}}]
 
 #ピッチによって減速量調整
 scoreboard players operation #speedY vp.input = @s vp.speedY
@@ -63,6 +65,7 @@ scoreboard players operation #resistance vp.input = @s vp.resistance
 scoreboard players operation #deaccelerate vp.input = @s vp.deaccelerate
 function plane:move/plane-move/set-base-deaccelerate
 scoreboard players operation #base-deaccelerate vp.reg1 = #base-deaccelerate vp.return
+#tellraw @p [{"score" : {"name":"#base-deaccelerate", "objective":"vp.reg1"}}]
 
 #### speed決定 ####
 #speed+#base-accelerate-#base-resistance-#base-deaccelerate
