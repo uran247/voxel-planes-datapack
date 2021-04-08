@@ -40,8 +40,8 @@ execute if entity @s[scores={vp.key-input=9}] as @e[tag=controll-target,distance
 execute if entity @s[scores={vp.key-input=6}] as @e[tag=controll-target,distance=..1,limit=1] run scoreboard players remove @s[scores={vp.throttle=1..}] vp.throttle 1
 
 #稼働エンジン数に応じてスロットル減衰 スロットル×稼働エンジン数/最大エンジン数
-execute as @e[tag=controll-target,distance=..1,limit=1] run scoreboard players operation @s vp.throttle *= @s vp.engine
-execute as @e[tag=controll-target,distance=..1,limit=1] run scoreboard players operation @s vp.throttle /= @s vp.max-engine
+#execute as @e[tag=controll-target,distance=..1,limit=1] run scoreboard players operation @s vp.throttle *= @s vp.engine
+#execute as @e[tag=controll-target,distance=..1,limit=1] run scoreboard players operation @s vp.throttle /= @s vp.max-engine
 
 #墜落してた場合スロットル0
 scoreboard players set @e[tag=controll-target,tag=destroyed,distance=..1,limit=1] vp.throttle 0

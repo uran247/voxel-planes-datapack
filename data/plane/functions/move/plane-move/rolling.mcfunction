@@ -29,6 +29,7 @@ tag @s add flying-executer
 scoreboard players operation #speed vp.input = @s vp.cruise-speed
 scoreboard players operation #speed vp.input /= #2 vp.Num
 scoreboard players operation #horse-power vp.input = @s vp.horse-power
+scoreboard players operation #horse-power vp.input *= @s vp.engine
 scoreboard players operation #weight vp.input = @s vp.weight
 scoreboard players operation #weight vp.input += @s vp.add-weight 
 scoreboard players operation #throttle vp.input = @s vp.throttle
