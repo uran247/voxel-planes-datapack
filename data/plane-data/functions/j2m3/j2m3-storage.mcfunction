@@ -2,8 +2,22 @@
 #
 # @within function constructor:addstorage
 
+#ストレージリセット
 data modify storage voxel-planes:weapon j2m3 set value {base:{},additional:{}}
+data modify storage voxel-planes:plane j2m3 set value {}
+
+#飛行機データセット
+data modify storage voxel-planes:plane j2m3.plane-data.plane-type set value fighter
+data modify storage voxel-planes:plane j2m3.plane-data.tier set value 2
+data modify storage voxel-planes:plane j2m3.plane-data.flight-model.weight set value 3507.0
+data modify storage voxel-planes:plane j2m3.plane-data.flight-model.speed set value {max-speed:596.3f,cruise-speed:360f,climb-rate:17.8f,stall-speed:162f}
+data modify storage voxel-planes:plane j2m3.plane-data.flight-model.engine set value {type:recipro,horse-power:1800f,number:1}
+data modify storage voxel-planes:plane j2m3.plane-data.flight-model.turn-rate set value {pitch:38f,yaw:25f,roll:142f}
+data modify storage voxel-planes:plane j2m3.plane-data.flight-model.energy-loss-rate set value 0.4
+data modify storage voxel-planes:plane j2m3.plane-data.model-data.body set value {parking-cmd:93,rolling-cmd:94,flying-cmd:95}
+data modify storage voxel-planes:plane j2m3.plane-data.model-data.landing-pitch set value -11.5
+data modify storage voxel-planes:plane j2m3.plane-data.hp set value {engine:90d,body:110d,aileron:100d,elevetor:80d,radder:90d}
 
 #デフォルト機銃データセット
-data modify storage voxel-planes:weapon j2m3.base.model1-20mm set value {data:{name:"Model1 20mm gun",type:gun,size:20mm,max-ammunition:100,current-ammunition:100,max-cooltime:2,current-cooltime:0,max-reload:280,current-reload:0,tracer:"yellow",damage:60,speed:7.5d,bullets:[{offset:[2.26d,-0.35d,2.7d]},{offset:[-2.46d,-0.35d,2.7d]}]}}
-data modify storage voxel-planes:weapon j2m3.base.model2-20mm set value {data:{name:"Model2 20mm gun",type:gun,size:20mm,max-ammunition:100,current-ammunition:100,max-cooltime:2,current-cooltime:0,max-reload:280,current-reload:0,tracer:"lightblue",damage:60,speed:9.5,bullets:[{offset:[1.86d,-0.4d,3.2d]},{offset:[-2.08d,-0.4d,3.2d]}]}}
+data modify storage voxel-planes:weapon j2m3.base.model1-20mm.data set value {name:"Model1 20mm gun",type:gun,size:20mm,max-ammunition:100,current-ammunition:100,max-cooltime:2,current-cooltime:0,max-reload:280,current-reload:0,tracer:"yellow",damage:60,speed:7.5d,bullets:[{offset:[2.26d,-0.35d,2.7d]},{offset:[-2.46d,-0.35d,2.7d]}]}
+data modify storage voxel-planes:weapon j2m3.base.model2-20mm.data set value {name:"Model2 20mm gun",type:gun,size:20mm,max-ammunition:100,current-ammunition:100,max-cooltime:2,current-cooltime:0,max-reload:280,current-reload:0,tracer:"lightblue",damage:60,speed:9.5,bullets:[{offset:[1.86d,-0.4d,3.2d]},{offset:[-2.08d,-0.4d,3.2d]}]}

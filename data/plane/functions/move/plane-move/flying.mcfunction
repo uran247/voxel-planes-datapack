@@ -57,7 +57,7 @@ scoreboard players operation #energy-loss vp.input = @s vp.energy-loss
 scoreboard players operation #ang-z vp.input = @s vp.AngZ
 function plane:move/plane-move/set-base-resistance
 scoreboard players operation #base-resistance vp.reg1 = #base-resistance vp.return
-tellraw @p [{"score" : {"name":"#base-resistance", "objective":"vp.reg1"}}]
+#tellraw @p [{"score" : {"name":"#base-resistance", "objective":"vp.reg1"}}]
 
 #ピッチによって減速量調整
 scoreboard players operation #speedY vp.input = @s vp.speedY

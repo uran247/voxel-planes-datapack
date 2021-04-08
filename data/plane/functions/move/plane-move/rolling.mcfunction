@@ -52,6 +52,8 @@ scoreboard players operation @s vp.speed += #base-accelerate vp.reg1
 scoreboard players operation @s vp.speed -= #base-resistance vp.reg1
 #speedが0未満だったら0にする
 scoreboard players set @s[scores={vp.speed=..-1}] vp.speed 0
+#speedが最高速度を超えないようにする
+execute if score @s vp.speed > @s vp.max-speed run scoreboard players operation @s vp.speed = @s vp.max-speed
 
 #x方向ベクトル×speedをMotionに代入
 scoreboard players operation #displacementX vp.reg1 = @s vp.speedX
@@ -69,8 +71,8 @@ execute store result storage plane-datapack temporary.Pos[2] double 0.00001 run 
 #作成したベクトルをMotionに代入
 data modify entity @s Motion set from storage minecraft:plane-datapack temporary.Pos
 
-#speedがtakeoff-speedを超えスロットル全開なら飛行状態に遷移
-execute as @s[scores={vp.throttle=20..}] if score @s vp.takeoff-speed < @s vp.speed run function plane:move/plane-move/rolling/takeoff
+#speedがtakeoff-speedを超えスロットルが51%以上なら飛行状態に遷移
+execute as @s[scores={vp.throttle=11..}] if score @s vp.takeoff-speed < @s vp.speed run function plane:move/plane-move/rolling/takeoff
 
 #speedがpropeller-stopだったら停止モデル、propeller-startだったら滑走モデルに切り替え
 function plane:move/plane-move/rolling/change-plpr-model
