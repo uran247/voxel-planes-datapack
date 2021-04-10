@@ -12,6 +12,7 @@
 # @private
     #declare tag plane-init
     #declare tag plane-body
+    #declare tag plane-rightwing
 
 #最高、巡航、失速、離陸速度設定
 execute store result score @s vp.max-speed run data get storage voxel-planes:input input.flight-model.speed.max-speed 34.72
@@ -45,9 +46,12 @@ execute store result score @s vp.roll-speed run data get storage voxel-planes:in
 execute store result score @s vp.landing-pitch run data get storage voxel-planes:input input.model-data.landing-pitch 100
 
 #モデル番号設定
-execute store result score @e[tag=plane-init,tag=plane-body] vp.parking-cmd run data get storage voxel-planes:input input.model-data.body.parking-cmd
-execute store result score @e[tag=plane-init,tag=plane-body] vp.rolling-cmd run data get storage voxel-planes:input input.model-data.body.rolling-cmd
-execute store result score @e[tag=plane-init,tag=plane-body] vp.flying-cmd run data get storage voxel-planes:input input.model-data.body.flying-cmd
+execute store result score @e[tag=plane-init,tag=plane-body,tag=model-changeable] vp.parking-cmd run data get storage voxel-planes:input input.model-data.body.parking-cmd
+execute store result score @e[tag=plane-init,tag=plane-body,tag=model-changeable] vp.rolling-cmd run data get storage voxel-planes:input input.model-data.body.rolling-cmd
+execute store result score @e[tag=plane-init,tag=plane-body,tag=model-changeable] vp.flying-cmd run data get storage voxel-planes:input input.model-data.body.flying-cmd
+execute store result score @e[tag=plane-init,tag=plane-rightwing,tag=model-changeable] vp.parking-cmd run data get storage voxel-planes:input input.model-data.rightwing.parking-cmd
+execute store result score @e[tag=plane-init,tag=plane-rightwing,tag=model-changeable] vp.rolling-cmd run data get storage voxel-planes:input input.model-data.rightwing.rolling-cmd
+execute store result score @e[tag=plane-init,tag=plane-rightwing,tag=model-changeable] vp.flying-cmd run data get storage voxel-planes:input input.model-data.rightwing.flying-cmd
 
 #エンジン数、馬力、推力設定
 execute store result score @s vp.max-engine run data get storage voxel-planes:input input.flight-model.engine.number
