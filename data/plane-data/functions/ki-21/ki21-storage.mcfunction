@@ -6,7 +6,7 @@ data modify storage voxel-planes:weapon ki21 set value {base:{},additional:{}}
 data modify storage voxel-planes:plane ki21 set value {}
 
 #飛行機データセット
-data modify storage voxel-planes:plane ki21.plane-data.plane-type set value fighter
+data modify storage voxel-planes:plane ki21.plane-data.plane-type set value bomber
 data modify storage voxel-planes:plane ki21.plane-data.tier set value 1
 data modify storage voxel-planes:plane ki21.plane-data.flight-model.weight set value 8710.0
 data modify storage voxel-planes:plane ki21.plane-data.flight-model.speed set value {max-speed:478f,cruise-speed:380f,climb-rate:7.6f,stall-speed:144f}
