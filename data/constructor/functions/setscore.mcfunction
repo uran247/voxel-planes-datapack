@@ -41,6 +41,7 @@ scoreboard players set #50 vp.Num 50
 scoreboard players set #60 vp.Num 60
 scoreboard players set #64 vp.Num 64
 scoreboard players set #70 vp.Num 70
+scoreboard players set #71 vp.Num 71
 scoreboard players set #72 vp.Num 72
 scoreboard players set #75 vp.Num 75
 scoreboard players set #80 vp.Num 80
@@ -48,6 +49,7 @@ scoreboard players set #86 vp.Num 86
 scoreboard players set #90 vp.Num 90
 scoreboard players set #100 vp.Num 100
 scoreboard players set #128 vp.Num 128
+scoreboard players set #141 vp.Num 141
 scoreboard players set #150 vp.Num 150
 scoreboard players set #178 vp.Num 178
 scoreboard players set #180 vp.Num 180
@@ -63,6 +65,7 @@ scoreboard players set #400 vp.Num 400
 scoreboard players set #500 vp.Num 500
 scoreboard players set #512 vp.Num 512
 scoreboard players set #1000 vp.Num 1000
+scoreboard players set #1414 vp.Num 1414
 scoreboard players set #1024 vp.Num 1024
 scoreboard players set #2048 vp.Num 2048
 scoreboard players set #4000 vp.Num 4000

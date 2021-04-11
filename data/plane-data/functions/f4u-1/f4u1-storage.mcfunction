@@ -17,6 +17,13 @@ data modify storage voxel-planes:plane f4u1.plane-data.flight-model.energy-loss-
 data modify storage voxel-planes:plane f4u1.plane-data.model-data.body set value {parking-cmd:1,rolling-cmd:2,flying-cmd:3}
 data modify storage voxel-planes:plane f4u1.plane-data.model-data.landing-pitch set value -12.0
 data modify storage voxel-planes:plane f4u1.plane-data.hp set value {engine:300d,body:330d,aileron:240d,elevetor:210d,radder:210d}
+data modify storage voxel-planes:plane f4u1.plane-data.hitbox set value {}
+data modify storage voxel-planes:plane f4u1.plane-data.hitbox merge value {engine:{offset:[0.3d,0d,4.5d]}}
+data modify storage voxel-planes:plane f4u1.plane-data.hitbox merge value {body:{offset:[0.3d,0d,0d]}}
+data modify storage voxel-planes:plane f4u1.plane-data.hitbox merge value {aileron-r:{offset:[-2.9d,-0.5d,2.2d]},aileron-l:{offset:[3.5d,-0.5d,2.2d]}}
+data modify storage voxel-planes:plane f4u1.plane-data.hitbox merge value {elevator-r:{offset:[-1d,0.2d,-3.6d]},elevator-l:{offset:[1.6d,0.2d,-3.6d]}}
+data modify storage voxel-planes:plane f4u1.plane-data.hitbox merge value {radder:{offset:[0.3d,1.3d,-3d]}}
+data modify storage voxel-planes:plane f4u1.plane-data.hitbox merge value {cockpit:{offset:[0.3d,0.7d,1.1d]}}
 
 #デフォルト機銃データセット
 data modify storage voxel-planes:weapon f4u1.base.gun.data set value {name:"12.7mm gun",type:gun,size:12p7mm,max-ammunition:400,current-ammunition:400,max-cooltime:2,current-cooltime:0,max-reload:220,current-reload:0,tracer:"lightblue",damage:38,speed:11d,bullets:[{offset:[2.93d,-0.56d,3.6d]},{offset:[3.12d,-0.53d,3.6d]},{offset:[3.3d,-0.5d,3.6d]},{offset:[-2.38d,-0.56d,3.6d]},{offset:[-2.57d,-0.53d,0.36d]},{offset:[-2.75d,-0.5d,3.6d]}]}
