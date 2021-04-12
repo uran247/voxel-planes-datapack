@@ -17,6 +17,12 @@ data modify storage voxel-planes:plane j2m3.plane-data.flight-model.energy-loss-
 data modify storage voxel-planes:plane j2m3.plane-data.model-data.body set value {parking-cmd:93,rolling-cmd:94,flying-cmd:95}
 data modify storage voxel-planes:plane j2m3.plane-data.model-data.landing-pitch set value -11.5
 data modify storage voxel-planes:plane j2m3.plane-data.hp set value {engine:90d,body:110d,aileron:100d,elevetor:80d,radder:90d}
+data modify storage voxel-planes:plane j2m3.plane-data.hitbox set value {}
+data modify storage voxel-planes:plane j2m3.plane-data.hitbox merge value {engine:{offset:[0d,0d,3.8d]}}
+data modify storage voxel-planes:plane j2m3.plane-data.hitbox merge value {aileron-r:{offset:[-3.2d,-0.3d,1.8d]},aileron-l:{offset:[3.2d,-0.3d,1.8d]}}
+data modify storage voxel-planes:plane j2m3.plane-data.hitbox merge value {elevator-r:{offset:[-1.3d,0.2d,-3.3d]},elevator-l:{offset:[1.3d,0.2d,-3.3d]}}
+data modify storage voxel-planes:plane j2m3.plane-data.hitbox merge value {radder:{offset:[0d,1.2d,-3.9d]}}
+data modify storage voxel-planes:plane j2m3.plane-data.hitbox merge value {cockpit:{offset:[0d,0.9d,1.1d]}}
 
 #デフォルト機銃データセット
 data modify storage voxel-planes:weapon j2m3.base.model1-20mm.data set value {name:"Model1 20mm gun",type:gun,size:20mm,max-ammunition:100,current-ammunition:100,max-cooltime:2,current-cooltime:0,max-reload:280,current-reload:0,tracer:"yellow",damage:60,speed:7.5d,bullets:[{offset:[2.26d,-0.35d,2.7d]},{offset:[-2.46d,-0.35d,2.7d]}]}
