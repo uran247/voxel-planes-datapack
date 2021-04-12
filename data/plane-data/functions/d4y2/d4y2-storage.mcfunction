@@ -17,6 +17,12 @@ data modify storage voxel-planes:plane d4y2.plane-data.flight-model.energy-loss-
 data modify storage voxel-planes:plane d4y2.plane-data.model-data.body set value {parking-cmd:27,rolling-cmd:28,flying-cmd:29}
 data modify storage voxel-planes:plane d4y2.plane-data.model-data.landing-pitch set value -13.0
 data modify storage voxel-planes:plane d4y2.plane-data.hp set value {engine:90d,body:120d,aileron:100d,elevetor:80d,radder:80d}
+data modify storage voxel-planes:plane d4y2.plane-data.hitbox set value {}
+data modify storage voxel-planes:plane d4y2.plane-data.hitbox merge value {engine:{offset:[0d,-0.1d,5.7d]}}
+data modify storage voxel-planes:plane d4y2.plane-data.hitbox merge value {aileron-r:{offset:[-4d,-0.3d,2.9d]},aileron-l:{offset:[4d,-0.3d,2.9d]}}
+data modify storage voxel-planes:plane d4y2.plane-data.hitbox merge value {elevator-r:{offset:[-1.5d,0d,-2.5d]},elevator-l:{offset:[1.5d,0d,-2.5d]}}
+data modify storage voxel-planes:plane d4y2.plane-data.hitbox merge value {radder:{offset:[0d,1d,-2.9d]}}
+data modify storage voxel-planes:plane d4y2.plane-data.hitbox merge value {cockpit:{offset:[0d,0.7d,3.1d]}}
 
 #デフォルト機銃データセット
 data modify storage voxel-planes:weapon d4y2.base.gun set value {data:{name:"7.7mm gun",type:gun,size:7p7mm,max-ammunition:400,current-ammunition:400,max-cooltime:1,current-cooltime:0,max-reload:140,current-reload:0,tracer:"lightblue",damage:11,speed:9.5d,bullets:[{offset:[0.11d,-1.85d,-6.1d]},{offset:[-0.4d,-1.85d,-6.1d]}]}}

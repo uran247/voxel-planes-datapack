@@ -15,8 +15,15 @@ data modify storage voxel-planes:plane g4m1.plane-data.flight-model.engine set v
 data modify storage voxel-planes:plane g4m1.plane-data.flight-model.turn-rate set value {pitch:30f,yaw:22.6f,roll:39f}
 data modify storage voxel-planes:plane g4m1.plane-data.flight-model.energy-loss-rate set value 0.5
 data modify storage voxel-planes:plane g4m1.plane-data.model-data.body set value {parking-cmd:96,rolling-cmd:97,flying-cmd:98}
+data modify storage voxel-planes:plane g4m1.plane-data.model-data merge value {rightwing:{offset:[-6.5d,0d,0d]},leftwing:{offset:[6.5d,0d,0d]}}
 data modify storage voxel-planes:plane g4m1.plane-data.model-data.landing-pitch set value -5.0
 data modify storage voxel-planes:plane g4m1.plane-data.hp set value {engine:100d,body:110d,aileron:90d,elevetor:70d,radder:70d}
+data modify storage voxel-planes:plane g4m1.plane-data.hitbox set value {}
+data modify storage voxel-planes:plane g4m1.plane-data.hitbox merge value {engine-r:{offset:[-3d,0.25d,8d]},engine-l:{offset:[3d,0.25d,8d]}}
+data modify storage voxel-planes:plane g4m1.plane-data.hitbox merge value {aileron-r:{offset:[-7.4d,1d,4.2d]},aileron-l:{offset:[7.4d,1d,4.2d]}}
+data modify storage voxel-planes:plane g4m1.plane-data.hitbox merge value {elevator-r:{offset:[-2.3d,1.2d,-6.1d]},elevator-l:{offset:[2.3d,1.2d,-6.1d]}}
+data modify storage voxel-planes:plane g4m1.plane-data.hitbox merge value {radder:{offset:[0d,3d,-6.5d]}}
+data modify storage voxel-planes:plane g4m1.plane-data.hitbox merge value {cockpit:{offset:[0d,1.9d,7.5d]}}
 
 #デフォルト爆弾データセット
 data modify storage voxel-planes:weapon g4m1.base.bomb.data set value {name:bomb,type:bomb,max-ammunition:4,current-ammunition:4,max-reload:600,current-reload:0,bombs:[]}

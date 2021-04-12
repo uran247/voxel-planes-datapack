@@ -40,7 +40,7 @@ data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].plane-data set 
 data remove storage voxel-planes:input input
 data modify storage voxel-planes:input input set from storage voxel-planes:plane a6m5.plane-data
 execute as @e[tag=plane-init,tag=plane-root] run function plane-data:util/set-plane-score
-execute as @e[tag=plane-init,tag=plane-hitbox,tag=!cockpit] run function plane-data:util/set-hitbox-data
+execute as @e[tag=plane-init,tag=plane-hitbox] run function plane-data:util/set-hitbox-data
 execute as @e[type=donkey,tag=plane-init] run function plane-data:util/set-plane-maxhp
 
 #武器データセット
