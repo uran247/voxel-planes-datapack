@@ -16,6 +16,12 @@ data modify storage voxel-planes:plane ki44.plane-data.flight-model.energy-loss-
 data modify storage voxel-planes:plane ki44.plane-data.model-data.body set value {parking-cmd:90,rolling-cmd:91,flying-cmd:92}
 data modify storage voxel-planes:plane ki44.plane-data.model-data.landing-pitch set value -11.5
 data modify storage voxel-planes:plane ki44.plane-data.hp set value {engine:110d,body:120d,aileron:110d,elevetor:100d,radder:100d}
+data modify storage voxel-planes:plane ki44.plane-data.hitbox set value {}
+data modify storage voxel-planes:plane ki44.plane-data.hitbox merge value {engine:{offset:[0d,0d,2.9d]}}
+data modify storage voxel-planes:plane ki44.plane-data.hitbox merge value {aileron-r:{offset:[-3d,-0.4d,1.4d]},aileron-l:{offset:[3d,-0.4d,1.4d]}}
+data modify storage voxel-planes:plane ki44.plane-data.hitbox merge value {elevator-r:{offset:[-1d,-0.1d,-3.5d]},elevator-l:{offset:[1d,-0.1d,-3.5d]}}
+data modify storage voxel-planes:plane ki44.plane-data.hitbox merge value {radder:{offset:[0d,0.7d,-4.3d]}}
+data modify storage voxel-planes:plane ki44.plane-data.hitbox merge value {cockpit:{offset:[0d,0.7d,0.7d]}}
 
 #デフォルト機銃データセット
 data modify storage voxel-planes:weapon ki44.base.12p7mm.data set value {name:"12.7mm gun",type:gun,size:12p7mm,max-ammunition:250,current-ammunition:250,max-cooltime:2,current-cooltime:0,max-reload:210,current-reload:0,tracer:"orange",damage:32,speed:10d,bullets:[{offset:[0.2d,0.6d,3.3d]},{offset:[-0.2d,0.6d,3.3d]},{offset:[1.74d,0.6d,3.3d]},{offset:[-1.74d,0.6d,3.3d]}]}
