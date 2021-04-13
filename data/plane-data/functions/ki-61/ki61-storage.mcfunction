@@ -17,6 +17,12 @@ data modify storage voxel-planes:plane ki61.plane-data.flight-model.energy-loss-
 data modify storage voxel-planes:plane ki61.plane-data.model-data.body set value {parking-cmd:102,rolling-cmd:103,flying-cmd:104}
 data modify storage voxel-planes:plane ki61.plane-data.model-data.landing-pitch set value -12.0
 data modify storage voxel-planes:plane ki61.plane-data.hp set value {engine:110d,body:120d,aileron:110d,elevetor:100d,radder:100d}
+data modify storage voxel-planes:plane ki61.plane-data.hitbox set value {}
+data modify storage voxel-planes:plane ki61.plane-data.hitbox merge value {engine:{offset:[0d,0d,2.9d]}}
+data modify storage voxel-planes:plane ki61.plane-data.hitbox merge value {aileron-r:{offset:[-3d,-0.1d,0.6d]},aileron-l:{offset:[3d,-0.1d,0.6d]}}
+data modify storage voxel-planes:plane ki61.plane-data.hitbox merge value {elevator-r:{offset:[-1d,0.3d,-4.3d]},elevator-l:{offset:[1d,0.3d,-4.3d]}}
+data modify storage voxel-planes:plane ki61.plane-data.hitbox merge value {radder:{offset:[0d,1.1d,-4.3d]}}
+data modify storage voxel-planes:plane ki61.plane-data.hitbox merge value {cockpit:{offset:[0d,0.7d,0.7d]}}
 
 #デフォルト機銃データセット
 data modify storage voxel-planes:weapon ki61.base.20mm.data set value {name:"20mm gun",type:gun,size:20mm,max-ammunition:120,current-ammunition:120,max-cooltime:2,current-cooltime:0,max-reload:280,current-reload:0,tracer:"yellow",damage:60,speed:9d,bullets:[{offset:[2.2d,-0.18d,2.2d]},{offset:[-2.2d,-0.18d,2.2d]}]}
