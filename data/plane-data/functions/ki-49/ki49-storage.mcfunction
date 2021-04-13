@@ -17,6 +17,12 @@ data modify storage voxel-planes:plane ki49.plane-data.model-data.body set value
 data modify storage voxel-planes:plane ki49.plane-data.model-data.rightwing set value {parking-cmd:114,rolling-cmd:115,flying-cmd:116}
 data modify storage voxel-planes:plane ki49.plane-data.model-data.landing-pitch set value -6.0
 data modify storage voxel-planes:plane ki49.plane-data.hp set value {engine:60d,body:80d,aileron:70d,elevetor:60d,radder:70d}
+data modify storage voxel-planes:plane ki49.plane-data.hitbox set value {}
+data modify storage voxel-planes:plane ki49.plane-data.hitbox merge value {engine-r:{offset:[-2.6d,0.25d,6.3d]},engine-l:{offset:[2.6d,0.25d,6.3d]}}
+data modify storage voxel-planes:plane ki49.plane-data.hitbox merge value {aileron-r:{offset:[-7.4d,0.8d,3.2d]},aileron-l:{offset:[7.4d,0.8d,3.2d]}}
+data modify storage voxel-planes:plane ki49.plane-data.hitbox merge value {elevator-r:{offset:[-2.3d,0.6d,-5.7d]},elevator-l:{offset:[2.3d,0.6d,-5.7d]}}
+data modify storage voxel-planes:plane ki49.plane-data.hitbox merge value {radder:{offset:[0d,2.4d,-5.8d]}}
+data modify storage voxel-planes:plane ki49.plane-data.hitbox merge value {cockpit:{offset:[0d,1.1d,6.6d]}}
 
 #デフォルト爆弾データセット
 data modify storage voxel-planes:weapon ki49.base.bomb.data set value {name:bomb,type:bomb,max-ammunition:4,current-ammunition:4,max-reload:600,current-reload:0,bombs:[]}

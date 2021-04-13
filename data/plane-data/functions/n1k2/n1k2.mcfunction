@@ -40,38 +40,13 @@ data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].plane-data set 
 data remove storage voxel-planes:input input
 data modify storage voxel-planes:input input set from storage voxel-planes:plane n1k2.plane-data
 execute as @e[tag=plane-init,tag=plane-root] run function plane-data:util/set-plane-score
-execute as @e[tag=plane-init,tag=plane-hitbox,tag=!cockpit] run function plane-data:util/set-hitbox-data
+execute as @e[tag=plane-init,tag=plane-hitbox] run function plane-data:util/set-hitbox-data
+execute as @e[type=donkey,tag=plane-init] run function plane-data:util/set-plane-maxhp
 
 #武器データセット
 data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon set value {current-weapon-index:0}
 data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list set value []
 data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list append from storage voxel-planes:weapon n1k2.base.20mm
-
-#hitboxのスコア設定
-scoreboard players set @e[tag=body,tag=plane-init] vp.offsetX 0
-scoreboard players set @e[tag=body,tag=plane-init] vp.offsetY 0
-scoreboard players set @e[tag=body,tag=plane-init] vp.offsetZ 0
-scoreboard players set @e[tag=engine,tag=plane-init] vp.offsetX 0
-scoreboard players set @e[tag=engine,tag=plane-init] vp.offsetY 0
-scoreboard players set @e[tag=engine,tag=plane-init] vp.offsetZ 2700
-scoreboard players set @e[tag=aileron-r,tag=plane-init] vp.offsetX -3200
-scoreboard players set @e[tag=aileron-r,tag=plane-init] vp.offsetY -300
-scoreboard players set @e[tag=aileron-r,tag=plane-init] vp.offsetZ 900
-scoreboard players set @e[tag=aileron-l,tag=plane-init] vp.offsetX 3200
-scoreboard players set @e[tag=aileron-l,tag=plane-init] vp.offsetY -300
-scoreboard players set @e[tag=aileron-l,tag=plane-init] vp.offsetZ 900
-scoreboard players set @e[tag=elevator-r,tag=plane-init] vp.offsetX -1300
-scoreboard players set @e[tag=elevator-r,tag=plane-init] vp.offsetY 0
-scoreboard players set @e[tag=elevator-r,tag=plane-init] vp.offsetZ -3800
-scoreboard players set @e[tag=elevator-l,tag=plane-init] vp.offsetX 1300
-scoreboard players set @e[tag=elevator-l,tag=plane-init] vp.offsetY 0
-scoreboard players set @e[tag=elevator-l,tag=plane-init] vp.offsetZ -3800
-scoreboard players set @e[tag=radder,tag=plane-init] vp.offsetX 0
-scoreboard players set @e[tag=radder,tag=plane-init] vp.offsetY 800
-scoreboard players set @e[tag=radder,tag=plane-init] vp.offsetZ -4200
-scoreboard players set @e[tag=cockpit,tag=plane-init] vp.offsetX 0
-scoreboard players set @e[tag=cockpit,tag=plane-init] vp.offsetY 700
-scoreboard players set @e[tag=cockpit,tag=plane-init] vp.offsetZ 1100
 
 #プレイヤーと同じAngYにする
 schedule function plane:summon/util/delay-rotation 2
