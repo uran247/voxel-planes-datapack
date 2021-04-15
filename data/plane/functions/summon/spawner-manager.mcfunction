@@ -28,6 +28,7 @@
     #declare tag fw190d9-spawner
     #declare tag seafuryfb11-spawner
     #declare tag me262a1a-spawner
+    #declare tag swordfish-spawner
 
 execute at @s[tag=a5m-spawner] as @p run function plane-data:a5m/a5m
 execute at @s[tag=d3a-spawner] as @p run function plane-data:d3a/d3a
@@ -47,5 +48,6 @@ execute at @s[tag=f4u1-spawner] as @p run function plane-data:f4u-1/f4u1
 execute at @s[tag=fw190d9-spawner] as @p run function plane-data:fw190d-9/fw190d9
 execute at @s[tag=seafuryfb11-spawner] as @p run function plane-data:seafuryfb11/seafuryfb11
 execute at @s[tag=me262a1a-spawner] as @p run function plane-data:me262a-1a/me262a1a
+execute at @s[tag=swordfish-spawner] as @p run function plane-data:swordfish/swordfish
 
 kill @s[tag=plane-spawner]

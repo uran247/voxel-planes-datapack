@@ -56,6 +56,8 @@ execute as @s[tag=f4u1] run function plane-data:f4u-1/f4u1-position
 execute at @s[tag=fw190d9] run function plane-data:fw190d-9/fw190d9-position
 execute at @s[tag=seafuryfb11] run function plane-data:seafuryfb11/seafuryfb11-position
 execute at @s[tag=me262a1a] run function plane-data:me262a-1a/me262a1a-position
+execute at @s[tag=swordfish] run function plane-data:swordfish/swordfish-position
+
 #execute as @s[tag=spitfire] run function plane:position/spitfire-position
 #execute as @s[tag=ju87] run function plane:position/ju87-position
 #execute as @s[tag=j100b] run function plane:position/j-100b-position

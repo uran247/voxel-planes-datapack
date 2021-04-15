@@ -61,7 +61,7 @@ execute store result score @s vp.thrust run data get storage voxel-planes:input 
 #機体重量設定
 execute store result score @s vp.weight run data get storage voxel-planes:input input.flight-model.weight
 
-#スピード、角度の初期スコア設定
+#スピード、角度の初期スコア、データ設定
 scoreboard players operation @s vp.AngX = @s vp.landing-pitch
 scoreboard players set @s vp.AngY 0
 scoreboard players set @s vp.AngZ 0

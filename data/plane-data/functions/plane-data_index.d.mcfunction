@@ -33,6 +33,7 @@
     #declare tag plane #飛行機構成エンティティであることを示す
     #declare tag plane-bomb #爆弾であることを示す
     #declare tag plane-rocket #ロケット弾であることを示す
+    #declare tag plane-torpedo #ロケット弾であることを示す
     #declare tag has-torpedo #魚雷を持っていることを示す
     #declare tag has-rocket #ロケット弾を持っていることを示す
     #declare tag 7p7mm #7.7mm機銃を装備していることを示す
@@ -44,7 +45,9 @@
     #declare tag 250kg #250kg爆弾を装備していることを示す
     #declare tag 500kg #500kg爆弾を装備していることを示す
     #declare tag 800kg #800kg爆弾を装備していることを示す
-    #declare tag 1000lb #100lb爆弾を装備していることを示す
+    #declare tag 250lb #250lb爆弾を装備していることを示す
+    #declare tag 500lb #500lb爆弾を装備していることを示す
+    #declare tag 1000lb #1000lb爆弾を装備していることを示す
     #declare tag mg151 #mg151を装備していることを示す
     #declare tag bomb-normal #通常爆弾であることを示す
     #declare tag normal #通常爆弾であることを示す

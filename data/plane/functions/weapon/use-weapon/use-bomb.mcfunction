@@ -51,9 +51,6 @@ scoreboard players operation @e[tag=drop-init,distance=..20] vp.speedZ /= #10 vp
 #音
 playsound minecraft:block.piston.contract ambient @a ~ ~ ~ 1 1.5
 
-#発射したならreload時間設定
-execute if entity @e[tag=drop-init,distance=..20] run scoreboard players set @s vp.w2-cooltime 2
-
 #残弾数減算
 scoreboard players remove #ammunition vp.reg1 1
 execute store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data.current-ammunition int 1 run scoreboard players get #ammunition vp.reg1
