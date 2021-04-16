@@ -19,7 +19,7 @@ summon armor_stand ~ ~ ~ {Tags:[weapon-init,plane,has-offset,has-model,plane-tor
 execute store result score @e[type=armor_stand,tag=torpedo-init,distance=..1,limit=1] vp.offsetX run data get storage minecraft:plane-datapack temporary.weapon.offset[0] 1000
 execute store result score @e[type=armor_stand,tag=torpedo-init,distance=..1,limit=1] vp.offsetY run data get storage minecraft:plane-datapack temporary.weapon.offset[1] 1000
 execute store result score @e[type=armor_stand,tag=torpedo-init,distance=..1,limit=1] vp.offsetZ run data get storage minecraft:plane-datapack temporary.weapon.offset[2] 1000
-execute store result score @e[type=armor_stand,tag=torpedo-init,distance=..1,limit=1] vp.damage run data get storage minecraft:plane-datapack temporary.weapon.damage
+execute store result score @e[type=armor_stand,tag=torpedo-init,distance=..1,limit=1] vp.torp-damage run data get storage minecraft:plane-datapack temporary.weapon.damage
 execute store result score @e[type=armor_stand,tag=torpedo-init,distance=..1,limit=1] vp.weight run data get storage minecraft:plane-datapack temporary.weapon.weight
 data modify entity @e[type=armor_stand,tag=torpedo-init,distance=..1,limit=1] Tags append from storage minecraft:plane-datapack temporary.weapon.kind
 data modify entity @e[type=armor_stand,tag=torpedo-init,distance=..1,limit=1] Tags append from storage minecraft:plane-datapack temporary.weapon.type
@@ -27,4 +27,3 @@ execute store result entity @e[type=armor_stand,tag=torpedo-init,distance=..1,li
 
 #初期化タグ削除
 tag @e[type=armor_stand,tag=torpedo-init,distance=..1,limit=1] remove torpedo-init
-say 1

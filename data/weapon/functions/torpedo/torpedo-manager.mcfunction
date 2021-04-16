@@ -27,7 +27,7 @@ tag @s add torpedo-move-executer
 execute at @s run tp @s ~ ~ ~ ~-90 ~
 
 #### 水中にいるか判定し航行モードにチェンジ ####
-execute at @s if block ~ ~2 ~ minecraft:water if block ~ ~ ~ minecraft:water run function weapon:torpedo/mode/mode-change
+execute at @s[tag=!sailing] anchored eyes if block ~ ~3 ~ minecraft:water if block ~ ~ ~ minecraft:water run function weapon:torpedo/mode/mode-change
 
 #ヒットフラグ初期化
 scoreboard players set #hit-flag vp.reg1 0
@@ -44,7 +44,7 @@ data modify entity 0-0-0-0-4 Pos set from storage minecraft:plane-datapack tempo
 tp @s ~ ~ ~ facing entity 0-0-0-0-4
 
 #移動予定先までの間にブロックがあるか判定
-execute as @s at 0-0-0-0-4 run function weapon:util/check-block
+execute as @s at 0-0-0-0-4 anchored eyes run function weapon:torpedo/check-block-torpedo
 execute unless score #x vp.return matches 50 unless score #y vp.return matches 100 unless score #z vp.return matches 50 run scoreboard players set #hit-flag vp.reg1 1
 execute if score #hit-flag vp.reg1 matches 1 run tag 0-0-0-0-9 add hit-weapon
 
@@ -66,7 +66,8 @@ scoreboard players remove @s[tag=!sailing] vp.speedY 1
 
 #### ダメージ処理 ####
 #ダメージを与える
-execute if score #hit-flag vp.reg1 matches 1.. at @s[tag=!sailing] run function weapon:torpedo/damage/damage
+#tellraw @p [{"score" : {"name":"#hit-flag", "objective":"vp.reg1"}}]
+execute if score #hit-flag vp.reg1 matches 1.. at @s[tag=sailing] run function weapon:torpedo/damage/damage
 execute if score #hit-flag vp.reg1 matches 1.. run kill @s
 
 #向き修正
