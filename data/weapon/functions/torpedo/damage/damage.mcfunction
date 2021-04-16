@@ -37,6 +37,7 @@ execute as @a if score @s vp.plane-id = #torpedo-id vp.reg1 run tag @s add torpe
 #hpからダメージを引く]
 execute as @e[tag=!entity-nohit,distance=..16] run function weapon:util/set-entity-hp
 scoreboard players operation #damage vp.reg1 = @s vp.damage
+
 #execute as @e[tag=base,distance=..50] run function weapon:torpedo/damage/base-damage
 scoreboard players set @e[tag=!entity-nohit,distance=..32] vp.reg2 0
 scoreboard players operation #damage vp.reg1 /= #2 vp.Num
@@ -73,6 +74,7 @@ scoreboard players operation #damage vp.reg1 /= #2 vp.Num
 scoreboard players operation @e[tag=!entity-nohit,distance=..32] vp.reg2 += #damage vp.reg1
 execute as @e[tag=!entity-nohit,distance=..32] run function weapon:util/calc-entity-damage
 
+
 ### メッセージ処理 ###
 #メッセージを表示(title)
 title @p[tag=torpedo-owner] times 0 20 20
@@ -96,7 +98,7 @@ execute as @a[tag=!entity-nohit,distance=..16] run function weapon:util/damage
 #### ダメージ時エフェクト ####
 #命中地点にパーティクル
 #execute at @s[tag=sailing] run particle minecraft:explosion ^ ^ ^ 3 3 3 0 500 force
-execute at @s[tag=sailing] run particle minecraft:block minecraft:water ^ ^9 ^-5 3 8 3 1 50000 force
+execute at @s[tag=sailing] run particle minecraft:block minecraft:water ^ ^5 ^-5 1 6 1 1 5000 force
 execute at @s[tag=!sailing] run particle minecraft:explosion ^ ^ ^ 3 3 3 0 500 force
 execute at @s run playsound minecraft:entity.generic.explode master @a ~ ~ ~ 10 0 0
 execute at @s run playsound minecraft:entity.generic.explode master @a ~ ~ ~ 10 0.5 0
