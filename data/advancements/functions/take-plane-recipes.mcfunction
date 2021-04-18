@@ -14,5 +14,6 @@ recipe take @s[advancements={plane-data:crafting/plane/ki-61-recipe=true}] plane
 recipe take @s[advancements={plane-data:crafting/plane/n1k2-recipe=true}] plane-data:plane/n1k2-recipe
 recipe take @s[advancements={plane-data:crafting/plane/fw190d-9-recipe=true}] plane-data:plane/fw190d-9-recipe
 recipe take @s[advancements={plane-data:crafting/plane/f4u-1=true}] plane-data:plane/f4u-1
+recipe take @s[advancements={plane-data:crafting/plane/swordfish=true}] plane-data:plane/swordfish-recipe
 
 advancement revoke @s from plane-data:crafting/root

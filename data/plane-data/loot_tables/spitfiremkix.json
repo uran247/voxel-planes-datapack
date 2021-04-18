@@ -10,21 +10,20 @@
                     "functions": [
                         {
                             "function":"set_name",
-                            "name":{"text":"Fairey Swordfish"}
+                            "name":{"text":"Spitfire Mk.IX"}
                         },
                         {
                             "function":"set_lore",
                             "lore":[
-                                {"translate":"雷撃機","color":"green","bold":true},
+                                {"translate":"戦闘機","color":"green","bold":true},
                                 {"translate":" 武装"},
-                                {"translate":"  7.7mm機銃×1","color":"blue"},
-                                {"translate":"  250lb爆弾×2","color":"blue"},
-                                {"translate":"  500lb爆弾×2","color":"blue"}
+                                {"translate":"  20mm機銃×1","color":"blue"},
+                                {"translate":"  12.7mm機銃×1","color":"blue"}
                             ]
                         },
                         {
                             "function": "minecraft:set_nbt",
-                            "tag":"{item-type:swordfish,tier:1,CustomModelData:17,CanPlaceOn:[\"minecraft:stone\",\"minecraft:grass_path\"],HideFlags:18,EntityTag:{Silent:1b,Tags:[swordfish-spawner,plane-spawner],ActiveEffects:[{Id:14b,Amplifier:1b,Duration:100,ShowParticles:0b}]}}"
+                            "tag":"{item-type:spitfiremkix,tier:3,CustomModelData:18,CanPlaceOn:[\"minecraft:stone\",\"minecraft:grass_path\"],HideFlags:18,EntityTag:{Silent:1b,Tags:[spitfiremkix-spawner,plane-spawner],ActiveEffects:[{Id:14b,Amplifier:1b,Duration:100,ShowParticles:0b}]}}"
                         }
                     ]
                 }

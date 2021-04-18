@@ -25,7 +25,7 @@ data modify storage voxel-planes:plane swordfish.plane-data.hitbox merge value {
 data modify storage voxel-planes:plane swordfish.plane-data.hitbox merge value {cockpit:{offset:[0d,0.7d,3.1d]}}
 
 #デフォルト機銃データセット
-data modify storage voxel-planes:weapon swordfish.base.gun set value {data:{name:"7.7mm gun",type:gun,size:7p7mm,max-ammunition:400,current-ammunition:400,max-cooltime:1,current-cooltime:0,max-reload:140,current-reload:0,tracer:"lightblue",damage:9,speed:9.5d,bullets:[{offset:[0.11d,-1.85d,-6.1d]},{offset:[-0.4d,-1.85d,-6.1d]}]}}
+data modify storage voxel-planes:weapon swordfish.base.gun set value {data:{name:"7.7mm gun",type:gun,size:7p7mm,max-ammunition:600,current-ammunition:600,max-cooltime:1,current-cooltime:0,max-reload:140,current-reload:0,tracer:"lightblue",damage:9,speed:9.5d,bullets:[{offset:[-0.6d,2.2d,4.3d]}]}}
 
 #デフォルト爆弾データセット
 data modify storage voxel-planes:weapon swordfish.base.bomb.data set value {name:bomb,type:bomb,max-ammunition:3,current-ammunition:3,max-reload:500,current-reload:0,bombs:[]}
