@@ -70,6 +70,9 @@ scoreboard players remove @s[tag=!sailing] vp.speedY 1
 execute if score #hit-flag vp.reg1 matches 1.. at @s[tag=sailing] run function weapon:torpedo/damage/damage
 execute if score #hit-flag vp.reg1 matches 1.. run kill @s
 
+#航行中のパーティクル
+execute if entity @s[tag=sailing] anchored eyes positioned ^ ^ ^-0.8 run particle bubble_column_up ~ ~0.5 ~ 0.1 0.1 0.1 0.1 10 force
+
 #向き修正
 execute if entity @s[tag=!sailing] at @s run tp @s ~ ~ ~ ~90 ~0.4
 execute if entity @s[tag=!sailing] store result score #x-ang vp.reg1 run data get entity @s Rotation[1] 1
@@ -80,6 +83,7 @@ execute if entity @s[tag=sailing] at @s run tp @s ~ ~ ~ ~90 ~
 
 #age更新
 scoreboard players remove @s vp.age 1
+
 
 #終了処理
 tag @e[tag=hit-weapon,distance=..20] remove hit-weapon

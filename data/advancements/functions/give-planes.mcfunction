@@ -14,6 +14,7 @@ loot give @s[advancements={plane-data:crafting/plane/ki-61-recipe=true}] loot pl
 loot give @s[advancements={plane-data:crafting/plane/n1k2-recipe=true}] loot plane-data:n1k2
 loot give @s[advancements={plane-data:crafting/plane/fw190d-9-recipe=true}] loot plane-data:fw190d9
 loot give @s[advancements={plane-data:crafting/plane/f4u-1=true}] loot plane-data:f4u-1
+loot give @s[advancements={plane-data:crafting/plane/swordfish=true}] loot plane-data:swordfish
 
 clear @s phantom_spawn_egg 1
 execute store success score @s vp.reg1 run clear @s phantom_spawn_egg 0
