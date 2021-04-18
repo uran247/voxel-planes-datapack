@@ -35,9 +35,7 @@ execute if score #250kg vp.reg1 matches 1.. run data modify storage oh_my_dat: _
 execute if score #250kg vp.reg1 matches 1.. run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{data:{type:bomb}}].data.bombs append from storage voxel-planes:weapon ki61.additional.250kg[]
 
 #装備済み爆弾削除
-scoreboard players set #kill-weapon vp.reg1 0
-execute if entity @s[tag=!250kg] if entity @e[tag=target-parts,tag=250kg,tag=bomb-normal] run scoreboard players set #kill-weapon vp.reg1 1
-execute if score #kill-weapon vp.reg1 matches 1.. run kill @e[tag=target-parts,tag=plane-bomb]
+execute unless score #250kg vp.reg1 matches 1.. run kill @e[tag=target-parts,tag=plane-bomb]
 
 #ステータス変更
 #装備に応じて右記ステータス変更：最高速度　巡航速度　旋回力
