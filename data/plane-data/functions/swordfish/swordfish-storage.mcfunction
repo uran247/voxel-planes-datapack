@@ -18,14 +18,14 @@ data modify storage voxel-planes:plane swordfish.plane-data.model-data.body set 
 data modify storage voxel-planes:plane swordfish.plane-data.model-data.landing-pitch set value -12.0
 data modify storage voxel-planes:plane swordfish.plane-data.hp set value {engine:70d,body:80,aileron:80,elevetor:50,radder:50}
 data modify storage voxel-planes:plane swordfish.plane-data.hitbox set value {}
-data modify storage voxel-planes:plane swordfish.plane-data.hitbox merge value {engine:{offset:[0d,-0.1d,5.7d]}}
-data modify storage voxel-planes:plane swordfish.plane-data.hitbox merge value {aileron-r:{offset:[-4d,-0.3d,2.9d]},aileron-l:{offset:[4d,-0.3d,2.9d]}}
-data modify storage voxel-planes:plane swordfish.plane-data.hitbox merge value {elevator-r:{offset:[-1.5d,0d,-2.5d]},elevator-l:{offset:[1.5d,0d,-2.5d]}}
-data modify storage voxel-planes:plane swordfish.plane-data.hitbox merge value {radder:{offset:[0d,1d,-2.9d]}}
-data modify storage voxel-planes:plane swordfish.plane-data.hitbox merge value {cockpit:{offset:[0d,0.7d,3.1d]}}
+data modify storage voxel-planes:plane swordfish.plane-data.hitbox merge value {engine:{offset:[0d,-0.1d,5.2d]}}
+data modify storage voxel-planes:plane swordfish.plane-data.hitbox merge value {aileron-r:{offset:[-3.8d,0.1d,2.9d]},aileron-l:{offset:[3.8d,0.1d,2.9d]}}
+data modify storage voxel-planes:plane swordfish.plane-data.hitbox merge value {elevator-r:{offset:[-1.2d,0.2d,-4d]},elevator-l:{offset:[1.2d,0.2d,-4d]}}
+data modify storage voxel-planes:plane swordfish.plane-data.hitbox merge value {radder:{offset:[0d,1.2d,-3.9d]}}
+data modify storage voxel-planes:plane swordfish.plane-data.hitbox merge value {cockpit:{offset:[0d,0.8d,3d]}}
 
 #デフォルト機銃データセット
-data modify storage voxel-planes:weapon swordfish.base.gun set value {data:{name:"7.7mm gun",type:gun,size:7p7mm,max-ammunition:600,current-ammunition:600,max-cooltime:1,current-cooltime:0,max-reload:140,current-reload:0,tracer:"lightblue",damage:9,speed:9.5d,bullets:[{offset:[-0.6d,2.2d,4.3d]}]}}
+data modify storage voxel-planes:weapon swordfish.base.gun set value {data:{name:"7.7mm gun",type:gun,size:7p7mm,max-ammunition:600,current-ammunition:600,max-cooltime:1,current-cooltime:0,max-reload:140,current-reload:0,tracer:"lightblue",damage:9,speed:9.6d,bullets:[{offset:[-0.6d,2.2d,4.3d]}]}}
 
 #デフォルト爆弾データセット
 data modify storage voxel-planes:weapon swordfish.base.bomb.data set value {name:bomb,type:bomb,max-ammunition:3,current-ammunition:3,max-reload:500,current-reload:0,bombs:[]}
