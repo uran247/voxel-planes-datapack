@@ -38,6 +38,7 @@ execute if score #is-different-data vp.reg1 matches 1 run function plane-data:n1
 execute if score #is-different-data vp.reg1 matches 1 run function plane-data:ki-49/ki49-storage
 execute if score #is-different-data vp.reg1 matches 1 run function plane-data:swordfish/swordfish-storage
 execute if score #is-different-data vp.reg1 matches 1 run function plane-data:spitfiremkix/spitfiremkix-storage
+execute if score #is-different-data vp.reg1 matches 1 run function plane-data:fireflymkv/fireflymkv-storage
 
 
 execute if score #is-different-data vp.reg1 matches 1 run say "storage data renewed"
