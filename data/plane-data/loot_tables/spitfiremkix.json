@@ -17,8 +17,8 @@
                             "lore":[
                                 {"translate":"戦闘機","color":"green","bold":true},
                                 {"translate":" 武装"},
-                                {"translate":"  20mm機銃×1","color":"blue"},
-                                {"translate":"  12.7mm機銃×1","color":"blue"}
+                                {"translate":" Hispano Mk.II 20mm機銃x2","color":"blue"},
+                                {"translate":" AN/M2 12.7mm機銃×2","color":"blue"}
                             ]
                         },
                         {
