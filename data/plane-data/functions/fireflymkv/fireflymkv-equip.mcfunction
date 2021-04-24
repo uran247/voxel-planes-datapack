@@ -1,4 +1,4 @@
-#> plane-data:f4u-1/fireflymkv-equip
+#> plane-data:fireflymkv/fireflymkv-equip
 #
 # 装備の変更処理
 # @input
@@ -15,6 +15,7 @@
 #装備品チェック
 execute store success score #1000lb vp.reg1 if entity @e[type=minecraft:donkey,tag=target-parts,nbt={Items:[{tag:{item-type:500kg-bomb}}]},distance=..30]
 execute store success score #ag-rocket vp.reg1 if entity @e[type=minecraft:donkey,tag=target-parts,nbt={Items:[{tag:{item-type:ag-rocket}}]},distance=..30]
+execute if score #ag-rocket vp.reg1 matches 1.. run scoreboard players set #1000lb vp.reg1 0
 
 #ストレージリセット
 data remove storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{data:{type:bomb}}]

@@ -27,3 +27,4 @@ execute if entity @s[tag=fw190d9] run function plane-data:fw190d-9/fw190d9-equip
 execute if entity @s[tag=seafuryfb11] run function plane-data:seafuryfb11/seafuryfb11-equip
 execute if entity @s[tag=swordfish] run function plane-data:swordfish/swordfish-equip
 execute if entity @s[tag=spitfiremkix] run function plane-data:spitfiremkix/spitfiremkix-equip
+execute if entity @s[tag=fireflymkv] run function plane-data:fireflymkv/fireflymkv-equip
