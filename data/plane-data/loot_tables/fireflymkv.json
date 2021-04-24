@@ -10,7 +10,7 @@
                     "functions": [
                         {
                             "function":"set_name",
-                            "name":{"text":"F4U Corsair"}
+                            "name":{"text":"Fairey Firefly Mk.V"}
                         },
                         {
                             "function":"set_lore",
