@@ -25,8 +25,8 @@ data modify storage voxel-planes:plane spitfiremkix.plane-data.hitbox merge valu
 data modify storage voxel-planes:plane spitfiremkix.plane-data.hitbox merge value {cockpit:{offset:[0d,0.4d,0d]}}
 
 #デフォルト機銃データセット
-data modify storage voxel-planes:weapon spitfiremkix.base.20mm.data set value {name:"20mm gun",type:gun,size:20mm,max-ammunition:120,current-ammunition:120,max-cooltime:2,current-cooltime:0,max-reload:280,current-reload:0,tracer:"yellow",damage:70,speed:9d,bullets:[{offset:[-1.8d,0.9d,2.6d]},{offset:[1.8d,0.9d,2.6d]}]}
-data modify storage voxel-planes:weapon spitfiremkix.base.12p7mm.data set value {name:"12.7mm gun",type:gun,size:12p7mm,max-ammunition:250,current-ammunition:250,max-cooltime:2,current-cooltime:0,max-reload:210,current-reload:0,tracer:"yellow",damage:44,speed:10d,bullets:[{offset:[-1.9d,0.9d,1.8d]},{offset:[1.9d,0.9d,1.8d]}]}
+data modify storage voxel-planes:weapon spitfiremkix.base.20mm.data set value {name:"20mm gun",type:gun,size:20mm,max-ammunition:120,current-ammunition:120,max-cooltime:2,current-cooltime:0,max-reload:280,current-reload:0,tracer:"yellow",damage:70,speed:10.5d,bullets:[{offset:[-1.8d,0.9d,2.6d]},{offset:[1.8d,0.9d,2.6d]}]}
+data modify storage voxel-planes:weapon spitfiremkix.base.12p7mm.data set value {name:"12.7mm gun",type:gun,size:12p7mm,max-ammunition:250,current-ammunition:250,max-cooltime:2,current-cooltime:0,max-reload:210,current-reload:0,tracer:"yellow",damage:44,speed:11d,bullets:[{offset:[-1.9d,0.9d,1.8d]},{offset:[1.9d,0.9d,1.8d]}]}
 
 #デフォルト爆弾データセット
 data modify storage voxel-planes:weapon spitfiremkix.base.bomb.data set value {name:bomb,type:bomb,max-ammunition:1,current-ammunition:1,max-reload:3600,current-reload:0,bombs:[]}
