@@ -34,15 +34,15 @@ data modify storage voxel-planes:weapon seafuryfb11.additional.1000lb append val
 
 #デフォルトロケット弾データセット
 data modify storage voxel-planes:weapon seafuryfb11.base.rocket.data set value {name:rocket,type:rocket,max-ammunition:12,current-ammunition:12,max-reload:600,current-reload:0,rockets:[]}
-data modify storage voxel-planes:weapon seafuryfb11.additional.ag-rocket set value [{type:normal,damage:300,offset:[3.7d,-0.74d,2.8d],weight:36.0f,kind:10kg,cmd:134}]
-data modify storage voxel-planes:weapon seafuryfb11.additional.ag-rocket append value {type:normal,damage:300,offset:[3.4d,-0.77d,2.8d],weight:36.0f,kind:10kg,cmd:134}
-data modify storage voxel-planes:weapon seafuryfb11.additional.ag-rocket append value {type:normal,damage:300,offset:[3.1d,-0.80d,2.8d],weight:36.0f,kind:10kg,cmd:134}
-data modify storage voxel-planes:weapon seafuryfb11.additional.ag-rocket append value {type:normal,damage:300,offset:[-3.7d,-0.74d,2.8d],weight:36.0f,kind:10kg,cmd:134}
-data modify storage voxel-planes:weapon seafuryfb11.additional.ag-rocket append value {type:normal,damage:300,offset:[-3.4d,-0.77d,2.8d],weight:36.0f,kind:10kg,cmd:134}
-data modify storage voxel-planes:weapon seafuryfb11.additional.ag-rocket append value {type:normal,damage:300,offset:[-3.1d,-0.80d,2.8d],weight:36.0f,kind:10kg,cmd:134}
-data modify storage voxel-planes:weapon seafuryfb11.additional.ag-rocket append value {type:normal,damage:300,offset:[3.7d,-0.94d,2.8d],weight:36.0f,kind:10kg,cmd:134}
-data modify storage voxel-planes:weapon seafuryfb11.additional.ag-rocket append value {type:normal,damage:300,offset:[3.4d,-0.97d,2.8d],weight:36.0f,kind:10kg,cmd:134}
-data modify storage voxel-planes:weapon seafuryfb11.additional.ag-rocket append value {type:normal,damage:300,offset:[3.1d,-1.00d,2.8d],weight:36.0f,kind:10kg,cmd:134}
-data modify storage voxel-planes:weapon seafuryfb11.additional.ag-rocket append value {type:normal,damage:300,offset:[-3.7d,-0.94d,2.8d],weight:36.0f,kind:10kg,cmd:134}
-data modify storage voxel-planes:weapon seafuryfb11.additional.ag-rocket append value {type:normal,damage:300,offset:[-3.4d,-0.97d,2.8d],weight:36.0f,kind:10kg,cmd:134}
-data modify storage voxel-planes:weapon seafuryfb11.additional.ag-rocket append value {type:normal,damage:300,offset:[-3.1d,-1.00d,2.8d],weight:36.0f,kind:10kg,cmd:134}
+data modify storage voxel-planes:weapon seafuryfb11.additional.ag-rocket set value [{type:normal,damage:300,offset:[3.4d,-0.74d,2.3d],weight:36.0f,kind:10kg,cmd:134}]
+data modify storage voxel-planes:weapon seafuryfb11.additional.ag-rocket append value {type:normal,damage:300,offset:[3.1d,-0.77d,2.3d],weight:36.0f,kind:10kg,cmd:134}
+data modify storage voxel-planes:weapon seafuryfb11.additional.ag-rocket append value {type:normal,damage:300,offset:[2.8d,-0.80d,2.3d],weight:36.0f,kind:10kg,cmd:134}
+data modify storage voxel-planes:weapon seafuryfb11.additional.ag-rocket append value {type:normal,damage:300,offset:[-3.4d,-0.74d,2.3d],weight:36.0f,kind:10kg,cmd:134}
+data modify storage voxel-planes:weapon seafuryfb11.additional.ag-rocket append value {type:normal,damage:300,offset:[-3.1d,-0.77d,2.3d],weight:36.0f,kind:10kg,cmd:134}
+data modify storage voxel-planes:weapon seafuryfb11.additional.ag-rocket append value {type:normal,damage:300,offset:[-2.8d,-0.80d,2.3d],weight:36.0f,kind:10kg,cmd:134}
+data modify storage voxel-planes:weapon seafuryfb11.additional.ag-rocket append value {type:normal,damage:300,offset:[3.4d,-0.94d,2.3d],weight:36.0f,kind:10kg,cmd:134}
+data modify storage voxel-planes:weapon seafuryfb11.additional.ag-rocket append value {type:normal,damage:300,offset:[3.1d,-0.97d,2.3d],weight:36.0f,kind:10kg,cmd:134}
+data modify storage voxel-planes:weapon seafuryfb11.additional.ag-rocket append value {type:normal,damage:300,offset:[2.8d,-1.00d,2.3d],weight:36.0f,kind:10kg,cmd:134}
+data modify storage voxel-planes:weapon seafuryfb11.additional.ag-rocket append value {type:normal,damage:300,offset:[-3.4d,-0.94d,2.3d],weight:36.0f,kind:10kg,cmd:134}
+data modify storage voxel-planes:weapon seafuryfb11.additional.ag-rocket append value {type:normal,damage:300,offset:[-3.1d,-0.97d,2.3d],weight:36.0f,kind:10kg,cmd:134}
+data modify storage voxel-planes:weapon seafuryfb11.additional.ag-rocket append value {type:normal,damage:300,offset:[-2.8d,-1.00d,2.3d],weight:36.0f,kind:10kg,cmd:134}
