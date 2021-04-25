@@ -18,12 +18,11 @@ data modify storage voxel-planes:plane fireflymkv.plane-data.model-data.body set
 data modify storage voxel-planes:plane fireflymkv.plane-data.model-data.landing-pitch set value -12.5
 data modify storage voxel-planes:plane fireflymkv.plane-data.hp set value {engine:130d,body:140d,aileron:140d,elevetor:120d,radder:120d}
 data modify storage voxel-planes:plane fireflymkv.plane-data.hitbox set value {}
-data modify storage voxel-planes:plane fireflymkv.plane-data.hitbox merge value {engine:{offset:[0.3d,0d,4.5d]}}
-data modify storage voxel-planes:plane fireflymkv.plane-data.hitbox merge value {body:{offset:[0.3d,0d,0d]}}
-data modify storage voxel-planes:plane fireflymkv.plane-data.hitbox merge value {aileron-r:{offset:[-2.9d,-0.5d,2.2d]},aileron-l:{offset:[3.5d,-0.5d,2.2d]}}
-data modify storage voxel-planes:plane fireflymkv.plane-data.hitbox merge value {elevator-r:{offset:[-1d,0.2d,-3.6d]},elevator-l:{offset:[1.6d,0.2d,-3.6d]}}
-data modify storage voxel-planes:plane fireflymkv.plane-data.hitbox merge value {radder:{offset:[0.3d,1.3d,-3d]}}
-data modify storage voxel-planes:plane fireflymkv.plane-data.hitbox merge value {cockpit:{offset:[0.3d,0.7d,1.1d]}}
+data modify storage voxel-planes:plane fireflymkv.plane-data.hitbox merge value {engine:{offset:[0d,0d,5.5d]}}
+data modify storage voxel-planes:plane fireflymkv.plane-data.hitbox merge value {aileron-r:{offset:[-3.4d,-0.5d,2.5d]},aileron-l:{offset:[3.4d,-0.5d,2.5d]}}
+data modify storage voxel-planes:plane fireflymkv.plane-data.hitbox merge value {elevator-r:{offset:[-1d,0.3d,-2.8d]},elevator-l:{offset:[1d,0.3d,-2.8d]}}
+data modify storage voxel-planes:plane fireflymkv.plane-data.hitbox merge value {radder:{offset:[0d,1.1d,-3.4d]}}
+data modify storage voxel-planes:plane fireflymkv.plane-data.hitbox merge value {cockpit:{offset:[0d,0.7d,3.1d]}}
 
 #デフォルト機銃データセット
 data modify storage voxel-planes:weapon fireflymkv.base.gun.data set value {name:"20mm gun",type:gun,size:20mm,max-ammunition:160,current-ammunition:160,max-cooltime:2,current-cooltime:0,max-reload:220,current-reload:0,tracer:"lightblue",damage:73,speed:11d,bullets:[{offset:[-2.7d,0.9d,4.6d]},{offset:[2.7d,0.9d,4.6d]},{offset:[-3d,0.95d,4.6d]},{offset:[3d,0.95d,4.6d]}]}
