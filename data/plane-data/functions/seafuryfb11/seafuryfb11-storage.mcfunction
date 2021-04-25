@@ -25,12 +25,12 @@ data modify storage voxel-planes:plane seafuryfb11.plane-data.hitbox merge value
 data modify storage voxel-planes:plane seafuryfb11.plane-data.hitbox merge value {cockpit:{offset:[0d,1d,1.8d]}}
 
 #デフォルト機銃データセット
-data modify storage voxel-planes:weapon seafuryfb11.base.20mm.data set value {name:"20mm gun",type:gun,size:20mm,max-ammunition:145,current-ammunition:145,max-cooltime:2,current-cooltime:0,max-reload:280,current-reload:0,tracer:"orange",damage:88,speed:11d,bullets:[{offset:[2.22d,-0.35d,3d]},{offset:[-2.22d,-0.35d,3d]},{offset:[2.54d,-0.35d,3d]},{offset:[-2.54d,-0.35d,3d]}]}
+data modify storage voxel-planes:weapon seafuryfb11.base.20mm.data set value {name:"20mm gun",type:gun,size:20mm,max-ammunition:145,current-ammunition:145,max-cooltime:2,current-cooltime:0,max-reload:280,current-reload:0,tracer:"orange",damage:88,speed:11d,bullets:[{offset:[1.95d,0.9d,4d]},{offset:[-1.95d,0.9d,4d]},{offset:[2.25d,0.9d,4.1d]},{offset:[-2.25d,0.9d,4.1d]}]}
 
 #デフォルト爆弾データセット
 data modify storage voxel-planes:weapon seafuryfb11.base.bomb.data set value {name:bomb,type:bomb,max-ammunition:2,current-ammunition:2,max-reload:3600,current-reload:0,bombs:[]}
-data modify storage voxel-planes:weapon seafuryfb11.additional.1000lb set value [{kind:1000lb,type:normal,offset:[-2.6d,-0.7d,1.2d],damage:1250,weight:250,cmd:77}]
-data modify storage voxel-planes:weapon seafuryfb11.additional.1000lb append value {kind:1000lb,type:normal,offset:[2.6d,-0.7d,1.2d],damage:1250,weight:250,cmd:77}
+data modify storage voxel-planes:weapon seafuryfb11.additional.1000lb set value [{kind:1000lb,type:normal,offset:[-3.1d,-0.9d,2.2d],damage:2300,weight:454,cmd:133}]
+data modify storage voxel-planes:weapon seafuryfb11.additional.1000lb append value {kind:1000lb,type:normal,offset:[3.1d,-0.9d,2.2d],damage:2300,weight:454,cmd:133}
 
 #デフォルトロケット弾データセット
 data modify storage voxel-planes:weapon seafuryfb11.base.rocket.data set value {name:rocket,type:rocket,max-ammunition:12,current-ammunition:12,max-reload:600,current-reload:0,rockets:[]}
