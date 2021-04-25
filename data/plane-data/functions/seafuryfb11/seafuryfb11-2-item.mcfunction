@@ -2,4 +2,4 @@
 #処理　seafuryfb11をアイテム化
 
 #アイテムをsummon
-function plane-data:seafuryfb11/give-seafuryfb11-spawn
+loot spawn ~ ~ ~ loot plane-data:seafuryfb11
