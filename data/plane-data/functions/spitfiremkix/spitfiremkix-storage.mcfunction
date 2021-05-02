@@ -11,7 +11,7 @@ data modify storage voxel-planes:plane spitfiremkix.plane-data.plane-type set va
 data modify storage voxel-planes:plane spitfiremkix.plane-data.tier set value 3
 data modify storage voxel-planes:plane spitfiremkix.plane-data.flight-model.weight set value 3354
 data modify storage voxel-planes:plane spitfiremkix.plane-data.flight-model.speed set value {max-speed:650f,cruise-speed:350f,climb-rate:24.1f,stall-speed:128f}
-data modify storage voxel-planes:plane spitfiremkix.plane-data.flight-model.engine set value {type:recipro,horse-power:1175f,number:1}
+data modify storage voxel-planes:plane spitfiremkix.plane-data.flight-model.engine set value {type:recipro,horse-power:1720f,number:1}
 data modify storage voxel-planes:plane spitfiremkix.plane-data.flight-model.turn-rate set value {pitch:42f,yaw:32f,roll:130f}
 data modify storage voxel-planes:plane spitfiremkix.plane-data.flight-model.energy-loss-rate set value 0.3
 data modify storage voxel-planes:plane spitfiremkix.plane-data.model-data.body set value {parking-cmd:16,rolling-cmd:17,flying-cmd:18}
