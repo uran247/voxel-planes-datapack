@@ -18,10 +18,10 @@ execute if data entity @s Inventory[{Slot:103b}] run data modify storage minecra
 execute unless data entity @s Inventory[{Slot:-106b,tag:{item-type:controll-rod}}] run data modify storage minecraft:plane-datapack Items append from entity @s Inventory[{Slot:-106b}]
 
 #装備品を削除
-replaceitem entity @s armor.head air
-replaceitem entity @s armor.chest air
-replaceitem entity @s armor.legs air
-replaceitem entity @s armor.feet air
+item replace entity @s armor.head with air
+item replace entity @s armor.chest with air
+item replace entity @s armor.legs with air
+item replace entity @s armor.feet with air
 
 #ストレージのスロットを書き換えチェストに入るようにする
 execute if data storage minecraft:plane-datapack Items[{Slot:100b}] run data modify storage minecraft:plane-datapack Items[{Slot:100b}].Slot set value 0b

@@ -13,6 +13,7 @@
     #declare tag plane-init
     #declare tag plane-body
     #declare tag plane-rightwing
+    #declare tag plane-tail
 
 #最高、巡航、失速、離陸速度設定
 execute store result score @s vp.max-speed run data get storage voxel-planes:input input.flight-model.speed.max-speed 34.72
@@ -52,6 +53,9 @@ execute store result score @e[tag=plane-init,tag=plane-body,tag=model-changeable
 execute store result score @e[tag=plane-init,tag=plane-rightwing,tag=model-changeable] vp.parking-cmd run data get storage voxel-planes:input input.model-data.rightwing.parking-cmd
 execute store result score @e[tag=plane-init,tag=plane-rightwing,tag=model-changeable] vp.rolling-cmd run data get storage voxel-planes:input input.model-data.rightwing.rolling-cmd
 execute store result score @e[tag=plane-init,tag=plane-rightwing,tag=model-changeable] vp.flying-cmd run data get storage voxel-planes:input input.model-data.rightwing.flying-cmd
+execute store result score @e[tag=plane-init,tag=plane-tail,tag=model-changeable] vp.parking-cmd run data get storage voxel-planes:input input.model-data.tail.parking-cmd
+execute store result score @e[tag=plane-init,tag=plane-tail,tag=model-changeable] vp.rolling-cmd run data get storage voxel-planes:input input.model-data.tail.rolling-cmd
+execute store result score @e[tag=plane-init,tag=plane-tail,tag=model-changeable] vp.flying-cmd run data get storage voxel-planes:input input.model-data.tail.flying-cmd
 
 #エンジン数、馬力、推力設定
 execute store result score @s vp.max-engine run data get storage voxel-planes:input input.flight-model.engine.number

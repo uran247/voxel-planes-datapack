@@ -49,6 +49,5 @@ scoreboard players set @e[tag=block-detector,tag=20,distance=..1,x=0,y=1,z=0] vp
 summon minecraft:armor_stand -0.5 0 -0.5 {Marker:1b,Tags:[Trigonometric],NoGravity:1b,Invulnerable:1b,UUID:[I;0,0,0,32]}
 summon minecraft:armor_stand 0 0 0 {Marker:1b,Tags:[Trigonometric2],NoGravity:1b,Invulnerable:1b,UUID:[I;0,0,0,33]}
 data merge entity @e[tag=Trigonometric,limit=1] {Pos:[0d,0d,0d]}
-replaceitem entity 0-0-0-0-5 weapon.mainhand minecraft:shulker_box
-
+item replace entity 0-0-0-0-5 weapon.mainhand with minecraft:shulker_box
 setblock 0 1 0 shulker_box
