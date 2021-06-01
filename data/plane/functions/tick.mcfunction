@@ -44,3 +44,4 @@ execute at @a run kill @e[type=item,nbt={Item:{tag:{volatile:1}}},distance=..32]
 
 #スポナー使用時に飛行機召喚
 execute as @e[type=bat,tag=plane-spawner] run function plane:summon/spawner-manager
+
