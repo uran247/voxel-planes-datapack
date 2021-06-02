@@ -9,10 +9,7 @@
 # @within plane:controll/weapon
 
 #オフハンド入れ直し
-execute if data entity @s Inventory[{Slot:-106b}] unless data entity @s Inventory[{Slot:-106b,tag:{item-type:indicator}}] run item replace block 0 1 0 container.1 with minecraft:stone_button
-execute unless data entity @s Inventory[{Slot:-106b,tag:{item-type:indicator}}] run data modify block 0 1 0 Items[{Slot:1b}].Count set from entity @s Inventory[{Slot:-106b}].Count
-execute unless data entity @s Inventory[{Slot:-106b,tag:{item-type:indicator}}] run data modify block 0 1 0 Items[{Slot:1b}].id set from entity @s Inventory[{Slot:-106b}].id
-execute unless data entity @s Inventory[{Slot:-106b,tag:{item-type:indicator}}] run data modify block 0 1 0 Items[{Slot:1b}].tag set from entity @s Inventory[{Slot:-106b}].tag
+execute if data entity @s Inventory[{Slot:-106b}] unless data entity @s Inventory[{Slot:-106b,tag:{item-type:indicator}}] run item replace block 0 1 0 container.1 from entity @s weapon.offhand 
 clear @s minecraft:carrot_on_a_stick{item-type:controll-rod}
 loot replace entity @s weapon.offhand loot item:tools/controll-stick
 loot give @s mine 0 1 0 air{load:1b}
