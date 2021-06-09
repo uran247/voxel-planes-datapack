@@ -1,4 +1,4 @@
-#> weapon:util/check-block
+#> weapon:torpedo/check-block-torpedo
 #
 # エンティティの視線上にブロックがいるかを調べる
 # usage: execute as 視線主entity at 視線終端点entity run this
