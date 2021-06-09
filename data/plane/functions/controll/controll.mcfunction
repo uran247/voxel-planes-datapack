@@ -43,10 +43,9 @@ tag @e[tag=controll-target,limit=1] add has-rider
 function util:get-player-slot
 scoreboard players operation @s vp.key-input = #selected-slot vp.return
 
-#WASD取得
+#WASD取得(plane:controll/rolling plane:controll/flyingで使用)
 execute as @s run function util:get-player-keystroke
 scoreboard players operation @s vp.key-storoke = #key-storoke vp.return
-#tellraw @p [{"score" : {"name":"#key-storoke", "objective":"vp.return"}}]
 
 #自分と同じIDのパーツにタグ付け(今のところ使ってないのでコメントアウト)
 #execute at @e[tag=controll-target,distance=..20] as @e[distance=..20,scores={plane-id=1..}] if score @s plane-id = #plane-id vp.reg1 run tag @s add controll-parts

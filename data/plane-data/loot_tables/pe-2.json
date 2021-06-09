@@ -10,19 +10,19 @@
                     "functions": [
                         {
                             "function":"set_name",
-                            "name":{"text":"Me262A-1a"}
+                            "name":{"text":"Pe-2"}
                         },
                         {
                             "function":"set_lore",
                             "lore":[
-                                {"translate":"戦闘機","color":"green","bold":true},
+                                {"translate":"爆撃機","color":"green","bold":true},
                                 {"translate":" 武装"},
-                                {"translate":"  Mk 108 30mm機関砲×4","color":"blue"}
+                                {"translate":"  250kg爆弾×4","color":"blue"}
                             ]
                         },
                         {
                             "function": "minecraft:set_nbt",
-                            "tag":"{item-type:me262a1a,tier:5,CustomModelData:21,CanPlaceOn:[\"minecraft:stone\",\"minecraft:grass_path\"],HideFlags:18,EntityTag:{Silent:1b,Tags:[me262a1a-spawner,plane-spawner],ActiveEffects:[{Id:14b,Amplifier:1b,Duration:100,ShowParticles:0b}]}}"
+                            "tag":"{item-type:pe-2,tier:2,CustomModelData:22,CanPlaceOn:[\"minecraft:stone\",\"minecraft:grass_path\"],HideFlags:18,EntityTag:{Silent:1b,Tags:[pe2-spawner,plane-spawner],ActiveEffects:[{Id:14b,Amplifier:1b,Duration:100,ShowParticles:0b}]}}"
                         }
                     ]
                 }
