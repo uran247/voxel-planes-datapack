@@ -23,8 +23,13 @@
 tag @s[scores={vp.key-input=8}] add overlook
 
 #スロット8選択でthrottleが+１，6選択で-1
-execute if entity @s[scores={vp.key-input=9}] as @e[tag=controll-target,distance=..1,limit=1] run scoreboard players add @s[scores={vp.throttle=..19}] vp.throttle 1
-execute if entity @s[scores={vp.key-input=6}] as @e[tag=controll-target,distance=..1,limit=1] run scoreboard players remove @s[scores={vp.throttle=1..}] vp.throttle 1
+#execute if entity @s[scores={vp.key-input=9}] as @e[tag=controll-target,distance=..1,limit=1] run scoreboard players add @s[scores={vp.throttle=..19}] vp.throttle 1
+#execute if entity @s[scores={vp.key-input=6}] as @e[tag=controll-target,distance=..1,limit=1] run scoreboard players remove @s[scores={vp.throttle=1..}] vp.throttle 1
+
+#W押下でthrottleが+１，S押下で-1
+execute if entity @s[scores={vp.key-storoke=1..2}] as @e[tag=controll-target,distance=..1,limit=1] run scoreboard players add @s[scores={vp.throttle=..19}] vp.throttle 1
+execute if entity @s[scores={vp.key-storoke=8}] as @e[tag=controll-target,distance=..1,limit=1] run scoreboard players add @s[scores={vp.throttle=..19}] vp.throttle 1
+execute if entity @s[scores={vp.key-storoke=4..6}] as @e[tag=controll-target,distance=..1,limit=1] run scoreboard players remove @s[scores={vp.throttle=1..}] vp.throttle 1
 
 #稼働エンジン数に応じてスロットル減衰 スロットル×稼働エンジン数/最大エンジン数
 execute as @e[tag=controll-target,distance=..1,limit=1] run scoreboard players operation @s vp.throttle *= @s vp.engine
