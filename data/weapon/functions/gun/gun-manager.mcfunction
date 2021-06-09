@@ -36,8 +36,8 @@ scoreboard players set #hit-flag vp.reg1 0
 
 #### 移動&ヒット判定 ####
 #ベクトル方向へエンティティの向きを向ける
-execute unless entity 0-0-0-0-4 run summon minecraft:armor_stand 0 1 0 {NoGravity:1b,Marker:1b,Invisible:1b,Tags:[entity-nohit,block,axis,block-detector,"4"],UUID:[I;0,0,0,4],Invulnerable:1b}
-tp 0-0-0-0-4 ~ ~ ~ ~ ~
+execute unless entity 0-0-0-0-4 run summon minecraft:armor_stand 0.0 1.0 0.0 {NoGravity:1b,Marker:1b,Invisible:1b,Tags:[entity-nohit,block,axis,block-detector,"4"],UUID:[I;0,0,0,4],Invulnerable:1b}
+execute unless entity 0-0-0-0-4 run kill @s
 data modify storage minecraft:plane-datapack temporary.Pos set from entity @s Pos
 execute store result score #pos-x vp.reg1 run data get storage minecraft:plane-datapack temporary.Pos[0] 100
 execute store result score #pos-y vp.reg1 run data get storage minecraft:plane-datapack temporary.Pos[1] 100
@@ -49,7 +49,6 @@ data modify entity 0-0-0-0-4 Pos set from storage minecraft:plane-datapack tempo
 tp @s ~ ~ ~ facing entity 0-0-0-0-4
 
 #tellraw @p [{"score" : {"name":"@s", "objective":"speedX"}}, {"text":" "}, {"score" : {"name":"@s", "objective":"speedY"}}, {"text":" "}, {"score" : {"name":"@s", "objective":"speedZ"}}]
-#tellraw @p [{"nbt":"Pos","entity":"@s"},{"nbt":"Pos","entity":"0-0-0-0-4"}] 
 
 #移動予定先までの間にブロックがあるか判定
 execute at 0-0-0-0-4 run function weapon:util/check-block
