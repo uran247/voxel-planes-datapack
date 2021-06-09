@@ -43,7 +43,7 @@ tag @e[tag=controll-target,limit=1] add has-rider
 function util:get-player-slot
 scoreboard players operation @s vp.key-input = #selected-slot vp.return
 
-#WASD取得
+#WASD取得(plane:controll/rolling plane:controll/flyingで使用)
 execute as @s run function util:get-player-keystroke
 scoreboard players operation @s vp.key-storoke = #key-storoke vp.return
 
