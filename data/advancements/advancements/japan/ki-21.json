@@ -25,7 +25,7 @@
   },
   "criteria": {
     "get_ki21": {
-      "trigger": "minecraft:inventory_changed",
+      "trigger": "minecraft:impossible",
       "conditions": {
         "items": [
           {
