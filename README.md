@@ -3,7 +3,8 @@ minecraftに航空機を追加するデータパックです。
 ![](https://user-images.githubusercontent.com/35622683/101279036-bef8d280-3802-11eb-9e70-bc5ae2369657.png)
 
 ## 対応バージョン
-minecraft 1.16
+minecraft 1.16(~v0.2.0)
+minecraft 1.17(v0.3.2~)
 
 ## インストール方法
 1. [release](https://github.com/uran247/voxel-planes-datapack/releases)よりvoxel-planesとvoxel-planes-resourcepackをDL
