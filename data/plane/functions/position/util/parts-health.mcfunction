@@ -6,7 +6,9 @@
 #   executer @e[tag=plane-root]
 #   position @e[tag=plane-root]
 #
-# @within plane:position/position
+# @within
+#   function plane:position/position
+#   function weapon:util/destroy-hitbox-message
 #
 # @private
     #declare score_holder #total-health #パーツの合計体力を示す

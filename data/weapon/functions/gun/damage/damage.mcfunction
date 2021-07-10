@@ -14,11 +14,12 @@
 # @within
 #   function weapon:gun/damage/damage
 #   function weapon:gun/damage/**
+#   function weapon:util/**
     #declare tag enemy-target #撃墜するとメッセージが出るターゲットを示す
+    #declare tag bullet-owner #銃弾を発射したプレイヤーを示す
 
 #> private
 # @private
-    #declare tag bullet-owner #銃弾を発射したプレイヤーを示す
     #
     #declare score_holder #bullet-id #銃弾のplane-id
 
@@ -42,10 +43,10 @@ execute as @a if score @s vp.plane-id = #bullet-id vp.reg1 run tag @s add bullet
 title @p[tag=bullet-owner] times 0 20 20
 #execute as @e[tag=hit-weapon,scores={vp.reg1=0},distance=..20,sort=nearest,limit=1] run function weapon:gun/damage/set-kill-mob-message
 #execute as @e[tag=hit-weapon,tag=enemy-target,scores={vp.reg1=0},distance=..20,sort=nearest,limit=1] run function weapon:gun/damage/set-kill-target-message
-execute if entity @e[tag=!entity-nohit,scores={vp.reg1=0},distance=..20] run title @p[tag=bullet-owner] title {"text":""}
 #メッセージ表示(tellraw)とダメージエフェクト
 execute as @e[tag=hit-weapon,tag=plane-hitbox,tag=!cockpit,distance=..20] run function weapon:util/hit-hitbox-effect
-execute as @e[tag=hit-weapon,tag=plane-hitbox,tag=!cockpit,scores={vp.reg1=0},distance=..20] run function weapon:util/destroy-hitbox-message
+execute as @e[tag=hit-weapon,tag=plane-hitbox,tag=!cockpit,scores={vp.reg1=0},distance=..20] at @s run function weapon:util/destroy-hitbox-message
+execute if entity @e[tag=!entity-nohit,scores={vp.reg1=0},distance=..20] run title @p[tag=bullet-owner] title {"text":""}
 
 #撃墜者/クリアスコアをプラス
 #execute as @p[tag=bullet-owner] run function weapon:gun/damage/set-shotdown-score

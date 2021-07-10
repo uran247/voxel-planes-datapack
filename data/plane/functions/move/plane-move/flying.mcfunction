@@ -113,11 +113,11 @@ execute at @s[tag=destroyed,scores={vp.AngX=..9000}] run scoreboard players oper
 execute at @s[tag=destroyed,scores={vp.AngX=..9000}] run scoreboard players operation @s vp.AngX += #down-pitch vp.reg1
 
 #登場者がいないならピッチを下げる
-scoreboard players operation @s[tag=!has-rider,scores={vp.AngX=..9000}] vp.AngX += @s vp.pitch-speed
+scoreboard players operation @s[tag=!has-rider,tag=!has-dummy-rider,scores={vp.AngX=..9000}] vp.AngX += @s vp.pitch-speed
 
 #音
 scoreboard players set @s[scores={vp.sound=30..}] vp.sound 0
-execute if entity @s[scores={vp.sound=0,vp.speed=-1..}] at @s run playsound minecraft:plane.engine.recipro-flying ambient @a ~ ~ ~ 1 1 1
+execute if entity @s[scores={vp.sound=0,vp.speed=-1..}] at @s run playsound minecraft:plane.engine.recipro-flying ambient @a ~ ~ ~ 2 1 0
 scoreboard players operation @s vp.reg1 = #rand vp.rand
 scoreboard players operation @s vp.reg1 %= #4 vp.Num
 scoreboard players operation @s vp.sound += @s vp.reg1
