@@ -60,6 +60,7 @@ execute at @s[tag=swordfish] run function plane-data:swordfish/swordfish-positio
 execute at @s[tag=spitfiremkix] run function plane-data:spitfiremkix/spitfiremkix-position
 execute at @s[tag=fireflymkv] run function plane-data:fireflymkv/fireflymkv-position
 execute at @s[tag=pe2] run function plane-data:pe-2/pe-2-position
+execute at @s[tag=bf109g] run function plane-data:bf109g/bf109g-position
 
 #execute as @s[tag=spitfire] run function plane:position/spitfire-position
 #execute as @s[tag=ju87] run function plane:position/ju87-position

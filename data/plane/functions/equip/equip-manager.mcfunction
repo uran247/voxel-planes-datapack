@@ -29,3 +29,4 @@ execute if entity @s[tag=swordfish] run function plane-data:swordfish/swordfish-
 execute if entity @s[tag=spitfiremkix] run function plane-data:spitfiremkix/spitfiremkix-equip
 execute if entity @s[tag=fireflymkv] run function plane-data:fireflymkv/fireflymkv-equip
 execute if entity @s[tag=pe2] run function plane-data:pe-2/pe2-equip
+execute if entity @s[tag=bf109g] run function plane-data:bf109g/bf109g-equip

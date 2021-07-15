@@ -32,6 +32,7 @@
     #declare tag spitfiremkix-spawner
     #declare tag fireflymkv-spawner
     #declare tag pe2-spawner
+    #declare tag bf109g-spawner
 
 execute at @s[tag=a5m-spawner] as @p run function plane-data:a5m/a5m
 execute at @s[tag=d3a-spawner] as @p run function plane-data:d3a/d3a
@@ -55,6 +56,7 @@ execute at @s[tag=swordfish-spawner] as @p run function plane-data:swordfish/swo
 execute at @s[tag=spitfiremkix-spawner] as @p run function plane-data:spitfiremkix/spitfiremkix
 execute at @s[tag=fireflymkv-spawner] as @p run function plane-data:fireflymkv/fireflymkv
 execute at @s[tag=pe2-spawner] as @p run function plane-data:pe-2/pe-2
+execute at @s[tag=bf109g-spawner] as @p run function plane-data:bf109g/bf109g
 
 kill @s
 
