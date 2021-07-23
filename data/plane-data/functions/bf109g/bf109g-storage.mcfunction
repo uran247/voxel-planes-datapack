@@ -32,8 +32,8 @@ data modify storage voxel-planes:weapon bf109g.additional.20mm.data set value {n
 
 
 #デフォルト爆弾データセット
-data modify storage voxel-planes:weapon bf109g.base.bomb.data set value {name:bomb,type:bomb,max-ammunition:2,current-ammunition:2,max-reload:3600,current-reload:0,bombs:[]}
-data modify storage voxel-planes:weapon bf109g.additional.250kg set value [{kind:250kg,type:normal,offset:[-0.4d,-1d,2.1d],damage:1250,weight:250.0f,cmd:122}]
+data modify storage voxel-planes:weapon bf109g.base.bomb.data set value {name:bomb,type:bomb,max-ammunition:1,current-ammunition:1,max-reload:3600,current-reload:0,bombs:[]}
+data modify storage voxel-planes:weapon bf109g.additional.250kg set value [{kind:250kg,type:normal,offset:[0d,-0.8d,-0.5d],damage:1250,weight:250.0f,cmd:33}]
 
 #デフォルトロケット弾データセット
 data modify storage voxel-planes:weapon bf109g.base.rocket.data set value {name:rocket,type:rocket,max-ammunition:8,current-ammunition:8,max-reload:1200,current-reload:0,rockets:[]}
