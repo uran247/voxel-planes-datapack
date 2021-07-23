@@ -88,7 +88,7 @@ execute if entity @s[tag=!angle-not-changed] run function math:vector
 execute at @s[tag=!angle-not-changed] run function plane:position/util/modify-angle
 
 #seatの位置表示
-execute if entity @s[tag=!has-rider,tag=!no-move] at @e[type=minecraft:armor_stand,tag=target-parts,tag=plane-seat,tag=!no-particle] run particle minecraft:happy_villager ~ ~2.8 ~ 0.1 0.1 0.1 1 1 force @a[tag=!plane-rider]
+execute if entity @s[tag=!has-rider,tag=!no-move] at @e[type=armor_stand,tag=target-parts,tag=plane-seat,tag=!no-particle] run particle minecraft:happy_villager ~ ~2.8 ~ 0.1 0.1 0.1 1 1 force @a[tag=!plane-rider]
 
 #Ang-oldに現在のAng代入
 scoreboard players operation @s vp.AngX-old = @s vp.AngX
