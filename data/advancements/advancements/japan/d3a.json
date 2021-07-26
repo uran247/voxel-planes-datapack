@@ -29,7 +29,7 @@
       "conditions": {
         "items": [
           {
-              "item": "minecraft:bat_spawn_egg",
+              "items": ["minecraft:bat_spawn_egg"],
               "nbt": "{CustomModelData:3}"
           }
         ]

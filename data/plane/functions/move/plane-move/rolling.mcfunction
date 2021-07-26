@@ -58,15 +58,15 @@ execute if score @s vp.speed > @s vp.max-speed run scoreboard players operation 
 #x方向ベクトル×speedをMotionに代入
 scoreboard players operation #displacementX vp.reg1 = @s vp.speedX
 scoreboard players operation #displacementX vp.reg1 *= @s vp.speed
-execute store result storage plane-datapack temporary.Pos[0] double 0.00001 run scoreboard players operation #displacementX vp.reg1 /= #10 vp.Num
+execute store result storage minecraft:plane-datapack temporary.Pos[0] double 0.00001 run scoreboard players operation #displacementX vp.reg1 /= #10 vp.Num
 
 #Y方向ベクトルに0.05を代入
-execute store result storage plane-datapack temporary.Pos[1] double -0.05 run scoreboard players get #1 vp.Num
+execute store result storage minecraft:plane-datapack temporary.Pos[1] double -0.05 run scoreboard players get #1 vp.Num
 
 #z方向ベクトル×speedをMotionに代入
 scoreboard players operation #displacementZ vp.reg1 = @s vp.speedZ
 scoreboard players operation #displacementZ vp.reg1 *= @s vp.speed
-execute store result storage plane-datapack temporary.Pos[2] double 0.00001 run scoreboard players operation #displacementZ vp.reg1 /= #10 vp.Num
+execute store result storage minecraft:plane-datapack temporary.Pos[2] double 0.00001 run scoreboard players operation #displacementZ vp.reg1 /= #10 vp.Num
 
 #作成したベクトルをMotionに代入
 data modify entity @s Motion set from storage minecraft:plane-datapack temporary.Pos

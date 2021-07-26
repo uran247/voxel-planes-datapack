@@ -16,7 +16,7 @@
 execute rotated as @s positioned 0.0 0.0 0.0 positioned ^ ^ ^1 run tp 0-0-0-0-1 ~ ~ ~ ~ ~
 
 #測距エンティティの現在座標取得
-#execute store result storage plane-datapack temporary.Pos double 1 run data get entity 0-0-0-0-1 Pos
+#execute store result storage minecraft:plane-datapack temporary.Pos double 1 run data get entity 0-0-0-0-1 Pos
 data modify storage minecraft:plane-datapack temporary.Pos set from entity 0-0-0-0-1 Pos
 execute store result score @s vp.speedX run data get storage minecraft:plane-datapack temporary.Pos[0] 100
 execute store result score @s vp.speedY run data get storage minecraft:plane-datapack temporary.Pos[1] 100

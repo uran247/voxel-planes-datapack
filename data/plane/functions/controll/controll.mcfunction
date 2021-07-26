@@ -34,7 +34,7 @@ tag @s add entity-nohit
 #実行者と対象機体にタグ付け
 tag @s add controller
 scoreboard players operation #plane-id vp.reg1 = @s vp.plane-id
-execute as @e[type=armor_stand,tag=plane-root] if score @s vp.plane-id = #plane-id vp.reg1 run tag @s add controll-target
+execute as @e[tag=plane-root] if score @s vp.plane-id = #plane-id vp.reg1 run tag @s add controll-target
 
 #飛行機に搭乗者がいることをタグ付け
 tag @e[tag=controll-target,limit=1] add has-rider

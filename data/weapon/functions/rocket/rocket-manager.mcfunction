@@ -54,9 +54,9 @@ execute store result score #pos-x vp.reg1 run data get storage minecraft:plane-d
 execute store result score #pos-y vp.reg1 run data get storage minecraft:plane-datapack temporary.Pos[1] 100
 execute store result score #pos-z vp.reg1 run data get storage minecraft:plane-datapack temporary.Pos[2] 100
 scoreboard players operation #pos-y vp.reg1 -= @s vp.fall-speed
-execute store result storage plane-datapack temporary.Pos[0] double 0.01 run scoreboard players operation #pos-x vp.reg1 += #speedX vp.reg1
-execute store result storage plane-datapack temporary.Pos[1] double 0.01 run scoreboard players operation #pos-y vp.reg1 += #speedY vp.reg1
-execute store result storage plane-datapack temporary.Pos[2] double 0.01 run scoreboard players operation #pos-z vp.reg1 += #speedZ vp.reg1
+execute store result storage minecraft:plane-datapack temporary.Pos[0] double 0.01 run scoreboard players operation #pos-x vp.reg1 += #speedX vp.reg1
+execute store result storage minecraft:plane-datapack temporary.Pos[1] double 0.01 run scoreboard players operation #pos-y vp.reg1 += #speedY vp.reg1
+execute store result storage minecraft:plane-datapack temporary.Pos[2] double 0.01 run scoreboard players operation #pos-z vp.reg1 += #speedZ vp.reg1
 execute positioned 0.0 1.0 0.0 as @e[tag=block-checker,distance=..0.01,sort=nearest,limit=1] run data modify entity @s Pos set from storage minecraft:plane-datapack temporary.Pos
 
 tp @s ~ ~ ~ facing entity @e[tag=block-checker,distance=..26,sort=nearest,limit=1]

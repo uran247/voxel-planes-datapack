@@ -29,7 +29,7 @@ scoreboard players operation #current-y vp.reg1 += @s vp.displacementY
 scoreboard players operation #current-z vp.reg1 += @s vp.displacementZ
 
 #移動
-execute store result storage plane-datapack temporary.Pos[0] double 0.001 run scoreboard players get #current-x vp.reg1
-execute store result storage plane-datapack temporary.Pos[1] double 0.001 run scoreboard players get #current-y vp.reg1
-execute store result storage plane-datapack temporary.Pos[2] double 0.001 run scoreboard players get #current-z vp.reg1
+execute store result storage minecraft:plane-datapack temporary.Pos[0] double 0.001 run scoreboard players get #current-x vp.reg1
+execute store result storage minecraft:plane-datapack temporary.Pos[1] double 0.001 run scoreboard players get #current-y vp.reg1
+execute store result storage minecraft:plane-datapack temporary.Pos[2] double 0.001 run scoreboard players get #current-z vp.reg1
 data modify entity @s Pos set from storage minecraft:plane-datapack temporary.Pos

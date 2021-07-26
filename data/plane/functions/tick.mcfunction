@@ -25,7 +25,7 @@
 execute as @a[tag=plane-rider,nbt=!{RootVehicle:{Entity:{Tags:[plane-seat]}}}] run function plane:controll/plane-leave
 
 #飛行機のタグリセット
-tag @e[type=armor_stand,tag=plane-root] remove has-rider
+tag @e[tag=plane-root] remove has-rider
 
 #飛行機操作(搭乗時)
 execute as @a[nbt={RootVehicle:{Entity:{Tags:[plane-seat]}}}] at @s run function plane:controll/controll
@@ -34,7 +34,7 @@ execute as @a[nbt={RootVehicle:{Entity:{Tags:[plane-seat]}}}] at @s run function
 execute as @a[scores={vp.rightClick=1..},nbt={SelectedItem:{tag:{item-type:wrench}}},nbt=!{RootVehicle:{Entity:{Tags:[plane-seat]}}}] at @s run function plane:controll/controll-ground
 
 #飛行機移動、向き修正
-execute as @e[type=armor_stand,tag=plane-root] at @s run function plane:plane-manager
+execute as @e[tag=plane-root] at @s run function plane:plane-manager
 
 #位置処理がされなかった=rootがいなかったエンティティを削除
 kill @e[tag=plane,tag=!plane-root,tag=!position-processed,tag=!no-delete]

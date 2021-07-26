@@ -65,7 +65,7 @@ scoreboard players operation #resistance vp.input = @s vp.resistance
 scoreboard players operation #deaccelerate vp.input = @s vp.deaccelerate
 function plane:move/plane-move/set-base-deaccelerate
 scoreboard players operation #base-deaccelerate vp.reg1 = #base-deaccelerate vp.return
-#tellraw @p [{"score" : {"name":"#base-deaccelerate", "objective":"vp.reg1"}}]
+  #execute if entity @s[tag=has-dummy-rider] run tellraw @p [{"score" : {"name":"#speedY", "objective":"vp.input"}}]
 
 #### speed決定 ####
 #speed+#base-accelerate-#base-resistance-#base-deaccelerate
@@ -81,20 +81,20 @@ execute if score @s vp.speed > @s vp.max-speed run scoreboard players operation 
 scoreboard players operation #displacementX vp.reg1 = @s vp.speedX
 scoreboard players operation #displacementX vp.reg1 *= @s vp.speed
 scoreboard players operation #displacementX vp.reg1 /= #100 vp.Num
-execute store result storage plane-datapack temporary.Pos[0] double 0.0001 run scoreboard players operation @s vp.PosX += #displacementX vp.reg1
+execute store result storage minecraft:plane-datapack temporary.Pos[0] double 0.0001 run scoreboard players operation @s vp.PosX += #displacementX vp.reg1
 
 #y方向ベクトル×speedを座標に代入(失速の場合下降させる)
 scoreboard players operation #displacementY vp.reg1 = @s vp.speedY
 scoreboard players operation #displacementY vp.reg1 *= @s vp.speed
 scoreboard players operation #displacementY vp.reg1 /= #100 vp.Num
-execute as @s[tag=!stall] store result storage plane-datapack temporary.Pos[1] double 0.0001 run scoreboard players operation @s vp.PosY += #displacementY vp.reg1
-execute as @s[tag=stall] store result storage plane-datapack temporary.Pos[1] double 0.0001 run scoreboard players remove @s vp.PosY 1250
+execute as @s[tag=!stall] store result storage minecraft:plane-datapack temporary.Pos[1] double 0.0001 run scoreboard players operation @s vp.PosY += #displacementY vp.reg1
+execute as @s[tag=stall] store result storage minecraft:plane-datapack temporary.Pos[1] double 0.0001 run scoreboard players remove @s vp.PosY 1250
 
 #z方向ベクトル×speedを座標に代入
 scoreboard players operation #displacementZ vp.reg1 = @s vp.speedZ
 scoreboard players operation #displacementZ vp.reg1 *= @s vp.speed
 scoreboard players operation #displacementZ vp.reg1 /= #100 vp.Num
-execute store result storage plane-datapack temporary.Pos[2] double 0.0001 run scoreboard players operation @s vp.PosZ += #displacementZ vp.reg1
+execute store result storage minecraft:plane-datapack temporary.Pos[2] double 0.0001 run scoreboard players operation @s vp.PosZ += #displacementZ vp.reg1
 
 #作成した座標をPosに代入
 data modify entity @s Pos set from storage minecraft:plane-datapack temporary.Pos

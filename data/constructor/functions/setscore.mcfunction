@@ -122,5 +122,5 @@ scoreboard players set #-1000000 vp.Num -1000000
 #scoreboard players set #max max-entity 10
 
 
-scoreboard players set @e[tag=Trigonometric,limit=1,x=0,y=0,z=0,distance=..3] vp.input1 235
-execute as @e[tag=Trigonometric,limit=1,x=0,y=0,z=0,distance=..3] run function math:rand-init
+scoreboard players set @e[tag=Trigonometric,distance=..3,x=0,y=0,z=0,limit=1] vp.input1 235
+execute as @e[tag=Trigonometric,distance=..3,x=0,y=0,z=0,limit=1] run function math:rand-init

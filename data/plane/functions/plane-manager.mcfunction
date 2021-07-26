@@ -22,6 +22,9 @@ execute at @s as @e[tag=plane,tag=!plane-root,tag=!position-processed] if score 
 #ohmydat呼び出し
 execute as @s run function oh_my_dat:please
 
+#AI飛行機用function
+execute if entity @s[tag=has-dummy-rider] run function plane:controll/ai
+
 #移動、位置補正実行
 execute as @s[tag=!no-move] at @s run function plane:move/plane-move
 execute as @s at @s run function plane:position/position

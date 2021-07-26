@@ -21,12 +21,12 @@
     #declare score_holder #base-deaccelerate #現在の原則料
 
 #上を向いていた場合:deaccelerate*sin(pitch)減速
-execute if score #speedY vp.input matches 0.. run scoreboard players operation #base-deaccelerate vp.return = #deaccelerate vp.input
-execute if score #speedY vp.input matches 0.. run scoreboard players operation #base-deaccelerate vp.return *= #speedY vp.input
-execute if score #speedY vp.input matches 0.. run scoreboard players operation #base-deaccelerate vp.return /= #100 vp.Num
+execute if score #speedY vp.input matches 1.. run scoreboard players operation #base-deaccelerate vp.return = #deaccelerate vp.input
+execute if score #speedY vp.input matches 1.. run scoreboard players operation #base-deaccelerate vp.return *= #speedY vp.input
+execute if score #speedY vp.input matches 1.. run scoreboard players operation #base-deaccelerate vp.return /= #100 vp.Num
 
 #下を向いていた場合:slow fallingの重力加速度*sin^2(pitch)加速
-execute if score #speedY vp.input matches ..-1 run scoreboard players operation #base-deaccelerate vp.return = #100 vp.input
+execute if score #speedY vp.input matches ..-1 run scoreboard players operation #base-deaccelerate vp.return = #100 vp.Num
 execute if score #speedY vp.input matches ..-1 run scoreboard players operation #base-deaccelerate vp.return *= #speedY vp.input
 execute if score #speedY vp.input matches ..-1 run scoreboard players operation #base-deaccelerate vp.return *= #speedY vp.input
 execute if score #speedY vp.input matches ..-1 run scoreboard players operation #base-deaccelerate vp.return /= #-10000 vp.Num
