@@ -19,13 +19,14 @@
 #> private
 #   @private
     #declare tag no-delete #削除禁止飛行機パーツであることを示す
+    #declare score_holder #gtime #削除禁止飛行機パーツであることを示す
 
+#現在時刻取得
+execute store result score #gtime vp.reg1 run time query gametime
+scoreboard players operation #gtime vp.reg1 %= #20 vp.Num
 
 #プレイヤーのplaneid、rider、keyinputタグリセット アイテム削除
 execute as @a[tag=plane-rider,nbt=!{RootVehicle:{Entity:{Tags:[plane-seat]}}}] run function plane:controll/plane-leave
-
-#飛行機のタグリセット
-tag @e[tag=plane-root] remove has-rider
 
 #飛行機操作(搭乗時)
 execute as @a[nbt={RootVehicle:{Entity:{Tags:[plane-seat]}}}] at @s run function plane:controll/controll
@@ -37,11 +38,11 @@ execute as @a[scores={vp.rightClick=1..},nbt={SelectedItem:{tag:{item-type:wrenc
 execute as @e[tag=plane-root] at @s run function plane:plane-manager
 
 #位置処理がされなかった=rootがいなかったエンティティを削除
-kill @e[tag=plane,tag=!plane-root,tag=!position-processed,tag=!no-delete]
-tag @e[tag=position-processed] remove position-processed
+execute if score #gtime vp.reg1 matches 0 run kill @e[tag=plane,tag=!plane-root,tag=!position-processed,tag=!no-delete]
+execute if score #gtime vp.reg1 matches 0 run tag @e[tag=position-processed] remove position-processed
 
 #揮発性アイテムを削除
-execute at @a run kill @e[type=item,nbt={Item:{tag:{volatile:1}}},distance=..32]
+#execute at @a run kill @e[type=item,nbt={Item:{tag:{volatile:1}}},distance=..32]
 
 #スポナー使用時に飛行機召喚
-execute as @e[type=bat,tag=plane-spawner] run function plane:summon/spawner-manager
+execute at @a as @e[type=bat,tag=plane-spawner,distance=..10] run function plane:summon/spawner-manager

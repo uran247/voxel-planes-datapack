@@ -18,9 +18,9 @@
 
 tag @p[tag=plane-rider] add aim-viewer
 
-execute at @e[tag=plane-bomb,tag=plane,tag=target-parts,distance=..20,limit=1] rotated as 0-0-0-0-a run tp 0-0-0-0-4 ^ ^ ^200 ~ ~
+execute positioned as @e[tag=plane-bomb,tag=plane,tag=target-parts,distance=..20,limit=1] rotated as 0-0-0-0-a run tp 0-0-0-0-4 ^ ^ ^200 ~ ~
 #tellraw @p [{"nbt":"Pos[1]","entity":"0-0-0-0-4"}] 
-execute at 0-0-0-0-4 as @e[tag=plane-bomb,tag=plane,tag=target-parts,distance=..20,limit=1] run function plane:weapon/util/check-ground
+execute at 0-0-0-0-4 as @s run function plane:weapon/util/check-ground
 execute at 0-0-0-0-a run particle minecraft:dust 1 1 1 200 ~ ~2 ~ 5 0 0.01 0 10 force @p[tag=aim-viewer]
 execute at 0-0-0-0-a run particle minecraft:dust 1 1 1 200 ~ ~2 ~ 0.01 0 5 0 10 force @p[tag=aim-viewer]
 #tellraw @p [{"nbt":"Pos[1]","entity":"0-0-0-0-a"}] 

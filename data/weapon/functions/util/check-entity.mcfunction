@@ -25,7 +25,7 @@ tag @s add check-executer
 #実効者-0-0-0-0-4の直線上にいるエンティティにタグ付け
 tp 0-0-0-0-b @s
 
-execute positioned ^ ^ ^12.5 as @e[tag=!check-executer,distance=..13] positioned as @s positioned ^ ^ ^1000 facing entity 0-0-0-0-b feet positioned ^ ^ ^1000 positioned ~-0.5 ~-0.5 ~-0.5 if entity @s[dx=1,dy=1,dz=1] run tag @s add hit-on-line
+execute positioned ^ ^ ^10 as @e[tag=!check-executer,distance=..10] positioned as @s positioned ^ ^ ^1000 facing entity 0-0-0-0-b feet positioned ^ ^ ^1000 positioned ~-0.5 ~-0.5 ~-0.5 if entity @s[dx=1,dy=1,dz=1] run tag @s add hit-on-line
 
 #実効者と目印にタグ削除
 tag @s remove check-executer

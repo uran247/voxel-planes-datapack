@@ -28,8 +28,8 @@ execute store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon
 execute store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{data:{type:bomb}}].data.max-ammunition int 1 run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{data:{type:bomb}}].data.bombs
 
 #不要爆弾削除
-execute unless score #800kg vp.reg1 matches 1.. if entity @e[tag=target-parts,tag=800kg,tag=normal] run kill @e[tag=target-parts,tag=plane-bomb]
-execute if score #800kg vp.reg1 matches 1.. if entity @e[tag=target-parts,tag=250kg,tag=normal] run kill @e[tag=target-parts,tag=plane-bomb]
+execute unless score #800kg vp.reg1 matches 1.. if entity @e[tag=target-parts,tag=800kg,tag=normal,distance=..32] run kill @e[tag=target-parts,tag=plane-bomb]
+execute if score #800kg vp.reg1 matches 1.. if entity @e[tag=target-parts,tag=250kg,tag=normal,distance=..32] run kill @e[tag=target-parts,tag=plane-bomb]
 
 #ステータス変更
 #装備に応じて右記ステータス変更：最高速度　巡航速度　旋回力

@@ -13,7 +13,7 @@
     #declare tag bomb-init #初期化中の爆弾であることを示す
 
 #爆弾召喚
-summon armor_stand ~ ~ ~ {Tags:[weapon-init,plane,has-offset,has-model,plane-bomb,plane-parts,entity-nohit,bomb-init],NoGravity:1b,Invisible:1b,HandItems:[{id:"minecraft:diamond_sword",Count:1b,tag:{CustomModelData:0}},{}],Pose:{RightArm:[0f,0f,0f]},DisabledSlots:256}
+summon armor_stand ~ ~ ~ {Tags:[weapon-init,plane,has-offset,has-model,plane-bomb,plane-parts,entity-nohit,bomb-init,position-processed],NoGravity:1b,Invisible:1b,HandItems:[{id:"minecraft:diamond_sword",Count:1b,tag:{CustomModelData:0}},{}],Pose:{RightArm:[0f,0f,0f]},DisabledSlots:256}
 
 #データセット
 execute store result score @e[type=armor_stand,tag=bomb-init,distance=..1,limit=1] vp.offsetX run data get storage minecraft:plane-datapack temporary.weapon.offset[0] 1000

@@ -33,15 +33,16 @@ execute unless score #gunpod vp.reg1 matches 1.. run data modify storage oh_my_d
 execute if score #gunpod vp.reg1 matches 1.. run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list append from storage voxel-planes:weapon bf109g.additional.20mm
 
 #gunpod装着
-execute if score #gunpod vp.reg1 matches 1.. unless entity @e[type=armor_stand,tag=target-parts,tag=plane-gunpod] run summon armor_stand ~ ~ ~ {Tags:["plane-gunpod","bf109g",plane-init,plane,has-model,entity-nohit,target-parts,position-processed],NoGravity:1b,Invisible:1b,HandItems:[{id:"minecraft:diamond_sword",Count:1b,tag:{CustomModelData:143,Unbreakable:1b}},{}],Pose:{LeftArm:[0f,0f,0f],RightArm:[0f,0f,0f]},DisabledSlots:256}
-execute if score #gunpod vp.reg1 matches 1.. run scoreboard players operation @e[type=armor_stand,tag=plane-init,tag=plane-gunpod,distance=..1] vp.plane-id = @s vp.plane-id
+execute if score #gunpod vp.reg1 matches 1.. unless entity @e[type=armor_stand,tag=target-parts,tag=plane-gunpod,distance=..32] run summon armor_stand ~ ~ ~ {Tags:["plane-gunpod","bf109g",plane-init,plane,has-model,entity-nohit,target-parts,position-processed],NoGravity:1b,Invisible:1b,HandItems:[{id:"minecraft:diamond_sword",Count:1b,tag:{CustomModelData:143,Unbreakable:1b}},{}],Pose:{LeftArm:[0f,0f,0f],RightArm:[0f,0f,0f]},DisabledSlots:256}
 execute if score #gunpod vp.reg1 matches 1.. run scoreboard players set @e[type=armor_stand,tag=plane-init,tag=plane-gunpod,distance=..1] vp.weight 200
+execute if score #gunpod vp.reg1 matches 1.. run scoreboard players operation @e[type=armor_stand,tag=plane-init,tag=plane-gunpod,distance=..1] vp.plane-id = @s vp.plane-id
+execute if score #gunpod vp.reg1 matches 1.. as @e[type=armor_stand,tag=plane-init,tag=plane-gunpod,distance=..1] store result entity @s Attributes[{Name:"minecraft:generic.movement_speed"}].Base double 1 run scoreboard players get @s vp.plane-id
 execute if score #gunpod vp.reg1 matches 1.. run tag @e[type=armor_stand,tag=plane-init,tag=plane-gunpod,distance=..1] remove plane-init
 
 #装備済み爆弾/gunpod削除
-execute unless score #250kg vp.reg1 matches 1.. if entity @e[type=armor_stand,tag=target-parts,tag=250kg,tag=normal] run kill @e[tag=target-parts,tag=plane-bomb]
-execute unless score #aa-rocket vp.reg1 matches 1.. if entity @e[type=armor_stand,tag=target-parts,tag=plane-rocket] run kill @e[tag=target-parts,tag=plane-rocket]
-execute unless score #gunpod vp.reg1 matches 1.. if entity @e[type=armor_stand,tag=target-parts,tag=plane-gunpod] run kill @e[type=armor_stand,tag=target-parts,tag=plane-gunpod]
+execute unless score #250kg vp.reg1 matches 1.. if entity @e[type=armor_stand,tag=target-parts,tag=250kg,tag=normal,distance=..32] run kill @e[tag=target-parts,tag=plane-bomb]
+execute unless score #aa-rocket vp.reg1 matches 1.. if entity @e[type=armor_stand,tag=target-parts,tag=plane-rocket,distance=..32] run kill @e[tag=target-parts,tag=plane-rocket]
+execute unless score #gunpod vp.reg1 matches 1.. if entity @e[type=armor_stand,tag=target-parts,tag=plane-gunpod,distance=..32] run kill @e[type=armor_stand,tag=target-parts,tag=plane-gunpod]
 
 #ステータス変更
 #装備に応じて右記ステータス変更：最高速度　巡航速度　旋回力

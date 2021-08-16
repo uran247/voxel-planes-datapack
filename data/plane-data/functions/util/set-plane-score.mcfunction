@@ -47,15 +47,15 @@ execute store result score @s vp.roll-speed run data get storage voxel-planes:in
 execute store result score @s vp.landing-pitch run data get storage voxel-planes:input input.model-data.landing-pitch 100
 
 #モデル番号設定
-execute store result score @e[tag=plane-init,tag=plane-body,tag=model-changeable] vp.parking-cmd run data get storage voxel-planes:input input.model-data.body.parking-cmd
-execute store result score @e[tag=plane-init,tag=plane-body,tag=model-changeable] vp.rolling-cmd run data get storage voxel-planes:input input.model-data.body.rolling-cmd
-execute store result score @e[tag=plane-init,tag=plane-body,tag=model-changeable] vp.flying-cmd run data get storage voxel-planes:input input.model-data.body.flying-cmd
-execute store result score @e[tag=plane-init,tag=plane-rightwing,tag=model-changeable] vp.parking-cmd run data get storage voxel-planes:input input.model-data.rightwing.parking-cmd
-execute store result score @e[tag=plane-init,tag=plane-rightwing,tag=model-changeable] vp.rolling-cmd run data get storage voxel-planes:input input.model-data.rightwing.rolling-cmd
-execute store result score @e[tag=plane-init,tag=plane-rightwing,tag=model-changeable] vp.flying-cmd run data get storage voxel-planes:input input.model-data.rightwing.flying-cmd
-execute store result score @e[tag=plane-init,tag=plane-tail,tag=model-changeable] vp.parking-cmd run data get storage voxel-planes:input input.model-data.tail.parking-cmd
-execute store result score @e[tag=plane-init,tag=plane-tail,tag=model-changeable] vp.rolling-cmd run data get storage voxel-planes:input input.model-data.tail.rolling-cmd
-execute store result score @e[tag=plane-init,tag=plane-tail,tag=model-changeable] vp.flying-cmd run data get storage voxel-planes:input input.model-data.tail.flying-cmd
+execute store result score @e[tag=plane-init,tag=plane-body,tag=model-changeable,distance=..1] vp.parking-cmd run data get storage voxel-planes:input input.model-data.body.parking-cmd
+execute store result score @e[tag=plane-init,tag=plane-body,tag=model-changeable,distance=..1] vp.rolling-cmd run data get storage voxel-planes:input input.model-data.body.rolling-cmd
+execute store result score @e[tag=plane-init,tag=plane-body,tag=model-changeable,distance=..1] vp.flying-cmd run data get storage voxel-planes:input input.model-data.body.flying-cmd
+execute store result score @e[tag=plane-init,tag=plane-rightwing,tag=model-changeable,distance=..1] vp.parking-cmd run data get storage voxel-planes:input input.model-data.rightwing.parking-cmd
+execute store result score @e[tag=plane-init,tag=plane-rightwing,tag=model-changeable,distance=..1] vp.rolling-cmd run data get storage voxel-planes:input input.model-data.rightwing.rolling-cmd
+execute store result score @e[tag=plane-init,tag=plane-rightwing,tag=model-changeable,distance=..1] vp.flying-cmd run data get storage voxel-planes:input input.model-data.rightwing.flying-cmd
+execute store result score @e[tag=plane-init,tag=plane-tail,tag=model-changeable,distance=..1] vp.parking-cmd run data get storage voxel-planes:input input.model-data.tail.parking-cmd
+execute store result score @e[tag=plane-init,tag=plane-tail,tag=model-changeable,distance=..1] vp.rolling-cmd run data get storage voxel-planes:input input.model-data.tail.rolling-cmd
+execute store result score @e[tag=plane-init,tag=plane-tail,tag=model-changeable,distance=..1] vp.flying-cmd run data get storage voxel-planes:input input.model-data.tail.flying-cmd
 
 #エンジン数、馬力、推力設定
 execute store result score @s vp.max-engine run data get storage voxel-planes:input input.flight-model.engine.number
@@ -66,7 +66,7 @@ execute store result score @s vp.thrust run data get storage voxel-planes:input 
 execute store result score @s vp.weight run data get storage voxel-planes:input input.flight-model.weight
 
 #スピード、角度の初期スコア、データ設定
-execute as @e[tag=plane-init,tag=model-changeable] store result entity @s HandItems[0].tag.CustomModelData int 1 run scoreboard players get @s vp.parking-cmd
+execute as @e[tag=plane-init,tag=model-changeable,distance=..1] store result entity @s HandItems[0].tag.CustomModelData int 1 run scoreboard players get @s vp.parking-cmd
 scoreboard players operation @s vp.AngX = @s vp.landing-pitch
 scoreboard players set @s vp.AngY 0
 scoreboard players set @s vp.AngZ 0
@@ -75,7 +75,7 @@ scoreboard players set @s vp.rolling 0
 scoreboard players set @s vp.speed 0
 
 #召喚座標スコア設定
-data modify storage minecraft:plane-datapack temporary.Pos set from entity @e[tag=plane-init,tag=plane-root,limit=1] Pos
-execute store result score @e[tag=plane-init,tag=plane-root,limit=1] vp.PosX run data get storage minecraft:plane-datapack temporary.Pos[0] 10000
-execute store result score @e[tag=plane-init,tag=plane-root,limit=1] vp.PosY run data get storage minecraft:plane-datapack temporary.Pos[1] 10000
-execute store result score @e[tag=plane-init,tag=plane-root,limit=1] vp.PosZ run data get storage minecraft:plane-datapack temporary.Pos[2] 10000
+data modify storage minecraft:plane-datapack temporary.Pos set from entity @e[tag=plane-init,tag=plane-root,distance=..1,limit=1] Pos
+execute store result score @e[tag=plane-init,tag=plane-root,distance=..1,limit=1] vp.PosX run data get storage minecraft:plane-datapack temporary.Pos[0] 10000
+execute store result score @e[tag=plane-init,tag=plane-root,distance=..1,limit=1] vp.PosY run data get storage minecraft:plane-datapack temporary.Pos[1] 10000
+execute store result score @e[tag=plane-init,tag=plane-root,distance=..1,limit=1] vp.PosZ run data get storage minecraft:plane-datapack temporary.Pos[2] 10000

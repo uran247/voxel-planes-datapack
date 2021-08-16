@@ -29,14 +29,14 @@ execute if score #hit-flag vp.reg1 matches 1 run tag 0-0-0-0-9 add hit-he
 
 #移動予定先までの間にエンティティがいるか判定
 execute as @s at @s run function weapon:util/check-entity
-execute if entity @e[tag=hit-on-line,tag=!he-gunner,tag=!entity-nohit] run scoreboard players set #hit-flag vp.reg1 2
-execute if score #hit-flag vp.reg1 matches 2 run tag @e[tag=hit-on-line,tag=!he-gunner,tag=!entity-nohit] add hit-he
+execute if entity @e[tag=hit-on-line,tag=!he-gunner,tag=!entity-nohit,distance=..20] run scoreboard players set #hit-flag vp.reg1 2
+execute if score #hit-flag vp.reg1 matches 2 run tag @e[tag=hit-on-line,tag=!he-gunner,tag=!entity-nohit,distance=..20] add hit-he
 
 #命中していない場合移動予定先へ移動
 execute if score #hit-flag vp.reg1 matches 0 at 0-0-0-0-4 run tp @s ~ ~ ~
 
 #命中してた場合命中してたところに移動
-execute if score #hit-flag vp.reg1 matches 1.. at @e[tag=hit-he,limit=1,sort=nearest] run tp @s ~ ~ ~
+execute if score #hit-flag vp.reg1 matches 1.. at @e[tag=hit-he,distance=..26,sort=nearest,limit=1] run tp @s ~ ~ ~
 
 #y方向の速度更新
 scoreboard players remove @s vp.speedY 5
@@ -51,9 +51,8 @@ execute if score #hit-flag vp.reg1 matches 1.. run kill @s
 
 #終了処理
 tag @s remove he-executer
-tag @e[tag=he-executer] remove he-executer
-tag @e[tag=hit-on-line] remove hit-on-line
-tag @e[tag=hit-he] remove hit-he
+tag @e[tag=hit-on-line,distance=..21] remove hit-on-line
+tag @e[tag=hit-he,distance=..26] remove hit-he
 
 #エンティティ返却
 tp 0-0-0-0-4 0 1 0

@@ -92,6 +92,6 @@ scoreboard players remove #ammunition vp.reg1 1
 execute store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data.current-ammunition int 1 run scoreboard players get #ammunition vp.reg1
 
 #終了処理
-tag @e[tag=gun-init] remove gun-init
+tag @e[tag=gun-init,distance=..32] remove gun-init
 
 

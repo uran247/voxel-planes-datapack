@@ -28,6 +28,7 @@ execute as @s[tag=spitfiremkix] at @s run function plane-data:spitfiremkix/spitf
 execute as @s[tag=fireflymkv] at @s run function plane-data:fireflymkv/fireflymkv-2-item
 execute as @s[tag=pe2] at @s run function plane-data:pe-2/pe2-2-item
 execute as @s[tag=bf109g] at @s run function plane-data:bf109g/bf109g-2-item
+execute as @s[tag=ju87b] at @s run function plane-data:ju87b/ju87b-2-item
 
 #ロバチェスト内のアイテム放出
 data merge block 0 1 0 {Items:[]}

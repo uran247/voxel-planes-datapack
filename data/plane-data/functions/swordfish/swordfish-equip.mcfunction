@@ -31,8 +31,8 @@ execute if score #torpedo vp.reg1 matches 1.. run execute store result storage o
 execute if score #torpedo vp.reg1 matches 1.. run execute store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{data:{type:torpedo}}].data.max-ammunition int 1 run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{data:{type:torpedo}}].data.torpedos
 
 #不要爆弾削除
-execute unless score #torpedo vp.reg1 matches 1.. if entity @e[tag=target-parts,tag=plane-torpedo,tag=normal] run kill @e[tag=target-parts,tag=plane-torpedo]
-execute if score #torpedo vp.reg1 matches 1.. if entity @e[tag=target-parts,tag=plane-bomb] run kill @e[tag=target-parts,tag=plane-bomb]
+execute unless score #torpedo vp.reg1 matches 1.. if entity @e[tag=target-parts,tag=plane-torpedo,tag=normal,distance=..32] run kill @e[tag=target-parts,tag=plane-torpedo]
+execute if score #torpedo vp.reg1 matches 1.. if entity @e[tag=target-parts,tag=plane-bomb,distance=..32] run kill @e[tag=target-parts,tag=plane-bomb]
 
 #ステータス変更
 #装備に応じて右記ステータス変更：最高速度　巡航速度　旋回力

@@ -30,3 +30,4 @@ execute if entity @s[tag=spitfiremkix] run function plane-data:spitfiremkix/spit
 execute if entity @s[tag=fireflymkv] run function plane-data:fireflymkv/fireflymkv-equip
 execute if entity @s[tag=pe2] run function plane-data:pe-2/pe2-equip
 execute if entity @s[tag=bf109g] run function plane-data:bf109g/bf109g-equip
+#execute if entity @s[tag=ju87b] run function plane-data:ju87b/ju87b-equip

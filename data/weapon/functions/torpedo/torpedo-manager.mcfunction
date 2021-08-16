@@ -51,7 +51,7 @@ tp @s ~ ~ ~ facing entity @e[tag=block-checker,distance=..26,sort=nearest,limit=
 #移動予定先までの間にブロックがあるか判定
 execute as @s at @e[tag=block-checker,distance=..26,sort=nearest,limit=1] anchored eyes run function weapon:torpedo/check-block-torpedo
 execute unless score #x vp.return matches 50 unless score #y vp.return matches 100 unless score #z vp.return matches 50 run scoreboard players set #hit-flag vp.reg1 1
-execute if score #hit-flag vp.reg1 matches 1 run tag 0-0-0-0-9 add hit-weapon
+execute if score #hit-flag vp.reg1 matches 1 run tag @e[tag=block-checker,distance=..26,sort=nearest,limit=1] add hit-weapon
 
 #移動予定先までの間にエンティティがいるか判定
 function weapon:util/check-entity
@@ -64,7 +64,7 @@ execute if score #hit-flag vp.reg1 matches 2 unless entity @e[tag=hit-weapon,dis
 execute if score #hit-flag vp.reg1 matches 0 at @e[tag=block-checker,distance=..26,sort=nearest,limit=1] run tp @s ~ ~ ~
 
 #命中してた場合命中してたところに移動
-execute if score #hit-flag vp.reg1 matches 1.. at @e[tag=hit-weapon,sort=nearest,limit=1] run tp @s ~ ~ ~
+execute if score #hit-flag vp.reg1 matches 1.. at @e[tag=hit-weapon,distance=..26,sort=nearest,limit=1] run tp @s ~ ~ ~
 
 #y方向の速度更新
 scoreboard players remove @s[tag=!sailing] vp.speedY 1
@@ -91,11 +91,10 @@ scoreboard players remove @s vp.age 1
 
 
 #終了処理
-tag @e[tag=hit-weapon,distance=..20] remove hit-weapon
+tag @e[tag=hit-weapon,distance=..26] remove hit-weapon
 tag @s remove torpedo-move-executer
-tag @e[tag=hit-on-line] remove hit-on-line
+tag @e[tag=hit-on-line,distance=..21] remove hit-on-line
 kill @s[scores={vp.age=0}]
 
 #エンティティ返却
-tp @e[tag=block-checker] 0.0 1.0 0.0
-tp 0-0-0-0-9 0 1 0
+tp @e[tag=block-checker,distance=..26] 0.0 1.0 0.0

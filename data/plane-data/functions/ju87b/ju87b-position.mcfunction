@@ -1,4 +1,4 @@
-#> plane-data:d3a/d3a-position
+#> plane-data:ju87b/ju87b-position
 #
 # plane-seatの位置を調整する
 #
@@ -13,6 +13,6 @@
     #declare score_holder #plane-id #実行者のplane-id
 
 #seatの位置修正
-execute at @s[tag=has-rider] run tp @e[tag=plane-seat,tag=target-parts,distance=..32] ^ ^ ^-3.7
-execute at @s[tag=!has-rider] run tp @e[tag=plane-seat,tag=target-parts,distance=..32] ^-0.5 ^-0.4 ^1
+execute at @s[tag=has-rider] run tp @e[tag=plane-seat,tag=target-parts,distance=..32] ^ ^0.3 ^-2.7 ~0.01 ~
+execute at @s[tag=!has-rider] run tp @e[tag=plane-seat,tag=target-parts,distance=..32] ^ ^-0.2 ^3 ~0.01 ~
 

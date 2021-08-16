@@ -28,8 +28,8 @@ execute if score #ag-rocket vp.reg1 matches 1.. run data modify storage oh_my_da
 execute if score #ag-rocket vp.reg1 matches 1.. run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{data:{type:rocket}}].data.rockets append from storage voxel-planes:weapon seafuryfb11.additional.ag-rocket[]
 
 #装備済み爆弾削除
-execute unless score #500kg vp.reg1 matches 1.. if entity @e[tag=target-parts,tag=1000lb,tag=normal] run kill @e[tag=target-parts,tag=plane-bomb]
-execute unless score #ag-rocket vp.reg1 matches 1.. if entity @e[tag=target-parts,tag=plane-rocket] run kill @e[tag=target-parts,tag=plane-rocket]
+execute unless score #500kg vp.reg1 matches 1.. if entity @e[tag=target-parts,tag=1000lb,tag=normal,distance=..32] run kill @e[tag=target-parts,tag=plane-bomb]
+execute unless score #ag-rocket vp.reg1 matches 1.. if entity @e[tag=target-parts,tag=plane-rocket,distance=..32] run kill @e[tag=target-parts,tag=plane-rocket]
 
 #ステータス変更
 #装備に応じて右記ステータス変更：最高速度　巡航速度　旋回力

@@ -27,4 +27,4 @@ kill @e[type=armor_stand,tag=Trigonometric]
 kill @e[type=armor_stand,tag=Trigonometric2]
 summon minecraft:marker -0.5 0 -0.5 {Tags:[Trigonometric],UUID:[I;0,0,0,32]}
 summon minecraft:marker 0.0 0.0 0.0 {Tags:[Trigonometric2],UUID:[I;0,0,0,33]}
-setblock 0.0 1.0 0.0 shulker_box
+setblock 0 1 0 shulker_box

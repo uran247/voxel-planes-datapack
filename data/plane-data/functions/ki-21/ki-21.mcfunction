@@ -36,10 +36,10 @@ summon armor_stand ~ ~ ~ {Tags:["ki21",plane-init,plane,has-offset,plane-hitbox,
 summon armor_stand ~ ~ ~ {Tags:["ki21",plane-init,plane,has-offset,plane-hitbox,cockpit,offset-base],NoGravity:1b,Invisible:1b,Marker:1b,Health:80f,Attributes:[{Name:"generic.max_health",Base:80d}]}
 
 #ID付与
-execute as @e[tag=plane-init,tag=plane-root,limit=1] at @s run function plane:summon/set-plane-id
+execute as @e[tag=plane-init,tag=plane-root,distance=..1,limit=1] at @s run function plane:summon/set-plane-id
 
 #ohmydat呼び出し
-execute as @e[tag=plane-init,tag=plane-root] run function oh_my_dat:please
+execute as @e[tag=plane-init,tag=plane-root,distance=..1] run function oh_my_dat:please
 
 #飛行機データのストレージ設定
 data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].plane-data set from storage voxel-planes:plane ki21.plane-data
@@ -47,10 +47,10 @@ data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].plane-data set 
 #飛行スコアセット
 data remove storage voxel-planes:input input
 data modify storage voxel-planes:input input set from storage voxel-planes:plane ki21.plane-data
-execute as @e[tag=plane-init,tag=plane-root] run function plane-data:util/set-plane-score
-execute as @e[tag=plane-init,tag=plane-hitbox] run function plane-data:util/set-hitbox-data
-execute as @e[tag=plane-init,tag=has-model,tag=has-offset] run function plane-data:util/set-model-offset
-execute as @e[type=donkey,tag=plane-init] run function plane-data:util/set-plane-maxhp
+execute as @e[tag=plane-init,tag=plane-root,distance=..1] run function plane-data:util/set-plane-score
+execute as @e[tag=plane-init,tag=plane-hitbox,distance=..1] run function plane-data:util/set-hitbox-data
+execute as @e[tag=plane-init,tag=has-model,tag=has-offset,distance=..1] run function plane-data:util/set-model-offset
+execute as @e[type=donkey,tag=plane-init,distance=..1] run function plane-data:util/set-plane-maxhp
 
 #武器データセット
 data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon set value {current-weapon-index:0}
@@ -61,5 +61,5 @@ data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-l
 schedule function plane:summon/util/delay-rotation 2
 
 #処理終了
-tag @e[tag=plane-init] remove plane-init
+tag @e[tag=plane-init,distance=..1] remove plane-init
 

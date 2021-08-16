@@ -18,8 +18,8 @@ scoreboard players set @s vp.weapon-types 2
 
 #装備済み爆弾削除
 scoreboard players set #kill-weapon vp.reg1 0
-execute if entity @s[tag=!250kg-normal] if entity @e[tag=target-parts,tag=250kg,tag=bomb-normal] run scoreboard players set #kill-weapon vp.reg1 1
-execute if score #kill-weapon vp.reg1 matches 1.. run kill @e[tag=target-parts,tag=plane-bomb]
+execute if entity @s[tag=!250kg-normal] if entity @e[tag=target-parts,tag=250kg,tag=bomb-normal,distance=..32] run scoreboard players set #kill-weapon vp.reg1 1
+execute if score #kill-weapon vp.reg1 matches 1.. run kill @e[tag=target-parts,tag=plane-bomb,distance=..32]
 
 #弾薬リセット
 
