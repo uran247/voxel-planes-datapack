@@ -48,15 +48,17 @@ execute at @s[tag=n1k2-spawner] as @p run function plane-data:n1k2/n1k2
 execute at @s[tag=a6m5-spawner] as @p run function plane-data:a6m5/a6m5
 execute at @s[tag=ki49-spawner] as @p run function plane-data:ki-49/ki-49
 execute at @s[tag=ki61-spawner] as @p run function plane-data:ki-61/ki-61
-execute at @s[tag=re2005-spawner] as @p run function plane-data:re2005/re2005
+#execute at @s[tag=re2005-spawner] as @p run function plane-data:re2005/re2005
 execute at @s[tag=f4u1-spawner] as @p run function plane-data:f4u-1/f4u1
 execute at @s[tag=fw190d9-spawner] as @p run function plane-data:fw190d-9/fw190d9
 execute at @s[tag=seafuryfb11-spawner] as @p run function plane-data:seafuryfb11/seafuryfb11
-execute at @s[tag=me262a1a-spawner] as @p run function plane-data:me262a-1a/me262a1a
+#execute at @s[tag=me262a1a-spawner] as @p run function plane-data:me262a-1a/me262a1a
 execute at @s[tag=swordfish-spawner] as @p run function plane-data:swordfish/swordfish
 execute at @s[tag=spitfiremkix-spawner] as @p run function plane-data:spitfiremkix/spitfiremkix
 execute at @s[tag=fireflymkv-spawner] as @p run function plane-data:fireflymkv/fireflymkv
 execute at @s[tag=pe2-spawner] as @p run function plane-data:pe-2/pe-2
 execute at @s[tag=bf109g-spawner] as @p run function plane-data:bf109g/bf109g
 execute at @s[tag=ju87b-spawner] as @p run function plane-data:ju87b/ju87b
+execute at @s[tag=p38l-spawner] as @p run function plane-data:p-38l/p38l
+
 kill @s

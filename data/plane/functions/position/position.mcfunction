@@ -62,6 +62,7 @@ execute at @s[tag=fireflymkv] run function plane-data:fireflymkv/fireflymkv-posi
 execute at @s[tag=pe2] run function plane-data:pe-2/pe-2-position
 execute at @s[tag=bf109g] run function plane-data:bf109g/bf109g-position
 execute at @s[tag=ju87b] run function plane-data:ju87b/ju87b-position
+execute at @s[tag=p38l] run function plane-data:p-38l/p38l-position
 
 #execute as @s[tag=j100b] run function plane:position/j-100b-position
 
