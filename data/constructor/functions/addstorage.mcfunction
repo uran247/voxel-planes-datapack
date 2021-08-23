@@ -18,7 +18,7 @@ data merge storage minecraft:plane-datapack {temporary:{Pos:[0.0d,0.0d,0.0d]},It
 data merge storage minecraft:plane-datapack-weapon {gun-data:[{plane-id:0,Pos:[0.0,0.0,0.0],speed:[0.0,0.0,0.0]}]}
 
 #data version指定
-execute store success score #is-different-data vp.reg1 run data modify storage minecraft:plane-datapack data-version set value "0.2.1.20210818.2"
+execute store success score #is-different-data vp.reg1 run data modify storage minecraft:plane-datapack data-version set value "0.2.1.20210824.2"
 
 #航空機個別ストレージ作成
 execute if score #is-different-data vp.reg1 matches 1 run function plane-data:a5m/a5m-storage
@@ -44,6 +44,7 @@ execute if score #is-different-data vp.reg1 matches 1 run function plane-data:pe
 execute if score #is-different-data vp.reg1 matches 1 run function plane-data:bf109g/bf109g-storage
 execute if score #is-different-data vp.reg1 matches 1 run function plane-data:ju87b/ju87b-storage
 execute if score #is-different-data vp.reg1 matches 1 run function plane-data:p-38l/p38l-storage
+execute if score #is-different-data vp.reg1 matches 1 run function plane-data:me262a-1a/me262a1a-storage
 
 
 execute if score #is-different-data vp.reg1 matches 1 run say "storage data renewed"

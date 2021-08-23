@@ -46,3 +46,4 @@ execute if score #gtime vp.reg1 matches 0 run tag @e[tag=position-processed] rem
 
 #スポナー使用時に飛行機召喚
 execute at @a as @e[type=bat,tag=plane-spawner,distance=..10] run function plane:summon/spawner-manager
+
