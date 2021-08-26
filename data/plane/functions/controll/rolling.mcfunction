@@ -32,11 +32,12 @@ execute if entity @s[scores={vp.key-storoke=8}] as @e[tag=controll-target,distan
 execute if entity @s[scores={vp.key-storoke=4..6}] as @e[tag=controll-target,distance=..1,limit=1] run scoreboard players remove @s[scores={vp.throttle=1..}] vp.throttle 1
 
 #稼働エンジン数に応じてスロットル減衰 スロットル×稼働エンジン数/最大エンジン数
-execute as @e[tag=controll-target,distance=..1,limit=1] run scoreboard players operation @s vp.throttle *= @s vp.engine
-execute as @e[tag=controll-target,distance=..1,limit=1] run scoreboard players operation @s vp.throttle /= @s vp.max-engine
+#execute as @e[tag=controll-target,distance=..1,limit=1] run scoreboard players operation @s vp.throttle *= @s vp.engine
+#execute as @e[tag=controll-target,distance=..1,limit=1] run scoreboard players operation @s vp.throttle /= @s vp.max-engine
 
 #墜落してた場合スロットル0
 scoreboard players set @e[tag=controll-target,tag=destroyed,distance=..1,limit=1] vp.throttle 0
+execute as @e[tag=controll-target,tag=destroyed,distance=..1,limit=1] run say 1
 
 #プレイヤーがどれくらい右を向いているか左を向いているか取得(0未満なら左、0以上なら右)
 execute store result score #source-rot vp.input run data get entity @s Rotation[0] 100
@@ -46,3 +47,5 @@ execute if entity @s[tag=!overlook] run scoreboard players operation @e[tag=cont
 
 #周囲見渡しタグ削除
 tag @s[tag=overlook] remove overlook
+
+#tellraw @p [{"score" : {"name":"@e[tag=controll-target,distance=..1,limit=1]", "objective":"vp.throttle"}}]
