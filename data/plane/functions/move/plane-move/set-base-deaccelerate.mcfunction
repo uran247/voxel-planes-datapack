@@ -31,5 +31,5 @@ execute if score #speedY vp.input matches ..-1 run scoreboard players operation 
 execute if score #speedY vp.input matches ..-1 run scoreboard players operation #base-deaccelerate vp.return *= #speedY vp.input
 execute if score #speedY vp.input matches ..-1 run scoreboard players operation #base-deaccelerate vp.return /= #-10000 vp.Num
 
-#tellraw @p [{"score" : {"name":"#speedY", "objective":"input"}}]
-#tellraw @p [{"score" : {"name":"#base-deaccelerate", "objective":"return"}}]
+    #tellraw @p [{"score" : {"name":"#speedY", "objective":"input"}}]
+    #tellraw @p [{"score" : {"name":"#base-deaccelerate", "objective":"vp.return"}}]

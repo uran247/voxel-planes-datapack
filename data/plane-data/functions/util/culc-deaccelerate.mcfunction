@@ -18,6 +18,7 @@
     #declare score_holder #max-speed
     #declare score_holder #climb-rate
     #declare score_holder #engine-number
+    #declare score_holder #jet-accelerate
 
 #巡航速度での加速度計算
 execute store result score #weight vp.reg1 run data get storage voxel-planes:input input.flight-model.weight
@@ -30,6 +31,12 @@ scoreboard players operation #deaccelerate vp.return /= #weight vp.reg1
 scoreboard players operation #horse-power vp.reg1 *= #engine-number vp.reg1
 scoreboard players operation #deaccelerate vp.return *= #horse-power vp.reg1
 scoreboard players operation #deaccelerate vp.return /= #cruise-speed vp.reg1 
+
+scoreboard players set #jet-accelerate vp.reg1 245
+scoreboard players operation #jet-accelerate vp.reg1 *= #thrust vp.input
+scoreboard players operation #jet-accelerate vp.reg1 /= #weight vp.input
+
+scoreboard players operation #deaccelerate vp.return += #jet-accelerate vp.reg1 
 
 #巡航速度での空気抵抗計算
 execute store result score #resistance vp.reg1 run data get storage voxel-planes:input input.resistance 1
