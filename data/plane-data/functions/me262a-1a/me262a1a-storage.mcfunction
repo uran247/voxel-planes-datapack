@@ -18,7 +18,7 @@ data modify storage voxel-planes:plane me262a1a.plane-data.model-data.body set v
 data modify storage voxel-planes:plane me262a1a.plane-data.model-data.landing-pitch set value 0
 data modify storage voxel-planes:plane me262a1a.plane-data.hp set value {engine:100d,body:110d,aileron:90d,elevetor:70d,radder:70d}
 data modify storage voxel-planes:plane me262a1a.plane-data.hitbox set value {}
-data modify storage voxel-planes:plane me262a1a.plane-data.hitbox merge value {engine:{offset:[0d,0d,2.7d]}}
+data modify storage voxel-planes:plane me262a1a.plane-data.hitbox merge value {engine-r:{offset:[-2.6d,0.25d,6.3d]},engine-l:{offset:[2.6d,0.25d,6.3d]}}
 data modify storage voxel-planes:plane me262a1a.plane-data.hitbox merge value {aileron-r:{offset:[-3.2d,-0.3d,1.1d]},aileron-l:{offset:[3.2d,-0.3d,1.1d]}}
 data modify storage voxel-planes:plane me262a1a.plane-data.hitbox merge value {elevator-r:{offset:[-1.3d,0.1d,-4d]},elevator-l:{offset:[1.3d,0.1d,-4d]}}
 data modify storage voxel-planes:plane me262a1a.plane-data.hitbox merge value {radder:{offset:[0d,0.8d,-4.2d]}}

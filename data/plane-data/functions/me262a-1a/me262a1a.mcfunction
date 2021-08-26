@@ -22,7 +22,8 @@ summon armor_stand ~ ~ ~ {Tags:[me262a1a,plane-init,plane,has-model,plane-parts,
 
 #hitbox召喚
 summon armor_stand ~ ~ ~ {Tags:["me262a1a",plane-init,plane,plane-hitbox,body,offset-base],NoGravity:1b,Invisible:1b,Marker:1b,Health:50f,Attributes:[{Name:"generic.max_health",Base:50d}]}
-summon armor_stand ~ ~ ~ {Tags:["me262a1a",plane-init,has-offset,plane,plane-hitbox,engine,offset-base],NoGravity:1b,Invisible:1b,Marker:1b,Health:50f,Attributes:[{Name:"generic.max_health",Base:50d}]}
+summon armor_stand ~ ~ ~ {Tags:["me262a1a",plane-init,has-offset,plane,plane-hitbox,engine-r,engine,offset-base],NoGravity:1b,Invisible:1b,Marker:1b,Health:60f,Attributes:[{Name:"generic.max_health",Base:60d}]}
+summon armor_stand ~ ~ ~ {Tags:["me262a1a",plane-init,has-offset,plane,plane-hitbox,engine-l,engine,offset-base],NoGravity:1b,Invisible:1b,Marker:1b,Health:60f,Attributes:[{Name:"generic.max_health",Base:60d}]}
 summon armor_stand ~ ~ ~ {Tags:["me262a1a",plane-init,has-offset,plane,plane-hitbox,aileron-r,aileron,offset-base],NoGravity:1b,Invisible:1b,Marker:1b,Health:50f,Attributes:[{Name:"generic.max_health",Base:50d}]}
 summon armor_stand ~ ~ ~ {Tags:["me262a1a",plane-init,has-offset,plane,plane-hitbox,aileron-l,aileron,offset-base],NoGravity:1b,Invisible:1b,Marker:1b,Health:50f,Attributes:[{Name:"generic.max_health",Base:50d}]}
 summon armor_stand ~ ~ ~ {Tags:["me262a1a",plane-init,has-offset,plane,plane-hitbox,elevator-r,elevetor,offset-base],NoGravity:1b,Invisible:1b,Marker:1b,Health:40f,Attributes:[{Name:"generic.max_health",Base:40d}]}
@@ -49,8 +50,7 @@ execute as @e[type=donkey,tag=plane-init,distance=..1] run function plane-data:u
 #武器データセット
 data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon set value {current-weapon-index:0}
 data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list set value []
-data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list append from storage voxel-planes:weapon me262a1a.base.7p7mm
-data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list append from storage voxel-planes:weapon me262a1a.base.bomb
+data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list append from storage voxel-planes:weapon me262a1a.base.30mm
 
 #プレイヤーと同じAngYにする
 schedule function plane:summon/util/delay-rotation 2
