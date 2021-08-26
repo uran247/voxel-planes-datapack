@@ -30,6 +30,8 @@ scoreboard players operation #speed vp.input = @s vp.cruise-speed
 scoreboard players operation #speed vp.input /= #2 vp.Num
 scoreboard players operation #horse-power vp.input = @s vp.horse-power
 scoreboard players operation #horse-power vp.input *= @s vp.engine
+scoreboard players operation #thrust vp.input = @s vp.thrust
+scoreboard players operation #thrust vp.input *= @s vp.engine
 scoreboard players operation #weight vp.input = @s vp.weight
 scoreboard players operation #weight vp.input += @s vp.add-weight 
 scoreboard players operation #throttle vp.input = @s vp.throttle
@@ -78,14 +80,15 @@ execute as @s[scores={vp.throttle=11..}] if score @s vp.takeoff-speed < @s vp.sp
 function plane:move/plane-move/rolling/change-plpr-model
 
 #音
-scoreboard players set @s[scores={vp.sound=33..}] vp.sound 0
-execute if entity @s[scores={vp.sound=0,vp.speed=1..}] at @s run playsound minecraft:plane.engine.recipro-rolling ambient @a ~ ~ ~ 2 1 0
-scoreboard players operation @s vp.reg1 = #rand vp.rand
-scoreboard players operation @s vp.reg1 %= #3 vp.Num
-scoreboard players operation @s vp.sound += @s vp.reg1
+scoreboard players set @s[scores={vp.sound=39..}] vp.sound 0
+execute if entity @s[scores={vp.sound=1,vp.speed=1..}] at @s if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].plane-data.flight-model.engine{type:recipro} run playsound minecraft:plane.engine.recipro-rolling ambient @a ~ ~ ~ 2 1 0
+execute if entity @s[scores={vp.sound=1,vp.speed=1..}] at @s if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].plane-data.flight-model.engine{type:jet} run playsound minecraft:plane.engine.jet-rolling ambient @a ~ ~ ~ 2 1 0
 scoreboard players add @s vp.sound 1
 #speedが1になったらエンジン始動音を鳴らす
 function plane:move/plane-move/rolling/engine-start-sound
+
+#
+execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].plane-data.flight-model.engine{type:recipro}
 
 #speedが0なら音停止
 execute if entity @s[scores={vp.speed=..0}] at @s run stopsound @a[distance=..10] * minecraft:plane.engine.recipro-rolling

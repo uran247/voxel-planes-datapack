@@ -19,6 +19,7 @@
     #declare score_holder #energy-loss #エネルギー減少係数を示す
     #declare score_holder #ang-z #ロール角を示す
     #declare score_holder #horse-power #エンジン馬力を示す
+    #declare score_holder #thrust #推力を示す
     #declare score_holder #weight #機体重量を示す
 
 
@@ -42,6 +43,8 @@ scoreboard players operation #speed vp.input = @s vp.speed
 execute if score #speed vp.input < #half-cruise-speed vp.reg1 run scoreboard players operation #speed vp.input = #half-cruise-speed vp.reg1 
 scoreboard players operation #horse-power vp.input = @s vp.horse-power
 scoreboard players operation #horse-power vp.input *= @s vp.engine
+scoreboard players operation #thrust vp.input = @s vp.thrust
+scoreboard players operation #thrust vp.input *= @s vp.engine
 scoreboard players operation #weight vp.input = @s vp.weight
 scoreboard players operation #weight vp.input += @s vp.add-weight 
 scoreboard players operation #throttle vp.input = @s vp.throttle
@@ -65,13 +68,14 @@ scoreboard players operation #resistance vp.input = @s vp.resistance
 scoreboard players operation #deaccelerate vp.input = @s vp.deaccelerate
 function plane:move/plane-move/set-base-deaccelerate
 scoreboard players operation #base-deaccelerate vp.reg1 = #base-deaccelerate vp.return
-  #execute if entity @s[tag=has-dummy-rider] run tellraw @p [{"score" : {"name":"#speedY", "objective":"vp.input"}}]
+  #execute run tellraw @p [{"score" : {"name":"#speedY", "objective":"vp.input"}}]
 
 #### speed決定 ####
 #speed+#base-accelerate-#base-resistance-#base-deaccelerate
 scoreboard players operation @s vp.speed += #base-accelerate vp.reg1
 scoreboard players operation @s vp.speed -= #base-resistance vp.reg1
 scoreboard players operation @s vp.speed -= #base-deaccelerate vp.reg1
+  #execute run tellraw @p [{"score" : {"name":"#base-accelerate", "objective":"vp.reg1"}},{"text":" "},{"score" : {"name":"#base-resistance", "objective":"vp.reg1"}},{"text":" "},{"score" : {"name":"#base-deaccelerate", "objective":"vp.reg1"}}]
 #speedが0未満だったら0にする
 scoreboard players set @s[scores={vp.speed=..-1}] vp.speed 0
 #speedが最高速度を超えないようにする
@@ -116,12 +120,11 @@ execute at @s[tag=destroyed,scores={vp.AngX=..9000}] run scoreboard players oper
 scoreboard players operation @s[tag=!has-rider,tag=!has-dummy-rider,scores={vp.AngX=..9000}] vp.AngX += @s vp.pitch-speed
 
 #音
-scoreboard players set @s[scores={vp.sound=30..}] vp.sound 0
-execute if entity @s[scores={vp.sound=0,vp.speed=-1..}] at @s run playsound minecraft:plane.engine.recipro-flying ambient @a ~ ~ ~ 2 1 0
-scoreboard players operation @s vp.reg1 = #rand vp.rand
-scoreboard players operation @s vp.reg1 %= #4 vp.Num
-scoreboard players operation @s vp.sound += @s vp.reg1
-#tellraw @p [{"score":{"name":"@s","objective":"vp.reg1"}}]
+scoreboard players set @s[scores={vp.sound=40..}] vp.sound 0
+execute if entity @s[scores={vp.sound=1,vp.speed=-1..}] at @s if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].plane-data.flight-model.engine{type:recipro} run playsound minecraft:plane.engine.recipro-flying ambient @a ~ ~ ~ 2 1 0
+execute if entity @s[scores={vp.sound=1,vp.speed=-1..}] at @s if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].plane-data.flight-model.engine{type:jet} run playsound minecraft:plane.engine.jet-flying ambient @a ~ ~ ~ 2 1 0
+scoreboard players add @s vp.sound 1
+  #tellraw @p [{"score":{"name":"@s","objective":"vp.reg1"}}]
 
 #飛行状態でブロックにめり込んだら爆発
 execute at @s unless block ~ ~1 ~ air run playsound minecraft:entity.generic.explode ambient @a ~ ~ ~ 1 0
