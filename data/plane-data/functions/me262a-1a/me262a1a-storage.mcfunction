@@ -12,7 +12,7 @@ data modify storage voxel-planes:plane me262a1a.plane-data.tier set value 5
 data modify storage voxel-planes:plane me262a1a.plane-data.flight-model.weight set value 6473.0
 data modify storage voxel-planes:plane me262a1a.plane-data.flight-model.speed set value {max-speed:870f,cruise-speed:740f,climb-rate:20f,stall-speed:202f}
 data modify storage voxel-planes:plane me262a1a.plane-data.flight-model.engine set value {type:jet,thrust:897f,number:2}
-data modify storage voxel-planes:plane me262a1a.plane-data.flight-model.turn-rate set value {pitch:26f,yaw:15f,roll:80f}
+data modify storage voxel-planes:plane me262a1a.plane-data.flight-model.turn-rate set value {pitch:26f,yaw:15f,roll:71f}
 data modify storage voxel-planes:plane me262a1a.plane-data.flight-model.energy-loss-rate set value 0.6
 data modify storage voxel-planes:plane me262a1a.plane-data.model-data.body set value {parking-cmd:128,rolling-cmd:128,flying-cmd:129}
 data modify storage voxel-planes:plane me262a1a.plane-data.model-data.landing-pitch set value 0
@@ -25,7 +25,7 @@ data modify storage voxel-planes:plane me262a1a.plane-data.hitbox merge value {r
 data modify storage voxel-planes:plane me262a1a.plane-data.hitbox merge value {cockpit:{offset:[0d,0.7d,1.1d]}}
 
 #デフォルト機銃データセット
-data modify storage voxel-planes:weapon me262a1a.base.30mm.data set value {name:"30mm gun",type:gun,size:20mm,max-ammunition:90,current-ammunition:90,max-cooltime:2,current-cooltime:0,max-reload:800,current-reload:0,tracer:"orange",damage:72,speed:9.5d,bullets:[{offset:[2.22d,-0.35d,3d]},{offset:[-2.22d,-0.35d,3d]},{offset:[2.54d,-0.35d,3d]},{offset:[-2.54d,-0.35d,3d]}]}
+data modify storage voxel-planes:weapon me262a1a.base.30mm.data set value {name:"30mm gun",type:gun,size:30mm,max-ammunition:90,current-ammunition:90,max-cooltime:4,current-cooltime:0,max-reload:800,current-reload:0,tracer:"orange",damage:200,speed:6.8d,bullets:[{offset:[-0.5d,2.1d,4.4d]},{offset:[0.27d,2.1d,4.4d]},{offset:[-0.28d,2.3d,4.4d]},{offset:[0.04d,2.3d,4.4d]}]}
 
 #デフォルトロケット弾データセット
 data modify storage voxel-planes:weapon me262a1a.base.rocket.data set value {name:rocket,type:rocket,max-ammunition:24,current-ammunition:24,max-reload:1200,current-reload:0,rockets:[]}
