@@ -29,8 +29,28 @@ data modify storage voxel-planes:weapon me262a1a.base.30mm.data set value {name:
 
 #デフォルトロケット弾データセット
 data modify storage voxel-planes:weapon me262a1a.base.rocket.data set value {name:rocket,type:rocket,max-ammunition:24,current-ammunition:24,max-reload:1200,current-reload:0,rockets:[]}
-data modify storage voxel-planes:weapon me262a1a.additional.aa-rocket set value [{type:normal,damage:200,offset:[-3.1d,-0.6d,3d],weight:10,kind:10kg,cmd:106}]
-data modify storage voxel-planes:weapon me262a1a.additional.aa-rocket append value {type:normal,damage:200,offset:[3.1d,-0.6d,3d],weight:10,kind:10kg,cmd:106}
-data modify storage voxel-planes:weapon me262a1a.additional.aa-rocket append value {type:normal,damage:200,offset:[-3.5d,-0.6d,3d],weight:10,kind:10kg,cmd:106}
-data modify storage voxel-planes:weapon me262a1a.additional.aa-rocket append value {type:normal,damage:200,offset:[3.5d,-0.6d,3d],weight:10,kind:10kg,cmd:106}
+data modify storage voxel-planes:weapon me262a1a.additional.aa-rocket set value [{type:normal,damage:200,offset:[-3.1d,0.04d,0.3d],weight:4,kind:10kg,cmd:148,launched-cmd:149}]
+data modify storage voxel-planes:weapon me262a1a.additional.aa-rocket append value {type:normal,damage:200,offset:[3.1d,0.04d,0.3d],weight:4,kind:10kg,cmd:148,launched-cmd:149}
+data modify storage voxel-planes:weapon me262a1a.additional.aa-rocket append value {type:normal,damage:200,offset:[-3.18d,0.055d,0.3d],weight:4,kind:10kg,cmd:148,launched-cmd:149}
+data modify storage voxel-planes:weapon me262a1a.additional.aa-rocket append value {type:normal,damage:200,offset:[3.18d,0.055d,0.3d],weight:4,kind:10kg,cmd:148,launched-cmd:149}
+data modify storage voxel-planes:weapon me262a1a.additional.aa-rocket append value {type:normal,damage:200,offset:[-3.26d,0.07d,0.3d],weight:4,kind:10kg,cmd:148,launched-cmd:149}
+data modify storage voxel-planes:weapon me262a1a.additional.aa-rocket append value {type:normal,damage:200,offset:[3.26d,0.07d,0.3d],weight:4,kind:10kg,cmd:148,launched-cmd:149}
+data modify storage voxel-planes:weapon me262a1a.additional.aa-rocket append value {type:normal,damage:200,offset:[-3.34d,0.085d,0.3d],weight:4,kind:10kg,cmd:148,launched-cmd:149}
+data modify storage voxel-planes:weapon me262a1a.additional.aa-rocket append value {type:normal,damage:200,offset:[3.34d,0.0856d,0.3d],weight:4,kind:10kg,cmd:148,launched-cmd:149}
+data modify storage voxel-planes:weapon me262a1a.additional.aa-rocket append value {type:normal,damage:200,offset:[-3.42d,0.1d,0.3d],weight:4,kind:10kg,cmd:148,launched-cmd:149}
+data modify storage voxel-planes:weapon me262a1a.additional.aa-rocket append value {type:normal,damage:200,offset:[3.42d,0.1d,0.3d],weight:4,kind:10kg,cmd:148,launched-cmd:149}
+data modify storage voxel-planes:weapon me262a1a.additional.aa-rocket append value {type:normal,damage:200,offset:[-3.5d,0.115d,0.3d],weight:4,kind:10kg,cmd:148,launched-cmd:149}
+data modify storage voxel-planes:weapon me262a1a.additional.aa-rocket append value {type:normal,damage:200,offset:[3.5d,0.115d,0.3d],weight:4,kind:10kg,cmd:148,launched-cmd:149}
+data modify storage voxel-planes:weapon me262a1a.additional.aa-rocket append value {type:normal,damage:200,offset:[-3.58d,0.13d,0.3d],weight:4,kind:10kg,cmd:148,launched-cmd:149}
+data modify storage voxel-planes:weapon me262a1a.additional.aa-rocket append value {type:normal,damage:200,offset:[3.58d,0.13d,0.3d],weight:4,kind:10kg,cmd:148,launched-cmd:149}
+data modify storage voxel-planes:weapon me262a1a.additional.aa-rocket append value {type:normal,damage:200,offset:[-3.66d,0.145d,0.3d],weight:4,kind:10kg,cmd:148,launched-cmd:149}
+data modify storage voxel-planes:weapon me262a1a.additional.aa-rocket append value {type:normal,damage:200,offset:[3.66d,0.145d,0.3d],weight:4,kind:10kg,cmd:148,launched-cmd:149}
+data modify storage voxel-planes:weapon me262a1a.additional.aa-rocket append value {type:normal,damage:200,offset:[-3.74d,0.16d,0.3d],weight:4,kind:10kg,cmd:148,launched-cmd:149}
+data modify storage voxel-planes:weapon me262a1a.additional.aa-rocket append value {type:normal,damage:200,offset:[3.74d,0.16d,0.3d],weight:4,kind:10kg,cmd:148,launched-cmd:149}
+data modify storage voxel-planes:weapon me262a1a.additional.aa-rocket append value {type:normal,damage:200,offset:[-3.82d,0.175d,0.3d],weight:4,kind:10kg,cmd:148,launched-cmd:149}
+data modify storage voxel-planes:weapon me262a1a.additional.aa-rocket append value {type:normal,damage:200,offset:[3.82d,0.175d,0.3d],weight:4,kind:10kg,cmd:148,launched-cmd:149}
+data modify storage voxel-planes:weapon me262a1a.additional.aa-rocket append value {type:normal,damage:200,offset:[-3.9d,0.19d,0.3d],weight:4,kind:10kg,cmd:148,launched-cmd:149}
+data modify storage voxel-planes:weapon me262a1a.additional.aa-rocket append value {type:normal,damage:200,offset:[3.9d,0.19d,0.3d],weight:4,kind:10kg,cmd:148,launched-cmd:149}
+data modify storage voxel-planes:weapon me262a1a.additional.aa-rocket append value {type:normal,damage:200,offset:[-3.98d,0.205d,0.3d],weight:4,kind:10kg,cmd:148,launched-cmd:149}
+data modify storage voxel-planes:weapon me262a1a.additional.aa-rocket append value {type:normal,damage:200,offset:[3.98d,0.205d,0.3d],weight:4,kind:10kg,cmd:148,launched-cmd:149}
 

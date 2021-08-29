@@ -68,6 +68,7 @@ scoreboard objectives add vp.fall-speed dummy
 scoreboard objectives add vp.damage dummy
 scoreboard objectives add vp.torp-damage dummy
 scoreboard objectives add vp.enable-weapon dummy
+scoreboard objectives add vp.launched-cmd dummy
 
 #飛行機パラメータ
 scoreboard objectives add vp.plane-id dummy

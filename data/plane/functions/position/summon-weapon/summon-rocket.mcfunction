@@ -66,8 +66,35 @@ execute if score #summon-number vp.reg1 matches 15.. run function plane:weapon/u
 execute if score #summon-number vp.reg1 matches 16.. run data modify storage minecraft:plane-datapack temporary.weapon set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{data:{type:rocket}}].data.rockets[15]
 execute if score #summon-number vp.reg1 matches 16.. run function plane:weapon/util/summon-rocket
 
+execute if score #summon-number vp.reg1 matches 17.. run data modify storage minecraft:plane-datapack temporary.weapon set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{data:{type:rocket}}].data.rockets[16]
+execute if score #summon-number vp.reg1 matches 17.. run function plane:weapon/util/summon-rocket
+
+execute if score #summon-number vp.reg1 matches 18.. run data modify storage minecraft:plane-datapack temporary.weapon set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{data:{type:rocket}}].data.rockets[17]
+execute if score #summon-number vp.reg1 matches 18.. run function plane:weapon/util/summon-rocket
+
+execute if score #summon-number vp.reg1 matches 19.. run data modify storage minecraft:plane-datapack temporary.weapon set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{data:{type:rocket}}].data.rockets[18]
+execute if score #summon-number vp.reg1 matches 19.. run function plane:weapon/util/summon-rocket
+
+execute if score #summon-number vp.reg1 matches 20.. run data modify storage minecraft:plane-datapack temporary.weapon set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{data:{type:rocket}}].data.rockets[19]
+execute if score #summon-number vp.reg1 matches 20.. run function plane:weapon/util/summon-rocket
+
+execute if score #summon-number vp.reg1 matches 21.. run data modify storage minecraft:plane-datapack temporary.weapon set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{data:{type:rocket}}].data.rockets[20]
+execute if score #summon-number vp.reg1 matches 21.. run function plane:weapon/util/summon-rocket
+
+execute if score #summon-number vp.reg1 matches 22.. run data modify storage minecraft:plane-datapack temporary.weapon set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{data:{type:rocket}}].data.rockets[21]
+execute if score #summon-number vp.reg1 matches 22.. run function plane:weapon/util/summon-rocket
+
+execute if score #summon-number vp.reg1 matches 23.. run data modify storage minecraft:plane-datapack temporary.weapon set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{data:{type:rocket}}].data.rockets[22]
+execute if score #summon-number vp.reg1 matches 23.. run function plane:weapon/util/summon-rocket
+
+execute if score #summon-number vp.reg1 matches 24.. run data modify storage minecraft:plane-datapack temporary.weapon set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{data:{type:rocket}}].data.rockets[23]
+execute if score #summon-number vp.reg1 matches 24.. run function plane:weapon/util/summon-rocket
+
+    #tellraw @p [{"score" : {"name":"#summon-number", "objective":"vp.reg1"}}]
+
 scoreboard players operation @e[type=armor_stand,tag=weapon-init,distance=..1] vp.plane-id = @s vp.plane-id
 execute as @e[type=armor_stand,tag=weapon-init,distance=..1] store result entity @s Attributes[{Name:"minecraft:generic.movement_speed"}].Base double 1 run scoreboard players get @s vp.plane-id
 tag @e[type=armor_stand,tag=weapon-init,distance=..1] remove weapon-init
 
 scoreboard players set #return vp.reg1 1
+

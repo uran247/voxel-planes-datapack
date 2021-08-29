@@ -33,6 +33,9 @@ scoreboard players operation @e[tag=rocket-init,distance=..10] vp.speed /= #1000
 scoreboard players set @e[tag=rocket-init,distance=..10] vp.age 1200
 scoreboard players set @e[tag=rocket-init,distance=..10] vp.fall-speed 0
 
+#飛翔モデルに変更
+execute as @e[tag=rocket-init,distance=..10,limit=1] if score @s vp.launched-cmd matches 1.. store result entity @s HandItems[0].tag.CustomModelData int 1 run scoreboard players get @s vp.launched-cmd
+
 #角度代入
 function math:get-rand
 scoreboard players operation #AngX vp.reg1 = #rand vp.return
