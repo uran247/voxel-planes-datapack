@@ -37,7 +37,6 @@ execute if entity @s[scores={vp.key-storoke=4..6}] as @e[tag=controll-target,dis
 
 #墜落してた場合スロットル0
 scoreboard players set @e[tag=controll-target,tag=destroyed,distance=..1,limit=1] vp.throttle 0
-execute as @e[tag=controll-target,tag=destroyed,distance=..1,limit=1] run say 1
 
 #プレイヤーがどれくらい右を向いているか左を向いているか取得(0未満なら左、0以上なら右)
 execute store result score #source-rot vp.input run data get entity @s Rotation[0] 100
