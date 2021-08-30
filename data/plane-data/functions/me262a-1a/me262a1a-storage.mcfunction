@@ -16,7 +16,7 @@ data modify storage voxel-planes:plane me262a1a.plane-data.flight-model.turn-rat
 data modify storage voxel-planes:plane me262a1a.plane-data.flight-model.energy-loss-rate set value 0.6
 data modify storage voxel-planes:plane me262a1a.plane-data.model-data.body set value {parking-cmd:128,rolling-cmd:128,flying-cmd:129}
 data modify storage voxel-planes:plane me262a1a.plane-data.model-data.landing-pitch set value 0
-data modify storage voxel-planes:plane me262a1a.plane-data.hp set value {engine:100d,body:110d,aileron:90d,elevetor:70d,radder:70d}
+data modify storage voxel-planes:plane me262a1a.plane-data.hp set value {engine:400d,body:430d,aileron:420d,elevetor:400d,radder:400d}
 data modify storage voxel-planes:plane me262a1a.plane-data.hitbox set value {}
 data modify storage voxel-planes:plane me262a1a.plane-data.hitbox merge value {engine-r:{offset:[-2.6d,0.25d,6.3d]},engine-l:{offset:[2.6d,0.25d,6.3d]}}
 data modify storage voxel-planes:plane me262a1a.plane-data.hitbox merge value {aileron-r:{offset:[-3.2d,-0.3d,1.1d]},aileron-l:{offset:[3.2d,-0.3d,1.1d]}}

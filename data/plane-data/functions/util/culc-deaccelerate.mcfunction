@@ -23,6 +23,7 @@
 #巡航速度での加速度計算
 execute store result score #weight vp.reg1 run data get storage voxel-planes:input input.flight-model.weight
 execute store result score #horse-power vp.reg1 run data get storage voxel-planes:input input.flight-model.engine.horse-power
+execute store result score #thrust vp.reg1 run data get storage voxel-planes:input input.flight-model.engine.thrust
 execute store result score #engine-number vp.reg1 run data get storage voxel-planes:input input.flight-model.engine.number
 execute store result score #cruise-speed vp.reg1 run data get storage voxel-planes:input input.flight-model.speed.cruise-speed 34.72
 scoreboard players set #deaccelerate vp.return 1837500
@@ -33,8 +34,9 @@ scoreboard players operation #deaccelerate vp.return *= #horse-power vp.reg1
 scoreboard players operation #deaccelerate vp.return /= #cruise-speed vp.reg1 
 
 scoreboard players set #jet-accelerate vp.reg1 245
-scoreboard players operation #jet-accelerate vp.reg1 *= #thrust vp.input
-scoreboard players operation #jet-accelerate vp.reg1 /= #weight vp.input
+scoreboard players operation #thrust vp.reg1 *= #engine-number vp.reg1
+scoreboard players operation #jet-accelerate vp.reg1 *= #thrust vp.reg1
+scoreboard players operation #jet-accelerate vp.reg1 /= #weight vp.reg1
 
 scoreboard players operation #deaccelerate vp.return += #jet-accelerate vp.reg1 
 

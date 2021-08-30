@@ -120,9 +120,9 @@ execute at @s[tag=destroyed,scores={vp.AngX=..9000}] run scoreboard players oper
 scoreboard players operation @s[tag=!has-rider,tag=!has-dummy-rider,scores={vp.AngX=..9000}] vp.AngX += @s vp.pitch-speed
 
 #音
-scoreboard players set @s[scores={vp.sound=40..}] vp.sound 0
-execute if entity @s[scores={vp.sound=1,vp.speed=-1..}] at @s if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].plane-data.flight-model.engine{type:recipro} run playsound minecraft:plane.engine.recipro-flying ambient @a ~ ~ ~ 2 1 0
-execute if entity @s[scores={vp.sound=1,vp.speed=-1..}] at @s if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].plane-data.flight-model.engine{type:jet} run playsound minecraft:plane.engine.jet-flying ambient @a ~ ~ ~ 2 1 0
+scoreboard players set @s[scores={vp.sound=36..}] vp.sound 0
+execute if entity @s[scores={vp.sound=1,vp.speed=-1..}] at @s if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].plane-data.flight-model.engine{type:recipro} run playsound minecraft:plane.engine.recipro-flying ambient @a ~ ~ ~ 2 1.1 0
+execute if entity @s[scores={vp.sound=1,vp.speed=-1..}] at @s if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].plane-data.flight-model.engine{type:jet} run playsound minecraft:plane.engine.jet-rolling ambient @a ~ ~ ~ 2 1.1 0
 scoreboard players add @s vp.sound 1
   #tellraw @p [{"score":{"name":"@s","objective":"vp.reg1"}}]
 
