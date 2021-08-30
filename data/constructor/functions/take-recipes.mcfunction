@@ -17,6 +17,9 @@ recipe take @a plane-data:plane/swordfish-recipe
 recipe take @a plane-data:plane/spitfiremkix-recipe
 recipe take @a plane-data:plane/fireflymkv-recipe
 recipe take @a plane-data:plane/seafuryfb11-recipe
+recipe take @a plane-data:plane/bf109g-recipe
+recipe take @a plane-data:plane/ju87b-recipe
+recipe take @a plane-data:plane/me262a1a-recipe
 
 recipe take @a weapon-data:bomb/60kg-bomb
 recipe take @a weapon-data:bomb/100kg-bomb

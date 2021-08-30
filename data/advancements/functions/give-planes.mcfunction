@@ -18,6 +18,9 @@ loot give @s[advancements={plane-data:crafting/plane/swordfish=true}] loot plane
 loot give @s[advancements={plane-data:crafting/plane/spitfiremkix=true}] loot plane-data:spitfiremkix
 loot give @s[advancements={plane-data:crafting/plane/fireflymkv=true}] loot plane-data:fireflymkv
 loot give @s[advancements={plane-data:crafting/plane/seafuryfb11=true}] loot plane-data:seafuryfb11
+loot give @s[advancements={plane-data:crafting/plane/bf109g=true}] loot plane-data:bf-109g
+loot give @s[advancements={plane-data:crafting/plane/ju87b=true}] loot plane-data:ju87b
+loot give @s[advancements={plane-data:crafting/plane/me262a1a=true}] loot plane-data:me262a1a
 
 clear @s phantom_spawn_egg 1
 execute store success score @s vp.reg1 run clear @s phantom_spawn_egg 0

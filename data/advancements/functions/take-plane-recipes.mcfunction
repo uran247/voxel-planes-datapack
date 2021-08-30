@@ -18,5 +18,8 @@ recipe take @s[advancements={plane-data:crafting/plane/swordfish=true}] plane-da
 recipe take @s[advancements={plane-data:crafting/plane/spitfiremkix=true}] plane-data:plane/spitfiremkix-recipe
 recipe take @s[advancements={plane-data:crafting/plane/fireflymkv=true}] plane-data:plane/fireflymkv-recipe
 recipe take @s[advancements={plane-data:crafting/plane/seafuryfb11=true}] plane-data:plane/seafuryfb11-recipe
+recipe take @s[advancements={plane-data:crafting/plane/bf109g=true}] plane-data:plane/bf109g-recipe
+recipe take @s[advancements={plane-data:crafting/plane/ju87b=true}] plane-data:plane/ju87b-recipe
+recipe take @s[advancements={plane-data:crafting/plane/me262a1a=true}] plane-data:plane/me262a1a-recipe
 
 advancement revoke @s from plane-data:crafting/root
