@@ -80,7 +80,7 @@ execute as @s[scores={vp.throttle=11..}] if score @s vp.takeoff-speed < @s vp.sp
 function plane:move/plane-move/rolling/change-plpr-model
 
 #音
-scoreboard players set @s[scores={vp.sound=39..}] vp.sound 0
+scoreboard players set @s[scores={vp.sound=10..}] vp.sound 0
 execute if entity @s[scores={vp.sound=1,vp.speed=1..}] at @s if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].plane-data.flight-model.engine{type:recipro} run playsound minecraft:plane.engine.recipro-rolling ambient @a ~ ~ ~ 2 1 0
 execute if entity @s[scores={vp.sound=1,vp.speed=1..}] at @s if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].plane-data.flight-model.engine{type:jet} run playsound minecraft:plane.engine.jet-rolling ambient @a ~ ~ ~ 2 1 0
 scoreboard players add @s vp.sound 1
@@ -92,6 +92,7 @@ execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].plane-data.
 
 #speedが0なら音停止
 execute if entity @s[scores={vp.speed=..0}] at @s run stopsound @a[distance=..10] * minecraft:plane.engine.recipro-rolling
+execute if entity @s[scores={vp.speed=..0}] at @s run stopsound @a[distance=..10] * minecraft:plane.engine.jet-rolling
 
 #登場者がいるか判定して、いないならスピードを下げる
 execute at @s[tag=!has-rider,tag=!has-dummy-rider] run scoreboard players remove @s[scores={vp.throttle=5..}] vp.throttle 5
