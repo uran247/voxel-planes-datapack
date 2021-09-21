@@ -50,6 +50,7 @@ minecraft 1.17(v0.3.2~)
 wiki参照(https://github.com/uran247/voxel-planes-datapack/wiki)
 
 ## 利用規約
+規約は事前の通知なく変更されることがあります。
 ### voxel-planes.zip
 - MITライセンスの範囲内で利用可能
 ### voxel-planes-resourcepack.zip
