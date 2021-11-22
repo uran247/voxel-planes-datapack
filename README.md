@@ -49,5 +49,16 @@ minecraft 1.17(v0.3.2~)
 ## 航空機の詳細/レシピ
 wiki参照(https://github.com/uran247/voxel-planes-datapack/wiki)
 
+## 利用規約
+規約は事前の通知なく変更されることがあります。
+### voxel-planes.zip
+- MITライセンスの範囲内で利用可能
+### voxel-planes-resourcepack.zip
+- 使用時の許諾不要
+- 再配布不可
+- 動画配信への利用及び収益化可能
+- 本リソースパックを利用した制作物を公開する際のクレジット表記必須
+
 ## 連絡先
 twitter：[@uran2471](https://twitter.com/uran2471)
+
