@@ -63,7 +63,7 @@ execute at @s[tag=pe2] run function plane-data:pe-2/pe-2-position
 execute at @s[tag=bf109g] run function plane-data:bf109g/bf109g-position
 execute at @s[tag=ju87b] run function plane-data:ju87b/ju87b-position
 execute at @s[tag=p38l] run function plane-data:p-38l/p38l-position
-
+execute at @s[tag=b17g] run function plane-data:b-17g/b-17g-position
 #execute as @s[tag=j100b] run function plane:position/j-100b-position
 
 #武器召喚
@@ -86,6 +86,7 @@ execute if entity @s[tag=!angle-not-changed] run function math:vector
 
 #角度補正
 execute at @s[tag=!angle-not-changed] run function plane:position/util/modify-angle
+execute at @s[tag=angle-not-changed] run function plane:position/util/stable-display
 
 #seatの位置表示
 execute if entity @s[tag=!has-rider,tag=!no-move] at @e[type=armor_stand,tag=target-parts,tag=plane-seat,tag=!no-particle,distance=..20] run particle minecraft:happy_villager ~ ~2.8 ~ 0.1 0.1 0.1 1 1 force @a[tag=!plane-rider]
