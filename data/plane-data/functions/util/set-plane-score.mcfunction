@@ -13,6 +13,7 @@
     #declare tag plane-init
     #declare tag plane-body
     #declare tag plane-rightwing
+    #declare tag plane-leftwing
     #declare tag plane-tail
 
 #最高、巡航、失速、離陸速度設定
@@ -53,6 +54,9 @@ execute store result score @e[tag=plane-init,tag=plane-body,tag=model-changeable
 execute store result score @e[tag=plane-init,tag=plane-rightwing,tag=model-changeable,distance=..1] vp.parking-cmd run data get storage voxel-planes:input input.model-data.rightwing.parking-cmd
 execute store result score @e[tag=plane-init,tag=plane-rightwing,tag=model-changeable,distance=..1] vp.rolling-cmd run data get storage voxel-planes:input input.model-data.rightwing.rolling-cmd
 execute store result score @e[tag=plane-init,tag=plane-rightwing,tag=model-changeable,distance=..1] vp.flying-cmd run data get storage voxel-planes:input input.model-data.rightwing.flying-cmd
+execute store result score @e[tag=plane-init,tag=plane-leftwing,tag=model-changeable,distance=..1] vp.parking-cmd run data get storage voxel-planes:input input.model-data.leftwing.parking-cmd
+execute store result score @e[tag=plane-init,tag=plane-leftwing,tag=model-changeable,distance=..1] vp.rolling-cmd run data get storage voxel-planes:input input.model-data.leftwing.rolling-cmd
+execute store result score @e[tag=plane-init,tag=plane-leftwing,tag=model-changeable,distance=..1] vp.flying-cmd run data get storage voxel-planes:input input.model-data.leftwing.flying-cmd
 execute store result score @e[tag=plane-init,tag=plane-tail,tag=model-changeable,distance=..1] vp.parking-cmd run data get storage voxel-planes:input input.model-data.tail.parking-cmd
 execute store result score @e[tag=plane-init,tag=plane-tail,tag=model-changeable,distance=..1] vp.rolling-cmd run data get storage voxel-planes:input input.model-data.tail.rolling-cmd
 execute store result score @e[tag=plane-init,tag=plane-tail,tag=model-changeable,distance=..1] vp.flying-cmd run data get storage voxel-planes:input input.model-data.tail.flying-cmd
