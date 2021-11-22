@@ -15,7 +15,7 @@
                         {
                             "function":"set_lore",
                             "lore":[
-                                {"translate":"戦闘機","color":"green","bold":true},
+                                {"translate":"爆撃機","color":"green","bold":true},
                                 {"translate":" 武装"},
                                 {"translate":"  250kg爆弾×4","color":"blue"}
                             ]
