@@ -33,15 +33,15 @@ execute as @e[tag=plane-init,tag=plane-root,distance=..1,limit=1] at @s run func
 #ohmydat呼び出し
 execute as @e[tag=plane-init,tag=plane-root,distance=..1] run function oh_my_dat:please
 
-#飛行機データのストレージ設定
-data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].plane-data set from storage voxel-planes:plane a5m.plane-data
-
 #飛行スコアセット
 data remove storage voxel-planes:input input
 data modify storage voxel-planes:input input set from storage voxel-planes:plane a5m.plane-data
 execute as @e[tag=plane-init,tag=plane-root,distance=..1] run function plane-data:util/set-plane-score
 execute as @e[tag=plane-init,tag=plane-hitbox,tag=!cockpit,distance=..1] run function plane-data:util/set-hitbox-data
 execute as @e[type=donkey,tag=plane-init,distance=..1] run function plane-data:util/set-plane-maxhp
+
+#飛行機データのストレージ設定
+function plane-data:util/set-plane-sotrage
 
 #武器データセット
 data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon set value {current-weapon-index:0}
