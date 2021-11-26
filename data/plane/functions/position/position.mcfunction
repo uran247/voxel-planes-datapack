@@ -35,6 +35,10 @@ execute at @s run tp @e[tag=target-parts,tag=!plane-seat,distance=..32] ~ ~ ~ ~9
 #ヘルスチェック
 execute as @s at @s run function plane:position/util/parts-health
 
+#体力表示更新
+execute as @s at @s run function plane:position/util/renew-health-display
+
+
 #移動力補正スコア収集
 execute as @s at @s run function plane:position/util/get-corret-param
 
@@ -65,6 +69,9 @@ execute at @s[tag=ju87b] run function plane-data:ju87b/ju87b-position
 execute at @s[tag=p38l] run function plane-data:p-38l/p38l-position
 execute at @s[tag=b17g] run function plane-data:b-17g/b-17g-position
 #execute as @s[tag=j100b] run function plane:position/j-100b-position
+
+#hitbox召喚
+function plane:position/summon-hitbox
 
 #武器召喚
 function plane:position/summon-weapon
