@@ -11,13 +11,41 @@
 #
 # @private
     #declare tag plane-init
-    #declare tag plane-body
+    #declare score_holder #body
+    #declare score_holder #engine
+    #declare score_holder #engine-r
+    #declare score_holder #engine-l
+    #declare score_holder #elevator-r
+    #declare score_holder #elevator-l
+    #declare score_holder #aileron-r
+    #declare score_holder #aileron-l
+    #declare score_holder #radder
 
+
+#各パーツのHP取得
+execute store result score #body vp.reg1 run data get storage voxel-planes:input input.hitbox.body.max-hp
+execute store result score #engine vp.reg1 run data get storage voxel-planes:input input.hitbox.engine.max-hp
+execute store result score #engine-r vp.reg1 run data get storage voxel-planes:input input.hitbox.engine-r.max-hp
+execute store result score #engine-l vp.reg1 run data get storage voxel-planes:input input.hitbox.engine-l.max-hp
+execute store result score #elevator-r vp.reg1 run data get storage voxel-planes:input input.hitbox.elevator-r.max-hp
+execute store result score #elevator-l vp.reg1 run data get storage voxel-planes:input input.hitbox.elevator-l.max-hp
+execute store result score #aileron-r vp.reg1 run data get storage voxel-planes:input input.hitbox.aileron-r.max-hp
+execute store result score #aileron-l vp.reg1 run data get storage voxel-planes:input input.hitbox.aileron-l.max-hp
+execute store result score #radder vp.reg1 run data get storage voxel-planes:input input.hitbox.radder.max-hp
 
 #パーツの総HP取得
-execute as @e[tag=plane-init,tag=plane-hitbox,tag=!cockpit,distance=..30] store result score @s vp.reg1 run data get entity @s Attributes[{Name:"minecraft:generic.max_health"}].Base
 scoreboard players set #total-health vp.reg1 0
-scoreboard players operation #total-health vp.reg1 += @e[tag=plane-init,tag=plane-hitbox,tag=!cockpit,distance=..30] vp.reg1
+scoreboard players operation #total-health vp.reg1 += #body vp.reg1
+scoreboard players operation #total-health vp.reg1 += #engine vp.reg1
+scoreboard players operation #total-health vp.reg1 += #engine-r vp.reg1
+scoreboard players operation #total-health vp.reg1 += #engine-l vp.reg1
+scoreboard players operation #total-health vp.reg1 += #elevator-r vp.reg1
+scoreboard players operation #total-health vp.reg1 += #elevator-l vp.reg1
+scoreboard players operation #total-health vp.reg1 += #aileron-r vp.reg1
+scoreboard players operation #total-health vp.reg1 += #aileron-l vp.reg1
+scoreboard players operation #total-health vp.reg1 += #radder vp.reg1
+
+#ロバの最大体力に代入
 scoreboard players operation #total-health vp.reg1 /= #50 vp.Num
 execute if score #total-health vp.reg1 matches ..0 run scoreboard players set #total-health vp.reg1 1
 execute as @e[type=minecraft:donkey,tag=plane-init,tag=plane-seat,distance=..30] store result entity @s Attributes[{Name:"minecraft:generic.max_health"}].Base double 1 run scoreboard players get #total-health vp.reg1
