@@ -34,7 +34,6 @@ execute store success score @s vp.engine if data storage oh_my_dat: _[-4][-4][-4
 execute store success score @s vp.engine if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.engine-r unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.engine-r{hp:0d} run scoreboard players add @s vp.plane-parts 1
 execute store success score @s vp.engine if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.engine-l unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.engine-l{hp:0d} run scoreboard players add @s vp.plane-parts 1
 
-
 #execute store result score @s vp.radder if entity @e[tag=target-parts,tag=radder,distance=..30]
 #execute store result score @s vp.elevetor if entity @e[tag=target-parts,tag=elevetor,distance=..30]
 #execute store result score @s vp.aileron if entity @e[tag=target-parts,tag=aileron,distance=..30]

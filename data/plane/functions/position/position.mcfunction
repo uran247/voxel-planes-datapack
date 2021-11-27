@@ -36,7 +36,7 @@ execute at @s run tp @e[tag=target-parts,tag=!plane-seat,distance=..32] ~ ~ ~ ~9
 execute as @s at @s run function plane:position/util/parts-health
 
 #体力表示更新
-execute as @s at @s run function plane:position/util/renew-health-display
+execute at @s as @e[type=minecraft:donkey,tag=target-parts,tag=plane-seat,distance=..30] run function plane:position/util/renew-health-display
 
 
 #移動力補正スコア収集
