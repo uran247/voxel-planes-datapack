@@ -21,7 +21,6 @@ execute if score #difficulty vp.reg1 matches 1.. if data storage oh_my_dat: _[-4
 #execute if score #difficulty vp.reg1 matches 1.. if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.engine unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.engine{hp:0d} unless entity @e[tag=plane-hitbox,tag=engine,tag=target-parts,distance=..30] run summon slime ~ ~ ~ {Tags:[plane-init,target-parts,plane,plane-hitbox,engine,has-offset,offset-base],NoAI:1b,Health:1000f,Attributes:[{Name:"generic.max_health",Base:1000d}],ActiveEffects:[{Id:14b,Amplifier:0b,Duration:1000000,ShowParticles:0b}],DeathLootTable:"minecraft:entities/bat",Silent:1b}
 execute if score #difficulty vp.reg1 matches 1.. if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.engine unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.engine{hp:0d} unless entity @e[tag=plane-hitbox,tag=engine,tag=target-parts,distance=..30] run summon armor_stand ~ ~ ~ {Tags:[plane-init,target-parts,plane,plane-hitbox,engine,has-offset,offset-base],NoGravity:1b,Invisible:1b,Marker:1b,Health:1000f,Attributes:[{Name:"generic.max_health",Base:1000d}]}
 
-
 #execute if score #difficulty vp.reg1 matches 1.. if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.engine-r unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.engine-r{hp:0d} unless entity @e[tag=plane-hitbox,tag=engine-r,tag=target-parts,distance=..30] run summon slime ~ ~ ~ {Tags:[plane-init,target-parts,plane,plane-hitbox,engine-r,has-offset,offset-base],NoAI:1b,Health:1000f,Attributes:[{Name:"generic.max_health",Base:1000d}],ActiveEffects:[{Id:14b,Amplifier:0b,Duration:1000000,ShowParticles:0b}],DeathLootTable:"minecraft:entities/bat",Silent:1b}
 execute if score #difficulty vp.reg1 matches 1.. if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.engine-r unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.engine-r{hp:0d} unless entity @e[tag=plane-hitbox,tag=engine-r,tag=target-parts,distance=..30] run summon armor_stand ~ ~ ~ {Tags:[plane-init,target-parts,plane,plane-hitbox,engine-r,has-offset,offset-base],NoGravity:1b,Invisible:1b,Marker:1b,Health:1000f,Attributes:[{Name:"generic.max_health",Base:1000d}]}
 
@@ -54,41 +53,41 @@ execute as @e[type=armor_stand,tag=plane-init,tag=body,distance=..1,limit=1] run
 #engine
 data remove storage voxel-planes:input input
 data modify storage voxel-planes:input input set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.engine
-execute as @e[type=slime,tag=plane-init,tag=engine,distance=..1,limit=1] run function plane:position/util/set-hitbox-data
+execute as @e[type=armor_stand,tag=plane-init,tag=engine,distance=..1,limit=1] run function plane:position/util/set-hitbox-data
 data remove storage voxel-planes:input input
 data modify storage voxel-planes:input input set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.engine-r
-execute as @e[type=slime,tag=plane-init,tag=engine-r,distance=..1,limit=1] run function plane:position/util/set-hitbox-data
+execute as @e[type=armor_stand,tag=plane-init,tag=engine-r,distance=..1,limit=1] run function plane:position/util/set-hitbox-data
 data remove storage voxel-planes:input input
 data modify storage voxel-planes:input input set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.engine-l
-execute as @e[type=slime,tag=plane-init,tag=engine-l,distance=..1,limit=1] run function plane:position/util/set-hitbox-data
+execute as @e[type=armor_stand,tag=plane-init,tag=engine-l,distance=..1,limit=1] run function plane:position/util/set-hitbox-data
 
 #elevator
 data remove storage voxel-planes:input input
 data modify storage voxel-planes:input input set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.elevator-r
-execute as @e[type=slime,tag=plane-init,tag=elevator-r,distance=..1,limit=1] run function plane:position/util/set-hitbox-data
+execute as @e[type=armor_stand,tag=plane-init,tag=elevator-r,distance=..1,limit=1] run function plane:position/util/set-hitbox-data
 data remove storage voxel-planes:input input
 data modify storage voxel-planes:input input set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.elevator-l
-execute as @e[type=slime,tag=plane-init,tag=elevator-l,distance=..1,limit=1] run function plane:position/util/set-hitbox-data
+execute as @e[type=armor_stand,tag=plane-init,tag=elevator-l,distance=..1,limit=1] run function plane:position/util/set-hitbox-data
 
 #aileron
 data remove storage voxel-planes:input input
 data modify storage voxel-planes:input input set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.aileron-r
-execute as @e[type=slime,tag=plane-init,tag=aileron-r,distance=..1,limit=1] run function plane:position/util/set-hitbox-data
+execute as @e[type=armor_stand,tag=plane-init,tag=aileron-r,distance=..1,limit=1] run function plane:position/util/set-hitbox-data
 data remove storage voxel-planes:input input
 data modify storage voxel-planes:input input set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.aileron-l
-execute as @e[type=slime,tag=plane-init,tag=aileron-l,distance=..1,limit=1] run function plane:position/util/set-hitbox-data
+execute as @e[type=armor_stand,tag=plane-init,tag=aileron-l,distance=..1,limit=1] run function plane:position/util/set-hitbox-data
 
 #radder
 data remove storage voxel-planes:input input
 data modify storage voxel-planes:input input set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.radder
-execute as @e[type=slime,tag=plane-init,tag=radder,distance=..1,limit=1] run function plane:position/util/set-hitbox-data
+execute as @e[type=armor_stand,tag=plane-init,tag=radder,distance=..1,limit=1] run function plane:position/util/set-hitbox-data
 
 #plane-idセット
-scoreboard players operation @e[type=slime,tag=plane-init,distance=..1] vp.plane-id = #plane-id vp.reg1
-execute as @e[type=slime,tag=plane-init,distance=..1] store result entity @s Attributes[{Name:"minecraft:generic.movement_speed"}].Base double 1 run scoreboard players get #plane-id vp.reg1
+scoreboard players operation @e[type=armor_stand,tag=plane-init,distance=..1] vp.plane-id = #plane-id vp.reg1
+execute as @e[type=armor_stand,tag=plane-init,distance=..1] store result entity @s Attributes[{Name:"minecraft:generic.movement_speed"}].Base double 1 run scoreboard players get #plane-id vp.reg1
 
 #召喚した場合need-calc-offsetタグ付与
-execute if entity @e[type=slime,tag=plane-init,distance=..1] run tag @s add need-calc-offset
+execute if entity @e[type=armor_stand,tag=plane-init,distance=..1] run tag @s add need-calc-offset
 
 #初期化用タグ除去
-tag @e[type=slime,tag=plane-init,distance=..1] remove plane-init
+tag @e[type=armor_stand,tag=plane-init,distance=..1] remove plane-init
