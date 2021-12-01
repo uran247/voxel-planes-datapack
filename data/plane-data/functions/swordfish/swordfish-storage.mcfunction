@@ -18,11 +18,12 @@ data modify storage voxel-planes:plane swordfish.plane-data.model-data.body set 
 data modify storage voxel-planes:plane swordfish.plane-data.model-data.landing-pitch set value -12.0
 data modify storage voxel-planes:plane swordfish.plane-data.hp set value {engine:70d,body:80,aileron:80,elevetor:50,radder:50}
 data modify storage voxel-planes:plane swordfish.plane-data.hitbox set value {}
-data modify storage voxel-planes:plane swordfish.plane-data.hitbox merge value {engine:{offset:[0d,-0.1d,5.2d]}}
-data modify storage voxel-planes:plane swordfish.plane-data.hitbox merge value {aileron-r:{offset:[-3.8d,0.1d,2.9d]},aileron-l:{offset:[3.8d,0.1d,2.9d]}}
-data modify storage voxel-planes:plane swordfish.plane-data.hitbox merge value {elevator-r:{offset:[-1.2d,0.2d,-4d]},elevator-l:{offset:[1.2d,0.2d,-4d]}}
-data modify storage voxel-planes:plane swordfish.plane-data.hitbox merge value {radder:{offset:[0d,1.2d,-3.9d]}}
-data modify storage voxel-planes:plane swordfish.plane-data.hitbox merge value {cockpit:{offset:[0d,0.8d,3d]}}
+data modify storage voxel-planes:plane swordfish.plane-data.hitbox merge value {engine:{max-hp:90d,offset:[0d,-0.1d,5.2d]}}
+data modify storage voxel-planes:plane swordfish.plane-data.hitbox merge value {aileron-r:{max-hp:100d,offset:[-3.8d,0.1d,2.9d]},aileron-l:{max-hp:100d,offset:[3.8d,0.1d,2.9d]}}
+data modify storage voxel-planes:plane swordfish.plane-data.hitbox merge value {elevator-r:{max-hp:100d,offset:[-1.2d,0.2d,-4d]},elevator-l:{max-hp:100d,offset:[1.2d,0.2d,-4d]}}
+data modify storage voxel-planes:plane swordfish.plane-data.hitbox merge value {radder:{max-hp:80d,offset:[0d,1.2d,-3.9d]}}
+data modify storage voxel-planes:plane swordfish.plane-data.hitbox merge value {cockpit:{max-hp:80d,offset:[0d,0.8d,3d]}}
+data modify storage voxel-planes:plane swordfish.plane-data.hitbox merge value {body:{max-hp:120d,offset:[0d,-0.5d,1d]}}
 
 #デフォルト機銃データセット
 data modify storage voxel-planes:weapon swordfish.base.gun set value {data:{name:"7.7mm gun",type:gun,size:7p7mm,max-ammunition:600,current-ammunition:600,max-cooltime:1,current-cooltime:0,max-reload:140,current-reload:0,tracer:"lightblue",damage:9,speed:9.6d,bullets:[{offset:[-0.6d,2.2d,4.3d]}]}}
