@@ -28,8 +28,6 @@
 
 #ダメージ後の体力計算
 execute as @e[tag=hit-weapon,distance=..20] run function weapon:util/set-entity-hp
-#scoreboard players operation @e[tag=hit-weapon,distance=..20,type=!player] vp.reg1 -= @s damage
-#execute as @e[tag=hit-weapon,distance=..20,type=!player,scores={vp.reg1=..-1}] run scoreboard players set @s vp.reg1 0
 scoreboard players operation @e[type=!player,tag=hit-weapon,distance=..20] vp.reg2 = @s vp.damage
 execute as @e[type=!player,tag=hit-weapon,distance=..20] run function weapon:util/calc-entity-damage
 
@@ -41,8 +39,6 @@ execute as @a if score @s vp.plane-id = #bullet-id vp.reg1 run tag @s add bullet
 ### メッセージ処理 ###
 #メッセージを表示(title)
 title @p[tag=bullet-owner] times 0 20 20
-#execute as @e[tag=hit-weapon,scores={vp.reg1=0},distance=..20,sort=nearest,limit=1] run function weapon:gun/damage/set-kill-mob-message
-#execute as @e[tag=hit-weapon,tag=enemy-target,scores={vp.reg1=0},distance=..20,sort=nearest,limit=1] run function weapon:gun/damage/set-kill-target-message
 #メッセージ表示(tellraw)とダメージエフェクト
 execute as @e[tag=hit-weapon,tag=plane-hitbox,tag=!cockpit,distance=..20] run function weapon:util/hit-hitbox-effect
 execute as @e[tag=hit-weapon,tag=plane-hitbox,tag=!cockpit,scores={vp.reg1=0},distance=..20] at @s run function weapon:util/destroy-hitbox-message
