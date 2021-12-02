@@ -17,6 +17,7 @@
 #   function weapon:util/**
     #declare tag enemy-target #撃墜するとメッセージが出るターゲットを示す
     #declare tag bullet-owner #銃弾を発射したプレイヤーを示す
+    #declare score_holder #dmg #銃弾のダメージ
 
 #> private
 # @private
@@ -26,10 +27,14 @@
 # 入力　tag=gun-move-executer：弾体  tag=gunner:発射母体 tag=hit-weapon 命中したエンティティ
 # 実行者：弾体
 
-#ダメージ後の体力計算
-execute as @e[tag=hit-weapon,distance=..20] run function weapon:util/set-entity-hp
-scoreboard players operation @e[type=!player,tag=hit-weapon,distance=..20] vp.reg2 = @s vp.damage
-execute as @e[type=!player,tag=hit-weapon,distance=..20] run function weapon:util/calc-entity-damage
+#通常エンティティのダメージ後の体力計算
+execute as @e[tag=hit-weapon,tag=!plane-hitbox,distance=..20] run function weapon:util/set-entity-hp
+scoreboard players operation @e[type=!player,tag=hit-weapon,tag=!plane-hitbox,distance=..20] vp.reg2 = @s vp.damage
+execute as @e[type=!player,tag=hit-weapon,tag=!plane-hitbox,distance=..20] run function weapon:util/calc-entity-damage
+
+#hit-boxのダメージ後の体力計算
+execute if entity @e[type=!player,tag=hit-weapon,tag=plane-hitbox,distance=..20] run scoreboard players operation #dmg vp.input = @s vp.damage
+execute as @e[type=!player,tag=hit-weapon,tag=plane-hitbox,distance=..20] run function weapon:util/calc-hitbox-damage
 
 #弾丸のplane-id記憶
 scoreboard players operation #bullet-id vp.reg1 = @s vp.plane-id
