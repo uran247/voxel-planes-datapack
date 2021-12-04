@@ -47,4 +47,9 @@ execute if entity @s[tag=elevator-r] store result storage oh_my_dat: _[-4][-4][-
 execute if entity @s[tag=elevator-l] store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.elevator-l.hp double 1 run scoreboard players get #current-hp vp.reg1
 execute if entity @s[tag=radder] store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.radder.hp double 1 run scoreboard players get #current-hp vp.reg1
 
-tellraw @p [{"nbt":"_[-4][-4][-4][-4][-4][-4][-4][-4].status","storage":"oh_my_dat:"}]
+#tellraw @p [{"nbt":"_[-4][-4][-4][-4][-4][-4][-4][-4].status","storage":"oh_my_dat:"}]
+
+#タグ除去
+tag @a[tag=parts-owner] remove parts-owner
+execute at @e[tag=plane-root,tag=parts-owner,distance=..32,limit=1] run tag @e[tag=parts-hitbox,distance=..32] remove parts-hitbox
+tag @e[tag=parts-owner,distance=..32] remove parts-owner
