@@ -41,7 +41,6 @@ data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-l
 data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list append from storage voxel-planes:weapon swordfish.base.gun
 data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list append from storage voxel-planes:weapon swordfish.base.bomb
 
-
 #プレイヤーと同じAngYにする
 schedule function plane:summon/util/delay-rotation 2
 

@@ -18,10 +18,11 @@ data modify storage voxel-planes:plane spitfiremkix.plane-data.model-data.body s
 data modify storage voxel-planes:plane spitfiremkix.plane-data.model-data.landing-pitch set value -11.0
 data modify storage voxel-planes:plane spitfiremkix.plane-data.hp set value {engine:130d,body:140d,aileron:130d,elevetor:120d,radder:120d}
 data modify storage voxel-planes:plane spitfiremkix.plane-data.hitbox set value {}
-data modify storage voxel-planes:plane spitfiremkix.plane-data.hitbox merge value {engine:{offset:[0d,0d,2d]}}
-data modify storage voxel-planes:plane spitfiremkix.plane-data.hitbox merge value {aileron-r:{offset:[-2.2d,-0.4d,0.4d]},aileron-l:{offset:[2.2d,-0.4d,0.4d]}}
-data modify storage voxel-planes:plane spitfiremkix.plane-data.hitbox merge value {elevator-r:{offset:[-0.6d,0.1d,-4.3d]},elevator-l:{offset:[0.6d,0.1d,-4.3d]}}
-data modify storage voxel-planes:plane spitfiremkix.plane-data.hitbox merge value {radder:{offset:[0d,0.7d,-4.3d]}}
+data modify storage voxel-planes:plane spitfiremkix.plane-data.hitbox merge value {engine:{max-hp:110d,offset:[0d,0d,2d]}}
+data modify storage voxel-planes:plane spitfiremkix.plane-data.hitbox merge value {body:{max-hp:120d,offset:[0.3d,0d,0d]}}
+data modify storage voxel-planes:plane spitfiremkix.plane-data.hitbox merge value {aileron-r:{max-hp:110d,offset:[-2.2d,-0.4d,0.4d]},aileron-l:{max-hp:110d,offset:[2.2d,-0.4d,0.4d]}}
+data modify storage voxel-planes:plane spitfiremkix.plane-data.hitbox merge value {elevator-r:{max-hp:100d,offset:[-0.6d,0.1d,-4.3d]},elevator-l:{max-hp:100d,offset:[0.6d,0.1d,-4.3d]}}
+data modify storage voxel-planes:plane spitfiremkix.plane-data.hitbox merge value {radder:{max-hp:100d,offset:[0d,0.7d,-4.3d]}}
 data modify storage voxel-planes:plane spitfiremkix.plane-data.hitbox merge value {cockpit:{offset:[0d,0.4d,0d]}}
 
 #デフォルト機銃データセット
