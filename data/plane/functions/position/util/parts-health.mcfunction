@@ -34,13 +34,6 @@ execute store success score @s vp.engine if data storage oh_my_dat: _[-4][-4][-4
 execute store success score @s vp.engine if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.engine-r unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.engine-r{hp:0d} run scoreboard players add @s vp.plane-parts 1
 execute store success score @s vp.engine if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.engine-l unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.engine-l{hp:0d} run scoreboard players add @s vp.plane-parts 1
 
-#execute store result score @s vp.radder if entity @e[tag=target-parts,tag=radder,distance=..30]
-#execute store result score @s vp.elevetor if entity @e[tag=target-parts,tag=elevetor,distance=..30]
-#execute store result score @s vp.aileron if entity @e[tag=target-parts,tag=aileron,distance=..30]
-#execute store result score @s vp.engine if entity @e[tag=target-parts,tag=engine,distance=..30]
-#execute store result score @s vp.body if entity @e[tag=target-parts,tag=body,distance=..30]
-#execute store result score @s vp.plane-parts if entity @e[tag=target-parts,tag=plane-hitbox,distance=..30]
-
 #以下条件のどれかを満たしたら墜落タグ
 #生存パーツが5個以下　bodyが破損 aileronのどっちかが破損
 tag @s remove destroyed

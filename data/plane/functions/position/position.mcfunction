@@ -94,7 +94,7 @@ execute if entity @s[tag=!angle-not-changed] run function math:vector
 
 #角度補正
 execute at @s[tag=!angle-not-changed] run function plane:position/util/modify-angle
-execute at @s[tag=angle-not-changed] run function plane:position/util/stable-display
+#execute at @s[tag=angle-not-changed] run function plane:position/util/stable-display
 
 #seatの位置表示
 execute if entity @s[tag=!has-rider,tag=!no-move] at @e[type=armor_stand,tag=target-parts,tag=plane-seat,tag=!no-particle,distance=..20] run particle minecraft:happy_villager ~ ~2.8 ~ 0.1 0.1 0.1 1 1 force @a[tag=!plane-rider]
