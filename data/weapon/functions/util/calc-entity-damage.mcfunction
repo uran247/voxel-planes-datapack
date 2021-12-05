@@ -7,7 +7,7 @@
 #       ダメージを与えたいエンティティ
 #   score vp.reg1
 #       現在のHP
-#   score vp.reg2
+#   score vp.input
 #       与えたいダメージ
 #
 # @output
@@ -17,6 +17,6 @@
 # @within function weapon:**
 #
 
-#execute as @s[scores={defence=1..}] run scoreboard players operation @s vp.reg2 /= @s defence
-scoreboard players operation @s vp.reg1 -= @s vp.reg2
+#execute as @s[scores={defence=1..}] run scoreboard players operation @s vp.input /= @s defence
+scoreboard players operation @s vp.reg1 -= @s vp.input
 execute as @s[scores={vp.reg1=..-1}] run scoreboard players set @s vp.reg1 0

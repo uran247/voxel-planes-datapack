@@ -34,11 +34,8 @@ execute as @a if score @s vp.plane-id = #bullet-id vp.reg1 run tag @s add weapon
 
 #通常エンティティのダメージ後の体力計算
 execute as @e[tag=hit-weapon,tag=!plane-hitbox,distance=..20] run function weapon:util/set-entity-hp
-scoreboard players operation @e[type=!player,tag=hit-weapon,tag=!plane-hitbox,distance=..20] vp.reg2 = @s vp.damage
+scoreboard players operation @e[type=!player,tag=hit-weapon,distance=..20] vp.input = @s vp.damage
 execute as @e[type=!player,tag=hit-weapon,tag=!plane-hitbox,distance=..20] run function weapon:util/calc-entity-damage
-
-#hit-boxのダメージ後の体力計算
-execute if entity @e[type=!player,tag=hit-weapon,tag=plane-hitbox,distance=..20] run scoreboard players operation #dmg vp.input = @s vp.damage
 execute as @e[type=!player,tag=hit-weapon,tag=plane-hitbox,distance=..20] run function weapon:util/calc-hitbox-damage
 
 #メッセージ表示(tellraw)とダメージエフェクト

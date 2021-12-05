@@ -4,6 +4,7 @@
 #
 # @input
 #   executer @e[type=!player,tag=hit-weapon,tag=plane-hitbox,distance=..20]
+#   score @s vp.input #ダメージ量
 #
 # @within function weapon:**
 #
@@ -36,7 +37,7 @@ execute if entity @s[tag=elevator-l] store result score #current-hp vp.reg1 run 
 execute if entity @s[tag=radder] store result score #current-hp vp.reg1 run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.radder.hp
 
 #ダメージを与える
-scoreboard players operation #current-hp vp.reg1 -= #dmg vp.input
+scoreboard players operation #current-hp vp.reg1 -= @s vp.input
 execute if score #current-hp vp.reg1 matches ..-1 run scoreboard players set #current-hp vp.reg1 0
 
 execute if entity @s[tag=body] store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.body.hp double 1 run scoreboard players get #current-hp vp.reg1
