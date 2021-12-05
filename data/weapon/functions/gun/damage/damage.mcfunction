@@ -16,7 +16,7 @@
 #   function weapon:gun/damage/**
 #   function weapon:util/**
     #declare tag enemy-target #撃墜するとメッセージが出るターゲットを示す
-    #declare tag bullet-owner #銃弾を発射したプレイヤーを示す
+    #declare tag weapon-owner #銃弾を発射したプレイヤーを示す
     #declare score_holder #dmg #銃弾のダメージ
 
 #> private
@@ -30,7 +30,7 @@
 #弾丸のplane-id記憶
 scoreboard players operation #bullet-id vp.reg1 = @s vp.plane-id
 #射手判定
-execute as @a if score @s vp.plane-id = #bullet-id vp.reg1 run tag @s add bullet-owner
+execute as @a if score @s vp.plane-id = #bullet-id vp.reg1 run tag @s add weapon-owner
 
 #通常エンティティのダメージ後の体力計算
 execute as @e[tag=hit-weapon,tag=!plane-hitbox,distance=..20] run function weapon:util/set-entity-hp
@@ -45,7 +45,7 @@ execute as @e[type=!player,tag=hit-weapon,tag=plane-hitbox,distance=..20] run fu
 execute as @e[tag=hit-weapon,tag=plane-hitbox,tag=!cockpit,distance=..20] run function weapon:util/hit-hitbox-effect
 
 #撃墜者/クリアスコアをプラス
-#execute as @p[tag=bullet-owner] run function weapon:gun/damage/set-shotdown-score
+#execute as @p[tag=weapon-owner] run function weapon:gun/damage/set-shotdown-score
 
 #パイロットにダメージ判定
 execute if entity @e[tag=hit-weapon,tag=cockpit,distance=..20] run function weapon:util/pilot-damage
@@ -70,4 +70,4 @@ kill @e[tag=hit-weapon,tag=enemy-target,scores={vp.reg1=0},distance=..20]
 #tellraw @p [{"nbt":"Tags","entity":"@e[tag=hit-weapon,distance=..20,limit=1]"}] 
 
 #タグ除去
-tag @a remove bullet-owner
+tag @a remove weapon-owner

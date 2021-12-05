@@ -1,6 +1,6 @@
 #> weapon:aagun/damage/set-shotdown-score
 #
-#入力：@p[tag=bullet-owner]
+#入力：@p[tag=weapon-owner]
 #処理：撃破したエンティティを数えて撃墜スコアを増やす
 #戻り：
 

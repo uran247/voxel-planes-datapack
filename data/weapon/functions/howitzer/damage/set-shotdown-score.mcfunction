@@ -1,5 +1,5 @@
-#
-#入力：@p[tag=bomb-owner]
+#> weapon:howitzer/damage/set-shotdown-score
+#入力：@p[tag=weapon-owner]
 #処理：撃破したエンティティを数えて撃墜スコアを増やす
 #戻り：
 

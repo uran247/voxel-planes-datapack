@@ -18,7 +18,7 @@
 
 #> private
 # @private
-    #declare tag rocket-owner #ロケットを発射したプレイヤーを示す
+    #declare tag weapon-owner #ロケットを発射したプレイヤーを示す
     #
     #declare score_holder #rocket-id #ロケットのplane-id
     #declare score_holder #damage #与えるダメージ量 半径2増加するごとに半減
@@ -32,7 +32,7 @@
 #ロケットのplane-id記憶
 scoreboard players operation #rocket-id vp.reg1 = @s vp.plane-id
 #ロケットの投下主判定
-execute as @a if score @s vp.plane-id = #rocket-id vp.reg1 run tag @s add rocket-owner
+execute as @a if score @s vp.plane-id = #rocket-id vp.reg1 run tag @s add weapon-owner
 
 #### ダメージ判定 ####
 #hpからダメージを引く]
@@ -76,16 +76,16 @@ execute as @e[tag=!entity-nohit,distance=..16] run function weapon:util/calc-ent
 
 ### メッセージ処理 ###
 #メッセージを表示(title)
-title @p[tag=rocket-owner] times 0 20 20
+title @p[tag=weapon-owner] times 0 20 20
 #execute as @e[tag=!entity-nohit,scores={vp.reg1=0},distance=..16,sort=nearest,limit=1] run function weapon:rocket/damage/set-kill-mob-message
 #execute as @e[tag=enemy-target,tag=!entity-nohit,scores={vp.reg1=0},distance=..16,sort=nearest,limit=1] run function weapon:rocket/damage/set-kill-target-message
-execute if entity @e[tag=!entity-nohit,scores={vp.reg1=0},distance=..16] run title @p[tag=rocket-owner] title {"text":""}
+execute if entity @e[tag=!entity-nohit,scores={vp.reg1=0},distance=..16] run title @p[tag=weapon-owner] title {"text":""}
 #メッセージを表示(tellraw)
 #execute if entity @e[tag=!entity-nohit,distance=..16] run function weapon:rocket/damage/hit-message
 execute as @e[tag=plane-hitbox,scores={vp.reg1=0},distance=..16] run function weapon:util/destroy-hitbox-message
 
 #撃墜者/クリアスコアをプラス
-#execute as @p[tag=rocket-owner] run function weapon:rocket/damage/set-shotdown-score
+#execute as @p[tag=weapon-owner] run function weapon:rocket/damage/set-shotdown-score
 
 #ダメージ処理、破壊されたスポナーをキル(cockpitにはダメージを与えない)
 execute as @e[type=spawner_minecart,tag=!entity-nohit,distance=..16] store result entity @s MaxNearbyEntities short 1 run scoreboard players get @s vp.reg1
@@ -101,7 +101,7 @@ execute if score @s vp.weight matches 0..99 at @s run particle minecraft:flame ^
 
 #音
 execute at @s run playsound minecraft:entity.generic.explode master @a ~ ~ ~ 3 1.2 0
-execute at @s as @a[tag=rocket-owner] at @s run playsound minecraft:entity.generic.explode master @s ~ ~ ~ 1 1.2 0
+execute at @s as @a[tag=weapon-owner] at @s run playsound minecraft:entity.generic.explode master @s ~ ~ ~ 1 1.2 0
 
 #タグ除去
-tag @a remove rocket-owner
+tag @a remove weapon-owner

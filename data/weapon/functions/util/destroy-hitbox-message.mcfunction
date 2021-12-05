@@ -22,8 +22,8 @@ execute at @e[tag=plane-root,tag=parts-owner,distance=..32,limit=1] as @e[tag=pl
 
 #機体破壊判定
 execute as @e[tag=plane-root,tag=parts-owner,distance=..32] at @s run function weapon:util/parts-health
-execute if entity @e[tag=plane-root,tag=parts-owner,tag=destroyed,distance=..32] run title @p[tag=bullet-owner] subtitle {"text":"敵機を撃墜","color":"gold","italic":true}
-execute if entity @e[tag=plane-root,tag=parts-owner,tag=!destroyed,distance=..32] run title @p[tag=bullet-owner] subtitle {"text":"クリティカルヒット","color":"white","italic":true}
+execute if entity @e[tag=plane-root,tag=parts-owner,tag=destroyed,distance=..32] run title @p[tag=weapon-owner] subtitle {"text":"敵機を撃墜","color":"gold","italic":true}
+execute if entity @e[tag=plane-root,tag=parts-owner,tag=!destroyed,distance=..32] run title @p[tag=weapon-owner] subtitle {"text":"クリティカルヒット","color":"white","italic":true}
 
 #破壊された飛行機の搭乗者へメッセージ
 execute if entity @s[tag=engine] run tellraw @p[tag=parts-owner] [{"text":"エンジンが破壊されました","color":"dark_red"}]
