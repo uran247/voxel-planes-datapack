@@ -72,7 +72,6 @@ scoreboard players operation #damage vp.reg1 /= #2 vp.Num
 scoreboard players operation @e[tag=!entity-nohit,distance=..30] vp.input += #damage vp.reg1
 scoreboard players operation #damage vp.reg1 /= #2 vp.Num
 scoreboard players operation @e[tag=!entity-nohit,distance=..32] vp.input += #damage vp.reg1
-#execute as @e[tag=!entity-nohit,distance=..32] run function weapon:util/calc-entity-damage
 execute as @e[type=!player,tag=!plane-hitbox,tag=!entity-nohit,distance=..32] if score @s vp.input matches 1.. run function weapon:util/calc-entity-damage
 execute as @e[type=!player,tag=plane-hitbox,tag=!entity-nohit,distance=..32] if score @s vp.input matches 1.. run function weapon:util/calc-hitbox-damage
 
