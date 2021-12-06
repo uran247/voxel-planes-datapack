@@ -19,14 +19,6 @@
 summon minecraft:armor_stand ~ ~ ~ {Invisible:1b,NoGravity:0b,Tags:[bf109g,plane-init,plane-root,plane,entity-nohit,need-calc-offset,delay-rotation,tier4],DisabledSlots:256}
 summon minecraft:armor_stand ~ ~ ~ {Invisible:1b,NoGravity:0b,Tags:[bf109g,plane-init,plane,entity-nohit,plane-seat],Passengers:[{id:"donkey",Attributes:[{Name:"generic.max_health",Base:20d}],Invulnerable:1b,DeathLootTable:"minecraft:entities/bat",SaddleItem:{id:"minecraft:saddle",Count:1b},Tame:1b,NoAI:1b,Silent:1b,ChestedHorse:1b,ActiveEffects:[{Id:14b,Amplifier:0b,Duration:1000000,ShowParticles:0b}],Tags:[bf109g,plane-init,plane,plane-seat,entity-nohit]}],DisabledSlots:256}
 summon armor_stand ~ ~ ~ {Tags:["plane-body","bf109g",plane-init,plane,has-model,model-changeable,entity-nohit],NoGravity:1b,Invisible:1b,HandItems:[{id:"minecraft:diamond_sword",Count:1b,tag:{CustomModelData:1,Unbreakable:1b}},{}],Pose:{LeftArm:[0f,0f,0f],RightArm:[-12f,0f,0f]},DisabledSlots:256}
-#summon armor_stand ~ ~ ~ {Tags:["bf109g",plane-init,plane,plane-hitbox,has-offset,body,offset-base],NoGravity:1b,Invisible:1b,Marker:1b,Health:330f,Attributes:[{Name:"generic.max_health",Base:330d}]}
-#summon armor_stand ~ ~ ~ {Tags:["bf109g",plane-init,plane,plane-hitbox,has-offset,engine,offset-base],NoGravity:1b,Invisible:1b,Marker:1b,Health:100f,Attributes:[{Name:"generic.max_health",Base:100d}]}
-#summon armor_stand ~ ~ ~ {Tags:["bf109g",plane-init,plane,plane-hitbox,has-offset,aileron-r,aileron,offset-base],NoGravity:1b,Invisible:1b,Marker:1b,Health:100f,Attributes:[{Name:"generic.max_health",Base:100d}]}
-#summon armor_stand ~ ~ ~ {Tags:["bf109g",plane-init,plane,plane-hitbox,has-offset,aileron-l,aileron,offset-base],NoGravity:1b,Invisible:1b,Marker:1b,Health:100f,Attributes:[{Name:"generic.max_health",Base:100d}]}
-#summon armor_stand ~ ~ ~ {Tags:["bf109g",plane-init,plane,plane-hitbox,has-offset,elevator-r,elevetor,offset-base],NoGravity:1b,Invisible:1b,Marker:1b,Health:100f,Attributes:[{Name:"generic.max_health",Base:100d}]}
-#summon armor_stand ~ ~ ~ {Tags:["bf109g",plane-init,plane,plane-hitbox,has-offset,elevator-l,elevetor,offset-base],NoGravity:1b,Invisible:1b,Marker:1b,Health:100f,Attributes:[{Name:"generic.max_health",Base:100d}]}
-#summon armor_stand ~ ~ ~ {Tags:["bf109g",plane-init,plane,plane-hitbox,has-offset,radder,offset-base],NoGravity:1b,Invisible:1b,Marker:1b,Health:100f,Attributes:[{Name:"generic.max_health",Base:100d}]}
-#summon armor_stand ~ ~ ~ {Tags:["bf109g",plane-init,plane,plane-hitbox,has-offset,cockpit,offset-base],NoGravity:1b,Invisible:1b,Marker:1b,Health:1024f,Attributes:[{Name:"generic.max_health",Base:1024d}]}
 
 #ID付与
 execute as @e[tag=plane-init,tag=plane-root,distance=..1,limit=1] at @s run function plane:summon/set-plane-id
