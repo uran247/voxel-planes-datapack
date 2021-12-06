@@ -50,6 +50,7 @@
                                 },
                                 {
                                     "function": "minecraft:set_contents",
+                                    "type": "shulker_box",
                                     "entries": [
                                         {
                                             "type": "minecraft:dynamic",
