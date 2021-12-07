@@ -71,8 +71,9 @@ execute at @s[tag=p38l] run function plane-data:p-38l/p38l-position
 execute at @s[tag=b17g] run function plane-data:b-17g/b-17g-position
 #execute as @s[tag=j100b] run function plane:position/j-100b-position
 
-#hitbox召喚
+#hitbox召喚/削除
 function plane:position/summon-hitbox
+function plane:position/delete-hitbox
 
 #武器召喚
 function plane:position/summon-weapon

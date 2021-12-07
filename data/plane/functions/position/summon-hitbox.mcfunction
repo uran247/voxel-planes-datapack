@@ -6,7 +6,6 @@
 # @within function plane:position/position
 #
 #> private
-   #declare score_holder #difficulty
    #declare score_holder #plane-id
 
 #HPがあるが存在しないパーツを召喚
