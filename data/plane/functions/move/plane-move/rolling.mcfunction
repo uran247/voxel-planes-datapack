@@ -38,6 +38,8 @@ scoreboard players operation #throttle vp.input = @s vp.throttle
 function plane:move/plane-move/set-base-accelerate
 scoreboard players operation #base-accelerate vp.reg1 = #base-accelerate vp.return
 
+#tellraw @p [{"score" : {"name":"@s", "objective":"vp.engine"}}]
+
 #減速量決定　#base-resistance vp.reg1に代入される
 scoreboard players operation #speed vp.input = @s vp.speed
 scoreboard players operation #max-speed vp.input = @s vp.max-speed

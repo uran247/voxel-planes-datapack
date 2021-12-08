@@ -46,3 +46,4 @@ execute unless score #ang-z vp.input matches 0 run scoreboard players operation 
 #scoreboard players operation #min-registance vp.reg1 = #resistance vp.input
 #scoreboard players operation #min-registance vp.reg1 /= #2 vp.Num
 #execute if score #base-resistance vp.return < #min-registance vp.reg1 run scoreboard players operation #base-resistance vp.return = #min-registance vp.reg1
+

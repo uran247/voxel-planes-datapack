@@ -25,6 +25,8 @@
 #scoreboard players operation #base-accelerate vp.return *= #throttle vp.input
 #scoreboard players operation #base-accelerate vp.return /= #20 vp.Num
 
+#tellraw @p [{"score" : {"name":"#thrust", "objective":"vp.input"}}]
+
 #現在の推力計算(recipro)
 scoreboard players set #base-accelerate vp.return 1837500
 scoreboard players operation #base-accelerate vp.return /= #weight vp.input

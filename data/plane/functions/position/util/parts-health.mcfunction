@@ -31,8 +31,10 @@ execute store success score @s vp.aileron unless data storage oh_my_dat: _[-4][-
 
 scoreboard players set @s vp.engine 0
 execute store success score @s vp.engine if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.engine unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.engine{hp:0d} run scoreboard players add @s vp.plane-parts 1
-execute store success score @s vp.engine if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.engine-r unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.engine-r{hp:0d} run scoreboard players add @s vp.plane-parts 1
-execute store success score @s vp.engine if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.engine-l unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.engine-l{hp:0d} run scoreboard players add @s vp.plane-parts 1
+execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.engine-r unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.engine-r{hp:0d} run scoreboard players add @s vp.plane-parts 1
+execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.engine-l unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.engine-l{hp:0d} run scoreboard players add @s vp.plane-parts 1
+execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.engine-r unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.engine-r{hp:0d} run scoreboard players add @s vp.engine 1
+execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.engine-l unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.engine-l{hp:0d} run scoreboard players add @s vp.engine 1
 
 #以下条件のどれかを満たしたら墜落タグ
 #生存パーツが5個以下　bodyが破損 aileronのどっちかが破損
