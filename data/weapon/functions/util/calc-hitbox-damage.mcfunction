@@ -50,6 +50,9 @@ execute if entity @s[tag=elevator-r] store result storage oh_my_dat: _[-4][-4][-
 execute if entity @s[tag=elevator-l] store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.elevator-l.hp double 1 run scoreboard players get #current-hp vp.reg1
 execute if entity @s[tag=radder] store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.radder.hp double 1 run scoreboard players get #current-hp vp.reg1
 
+execute if entity @s[tag=cockpit] run scoreboard players operation @p[tag=parts-owner] vp.taken-damage = @s vp.input
+execute if entity @s[tag=cockpit] as @p[tag=parts-owner] run function weapon:util/damage
+
 #機体破壊判定
 execute as @e[tag=plane-root,tag=parts-owner,distance=..32] at @s run function weapon:util/parts-health
 execute if score #current-hp vp.reg1 matches 0 run title @p[tag=weapon-owner] times 0 20 20
@@ -67,6 +70,9 @@ execute if score #current-hp vp.reg1 matches 0 if entity @s[tag=radder] run tell
 execute if score #current-hp vp.reg1 matches 0 if entity @s[tag=elevator-r] run tellraw @p[tag=parts-owner] [{"text":"エレベータが破壊されました","color":"dark_red"}]
 execute if score #current-hp vp.reg1 matches 0 if entity @s[tag=elevator-l] run tellraw @p[tag=parts-owner] [{"text":"エレベータが破壊されました","color":"dark_red"}]
 execute if score #current-hp vp.reg1 matches 0 if entity @s[tag=body] run tellraw @p[tag=parts-owner] [{"text":"機体が破壊されました","color":"dark_red"}]
+
+#飛行機の搭乗者へdamage effect
+effect give @p[tag=parts-owner] minecraft:instant_damage 1 126
 
 #タグ除去
 tag @a[tag=parts-owner] remove parts-owner

@@ -77,6 +77,13 @@ scoreboard players operation @e[tag=!entity-nohit,distance=..32] vp.input += #da
 execute as @e[type=!player,tag=!plane-hitbox,tag=!entity-nohit,distance=..32] if score @s vp.input matches 1.. run function weapon:util/calc-entity-damage
 execute as @e[type=!player,tag=plane-hitbox,tag=!entity-nohit,distance=..32] if score @s vp.input matches 1.. run function weapon:util/calc-hitbox-damage
 
+#スコアをエンティティのHPに反映
+execute as @e[type=!spawner_minecart,tag=!cockpit,tag=!entity-nohit,distance=..32] store result entity @s Health float 1 run scoreboard players get @s vp.reg1
+
+#飛行機に乗ってないプレイヤーにダメージ反映
+execute as @a[tag=!entity-nohit,distance=..32] run scoreboard players operation @s vp.taken-damage = @s vp.input
+execute as @a[tag=!entity-nohit,distance=..32] run function weapon:util/damage
+
 #撃墜者/クリアスコアをプラス
 #execute as @p[tag=weapon-owner] run function weapon:rocket/damage/set-shotdown-score
 
