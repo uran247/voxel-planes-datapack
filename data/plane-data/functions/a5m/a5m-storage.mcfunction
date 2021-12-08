@@ -20,8 +20,8 @@ data modify storage voxel-planes:plane a5m.plane-data.hp set value {engine:50d,b
 data modify storage voxel-planes:plane a5m.plane-data.hitbox set value {}
 data modify storage voxel-planes:plane a5m.plane-data.hitbox merge value {engine:{max-hp:50d,offset:[0d,-0.7d,2.7d]}}
 data modify storage voxel-planes:plane a5m.plane-data.hitbox merge value {aileron-r:{max-hp:50d,offset:[-3d,-0.9d,1.4d]},aileron-l:{max-hp:50d,offset:[3d,-0.9d,1.4d]}}
-data modify storage voxel-planes:plane a5m.plane-data.hitbox merge value {elevator-r:{max-hp:50d,offset:[-0.9d,-0.6d,-3.1d]},elevator-l:{max-hp:50d,offset:[0.9d,-0.6d,-3.1d]}}
-data modify storage voxel-planes:plane a5m.plane-data.hitbox merge value {radder:{max-hp:50d,offset:[0d,0.5d,-3.5d]}}
+data modify storage voxel-planes:plane a5m.plane-data.hitbox merge value {elevator-r:{max-hp:40d,offset:[-0.9d,-0.6d,-3.1d]},elevator-l:{max-hp:40d,offset:[0.9d,-0.6d,-3.1d]}}
+data modify storage voxel-planes:plane a5m.plane-data.hitbox merge value {radder:{max-hp:40d,offset:[0d,0.5d,-3.5d]}}
 data modify storage voxel-planes:plane a5m.plane-data.hitbox merge value {cockpit:{max-hp:50d,offset:[0d,0.5d,1.3d]}}
 data modify storage voxel-planes:plane a5m.plane-data.hitbox merge value {body:{max-hp:50d,offset:[0d,-0.5d,1d]}}
 
