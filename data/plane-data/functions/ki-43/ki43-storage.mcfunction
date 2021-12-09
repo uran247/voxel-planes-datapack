@@ -18,10 +18,11 @@ data modify storage voxel-planes:plane ki43.plane-data.model-data.body set value
 data modify storage voxel-planes:plane ki43.plane-data.model-data.landing-pitch set value -12.5
 data modify storage voxel-planes:plane ki43.plane-data.hp set value {engine:60d,body:60d,aileron:60d,elevetor:50d,radder:50d}
 data modify storage voxel-planes:plane ki43.plane-data.hitbox set value {}
-data modify storage voxel-planes:plane ki43.plane-data.hitbox merge value {engine:{offset:[0d,0.1d,1.5d]}}
-data modify storage voxel-planes:plane ki43.plane-data.hitbox merge value {aileron-r:{offset:[-3d,0d,0.1d]},aileron-l:{offset:[3d,0d,0.1d]}}
-data modify storage voxel-planes:plane ki43.plane-data.hitbox merge value {elevator-r:{offset:[-0.9d,0.3d,-5.4d]},elevator-l:{offset:[0.9d,0.3d,-5.4d]}}
-data modify storage voxel-planes:plane ki43.plane-data.hitbox merge value {radder:{offset:[0d,1d,-5.6d]}}
+data modify storage voxel-planes:plane ki43.plane-data.hitbox merge value {body:{max-hp:60d,offset:[0d,0d,0d]}}
+data modify storage voxel-planes:plane ki43.plane-data.hitbox merge value {engine:{max-hp:60d,offset:[0d,0.1d,1.5d]}}
+data modify storage voxel-planes:plane ki43.plane-data.hitbox merge value {aileron-r:{max-hp:60d,offset:[-3d,0d,0.1d]},aileron-l:{max-hp:60d,offset:[3d,0d,0.1d]}}
+data modify storage voxel-planes:plane ki43.plane-data.hitbox merge value {elevator-r:{max-hp:50d,offset:[-0.9d,0.3d,-5.4d]},elevator-l:{max-hp:50d,offset:[0.9d,0.3d,-5.4d]}}
+data modify storage voxel-planes:plane ki43.plane-data.hitbox merge value {radder:{max-hp:50d,offset:[0d,1d,-5.6d]}}
 data modify storage voxel-planes:plane ki43.plane-data.hitbox merge value {cockpit:{offset:[0d,0.8d,-0.2d]}}
 
 #デフォルト機銃データセット
