@@ -18,10 +18,11 @@ data modify storage voxel-planes:plane seafuryfb11.plane-data.model-data.body se
 data modify storage voxel-planes:plane seafuryfb11.plane-data.model-data.landing-pitch set value -14.0
 data modify storage voxel-planes:plane seafuryfb11.plane-data.hp set value {engine:220d,body:250d,aileron:200d,elevetor:200d,radder:210d}
 data modify storage voxel-planes:plane seafuryfb11.plane-data.hitbox set value {}
-data modify storage voxel-planes:plane seafuryfb11.plane-data.hitbox merge value {engine:{offset:[0d,0d,4.7d]}}
-data modify storage voxel-planes:plane seafuryfb11.plane-data.hitbox merge value {aileron-r:{offset:[-3.6d,-0.5d,2.5d]},aileron-l:{offset:[3.6d,-0.5d,2.5d]}}
-data modify storage voxel-planes:plane seafuryfb11.plane-data.hitbox merge value {elevator-r:{offset:[-1.2d,0.5d,-3.6d]},elevator-l:{offset:[1.2d,0.5d,-3.6d]}}
-data modify storage voxel-planes:plane seafuryfb11.plane-data.hitbox merge value {radder:{offset:[0d,1.6d,-4.0d]}}
+data modify storage voxel-planes:plane seafuryfb11.plane-data.hitbox merge value {body:{max-hp:250d,offset:[0d,0d,0d]}}
+data modify storage voxel-planes:plane seafuryfb11.plane-data.hitbox merge value {engine:{max-hp:220d,offset:[0d,0d,4.7d]}}
+data modify storage voxel-planes:plane seafuryfb11.plane-data.hitbox merge value {aileron-r:{max-hp:200d,offset:[-3.6d,-0.5d,2.5d]},aileron-l:{max-hp:200d,offset:[3.6d,-0.5d,2.5d]}}
+data modify storage voxel-planes:plane seafuryfb11.plane-data.hitbox merge value {elevator-r:{max-hp:200d,offset:[-1.2d,0.5d,-3.6d]},elevator-l:{max-hp:200d,offset:[1.2d,0.5d,-3.6d]}}
+data modify storage voxel-planes:plane seafuryfb11.plane-data.hitbox merge value {radder:{max-hp:210d,offset:[0d,1.6d,-4.0d]}}
 data modify storage voxel-planes:plane seafuryfb11.plane-data.hitbox merge value {cockpit:{offset:[0d,1d,1.8d]}}
 
 #デフォルト機銃データセット
