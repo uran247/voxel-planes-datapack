@@ -35,6 +35,7 @@
     #declare tag bf109g-spawner
     #declare tag ju87b-spawner
     #declare tag b17g-spawner
+    #declare tag meteorf8-spawner
 
 execute at @s[tag=a5m-spawner] as @p run function plane-data:a5m/a5m
 execute at @s[tag=d3a-spawner] as @p run function plane-data:d3a/d3a
@@ -62,5 +63,6 @@ execute at @s[tag=bf109g-spawner] as @p run function plane-data:bf109g/bf109g
 execute at @s[tag=ju87b-spawner] as @p run function plane-data:ju87b/ju87b
 execute at @s[tag=p38l-spawner] as @p run function plane-data:p-38l/p38l
 execute at @s[tag=b17g-spawner] as @p run function plane-data:b-17g/b-17g
+execute at @s[tag=meteorf8-spawner] as @p run function plane-data:meteor-f8/meteorf8
 
 kill @s

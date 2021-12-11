@@ -34,3 +34,4 @@ execute if entity @s[tag=bf109g] run function plane-data:bf109g/bf109g-equip
 #execute if entity @s[tag=p38l] run function plane-data:p-38l/p38l-equip
 execute if entity @s[tag=me262a1a] run function plane-data:me262a-1a/me262a1a-equip
 #execute if entity @s[tag=b17g] run function plane-data:b-17g/b17g-equip
+execute if entity @s[tag=meteorf8] run function plane-data:meteor-f8/meteorf8-equip
