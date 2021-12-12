@@ -31,5 +31,5 @@ data modify storage voxel-planes:weapon ki49.base.bomb.data.bombs append value {
 data modify storage voxel-planes:weapon ki49.base.bomb.data.bombs append value {kind:250kg,type:normal,offset:[0.5d,0d,4d],damage:1250,weight:250,cmd:77}
 data modify storage voxel-planes:weapon ki49.base.bomb.data.bombs append value {kind:250kg,type:normal,offset:[-0.5d,0d,2d],damage:1250,weight:250,cmd:77}
 data modify storage voxel-planes:weapon ki49.base.bomb.data.bombs append value {kind:250kg,type:normal,offset:[0.5d,0d,2d],damage:1250,weight:250,cmd:77}
-data modify storage voxel-planes:weapon ki49.additional.500kg set value [{kind:500kg,type:normal,offset:[0d,0d,1d],damage:2500,weight:500,cmd:118}]
-data modify storage voxel-planes:weapon ki49.additional.500kg append value {kind:500kg,type:normal,offset:[0d,0d,4d],damage:2500,weight:500,cmd:118}
+data modify storage voxel-planes:weapon ki49.additional.500kg set value [{kind:500kg,type:normal,offset:[0d,0d,1d],damage:2500,weight:500,cmd:105}]
+data modify storage voxel-planes:weapon ki49.additional.500kg append value {kind:500kg,type:normal,offset:[0d,0d,4d],damage:2500,weight:500,cmd:105}
