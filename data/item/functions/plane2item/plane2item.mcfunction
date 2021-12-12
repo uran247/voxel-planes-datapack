@@ -32,6 +32,7 @@ execute as @s[tag=ju87b] at @s run function plane-data:ju87b/ju87b-2-item
 execute as @s[tag=p38l] at @s run function plane-data:p-38l/p38l-2-item
 execute as @s[tag=b17g] at @s run function plane-data:b-17g/b17g-2-item
 execute as @s[tag=meteorf8] at @s run function plane-data:meteor-f8/meteorf8-2-item
+execute as @s[tag=sbd3] at @s run function plane-data:sbd-3/sbd3-2-item
 
 #ロバチェスト内のアイテム放出
 data merge block 0 1 0 {Items:[]}
