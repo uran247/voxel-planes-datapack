@@ -67,9 +67,9 @@ execute if score #hit-flag vp.reg1 matches 1.. at @e[tag=hit-weapon,distance=..2
 #y方向の速度更新
 scoreboard players remove @s vp.speedY 1
 
-#### ダメージ処理 ####
-#ダメージを与える
+#ダメージを与える/地形破壊
 execute if score #hit-flag vp.reg1 matches 1.. at @s run function weapon:dropping/damage/damage
+execute if score #destroy-terrain vp.config matches 1.. if score #hit-flag vp.reg1 matches 1.. at @s run function weapon:dropping/damage/destroy-terrain
 execute if score #hit-flag vp.reg1 matches 1.. run kill @s
 
 #向き修正

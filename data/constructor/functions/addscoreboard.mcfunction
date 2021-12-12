@@ -109,3 +109,6 @@ scoreboard objectives add vp.new-offsetZ dummy
 scoreboard objectives add vp.taken-damage dummy
 scoreboard objectives add vp.total-damage dummy
 scoreboard objectives add vp.shootdown dummy {"text":"スコア"}
+
+#設定関連
+scoreboard objectives add vp.config dummy
