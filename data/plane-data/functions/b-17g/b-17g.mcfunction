@@ -49,7 +49,6 @@ data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].plane-data set 
 data remove storage voxel-planes:input input
 data modify storage voxel-planes:input input set from storage voxel-planes:plane b17g.plane-data
 execute as @e[tag=plane-init,tag=plane-root,distance=..1] run function plane-data:util/set-plane-score
-execute as @e[tag=plane-init,tag=plane-hitbox,distance=..1] run function plane-data:util/set-hitbox-data
 execute as @e[tag=plane-init,tag=has-model,tag=has-offset,distance=..1] run function plane-data:util/set-model-offset
 execute as @e[type=donkey,tag=plane-init,distance=..1] run function plane-data:util/set-plane-maxhp
 
