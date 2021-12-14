@@ -1,6 +1,6 @@
 #> plane-data:f4u-1/f4u1-storage
 #
-# @within function constructor:addstorage
+# @within tag/function constructor:add-storage
 
 #ストレージリセット
 data modify storage voxel-planes:weapon f4u1 set value {base:{},additional:{}}

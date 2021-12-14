@@ -1,6 +1,6 @@
 #> plane-data:sbd-3/sbd3-storage
 #
-# @within function constructor:addstorage
+# @within tag/function constructor:add-storage
 
 #ストレージリセット
 data modify storage voxel-planes:weapon sbd3 set value {base:{},additional:{}}

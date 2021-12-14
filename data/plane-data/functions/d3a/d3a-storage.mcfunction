@@ -1,6 +1,6 @@
 #> plane-data:d3a/d3a-storage
 #
-# @within function constructor:addstorage
+# @within tag/function constructor:add-storage
 
 #ストレージリセット
 data modify storage voxel-planes:weapon d3a set value {base:{},additional:{}}

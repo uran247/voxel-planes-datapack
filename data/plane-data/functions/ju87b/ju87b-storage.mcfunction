@@ -1,6 +1,6 @@
 #> plane-data:ju87b/ju87b-storage
 #
-# @within function constructor:addstorage
+# @within tag/function constructor:add-storage
 
 #ストレージリセット
 data modify storage voxel-planes:weapon ju87b set value {base:{},additional:{}}

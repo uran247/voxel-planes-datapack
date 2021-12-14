@@ -1,6 +1,6 @@
 #> plane-data:p-38l/p38l-storage
 #
-# @within function constructor:addstorage
+# @within tag/function constructor:add-storage
 
 #ストレージリセット
 data modify storage voxel-planes:weapon p38l set value {base:{},additional:{}}

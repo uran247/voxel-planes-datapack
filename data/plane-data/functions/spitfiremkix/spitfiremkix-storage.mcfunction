@@ -1,6 +1,6 @@
 #> plane-data:spitfiremkix/spitfiremkix-storage
 #
-# @within function constructor:addstorage
+# @within tag/function constructor:add-storage
 
 #ストレージリセット
 data modify storage voxel-planes:weapon spitfiremkix set value {base:{},additional:{}}

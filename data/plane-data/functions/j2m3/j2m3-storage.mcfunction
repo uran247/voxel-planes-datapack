@@ -1,6 +1,6 @@
 #> plane-data:j2m3/j2m3-storage
 #
-# @within function constructor:addstorage
+# @within tag/function constructor:add-storage
 
 #ストレージリセット
 data modify storage voxel-planes:weapon j2m3 set value {base:{},additional:{}}

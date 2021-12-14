@@ -1,6 +1,6 @@
 #> plane-data:seafuryfb11/seafuryfb11-storage
 #
-# @within function constructor:addstorage
+# @within tag/function constructor:add-storage
 
 #ストレージリセット
 data modify storage voxel-planes:weapon seafuryfb11 set value {base:{},additional:{}}

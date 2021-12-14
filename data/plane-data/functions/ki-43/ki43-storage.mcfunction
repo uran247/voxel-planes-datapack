@@ -1,6 +1,6 @@
 #> plane-data:ki-43/ki43-storage
 #
-# @within function constructor:addstorage
+# @within tag/function constructor:add-storage
 
 #ストレージリセット
 data modify storage voxel-planes:weapon ki43 set value {base:{},additional:{}}

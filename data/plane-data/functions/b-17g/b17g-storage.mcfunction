@@ -1,6 +1,6 @@
 #> plane-data:b-17g/b17g-storage
 #
-# @within function constructor:addstorage
+# @within tag/function constructor:add-storage
 
 data modify storage voxel-planes:weapon b17g set value {base:{},additional:{}}
 data modify storage voxel-planes:plane b17g set value {}

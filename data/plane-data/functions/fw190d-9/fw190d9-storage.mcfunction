@@ -1,6 +1,6 @@
 #> plane-data:fw190d-9/fw190d9-storage
 #
-# @within function constructor:addstorage
+# @within tag/function constructor:add-storage
 
 #ストレージリセット
 data modify storage voxel-planes:weapon fw190d9 set value {base:{},additional:{}}

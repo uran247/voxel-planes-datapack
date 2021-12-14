@@ -1,6 +1,6 @@
 #> plane-data:d4y2/d4y2-storage
 #
-# @within function constructor:addstorage
+# @within tag/function constructor:add-storage
 
 #ストレージリセット
 data modify storage voxel-planes:weapon d4y2 set value {base:{},additional:{}}

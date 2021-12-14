@@ -1,6 +1,6 @@
 #> plane-data:g4m1/g4m1-storage
 #
-# @within function constructor:addstorage
+# @within tag/function constructor:add-storage
 
 #ストレージリセット
 data modify storage voxel-planes:weapon g4m1 set value {base:{},additional:{}}

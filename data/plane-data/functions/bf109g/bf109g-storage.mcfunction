@@ -1,6 +1,6 @@
 #> plane-data:bf109g/bf109g-storage
 #
-# @within function constructor:addstorage
+# @within tag/function constructor:add-storage
 
 #ストレージリセット
 data modify storage voxel-planes:weapon bf109g set value {base:{},additional:{}}

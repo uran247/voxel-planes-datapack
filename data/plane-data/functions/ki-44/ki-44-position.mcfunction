@@ -5,7 +5,7 @@
 # @input
 #   executer @e[tag=plane-root]
 #
-# @within function plane:position/position
+# @within plane:position/position-individual
 
 #> private
 # @private

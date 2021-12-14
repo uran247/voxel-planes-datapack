@@ -1,6 +1,6 @@
 #> plane-data:a6m5/a6m5-storage
 #
-# @within function constructor:addstorage
+# @within tag/function constructor:add-storage
 
 #ストレージリセット
 data modify storage voxel-planes:weapon a6m5 set value {base:{},additional:{}}

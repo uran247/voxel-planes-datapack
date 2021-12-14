@@ -5,7 +5,7 @@
 # @input
 #   executer @e[tag=plane-root]
 #
-# @within plane:position/position
+# @within plane:position/position-individual
 
 #seatの位置修正
 execute at @s[tag=has-rider] run tp @e[type=armor_stand,tag=plane-seat,tag=target-parts,distance=..32] ^ ^2.5 ^-5

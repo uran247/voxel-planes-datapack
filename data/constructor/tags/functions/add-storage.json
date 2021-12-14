@@ -1,0 +1,31 @@
+{
+    "values": [
+        "plane-data:a5m/a5m-storage",
+        "plane-data:a6m2/a6m2-storage",
+        "plane-data:a6m5/a6m5-storage",
+        "plane-data:d3a/d3a-storage",
+        "plane-data:d4y2/d4y2-storage",
+        "plane-data:f4u-1/f4u1-storage",
+        "plane-data:fw190d-9/fw190d9-storage",
+        "plane-data:g4m1/g4m1-storage",
+        "plane-data:j2m3/j2m3-storage",
+        "plane-data:ki-21/ki21-storage",
+        "plane-data:ki-43/ki43-storage",
+        "plane-data:ki-44/ki44-storage",
+        "plane-data:ki-61/ki61-storage",
+        "plane-data:n1k2/n1k2-storage",
+        "plane-data:ki-49/ki49-storage",
+        "plane-data:swordfish/swordfish-storage",
+        "plane-data:spitfiremkix/spitfiremkix-storage",
+        "plane-data:fireflymkv/fireflymkv-storage",
+        "plane-data:seafuryfb11/seafuryfb11-storage",
+        "plane-data:pe-2/pe2-storage",
+        "plane-data:bf109g/bf109g-storage",
+        "plane-data:ju87b/ju87b-storage",
+        "plane-data:p-38l/p38l-storage",
+        "plane-data:me262a-1a/me262a1a-storage",
+        "plane-data:b-17g/b17g-storage",
+        "plane-data:meteor-f8/meteorf8-storage",
+        "plane-data:sbd-3/sbd3-storage"
+    ]
+}

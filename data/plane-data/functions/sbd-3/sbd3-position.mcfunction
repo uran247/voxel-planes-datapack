@@ -1,11 +1,11 @@
-#> plane-data:d3a/d3a-position
+#> plane-data:sbd-3/sbd3-position
 #
 # plane-seatの位置を調整する
 #
 # @input
 #   executer @e[tag=plane-root]
 #
-# @within plane:position/position
+# @within plane:position/position-individual
 
 #> private
 # @private

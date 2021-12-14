@@ -1,6 +1,6 @@
 #> plane-data:n1k2/n1k2-storage
 #
-# @within function constructor:addstorage
+# @within tag/function constructor:add-storage
 
 #ストレージリセット
 data modify storage voxel-planes:weapon n1k2 set value {base:{},additional:{}}

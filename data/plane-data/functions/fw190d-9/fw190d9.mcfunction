@@ -17,6 +17,9 @@
     #declare tag fw190d9
     #declare tag plane-init #初期化処理中のエンティティであることを示す
 
+#> spwn
+# @within function plane:summon/summon-plane
+    #declare tag fw190d9-spawner
 
 #機体召喚
 summon minecraft:armor_stand ~ ~ ~ {Invisible:1b,NoGravity:0b,Tags:[fw190d9,plane-init,plane-root,plane,entity-nohit,need-calc-offset,delay-rotation,tier4],DisabledSlots:256}

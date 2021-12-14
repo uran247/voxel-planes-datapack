@@ -1,6 +1,6 @@
 #> plane-data:meteor-f8/meteorf8-storage
 #
-# @within function constructor:addstorage
+# @within tag/function constructor:add-storage
 
 #ストレージリセット
 data modify storage voxel-planes:weapon meteorf8 set value {base:{},additional:{}}

@@ -1,6 +1,6 @@
 #> plane-data:me262a-1a/me262a1a-storage
 #
-# @within function constructor:addstorage
+# @within tag/function constructor:add-storage
 
 #ストレージリセット
 data modify storage voxel-planes:weapon me262a1a set value {base:{},additional:{}}

@@ -1,6 +1,6 @@
 #> plane-data:pe-2/pe2-storage
 #
-# @within function constructor:addstorage
+# @within tag/function constructor:add-storage
 
 data modify storage voxel-planes:weapon pe2 set value {base:{},additional:{}}
 data modify storage voxel-planes:plane pe2 set value {}

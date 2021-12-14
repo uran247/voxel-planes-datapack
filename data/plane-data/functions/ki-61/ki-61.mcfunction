@@ -14,6 +14,10 @@
 # @private
     #declare tag plane-init #初期化処理中のエンティティであることを示す
 
+#> spwn
+# @within function plane:summon/summon-plane
+    #declare tag ki61-spawner
+
 #機体召喚
 summon minecraft:armor_stand ~ ~ ~ {Invisible:1b,NoGravity:0b,Tags:[ki61,plane-init,plane-root,plane,entity-nohit,need-calc-offset,delay-rotation,tier3],DisabledSlots:256}
 summon minecraft:armor_stand ~ ~ ~ {Invisible:1b,NoGravity:0b,Tags:[ki61,plane-init,plane,entity-nohit,plane-seat],Passengers:[{id:"donkey",Attributes:[{Name:"generic.max_health",Base:20d}],Invulnerable:1b,DeathLootTable:"minecraft:entities/bat",SaddleItem:{id:"minecraft:saddle",Count:1b},Tame:1b,NoAI:1b,Silent:1b,ChestedHorse:1b,ActiveEffects:[{Id:14b,Amplifier:0b,Duration:1000000,ShowParticles:0b}],Tags:[ki61,plane-init,plane,plane-seat,entity-nohit]}],DisabledSlots:256}
