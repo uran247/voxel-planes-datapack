@@ -34,3 +34,4 @@ execute at @s[tag=b17g] run function plane-data:b-17g/b-17g-position
 execute at @s[tag=meteorf8] run function plane-data:meteor-f8/meteorf8-position
 execute at @s[tag=sbd3] run function plane-data:sbd-3/sbd3-position
 #execute as @s[tag=j100b] run function plane:position/j-100b-position
+execute as @s[tag=p47d] run function plane-data:p47d/p47d-position

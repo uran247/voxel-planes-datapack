@@ -38,7 +38,7 @@ execute as @s at @s run function plane:position/position
 function plane:weapon/weapon-manager
 
 #装備管理
-execute if entity @a[tag=plane-pilot,tag=change-inventory] at @s[scores={vp.speed=..0}] run function plane:equip/equip-manager
+execute if entity @a[tag=plane-pilot,tag=change-inventory] at @s[tag=!engine-started,scores={vp.speed=..0}] run function plane:equip/equip-manager
 tag @a[tag=plane-pilot,tag=change-inventory] remove change-inventory
 
 #装備変更
