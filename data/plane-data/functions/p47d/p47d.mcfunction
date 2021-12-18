@@ -15,7 +15,7 @@
     #declare tag plane-init #初期化処理中のエンティティであることを示す
 
 #> spwn
-# @within function plane:summon/spawner-manager
+# @within function plane:summon/summon-plane
     #declare tag p47d-spawner
 
 #機体召喚

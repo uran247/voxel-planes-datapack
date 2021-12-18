@@ -30,3 +30,4 @@ execute at @s[tag=p38l-spawner] as @p run function plane-data:p-38l/p38l
 execute at @s[tag=b17g-spawner] as @p run function plane-data:b-17g/b-17g
 execute at @s[tag=meteorf8-spawner] as @p run function plane-data:meteor-f8/meteorf8
 execute at @s[tag=sbd3-spawner] as @p run function plane-data:sbd-3/sbd3
+execute at @s[tag=p47d-spawner] as @p run function plane-data:p47d/p47d
