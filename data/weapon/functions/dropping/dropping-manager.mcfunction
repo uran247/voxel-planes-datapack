@@ -26,6 +26,7 @@ tag @s add bomb-move-executer
 
 # ブロックチェッカー初期化
 execute positioned 0.0 1.0 0.0 unless entity @e[tag=block-checker,distance=..0.01] run tp @e[tag=block-checker] 0.0 1.0 0.0
+execute positioned 0.0 1.0 0.0 unless entity @e[tag=block-checker,distance=..0.01] run kill @e[type=marker,tag=block-checker]
 execute positioned 0.0 1.0 0.0 unless entity @e[tag=block-checker,distance=..0.01] run summon minecraft:marker 0.0 1.0 0.0 {Tags:[entity-nohit,dummy-entity,block-checker]}
 execute positioned 0.0 1.0 0.0 unless entity @e[tag=block-checker,distance=..0.01] run kill @s
 
@@ -89,4 +90,4 @@ tag @e[tag=hit-on-line,distance=..21] remove hit-on-line
 kill @s[scores={vp.age=0}]
 
 #エンティティ返却
-tp @e[tag=block-checker,distance=..26] 0 1 0
+tp @e[tag=block-checker,distance=..26] 0.0 1.0 0.0

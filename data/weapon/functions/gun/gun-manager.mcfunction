@@ -36,6 +36,7 @@ scoreboard players set #hit-flag vp.reg1 0
 
 # ブロックチェッカー初期化
 execute positioned 0.0 1.0 0.0 unless entity @e[tag=block-checker,distance=..0.01] run tp @e[tag=block-checker] 0.0 1.0 0.0
+execute positioned 0.0 1.0 0.0 unless entity @e[tag=block-checker,distance=..0.01] run kill @e[type=marker,tag=block-checker]
 execute positioned 0.0 1.0 0.0 unless entity @e[tag=block-checker,distance=..0.01] run summon minecraft:marker 0.0 1.0 0.0 {Tags:[entity-nohit,dummy-entity,block-checker]}
 execute positioned 0.0 1.0 0.0 unless entity @e[tag=block-checker,distance=..0.01] run kill @s
 

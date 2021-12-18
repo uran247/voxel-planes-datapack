@@ -9,8 +9,8 @@ execute in overworld run forceload add 0 0
 execute in the_nether run forceload add 0 0
 execute in the_end run forceload add 0 0
 
-kill @e[type=armor_stand,tag=block-detector]
-kill @e[type=armor_stand,tag=dummy-entity]
+kill @e[type=marker,tag=block-checker]
+kill @e[type=marker,tag=dummy-entity]
 summon minecraft:marker 0.0 1.0 0.0 {Tags:[entity-nohit,dummy-entity],UUID:[I;0,0,0,1]} 
 summon minecraft:marker 0.0 1.0 0.0 {Tags:[entity-nohit,dummy-entity],UUID:[I;0,0,0,2]}
 summon minecraft:marker 0.0 1.0 0.0 {Tags:[entity-nohit,dummy-entity],UUID:[I;0,0,0,3]}
@@ -23,8 +23,8 @@ summon minecraft:marker 0.0 1.0 0.0 {Tags:[entity-nohit,dummy-entity],UUID:[I;0,
 summon minecraft:marker 0.0 1.0 0.0 {Tags:[entity-nohit,dummy-entity],UUID:[I;0,0,0,10]}
 summon minecraft:marker 0.0 1.0 0.0 {Tags:[entity-nohit,dummy-entity],UUID:[I;0,0,0,11]}
 
-kill @e[type=armor_stand,tag=Trigonometric]
-kill @e[type=armor_stand,tag=Trigonometric2]
+kill @e[type=marker,tag=Trigonometric]
+kill @e[type=marker,tag=Trigonometric2]
 summon minecraft:marker -0.5 0 -0.5 {Tags:[Trigonometric],UUID:[I;0,0,0,32]}
 summon minecraft:marker 0.0 0.0 0.0 {Tags:[Trigonometric2],UUID:[I;0,0,0,33]}
 setblock 0 1 0 shulker_box
