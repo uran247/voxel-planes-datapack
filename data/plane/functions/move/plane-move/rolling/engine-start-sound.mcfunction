@@ -4,8 +4,8 @@
 #
 # @within function plane:move/plane-move/rolling
 
-#> private
-# @private
+#> tag
+# @public
         #declare tag engine-started #エンジンスタート後であるかを示す
 
 #エンジン始動音を鳴らす
