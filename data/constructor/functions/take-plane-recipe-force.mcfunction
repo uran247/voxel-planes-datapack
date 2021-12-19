@@ -21,3 +21,4 @@ recipe take @a plane-data:plane/bf109g-recipe
 recipe take @a plane-data:plane/ju87b-recipe
 recipe take @a plane-data:plane/me262a1a-recipe
 recipe take @a plane-data:plane/p47d-recipe
+recipe take @a plane-data:plane/sbd-3-recipe
