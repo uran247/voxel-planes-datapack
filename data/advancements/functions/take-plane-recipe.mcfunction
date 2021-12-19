@@ -20,3 +20,4 @@ recipe take @s[advancements={plane-data:crafting/plane/seafuryfb11=true}] plane-
 recipe take @s[advancements={plane-data:crafting/plane/bf109g=true}] plane-data:plane/bf109g-recipe
 recipe take @s[advancements={plane-data:crafting/plane/ju87b=true}] plane-data:plane/ju87b-recipe
 recipe take @s[advancements={plane-data:crafting/plane/me262a1a=true}] plane-data:plane/me262a1a-recipe
+recipe take @s[advancements={plane-data:crafting/plane/p47d=true}] plane-data:plane/p47d-recipe
