@@ -1,4 +1,4 @@
-#> plane-data:bf109g/bf109g-position
+#> plane-data:p-38l/p38l-position
 #
 # plane-seatの位置を調整する
 #
