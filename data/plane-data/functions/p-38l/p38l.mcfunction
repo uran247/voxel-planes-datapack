@@ -26,14 +26,6 @@ summon minecraft:armor_stand ~ ~ ~ {Invisible:1b,NoGravity:0b,Tags:[p38l,plane-i
 summon minecraft:armor_stand ~ ~ ~ {Invisible:1b,NoGravity:0b,Tags:[p38l,plane-init,plane,entity-nohit,plane-seat],Passengers:[{id:"donkey",Attributes:[{Name:"generic.max_health",Base:20d}],Invulnerable:1b,DeathLootTable:"minecraft:entities/bat",SaddleItem:{id:"minecraft:saddle",Count:1b},Tame:1b,NoAI:1b,Silent:1b,ChestedHorse:1b,ActiveEffects:[{Id:14b,Amplifier:0b,Duration:1000000,ShowParticles:0b}],Tags:[p38l,plane-init,plane,plane-seat,entity-nohit]}],DisabledSlots:256}
 summon armor_stand ~ ~ ~ {Tags:["plane-body","p38l",plane-init,plane,has-model,model-changeable,entity-nohit],NoGravity:1b,Invisible:1b,HandItems:[{id:"minecraft:diamond_sword",Count:1b,tag:{CustomModelData:1,Unbreakable:1b}},{}],Pose:{LeftArm:[0f,0f,0f],RightArm:[-12f,0f,0f]},DisabledSlots:256}
 summon armor_stand ~ ~ ~ {Tags:["plane-rightwing","p38l",plane-init,plane,has-model,plane-parts,entity-nohit],NoGravity:1b,Invisible:1b,HandItems:[{id:"minecraft:diamond_sword",Count:1b,tag:{CustomModelData:147,Unbreakable:1b}},{}],Pose:{LeftArm:[0f,0f,0f],RightArm:[0f,0f,0f]},DisabledSlots:256}
-summon armor_stand ~ ~ ~ {Tags:["p38l",plane-init,plane,plane-hitbox,has-offset,body,offset-base],NoGravity:1b,Invisible:1b,Marker:1b,Health:330f,Attributes:[{Name:"generic.max_health",Base:330d}]}
-summon armor_stand ~ ~ ~ {Tags:["p38l",plane-init,plane,plane-hitbox,has-offset,engine,offset-base],NoGravity:1b,Invisible:1b,Marker:1b,Health:100f,Attributes:[{Name:"generic.max_health",Base:100d}]}
-summon armor_stand ~ ~ ~ {Tags:["p38l",plane-init,plane,plane-hitbox,has-offset,aileron-r,aileron,offset-base],NoGravity:1b,Invisible:1b,Marker:1b,Health:100f,Attributes:[{Name:"generic.max_health",Base:100d}]}
-summon armor_stand ~ ~ ~ {Tags:["p38l",plane-init,plane,plane-hitbox,has-offset,aileron-l,aileron,offset-base],NoGravity:1b,Invisible:1b,Marker:1b,Health:100f,Attributes:[{Name:"generic.max_health",Base:100d}]}
-summon armor_stand ~ ~ ~ {Tags:["p38l",plane-init,plane,plane-hitbox,has-offset,elevator-r,elevetor,offset-base],NoGravity:1b,Invisible:1b,Marker:1b,Health:100f,Attributes:[{Name:"generic.max_health",Base:100d}]}
-summon armor_stand ~ ~ ~ {Tags:["p38l",plane-init,plane,plane-hitbox,has-offset,elevator-l,elevetor,offset-base],NoGravity:1b,Invisible:1b,Marker:1b,Health:100f,Attributes:[{Name:"generic.max_health",Base:100d}]}
-summon armor_stand ~ ~ ~ {Tags:["p38l",plane-init,plane,plane-hitbox,has-offset,radder,offset-base],NoGravity:1b,Invisible:1b,Marker:1b,Health:100f,Attributes:[{Name:"generic.max_health",Base:100d}]}
-summon armor_stand ~ ~ ~ {Tags:["p38l",plane-init,plane,plane-hitbox,has-offset,cockpit,offset-base],NoGravity:1b,Invisible:1b,Marker:1b,Health:1024f,Attributes:[{Name:"generic.max_health",Base:1024d}]}
 
 #ID付与
 execute as @e[tag=plane-init,tag=plane-root,distance=..1,limit=1] at @s run function plane:summon/set-plane-id
@@ -42,11 +34,11 @@ execute as @e[tag=plane-init,tag=plane-root,distance=..1,limit=1] at @s run func
 execute as @e[tag=plane-init,tag=plane-root,distance=..1] run function oh_my_dat:please
 
 #飛行機データのストレージ設定
-data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].plane-data set from storage voxel-planes:plane p38l.plane-data
-
-#飛行スコアセット
 data remove storage voxel-planes:input input
 data modify storage voxel-planes:input input set from storage voxel-planes:plane p38l.plane-data
+function plane-data:util/set-plane-sotrage
+
+#飛行スコアセット
 execute as @e[tag=plane-init,tag=plane-root,distance=..1] run function plane-data:util/set-plane-score
 execute as @e[type=donkey,tag=plane-init,distance=..1] run function plane-data:util/set-plane-maxhp
 
@@ -54,7 +46,7 @@ execute as @e[type=donkey,tag=plane-init,distance=..1] run function plane-data:u
 data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon set value {current-weapon-index:0}
 data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list set value []
 data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list append from storage voxel-planes:weapon p38l.base.20mm
-data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list append from storage voxel-planes:weapon p38l.base.13mm
+data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list append from storage voxel-planes:weapon p38l.base.12p7mm
 
 #プレイヤーと同じAngYにする
 schedule function plane:summon/util/delay-rotation 2
