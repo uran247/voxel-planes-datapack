@@ -26,9 +26,12 @@
     #declare tag aileron-r #右主翼の当たり判定であることを示す
     #declare tag aileron-l #左主翼の当たり判定であることを示す
     #declare tag elevetor #水平尾翼の当たり判定であることを示す
+    #declare tag elevator #水平尾翼の当たり判定であることを示す
     #declare tag elevator-r #右水平尾翼の当たり判定であることを示す
     #declare tag elevator-l #左水平尾翼の当たり判定であることを示す
     #declare tag radder #垂直尾翼の当たり判定であることを示す
+    #declare tag radder-r #垂直尾翼の当たり判定であることを示す
+    #declare tag radder-l #垂直尾翼の当たり判定であることを示す
     #declare tag cockpit #コックピットの当たり判定であることを示す
     #declare tag plane #飛行機構成エンティティであることを示す
     #declare tag plane-bomb #爆弾であることを示す

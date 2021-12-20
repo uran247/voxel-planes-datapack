@@ -18,6 +18,7 @@ execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.engi
 execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.engine-l unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.engine-l{hp:0d} unless entity @e[tag=plane-hitbox,tag=engine-l,tag=target-parts,distance=..30] run summon armor_stand ~ ~ ~ {Tags:[plane-init,target-parts,plane,plane-hitbox,engine-l,has-offset,offset-base],NoGravity:1b,Invisible:1b,Marker:1b,Health:1000f,Attributes:[{Name:"generic.max_health",Base:1000d}]}
 
 #elevator
+execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.elevator unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.elevator{hp:0d} unless entity @e[tag=plane-hitbox,tag=elevator,tag=target-parts,distance=..30] run summon armor_stand ~ ~ ~ {Tags:[plane-init,target-parts,plane,plane-hitbox,elevator,has-offset,offset-base],NoGravity:1b,Invisible:1b,Marker:1b,Health:1000f,Attributes:[{Name:"generic.max_health",Base:1000d}]}
 execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.elevator-r unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.elevator-r{hp:0d} unless entity @e[tag=plane-hitbox,tag=elevator-r,tag=target-parts,distance=..30] run summon armor_stand ~ ~ ~ {Tags:[plane-init,target-parts,plane,plane-hitbox,elevator-r,has-offset,offset-base],NoGravity:1b,Invisible:1b,Marker:1b,Health:1000f,Attributes:[{Name:"generic.max_health",Base:1000d}]}
 execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.elevator-l unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.elevator-l{hp:0d} unless entity @e[tag=plane-hitbox,tag=elevator-l,tag=target-parts,distance=..30] run summon armor_stand ~ ~ ~ {Tags:[plane-init,target-parts,plane,plane-hitbox,elevator-l,has-offset,offset-base],NoGravity:1b,Invisible:1b,Marker:1b,Health:1000f,Attributes:[{Name:"generic.max_health",Base:1000d}]}
 
@@ -27,6 +28,8 @@ execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.aile
 
 #radder
 execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.radder unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.radder{hp:0d} unless entity @e[tag=plane-hitbox,tag=radder,tag=target-parts,distance=..30] run summon armor_stand ~ ~ ~ {Tags:[plane-init,target-parts,plane,plane-hitbox,radder,has-offset,offset-base],NoGravity:1b,Invisible:1b,Marker:1b,Health:1000f,Attributes:[{Name:"generic.max_health",Base:1000d}]}
+execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.radder-r unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.radder-r{hp:0d} unless entity @e[tag=plane-hitbox,tag=radder-r,tag=target-parts,distance=..30] run summon armor_stand ~ ~ ~ {Tags:[plane-init,target-parts,plane,plane-hitbox,radder-r,has-offset,offset-base],NoGravity:1b,Invisible:1b,Marker:1b,Health:1000f,Attributes:[{Name:"generic.max_health",Base:1000d}]}
+execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.radder-l unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.radder-l{hp:0d} unless entity @e[tag=plane-hitbox,tag=radder-l,tag=target-parts,distance=..30] run summon armor_stand ~ ~ ~ {Tags:[plane-init,target-parts,plane,plane-hitbox,radder-l,has-offset,offset-base],NoGravity:1b,Invisible:1b,Marker:1b,Health:1000f,Attributes:[{Name:"generic.max_health",Base:1000d}]}
 
 #cockpit
 execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.cockpit unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.cockpit{hp:0d} unless entity @e[tag=plane-hitbox,tag=cockpit,tag=target-parts,distance=..30] run summon armor_stand ~ ~ ~ {Tags:[plane-init,target-parts,plane,plane-hitbox,cockpit,has-offset,offset-base],NoGravity:1b,Invisible:1b,Marker:1b,Health:1000f,Attributes:[{Name:"generic.max_health",Base:1000d}]}
@@ -49,6 +52,9 @@ execute as @e[type=armor_stand,tag=plane-init,tag=engine-l,distance=..1,limit=1]
 
 #elevator
 data remove storage voxel-planes:input input
+data modify storage voxel-planes:input input set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.elevator
+execute as @e[type=armor_stand,tag=plane-init,tag=elevator,distance=..1,limit=1] run function plane:position/util/set-hitbox-data
+data remove storage voxel-planes:input input
 data modify storage voxel-planes:input input set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.elevator-r
 execute as @e[type=armor_stand,tag=plane-init,tag=elevator-r,distance=..1,limit=1] run function plane:position/util/set-hitbox-data
 data remove storage voxel-planes:input input
@@ -67,6 +73,12 @@ execute as @e[type=armor_stand,tag=plane-init,tag=aileron-l,distance=..1,limit=1
 data remove storage voxel-planes:input input
 data modify storage voxel-planes:input input set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.radder
 execute as @e[type=armor_stand,tag=plane-init,tag=radder,distance=..1,limit=1] run function plane:position/util/set-hitbox-data
+data remove storage voxel-planes:input input
+data modify storage voxel-planes:input input set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.radder-r
+execute as @e[type=armor_stand,tag=plane-init,tag=radder-r,distance=..1,limit=1] run function plane:position/util/set-hitbox-data
+data remove storage voxel-planes:input input
+data modify storage voxel-planes:input input set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.radder-l
+execute as @e[type=armor_stand,tag=plane-init,tag=radder-l,distance=..1,limit=1] run function plane:position/util/set-hitbox-data
 
 #cockpit
 data remove storage voxel-planes:input input

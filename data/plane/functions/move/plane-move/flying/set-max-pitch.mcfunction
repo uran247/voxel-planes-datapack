@@ -37,7 +37,7 @@ scoreboard players operation #yaw-speed vp.reg1 *= @s vp.weight
 scoreboard players operation #yaw-speed vp.reg1 /= #gross-weight vp.reg1
 
 #radder, pitch破損時補正
-execute if entity @s[scores={vp.elevetor=0}] run scoreboard players operation #max-pitch vp.return /= #2 vp.Num
+execute if entity @s[scores={vp.elevator=0}] run scoreboard players operation #max-pitch vp.return /= #2 vp.Num
 execute if entity @s[scores={vp.radder=0}] run scoreboard players operation #yaw-speed vp.reg1 /= #2 vp.Num
 
 #roll角に応じてpitchとyawをスワップ

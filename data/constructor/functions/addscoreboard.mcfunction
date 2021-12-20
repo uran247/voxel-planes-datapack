@@ -47,7 +47,7 @@ scoreboard objectives add vp.curr-weapon dummy
 scoreboard objectives add vp.rightClick minecraft.used:minecraft.carrot_on_a_stick
 scoreboard objectives add vp.plane-parts dummy
 scoreboard objectives add vp.radder dummy
-scoreboard objectives add vp.elevetor dummy
+scoreboard objectives add vp.elevator dummy
 scoreboard objectives add vp.aileron dummy
 scoreboard objectives add vp.engine dummy
 scoreboard objectives add vp.body dummy

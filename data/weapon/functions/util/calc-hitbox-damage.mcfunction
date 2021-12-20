@@ -32,9 +32,12 @@ execute if entity @s[tag=engine-r] store result score #current-hp vp.reg1 run da
 execute if entity @s[tag=engine-l] store result score #current-hp vp.reg1 run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.engine-l.hp
 execute if entity @s[tag=aileron-r] store result score #current-hp vp.reg1 run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.aileron-r.hp
 execute if entity @s[tag=aileron-l] store result score #current-hp vp.reg1 run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.aileron-l.hp
+execute if entity @s[tag=elevator] store result score #current-hp vp.reg1 run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.elevator.hp
 execute if entity @s[tag=elevator-r] store result score #current-hp vp.reg1 run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.elevator-r.hp
 execute if entity @s[tag=elevator-l] store result score #current-hp vp.reg1 run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.elevator-l.hp
 execute if entity @s[tag=radder] store result score #current-hp vp.reg1 run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.radder.hp
+execute if entity @s[tag=radder-r] store result score #current-hp vp.reg1 run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.radder-r.hp
+execute if entity @s[tag=radder-l] store result score #current-hp vp.reg1 run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.radder-l.hp
 
 #ダメージを与える
 scoreboard players operation #current-hp vp.reg1 -= @s vp.input
@@ -46,9 +49,12 @@ execute if entity @s[tag=engine-r] store result storage oh_my_dat: _[-4][-4][-4]
 execute if entity @s[tag=engine-l] store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.engine-l.hp double 1 run scoreboard players get #current-hp vp.reg1
 execute if entity @s[tag=aileron-r] store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.aileron-r.hp double 1 run scoreboard players get #current-hp vp.reg1
 execute if entity @s[tag=aileron-l] store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.aileron-l.hp double 1 run scoreboard players get #current-hp vp.reg1
+execute if entity @s[tag=elevator] store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.elevator.hp double 1 run scoreboard players get #current-hp vp.reg1
 execute if entity @s[tag=elevator-r] store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.elevator-r.hp double 1 run scoreboard players get #current-hp vp.reg1
 execute if entity @s[tag=elevator-l] store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.elevator-l.hp double 1 run scoreboard players get #current-hp vp.reg1
 execute if entity @s[tag=radder] store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.radder.hp double 1 run scoreboard players get #current-hp vp.reg1
+execute if entity @s[tag=radder-r] store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.radder-r.hp double 1 run scoreboard players get #current-hp vp.reg1
+execute if entity @s[tag=radder-l] store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.radder-l.hp double 1 run scoreboard players get #current-hp vp.reg1
 
 execute if entity @s[tag=cockpit] run scoreboard players operation @p[tag=parts-owner] vp.taken-damage = @s vp.input
 execute if entity @s[tag=cockpit] as @p[tag=parts-owner] run function weapon:util/damage
@@ -67,6 +73,9 @@ execute if score #current-hp vp.reg1 matches 0 if entity @s[tag=engine-l] run te
 execute if score #current-hp vp.reg1 matches 0 if entity @s[tag=aileron-r] run tellraw @p[tag=parts-owner] [{"text":"主翼が破壊されました","color":"dark_red"}]
 execute if score #current-hp vp.reg1 matches 0 if entity @s[tag=aileron-l] run tellraw @p[tag=parts-owner] [{"text":"主翼が破壊されました","color":"dark_red"}]
 execute if score #current-hp vp.reg1 matches 0 if entity @s[tag=radder] run tellraw @p[tag=parts-owner] [{"text":"ラダーが破壊されました","color":"dark_red"}]
+execute if score #current-hp vp.reg1 matches 0 if entity @s[tag=radder-r] run tellraw @p[tag=parts-owner] [{"text":"ラダーが破壊されました","color":"dark_red"}]
+execute if score #current-hp vp.reg1 matches 0 if entity @s[tag=radder-l] run tellraw @p[tag=parts-owner] [{"text":"ラダーが破壊されました","color":"dark_red"}]
+execute if score #current-hp vp.reg1 matches 0 if entity @s[tag=elevator] run tellraw @p[tag=parts-owner] [{"text":"エレベータが破壊されました","color":"dark_red"}]
 execute if score #current-hp vp.reg1 matches 0 if entity @s[tag=elevator-r] run tellraw @p[tag=parts-owner] [{"text":"エレベータが破壊されました","color":"dark_red"}]
 execute if score #current-hp vp.reg1 matches 0 if entity @s[tag=elevator-l] run tellraw @p[tag=parts-owner] [{"text":"エレベータが破壊されました","color":"dark_red"}]
 execute if score #current-hp vp.reg1 matches 0 if entity @s[tag=body] run tellraw @p[tag=parts-owner] [{"text":"機体が破壊されました","color":"dark_red"}]
