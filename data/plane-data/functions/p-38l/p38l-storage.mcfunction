@@ -28,7 +28,6 @@ data modify storage voxel-planes:plane p38l.plane-data.hitbox merge value {cockp
 data modify storage voxel-planes:weapon p38l.base.20mm.data set value {name:"20mm gun",type:gun,size:20mm,max-ammunition:150,current-ammunition:150,max-cooltime:2,current-cooltime:0,max-reload:280,current-reload:0,tracer:"yellow",damage:60,speed:9d,bullets:[{offset:[-0.27d,1.65d,8.8d]}]}
 data modify storage voxel-planes:weapon p38l.base.12p7mm.data set value {name:"12.7mm gun",type:gun,size:12p7mm,max-ammunition:500,current-ammunition:500,max-cooltime:2,current-cooltime:0,max-reload:220,current-reload:0,tracer:"lightblue",damage:45,speed:11d,bullets:[{offset:[-0.55d,1.75d,8.5d]},{offset:[-0.45d,1.8d,8.8d]},{offset:[-0.12d,1.83d,8.6d]},{offset:[0d,1.75d,8.5d]}]}
 
-
 #デフォルト爆弾データセット
 data modify storage voxel-planes:weapon p38l.base.bomb.data set value {name:bomb,type:bomb,max-ammunition:1,current-ammunition:1,max-reload:3600,current-reload:0,bombs:[]}
 data modify storage voxel-planes:weapon p38l.additional.1000lb set value [{kind:1000lb,type:normal,offset:[1d,-0.3d,4d],damage:2300,weight:454.0f,cmd:122}]
