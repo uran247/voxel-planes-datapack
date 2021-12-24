@@ -12,7 +12,7 @@ data modify storage voxel-planes:plane p47d.plane-data.tier set value 3
 data modify storage voxel-planes:plane p47d.plane-data.flight-model.weight set value 6577
 data modify storage voxel-planes:plane p47d.plane-data.flight-model.speed set value {max-speed:686f,cruise-speed:411f,climb-rate:16.6f,stall-speed:169f}
 data modify storage voxel-planes:plane p47d.plane-data.flight-model.engine set value {type:recipro,horse-power:2000,number:1}
-data modify storage voxel-planes:plane p47d.plane-data.flight-model.turn-rate set value {pitch:28.8,yaw:17.3,roll:80}
+data modify storage voxel-planes:plane p47d.plane-data.flight-model.turn-rate set value {pitch:28.8,yaw:17.3,roll:150}
 data modify storage voxel-planes:plane p47d.plane-data.flight-model.energy-loss-rate set value 0.6
 data modify storage voxel-planes:plane p47d.plane-data.model-data.body set value {parking-cmd:56,rolling-cmd:57,flying-cmd:58}
 data modify storage voxel-planes:plane p47d.plane-data.model-data.landing-pitch set value -12.5

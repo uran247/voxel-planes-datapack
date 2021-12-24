@@ -12,7 +12,7 @@ data modify storage voxel-planes:plane meteorf8.plane-data.tier set value 5
 data modify storage voxel-planes:plane meteorf8.plane-data.flight-model.weight set value 6473.0
 data modify storage voxel-planes:plane meteorf8.plane-data.flight-model.speed set value {max-speed:870f,cruise-speed:740f,climb-rate:20f,stall-speed:202f}
 data modify storage voxel-planes:plane meteorf8.plane-data.flight-model.engine set value {type:jet,thrust:897f,number:2}
-data modify storage voxel-planes:plane meteorf8.plane-data.flight-model.turn-rate set value {pitch:26f,yaw:15f,roll:71f}
+data modify storage voxel-planes:plane meteorf8.plane-data.flight-model.turn-rate set value {pitch:31f,yaw:23f,roll:119f}
 data modify storage voxel-planes:plane meteorf8.plane-data.flight-model.energy-loss-rate set value 0.6
 data modify storage voxel-planes:plane meteorf8.plane-data.model-data.body set value {parking-cmd:161,rolling-cmd:161,flying-cmd:162}
 data modify storage voxel-planes:plane meteorf8.plane-data.model-data.landing-pitch set value 0

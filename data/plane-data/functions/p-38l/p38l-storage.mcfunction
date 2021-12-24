@@ -12,7 +12,7 @@ data modify storage voxel-planes:plane p38l.plane-data.tier set value 3
 data modify storage voxel-planes:plane p38l.plane-data.flight-model.weight set value 7940
 data modify storage voxel-planes:plane p38l.plane-data.flight-model.speed set value {max-speed:667f,cruise-speed:443,climb-rate:24.1f,stall-speed:125.5f}
 data modify storage voxel-planes:plane p38l.plane-data.flight-model.engine set value {type:recipro,horse-power:1600f,number:2}
-data modify storage voxel-planes:plane p38l.plane-data.flight-model.turn-rate set value {pitch:33f,yaw:17f,roll:92f}
+data modify storage voxel-planes:plane p38l.plane-data.flight-model.turn-rate set value {pitch:33f,yaw:17f,roll:130f}
 data modify storage voxel-planes:plane p38l.plane-data.flight-model.energy-loss-rate set value 0.6
 data modify storage voxel-planes:plane p38l.plane-data.model-data.body set value {parking-cmd:144,rolling-cmd:145,flying-cmd:146}
 data modify storage voxel-planes:plane p38l.plane-data.model-data.landing-pitch set value -5
