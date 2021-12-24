@@ -18,7 +18,7 @@
 
 #> private
 # @private
-    #declare tag torpedo-owner #魚雷を投下したプレイヤーを示す
+    #declare tag weapon-owner #魚雷を投下したプレイヤーを示す
     #
     #declare score_holder #torpedo-id #魚雷のplane-id
     #declare score_holder #damage #与えるダメージ量 半径2増加するごとに半減
@@ -31,13 +31,12 @@
 #爆弾のplane-id記憶
 scoreboard players operation #torpedo-id vp.reg1 = @s vp.plane-id
 #爆弾の投下主判定
-execute as @a if score @s vp.plane-id = #torpedo-id vp.reg1 run tag @s add torpedo-owner
+execute as @a if score @s vp.plane-id = #torpedo-id vp.reg1 run tag @s add weapon-owner
 
 #### ダメージ判定 ####
 #hpからダメージを引く]
 execute as @e[tag=!entity-nohit,distance=..16] run function weapon:util/set-entity-hp
 scoreboard players operation #damage vp.reg1 = @s vp.damage
-
 #execute as @e[tag=base,distance=..50] run function weapon:torpedo/damage/base-damage
 scoreboard players set @e[tag=!entity-nohit,distance=..32] vp.reg2 0
 scoreboard players operation #damage vp.reg1 /= #2 vp.Num
@@ -72,36 +71,24 @@ scoreboard players operation #damage vp.reg1 /= #2 vp.Num
 scoreboard players operation @e[tag=!entity-nohit,distance=..30] vp.reg2 += #damage vp.reg1
 scoreboard players operation #damage vp.reg1 /= #2 vp.Num
 scoreboard players operation @e[tag=!entity-nohit,distance=..32] vp.reg2 += #damage vp.reg1
-execute as @e[tag=!entity-nohit,distance=..32] run function weapon:util/calc-entity-damage
+execute as @e[type=!player,tag=!plane-hitbox,tag=!entity-nohit,distance=..32] if score @s vp.input matches 1.. run function weapon:util/calc-entity-damage
+execute as @e[type=!player,tag=plane-hitbox,tag=!entity-nohit,distance=..32] if score @s vp.input matches 1.. run function weapon:util/calc-hitbox-damage
 
+#スコアをエンティティのHPに反映
+execute as @e[type=!spawner_minecart,tag=!cockpit,tag=!entity-nohit,distance=..32] store result entity @s Health float 1 run scoreboard players get @s vp.reg1
 
-### メッセージ処理 ###
-#メッセージを表示(title)
-title @p[tag=torpedo-owner] times 0 20 20
-#execute as @e[tag=!entity-nohit,tag=!enemy-target,scores={vp.reg1=0},distance=..16,sort=nearest,limit=1] run function weapon:torpedo/damage/set-kill-mob-message
-#execute as @e[tag=enemy-target,tag=!entity-nohit,scores={vp.reg1=0},distance=..16,sort=nearest,limit=1] run function weapon:torpedo/damage/set-kill-target-message
-execute if entity @e[tag=!entity-nohit,scores={vp.reg1=0},distance=..16] run title @p[tag=torpedo-owner] title {"text":""}
-#メッセージを表示(tellraw)
-#execute if entity @e[tag=!entity-nohit,distance=..16] run function weapon:torpedo/damage/hit-message
-execute as @e[tag=plane-hitbox,scores={vp.reg1=0},distance=..16] run function weapon:util/destroy-hitbox-message
-
-#撃墜者/クリアスコアをプラス
-#execute as @p[tag=torpedo-owner] run function weapon:torpedo/damage/set-shotdown-score
-
-#ダメージ処理、破壊されたスポナーをキル
-execute as @e[type=spawner_minecart,tag=!entity-nohit,distance=..16] store result entity @s MaxNearbyEntities short 1 run scoreboard players get @s vp.reg1
-execute as @e[type=!spawner_minecart,type=!player,tag=!entity-nohit,distance=..16] store result entity @s Health short 1 run scoreboard players get @s vp.reg1
-execute as @a[tag=!entity-nohit,distance=..16] run scoreboard players operation @s vp.taken-damage -= @s vp.reg1
-execute as @a[tag=!entity-nohit,distance=..16] run function weapon:util/damage
-#kill @e[type=spawner_minecart,tag=enemy-target,tag=!entity-nohit,scores={vp.reg1=0},distance=..16]
+#飛行機に乗ってないプレイヤーにダメージ反映
+execute as @a[tag=!entity-nohit,distance=..32] run scoreboard players operation @s vp.taken-damage = @s vp.input
+execute as @a[tag=!entity-nohit,distance=..32] run function weapon:util/damage
 
 #### ダメージ時エフェクト ####
 #命中地点にパーティクル
-#execute at @s[tag=sailing] run particle minecraft:explosion ^ ^ ^ 3 3 3 0 500 force
 execute at @s[tag=sailing] run particle minecraft:block minecraft:water ^ ^5 ^-5 1 6 1 1 5000 force
 execute at @s[tag=!sailing] run particle minecraft:explosion ^ ^ ^ 3 3 3 0 500 force
+
+#音
 execute at @s run playsound minecraft:entity.generic.explode master @a ~ ~ ~ 10 0 0
 execute at @s run playsound minecraft:entity.generic.explode master @a ~ ~ ~ 10 0.5 0
 
 #タグ除去
-tag @a remove torpedo-owner
+tag @a remove weapon-owner

@@ -82,7 +82,6 @@ execute as @e[type=!spawner_minecart,tag=!cockpit,tag=!entity-nohit,distance=..3
 execute as @a[tag=!entity-nohit,distance=..32] run scoreboard players operation @s vp.taken-damage = @s vp.input
 execute as @a[tag=!entity-nohit,distance=..32] run function weapon:util/damage
 
-
 #撃墜者/クリアスコアをプラス
 #execute as @p[tag=weapon-owner] run function weapon:dropping/damage/set-shotdown-score
 

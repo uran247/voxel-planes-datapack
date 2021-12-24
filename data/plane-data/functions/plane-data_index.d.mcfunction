@@ -22,9 +22,13 @@
     #declare tag engine #エンジンの当たり判定であることを示す
     #declare tag engine-l #左エンジンの当たり判定であることを示す
     #declare tag engine-r #右エンジンの当たり判定であることを示す
+    #declare tag engine-l2 #左エンジン2の当たり判定であることを示す
+    #declare tag engine-r2 #右エンジン2の当たり判定であることを示す
     #declare tag aileron #主翼の当たり判定であることを示す
     #declare tag aileron-r #右主翼の当たり判定であることを示す
     #declare tag aileron-l #左主翼の当たり判定であることを示す
+    #declare tag aileron-r2 #右主翼2の当たり判定であることを示す
+    #declare tag aileron-l2 #左主翼2の当たり判定であることを示す
     #declare tag elevetor #水平尾翼の当たり判定であることを示す
     #declare tag elevator #水平尾翼の当たり判定であることを示す
     #declare tag elevator-r #右水平尾翼の当たり判定であることを示す

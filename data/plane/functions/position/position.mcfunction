@@ -34,7 +34,7 @@ tag @s[tag=!angle-not-changed] add need-calc-offset
 execute at @s run tp @e[tag=target-parts,tag=!plane-seat,distance=..32] ~ ~ ~ ~90 ~
 
 #ヘルスチェック
-execute as @s at @s run function plane:position/util/parts-health
+execute as @s at @s run function util:parts-health
 
 #体力表示更新
 execute at @s as @e[type=minecraft:donkey,tag=target-parts,tag=plane-seat,distance=..30] run function plane:position/util/renew-health-display

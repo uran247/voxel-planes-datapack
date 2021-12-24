@@ -16,11 +16,15 @@
     #declare score_holder #engine
     #declare score_holder #engine-r
     #declare score_holder #engine-l
+    #declare score_holder #engine-r2
+    #declare score_holder #engine-l2
     #declare score_holder #elevator
     #declare score_holder #elevator-r
     #declare score_holder #elevator-l
     #declare score_holder #aileron-r
     #declare score_holder #aileron-l
+    #declare score_holder #aileron-r2
+    #declare score_holder #aileron-l2
     #declare score_holder #radder
     #declare score_holder #radder-r
     #declare score_holder #radder-l
@@ -30,11 +34,15 @@ execute store result score #body vp.reg1 run data get storage oh_my_dat: _[-4][-
 execute store result score #engine vp.reg1 run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.engine.hp
 execute store result score #engine-r vp.reg1 run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.engine-r.hp
 execute store result score #engine-l vp.reg1 run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.engine-l.hp
+execute store result score #engine-r2 vp.reg1 run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.engine-r2.hp
+execute store result score #engine-l2 vp.reg1 run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.engine-l2.hp
 execute store result score #elevator vp.reg1 run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.elevator.hp
 execute store result score #elevator-r vp.reg1 run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.elevator-r.hp
 execute store result score #elevator-l vp.reg1 run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.elevator-l.hp
 execute store result score #aileron-r vp.reg1 run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.aileron-r.hp
 execute store result score #aileron-l vp.reg1 run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.aileron-l.hp
+execute store result score #aileron-r2 vp.reg1 run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.aileron-r2.hp
+execute store result score #aileron-l2 vp.reg1 run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.aileron-l2.hp
 execute store result score #radder vp.reg1 run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.radder.hp
 execute store result score #radder-r vp.reg1 run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.radder-r.hp
 execute store result score #radder-l vp.reg1 run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.radder-l.hp
@@ -45,11 +53,15 @@ scoreboard players operation #total-health vp.reg1 += #body vp.reg1
 scoreboard players operation #total-health vp.reg1 += #engine vp.reg1
 scoreboard players operation #total-health vp.reg1 += #engine-r vp.reg1
 scoreboard players operation #total-health vp.reg1 += #engine-l vp.reg1
+scoreboard players operation #total-health vp.reg1 += #engine-r2 vp.reg1
+scoreboard players operation #total-health vp.reg1 += #engine-l2 vp.reg1
 scoreboard players operation #total-health vp.reg1 += #elevator vp.reg1
 scoreboard players operation #total-health vp.reg1 += #elevator-r vp.reg1
 scoreboard players operation #total-health vp.reg1 += #elevator-l vp.reg1
 scoreboard players operation #total-health vp.reg1 += #aileron-r vp.reg1
 scoreboard players operation #total-health vp.reg1 += #aileron-l vp.reg1
+scoreboard players operation #total-health vp.reg1 += #aileron-r2 vp.reg1
+scoreboard players operation #total-health vp.reg1 += #aileron-l2 vp.reg1
 scoreboard players operation #total-health vp.reg1 += #radder vp.reg1
 scoreboard players operation #total-health vp.reg1 += #radder-r vp.reg1
 scoreboard players operation #total-health vp.reg1 += #radder-l vp.reg1

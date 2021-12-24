@@ -16,6 +16,8 @@ execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.body
 execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.engine unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.engine{hp:0d} unless entity @e[tag=plane-hitbox,tag=engine,tag=target-parts,distance=..30] run summon armor_stand ~ ~ ~ {Tags:[plane-init,target-parts,plane,plane-hitbox,engine,has-offset,offset-base],NoGravity:1b,Invisible:1b,Marker:1b,Health:1000f,Attributes:[{Name:"generic.max_health",Base:1000d}]}
 execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.engine-r unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.engine-r{hp:0d} unless entity @e[tag=plane-hitbox,tag=engine-r,tag=target-parts,distance=..30] run summon armor_stand ~ ~ ~ {Tags:[plane-init,target-parts,plane,plane-hitbox,engine-r,has-offset,offset-base],NoGravity:1b,Invisible:1b,Marker:1b,Health:1000f,Attributes:[{Name:"generic.max_health",Base:1000d}]}
 execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.engine-l unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.engine-l{hp:0d} unless entity @e[tag=plane-hitbox,tag=engine-l,tag=target-parts,distance=..30] run summon armor_stand ~ ~ ~ {Tags:[plane-init,target-parts,plane,plane-hitbox,engine-l,has-offset,offset-base],NoGravity:1b,Invisible:1b,Marker:1b,Health:1000f,Attributes:[{Name:"generic.max_health",Base:1000d}]}
+execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.engine-r2 unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.engine-r2{hp:0d} unless entity @e[tag=plane-hitbox,tag=engine-r2,tag=target-parts,distance=..30] run summon armor_stand ~ ~ ~ {Tags:[plane-init,target-parts,plane,plane-hitbox,engine-r2,has-offset,offset-base],NoGravity:1b,Invisible:1b,Marker:1b,Health:1000f,Attributes:[{Name:"generic.max_health",Base:1000d}]}
+execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.engine-l2 unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.engine-l2{hp:0d} unless entity @e[tag=plane-hitbox,tag=engine-l2,tag=target-parts,distance=..30] run summon armor_stand ~ ~ ~ {Tags:[plane-init,target-parts,plane,plane-hitbox,engine-l2,has-offset,offset-base],NoGravity:1b,Invisible:1b,Marker:1b,Health:1000f,Attributes:[{Name:"generic.max_health",Base:1000d}]}
 
 #elevator
 execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.elevator unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.elevator{hp:0d} unless entity @e[tag=plane-hitbox,tag=elevator,tag=target-parts,distance=..30] run summon armor_stand ~ ~ ~ {Tags:[plane-init,target-parts,plane,plane-hitbox,elevator,has-offset,offset-base],NoGravity:1b,Invisible:1b,Marker:1b,Health:1000f,Attributes:[{Name:"generic.max_health",Base:1000d}]}
@@ -25,6 +27,8 @@ execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.elev
 #aileron
 execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.aileron-r unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.aileron-r{hp:0d} unless entity @e[tag=plane-hitbox,tag=aileron-r,tag=target-parts,distance=..30] run summon armor_stand ~ ~ ~ {Tags:[plane-init,target-parts,plane,plane-hitbox,aileron-r,has-offset,offset-base],NoGravity:1b,Invisible:1b,Marker:1b,Health:1000f,Attributes:[{Name:"generic.max_health",Base:1000d}]}
 execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.aileron-l unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.aileron-l{hp:0d} unless entity @e[tag=plane-hitbox,tag=aileron-l,tag=target-parts,distance=..30] run summon armor_stand ~ ~ ~ {Tags:[plane-init,target-parts,plane,plane-hitbox,aileron-l,has-offset,offset-base],NoGravity:1b,Invisible:1b,Marker:1b,Health:1000f,Attributes:[{Name:"generic.max_health",Base:1000d}]}
+execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.aileron-r2 unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.aileron-r2{hp:0d} unless entity @e[tag=plane-hitbox,tag=aileron-r2,tag=target-parts,distance=..30] run summon armor_stand ~ ~ ~ {Tags:[plane-init,target-parts,plane,plane-hitbox,aileron-r2,has-offset,offset-base],NoGravity:1b,Invisible:1b,Marker:1b,Health:1000f,Attributes:[{Name:"generic.max_health",Base:1000d}]}
+execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.aileron-l2 unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.aileron-l2{hp:0d} unless entity @e[tag=plane-hitbox,tag=aileron-l2,tag=target-parts,distance=..30] run summon armor_stand ~ ~ ~ {Tags:[plane-init,target-parts,plane,plane-hitbox,aileron-l2,has-offset,offset-base],NoGravity:1b,Invisible:1b,Marker:1b,Health:1000f,Attributes:[{Name:"generic.max_health",Base:1000d}]}
 
 #radder
 execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.radder unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.radder{hp:0d} unless entity @e[tag=plane-hitbox,tag=radder,tag=target-parts,distance=..30] run summon armor_stand ~ ~ ~ {Tags:[plane-init,target-parts,plane,plane-hitbox,radder,has-offset,offset-base],NoGravity:1b,Invisible:1b,Marker:1b,Health:1000f,Attributes:[{Name:"generic.max_health",Base:1000d}]}
@@ -49,6 +53,12 @@ execute as @e[type=armor_stand,tag=plane-init,tag=engine-r,distance=..1,limit=1]
 data remove storage voxel-planes:input input
 data modify storage voxel-planes:input input set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.engine-l
 execute as @e[type=armor_stand,tag=plane-init,tag=engine-l,distance=..1,limit=1] run function plane:position/util/set-hitbox-data
+data remove storage voxel-planes:input input
+data modify storage voxel-planes:input input set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.engine-r2
+execute as @e[type=armor_stand,tag=plane-init,tag=engine-r2,distance=..1,limit=1] run function plane:position/util/set-hitbox-data
+data remove storage voxel-planes:input input
+data modify storage voxel-planes:input input set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.engine-l2
+execute as @e[type=armor_stand,tag=plane-init,tag=engine-l2,distance=..1,limit=1] run function plane:position/util/set-hitbox-data
 
 #elevator
 data remove storage voxel-planes:input input
@@ -68,6 +78,12 @@ execute as @e[type=armor_stand,tag=plane-init,tag=aileron-r,distance=..1,limit=1
 data remove storage voxel-planes:input input
 data modify storage voxel-planes:input input set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.aileron-l
 execute as @e[type=armor_stand,tag=plane-init,tag=aileron-l,distance=..1,limit=1] run function plane:position/util/set-hitbox-data
+data remove storage voxel-planes:input input
+data modify storage voxel-planes:input input set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.aileron-r2
+execute as @e[type=armor_stand,tag=plane-init,tag=aileron-r2,distance=..1,limit=1] run function plane:position/util/set-hitbox-data
+data remove storage voxel-planes:input input
+data modify storage voxel-planes:input input set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.aileron-l2
+execute as @e[type=armor_stand,tag=plane-init,tag=aileron-l2,distance=..1,limit=1] run function plane:position/util/set-hitbox-data
 
 #radder
 data remove storage voxel-planes:input input

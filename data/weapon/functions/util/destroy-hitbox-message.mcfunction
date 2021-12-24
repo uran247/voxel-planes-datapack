@@ -21,7 +21,7 @@ execute as @e[tag=plane-root,distance=..32] if score @s vp.plane-id = #parts-id 
 execute at @e[tag=plane-root,tag=parts-owner,distance=..32,limit=1] as @e[tag=plane-hitbox,distance=..32] if score @s vp.plane-id = #parts-id vp.reg1 run tag @s add parts-hitbox
 
 #機体破壊判定
-execute as @e[tag=plane-root,tag=parts-owner,distance=..32] at @s run function weapon:util/parts-health
+execute as @e[tag=plane-root,tag=parts-owner,distance=..32] at @s run function util:parts-health
 execute if entity @e[tag=plane-root,tag=parts-owner,tag=destroyed,distance=..32] run title @p[tag=weapon-owner] subtitle {"text":"敵機を撃墜","color":"gold","italic":true}
 execute if entity @e[tag=plane-root,tag=parts-owner,tag=!destroyed,distance=..32] run title @p[tag=weapon-owner] subtitle {"text":"クリティカルヒット","color":"white","italic":true}
 
