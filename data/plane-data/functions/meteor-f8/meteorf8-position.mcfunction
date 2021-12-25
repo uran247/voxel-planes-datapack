@@ -14,5 +14,5 @@
     #declare score_holder #plane-id #実行者のplane-id
 
 #seatの位置修正
-execute at @s[tag=has-rider] run tp @e[tag=plane-seat,tag=target-parts,distance=..32] ^ ^0.5 ^-4.7
-execute at @s[tag=!has-rider] run tp @e[tag=plane-seat,tag=target-parts,distance=..32] ^0.2 ^-0.4 ^1
+execute at @s[tag=has-rider] run tp @e[tag=plane-seat,tag=target-parts,distance=..32] ^ ^ ^-4.1
+execute at @s[tag=!has-rider] run tp @e[tag=plane-seat,tag=target-parts,distance=..32] ^ ^-0.4 ^4
