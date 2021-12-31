@@ -23,3 +23,5 @@ loot give @s[advancements={plane-data:crafting/plane/me262a1a=true}] loot plane-
 loot give @s[advancements={plane-data:crafting/plane/p47d=true}] loot plane-data:p47d
 loot give @s[advancements={plane-data:crafting/plane/sbd-3=true}] loot plane-data:sbd-3
 loot give @s[advancements={plane-data:crafting/plane/b-17g=true}] loot plane-data:b-17g
+loot give @s[advancements={plane-data:crafting/plane/p-38l=true}] loot plane-data:p-38l
+loot give @s[advancements={plane-data:crafting/plane/meteor-f8=true}] loot plane-data:meteor-f8

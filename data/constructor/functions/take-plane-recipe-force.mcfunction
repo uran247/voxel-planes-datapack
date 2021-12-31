@@ -23,3 +23,5 @@ recipe take @a plane-data:plane/me262a1a-recipe
 recipe take @a plane-data:plane/p47d-recipe
 recipe take @a plane-data:plane/sbd-3-recipe
 recipe take @a plane-data:plane/b-17g-recipe
+recipe take @a plane-data:plane/p-38l-recipe
+recipe take @a plane-data:plane/meteor-f8-recipe
