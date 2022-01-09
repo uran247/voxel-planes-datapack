@@ -32,3 +32,4 @@ execute as @s[tag=b17g] at @s run function plane-data:b-17g/b17g-2-item
 execute as @s[tag=meteorf8] at @s run function plane-data:meteor-f8/meteorf8-2-item
 execute as @s[tag=sbd3] at @s run function plane-data:sbd-3/sbd3-2-item
 execute as @s[tag=p47d] at @s run function plane-data:p47d/p47d-2-item
+execute as @s[tag=mosquitobmk16] at @s run function plane-data:mosquitobmk16/mosquitobmk16-2-item
