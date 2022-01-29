@@ -32,3 +32,4 @@ execute at @s[tag=meteorf8-spawner] as @p run function plane-data:meteor-f8/mete
 execute at @s[tag=sbd3-spawner] as @p run function plane-data:sbd-3/sbd3
 execute at @s[tag=p47d-spawner] as @p run function plane-data:p47d/p47d
 execute at @s[tag=mosquitobmk16-spawner] as @p run function plane-data:mosquitobmk16/mosquitobmk16
+execute at @s[tag=f86f-spawner] as @p run function plane-data:f86f/f86f

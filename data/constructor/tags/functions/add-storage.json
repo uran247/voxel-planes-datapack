@@ -28,6 +28,7 @@
         "plane-data:meteor-f8/meteorf8-storage",
         "plane-data:sbd-3/sbd3-storage",
         "plane-data:p47d/p47d-storage",
-        "plane-data:mosquitobmk16/mosquitobmk16-storage"
+        "plane-data:mosquitobmk16/mosquitobmk16-storage",
+        "plane-data:f86f/f86f-storage"
     ]
 }
