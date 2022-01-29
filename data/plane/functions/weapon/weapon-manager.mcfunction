@@ -17,6 +17,9 @@
 #選択武器が爆弾の場合照準を出す
 execute if entity @s[tag=flying] if score @s vp.AngX matches 0.. if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data{type:bomb} unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data{type:bomb,current-ammunition:-1} run function plane:weapon/util/display-aim
 
+#選択武器がIRミサイルの場合ロックオン処理を行う
+execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data{type:missile} unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data{type:missile,current-ammunition:-1} run function plane:weapon/util/ir-lock-on
+
 #武器使用
 execute if entity @s[tag=need-use-weapon] run function plane:weapon/use-weapon
 

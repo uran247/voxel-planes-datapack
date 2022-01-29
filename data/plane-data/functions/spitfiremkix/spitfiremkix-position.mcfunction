@@ -9,7 +9,6 @@
 
 #> private
 # @private
-    #declare score_holder #summoned-bomb #爆弾の召喚に成功したかどうかのフラグ
     #declare score_holder #plane-id #実行者のplane-id
 
 #seatの位置修正

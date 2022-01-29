@@ -37,5 +37,5 @@ data modify storage voxel-planes:weapon f86f.base.gun set value {data:{name:"12.
 
 #デフォルトミサイルデータセット
 data modify storage voxel-planes:weapon f86f.base.missile.data set value {name:missile,type:missile,max-ammunition:2,current-ammunition:2,max-reload:2400,current-reload:0,missiles:[]}
-data modify storage voxel-planes:weapon f86f.additional.missile set value [{kind:70kg,type:ir,offset:[-3d,-1d,-1d],damage:350,weight:70,cmd:174,turn-rate:9.6f,max-speed:7.2f}]
-data modify storage voxel-planes:weapon f86f.additional.missile append value {kind:70kg,type:ir,offset:[3d,-1d,-1d],damage:350,weight:70,cmd:174,turn-rate:9.6f,max-speed:7.2f}
+data modify storage voxel-planes:weapon f86f.additional.missile set value [{kind:70kg,type:ir,offset:[-2.2d,-0.6d,-0.8d],damage:350,weight:70,cmd:174,turn-rate:9.6f,max-speed:7.2f}]
+data modify storage voxel-planes:weapon f86f.additional.missile append value {kind:70kg,type:ir,offset:[2.2d,-0.6d,-0.8d],damage:350,weight:70,cmd:174,turn-rate:9.6f,max-speed:7.2f}

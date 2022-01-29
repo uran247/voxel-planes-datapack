@@ -19,7 +19,7 @@
 #> private
 #   @private
     #declare tag no-delete #削除禁止飛行機パーツであることを示す
-    #declare score_holder #gtime #削除禁止飛行機パーツであることを示す
+    #declare score_holder #gtime #ゲーム内の時間[s]
 
 #現在時刻取得
 execute store result score #gtime vp.reg1 run time query gametime

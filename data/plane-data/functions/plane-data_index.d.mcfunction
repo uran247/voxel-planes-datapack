@@ -43,6 +43,7 @@
     #declare tag plane-torpedo #ロケット弾であることを示す
     #declare tag has-torpedo #魚雷を持っていることを示す
     #declare tag has-rocket #ロケット弾を持っていることを示す
+    #declare tag plane-missile #ミサイルであることを示す
     #declare tag 7p7mm #7.7mm機銃を装備していることを示す
     #declare tag 12p7mm #12.7mm機銃を装備していることを示す
     #declare tag 10kg #10kg爆弾を装備していることを示す
