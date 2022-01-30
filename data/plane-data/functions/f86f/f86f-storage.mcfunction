@@ -25,7 +25,7 @@ data modify storage voxel-planes:plane f86f.plane-data.hitbox merge value {cockp
 data modify storage voxel-planes:plane f86f.plane-data.hitbox merge value {body:{max-hp:420d,offset:[0d,0d,0d]}}
 
 #デフォルト機銃データセット
-data modify storage voxel-planes:weapon f86f.base.gun set value {data:{name:"12.7mm gun",type:gun,size:12p7mm,max-ammunition:300,current-ammunition:300,max-cooltime:1,current-cooltime:0,max-reload:280,current-reload:0,tracer:"lightblue",damage:65,speed:10.9d,bullets:[{offset:[-0.5d,0d,4d]},{offset:[0.5d,0d,4d]},{offset:[-0.5d,0.5d,4d]},{offset:[0.5d,0.5d,4d]},{offset:[-0.5d,-0.5d,4d]},{offset:[0.5d,-0.5d,4d]}]}}
+data modify storage voxel-planes:weapon f86f.base.gun set value {data:{name:"12.7mm gun",type:gun,size:12p7mm,max-ammunition:300,current-ammunition:300,max-cooltime:1,current-cooltime:0,max-reload:280,current-reload:0,tracer:"lightblue",damage:65,speed:10.9d,bullets:[{offset:[0.45d,1.9d,3.6d]},{offset:[0.45d,1.75d,3.6d]},{offset:[0.45d,1.6d,3.6d]},{offset:[-0.75d,1.9d,3.6d]},{offset:[-0.75d,1.75d,3.6d]},{offset:[-0.75d,1.6d,3.6d]}]}}
 
 #デフォルト爆弾データセット
 #data modify storage voxel-planes:weapon f86f.base.bomb.data set value {name:bomb,type:bomb,max-ammunition:0,current-ammunition:0,max-reload:$RELOAD_TIME,current-reload:0,bombs:[]}

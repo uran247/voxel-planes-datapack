@@ -43,5 +43,7 @@ execute if score #current-weapon vp.reg1 matches 9 run data modify storage oh_my
 
 #tellraw @p [{"score" : {"name":"#current-weapon", "objective":"vp.reg1"}}, {"text":" "},{"nbt":"_[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:true}].type","storage": "oh_my_dat:"}]
 
+#reset
+scoreboard players reset @s vp.lockon-time
 tag @s remove need-change-weapon
 
