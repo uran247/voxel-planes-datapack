@@ -53,10 +53,10 @@ execute if score #return vp.reg1 matches 1.. run tag @s add need-calc-offset
 #ミサイル装備タグがついていてミサイルが0なら召喚
 scoreboard players set #return vp.reg1 0
 #魚雷を装備しているかストレージ確認
-execute store success score #has-weapon vp.reg1 if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[].data{type:missile}
+execute store success score #has-weapon vp.reg1 if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[].data{type:ir-missile}
 #魚雷の現在弾数、最大弾数、現在召喚している数を確認
-execute if score #has-weapon vp.reg1 matches 1.. store result score #max-weapon-ammunition vp.reg1 run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[].data{type:missile}.max-ammunition
-execute if score #has-weapon vp.reg1 matches 1.. store result score #current-weapon-ammunition vp.reg1 run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[].data{type:missile}.current-ammunition
+execute if score #has-weapon vp.reg1 matches 1.. store result score #max-weapon-ammunition vp.reg1 run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[].data{type:ir-missile}.max-ammunition
+execute if score #has-weapon vp.reg1 matches 1.. store result score #current-weapon-ammunition vp.reg1 run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[].data{type:ir-missile}.current-ammunition
 execute if score #has-weapon vp.reg1 matches 1.. store result score #weapon-number vp.reg1 if entity @e[tag=target-parts,tag=plane-missile,distance=..32]
 #魚雷を持っていて、魚雷召喚数が0、現在弾数=最大弾数の時魚雷を新たに召喚する。
 execute if score #has-weapon vp.reg1 matches 1.. if score #weapon-number vp.reg1 matches 0 if score #max-weapon-ammunition vp.reg1 = #current-weapon-ammunition vp.reg1 at @s run function plane:position/summon-weapon/summon-missiles
