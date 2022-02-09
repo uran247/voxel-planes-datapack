@@ -7,7 +7,7 @@
 #   position at @e[tag=plane-root]
 #
 # @output
-#   score #target-uuid vp.return #ターゲットのUUID[0]
+#   score @s vp.lockon-time #ロックオン実行時間
 #   storage voxel-planes:return target-uuid #ターゲットのUUID
 #
 # @within
@@ -32,21 +32,20 @@ execute positioned ^ ^ ^64 as @e[tag=target-candidate,distance=..64] positioned 
 execute positioned ^ ^ ^64 as @e[tag=target-candidate,distance=..64] positioned as @s positioned ^ ^ ^1000 rotated as @s positioned ^ ^ ^-1000 unless entity @s[distance=..518] run tag @s remove target-candidate
 
 #ロックオン可能mobがいるならvp.lockon-timeを+1、いないならreset
-execute store result score #lockon-time vp.reg1 run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data.lockon-time
-execute positioned ^ ^ ^64 if entity @e[tag=target-candidate,distance=..64] store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data.lockon-time int 1 run scoreboard players add #lockon-time vp.reg1 1
-execute positioned ^ ^ ^64 unless entity @e[tag=target-candidate,distance=..64] store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data.lockon-time int 1 run scoreboard players set #lockon-time vp.reg1 0
+execute positioned ^ ^ ^64 if entity @e[tag=target-candidate,distance=..64] run scoreboard players add @s vp.lockon-time 1
+execute positioned ^ ^ ^64 unless entity @e[tag=target-candidate,distance=..64] run scoreboard players reset @s vp.lockon-time
 
 #未ロックオン中の音とパーティクル
-execute unless score #lockon-time vp.reg1 matches 5.. run playsound minecraft:block.note_block.bit player @p[tag=plane-rider] ~ ~ ~ 1 1.334840 0
+execute unless score @s vp.lockon-time matches 5.. run playsound minecraft:block.note_block.bit player @p[tag=plane-rider] ~ ~ ~ 1 1.334840 0
 
 #ロックオン後の音とパーティクル
-execute if score #lockon-time vp.reg1 matches 5.. run playsound minecraft:block.note_block.bell player @p[tag=plane-rider] ~ ~ ~ 1 1.334840 0
+execute if score @s vp.lockon-time matches 5.. run playsound minecraft:block.note_block.bell player @p[tag=plane-rider] ~ ~ ~ 1 1.334840 0
 
 #返り値
 scoreboard players reset #target-uuid vp.return
 data remove storage voxel-planes:return return
-execute if score #lockon-time vp.reg1 matches 5.. as @e[tag=target-candidate,distance=..64,sort=nearest,limit=1] store result score #target-uuid vp.return run data get entity @s UUID[0]
-execute if score #lockon-time vp.reg1 matches 5.. as @e[tag=target-candidate,distance=..64,sort=nearest,limit=1] run data modify storage voxel-planes:return return.target-uuid set from entity @s UUID
+execute if score @s vp.lockon-time matches 5.. as @e[tag=target-candidate,distance=..64,sort=nearest,limit=1] store result score #target-uuid vp.return run data get entity @s UUID[0]
+execute if score @s vp.lockon-time matches 5.. as @e[tag=target-candidate,distance=..64,sort=nearest,limit=1] run data modify storage voxel-planes:return return.target-uuid set from entity @s UUID
 
 #reset
 execute positioned ^ ^ ^64 as @e[tag=target-candidate,distance=..64] run tag @s remove target-candidate

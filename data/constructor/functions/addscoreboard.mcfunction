@@ -35,9 +35,11 @@ scoreboard objectives add vp.PosZ dummy
 scoreboard objectives add vp.displacementX dummy
 scoreboard objectives add vp.displacementY dummy
 scoreboard objectives add vp.displacementZ dummy
+#[-1..1] * 100
 scoreboard objectives add vp.speedX dummy
 scoreboard objectives add vp.speedY dummy
 scoreboard objectives add vp.speedZ dummy
+#plane: tick / m * 10000, weapon: tick / m * 10
 scoreboard objectives add vp.speed dummy
 scoreboard objectives add vp.age dummy
 scoreboard objectives add vp.rolling dummy
@@ -70,6 +72,8 @@ scoreboard objectives add vp.torp-damage dummy
 scoreboard objectives add vp.enable-weapon dummy
 scoreboard objectives add vp.launched-cmd dummy
 scoreboard objectives add vp.lockon-time dummy
+#ミサイルの旋回速度[degree/s]*100
+scoreboard objectives add vp.turn-rate dummy
 
 #飛行機パラメータ
 scoreboard objectives add vp.plane-id dummy

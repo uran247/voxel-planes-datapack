@@ -12,7 +12,6 @@
 #current weaponの残弾、cooltime, lockon-time取得
 execute store result score #ammunition vp.reg1 run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data.current-ammunition
 execute store result score #cooltime vp.reg1 run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data.current-cooltime
-execute store result score #lockon-time vp.reg1 run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data{type:ir-missile}.lockon-time
 
 #選択に応じて武器ファンクション実行
 execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data{type:gun} if score #ammunition vp.reg1 matches 1.. if score #cooltime vp.reg1 matches ..0 at @s run function plane:weapon/use-weapon/use-gun

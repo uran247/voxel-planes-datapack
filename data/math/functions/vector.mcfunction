@@ -3,7 +3,7 @@
 # 向いてる方向の単位ベクトル計算
 #
 # @input
-#   executer @e[tag=plane-root]
+#   executer @e
 #
 # @output
 #   score @s speedX #X方向の単位ベクトル
@@ -23,3 +23,4 @@ execute store result score @s vp.speedY run data get storage minecraft:plane-dat
 execute store result score @s vp.speedZ run data get storage minecraft:plane-datapack temporary.Pos[2] 100
 
 execute as 0-0-0-0-1 run tp @s 0.0 1.0 0.0
+
