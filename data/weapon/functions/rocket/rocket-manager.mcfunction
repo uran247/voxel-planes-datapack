@@ -89,7 +89,7 @@ scoreboard players add @s[scores={vp.speed=..48}] vp.speed 2
 scoreboard players add @s vp.fall-speed 1
 
 #命中してた場合ダメージ処理
-execute if score #hit-flag vp.reg1 matches 1.. run function weapon:rocket/damage/damage
+execute if score #hit-flag vp.reg1 matches 1.. at @s run function weapon:rocket/damage/damage
 execute if score #hit-flag vp.reg1 matches 1.. run kill @s
 
 #音

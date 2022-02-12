@@ -1,3 +1,5 @@
+#> util:fix-missing-entity
+
 execute unless entity 0-0-0-0-1 run summon minecraft:marker 0.0 1.0 0.0 {Tags:[entity-nohit,dummy-entity],UUID:[I;0,0,0,1]} 
 execute unless entity 0-0-0-0-2 run summon minecraft:marker 0.0 1.0 0.0 {Tags:[entity-nohit,dummy-entity],UUID:[I;0,0,0,2]}
 execute unless entity 0-0-0-0-3 run summon minecraft:marker 0.0 1.0 0.0 {Tags:[entity-nohit,dummy-entity],UUID:[I;0,0,0,3]}

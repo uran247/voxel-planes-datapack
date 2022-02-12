@@ -30,7 +30,7 @@ tag @e[tag=weapon-init,distance=..10] remove plane
 #スコア/データ付与
 scoreboard players operation @e[tag=weapon-init,distance=..10] vp.speed = @s vp.speed
 scoreboard players operation @e[tag=weapon-init,distance=..10] vp.speed /= #1000 vp.Num
-scoreboard players set @e[tag=weapon-init,distance=..10] vp.age 1200
+scoreboard players set @e[tag=weapon-init,distance=..10] vp.age 200
 scoreboard players set @e[tag=weapon-init,distance=..10] vp.fall-speed 0
 data modify storage minecraft:plane-datapack temporary.target-uuid set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data.target-uuid
 execute as @e[tag=weapon-init,distance=..10] run function oh_my_dat:please
@@ -63,3 +63,4 @@ tag @s remove use-weapon-executer
 tag @e[tag=weapon-init,distance=..10] remove weapon-init
 scoreboard players set @p[scores={vp.rightClick=1..}] vp.rightClick 0
 scoreboard players reset #target-uuid vp.reg1
+scoreboard players reset @s vp.lockon-time
