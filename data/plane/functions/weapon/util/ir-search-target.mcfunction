@@ -36,10 +36,10 @@ execute positioned ^ ^ ^128 if entity @e[tag=target-candidate,distance=..128] ru
 execute positioned ^ ^ ^128 unless entity @e[tag=target-candidate,distance=..128] run scoreboard players reset @s vp.lockon-time
 
 #未ロックオン中の音とパーティクル
-execute unless score @s vp.lockon-time matches 5.. run playsound minecraft:block.note_block.bit player @p[tag=plane-rider] ~ ~ ~ 1 1.334840 0
+execute unless score @s vp.lockon-time matches 5.. run playsound minecraft:block.note_block.bit player @p[tag=plane-rider] ~ ~ ~ 3 1.334840 1
 
 #ロックオン後の音とパーティクル
-execute if score @s vp.lockon-time matches 5.. run playsound minecraft:block.note_block.bell player @p[tag=plane-rider] ~ ~ ~ 1 1.334840 0
+execute if score @s vp.lockon-time matches 5.. run playsound minecraft:block.note_block.bell player @p[tag=plane-rider] ~ ~ ~ 3 1.334840 1
 
 #返り値
 scoreboard players reset #target-uuid vp.return

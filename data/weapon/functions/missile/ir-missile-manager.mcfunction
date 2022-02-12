@@ -123,7 +123,7 @@ function oh_my_dat:please
     execute at @s if score #hit-flag vp.reg1 matches 2 positioned as @e[tag=hit-weapon,distance=..26,sort=nearest,limit=1] positioned ^ ^ ^1000 facing entity @s feet positioned ^ ^ ^1000 rotated as @s run tp @s ~ ~ ~ ~-90 ~
 
 #速度更新
-scoreboard players add @s[scores={vp.speed=..48}] vp.speed 2
+execute if score @s vp.speed < @s vp.max-speed run scoreboard players add @s vp.speed 2
 
 #命中してた場合ダメージ処理
 execute if score #hit-flag vp.reg1 matches 1.. at @s run function weapon:missile/damage/damage
