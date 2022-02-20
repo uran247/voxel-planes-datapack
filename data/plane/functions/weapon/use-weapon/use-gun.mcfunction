@@ -28,8 +28,12 @@ execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weap
 execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data{size:13mm} run scoreboard players operation #is-tracer vp.reg1 %= #8 vp.Num
 execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data{size:20mm} run scoreboard players operation #is-bullet vp.reg1 %= #3 vp.Num
 execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data{size:20mm} run scoreboard players operation #is-tracer vp.reg1 %= #6 vp.Num
+execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data{size:23mm} run scoreboard players operation #is-bullet vp.reg1 %= #3 vp.Num
+execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data{size:23mm} run scoreboard players operation #is-tracer vp.reg1 %= #6 vp.Num
 execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data{size:30mm} run scoreboard players operation #is-bullet vp.reg1 %= #4 vp.Num
 execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data{size:30mm} run scoreboard players operation #is-tracer vp.reg1 %= #8 vp.Num
+execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data{size:37mm} run scoreboard players operation #is-bullet vp.reg1 %= #4 vp.Num
+execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data{size:37mm} run scoreboard players operation #is-tracer vp.reg1 %= #8 vp.Num
 
 #召喚弾数取得
 execute store result score #bullet-number vp.reg1 run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data.bullets
@@ -82,7 +86,9 @@ execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weap
 execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data{size:12p7mm} run playsound minecraft:weapon.gun-12p7mm-2.fire master @a ~ ~ ~ 1 1 1
 execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data{size:13mm} run playsound minecraft:weapon.gun-12p7mm-2.fire master @a ~ ~ ~ 1 1 1
 execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data{size:20mm} run playsound minecraft:weapon.gun-37mm.fire master @a ~ ~ ~ 1 2 1
+execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data{size:23mm} run playsound minecraft:weapon.gun-37mm.fire master @a ~ ~ ~ 1 2 1
 execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data{size:30mm} run playsound minecraft:weapon.gun-37mm.fire master @a ~ ~ ~ 1 1 1
+execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data{size:37mm} run playsound minecraft:weapon.gun-37mm.fire master @a ~ ~ ~ 1 1 1
 
 #発射炎
 #execute as @e[tag=gun-init,distance=..10] at @s run particle minecraft:cloud ^ ^ ^ 0.1 0.1 0.1 0.1 1 force

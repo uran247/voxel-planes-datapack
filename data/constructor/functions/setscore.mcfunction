@@ -48,6 +48,7 @@ scoreboard players set #80 vp.Num 80
 scoreboard players set #86 vp.Num 86
 scoreboard players set #90 vp.Num 90
 scoreboard players set #100 vp.Num 100
+scoreboard players set #120 vp.Num 120
 scoreboard players set #128 vp.Num 128
 scoreboard players set #141 vp.Num 141
 scoreboard players set #150 vp.Num 150
