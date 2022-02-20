@@ -28,12 +28,9 @@ data modify storage voxel-planes:plane f86f.plane-data.hitbox merge value {body:
 data modify storage voxel-planes:weapon f86f.base.gun set value {data:{name:"12.7mm gun",type:gun,size:12p7mm,max-ammunition:300,current-ammunition:300,max-cooltime:1,current-cooltime:0,max-reload:280,current-reload:0,tracer:"lightblue",damage:65,speed:10.9d,bullets:[{offset:[0.45d,1.9d,3.6d]},{offset:[0.45d,1.75d,3.6d]},{offset:[0.45d,1.6d,3.6d]},{offset:[-0.75d,1.9d,3.6d]},{offset:[-0.75d,1.75d,3.6d]},{offset:[-0.75d,1.6d,3.6d]}]}}
 
 #デフォルト爆弾データセット
-#data modify storage voxel-planes:weapon f86f.base.bomb.data set value {name:bomb,type:bomb,max-ammunition:0,current-ammunition:0,max-reload:$RELOAD_TIME,current-reload:0,bombs:[]}
-#data modify storage voxel-planes:weapon f86f.additional.$ADDITIONAL_WEAPOM set value [{kind:$WEPAON_KIND,type:$BOMB_TYPE,offset:[$X,$Y,$Z],damage:$DAMAGE,weight:$WEPAON_WEIGHT,cmd:$WEAPON_CMD}]
-
-#デフォルトロケット弾データセット
-#data modify storage voxel-planes:weapon f86f.base.rocket.data set value {name:rocket,type:rocket,max-ammunition:0,current-ammunition:0,max-reload:$RELOAD_TIME,current-reload:0,rockets:[]}
-#data modify storage voxel-planes:weapon f86f.additional.$ADDITIONAL_WEAPOM set value [{kind:$WEPAON_KIND,type:$ROCKET_TYPE,offset:[$X,$Y,$Z],damage:$DAMAGE,weight:$WEPAON_WEIGHT,cmd:$WEAPON_CMD}]
+data modify storage voxel-planes:weapon f86f.base.bomb.data set value {name:bomb,type:bomb,max-ammunition:0,current-ammunition:0,max-reload:3600,current-reload:0,bombs:[]}
+data modify storage voxel-planes:weapon f86f.additional.1000lb set value [{kind:1000lb,type:normal,offset:[-2.2d,-0.7d,-0.8d],damage:2300,weight:454.0f,cmd:122}]
+data modify storage voxel-planes:weapon f86f.additional.1000lb append value {kind:1000lb,type:normal,offset:[2.2d,-0.7d,-0.8d],damage:2300,weight:454.0f,cmd:122}
 
 #デフォルトミサイルデータセット
 data modify storage voxel-planes:weapon f86f.base.missile.data set value {name:missile,type:ir-missile,max-ammunition:2,current-ammunition:2,max-reload:80,current-reload:0,lockon-time:0,missiles:[]}
