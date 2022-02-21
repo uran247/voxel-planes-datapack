@@ -38,3 +38,4 @@ execute if entity @s[tag=meteorf8] run function plane-data:meteor-f8/meteorf8-eq
 #execute if entity @s[tag=sbd3] run function plane-data:sbd3/sbd3-equip
 execute if entity @s[tag=p47d] run function plane-data:p47d/p47d-equip
 execute if entity @s[tag=f86f] run function plane-data:f86f/f86f-equip
+execute if entity @s[tag=p51d] run function plane-data:p51d/p51d-equip
