@@ -25,17 +25,18 @@ data modify storage voxel-planes:plane p51d.plane-data.hitbox merge value {cockp
 data modify storage voxel-planes:plane p51d.plane-data.hitbox merge value {body:{max-hp:320,offset:[0d,0d,0d]}}
 
 #デフォルト機銃データセット
-data modify storage voxel-planes:weapon p51d.base.gun set value {data:{name:"12.7mm gun",type:gun,size:12p7mm,max-ammunition:310,current-ammunition:310,max-cooltime:2,current-cooltime:0,max-reload:210,current-reload:0,tracer:"lightblue",damage:55,speed:11,bullets:[{offset:[-3.3d,1.2d,3.9d]},{offset:[-3.15d,1.15d,3.9d]},{offset:[-3d,1.1d,3.9d]},{offset:[3.3d,1.2d,3.9d]},{offset:[3.15d,1.15d,3.9d]},{offset:[3d,1.1d,3.9d]}]}}
+data modify storage voxel-planes:weapon p51d.base.gun set value {data:{name:"12.7mm gun",type:gun,size:12p7mm,max-ammunition:310,current-ammunition:310,max-cooltime:2,current-cooltime:0,max-reload:210,current-reload:0,tracer:"lightblue",damage:55,speed:11,bullets:[{offset:[1.8d,1.15d,2.2d]},{offset:[2d,1.15d,2.2d]},{offset:[2.2d,1.2d,2.2d]},{offset:[-1.8d,1.15d,2.2d]},{offset:[-2d,1.15d,2.2d]},{offset:[-2.2d,1.15d,2.2d]}]}}
 
 #デフォルト爆弾データセット
 data modify storage voxel-planes:weapon p51d.base.bomb.data set value {name:bomb,type:bomb,max-ammunition:0,current-ammunition:0,max-reload:3600,current-reload:0,bombs:[]}
-data modify storage voxel-planes:weapon p51d.additional.500lb set value [{kind:500lb,type:normal,offset:[0d,-1.4d,2.1d],damage:1140,weight:227.0f,cmd:164}]
+data modify storage voxel-planes:weapon p51d.additional.500lb set value [{kind:500lb,type:normal,offset:[2.1d,-0.8d,0.7d],damage:1140,weight:227.0f,cmd:164}]
+data modify storage voxel-planes:weapon p51d.additional.500lb append value {kind:500lb,type:normal,offset:[-2.7d,-0.8d,0.7d],damage:1140,weight:227.0f,cmd:164}
 
 #デフォルトロケット弾データセット
 data modify storage voxel-planes:weapon p51d.base.rocket.data set value {name:rocket,type:rocket,max-ammunition:0,current-ammunition:0,max-reload:1200,current-reload:0,rockets:[]}
-data modify storage voxel-planes:weapon p51d.additional.ag-rocket set value [{type:normal,offset:[2.5d,-0.7d,2.8d],damage:500,weight:63.0f,kind:10kg,cmd:66}]
-data modify storage voxel-planes:weapon p51d.additional.ag-rocket append value {type:normal,damage:500,offset:[2.9d,-0.65d,2.8d],weight:63.0f,kind:10kg,cmd:66}
-data modify storage voxel-planes:weapon p51d.additional.ag-rocket append value {type:normal,damage:500,offset:[3.3d,-0.6d,2.8d],weight:63.0f,kind:10kg,cmd:66}
-data modify storage voxel-planes:weapon p51d.additional.ag-rocket append value {type:normal,damage:500,offset:[-2.5d,-0.7d,2.8d],weight:63.0f,kind:10kg,cmd:66}
-data modify storage voxel-planes:weapon p51d.additional.ag-rocket append value {type:normal,damage:500,offset:[-2.9d,-0.65d,2.8d],weight:63.0f,kind:10kg,cmd:66}
-data modify storage voxel-planes:weapon p51d.additional.ag-rocket append value {type:normal,damage:500,offset:[-3.3d,-0.6d,2.8d],weight:63.0f,kind:10kg,cmd:66}
+data modify storage voxel-planes:weapon p51d.additional.ag-rocket set value [{type:normal,offset:[2.1d,-0.8d,1.2d],damage:500,weight:63.0f,kind:10kg,cmd:66}]
+data modify storage voxel-planes:weapon p51d.additional.ag-rocket append value {type:normal,damage:500,offset:[2.5d,-0.75d,1.2d],weight:63.0f,kind:10kg,cmd:66}
+data modify storage voxel-planes:weapon p51d.additional.ag-rocket append value {type:normal,damage:500,offset:[2.9d,-0.7d,1.2d],weight:63.0f,kind:10kg,cmd:66}
+data modify storage voxel-planes:weapon p51d.additional.ag-rocket append value {type:normal,damage:500,offset:[-2.7d,-0.8d,1.2d],weight:63.0f,kind:10kg,cmd:66}
+data modify storage voxel-planes:weapon p51d.additional.ag-rocket append value {type:normal,damage:500,offset:[-3.1d,-0.75d,1.2d],weight:63.0f,kind:10kg,cmd:66}
+data modify storage voxel-planes:weapon p51d.additional.ag-rocket append value {type:normal,damage:500,offset:[-3.5d,-0.7d,1.2d],weight:63.0f,kind:10kg,cmd:66}

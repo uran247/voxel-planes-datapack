@@ -36,3 +36,4 @@ execute as @s[tag=mosquitobmk16] at @s run function plane-data:mosquitobmk16/mos
 execute as @s[tag=f86f] at @s run function plane-data:f86f/f86f-2-item
 execute as @s[tag=mig15bis] at @s run function plane-data:mig15bis/mig15bis-2-item
 execute as @s[tag=p51d] at @s run function plane-data:p51d/p51d-2-item
+execute as @s[tag=tbf] at @s run function plane-data:tbf/tbf-2-item
