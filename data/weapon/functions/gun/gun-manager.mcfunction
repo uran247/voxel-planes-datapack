@@ -94,8 +94,10 @@ execute if score #hit-flag vp.reg1 matches 1.. run kill @s
 
 #age減算、0になったら削除
 scoreboard players add @s vp.age 1
-execute if score @s[type=armor_stand] vp.age > @s vp.max-age run kill @s
+#execute if score @s[type=armor_stand] vp.age > @s vp.max-age run kill @s
 #tellraw @p [{"score" : {"name":"@s", "objective":"vp.age"}}]
+execute store result score #gametime vp.reg1 run time query gametime
+execute if score #gametime vp.reg1 > @s[type=armor_stand] vp.max-age run kill @s
 
 #タグ削除
 tag @e[tag=hit-weapon,distance=..20] remove hit-weapon

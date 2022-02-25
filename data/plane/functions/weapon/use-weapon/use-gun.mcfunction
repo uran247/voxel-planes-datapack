@@ -68,8 +68,12 @@ execute as @e[tag=gun-init,distance=..1] run data modify entity @s Tags append f
 execute as @e[type=armor_stand,tag=gun-init,distance=..1] run data modify entity @s Tags append from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data.tracer
 execute as @e[tag=gun-init,distance=..1] store result score @s vp.speed run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data.speed 10
 execute as @e[tag=gun-init,distance=..1] store result score @s vp.damage run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data.damage
-scoreboard players set @e[type=armor_stand,tag=gun-init,distance=..1] vp.max-age 20
+#scoreboard players set @e[type=armor_stand,tag=gun-init,distance=..1] vp.max-age 20
 scoreboard players operation @e[tag=gun-init,distance=..1] vp.plane-id = @s vp.plane-id
+
+execute store result score @e[type=armor_stand,tag=gun-init,distance=..1] vp.max-age run time query gametime
+scoreboard players add @e[type=armor_stand,tag=gun-init,distance=..1] vp.max-age 20
+
 
 #tellraw @p [{"nbt":"Tags","entity": "@e[tag=bullet1,distance=..1,limit=1]"}]
 

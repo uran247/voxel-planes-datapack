@@ -8,6 +8,7 @@
 execute in overworld run forceload add 0 0
 execute in the_nether run forceload add 0 0
 execute in the_end run forceload add 0 0
+execute as @a at @s run forceload add 0 0
 
 kill @e[type=marker,tag=block-checker]
 kill @e[type=marker,tag=dummy-entity]
@@ -27,4 +28,8 @@ kill @e[type=marker,tag=Trigonometric]
 kill @e[type=marker,tag=Trigonometric2]
 summon minecraft:marker -0.5 0 -0.5 {Tags:[Trigonometric],UUID:[I;0,0,0,32]}
 summon minecraft:marker 0.0 0.0 0.0 {Tags:[Trigonometric2],UUID:[I;0,0,0,33]}
-setblock 0 1 0 shulker_box
+
+execute in overworld run setblock 0 1 0 shulker_box
+execute in the_nether run setblock 0 1 0 shulker_box
+execute in the_end run setblock 0 1 0 shulker_box
+execute as @a at @s run setblock 0 1 0 shulker_box
