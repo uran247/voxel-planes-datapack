@@ -26,7 +26,7 @@ data modify storage voxel-planes:plane f4u1.plane-data.hitbox merge value {radde
 data modify storage voxel-planes:plane f4u1.plane-data.hitbox merge value {cockpit:{offset:[0.3d,0.7d,1.1d]}}
 
 #デフォルト機銃データセット
-data modify storage voxel-planes:weapon f4u1.base.gun.data set value {name:"12.7mm gun",type:gun,size:12p7mm,max-ammunition:400,current-ammunition:400,max-cooltime:2,current-cooltime:0,max-reload:220,current-reload:0,tracer:"lightblue",damage:38,speed:11d,bullets:[{offset:[2.93d,-0.56d,3.6d]},{offset:[3.12d,-0.53d,3.6d]},{offset:[3.3d,-0.5d,3.6d]},{offset:[-2.38d,-0.56d,3.6d]},{offset:[-2.57d,-0.53d,0.36d]},{offset:[-2.75d,-0.5d,3.6d]}]}
+data modify storage voxel-planes:weapon f4u1.base.gun.data set value {name:"12.7mm gun",type:gun,size:12p7mm,max-ammunition:400,current-ammunition:400,max-cooltime:2,current-cooltime:0,max-reload:220,current-reload:0,tracer:"lightblue",damage:20,speed:11d,bullets:[{offset:[2.93d,-0.56d,3.6d]},{offset:[3.12d,-0.53d,3.6d]},{offset:[3.3d,-0.5d,3.6d]},{offset:[-2.38d,-0.56d,3.6d]},{offset:[-2.57d,-0.53d,0.36d]},{offset:[-2.75d,-0.5d,3.6d]}]}
 
 #デフォルト爆弾データセット
 data modify storage voxel-planes:weapon f4u1.base.bomb.data set value {name:bomb,type:bomb,max-ammunition:2,current-ammunition:2,max-reload:3600,current-reload:0,bombs:[]}

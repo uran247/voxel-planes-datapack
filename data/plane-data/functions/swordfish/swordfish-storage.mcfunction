@@ -35,6 +35,6 @@ data modify storage voxel-planes:weapon swordfish.base.bomb.data.bombs append va
 data modify storage voxel-planes:weapon swordfish.base.bomb.data.bombs append value {kind:500lb,type:normal,offset:[-2.8d,-0.9d,2.3d],damage:1100,weight:227,cmd:132}
 data modify storage voxel-planes:weapon swordfish.base.bomb.data.bombs append value {kind:500lb,type:normal,offset:[2.8d,-0.9d,2.3d],damage:1100,weight:227,cmd:132}
 
-#魚雷ロケット弾データセット
+#魚雷データセット
 data modify storage voxel-planes:weapon swordfish.base.torpedo.data set value {name:torpedo,type:torpedo,max-ammunition:0,current-ammunition:0,max-reload:500,current-reload:0,torpedos:[]}
 data modify storage voxel-planes:weapon swordfish.additional.torpedo set value [{kind:1600lb,type:normal,offset:[1d,-0.4d,0d],damage:3600,weight:680,cmd:52}]
