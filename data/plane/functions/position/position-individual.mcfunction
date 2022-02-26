@@ -39,3 +39,4 @@ execute as @s[tag=mosquitobmk16] run function plane-data:mosquitobmk16/mosquitob
 execute as @s[tag=f86f] run function plane-data:f86f/f86f-position
 execute as @s[tag=mig15bis] run function plane-data:mig15bis/mig15bis-position
 execute as @s[tag=p51d] run function plane-data:p51d/p51d-position
+execute as @s[tag=tbf] run function plane-data:tbf/tbf-position

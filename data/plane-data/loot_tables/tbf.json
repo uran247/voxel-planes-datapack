@@ -1,0 +1,41 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "minecraft:bat_spawn_egg",
+                    "weight": 1,
+                    "functions": [
+                        {
+                            "function": "set_name",
+                            "name": {
+                                "text": "TBF Avenger"
+                            }
+                        },
+                        {
+                            "function": "set_lore",
+                            "lore": [
+                                {
+                                    "translate": "爆撃機",
+                                    "color": "green",
+                                    "bold": true
+                                },
+                                {
+                                    "translate": " 武装"
+                                },
+                                {"translate":"  12.7mm機銃×2","color":"blue"},
+                                {"translate":"  250kg爆弾×4","color":"blue"}
+                            ]
+                        },
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{item-type:tbf,CustomModelData:33,HideFlags:18,EntityTag:{Silent:1b,Tags:[tbf-spawner,plane-spawner],ActiveEffects:[{Id:14b,Amplifier:1b,Duration:100,ShowParticles:0b}]}}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

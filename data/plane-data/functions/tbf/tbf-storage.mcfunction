@@ -1,0 +1,39 @@
+#> plane-data:tbf/tbf-storage
+#
+# @within tag/function constructor:add-storage
+
+#ストレージリセット
+data modify storage voxel-planes:weapon tbf set value {base:{},additional:{}}
+data modify storage voxel-planes:plane tbf set value {}
+
+#飛行機データセット
+data modify storage voxel-planes:plane tbf.plane-data.plane-type set value bomber
+data modify storage voxel-planes:plane tbf.plane-data.tier set value 1
+data modify storage voxel-planes:plane tbf.plane-data.flight-model.weight set value 7047
+data modify storage voxel-planes:plane tbf.plane-data.flight-model.speed set value {max-speed:278f,cruise-speed:215f,climb-rate:5.46f,stall-speed:104.6f}
+data modify storage voxel-planes:plane tbf.plane-data.flight-model.engine set value {type:recipro,horse-power:1700f,number:1}
+data modify storage voxel-planes:plane tbf.plane-data.flight-model.turn-rate set value {pitch:24f,yaw:12f,roll:10f}
+data modify storage voxel-planes:plane tbf.plane-data.flight-model.energy-loss-rate set value 0.8
+data modify storage voxel-planes:plane tbf.plane-data.model-data.body set value {parking-cmd:183,rolling-cmd:184,flying-cmd:185}
+data modify storage voxel-planes:plane tbf.plane-data.model-data.landing-pitch set value -11f
+data modify storage voxel-planes:plane tbf.plane-data.hitbox set value {}
+data modify storage voxel-planes:plane tbf.plane-data.hitbox merge value {engine:{max-hp:150,offset:[0d,0d,5d]}}
+data modify storage voxel-planes:plane tbf.plane-data.hitbox merge value {aileron-r:{max-hp:150,offset:[-4d,1d,0d]},aileron-l:{max-hp:150,offset:[4d,1d,0d]}}
+data modify storage voxel-planes:plane tbf.plane-data.hitbox merge value {elevator-r:{max-hp:140,offset:[-2d,2d,-4d]},elevator-l:{max-hp:140,offset:[2d,2d,-4d]}}
+data modify storage voxel-planes:plane tbf.plane-data.hitbox merge value {radder:{max-hp:130,offset:[0d,3d,-4d]}}
+data modify storage voxel-planes:plane tbf.plane-data.hitbox merge value {cockpit:{offset:[0d,1d,0d]}}
+data modify storage voxel-planes:plane tbf.plane-data.hitbox merge value {body:{max-hp:160,offset:[0d,0d,0d]}}
+
+#デフォルト機銃データセット
+data modify storage voxel-planes:weapon tbf.base.12p7mm.data set value {name:"12.7mm gun",type:gun,size:12p7mm,max-ammunition:310,current-ammunition:310,max-cooltime:1,current-cooltime:0,max-reload:140,current-reload:0,tracer:"lightblue",damage:13,speed:11,bullets:[{offset:[1.93d,1.12d,4.38d]},{offset:[-2.27d,1.12d,4.38d]}]}
+
+#デフォルト爆弾データセット
+data modify storage voxel-planes:weapon tbf.base.bomb.data set value {name:bomb,type:bomb,max-ammunition:0,current-ammunition:0,max-reload:600,current-reload:0,bombs:[]}
+data modify storage voxel-planes:weapon tbf.additional.500lb set value [{kind:500lb,type:normal,offset:[0.8d,-0.5d,4.4d],damage:1140,weight:227.0f,cmd:164}]
+data modify storage voxel-planes:weapon tbf.additional.500lb append value {kind:500lb,type:normal,offset:[0.8d,0d,4.4d],damage:1140,weight:227.0f,cmd:164}
+data modify storage voxel-planes:weapon tbf.additional.500lb append value {kind:500lb,type:normal,offset:[0.8d,0.5d,4.4d],damage:1140,weight:227.0f,cmd:164}
+data modify storage voxel-planes:weapon tbf.additional.500lb append value {kind:500lb,type:normal,offset:[0.3d,-0.5d,4.4d],damage:1140,weight:227.0f,cmd:164}
+
+#魚雷データセット
+data modify storage voxel-planes:weapon tbf.base.torpedo.data set value {name:torpedo,type:torpedo,max-ammunition:0,current-ammunition:0,max-reload:500,current-reload:0,torpedos:[]}
+data modify storage voxel-planes:weapon tbf.additional.torpedo set value [{kind:1600lb,type:normal,offset:[1d,-0.4d,0d],damage:3600,weight:680,cmd:52}]
