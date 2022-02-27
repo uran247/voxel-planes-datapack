@@ -40,3 +40,4 @@ execute if entity @s[tag=p47d] run function plane-data:p47d/p47d-equip
 execute if entity @s[tag=f86f] run function plane-data:f86f/f86f-equip
 execute if entity @s[tag=p51d] run function plane-data:p51d/p51d-equip
 execute if entity @s[tag=tbf] run function plane-data:tbf/tbf-equip
+execute if entity @s[tag=p39n] run function plane-data:p39n/p39n-equip

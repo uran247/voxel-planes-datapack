@@ -1,0 +1,51 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "minecraft:bat_spawn_egg",
+                    "weight": 1,
+                    "functions": [
+                        {
+                            "function": "set_name",
+                            "name": {
+                                "text": "P-39N Airacobra"
+                            }
+                        },
+                        {
+                            "function": "set_lore",
+                            "lore": [
+                                {
+                                    "translate": "戦闘機",
+                                    "color": "green",
+                                    "bold": true
+                                },
+                                {
+                                    "translate": " 武装"
+                                },
+                                {
+                                    "translate": "  7.7mm機銃 x4",
+                                    "color": "blue"
+                                },
+                                {
+                                    "translate": "  12.7mm機銃 x2",
+                                    "color": "blue"
+                                },
+                                {
+                                    "translate": "  37mm機銃 x1",
+                                    "color": "blue"
+                                }
+                            ]
+                        },
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{item-type:p39n,CustomModelData:34,HideFlags:18,EntityTag:{Silent:1b,Tags:[p39n-spawner,plane-spawner],ActiveEffects:[{Id:14b,Amplifier:1b,Duration:100,ShowParticles:0b}]}}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

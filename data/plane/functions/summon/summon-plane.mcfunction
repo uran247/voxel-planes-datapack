@@ -36,3 +36,4 @@ execute at @s[tag=f86f-spawner] as @p run function plane-data:f86f/f86f
 execute at @s[tag=mig15bis-spawner] as @p run function plane-data:mig15bis/mig15bis
 execute at @s[tag=p51d-spawner] as @p run function plane-data:p51d/p51d
 execute at @s[tag=tbf-spawner] as @p run function plane-data:tbf/tbf
+execute at @s[tag=p39n-spawner] as @p run function plane-data:p39n/p39n

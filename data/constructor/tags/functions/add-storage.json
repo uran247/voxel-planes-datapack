@@ -32,6 +32,7 @@
         "plane-data:f86f/f86f-storage",
         "plane-data:mig15bis/mig15bis-storage",
         "plane-data:p51d/p51d-storage",
-        "plane-data:tbf/tbf-storage"
+        "plane-data:tbf/tbf-storage",
+        "plane-data:p39n/p39n-storage"
     ]
 }
