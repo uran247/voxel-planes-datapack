@@ -17,10 +17,11 @@ tag @s[nbt={Inventory:[{Slot:-106b,tag:{item-type:controll-rod}}]}] add weapon-u
 execute if entity @s[nbt=!{Inventory:[{Slot:-106b,tag:{item-type:controll-rod}}]}] at @s run function plane:controll/weapon/switch-weapon
 
 #右クリック判定
-execute if score @s vp.rightClick matches 2.. run scoreboard players set @s vp.rightClick 0
+#execute if score @s vp.rightClick matches 2.. run scoreboard players set @s vp.rightClick 0
 
-#weaponfunctionを実行
-execute if score @s vp.rightClick matches 1 run tag @e[tag=controll-target,distance=..1] add need-use-weapon
+#weaponfunctionを実行フラグを立てる
+execute if entity @s[tag=need-use-weapon] run tag @e[tag=controll-target,distance=..1] add need-use-weapon
 
 #使用者タグ削除
 tag @s remove weapon-user
+tag @s remove need-use-weapon

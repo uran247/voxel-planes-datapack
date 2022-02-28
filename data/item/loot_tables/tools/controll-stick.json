@@ -5,7 +5,7 @@
             "entries": [
                 {
                     "type": "item",
-                    "name": "minecraft:carrot_on_a_stick",
+                    "name": "minecraft:crossbow",
                     "weight": 1,
                     "functions": [
                         {
@@ -23,6 +23,12 @@
                         {
                             "function": "minecraft:set_nbt",
                             "tag":"{item-type:controll-rod,CustomModelData:1,volatile:1}"
+                        },
+                        {
+                            "function": "minecraft:set_enchantments",
+                            "enchantments": {
+                                "quick_charge": 6
+                            }
                         }
                     ]
                 }

@@ -1,0 +1,16 @@
+{
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:using_item",
+        "conditions": {
+          "item": {
+            "nbt": "{item-type:controll-rod}"
+          }
+        }
+      }
+    },
+    "rewards": {
+        "function": "plane:controll/detect-rightclick"
+    }
+  }
+  
