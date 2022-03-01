@@ -48,6 +48,9 @@ scoreboard players operation @e[tag=drop-init,distance=..20] vp.speedZ /= #10 vp
 
 #tellraw @p [{"score" : {"name":"@e[tag=drop-init,distance=..5,limit=1]", "objective":"speed"}}, {"text":" "}, {"score" : {"name":"@e[tag=drop-init,distance=..5,limit=1]", "objective":"age"}}]
 
+#cooltime時間設定
+data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data.current-cooltime set value 4
+
 #音
 playsound minecraft:block.piston.contract ambient @a ~ ~ ~ 1 1.5
 

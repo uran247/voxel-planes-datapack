@@ -15,10 +15,10 @@ execute store result score #cooltime vp.reg1 run data get storage oh_my_dat: _[-
 
 #選択に応じて武器ファンクション実行
 execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data{type:gun} if score #ammunition vp.reg1 matches 1.. if score #cooltime vp.reg1 matches ..0 at @s run function plane:weapon/use-weapon/use-gun
-execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data{type:bomb} if score #ammunition vp.reg1 matches 1.. at @s run function plane:weapon/use-weapon/use-bomb
-execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data{type:rocket} if score #ammunition vp.reg1 matches 1.. at @s run function plane:weapon/use-weapon/use-rocket
-execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data{type:torpedo} if score #ammunition vp.reg1 matches 1.. at @s run function plane:weapon/use-weapon/use-torpedo
-execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data{type:ir-missile} if score @s vp.lockon-time matches 5.. if score #ammunition vp.reg1 matches 1.. at @s run function plane:weapon/use-weapon/use-ir-missile
+execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data{type:bomb} if score #ammunition vp.reg1 matches 1.. if score #cooltime vp.reg1 matches ..0 at @s run function plane:weapon/use-weapon/use-bomb
+execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data{type:rocket} if score #ammunition vp.reg1 matches 1.. if score #cooltime vp.reg1 matches ..0 at @s run function plane:weapon/use-weapon/use-rocket
+execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data{type:torpedo} if score #ammunition vp.reg1 matches 1.. if score #cooltime vp.reg1 matches ..0 at @s run function plane:weapon/use-weapon/use-torpedo
+execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data{type:ir-missile} if score @s vp.lockon-time matches 5.. if score #cooltime vp.reg1 matches ..0 if score #ammunition vp.reg1 matches 1.. at @s run function plane:weapon/use-weapon/use-ir-missile
 
 #右クリックリセット
 execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data{type:gun,current-ammunition:-1} run scoreboard players set @p vp.rightClick 0

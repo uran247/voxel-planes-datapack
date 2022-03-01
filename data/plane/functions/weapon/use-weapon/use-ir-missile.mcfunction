@@ -54,6 +54,9 @@ scoreboard players operation @e[tag=weapon-init,distance=..20] vp.speedZ = @s vp
 playsound minecraft:entity.firework_rocket.launch ambient @a ~ ~ ~ 1 0.5
 #tellraw @p [{"score" : {"name":"@e[tag=weapon-init,distance=..5,limit=1]", "objective":"speed"}}, {"text":" "}, {"score" : {"name":"@e[tag=weapon-init,distance=..5,limit=1]", "objective":"age"}}]
 
+#cooltime時間設定
+data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data.current-cooltime set value 4
+
 #残弾数減算
 scoreboard players remove #ammunition vp.reg1 1
 execute store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data.current-ammunition int 1 run scoreboard players get #ammunition vp.reg1
