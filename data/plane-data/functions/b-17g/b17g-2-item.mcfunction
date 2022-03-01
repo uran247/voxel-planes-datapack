@@ -2,4 +2,4 @@
 #処理　ki21をアイテム化
 
 #アイテムをsummon
-loot spawn ~ ~ ~ loot plane-data:ki-49
+loot spawn ~ ~ ~ loot plane-data:b-17g
