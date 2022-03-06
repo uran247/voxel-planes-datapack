@@ -26,3 +26,4 @@ recipe take @s[advancements={plane-data:crafting/plane/b-17g=true}] plane-data:p
 recipe take @s[advancements={plane-data:crafting/plane/p-38l=true}] plane-data:plane/p-38l-recipe
 recipe take @s[advancements={plane-data:crafting/plane/meteor-f8=true}] plane-data:plane/meteor-f8-recipe
 recipe take @s[advancements={plane-data:crafting/plane/p39n=true}] plane-data:plane/p39n-recipe
+recipe take @s[advancements={plane-data:crafting/plane/p51d=true}] plane-data:plane/p51d-recipe

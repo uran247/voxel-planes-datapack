@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "FW ",
+        "i#i"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:iron_block"
+        },
+        "F": {
+            "item": "minecraft:firework_star"
+        },
+        "W": {
+            "item": "minecraft:white_dye"
+        },
+        "i": {
+            "item": "minecraft:iron_ingot"
+        }
+    },
+    "result": {
+        "item": "minecraft:phantom_spawn_egg",
+        "count": 1
+    }
+}
