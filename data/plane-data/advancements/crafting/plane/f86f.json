@@ -1,0 +1,35 @@
+{
+    "parent": "plane-data:crafting/root",
+    "display": {
+        "icon": {
+            "item": "minecraft:feather",
+            "nbt": "{}"
+        },
+        "title": {
+            "translate": "dummy"
+        },
+        "description": {
+            "translate": "dummy"
+        },
+        "frame": "task",
+        "show_toast": false,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "get_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "plane-data:plane/f86f-recipe"
+            }
+        }
+    },
+    "requirements": [
+        [
+            "get_recipe"
+        ]
+    ],
+    "rewards": {
+        "function": "advancements:plane-recipie-manager"
+    }
+}

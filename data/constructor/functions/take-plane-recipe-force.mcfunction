@@ -28,3 +28,4 @@ recipe take @a plane-data:plane/meteor-f8-recipe
 recipe take @a plane-data:plane/p39n-recipe
 recipe take @a plane-data:plane/p51d-recipe
 recipe take @a plane-data:plane/tbf-recipe
+recipe take @a plane-data:plane/f86f-recipe
