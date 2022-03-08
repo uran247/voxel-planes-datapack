@@ -7,3 +7,4 @@ recipe take @a weapon-data:rocket/aa-rocket
 recipe take @a weapon-data:gun/ho-103
 recipe take @a weapon-data:gun/mg151
 recipe take @a weapon-data:torpedo/torpedo
+recipe take @a weapon-data:missile/ir-missile

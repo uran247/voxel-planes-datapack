@@ -9,6 +9,7 @@ loot give @s[advancements={weapon-data:rocket/ag-rocket=true}] loot weapon-data:
 loot give @s[advancements={weapon-data:gun/ho-103=true}] loot weapon-data:ho-103
 loot give @s[advancements={weapon-data:gun/mg151=true}] loot weapon-data:mg151
 loot give @s[advancements={weapon-data:torpedo/torpedo=true}] loot weapon-data:torpedo
+loot give @s[advancements={weapon-data:missile/ir-missile=true}] loot weapon-data:ir-missile
 
 clear @s phantom_spawn_egg 1
 execute store success score @s vp.reg1 run clear @s phantom_spawn_egg 0

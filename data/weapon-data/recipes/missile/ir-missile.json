@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " #F",
+        " FD",
+        "T  "
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:redstone"
+        },
+        "F": {
+            "item": "minecraft:firework_rocket"
+        },
+        "D": {
+            "item": "minecraft:diamond"
+        },
+        "T": {
+            "item": "minecraft:tnt"
+        }
+    },
+    "result": {
+        "item": "minecraft:phantom_spawn_egg",
+        "count": 1
+    }
+}

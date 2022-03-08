@@ -9,5 +9,6 @@ recipe take @s[advancements={weapon-data:rocket/ag-rocket=true}] weapon-data:roc
 recipe take @s[advancements={weapon-data:gun/ho-103=true}] weapon-data:gun/ho-103
 recipe take @s[advancements={weapon-data:gun/mg151=true}] weapon-data:gun/mg151
 recipe take @s[advancements={weapon-data:torpedo/torpedo=true}] weapon-data:torpedo/torpedo
+recipe take @s[advancements={weapon-data:missile/ir-missile=true}] weapon-data:missile/ir-missile
 
 advancement revoke @s from plane-data:crafting/root
