@@ -18,10 +18,10 @@ data modify storage voxel-planes:plane p51d.plane-data.model-data.body set value
 data modify storage voxel-planes:plane p51d.plane-data.model-data.landing-pitch set value -13
 data modify storage voxel-planes:plane p51d.plane-data.hitbox set value {}
 data modify storage voxel-planes:plane p51d.plane-data.hitbox merge value {engine:{max-hp:300,offset:[0d,0d,4d]}}
-data modify storage voxel-planes:plane p51d.plane-data.hitbox merge value {aileron-r:{max-hp:290,offset:[-3d,0.5d,0d]},aileron-l:{max-hp:290,offset:[3d,0.5d,0d]}}
-data modify storage voxel-planes:plane p51d.plane-data.hitbox merge value {elevator-r:{max-hp:260,offset:[-1d,1d,-5d]},elevator-l:{max-hp:260,offset:[1d,1d,-5d]}}
-data modify storage voxel-planes:plane p51d.plane-data.hitbox merge value {radder:{max-hp:280,offset:[0d,3d,-6d]}}
-data modify storage voxel-planes:plane p51d.plane-data.hitbox merge value {cockpit:{offset:[0d,2d,0d]}}
+data modify storage voxel-planes:plane p51d.plane-data.hitbox merge value {aileron-r:{max-hp:290,offset:[-3d,-0.4d,0.8d]},aileron-l:{max-hp:290,offset:[3d,-0.4d,0.8d]}}
+data modify storage voxel-planes:plane p51d.plane-data.hitbox merge value {elevator-r:{max-hp:260,offset:[-1d,0.3d,-3.7d]},elevator-l:{max-hp:260,offset:[1d,0.3d,-3.7d]}}
+data modify storage voxel-planes:plane p51d.plane-data.hitbox merge value {radder:{max-hp:280,offset:[0d,1.2d,-4.2d]}}
+data modify storage voxel-planes:plane p51d.plane-data.hitbox merge value {cockpit:{offset:[0d,0.8d,1.2d]}}
 data modify storage voxel-planes:plane p51d.plane-data.hitbox merge value {body:{max-hp:320,offset:[0d,0d,0d]}}
 
 #デフォルト機銃データセット
