@@ -33,6 +33,6 @@ data modify storage voxel-planes:weapon f86f.additional.1000lb set value [{kind:
 data modify storage voxel-planes:weapon f86f.additional.1000lb append value {kind:1000lb,type:normal,offset:[2.2d,-0.7d,-0.8d],damage:2300,weight:454.0f,cmd:122}
 
 #デフォルトミサイルデータセット
-data modify storage voxel-planes:weapon f86f.base.missile.data set value {name:missile,type:ir-missile,max-ammunition:2,current-ammunition:2,max-reload:80,current-reload:0,lockon-time:0,missiles:[]}
+data modify storage voxel-planes:weapon f86f.base.missile.data set value {name:missile,type:ir-missile,max-ammunition:2,current-ammunition:2,max-reload:1200,current-reload:0,lockon-time:0,missiles:[]}
 data modify storage voxel-planes:weapon f86f.additional.missile set value [{kind:70kg,type:ir-missile,offset:[-2.2d,-0.6d,-0.8d],damage:350,weight:70,cmd:174,turn-rate:9.6f,max-speed:7.2f}]
 data modify storage voxel-planes:weapon f86f.additional.missile append value {kind:70kg,type:ir-missile,offset:[2.2d,-0.6d,-0.8d],damage:350,weight:70,cmd:174,turn-rate:9.6f,max-speed:7.2f}
