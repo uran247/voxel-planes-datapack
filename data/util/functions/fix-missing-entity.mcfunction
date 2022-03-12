@@ -11,3 +11,4 @@ execute unless entity 0-0-0-0-8 run summon minecraft:marker 0.0 1.0 0.0 {Tags:[e
 execute unless entity 0-0-0-0-9 run summon minecraft:marker 0.0 1.0 0.0 {Tags:[entity-nohit,dummy-entity],UUID:[I;0,0,0,9]}
 execute unless entity 0-0-0-0-a run summon minecraft:marker 0.0 1.0 0.0 {Tags:[entity-nohit,dummy-entity],UUID:[I;0,0,0,10]}
 execute unless entity 0-0-0-0-b run summon minecraft:marker 0.0 1.0 0.0 {Tags:[entity-nohit,dummy-entity],UUID:[I;0,0,0,11]}
+execute unless entity 0-0-0-0-c run summon minecraft:marker 0.0 1.0 0.0 {Tags:[entity-nohit,dummy-entity,dummy-sun],UUID:[I;0,0,0,11]}

@@ -20,6 +20,10 @@
     #declare score_holder #gtime #ゲーム内の時間[s]
     #declare score_holder #lockon-time #ロックオン時間
     #declare tag target-candidate #ミサイルロックオン候補
+    #declare tag dummy-sun #ダミー太陽
+
+#太陽の方向にダミー召喚
+function plane:weapon/util/set-sun-dummy
 
 #範囲内にロックオン可能mobがいるか確認
 # 機種から±20度範囲にエンティティがいるか
@@ -29,7 +33,7 @@ execute positioned ^ ^ ^128 as @e[tag=target-candidate,distance=..128] positione
 execute positioned ^ ^ ^128 as @e[tag=target-candidate,distance=..128] positioned ^ ^ ^-128 rotated ~ ~30 positioned ^ ^1000.1 ^ unless entity @s[distance=..1000] run tag @s remove target-candidate
 execute positioned ^ ^ ^128 as @e[tag=target-candidate,distance=..128] positioned ^ ^ ^-128 rotated ~ ~-30 positioned ^ ^-1000.1 ^ unless entity @s[distance=..1000] run tag @s remove target-candidate
 # エンティティの向きが機体に対して±30度以内か判定
-execute positioned ^ ^ ^128 as @e[tag=target-candidate,distance=..128] positioned as @s positioned ^ ^ ^1000 rotated as @s positioned ^ ^ ^-1000 unless entity @s[distance=..518] run tag @s remove target-candidate
+execute positioned ^ ^ ^128 as @e[tag=target-candidate,tag=!dummy-sun,distance=..128] positioned as @s positioned ^ ^ ^1000 rotated as @s positioned ^ ^ ^-1000 unless entity @s[distance=..518] run tag @s remove target-candidate
 
 #ロックオン可能mobがいるならvp.lockon-timeを+1、いないならreset
 execute positioned ^ ^ ^128 if entity @e[tag=target-candidate,distance=..128] run scoreboard players add @s vp.lockon-time 1
@@ -49,3 +53,4 @@ execute if score @s vp.lockon-time matches 5.. as @e[tag=target-candidate,distan
 
 #reset
 execute positioned ^ ^ ^128 as @e[tag=target-candidate,distance=..128] run tag @s remove target-candidate
+tp @e[tag=dummy-sun,limit=1] 0.0 0.0 0.0

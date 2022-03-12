@@ -12,6 +12,7 @@
 #> private
 # @private
     #declare tag missile-move-executer #実行者につくタグ
+    #declare tag dummy-sun #実行者につくタグ
     #declare tag hit-weapon #武器がヒットしたエンティティにつく
     #declare tag turn-left #ミサイルがどちらに曲がるか
     #declare tag turn-right #ミサイルがどちらに曲がるか
@@ -38,11 +39,20 @@ tag @s add missile-move-executer
 # ブロックチェッカー初期化
 execute positioned 0.0 1.0 0.0 unless entity @e[tag=block-checker,distance=..0.01] run tp @e[tag=block-checker] 0.0 1.0 0.0
 execute positioned 0.0 1.0 0.0 unless entity @e[tag=block-checker,distance=..0.01] run kill @e[type=marker,tag=block-checker]
-execute positioned 0.0 1.0 0.0 unless entity @e[tag=block-checker,distance=..0.01] run summon minecraft:marker 0.0 1.0 0.0 {Tags:[entity-nohit,dummy-entity,block-checker]}
 execute positioned 0.0 1.0 0.0 unless entity @e[tag=block-checker,distance=..0.01] run kill @s
+execute positioned 0.0 1.0 0.0 unless entity @e[tag=block-checker,distance=..0.01] run summon minecraft:marker 0.0 1.0 0.0 {Tags:[entity-nohit,dummy-entity,block-checker]}
+
+#dummy sun初期化
+execute positioned 0.0 0.0 0.0 unless entity @e[tag=dummy-sun,distance=..0.01] run tp @e[tag=dummy-sun] 0.0 0.0 0.0
+execute positioned 0.0 0.0 0.0 unless entity @e[tag=dummy-sun,distance=..0.01] run kill @e[type=marker,tag=dummy-sun]
+execute positioned 0.0 0.0 0.0 unless entity @e[tag=dummy-sun,distance=..0.01] run kill @s
+execute positioned 0.0 0.0 0.0 unless entity @e[tag=dummy-sun,distance=..0.01] run summon minecraft:marker 0.0 0.0 0.0 {Tags:[entity-nohit,dummy-entity,dummy-sun],UUID:[I;0,0,0,12]}
 
 #データ取得
 function oh_my_dat:please
+
+#dummy sun配置
+function weapon:util/set-sun-dummy
 
 #向き変更
     #ターゲットが右にいるか左にいるか探索
