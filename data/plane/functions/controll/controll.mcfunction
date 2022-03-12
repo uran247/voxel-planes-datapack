@@ -21,7 +21,7 @@
     #declare score_holder #plane-id #操縦者のplane-idを示す
 
 #透明にしとく
-effect give @s minecraft:invisibility 1
+effect give @s minecraft:invisibility 1 1 true
 
 #plane-riderタグのツイてないプレイヤーの右クリック検知スコアとドロップスコアをリセット,操縦桿付与
 execute as @s[tag=!plane-rider] run scoreboard players reset @s vp.rightClick
