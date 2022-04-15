@@ -38,3 +38,4 @@ execute as @s[tag=mig15bis] at @s run function plane-data:mig15bis/mig15bis-2-it
 execute as @s[tag=p51d] at @s run function plane-data:p51d/p51d-2-item
 execute as @s[tag=tbf] at @s run function plane-data:tbf/tbf-2-item
 execute as @s[tag=p39n] at @s run function plane-data:p39n/p39n-2-item
+execute as @s[tag=bf110g2] at @s run function plane-data:bf110g2/bf110g2-2-item
