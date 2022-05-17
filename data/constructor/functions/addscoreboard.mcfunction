@@ -35,7 +35,7 @@ scoreboard objectives add vp.PosZ dummy
 scoreboard objectives add vp.displacementX dummy
 scoreboard objectives add vp.displacementY dummy
 scoreboard objectives add vp.displacementZ dummy
-#[-1..1] * 100
+#tick / m * 100
 scoreboard objectives add vp.speedX dummy
 scoreboard objectives add vp.speedY dummy
 scoreboard objectives add vp.speedZ dummy
