@@ -21,9 +21,12 @@ execute rotated as 0-0-0-0-8 positioned ^ ^ ^256 rotated as @e[tag=ground-check,
 
 #距離計算
 execute store result score #altitude vp.return run data get entity @s Pos[1]
+    #tellraw @p [{"score":{"name": "#altitude","objective": "vp.return"}}]
 execute store result score #ground-y vp.reg1 run data get entity 0-0-0-0-4 Pos[1]
-
+    #tellraw @p [{"score":{"name": "#altitude","objective": "vp.return"}}]
 scoreboard players operation #altitude vp.return -= #ground-y vp.reg1
+
+    #tellraw @p [{"score":{"name": "#altitude","objective": "vp.return"}}]
 
 #リセット
 scoreboard players reset #ground-y vp.reg1 
