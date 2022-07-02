@@ -38,3 +38,5 @@ execute at @s[tag=p51d-spawner] as @p run function plane-data:p51d/p51d
 execute at @s[tag=tbf-spawner] as @p run function plane-data:tbf/tbf
 execute at @s[tag=p39n-spawner] as @p run function plane-data:p39n/p39n
 execute at @s[tag=bf110g2-spawner] as @p run function plane-data:bf110g2/bf110g2
+execute at @s[tag=lancastermk3-spawner] as @p run function plane-data:lancastermk3/lancastermk3
+execute at @s[tag=hunterf6-spawner] as @p run function plane-data:hunterf6/hunterf6

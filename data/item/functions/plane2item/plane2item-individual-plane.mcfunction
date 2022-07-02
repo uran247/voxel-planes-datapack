@@ -39,3 +39,5 @@ execute as @s[tag=p51d] at @s run function plane-data:p51d/p51d-2-item
 execute as @s[tag=tbf] at @s run function plane-data:tbf/tbf-2-item
 execute as @s[tag=p39n] at @s run function plane-data:p39n/p39n-2-item
 execute as @s[tag=bf110g2] at @s run function plane-data:bf110g2/bf110g2-2-item
+execute as @s[tag=lancastermk3] at @s run function plane-data:lancastermk3/lancastermk3-2-item
+execute as @s[tag=hunterf6] at @s run function plane-data:hunterf6/hunterf6-2-item
