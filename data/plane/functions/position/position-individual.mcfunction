@@ -44,3 +44,4 @@ execute as @s[tag=p39n] run function plane-data:p39n/p39n-position
 execute as @s[tag=bf110g2] run function plane-data:bf110g2/bf110g2-position
 execute as @s[tag=lancastermk3] run function plane-data:lancastermk3/lancastermk3-position
 execute as @s[tag=hunterf6] run function plane-data:hunterf6/hunterf6-position
+execute as @s[tag=yak9u] run function plane-data:yak9u/yak9u-position
