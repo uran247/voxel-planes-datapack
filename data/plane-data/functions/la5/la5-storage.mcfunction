@@ -27,10 +27,12 @@ data modify storage voxel-planes:plane la5.plane-data.hitbox merge value {cockpi
 #デフォルト機銃データセット
 data modify storage voxel-planes:weapon la5.base.gun set value {data:{name:"20mm gun",type:gun,size:20mm,max-ammunition:170,current-ammunition:170,max-cooltime:2,current-cooltime:0,max-reload:280,current-reload:0,tracer:"yellow",damage:55,speed:9.9d,bullets:[{offset:[-0.35d,2d,2.8d]},{offset:[0.2d,2d,2.8d]}]}}
 
-##デフォルト爆弾データセット
-#data modify storage voxel-planes:weapon la5.base.bomb.data set value {name:bomb,type:bomb,max-ammunition:0,current-ammunition:0,max-reload:$RELOAD_TIME,current-reload:0,bombs:[]}
-#data modify storage voxel-planes:weapon la5.additional.$ADDITIONAL_WEAPOM set value [{kind:$WEPAON_KIND,type:$BOMB_TYPE,offset:[$X,$Y,$Z],damage:$DAMAGE,weight:$WEPAON_WEIGHT,cmd:$WEAPON_CMD}]
-#
+#デフォルト爆弾データセット
+data modify storage voxel-planes:weapon la5.base.bomb.data set value {name:bomb,type:bomb,max-ammunition:2,current-ammunition:2,max-reload:3600,current-reload:0,bombs:[]}
+data modify storage voxel-planes:weapon la5.additional.50kg set value [{kind:50kg,type:bomb,offset:[-2.5d,-0.6d,0d],damage:250,weight:50,cmd:202}]
+data modify storage voxel-planes:weapon la5.additional.50kg append value {kind:50kg,type:bomb,offset:[2.5d,-0.6d,0d],damage:250,weight:50,cmd:202}
+
+
 ##デフォルトロケット弾データセット
 #data modify storage voxel-planes:weapon la5.base.rocket.data set value {name:rocket,type:rocket,max-ammunition:0,current-ammunition:0,max-reload:$RELOAD_TIME,current-reload:0,rockets:[]}
 #data modify storage voxel-planes:weapon la5.additional.$ADDITIONAL_WEAPOM set value [{kind:$WEPAON_KIND,type:$ROCKET_TYPE,offset:[$X,$Y,$Z],damage:$DAMAGE,weight:$WEPAON_WEIGHT,cmd:$WEAPON_CMD}]
