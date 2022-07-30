@@ -25,8 +25,8 @@ data modify storage voxel-planes:plane il2.plane-data.hitbox merge value {body:{
 data modify storage voxel-planes:plane il2.plane-data.hitbox merge value {cockpit:{offset:[0d,0.7d,1.1d]}}
 
 #デフォルト機銃データセット
-data modify storage voxel-planes:weapon il2.base.23mm.data set value {name:"23mm gun",type:gun,size:23mm,max-ammunition:150,current-ammunition:150,max-cooltime:2,current-cooltime:0,max-reload:280,current-reload:0,tracer:"yellow",damage:61,speed:11.3d,bullets:[{offset:[1.9d,0.2d,2.1d]},{offset:[-1.95d,0.2d,2.1d]}]}
-data modify storage voxel-planes:weapon il2.base.7p7mm.data set value {name:"7.7mm gun",type:gun,size:7p7mm,max-ammunition:750,current-ammunition:750,max-cooltime:1,current-cooltime:0,max-reload:140,current-reload:0,tracer:"lightblue",damage:19,speed:10,bullets:[{offset:[0.15d,0.55d,2.5d]},{offset:[-0.25d,0.55d,2.5d]}]}
+data modify storage voxel-planes:weapon il2.base.23mm.data set value {name:"23mm gun",type:gun,size:23mm,max-ammunition:150,current-ammunition:150,max-cooltime:2,current-cooltime:0,max-reload:280,current-reload:0,tracer:"yellow",damage:61,speed:11.3d,bullets:[{offset:[2.6d,1.2d,4.3d]},{offset:[-2.7d,1.2d,4.3d]}]}
+data modify storage voxel-planes:weapon il2.base.7p7mm.data set value {name:"7.7mm gun",type:gun,size:7p7mm,max-ammunition:750,current-ammunition:750,max-cooltime:1,current-cooltime:0,max-reload:140,current-reload:0,tracer:"lightblue",damage:19,speed:10,bullets:[{offset:[2.2d,1.2d,3.8d]},{offset:[-2.3d,1.2d,3.8d]}]}
 
 #デフォルト爆弾データセット
 data modify storage voxel-planes:weapon il2.base.bomb.data set value {name:bomb,type:bomb,max-ammunition:0,current-ammunition:0,max-reload:800,current-reload:0,bombs:[]}
