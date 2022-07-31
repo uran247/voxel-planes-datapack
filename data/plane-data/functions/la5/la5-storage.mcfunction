@@ -17,12 +17,12 @@ data modify storage voxel-planes:plane la5.plane-data.flight-model.energy-loss-r
 data modify storage voxel-planes:plane la5.plane-data.model-data.body set value {parking-cmd:59,rolling-cmd:60,flying-cmd:61}
 data modify storage voxel-planes:plane la5.plane-data.model-data.landing-pitch set value -12
 data modify storage voxel-planes:plane la5.plane-data.hitbox set value {}
-data modify storage voxel-planes:plane la5.plane-data.hitbox merge value {engine:{max-hp:190d,offset:[0d,0d,2.7d]}}
-data modify storage voxel-planes:plane la5.plane-data.hitbox merge value {aileron-r:{max-hp:220d,offset:[-2.7d,0d,0.5d]},aileron-l:{max-hp:220d,offset:[2.7d,0d,0.5d]}}
-data modify storage voxel-planes:plane la5.plane-data.hitbox merge value {elevator-r:{max-hp:170d,offset:[-1.3d,0.1d,-4.2d]},elevator-l:{max-hp:170d,offset:[1.3d,0.1d,-4.2d]}}
-data modify storage voxel-planes:plane la5.plane-data.hitbox merge value {radder:{max-hp:180d,offset:[-0.1d,1d,-4.6d]}}
+data modify storage voxel-planes:plane la5.plane-data.hitbox merge value {engine:{max-hp:190d,offset:[0d,1.5d,2.2d]}}
+data modify storage voxel-planes:plane la5.plane-data.hitbox merge value {aileron-r:{max-hp:220d,offset:[-2.7d,1.1d,0.6d]},aileron-l:{max-hp:220d,offset:[2.7d,1.1d,0.6d]}}
+data modify storage voxel-planes:plane la5.plane-data.hitbox merge value {elevator-r:{max-hp:170d,offset:[-1d,1.8d,-4.1d]},elevator-l:{max-hp:170d,offset:[1d,1.8d,-4.1d]}}
+data modify storage voxel-planes:plane la5.plane-data.hitbox merge value {radder:{max-hp:180d,offset:[0d,2.4d,-4.4d]}}
 data modify storage voxel-planes:plane la5.plane-data.hitbox merge value {body:{max-hp:220d,offset:[0d,0d,0d]}}
-data modify storage voxel-planes:plane la5.plane-data.hitbox merge value {cockpit:{offset:[0d,0.7d,1.1d]}}
+data modify storage voxel-planes:plane la5.plane-data.hitbox merge value {cockpit:{offset:[0d,2.1d,0d]}}
 
 #デフォルト機銃データセット
 data modify storage voxel-planes:weapon la5.base.gun set value {data:{name:"20mm gun",type:gun,size:20mm,max-ammunition:170,current-ammunition:170,max-cooltime:2,current-cooltime:0,max-reload:280,current-reload:0,tracer:"yellow",damage:55,speed:9.9d,bullets:[{offset:[-0.35d,2d,2.8d]},{offset:[0.2d,2d,2.8d]}]}}
