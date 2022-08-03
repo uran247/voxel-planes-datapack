@@ -19,6 +19,7 @@
 #> private
 # @private
     #declare tag plane-position-executer #実行者を示す
+    #declare score_holder #packet #パケット送信用スコア
 
 #入力：entity plane-root
 #処理：飛行機の位置修正
@@ -71,6 +72,12 @@ execute if entity @s[tag=!angle-not-changed] run function math:vector
 #角度補正
 execute at @s[tag=!angle-not-changed] run function plane:position/util/modify-angle
 #execute at @s[tag=angle-not-changed] run function plane:position/util/stable-display
+
+#パケット強制送信で描画ズレを阻止
+execute store result score #packet vp.reg1 run time query gametime
+scoreboard players operation #packet vp.reg1 %= #2 vp.Num
+execute as @e[tag=target-parts,tag=plane-seat,distance=..32] store result entity @s Air short 1 run scoreboard players get #packet vp.reg1
+execute as @e[tag=has-model,tag=target-parts,distance=..32] store result entity @s Pose.RightArm[0] float 0.00001 run scoreboard players get #packet vp.reg1
 
 #seatの位置表示
 execute if entity @s[tag=!has-rider,tag=!no-move] at @e[type=armor_stand,tag=target-parts,tag=plane-seat,tag=!no-particle,distance=..20] run particle minecraft:happy_villager ~ ~2.8 ~ 0.1 0.1 0.1 1 1 force @a[tag=!plane-rider,distance=..8]
