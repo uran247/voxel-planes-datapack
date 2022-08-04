@@ -17,11 +17,11 @@ data modify storage voxel-planes:plane mig15bis.plane-data.flight-model.energy-l
 data modify storage voxel-planes:plane mig15bis.plane-data.model-data.body set value {parking-cmd:175,rolling-cmd:175,flying-cmd:176}
 data modify storage voxel-planes:plane mig15bis.plane-data.model-data.landing-pitch set value 0
 data modify storage voxel-planes:plane mig15bis.plane-data.hitbox set value {}
-data modify storage voxel-planes:plane mig15bis.plane-data.hitbox merge value {engine:{max-hp:310d,offset:[0d,1.5d,0d]}}
-data modify storage voxel-planes:plane mig15bis.plane-data.hitbox merge value {aileron-r:{max-hp:300d,offset:[-2.5d,1d,0d]},aileron-l:{max-hp:300d,offset:[2.5d,1d,0d]}}
-data modify storage voxel-planes:plane mig15bis.plane-data.hitbox merge value {elevator-r:{max-hp:270d,offset:[-0.8d,1.5d,-6d]},elevator-l:{max-hp:270d,offset:[0.8d,1.5d,-6d]}}
-data modify storage voxel-planes:plane mig15bis.plane-data.hitbox merge value {radder:{max-hp:280d,offset:[0d,3d,-5d]}}
-data modify storage voxel-planes:plane mig15bis.plane-data.hitbox merge value {cockpit:{offset:[0d,1.5d,2d]}}
+data modify storage voxel-planes:plane mig15bis.plane-data.hitbox merge value {engine:{max-hp:310d,offset:[0d,0d,-0.5d]}}
+data modify storage voxel-planes:plane mig15bis.plane-data.hitbox merge value {aileron-r:{max-hp:300d,offset:[-2.5d,-0.3d,-1d]},aileron-l:{max-hp:300d,offset:[2.5d,-0.3d,-1d]}}
+data modify storage voxel-planes:plane mig15bis.plane-data.hitbox merge value {elevator-r:{max-hp:270d,offset:[-0.8d,1.4d,-5.5d]},elevator-l:{max-hp:270d,offset:[0.8d,1.4d,-5.5d]}}
+data modify storage voxel-planes:plane mig15bis.plane-data.hitbox merge value {radder:{max-hp:280d,offset:[0d,1.3d,-5d]}}
+data modify storage voxel-planes:plane mig15bis.plane-data.hitbox merge value {cockpit:{offset:[0d,0.5d,2d]}}
 data modify storage voxel-planes:plane mig15bis.plane-data.hitbox merge value {body:{max-hp:320d,offset:[0d,0d,0d]}}
 
 #デフォルト機銃データセット
@@ -30,8 +30,8 @@ data modify storage voxel-planes:weapon mig15bis.base.37mm set value {data:{name
 
 #デフォルト爆弾データセット
 data modify storage voxel-planes:weapon mig15bis.base.bomb.data set value {name:bomb,type:bomb,max-ammunition:0,current-ammunition:0,max-reload:3600,current-reload:0,bombs:[]}
-data modify storage voxel-planes:weapon mig15bis.additional.100kg set value [{kind:100kg,type:normal,offset:[1.1d,-0.7d,1.2d],damage:500,weight:100,cmd:203}]
-data modify storage voxel-planes:weapon mig15bis.additional.100kg append value {kind:100kg,type:normal,offset:[-1.1d,-0.7d,1.2d],damage:500,weight:100,cmd:203}
+data modify storage voxel-planes:weapon mig15bis.additional.100kg set value [{kind:100kg,type:normal,offset:[2.7d,-0.4d,-1.8d],damage:500,weight:100,cmd:203}]
+data modify storage voxel-planes:weapon mig15bis.additional.100kg append value {kind:100kg,type:normal,offset:[-2.7d,-0.4d,-1.8d],damage:500,weight:100,cmd:203}
 
 #デフォルトロケット弾データセット
 #data modify storage voxel-planes:weapon mig15bis.base.rocket.data set value {name:rocket,type:rocket,max-ammunition:0,current-ammunition:0,max-reload:$RELOAD_TIME,current-reload:0,rockets:[]}
