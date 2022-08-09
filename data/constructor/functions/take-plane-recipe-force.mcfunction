@@ -30,3 +30,4 @@ recipe take @a plane-data:plane/p51d-recipe
 recipe take @a plane-data:plane/tbf-recipe
 recipe take @a plane-data:plane/f86f-recipe
 recipe take @a plane-data:plane/yak9u-recipe
+recipe take @a plane-data:plane/la5-recipe
