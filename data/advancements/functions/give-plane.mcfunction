@@ -31,3 +31,4 @@ loot give @s[advancements={plane-data:crafting/plane/tbf=true}] loot plane-data:
 loot give @s[advancements={plane-data:crafting/plane/f86f=true}] loot plane-data:f86f
 loot give @s[advancements={plane-data:crafting/plane/yak9u=true}] loot plane-data:yak9u
 loot give @s[advancements={plane-data:crafting/plane/la5=true}] loot plane-data:la5
+loot give @s[advancements={plane-data:crafting/plane/il2=true}] loot plane-data:il2
