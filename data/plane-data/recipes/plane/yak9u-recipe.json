@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "RL ",
+        "iii"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:iron_block"
+        },
+        "R": {
+            "item": "minecraft:redstone"
+        },
+        "L": {
+            "item": "minecraft:light_blue_dye"
+        },
+        "i": {
+            "item": "minecraft:iron_ingot"
+        }
+    },
+    "result": {
+        "item": "minecraft:phantom_spawn_egg",
+        "count": 1
+    }
+}
