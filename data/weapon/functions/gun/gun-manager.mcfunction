@@ -10,6 +10,8 @@
 #   weapon:gun/**
 #   weapon:util/**
     #declare tag hit-weapon #武器がヒットしたエンティティにつく
+    #declare tag gun-move-executer #実行者につくタグ
+    #declare score_holder #hit-flag #当たったことのフラグ 1:ブロック命中 2:エンティティ命中
 
 #> private
 # @private
@@ -26,23 +28,11 @@
     #declare score_holder #z #ブロック命中地点のz座標
     #declare score_holder #plane-id #実行者のplane-id
 
-#> within
-# @within function weapon:gun/**
-    #declare tag gun-move-executer #実行者につくタグ
-    #declare score_holder #hit-flag #当たったことのフラグ 1:ブロック命中 2:エンティティ命中
-
-
 #実行者にタグ付け
 tag @s add gun-move-executer
 
 #ヒットフラグ初期化
 scoreboard players set #hit-flag vp.reg1 0
-
-# ブロックチェッカー初期化
-execute positioned 0.0 1.0 0.0 unless entity @e[tag=block-checker,distance=..0.01] run tp @e[tag=block-checker] 0.0 1.0 0.0
-execute positioned 0.0 1.0 0.0 unless entity @e[tag=block-checker,distance=..0.01] run kill @e[type=marker,tag=block-checker]
-execute positioned 0.0 1.0 0.0 unless entity @e[tag=block-checker,distance=..0.01] run kill @s
-execute positioned 0.0 1.0 0.0 unless entity @e[tag=block-checker,distance=..0.01] run summon minecraft:marker 0.0 1.0 0.0 {Tags:[entity-nohit,dummy-entity,block-checker]}
 
 # 実行者を変える前に移動量計算に必要なスコアを取っておく
 data modify storage minecraft:plane-datapack temporary.Pos set from entity @s Pos
@@ -80,8 +70,7 @@ execute if score #hit-flag vp.reg1 matches 1.. run kill @s
 
 #age減算、0になったら削除
 scoreboard players add @s vp.age 1
-#execute if score @s[type=armor_stand] vp.age > @s vp.max-age run kill @s
-#tellraw @p [{"score" : {"name":"@s", "objective":"vp.age"}}]
+    #tellraw @p [{"score" : {"name":"@s", "objective":"vp.age"}}]
 execute store result score #gametime vp.reg1 run time query gametime
 execute if score #gametime vp.reg1 > @s[type=armor_stand] vp.max-age run kill @s
 
@@ -89,6 +78,3 @@ execute if score #gametime vp.reg1 > @s[type=armor_stand] vp.max-age run kill @s
 tag @e[tag=hit-weapon,distance=..20] remove hit-weapon
 tag @e[tag=hit-on-line,distance=..21] remove hit-on-line
 execute at @s run tag @s remove gun-move-executer
-
-#エンティティ返却
-tp @e[tag=block-checker,distance=..26] 0.0 1.0 0.0

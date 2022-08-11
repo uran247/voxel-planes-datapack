@@ -11,12 +11,12 @@
 data modify entity @s Pos set from storage minecraft:plane-datapack temporary.Pos
 tp @e[tag=gun-move-executer,distance=..1,limit=1] ~ ~ ~ facing entity @s
     #tellraw @p [{"score" : {"name":"@s", "objective":"speedX"}}, {"text":" "}, {"score" : {"name":"@s", "objective":"speedY"}}, {"text":" "}, {"score" : {"name":"@s", "objective":"speedZ"}}]
-    #tellraw @p [{"nbt":"Pos","entity":"@e[tag=block-checker,distance=..26,sort=nearest,limit=1]"}]
 
 #移動予定先までの間にブロックがあるか判定
 function weapon:util/check-block
-execute unless score #x vp.return matches 50 unless score #y vp.return matches 100 unless score #z vp.return matches 50 run scoreboard players set #hit-flag vp.reg1 1
+execute unless score #x vp.return matches 0 unless score #y vp.return matches 100 unless score #z vp.return matches 0 run scoreboard players set #hit-flag vp.reg1 1
 execute if score #hit-flag vp.reg1 matches 1 run tag @s add hit-weapon
+execute if score #hit-flag vp.reg1 matches 1 run data modify entity @s Pos set from storage voxel-planes:return return
 
 #移動予定先までの間にエンティティがいるか判定
 execute facing entity @s eyes run function weapon:util/check-entity
@@ -32,6 +32,6 @@ execute if score #hit-flag vp.reg1 matches 0 run tp @e[tag=gun-move-executer,dis
 #命中してた場合命中してたところに移動
 execute if score #hit-flag vp.reg1 matches 1.. run tp @e[tag=gun-move-executer,distance=..1,limit=1] @e[tag=hit-weapon,distance=..26,sort=nearest,limit=1]
 
-# 0-0-0-0-4返却
+# entity返却
 tag @s remove hit-weapon
 tp @s 0.0 1.0 0.0

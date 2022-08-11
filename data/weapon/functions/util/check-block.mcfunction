@@ -30,10 +30,11 @@ tp 0-0-0-0-9 0.0 1.0 0.0
 execute facing entity @s eyes positioned ^ ^ ^25.6 run function weapon:util/check-block/step1
     #execute at 0-0-0-0-9 run particle happy_villager ~ ~ ~ 0 0 0 0 1 force
 
-data modify storage minecraft:plane-datapack temporary.Pos set from entity 0-0-0-0-9 Pos
-execute store result score #x vp.return run data get storage minecraft:plane-datapack temporary.Pos[0] 100
-execute store result score #y vp.return run data get storage minecraft:plane-datapack temporary.Pos[1] 100
-execute store result score #z vp.return run data get storage minecraft:plane-datapack temporary.Pos[2] 100
+data remove storage voxel-planes:return return
+data modify storage voxel-planes:return return set from entity 0-0-0-0-9 Pos
+execute store result score #x vp.return run data get storage voxel-planes:return return[0] 100
+execute store result score #y vp.return run data get storage voxel-planes:return return[1] 100
+execute store result score #z vp.return run data get storage voxel-planes:return return[2] 100
 #tellraw @p [{"nbt":"Pos","entity":"0-0-0-0-9"}] 
 
 tp 0-0-0-0-9 0.0 1.0 0.0
