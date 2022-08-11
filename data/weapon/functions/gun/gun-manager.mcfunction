@@ -1,7 +1,7 @@
 #> weapon:gun/gun-manager
 #
-# 銃弾の操作
-# 実行者：弾体
+# as @e[tag=gun]
+# at @e[tag=gun]
 #
 # @within function weapon:tick
 
@@ -13,7 +13,6 @@
 
 #> private
 # @private
-    #declare tag gun-move-executer #実行者につくタグ
     #declare tag lightblue #曳光弾
     #declare tag orange #曳光弾
     #declare tag yellow #曳光弾
@@ -25,8 +24,13 @@
     #declare score_holder #x #ブロック命中地点のx座標
     #declare score_holder #y #ブロック命中地点のy座標
     #declare score_holder #z #ブロック命中地点のz座標
-    #declare score_holder #hit-flag #当たったことのフラグ 1:ブロック命中 2:エンティティ命中
     #declare score_holder #plane-id #実行者のplane-id
+
+#> within
+# @within function weapon:gun/**
+    #declare tag gun-move-executer #実行者につくタグ
+    #declare score_holder #hit-flag #当たったことのフラグ 1:ブロック命中 2:エンティティ命中
+
 
 #実行者にタグ付け
 tag @s add gun-move-executer
@@ -40,8 +44,7 @@ execute positioned 0.0 1.0 0.0 unless entity @e[tag=block-checker,distance=..0.0
 execute positioned 0.0 1.0 0.0 unless entity @e[tag=block-checker,distance=..0.01] run kill @s
 execute positioned 0.0 1.0 0.0 unless entity @e[tag=block-checker,distance=..0.01] run summon minecraft:marker 0.0 1.0 0.0 {Tags:[entity-nohit,dummy-entity,block-checker]}
 
-#### 移動&ヒット判定 ####
-#ベクトル方向へエンティティの向きを向ける
+# 実行者を変える前に移動量計算に必要なスコアを取っておく
 data modify storage minecraft:plane-datapack temporary.Pos set from entity @s Pos
 execute store result score #pos-x vp.reg1 run data get storage minecraft:plane-datapack temporary.Pos[0] 100
 execute store result score #pos-y vp.reg1 run data get storage minecraft:plane-datapack temporary.Pos[1] 100
@@ -49,29 +52,12 @@ execute store result score #pos-z vp.reg1 run data get storage minecraft:plane-d
 execute store result storage minecraft:plane-datapack temporary.Pos[0] double 0.01 run scoreboard players operation #pos-x vp.reg1 += @s vp.speedX
 execute store result storage minecraft:plane-datapack temporary.Pos[1] double 0.01 run scoreboard players operation #pos-y vp.reg1 += @s vp.speedY
 execute store result storage minecraft:plane-datapack temporary.Pos[2] double 0.01 run scoreboard players operation #pos-z vp.reg1 += @s vp.speedZ
-execute positioned 0.0 1.0 0.0 as @e[tag=block-checker,distance=..0.01,sort=nearest,limit=1] run data modify entity @s Pos set from storage minecraft:plane-datapack temporary.Pos
-tp @s ~ ~ ~ facing entity @e[tag=block-checker,distance=..26,sort=nearest,limit=1]
 
-#tellraw @p [{"score" : {"name":"@s", "objective":"speedX"}}, {"text":" "}, {"score" : {"name":"@s", "objective":"speedY"}}, {"text":" "}, {"score" : {"name":"@s", "objective":"speedZ"}}]
-#tellraw @p [{"nbt":"Pos","entity":"@e[tag=block-checker,distance=..26,sort=nearest,limit=1]"}]
+#弾の衝突判定のときに使うスコアを取っておく
+scoreboard players operation #plane-id vp.reg1 = @s vp.plane-id
 
-#移動予定先までの間にブロックがあるか判定
-execute at @e[tag=block-checker,distance=..26,sort=nearest,limit=1] run function weapon:util/check-block
-execute unless score #x vp.return matches 50 unless score #y vp.return matches 100 unless score #z vp.return matches 50 run scoreboard players set #hit-flag vp.reg1 1
-execute if score #hit-flag vp.reg1 matches 1 run tag @e[tag=block-checker,distance=..26,sort=nearest,limit=1] add hit-weapon
-
-#移動予定先までの間にエンティティがいるか判定
-function weapon:util/check-entity
-execute if entity @e[tag=hit-on-line,tag=!entity-nohit,distance=..20] run scoreboard players set #hit-flag vp.reg1 2
-execute if score #hit-flag vp.reg1 matches 2 run scoreboard players operation #plane-id vp.reg1 = @s vp.plane-id
-execute if score #hit-flag vp.reg1 matches 2 as @e[tag=hit-on-line,tag=!entity-nohit,distance=..20] unless score @s vp.plane-id = #plane-id vp.reg1 run tag @s add hit-weapon
-execute if score #hit-flag vp.reg1 matches 2 unless entity @e[tag=hit-weapon,distance=..20] run scoreboard players set #hit-flag vp.reg1 0
-
-#命中していない場合移動予定先へ移動
-execute if score #hit-flag vp.reg1 matches 0 positioned as @e[tag=block-checker,distance=..26,sort=nearest,limit=1] run tp @s ~ ~ ~
-
-#命中してた場合命中してたところに移動
-execute if score #hit-flag vp.reg1 matches 1.. at @e[tag=hit-weapon,distance=..26,sort=nearest,limit=1] run tp @s ~ ~ ~
+# 弾の移動および衝突判定
+execute as 0-0-0-0-4 run function weapon:gun/move
 
 #命中してた場合ダメージ処理
 execute if score #hit-flag vp.reg1 matches 2 run function weapon:gun/damage/damage

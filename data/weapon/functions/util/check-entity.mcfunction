@@ -4,9 +4,11 @@
 # 直線状にいるエンティティにタグ付け
 #
 # @input
-#   executer @e
+#   as 0-0-0-0-4
+#       視線終端点entity
+#   positioned @e
 #       視線主エンティティ
-#   entity 0-0-0-0-4
+#   facing 0-0-0-0-4
 #       視線終端点entity
 #
 # @output
@@ -23,9 +25,11 @@
 tag @s add check-executer
 
 #実効者-0-0-0-0-4の直線上にいるエンティティにタグ付け
-tp 0-0-0-0-b @s
+tp 0-0-0-0-b ~ ~ ~
+execute positioned ^ ^ ^10 as @e[tag=!check-executer,distance=..10] positioned as @s positioned ^ ^ ^1000 facing entity 0-0-0-0-b feet positioned ^ ^ ^1000 positioned ~-0.5 ~-0.5 ~-0.5 if entity @s[dx=0,dy=0,dz=0] run tag @s add hit-on-line
 
-execute positioned ^ ^ ^10 as @e[tag=!check-executer,distance=..10] positioned as @s positioned ^ ^ ^1000 facing entity 0-0-0-0-b feet positioned ^ ^ ^1000 positioned ~-0.5 ~-0.5 ~-0.5 if entity @s[dx=1,dy=1,dz=1] run tag @s add hit-on-line
+# 視線終点entityより向こうにいるやつのタグを削除
+execute positioned ^ ^ ^10 as @e[tag=!check-executer,distance=..10] positioned as 0-0-0-0-4 positioned ^ ^ ^1000 if entity @s[distance=..1000] run tag @s remove hit-on-line
 
 #実効者と目印にタグ削除
 tag @s remove check-executer

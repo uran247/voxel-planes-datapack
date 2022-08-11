@@ -1,23 +1,37 @@
-#入力 エンティティ:移動対象
-#処理 スコア分tp
-#戻り なし
-execute if score #speed vp.reg1 = #1 vp.Num run tp @s ^ ^ ^1
-execute if score #speed vp.reg1 = #2 vp.Num run tp @s ^ ^ ^2
-execute if score #speed vp.reg1 = #3 vp.Num run tp @s ^ ^ ^3
-execute if score #speed vp.reg1 = #4 vp.Num run tp @s ^ ^ ^4
-execute if score #speed vp.reg1 = #5 vp.Num run tp @s ^ ^ ^5
-execute if score #speed vp.reg1 = #6 vp.Num run tp @s ^ ^ ^6
-execute if score #speed vp.reg1 = #7 vp.Num run tp @s ^ ^ ^7
-execute if score #speed vp.reg1 = #8 vp.Num run tp @s ^ ^ ^8
-execute if score #speed vp.reg1 = #9 vp.Num run tp @s ^ ^ ^9
-execute if score #speed vp.reg1 = #10 vp.Num rotated as @s positioned ^ ^ ^10 run tp @s ~ ~ ~ ~ ~0.001
-execute if score #speed vp.reg1 = #11 vp.Num run tp @s ^ ^ ^11
-execute if score #speed vp.reg1 = #12 vp.Num run tp @s ^ ^ ^12
-execute if score #speed vp.reg1 = #13 vp.Num run tp @s ^ ^ ^13
-execute if score #speed vp.reg1 = #14 vp.Num run tp @s ^ ^ ^14
-execute if score #speed vp.reg1 = #15 vp.Num run tp @s ^ ^ ^15
-execute if score #speed vp.reg1 = #16 vp.Num run tp @s ^ ^ ^16
-execute if score #speed vp.reg1 = #17 vp.Num run tp @s ^ ^ ^17
-execute if score #speed vp.reg1 = #18 vp.Num run tp @s ^ ^ ^18
-execute if score #speed vp.reg1 = #19 vp.Num run tp @s ^ ^ ^19
-execute if score #speed vp.reg1 = #20 vp.Num run tp @s ^ ^ ^20
+#> weapon:gun/move
+#
+# 0-0-0-0-4の移動を伴う銃弾の移動処理をやる、0-0-0-0-4を実行者にして失踪を防ぐ
+# as 0-0-0-0-4
+# at @e[tag=gun]
+#
+# @within function weapon:gun/gun-manager
+
+#### 移動&ヒット判定 ####
+#ベクトル方向へエンティティの向きを向ける
+data modify entity @s Pos set from storage minecraft:plane-datapack temporary.Pos
+tp @e[tag=gun-move-executer,distance=..1,limit=1] ~ ~ ~ facing entity @s
+    #tellraw @p [{"score" : {"name":"@s", "objective":"speedX"}}, {"text":" "}, {"score" : {"name":"@s", "objective":"speedY"}}, {"text":" "}, {"score" : {"name":"@s", "objective":"speedZ"}}]
+    #tellraw @p [{"nbt":"Pos","entity":"@e[tag=block-checker,distance=..26,sort=nearest,limit=1]"}]
+
+#移動予定先までの間にブロックがあるか判定
+function weapon:util/check-block
+execute unless score #x vp.return matches 50 unless score #y vp.return matches 100 unless score #z vp.return matches 50 run scoreboard players set #hit-flag vp.reg1 1
+execute if score #hit-flag vp.reg1 matches 1 run tag @s add hit-weapon
+
+#移動予定先までの間にエンティティがいるか判定
+execute facing entity @s eyes run function weapon:util/check-entity
+execute if entity @e[tag=hit-on-line,tag=!entity-nohit,distance=..20] run scoreboard players set #hit-flag vp.reg1 2
+
+#移動予定先までの間のエンティティで命中可能なやつにタグ付け
+execute if score #hit-flag vp.reg1 matches 2 as @e[tag=hit-on-line,tag=!entity-nohit,distance=..20] unless score @s vp.plane-id = #plane-id vp.reg1 run tag @s add hit-weapon
+execute if score #hit-flag vp.reg1 matches 2 unless entity @e[tag=hit-weapon,distance=..20] run scoreboard players set #hit-flag vp.reg1 0
+
+#命中していない場合移動予定先へ移動
+execute if score #hit-flag vp.reg1 matches 0 run tp @e[tag=gun-move-executer,distance=..1,limit=1] @s
+
+#命中してた場合命中してたところに移動
+execute if score #hit-flag vp.reg1 matches 1.. run tp @e[tag=gun-move-executer,distance=..1,limit=1] @e[tag=hit-weapon,distance=..26,sort=nearest,limit=1]
+
+# 0-0-0-0-4返却
+tag @s remove hit-weapon
+tp @s 0.0 1.0 0.0
