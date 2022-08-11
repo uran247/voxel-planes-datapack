@@ -4,7 +4,7 @@
 #   as @e[tag=plane-root]
 #   at @e[tag=plane-root]
 #
-# @within function plane:weapon/util/display-aim
+# @within function plane:weapon/util/display-aim/**
 
 
 scoreboard players set #drop-time vp.return 0
