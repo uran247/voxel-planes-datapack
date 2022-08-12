@@ -10,6 +10,7 @@
 #       視線主エンティティ
 #
 # @output
+#   storage voxel-planes:return return #ブロックが見つかった地点の座標
 #   score #x vp.return
 #   score #y vp.return
 #   score #z vp.return
