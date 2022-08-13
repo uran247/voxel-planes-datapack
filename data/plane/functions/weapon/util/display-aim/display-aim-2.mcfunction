@@ -1,9 +1,9 @@
 #> plane:weapon/util/display-aim/display-aim-2
 #
-# 0-0-0-0-4を実行者にしておかないと行方不明になるため、実行者を0-0-0-0-4を動かす処理はこっちでやる
+# block-checkerを実行者にしておかないと行方不明になるため、実行者をblock-checkerを動かす処理はこっちでやる
 #
 # @input
-#   as @e[tag=plane-root]
+#   as @e[tag=block-checker,distance=..1,x=0,y=1,z=0,limit=1]
 #   at @e[tag=plane-root]
 #
 # @within
@@ -40,8 +40,6 @@ function plane:weapon/util/calc-droptime
 # 着弾位置計算
 function plane:weapon/util/calc-droppoint
 
-#execute at 0-0-0-0-4 run particle minecraft:dust 1 1 1 0.5 ~ ~2 ~ 5 0 0.01 0 500 force @p
-#execute at 0-0-0-0-4 run particle minecraft:dust 1 1 1 0.5 ~ ~2 ~ 0.01 0 5 0 500 force @p
 #execute at @s run particle electric_spark ~ ~2 ~ 5 0 0.01 0 500 force @p
 #execute at @s run particle electric_spark ~ ~2 ~ 0.01 0 5 0 500 force @p
 
@@ -54,4 +52,4 @@ scoreboard players reset #drop-time vp.return
 scoreboard players reset #speed-x
 scoreboard players reset #speed-z
 
-tp @s 0.0 0.0 0.0
+tp @s 0.0 1.0 0.0

@@ -42,5 +42,5 @@ scoreboard players operation #speed-z vp.input *= @s vp.speed
 scoreboard players operation #speed-x vp.input /= #10000 vp.Num
 scoreboard players operation #speed-z vp.input /= #10000 vp.Num
 
-#0-0-0-0-4の移動を伴う処理を実行
-execute as 0-0-0-0-4 run function plane:weapon/util/display-aim/display-aim-2
+#block-checkerの移動を伴う処理を実行
+execute as @e[tag=block-checker,distance=..1,x=0,y=1,z=0,limit=1] run function plane:weapon/util/display-aim/display-aim-2
