@@ -38,7 +38,7 @@ execute as @a if score @s vp.plane-id = #missile-id vp.reg1 run tag @s add weapo
 #hpからダメージを引く]
 execute as @e[tag=!entity-nohit,distance=..16] run function weapon:util/set-entity-hp
 scoreboard players operation #damage vp.reg1 = @s vp.damage
-#tellraw @p [{"score" : {"name":"#damage", "objective":"vp.reg1"}}]
+tellraw @p [{"score" : {"name":"#damage", "objective":"vp.reg1"}}]
 #execute as @e[tag=base,distance=..50] run function weapon:missile/damage/base-damage
 scoreboard players set @e[tag=!entity-nohit,distance=..32] vp.input 0
 scoreboard players operation #damage vp.reg1 /= #2 vp.Num
@@ -76,7 +76,9 @@ scoreboard players operation @e[tag=!entity-nohit,distance=..32] vp.input += #da
 #execute as @e[tag=!entity-nohit,distance=..16] run function weapon:util/calc-entity-damage
 execute as @e[type=!player,tag=!plane-hitbox,tag=!entity-nohit,distance=..32] if score @s vp.input matches 1.. run function weapon:util/calc-entity-damage
 execute as @e[type=!player,tag=plane-hitbox,tag=!entity-nohit,distance=..32] if score @s vp.input matches 1.. run function weapon:util/calc-hitbox-damage
-
+    #execute as @e[type=!player,tag=!entity-nohit,distance=..32] run tellraw @p [{"score" : {"name":"@s", "objective":"vp.input"}}]
+    #execute as @e[type=!player,tag=!entity-nohit,distance=..32] run tellraw @p [{"score" : {"name":"@s", "objective":"vp.input"}}]
+    
 #スコアをエンティティのHPに反映
 execute as @e[type=!spawner_minecart,tag=!cockpit,tag=!entity-nohit,distance=..32] store result entity @s Health float 1 run scoreboard players get @s vp.reg1
 

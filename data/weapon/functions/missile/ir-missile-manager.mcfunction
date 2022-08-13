@@ -8,12 +8,14 @@
 #> within
 # @within function weapon:missile/**
     #declare tag ir-missile-target
+    #declare tag missile-move-executer #実行者につくタグ
+    #declare score_holder #hit-flag #当たったことのフラグ 1:ブロック命中 2:エンティティ命中
+    #declare score_holder #plane-id #実行者のplane-id
+    #declare tag hit-weapon #武器がヒットしたエンティティにつく
 
 #> private
 # @private
-    #declare tag missile-move-executer #実行者につくタグ
     #declare tag dummy-sun #実行者につくタグ
-    #declare tag hit-weapon #武器がヒットしたエンティティにつく
     #declare tag turn-left #ミサイルがどちらに曲がるか
     #declare tag turn-right #ミサイルがどちらに曲がるか
     #declare tag turn-up  #ミサイルがどちらに曲がるか
@@ -29,18 +31,10 @@
     #declare score_holder #x #ブロック命中地点のx座標
     #declare score_holder #y #ブロック命中地点のy座標
     #declare score_holder #z #ブロック命中地点のz座標
-    #declare score_holder #hit-flag #当たったことのフラグ 1:ブロック命中 2:エンティティ命中
-    #declare score_holder #plane-id #実行者のplane-id
 
 
 #実行者にタグ付け
 tag @s add missile-move-executer
-
-# ブロックチェッカー初期化
-execute positioned 0.0 1.0 0.0 unless entity @e[tag=block-checker,distance=..0.01] run tp @e[tag=block-checker] 0.0 1.0 0.0
-execute positioned 0.0 1.0 0.0 unless entity @e[tag=block-checker,distance=..0.01] run kill @e[type=marker,tag=block-checker]
-execute positioned 0.0 1.0 0.0 unless entity @e[tag=block-checker,distance=..0.01] run kill @s
-execute positioned 0.0 1.0 0.0 unless entity @e[tag=block-checker,distance=..0.01] run summon minecraft:marker 0.0 1.0 0.0 {Tags:[entity-nohit,dummy-entity,block-checker]}
 
 #dummy sun初期化
 execute positioned 0.0 0.0 0.0 unless entity @e[tag=dummy-sun,distance=..0.01] run tp @e[tag=dummy-sun] 0.0 0.0 0.0
@@ -54,7 +48,11 @@ function oh_my_dat:please
 #dummy sun配置
 function weapon:util/set-sun-dummy
 
+#元々の向きを保存
+data modify storage minecraft:plane-datapack temporary.Rotation set from entity @s Rotation
+
 #向き変更
+        #tellraw @p [{"nbt":"Rotation","entity":"@s"}] 
     #ターゲットが右にいるか左にいるか探索
     execute rotated ~-90 ~ run function weapon:missile/search-target
     execute rotated ~-90 ~ as @e[tag=ir-missile-target,distance=..256,limit=1] positioned ^1000 ^ ^ if entity @s[distance=..999.9] positioned ^-1000 ^ ^ run tag @e[tag=missile-move-executer,distance=..0.01] add turn-left
@@ -83,9 +81,11 @@ function weapon:util/set-sun-dummy
     scoreboard players reset #AngY vp.reg1
     scoreboard players reset #AngX vp.reg1
     tag @e[tag=ir-missile-target,distance=..256,limit=1] remove ir-missile-target
+        #tellraw @p [{"nbt":"Rotation","entity":"@s"}] 
+        #tellraw @p [""]
 
 #移動&ヒット判定
-    #ベクトル方向へエンティティの向きを向ける
+    # 実行者を変える前に移動量計算に必要なスコアを取っておく
     scoreboard players operation #speedX vp.reg1 = @s vp.speedX
     scoreboard players operation #speedY vp.reg1 = @s vp.speedY
     scoreboard players operation #speedZ vp.reg1 = @s vp.speedZ
@@ -96,6 +96,8 @@ function weapon:util/set-sun-dummy
     scoreboard players operation #speedY vp.reg1 /= #10 vp.Num
     scoreboard players operation #speedZ vp.reg1 /= #10 vp.Num
 
+        #tellraw @p [{"score" : {"name":"#speedX", "objective":"vp.reg1"}}," ",{"score" : {"name":"#speedY", "objective":"vp.reg1"}}," ",{"score" : {"name":"#speedZ", "objective":"vp.reg1"}}]
+
     data modify storage minecraft:plane-datapack temporary.Pos set from entity @s Pos
     execute store result score #pos-x vp.reg1 run data get storage minecraft:plane-datapack temporary.Pos[0] 100
     execute store result score #pos-y vp.reg1 run data get storage minecraft:plane-datapack temporary.Pos[1] 100
@@ -103,34 +105,14 @@ function weapon:util/set-sun-dummy
     execute store result storage minecraft:plane-datapack temporary.Pos[0] double 0.01 run scoreboard players operation #pos-x vp.reg1 += #speedX vp.reg1
     execute store result storage minecraft:plane-datapack temporary.Pos[1] double 0.01 run scoreboard players operation #pos-y vp.reg1 += #speedY vp.reg1
     execute store result storage minecraft:plane-datapack temporary.Pos[2] double 0.01 run scoreboard players operation #pos-z vp.reg1 += #speedZ vp.reg1
-    execute positioned 0.0 1.0 0.0 as @e[tag=block-checker,distance=..0.01,sort=nearest,limit=1] run data modify entity @s Pos set from storage minecraft:plane-datapack temporary.Pos
 
-    tp @s ~ ~ ~ facing entity @e[tag=block-checker,distance=..26,sort=nearest,limit=1]
-
-    #ヒットフラグ初期化
-    scoreboard players set #hit-flag vp.reg1 0
-
-    #移動予定先までの間にブロックがあるか判定
-    execute as @s at @e[tag=block-checker,distance=..26,sort=nearest,limit=1] run function weapon:util/check-block
-    execute unless score #x vp.return matches 50 unless score #y vp.return matches 100 unless score #z vp.return matches 50 run tag @e[tag=block-checker,distance=..26,sort=nearest,limit=1] add hit-weapon
-
-    #移動予定先までの間にエンティティがいるか判定
-    execute as @s at @s run function weapon:util/check-entity-proximity
     scoreboard players operation #plane-id vp.reg1 = @s vp.plane-id
-    execute at @s as @e[tag=hit-on-line,tag=!entity-nohit,distance=..20] unless score @s vp.plane-id = #plane-id vp.reg1 run tag @s add hit-weapon
 
-    #エンティティとブロックどちらにあたったか判定
-    execute at @s as @e[tag=hit-weapon,distance=..26,sort=nearest,limit=1] if entity @s[tag=block-checker] run scoreboard players set #hit-flag vp.reg1 1
-    execute at @s as @e[tag=hit-weapon,distance=..26,sort=nearest,limit=1] if entity @s[tag=hit-on-line] run scoreboard players set #hit-flag vp.reg1 2
+    #移動&ヒット判定
+    execute as 0-0-0-0-4 run function weapon:missile/move
 
-    #命中していない場合移動予定先へ移動
-    execute if score #hit-flag vp.reg1 matches 0 positioned as @e[tag=block-checker,distance=..26,sort=nearest,limit=1] run tp @s ~ ~ ~ ~ ~
-
-    #ブロックに命中してた場合block-checkerのところに移動
-    execute if score #hit-flag vp.reg1 matches 1 positioned as @e[tag=hit-weapon,distance=..26,sort=nearest,limit=1] run tp @s ~ ~ ~ ~-90 ~
-
-    #エンティティに命中してた場合進路上のエンティティの1番近くに移動
-    execute at @s if score #hit-flag vp.reg1 matches 2 positioned as @e[tag=hit-weapon,distance=..26,sort=nearest,limit=1] positioned ^ ^ ^1000 facing entity @s feet positioned ^ ^ ^1000 rotated as @s run tp @s ~ ~ ~ ~-90 ~
+#向き修正
+data modify entity @s Rotation set from storage minecraft:plane-datapack temporary.Rotation
 
 #速度更新
 execute if score @s vp.speed < @s vp.max-speed run scoreboard players add @s vp.speed 2
@@ -154,7 +136,4 @@ tag @e[tag=hit-weapon,distance=..26] remove hit-weapon
 tag @e[tag=hit-on-line,distance=..21] remove hit-on-line
 execute at @s run tag @s remove missile-move-executer
 kill @s[scores={vp.age=0}]
-
-#エンティティ返却
-tp @e[tag=block-checker,distance=..26] 0.0 1.0 0.0
 
