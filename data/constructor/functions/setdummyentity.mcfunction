@@ -18,7 +18,7 @@ summon minecraft:marker 0.0 1.0 0.0 {Tags:[entity-nohit,dummy-entity],UUID:[I;0,
 summon minecraft:marker 0.0 1.0 0.0 {Tags:[entity-nohit,dummy-entity],UUID:[I;0,0,0,2]}
 summon minecraft:marker 0.0 1.0 0.0 {Tags:[entity-nohit,dummy-entity],UUID:[I;0,0,0,3]}
 #0-0-0-0-4: 特定位置に移動してマークにする用、どこにでも移動しうる
-summon minecraft:marker 0.0 1.0 0.0 {Tags:[entity-nohit,dummy-entity,block-checker],UUID:[I;0,0,0,4]}
+summon minecraft:marker 0.0 1.0 0.0 {Tags:[entity-nohit,dummy-entity],UUID:[I;0,0,0,4]}
 #0-0-0-0-5: 位置計算用、スポーンチャンクから出ないようにする
 summon minecraft:marker 0.0 1.0 0.0 {Tags:[entity-nohit,dummy-entity],UUID:[I;0,0,0,5]}
 #0-0-0-0-6: オフセットチェック、スポーンチャンクから出ないようにする
@@ -33,6 +33,9 @@ summon minecraft:marker 0.0 1.0 0.0 {Tags:[entity-nohit,dummy-entity],UUID:[I;0,
 summon minecraft:marker 0.0 1.0 0.0 {Tags:[entity-nohit,dummy-entity],UUID:[I;0,0,0,11]}
 #0-0-0-0-c: 疑似太陽
 summon minecraft:marker 0.0 1.0 0.0 {Tags:[entity-nohit,dummy-entity,dummy-sun],UUID:[I;0,0,0,12]}
+
+#block検出用　何処にでも移動しうる
+summon minecraft:marker 0.0 1.0 0.0 {Tags:[entity-nohit,dummy-entity,block-checker]}
 
 kill @e[type=marker,tag=Trigonometric]
 kill @e[type=marker,tag=Trigonometric2]

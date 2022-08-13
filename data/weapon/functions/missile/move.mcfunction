@@ -1,6 +1,7 @@
 #> weapon:missile/move
 #
-# 
+# as @e[tag=block-checker,distance=..1,x=0,y=1,z=0,limit=1]
+# at @e[tag=torpedo-move-executer]
 #
 # @within function weapon:missile/ir-missile-manager
 

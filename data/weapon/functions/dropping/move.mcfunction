@@ -1,6 +1,6 @@
 #> weapon:dropping/move
 #
-# as 0-0-0-0-4
+# as @e[tag=block-checker,distance=..1,x=0,y=1,z=0,limit=1]
 # at @e[tag=dropping]
 #
 # @within function weapon:dropping/**

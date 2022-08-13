@@ -109,7 +109,7 @@ data modify storage minecraft:plane-datapack temporary.Rotation set from entity 
     scoreboard players operation #plane-id vp.reg1 = @s vp.plane-id
 
     #移動&ヒット判定
-    execute as 0-0-0-0-4 run function weapon:missile/move
+    execute as @e[tag=block-checker,distance=..1,x=0,y=1,z=0,limit=1] run function weapon:missile/move
 
 #向き修正
 data modify entity @s Rotation set from storage minecraft:plane-datapack temporary.Rotation

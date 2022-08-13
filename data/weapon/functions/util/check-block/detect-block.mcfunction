@@ -1,7 +1,7 @@
 #> weapon:util/check-block/detect-block
 #
 # 初期位置に0-0-0-0-9がいてブロックを検知した場合そこに0-0-0-0-9をTPする
-# as 0-0-0-0-4 視線終端エンティティ
+# as @e[tag=block-checker,distance=..1,x=0,y=1,z=0,limit=1] 視線終端エンティティ
 # at 実行者の向きで0-51.2ブロック先(0.4ブロック刻み
 #
 # @within function weapon:util/check-block/step7

@@ -47,7 +47,7 @@ execute store result storage minecraft:plane-datapack temporary.Pos[2] double 0.
 scoreboard players operation #plane-id vp.reg1 = @s vp.plane-id
 
 #移動&ヒット判定
-execute as 0-0-0-0-4 run function weapon:dropping/move
+execute as @e[tag=block-checker,distance=..1,x=0,y=1,z=0,limit=1] run function weapon:dropping/move
 
 #y方向の速度更新
 scoreboard players remove @s vp.speedY 1

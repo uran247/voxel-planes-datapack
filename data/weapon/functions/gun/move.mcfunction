@@ -1,7 +1,7 @@
 #> weapon:gun/move
 #
-# 0-0-0-0-4の移動を伴う銃弾の移動処理をやる、0-0-0-0-4を実行者にして失踪を防ぐ
-# as 0-0-0-0-4
+# block-checkerの移動を伴う銃弾の移動処理をやる、block-checkerを実行者にして失踪を防ぐ
+# as block-checker
 # at @e[tag=gun]
 #
 # @within function weapon:gun/gun-manager

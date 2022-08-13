@@ -4,7 +4,7 @@
 # 直線状にいるエンティティにタグ付け
 #
 # @input
-#   as 0-0-0-0-4
+#   as @e[tag=block-checker,distance=..1,x=0,y=1,z=0,limit=1]
 #       視線終端点entity
 #   at @e
 #       視線主エンティティ
@@ -28,6 +28,5 @@ tag @e[tag=hit-candidate,distance=..22] add hit-on-line
     
 #実効者と目印にタグ削除
 tag @s remove check-executer
-#tag 0-0-0-0-4 remove check-executer
 #tag @e[tag=hit-candidate,distance=..30] remove hit-candidate
 execute positioned ^ ^ ^10.5 as @e[tag=hit-candidate,distance=..11] run tag @s remove hit-candidate

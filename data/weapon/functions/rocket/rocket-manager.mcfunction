@@ -62,7 +62,7 @@ execute store result storage minecraft:plane-datapack temporary.Pos[2] double 0.
 scoreboard players operation #plane-id vp.reg1 = @s vp.plane-id
 
 # 弾の移動および衝突判定
-execute as 0-0-0-0-4 run function weapon:rocket/move
+execute as @e[tag=block-checker,distance=..1,x=0,y=1,z=0,limit=1] run function weapon:rocket/move
 
 #速度更新
 scoreboard players add @s[scores={vp.speed=..48}] vp.speed 2
