@@ -26,7 +26,7 @@ execute store result score #altitude vp.return run data get storage voxel-planes
     #tellraw @p [{"score":{"name": "#altitude","objective": "vp.return"}}]
 execute store result score #ground-y vp.return run data get entity 0-0-0-0-9 Pos[1]
     #tellraw @p [{"score":{"name": "#ground-y","objective": "vp.return"}}]
-    #tellraw @p [{"nbt":"Pos","entity": "0-0-0-0-4"}]
+    #tellraw @p [{"nbt":"Pos","entity": "0-0-0-0-9"}]
 scoreboard players operation #altitude vp.return -= #ground-y vp.return
     #tellraw @p [{"score":{"name": "#altitude","objective": "vp.return"}}]
 
