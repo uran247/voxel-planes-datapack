@@ -26,7 +26,12 @@
                                     "translate": " 武装"
                                 },
                                 {
-                                    "translate": "  $WEAPON_NAME_AND_NUMBER",
+                                    "translate": "  37mm N-37 x1",
+                                    "color": "blue"
+                                }
+                                ,
+                                {
+                                    "translate": "  23mm NR-23 x2",
                                     "color": "blue"
                                 }
                             ]
