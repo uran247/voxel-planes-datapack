@@ -43,3 +43,4 @@ execute at @s[tag=hunterf6-spawner] as @p run function plane-data:hunterf6/hunte
 execute at @s[tag=yak9u-spawner] as @p run function plane-data:yak9u/yak9u
 execute at @s[tag=la5-spawner] as @p run function plane-data:la5/la5
 execute at @s[tag=il2-spawner] as @p run function plane-data:il2/il2
+execute at @s[tag=b7a-spawner] as @p run function plane-data:b7a/b7a
