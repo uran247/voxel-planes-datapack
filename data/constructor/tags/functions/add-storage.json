@@ -40,6 +40,9 @@
         "plane-data:yak9u/yak9u-storage",
         "plane-data:la5/la5-storage",
         "plane-data:il2/il2-storage",
-        "plane-data:b7a/b7a-storage"
+        "plane-data:b7a/b7a-storage",
+        "plane-data:saab29f/saab29f-storage",
+        "plane-data:saab21/saab21-storage",
+        "plane-data:mc202/mc202-storage"
     ]
 }
