@@ -27,7 +27,7 @@ data modify storage voxel-planes:plane bf109g.plane-data.hitbox merge value {coc
 
 #デフォルト機銃データセット
 data modify storage voxel-planes:weapon bf109g.base.20mm.data set value {name:"20mm gun",type:gun,size:20mm,max-ammunition:200,current-ammunition:200,max-cooltime:2,current-cooltime:0,max-reload:280,current-reload:0,tracer:"lightgreen",damage:90,speed:9d,bullets:[{offset:[0d,1.4d,3.3d]}]}
-data modify storage voxel-planes:weapon bf109g.base.13mm.data set value {name:"13mm gun",type:gun,size:13mm,max-ammunition:300,current-ammunition:300,max-cooltime:2,current-cooltime:0,max-reload:220,current-reload:0,tracer:"lightblue",damage:8,speed:11d,bullets:[{offset:[0.1d,1.95d,1.6d]},{offset:[-0.1d,1.95d,1.6d]}]}
+data modify storage voxel-planes:weapon bf109g.base.13mm.data set value {name:"13mm gun",type:gun,size:13mm,max-ammunition:300,current-ammunition:300,max-cooltime:2,current-cooltime:0,max-reload:220,current-reload:0,tracer:"lightblue",damage:56,speed:11d,bullets:[{offset:[0.1d,1.95d,1.6d]},{offset:[-0.1d,1.95d,1.6d]}]}
 data modify storage voxel-planes:weapon bf109g.additional.20mm.data set value {name:"20mm gun",type:gun,size:20mm,max-ammunition:160,current-ammunition:160,max-cooltime:2,current-cooltime:0,max-reload:280,current-reload:0,tracer:"lightgreen",damage:90,speed:9d,bullets:[{offset:[0d,1.4d,3.3d]},{offset:[2.1d,1.1d,1.9d]},{offset:[-2.1d,1.1d,1.9d]}]}
 
 
