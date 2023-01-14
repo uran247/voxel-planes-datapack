@@ -44,3 +44,4 @@ execute if entity @s[tag=p39n] run function plane-data:p39n/p39n-equip
 execute if entity @s[tag=la5] run function plane-data:la5/la5-equip
 execute if entity @s[tag=il2] run function plane-data:il2/il2-equip
 execute if entity @s[tag=mig15bis] run function plane-data:mig15bis/mig15bis-equip
+execute if entity @s[tag=mc202] run function plane-data:mc202/mc202-equip

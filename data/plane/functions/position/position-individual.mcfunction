@@ -48,3 +48,6 @@ execute as @s[tag=yak9u] run function plane-data:yak9u/yak9u-position
 execute as @s[tag=la5] run function plane-data:la5/la5-position
 execute as @s[tag=il2] run function plane-data:il2/il2-position
 execute as @s[tag=b7a] run function plane-data:b7a/b7a-position
+execute as @s[tag=saab29f] run function plane-data:saab29f/saab29f-position
+execute as @s[tag=saab21] run function plane-data:saab21/saab21-position
+execute as @s[tag=mc202] run function plane-data:mc202/mc202-position
