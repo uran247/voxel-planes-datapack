@@ -13,7 +13,6 @@
 # @within
 #   function plane:weapon/util/ir-lock-on
 #
-# 利用可能タグ controll-target:機体
 
 #> private
 #   @private

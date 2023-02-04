@@ -1,7 +1,6 @@
 #> plane:weapon/change-current-weapon
 #
 # 現在武器を変更
-# 利用可能タグ controll-target:機体
 # plane-weaponを+1、現在のplane-weaponの番号の武器を使用可能か確認、不可だったら更に+1、最大数をオーバーしたら1に戻す
 #
 # @input

@@ -9,8 +9,6 @@
 # @within
 #   function plane:weapon/util/ir-search-target
 #   
-#
-# 利用可能タグ controll-target:機体
 
 #> private
 #   @private

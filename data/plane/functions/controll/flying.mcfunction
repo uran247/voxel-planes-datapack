@@ -5,7 +5,7 @@
 #
 # @input
 #   entity @p
-#   position @e[tag=plane-toor,tag=controll-target]
+#   position @e[tag=plane-root,tag=controll-target]
 #
 # @output
 #   score @e[tag=controll-target] vp.yaw-gap

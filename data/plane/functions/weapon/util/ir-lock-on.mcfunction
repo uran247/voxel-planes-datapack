@@ -9,7 +9,6 @@
 # @within
 #   function plane:weapon/weapon-manager
 #
-# 利用可能タグ controll-target:機体
 
 #> private
 #   @private

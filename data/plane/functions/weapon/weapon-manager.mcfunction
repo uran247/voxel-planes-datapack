@@ -12,7 +12,6 @@
 #   function plane:plane-manager
     #declare score_holder #weapon-number #weapon-listの配列数
 #
-# 利用可能タグ controll-target:機体
 
 #選択武器が爆弾の場合照準を出す
 execute if entity @s[tag=flying] if score @s vp.AngX matches 0.. if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data{type:bomb} unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data{type:bomb,current-ammunition:-1} run function plane:weapon/util/display-aim/display-aim
