@@ -14,6 +14,7 @@
 #> a
 # @within function plane:controll/**
     #declare tag controller #飛行機を操縦者を示す
+    #declare tag bomb-view #爆弾視点であることを示す
     #declare tag controll-target #操縦対象のplane-rootを示す
 
 #> 
@@ -43,6 +44,13 @@ scoreboard players operation @s vp.key-input = #selected-slot vp.return
 #WASD取得(plane:controll/rolling plane:controll/flyingで使用)
 execute as @s run function util:get-player-keystroke
 scoreboard players operation @s vp.key-storoke = #key-storoke vp.return
+
+#爆弾視点スロットを選択してたらタグ付け
+execute if score @s vp.key-input matches 6 run tag @s add bomb-view
+execute unless score @s vp.key-input matches 6 run tag @s remove bomb-view
+
+#bomb-viewがついてたら爆弾視点移動を実行
+execute if entity @s[tag=bomb-view] run function plane:controll/bomb-camera/bomb-camera
 
 #自分と同じIDのパーツにタグ付け(今のところ使ってないのでコメントアウト)
 #execute at @e[tag=controll-target,distance=..20] as @e[distance=..20,scores={plane-id=1..}] if score @s plane-id = #plane-id vp.reg1 run tag @s add controll-parts

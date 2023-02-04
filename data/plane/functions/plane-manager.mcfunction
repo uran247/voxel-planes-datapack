@@ -28,7 +28,7 @@ execute if entity @p[tag=plane-pilot] run tag @s add has-rider
 execute as @s run function oh_my_dat:please
 
 #AI飛行機用function
-execute if entity @s[tag=has-dummy-rider] run function plane:controll/ai
+execute if entity @s[tag=has-dummy-rider,tag=has-ai] run function plane:controll/ai
 
 #移動、位置補正実行
 execute as @s[tag=!no-move] at @s run function plane:move/plane-move
@@ -51,4 +51,3 @@ execute at @p[tag=plane-rider] as @s[tag=has-rider] run function plane:plane-inf
 tag @e[tag=target-parts] remove target-parts
 tag @s remove has-rider
 tag @p[tag=plane-pilot] remove plane-pilot
-

@@ -10,6 +10,7 @@
 #   plane-data:**
     #declare tag has-rider #飛行機にパイロットがいるかどうか
     #declare tag has-dummy-rider #飛行機に偽パイロットがいるかどうか
+    #declare tag has-ai #偽パイロットにAIがあるかどうか
     #declare tag plane-root #planeのrootを示すタグ
     #declare tag plane-rider #パイロットを示すタグ
     #declare tag position-processed #rootを起点にした位置修正の処理対象になったかどうか示す、タグがない場合rootを失ったパーツとされる
