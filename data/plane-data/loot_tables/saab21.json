@@ -37,7 +37,7 @@
                         },
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{item-type:saab21,CustomModelData:40,HideFlags:18,EntityTag:{Silent:1b,Tags:[saab21-spawner,plane-spawner],ActiveEffects:[{Id:14b,Amplifier:1b,Duration:100,ShowParticles:0b}]}}"
+                            "tag": "{item-type:saab21,CustomModelData:44,HideFlags:18,EntityTag:{Silent:1b,Tags:[saab21-spawner,plane-spawner],ActiveEffects:[{Id:14b,Amplifier:1b,Duration:100,ShowParticles:0b}]}}"
                         }
                     ]
                 }

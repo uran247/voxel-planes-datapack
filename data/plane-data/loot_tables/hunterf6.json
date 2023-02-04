@@ -33,7 +33,7 @@
                         },
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{item-type:hunterf6,CustomModelData:37,HideFlags:18,EntityTag:{Silent:1b,Tags:[hunterf6-spawner,plane-spawner],ActiveEffects:[{Id:14b,Amplifier:1b,Duration:100,ShowParticles:0b}]}}"
+                            "tag": "{item-type:hunterf6,CustomModelData:47,HideFlags:18,EntityTag:{Silent:1b,Tags:[hunterf6-spawner,plane-spawner],ActiveEffects:[{Id:14b,Amplifier:1b,Duration:100,ShowParticles:0b}]}}"
                         }
                     ]
                 }
