@@ -32,7 +32,7 @@ execute if score @s vp.AngX-old = @s vp.AngX if score @s vp.AngY-old = @s vp.Ang
 tag @s[tag=!angle-not-changed] add need-calc-offset
 
 #自分と同じIDのパーツを自分の位置へ
-execute at @s run tp @e[tag=target-parts,tag=!plane-seat,distance=..32] ~ ~ ~ ~90 ~
+execute at @s run tp @e[tag=target-parts,tag=!plane-seat,distance=..32] ~ ~ ~ ~ ~
 
 #ヘルスチェック
 execute as @s at @s run function util:parts-health
@@ -62,7 +62,7 @@ scoreboard players operation #cos vp.reg1 = #cos vp.return
 scoreboard players operation @s[tag=need-calc-offset] vp.sin = #sin vp.return
 scoreboard players operation @s[tag=need-calc-offset] vp.cos = #cos vp.return
 execute at @s[tag=need-calc-offset] as @e[tag=has-offset,tag=target-parts,distance=..30] run function plane:position/util/calc-displacement
-execute at @s[tag=need-calc-offset] as @e[tag=has-offset,tag=target-parts,distance=..30] at @s rotated ~-90 ~ run function plane:position/calc-offset
+execute at @s[tag=need-calc-offset] as @e[tag=has-offset,tag=target-parts,distance=..30] at @s rotated ~ ~ run function plane:position/calc-offset
 execute at @s as @e[tag=has-offset,tag=target-parts,distance=..30] run function plane:position/util/move-parts
 tag @s remove need-calc-offset
 

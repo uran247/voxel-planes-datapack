@@ -70,7 +70,7 @@ execute store result score @s vp.thrust run data get storage voxel-planes:input 
 execute store result score @s vp.weight run data get storage voxel-planes:input input.flight-model.weight
 
 #スピード、角度の初期スコア、データ設定
-execute as @e[tag=plane-init,tag=model-changeable,distance=..1] store result entity @s HandItems[0].tag.CustomModelData int 1 run scoreboard players get @s vp.parking-cmd
+execute as @e[tag=plane-init,tag=model-changeable,distance=..1] store result entity @s item.tag.CustomModelData int 1 run scoreboard players get @s vp.parking-cmd
 scoreboard players operation @s vp.AngX = @s vp.landing-pitch
 scoreboard players set @s vp.AngY 0
 scoreboard players set @s vp.AngZ 0
