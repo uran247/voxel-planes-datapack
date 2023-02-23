@@ -1,6 +1,6 @@
 #> plane:position/util/renew-health-display
 #
-# 航空機パーツヘルスを体力へ反映
+# 航空機パーツヘルスを体力表示へ反映
 #
 # @input
 #   executer @e[type=minecraft:donkey,tag=target-parts,tag=plane-seat,distance=..30]
