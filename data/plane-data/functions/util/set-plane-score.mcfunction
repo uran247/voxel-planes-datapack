@@ -61,6 +61,9 @@ execute store result score @e[tag=plane-init,tag=plane-tail,tag=model-changeable
 execute store result score @e[tag=plane-init,tag=plane-tail,tag=model-changeable,distance=..1] vp.rolling-cmd run data get storage voxel-planes:input input.model-data.tail.rolling-cmd
 execute store result score @e[tag=plane-init,tag=plane-tail,tag=model-changeable,distance=..1] vp.flying-cmd run data get storage voxel-planes:input input.model-data.tail.flying-cmd
 
+#item_displayのtransformation設定
+execute as @e[tag=plane-init,tag=has-model,distance=..1] run data modify entity @s transformation.scale set from storage voxel-planes:input input.model-data.scale
+
 #エンジン数、馬力、推力設定
 execute store result score @s vp.max-engine run data get storage voxel-planes:input input.flight-model.engine.number
 execute store result score @s vp.horse-power run data get storage voxel-planes:input input.flight-model.engine.horse-power
