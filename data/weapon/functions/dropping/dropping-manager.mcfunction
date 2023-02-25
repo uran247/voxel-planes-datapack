@@ -61,8 +61,8 @@ execute if score #hit-flag vp.reg1 matches 1.. run kill @s
 data modify entity @s Rotation set from storage minecraft:plane-datapack temporary.Rotation
 execute at @s run tp @s ~ ~ ~ ~ ~0.4
 execute store result score #x-ang vp.reg1 run data get entity @s Rotation[1] 1
-scoreboard players remove #x-ang vp.reg1 90
-execute store result entity @s Pose.RightArm[2] float 1 run scoreboard players get #x-ang vp.reg1
+#scoreboard players remove #x-ang vp.reg1 90
+#execute store result entity @s Pose.RightArm[2] float 1 run scoreboard players get #x-ang vp.reg1
 #tellraw @p [{"nbt":"Rotation","entity":"@s"}] 
 
 #age更新
