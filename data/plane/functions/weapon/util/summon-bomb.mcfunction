@@ -13,7 +13,6 @@
     #declare tag bomb-init #初期化中の爆弾であることを示す
 
 #爆弾召喚
-#summon armor_stand ~ ~ ~ {Tags:[weapon-init,plane,has-offset,has-model,plane-bomb,plane-parts,entity-nohit,bomb-init,position-processed],NoGravity:1b,Invisible:1b,HandItems:[{id:"minecraft:diamond_sword",Count:1b,tag:{CustomModelData:0}},{}],Pose:{RightArm:[0f,0f,0f]},DisabledSlots:256}
 summon item_display ~ ~ ~ {Tags:[weapon-init,plane,has-offset,has-model,plane-bomb,plane-parts,entity-nohit,bomb-init,position-processed],NoGravity:1b,item:{id:"minecraft:diamond_sword",Count:1b,tag:{CustomModelData:0}},interpolation_duration:0,view_range:4.0f,transformation:{right_rotation:{angle:3.1416f,axis:[0f,1f,0f]},left_rotation:{angle:0f,axis:[0f,0f,1f]},scale:[1f,1f,1f],translation:[0f,1.5f,0f]},item_display:"thirdperson_righthand",brightness:{block:15,sky:15}}
 
 #データセット

@@ -49,7 +49,7 @@ scoreboard players remove #AngY vp.reg1 100
 scoreboard players operation #AngY vp.reg1 += @s vp.AngY
 execute store result entity @e[tag=rocket-init,distance=..10,limit=1] Rotation[1] float 0.01 run scoreboard players get #AngX vp.reg1
 execute store result entity @e[tag=rocket-init,distance=..10,limit=1] Rotation[0] float 0.01 run scoreboard players get #AngY vp.reg1
-execute as @e[tag=rocket-init,distance=..10,limit=1] at @s run tp @s ~ ~ ~ ~90 ~
+#execute as @e[tag=rocket-init,distance=..10,limit=1] at @s run tp @s ~ ~ ~ ~90 ~
 
 #x,y,z方向の速度スコア化
 scoreboard players operation @e[tag=rocket-init,distance=..20] vp.speedX = @s vp.speedX
