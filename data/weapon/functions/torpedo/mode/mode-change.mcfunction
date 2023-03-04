@@ -17,10 +17,8 @@ scoreboard players operation @s vp.damage = @s vp.torp-damage
 #向き修正
     #tellraw @p [{"nbt":"Rotation","entity": "@s"}]
 data modify entity @s Rotation set from storage minecraft:plane-datapack temporary.Rotation
-execute at @s run tp @s ~ ~ ~ ~-90 0
-execute store result entity @s Pose.RightArm[0] float 1 run scoreboard players get #90 vp.Num
-execute store result entity @s Pose.RightArm[1] float 1 run scoreboard players get #90 vp.Num
-execute store result entity @s Pose.RightArm[2] float -1 run scoreboard players get #0 vp.Num
+tp @s ~ ~ ~ ~ 0
+#data modify entity @s Rotation set from storage minecraft:plane-datapack temporary.Rotation
     #tellraw @p [{"nbt":"Rotation","entity": "@s"}]
 
 #x,y,z方向の速度スコア化

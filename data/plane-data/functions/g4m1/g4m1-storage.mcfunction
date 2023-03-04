@@ -38,4 +38,4 @@ data modify storage voxel-planes:weapon g4m1.additional.800kg set value [{kind:8
 
 #魚雷データセット
 data modify storage voxel-planes:weapon g4m1.base.torpedo.data set value {name:torpedo,type:torpedo,max-ammunition:0,current-ammunition:0,max-reload:500,current-reload:0,torpedos:[]}
-data modify storage voxel-planes:weapon g4m1.additional.torpedo set value [{kind:1600lb,type:normal,offset:[1d,-0.4d,0d],damage:3600,weight:680,cmd:48}]
+data modify storage voxel-planes:weapon g4m1.additional.torpedo set value [{kind:1600lb,type:normal,offset:[0d,0.5d,0d],damage:3600,weight:680,cmd:48}]

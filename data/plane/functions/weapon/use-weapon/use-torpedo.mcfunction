@@ -33,7 +33,8 @@ scoreboard players set @e[tag=drop-init,distance=..20] vp.age 1200
 #角度代入
 execute store result entity @e[tag=drop-init,distance=..20,limit=1] Rotation[1] float 0.01 run scoreboard players get @s vp.AngX
 execute store result entity @e[tag=drop-init,distance=..20,limit=1] Rotation[0] float 0.01 run scoreboard players get @s vp.AngY
-execute as @e[tag=drop-init,distance=..20,limit=1] at @s run tp @s ~ ~ ~ ~90 ~
+    tellraw @p [{"nbt":"Rotation","entity": "@e[tag=drop-init,distance=..20,limit=1]"}]
+
 
 #x,y,z方向の速度スコア化
 scoreboard players operation @e[tag=drop-init,distance=..20] vp.speedX = @s vp.speedX

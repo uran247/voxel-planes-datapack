@@ -63,6 +63,7 @@ execute store result score @e[tag=plane-init,tag=plane-tail,tag=model-changeable
 
 #item_displayのtransformation設定
 execute as @e[tag=plane-init,tag=has-model,distance=..1] run data modify entity @s transformation.scale set from storage voxel-planes:input input.model-data.scale
+execute as @e[tag=plane-init,tag=has-model,distance=..1] run data modify entity @s transformation.translation set from storage voxel-planes:input input.model-data.translation
 
 #エンジン数、馬力、推力設定
 execute store result score @s vp.max-engine run data get storage voxel-planes:input input.flight-model.engine.number

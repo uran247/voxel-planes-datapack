@@ -55,15 +55,13 @@ execute if score #hit-flag vp.reg1 matches 1.. run kill @s
 #航行中のパーティクル
 execute if entity @s[tag=sailing] anchored eyes positioned ^ ^ ^-0.8 run particle bubble_column_up ~ ~0.5 ~ 0.1 0.1 0.1 0.1 10 force
 
-# 水中にいるか判定し航行モードにチェンジ
-execute at @s[tag=!sailing] anchored eyes if block ~ ~3 ~ minecraft:water if block ~ ~ ~ minecraft:water run function weapon:torpedo/mode/mode-change
-
 #向き修正
 data modify entity @s Rotation set from storage minecraft:plane-datapack temporary.Rotation
 execute if entity @s[tag=!sailing] at @s run tp @s ~ ~ ~ ~ ~0.4
-execute if entity @s[tag=!sailing] store result score #x-ang vp.reg1 run data get entity @s Rotation[1] 1
-execute if entity @s[tag=!sailing] run scoreboard players remove #x-ang vp.reg1 90
-execute if entity @s[tag=!sailing] store result entity @s Pose.RightArm[2] float 1 run scoreboard players get #x-ang vp.reg1
+
+# 水中にいるか判定し航行モードにチェンジ
+execute at @s[tag=!sailing] anchored eyes if block ~ ~3 ~ minecraft:water if block ~ ~ ~ minecraft:water run function weapon:torpedo/mode/mode-change
+
     #tellraw @p [{"nbt":"Rotation","entity":"@s"}] 
 
 #age更新
