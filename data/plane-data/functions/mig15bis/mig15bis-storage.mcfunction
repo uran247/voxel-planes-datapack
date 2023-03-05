@@ -16,6 +16,8 @@ data modify storage voxel-planes:plane mig15bis.plane-data.flight-model.turn-rat
 data modify storage voxel-planes:plane mig15bis.plane-data.flight-model.energy-loss-rate set value 0.4
 data modify storage voxel-planes:plane mig15bis.plane-data.model-data.body set value {parking-cmd:175,rolling-cmd:175,flying-cmd:176}
 data modify storage voxel-planes:plane mig15bis.plane-data.model-data.landing-pitch set value 0
+data modify storage voxel-planes:plane mig15bis.plane-data.model-data.scale set value [1f,1f,1f]
+data modify storage voxel-planes:plane mig15bis.plane-data.model-data.translation set value [0f,1.5f,0f]
 data modify storage voxel-planes:plane mig15bis.plane-data.hitbox set value {}
 data modify storage voxel-planes:plane mig15bis.plane-data.hitbox merge value {engine:{max-hp:310d,offset:[0d,0d,-0.5d]}}
 data modify storage voxel-planes:plane mig15bis.plane-data.hitbox merge value {aileron-r:{max-hp:300d,offset:[-2.5d,-0.3d,-1d]},aileron-l:{max-hp:300d,offset:[2.5d,-0.3d,-1d]}}
