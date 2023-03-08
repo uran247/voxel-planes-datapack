@@ -81,8 +81,8 @@ data modify entity @s Rotation set from storage minecraft:plane-datapack tempora
 playsound minecraft:entity.horse.breathe ambient @a ~ ~ ~ 1 0
 
 #particle
-execute at @s anchored eyes positioned ~ ~1.5 ~ run particle minecraft:cloud ^ ^ ^-2 0 0 0 0 3 force
-execute at @s anchored eyes positioned ~ ~1.5 ~ run particle minecraft:flame ^ ^ ^-2 0 0 0 0.03 3 force
+execute at @s anchored eyes positioned ~ ~ ~ run particle minecraft:cloud ^ ^ ^-2 0 0 0 0 3 force
+execute at @s anchored eyes positioned ~ ~ ~ run particle minecraft:flame ^ ^ ^-2 0 0 0 0.03 3 force
 
 #タグ削除
 tag @e[tag=hit-weapon,distance=..26] remove hit-weapon

@@ -16,6 +16,8 @@ data modify storage voxel-planes:plane f86f.plane-data.flight-model.turn-rate se
 data modify storage voxel-planes:plane f86f.plane-data.flight-model.energy-loss-rate set value 0.6
 data modify storage voxel-planes:plane f86f.plane-data.model-data.body set value {parking-cmd:172,rolling-cmd:172,flying-cmd:173}
 data modify storage voxel-planes:plane f86f.plane-data.model-data.landing-pitch set value 0
+data modify storage voxel-planes:plane f86f.plane-data.model-data.scale set value [1f,1f,1f]
+data modify storage voxel-planes:plane f86f.plane-data.model-data.translation set value [0f,1.5f,0f]
 data modify storage voxel-planes:plane f86f.plane-data.hitbox set value {}
 data modify storage voxel-planes:plane f86f.plane-data.hitbox merge value {engine:{max-hp:410d,offset:[0d,0d,-2d]}}
 data modify storage voxel-planes:plane f86f.plane-data.hitbox merge value {aileron-r:{max-hp:400d,offset:[-3d,-0.5d,-1d]},aileron-l:{max-hp:400d,offset:[3d,-0.5d,-1d]}}
@@ -34,5 +36,5 @@ data modify storage voxel-planes:weapon f86f.additional.1000lb append value {kin
 
 #デフォルトミサイルデータセット
 data modify storage voxel-planes:weapon f86f.base.missile.data set value {name:missile,type:ir-missile,max-ammunition:2,current-ammunition:2,max-reload:600,current-reload:0,lockon-time:0,missiles:[]}
-data modify storage voxel-planes:weapon f86f.additional.missile set value [{kind:70kg,type:ir-missile,offset:[-2.2d,-0.6d,-0.8d],damage:730,weight:70,cmd:174,turn-rate:9.6f,max-speed:7.2f}]
-data modify storage voxel-planes:weapon f86f.additional.missile append value {kind:70kg,type:ir-missile,offset:[2.2d,-0.6d,-0.8d],damage:730,weight:70,cmd:174,turn-rate:9.6f,max-speed:7.2f}
+data modify storage voxel-planes:weapon f86f.additional.missile set value [{kind:70kg,type:ir-missile,offset:[-2.2d,0.9d,-0.8d],damage:730,weight:70,cmd:174,turn-rate:9.6f,max-speed:7.2f}]
+data modify storage voxel-planes:weapon f86f.additional.missile append value {kind:70kg,type:ir-missile,offset:[2.2d,0.9d,-0.8d],damage:730,weight:70,cmd:174,turn-rate:9.6f,max-speed:7.2f}

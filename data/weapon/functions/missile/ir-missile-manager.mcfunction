@@ -48,17 +48,18 @@ function oh_my_dat:please
 #dummy sun配置
 function weapon:util/set-sun-dummy
 
-#元々の向きを保存
-data modify storage minecraft:plane-datapack temporary.Rotation set from entity @s Rotation
-
 #向き変更
         #tellraw @p [{"nbt":"Rotation","entity":"@s"}] 
     #ターゲットが右にいるか左にいるか探索
-    execute rotated ~-90 ~ run function weapon:missile/search-target
-    execute rotated ~-90 ~ as @e[tag=ir-missile-target,distance=..256,limit=1] positioned ^1000 ^ ^ if entity @s[distance=..999.9] positioned ^-1000 ^ ^ run tag @e[tag=missile-move-executer,distance=..0.01] add turn-left
-    execute rotated ~-90 ~ as @e[tag=ir-missile-target,distance=..256,limit=1] positioned ^-1000 ^ ^ if entity @s[distance=..999.9] positioned ^1000 ^ ^ run tag @e[tag=missile-move-executer,distance=..0.01] add turn-right
-    execute rotated ~-90 ~ as @e[tag=ir-missile-target,distance=..256,limit=1] positioned ^ ^1000 ^ if entity @s[distance=..999.9] positioned ^ ^-1000 ^ run tag @e[tag=missile-move-executer,distance=..0.01] add turn-up
-    execute rotated ~-90 ~ as @e[tag=ir-missile-target,distance=..256,limit=1] positioned ^ ^-1000 ^ if entity @s[distance=..999.9] positioned ^ ^1000 ^ run tag @e[tag=missile-move-executer,distance=..0.01] add turn-down
+    function weapon:missile/search-target
+    execute as @e[tag=ir-missile-target,distance=..256,limit=1] positioned ^1000 ^ ^ if entity @s[distance=..999.9] positioned ^-1000 ^ ^ run tag @e[tag=missile-move-executer,distance=..0.01] add turn-left
+    execute as @e[tag=ir-missile-target,distance=..256,limit=1] positioned ^-1000 ^ ^ if entity @s[distance=..999.9] positioned ^1000 ^ ^ run tag @e[tag=missile-move-executer,distance=..0.01] add turn-right
+    execute as @e[tag=ir-missile-target,distance=..256,limit=1] positioned ^ ^1000 ^ if entity @s[distance=..999.9] positioned ^ ^-1000 ^ run tag @e[tag=missile-move-executer,distance=..0.01] add turn-up
+    execute as @e[tag=ir-missile-target,distance=..256,limit=1] positioned ^ ^-1000 ^ if entity @s[distance=..999.9] positioned ^ ^1000 ^ run tag @e[tag=missile-move-executer,distance=..0.01] add turn-down
+        #execute if entity @s[tag=turn-left] run say left
+        #execute if entity @s[tag=turn-right] run say right
+        #execute if entity @s[tag=turn-up] run say up
+        #execute if entity @s[tag=turn-down] run say down
 
     #ターゲットの方向に向けて旋回
     execute as @s[tag=turn-left] store result score #AngY vp.reg1 run data get entity @s Rotation[0] 100
@@ -72,12 +73,13 @@ data modify storage minecraft:plane-datapack temporary.Rotation set from entity 
     execute as @s[tag=turn-down] store result entity @s Rotation[1] float 0.01 run scoreboard players operation #AngX vp.reg1 += @s vp.turn-rate
 
     #speedX,Y,Z更新
-    execute at @s run tp @s ~ ~ ~ ~-90 ~
     execute at @s run function math:vector
 
     #reset
     tag @s remove turn-left
     tag @s remove turn-right
+    tag @s remove turn-up
+    tag @s remove turn-down
     scoreboard players reset #AngY vp.reg1
     scoreboard players reset #AngX vp.reg1
     tag @e[tag=ir-missile-target,distance=..256,limit=1] remove ir-missile-target
@@ -108,6 +110,9 @@ data modify storage minecraft:plane-datapack temporary.Rotation set from entity 
 
     scoreboard players operation #plane-id vp.reg1 = @s vp.plane-id
 
+    #元々の向きを保存
+    data modify storage minecraft:plane-datapack temporary.Rotation set from entity @s Rotation
+
     #移動&ヒット判定
     execute as @e[tag=block-checker,distance=..1,x=0,y=1,z=0,limit=1] run function weapon:missile/move
 
@@ -125,8 +130,8 @@ execute if score #hit-flag vp.reg1 matches 1.. run kill @s
 playsound minecraft:entity.horse.breathe ambient @a ~ ~ ~ 1 0
 
 #particle
-execute at @s rotated ~-90 ~ anchored eyes positioned ~ ~ ~ run particle minecraft:cloud ^ ^ ^-2 0 0 0 0 3 force
-execute at @s rotated ~-90 ~ anchored eyes positioned ~ ~ ~ run particle minecraft:flame ^ ^ ^-2 0 0 0 0.03 3 force
+execute at @s anchored eyes positioned ~ ~ ~ run particle minecraft:cloud ^ ^ ^-2 0 0 0 0 3 force
+execute at @s anchored eyes positioned ~ ~ ~ run particle minecraft:flame ^ ^ ^-2 0 0 0 0.03 3 force
 
 #age更新
 scoreboard players remove @s vp.age 1

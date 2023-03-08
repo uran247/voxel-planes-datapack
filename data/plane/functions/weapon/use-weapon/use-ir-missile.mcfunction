@@ -43,7 +43,8 @@ execute as @e[tag=weapon-init,distance=..10,limit=1] if score @s vp.launched-cmd
 #角度代入
 execute store result entity @e[tag=weapon-init,distance=..10,limit=1] Rotation[1] float 0.01 run scoreboard players get @s vp.AngX
 execute store result entity @e[tag=weapon-init,distance=..10,limit=1] Rotation[0] float 0.01 run scoreboard players get @s vp.AngY
-execute as @e[tag=weapon-init,distance=..10,limit=1] at @s run tp @s ~ ~ ~ ~90 ~
+#execute as @e[tag=weapon-init,distance=..10,limit=1] at @s run tp @s ~ ~ ~ ~90 ~
+    #tellraw @p [{"nbt":"Rotation","entity":"@e[tag=weapon-init,distance=..10,limit=1]"}] 
 
 #x,y,z方向の速度スコア化
 scoreboard players operation @e[tag=weapon-init,distance=..20] vp.speedX = @s vp.speedX
