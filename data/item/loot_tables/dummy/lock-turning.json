@@ -5,7 +5,7 @@
             "entries": [
                 {
                     "type": "item",
-                    "name": "minecraft:paper",
+                    "name": "minecraft:tipped_arrow",
                     "weight": 1,
                     "functions": [
                         {
