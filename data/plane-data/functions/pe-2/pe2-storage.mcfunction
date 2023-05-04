@@ -17,6 +17,8 @@ data modify storage voxel-planes:plane pe2.plane-data.model-data.body set value 
 data modify storage voxel-planes:plane pe2.plane-data.model-data.rightwing set value {parking-cmd:138,rolling-cmd:139,flying-cmd:140}
 data modify storage voxel-planes:plane pe2.plane-data.model-data.tail set value {parking-cmd:141,rolling-cmd:141,flying-cmd:142}
 data modify storage voxel-planes:plane pe2.plane-data.model-data.landing-pitch set value -12.0
+data modify storage voxel-planes:plane pe2.plane-data.model-data.scale set value [2f,2f,2f]
+data modify storage voxel-planes:plane pe2.plane-data.model-data.translation set value [0f,0.1f,0f]
 data modify storage voxel-planes:plane pe2.plane-data.hitbox set value {}
 data modify storage voxel-planes:plane pe2.plane-data.hitbox merge value {engine-r:{max-hp:190d,offset:[-2.5d,1d,5.5d]},engine-l:{max-hp:190d,offset:[2.3d,1d,5.5d]}}
 data modify storage voxel-planes:plane pe2.plane-data.hitbox merge value {aileron-r:{max-hp:180d,offset:[-5d,1.3d,3.3d]},aileron-l:{max-hp:180d,offset:[5d,1.3d,3.3d]}}

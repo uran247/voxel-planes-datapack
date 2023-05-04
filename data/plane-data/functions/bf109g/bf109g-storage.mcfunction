@@ -18,6 +18,8 @@ data modify storage voxel-planes:plane bf109g.plane-data.model-data.body set val
 data modify storage voxel-planes:plane bf109g.plane-data.model-data.landing-pitch set value -15.5
 data modify storage voxel-planes:plane bf109g.plane-data.hp set value {engine:350d,body:350d,aileron:250d,elevetor:230d,radder:230d}
 data modify storage voxel-planes:plane bf109g.plane-data.hitbox set value {}
+data modify storage voxel-planes:plane bf109g.plane-data.model-data.scale set value [1f,1f,1f]
+data modify storage voxel-planes:plane bf109g.plane-data.model-data.translation set value [0f,0f,0.7f]
 data modify storage voxel-planes:plane bf109g.plane-data.hitbox merge value {engine:{max-hp:100d,offset:[0d,0d,2d]}}
 data modify storage voxel-planes:plane bf109g.plane-data.hitbox merge value {body:{max-hp:330d,offset:[0.3d,0d,0d]}}
 data modify storage voxel-planes:plane bf109g.plane-data.hitbox merge value {aileron-r:{max-hp:210d,offset:[-3.6d,0d,-0.2d]},aileron-l:{max-hp:210d,offset:[3.6d,0d,-0.2d]}}

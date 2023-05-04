@@ -18,7 +18,7 @@ data modify storage voxel-planes:plane g4m1.plane-data.model-data.body set value
 data modify storage voxel-planes:plane g4m1.plane-data.model-data merge value {rightwing:{offset:[-6.5d,0d,0d]},leftwing:{offset:[6.5d,0d,0d]}}
 data modify storage voxel-planes:plane g4m1.plane-data.model-data.landing-pitch set value -5.0
 data modify storage voxel-planes:plane g4m1.plane-data.model-data.scale set value [3.981f,3.981f,3.981f]
-data modify storage voxel-planes:plane g4m1.plane-data.model-data.translation set value [0f,0f,-12.5f]
+data modify storage voxel-planes:plane g4m1.plane-data.model-data.translation set value [0f,-1.6f,-12.5f]
 data modify storage voxel-planes:plane g4m1.plane-data.hp set value {engine:100d,body:110d,aileron:90d,elevetor:70d,radder:70d}
 data modify storage voxel-planes:plane g4m1.plane-data.hitbox set value {}
 data modify storage voxel-planes:plane g4m1.plane-data.hitbox merge value {body:{max-hp:110d,offset:[0d,0d,0d]}}

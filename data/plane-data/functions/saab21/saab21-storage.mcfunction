@@ -16,6 +16,8 @@ data modify storage voxel-planes:plane saab21.plane-data.flight-model.turn-rate 
 data modify storage voxel-planes:plane saab21.plane-data.flight-model.energy-loss-rate set value 0.5
 data modify storage voxel-planes:plane saab21.plane-data.model-data.body set value {parking-cmd:19,rolling-cmd:20,flying-cmd:21}
 data modify storage voxel-planes:plane saab21.plane-data.model-data.landing-pitch set value 0
+data modify storage voxel-planes:plane saab21.plane-data.model-data.scale set value [1f,1f,1f]
+data modify storage voxel-planes:plane saab21.plane-data.model-data.translation set value [0f,0f,0.7f]
 data modify storage voxel-planes:plane saab21.plane-data.hitbox set value {}
 data modify storage voxel-planes:plane saab21.plane-data.hitbox merge value {engine:{max-hp:150d,offset:[0d,0.5d,-2d]}}
 data modify storage voxel-planes:plane saab21.plane-data.hitbox merge value {aileron-r:{max-hp:150d,offset:[-3d,0d,0d]},aileron-l:{max-hp:150d,offset:[3d,0d,0d]}}

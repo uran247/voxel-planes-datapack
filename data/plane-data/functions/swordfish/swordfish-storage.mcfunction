@@ -16,6 +16,8 @@ data modify storage voxel-planes:plane swordfish.plane-data.flight-model.turn-ra
 data modify storage voxel-planes:plane swordfish.plane-data.flight-model.energy-loss-rate set value 0.2
 data modify storage voxel-planes:plane swordfish.plane-data.model-data.body set value {parking-cmd:49,rolling-cmd:50,flying-cmd:50}
 data modify storage voxel-planes:plane swordfish.plane-data.model-data.landing-pitch set value -12.0
+data modify storage voxel-planes:plane swordfish.plane-data.model-data.scale set value [2f,2f,2f]
+data modify storage voxel-planes:plane swordfish.plane-data.model-data.translation set value [0f,0.3f,-2.8f]
 data modify storage voxel-planes:plane swordfish.plane-data.hp set value {engine:70d,body:80d,aileron:80d,elevetor:50d,radder:50d}
 data modify storage voxel-planes:plane swordfish.plane-data.hitbox set value {}
 data modify storage voxel-planes:plane swordfish.plane-data.hitbox merge value {engine:{max-hp:70d,offset:[0d,-0.1d,5.2d]}}

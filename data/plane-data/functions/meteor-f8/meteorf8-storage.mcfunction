@@ -16,6 +16,8 @@ data modify storage voxel-planes:plane meteorf8.plane-data.flight-model.turn-rat
 data modify storage voxel-planes:plane meteorf8.plane-data.flight-model.energy-loss-rate set value 0.6
 data modify storage voxel-planes:plane meteorf8.plane-data.model-data.body set value {parking-cmd:161,rolling-cmd:161,flying-cmd:162}
 data modify storage voxel-planes:plane meteorf8.plane-data.model-data.landing-pitch set value 0
+data modify storage voxel-planes:plane meteorf8.plane-data.model-data.scale set value [2f,2f,2f]
+data modify storage voxel-planes:plane meteorf8.plane-data.model-data.translation set value [0f,0.2f,-0.8f]
 data modify storage voxel-planes:plane meteorf8.plane-data.hitbox set value {}
 data modify storage voxel-planes:plane meteorf8.plane-data.hitbox merge value {engine-r:{max-hp:400d,offset:[-2.3d,-0.4d,2.3d]},engine-l:{max-hp:400d,offset:[2.3d,-0.4d,2.3d]}}
 data modify storage voxel-planes:plane meteorf8.plane-data.hitbox merge value {aileron-r:{max-hp:420d,offset:[-3.2d,-0.2d,0.7d]},aileron-l:{max-hp:420d,offset:[3.2d,-0.2d,0.7d]}}

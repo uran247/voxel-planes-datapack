@@ -16,6 +16,8 @@ data modify storage voxel-planes:plane f4u1.plane-data.flight-model.turn-rate se
 data modify storage voxel-planes:plane f4u1.plane-data.flight-model.energy-loss-rate set value 0.6
 data modify storage voxel-planes:plane f4u1.plane-data.model-data.body set value {parking-cmd:1,rolling-cmd:2,flying-cmd:3}
 data modify storage voxel-planes:plane f4u1.plane-data.model-data.landing-pitch set value -12.0
+data modify storage voxel-planes:plane f4u1.plane-data.model-data.scale set value [2f,2f,2f]
+data modify storage voxel-planes:plane f4u1.plane-data.model-data.translation set value [0f,0.3f,0.8f]
 data modify storage voxel-planes:plane f4u1.plane-data.hp set value {engine:300d,body:330d,aileron:240d,elevetor:210d,radder:210d}
 data modify storage voxel-planes:plane f4u1.plane-data.hitbox set value {}
 data modify storage voxel-planes:plane f4u1.plane-data.hitbox merge value {engine:{max-hp:210d,offset:[0.3d,0d,4.5d]}}
