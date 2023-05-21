@@ -17,7 +17,7 @@ data modify storage voxel-planes:plane seafuryfb11.plane-data.flight-model.energ
 data modify storage voxel-planes:plane seafuryfb11.plane-data.model-data.body set value {parking-cmd:125,rolling-cmd:126,flying-cmd:127}
 data modify storage voxel-planes:plane seafuryfb11.plane-data.model-data.landing-pitch set value -14.0
 data modify storage voxel-planes:plane seafuryfb11.plane-data.model-data.scale set value [1f,1f,1f]
-data modify storage voxel-planes:plane seafuryfb11.plane-data.model-data.translation set value [0f,1.5f,0f]
+data modify storage voxel-planes:plane seafuryfb11.plane-data.model-data.translation set value [0f,0f,0f]
 data modify storage voxel-planes:plane seafuryfb11.plane-data.hp set value {engine:220d,body:250d,aileron:200d,elevetor:200d,radder:210d}
 data modify storage voxel-planes:plane seafuryfb11.plane-data.hitbox set value {}
 data modify storage voxel-planes:plane seafuryfb11.plane-data.hitbox merge value {body:{max-hp:250d,offset:[0d,0d,0d]}}

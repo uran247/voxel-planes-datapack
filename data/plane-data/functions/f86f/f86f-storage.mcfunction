@@ -17,7 +17,7 @@ data modify storage voxel-planes:plane f86f.plane-data.flight-model.energy-loss-
 data modify storage voxel-planes:plane f86f.plane-data.model-data.body set value {parking-cmd:172,rolling-cmd:172,flying-cmd:173}
 data modify storage voxel-planes:plane f86f.plane-data.model-data.landing-pitch set value 0
 data modify storage voxel-planes:plane f86f.plane-data.model-data.scale set value [1f,1f,1f]
-data modify storage voxel-planes:plane f86f.plane-data.model-data.translation set value [0f,1.5f,0f]
+data modify storage voxel-planes:plane f86f.plane-data.model-data.translation set value [0f,0f,0f]
 data modify storage voxel-planes:plane f86f.plane-data.hitbox set value {}
 data modify storage voxel-planes:plane f86f.plane-data.hitbox merge value {engine:{max-hp:410d,offset:[0d,0d,-2d]}}
 data modify storage voxel-planes:plane f86f.plane-data.hitbox merge value {aileron-r:{max-hp:400d,offset:[-3d,-0.5d,-1d]},aileron-l:{max-hp:400d,offset:[3d,-0.5d,-1d]}}

@@ -48,3 +48,4 @@ execute at @s[tag=saab29f-spawner] as @p run function plane-data:saab29f/saab29f
 execute at @s[tag=saab21-spawner] as @p run function plane-data:saab21/saab21
 execute at @s[tag=mc202-spawner] as @p run function plane-data:mc202/mc202
 execute at @s[tag=d520-spawner] as @p run function plane-data:d520/d520
+execute at @s[tag=me163b-spawner] as @p run function plane-data:me163b/me163b
