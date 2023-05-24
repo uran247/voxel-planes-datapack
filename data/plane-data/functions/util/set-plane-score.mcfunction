@@ -66,7 +66,7 @@ execute as @e[tag=plane-init,tag=has-model,distance=..1] run data modify entity 
 execute as @e[tag=plane-init,tag=has-model,distance=..1] run data modify entity @s transformation.translation set from storage voxel-planes:input input.model-data.translation
 
 #装備の表示位置計算用のy offset設定
-execute store result score @s vp.model-offset-y run data get storage voxel-planes:input input.model-data.translation[1]
+execute store result score @s vp.model-offset-y run data get storage voxel-planes:input input.model-data.translation[1] 1000
 
 #エンジン数、馬力、推力設定
 execute store result score @s vp.max-engine run data get storage voxel-planes:input input.flight-model.engine.number

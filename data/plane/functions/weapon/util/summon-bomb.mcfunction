@@ -25,5 +25,8 @@ data modify entity @e[type=item_display,tag=bomb-init,distance=..1,limit=1] Tags
 data modify entity @e[type=item_display,tag=bomb-init,distance=..1,limit=1] Tags append from storage minecraft:plane-datapack temporary.weapon.type
 execute store result entity @e[type=item_display,tag=bomb-init,distance=..1,limit=1] item.tag.CustomModelData int 1 run data get storage minecraft:plane-datapack temporary.weapon.cmd
 
+#rootに紐づけ
+ride @e[type=item_display,tag=bomb-init,distance=..1,limit=1] mount @s
+
 #初期化タグ削除
 tag @e[type=item_display,tag=bomb-init,distance=..1,limit=1] remove bomb-init

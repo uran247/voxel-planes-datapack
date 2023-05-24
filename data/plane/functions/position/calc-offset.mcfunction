@@ -6,7 +6,7 @@
 #
 # @input
 #   executer @e[tag=has-offset,tag=target-parts]
-#   position @e[tag=has-offset,tag=target-parts] rotated ~-90 ~
+#   position @e[tag=has-offset,tag=target-parts]
 #   score @s vp.new-offsetX
 #   score @s vp.new-offsetY
 #   score @s vp.offsetZ

@@ -62,8 +62,10 @@ scoreboard players operation #cos vp.reg1 = #cos vp.return
 scoreboard players operation @s[tag=need-calc-offset] vp.sin = #sin vp.return
 scoreboard players operation @s[tag=need-calc-offset] vp.cos = #cos vp.return
 execute at @s[tag=need-calc-offset] as @e[tag=has-offset,tag=target-parts,distance=..30] run function plane:position/util/calc-displacement
-execute at @s[tag=need-calc-offset] as @e[tag=has-offset,tag=target-parts,distance=..30] at @s rotated ~ ~ run function plane:position/calc-offset
-execute at @s as @e[tag=has-offset,tag=target-parts,distance=..30] run function plane:position/util/move-parts
+execute at @s[tag=need-calc-offset] as @e[type=!item_display,tag=has-offset,tag=target-parts,distance=..30] at @s rotated ~ ~ run function plane:position/calc-offset
+execute at @s as @e[type=!item_display,tag=has-offset,tag=target-parts,distance=..30] run function plane:position/util/move-parts
+execute on passengers if entity @s[type=item_display,tag=has-offset] run function plane:position/util/set-translation
+
 tag @s remove need-calc-offset
 
 #角度スコアが変化していた場合ベクトル計算

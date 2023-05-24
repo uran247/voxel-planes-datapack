@@ -4,7 +4,7 @@
 # オフセット座標は^x ^y ^zになる
 #
 # @input
-#   executer @e[tag=plane-root]
+#   executer @e[tag=plane-parts]
 #   score #sin vp.reg1
 #   score #cos vp.reg1
 #
