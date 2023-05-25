@@ -59,7 +59,8 @@ ride @e[tag=use-init,distance=..1,limit=1] dismount
 ride @e[tag=use-init,distance=..1,limit=1] mount @e[tag=dropping-init,distance=..1,limit=1]
 execute store result score @e[tag=dropping-init,distance=..1,limit=1] vp.new-offsetX run data get entity @e[tag=use-init,distance=..1,limit=1] transformation.translation[0] 1000
 execute store result score @e[tag=dropping-init,distance=..1,limit=1] vp.new-offsetY run data get entity @e[tag=use-init,distance=..1,limit=1] transformation.translation[1] 1000
-data modify entity @e[tag=dropping-init,distance=..1,limit=1] transformation.translation set value [0f,0f,0f]
+execute store result score @e[tag=dropping-init,distance=..1,limit=1] vp.offsetZ run scoreboard players get @e[tag=use-init,distance=..1,limit=1] vp.offsetZ
+data modify entity @e[tag=use-init,distance=..1,limit=1] transformation.translation set value [0f,0f,0f]
 execute as @e[tag=dropping-init,distance=..20,limit=1] at @s run function plane:position/calc-offset
 execute as @e[tag=dropping-init,distance=..20,limit=1] at @s run function plane:position/util/move-parts
 
