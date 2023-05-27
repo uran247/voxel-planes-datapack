@@ -12,6 +12,7 @@
 #   function plane:weapon/use-weapon/tags-first-weapon
 #   function plane:weapon/use-weapon/use-rocket
 #   function plane:weapon/use-weapon/use-torpedo
+#   function plane:weapon/use-weapon/use-ir-missile
     #declare tag use-init #初期化処理中の爆弾であることを示す
     #declare score_holder #init-tag-add  0:タグ付け未了 1:タグ付け完了
 

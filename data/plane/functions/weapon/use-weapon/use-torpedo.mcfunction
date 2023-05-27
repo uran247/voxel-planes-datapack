@@ -21,7 +21,7 @@ tag @s add torpedo-executer
 #scoreboard players operation #plane-id vp.reg1 = @s vp.plane-id
 #execute as @e[tag=plane-torpedo,tag=plane,distance=..20,limit=1] if score @s vp.plane-id = #plane-id vp.reg1 run tag @s add drop-init
 scoreboard players set #init-tag-add vp.reg1 0
-execute on passengers if entity @s[tag=plane-bomb] run function plane:weapon/use-weapon/tags-first-weapon
+execute on passengers if entity @s[tag=plane-torpedo] run function plane:weapon/use-weapon/tags-first-weapon
 
 #機体タグ削除
 tag @e[tag=drop-init,distance=..20] remove plane
