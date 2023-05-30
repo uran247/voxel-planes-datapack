@@ -32,8 +32,8 @@ data modify storage voxel-planes:weapon mig15bis.base.37mm set value {data:{name
 
 #デフォルト爆弾データセット
 data modify storage voxel-planes:weapon mig15bis.base.bomb.data set value {name:bomb,type:bomb,max-ammunition:0,current-ammunition:0,max-reload:3600,current-reload:0,bombs:[]}
-data modify storage voxel-planes:weapon mig15bis.additional.100kg set value [{kind:100kg,type:normal,offset:[2.7d,-0.4d,-1.8d],damage:500,weight:100,cmd:203}]
-data modify storage voxel-planes:weapon mig15bis.additional.100kg append value {kind:100kg,type:normal,offset:[-2.7d,-0.4d,-1.8d],damage:500,weight:100,cmd:203}
+data modify storage voxel-planes:weapon mig15bis.additional.100kg set value [{kind:100kg,type:normal,offset:[2.7d,-0.4d,-1.4d],damage:500,weight:100,cmd:203}]
+data modify storage voxel-planes:weapon mig15bis.additional.100kg append value {kind:100kg,type:normal,offset:[-2.7d,-0.4d,-1.4d],damage:500,weight:100,cmd:203}
 
 #デフォルトロケット弾データセット
 #data modify storage voxel-planes:weapon mig15bis.base.rocket.data set value {name:rocket,type:rocket,max-ammunition:0,current-ammunition:0,max-reload:$RELOAD_TIME,current-reload:0,rockets:[]}

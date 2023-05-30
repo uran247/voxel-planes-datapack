@@ -43,7 +43,7 @@ execute if score #gunpod vp.reg1 matches 1.. run tag @e[type=item_display,tag=pl
 #装備済み爆弾/gunpod削除
 execute unless score #250kg vp.reg1 matches 1.. if entity @e[type=item_display,tag=target-parts,tag=250kg,tag=normal,distance=..32] run kill @e[tag=target-parts,tag=plane-bomb]
 execute unless score #aa-rocket vp.reg1 matches 1.. if entity @e[type=item_display,tag=target-parts,tag=plane-rocket,distance=..32] run kill @e[tag=target-parts,tag=plane-rocket]
-execute unless score #gunpod vp.reg1 matches 1.. if entity @e[type=item_display,tag=target-parts,tag=plane-gunpod,distance=..32] run kill @e[type=armor_stand,tag=target-parts,tag=plane-gunpod]
+execute unless score #gunpod vp.reg1 matches 1.. if entity @e[type=item_display,tag=target-parts,tag=plane-gunpod,distance=..32] run kill @e[type=item_display,tag=target-parts,tag=plane-gunpod]
 
 #ステータス変更
 #装備に応じて右記ステータス変更：最高速度　巡航速度　旋回力

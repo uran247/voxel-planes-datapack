@@ -32,16 +32,16 @@ data modify storage voxel-planes:weapon f4u1.base.gun.data set value {name:"12.7
 
 #デフォルト爆弾データセット
 data modify storage voxel-planes:weapon f4u1.base.bomb.data set value {name:bomb,type:bomb,max-ammunition:2,current-ammunition:2,max-reload:3600,current-reload:0,bombs:[]}
-data modify storage voxel-planes:weapon f4u1.additional.500kg set value [{kind:1000lb,type:normal,offset:[-0.4d,-1d,2.1d],damage:2300,weight:454.0f,cmd:122}]
-data modify storage voxel-planes:weapon f4u1.additional.500kg append value {kind:1000lb,type:normal,offset:[1.2d,-1d,2.1d],damage:2300,weight:454.0f,cmd:122}
+data modify storage voxel-planes:weapon f4u1.additional.500kg set value [{kind:1000lb,type:normal,offset:[-0.4d,-1.1d,2.1d],damage:2300,weight:454.0f,cmd:122}]
+data modify storage voxel-planes:weapon f4u1.additional.500kg append value {kind:1000lb,type:normal,offset:[0.4d,-1.1d,2.1d],damage:2300,weight:454.0f,cmd:122}
 
 #デフォルトロケット弾データセット
 data modify storage voxel-planes:weapon f4u1.base.rocket.data set value {name:rocket,type:rocket,max-ammunition:8,current-ammunition:8,max-reload:1200,current-reload:0,rockets:[]}
-data modify storage voxel-planes:weapon f4u1.additional.ag-rocket set value [{type:normal,damage:500,offset:[2.9d,-1d,2.8d],weight:63.0f,kind:10kg,cmd:66}]
-data modify storage voxel-planes:weapon f4u1.additional.ag-rocket append value {type:normal,damage:500,offset:[3.3d,-0.91d,2.8d],weight:63.0f,kind:10kg,cmd:66}
-data modify storage voxel-planes:weapon f4u1.additional.ag-rocket append value {type:normal,damage:500,offset:[3.7d,-0.82d,2.8d],weight:63.0f,kind:10kg,cmd:66}
-data modify storage voxel-planes:weapon f4u1.additional.ag-rocket append value {type:normal,damage:500,offset:[4.1d,-0.73d,2.8d],weight:63.0f,kind:10kg,cmd:66}
-data modify storage voxel-planes:weapon f4u1.additional.ag-rocket append value {type:normal,damage:500,offset:[-2.9d,-1.0d,2.8d],weight:63.0f,kind:10kg,cmd:66}
-data modify storage voxel-planes:weapon f4u1.additional.ag-rocket append value {type:normal,damage:500,offset:[-3.3d,-0.91d,2.8d],weight:63.0f,kind:10kg,cmd:66}
-data modify storage voxel-planes:weapon f4u1.additional.ag-rocket append value {type:normal,damage:500,offset:[-3.7d,-0.82d,2.8d],weight:63.0f,kind:10kg,cmd:66}
-data modify storage voxel-planes:weapon f4u1.additional.ag-rocket append value {type:normal,damage:500,offset:[-4.1d,-0.73,2.8d],weight:63.0f,kind:10kg,cmd:66}
+data modify storage voxel-planes:weapon f4u1.additional.ag-rocket set value [{type:normal,damage:500,offset:[2.9d,-1.3d,2.8d],weight:63.0f,kind:10kg,cmd:66}]
+data modify storage voxel-planes:weapon f4u1.additional.ag-rocket append value {type:normal,damage:500,offset:[3.3d,-1.21d,2.8d],weight:63.0f,kind:10kg,cmd:66}
+data modify storage voxel-planes:weapon f4u1.additional.ag-rocket append value {type:normal,damage:500,offset:[3.7d,-1.12d,2.8d],weight:63.0f,kind:10kg,cmd:66}
+data modify storage voxel-planes:weapon f4u1.additional.ag-rocket append value {type:normal,damage:500,offset:[4.1d,-1.03d,2.8d],weight:63.0f,kind:10kg,cmd:66}
+data modify storage voxel-planes:weapon f4u1.additional.ag-rocket append value {type:normal,damage:500,offset:[-2.9d,-1.3d,2.8d],weight:63.0f,kind:10kg,cmd:66}
+data modify storage voxel-planes:weapon f4u1.additional.ag-rocket append value {type:normal,damage:500,offset:[-3.3d,-1.21d,2.8d],weight:63.0f,kind:10kg,cmd:66}
+data modify storage voxel-planes:weapon f4u1.additional.ag-rocket append value {type:normal,damage:500,offset:[-3.7d,-1.12d,2.8d],weight:63.0f,kind:10kg,cmd:66}
+data modify storage voxel-planes:weapon f4u1.additional.ag-rocket append value {type:normal,damage:500,offset:[-4.1d,-1.03,2.8d],weight:63.0f,kind:10kg,cmd:66}

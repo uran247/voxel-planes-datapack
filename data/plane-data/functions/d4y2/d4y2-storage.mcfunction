@@ -32,14 +32,14 @@ data modify storage voxel-planes:weapon d4y2.base.gun set value {data:{name:"7.7
 
 #デフォルト爆弾データセット
 data modify storage voxel-planes:weapon d4y2.base.bomb.data set value {name:bomb,type:bomb,max-ammunition:3,current-ammunition:3,max-reload:500,current-reload:0,bombs:[]}
-data modify storage voxel-planes:weapon d4y2.base.bomb.data.bombs append value {kind:60kg,type:normal,offset:[-3.1d,-0.8d,3d],damage:300,weight:60,cmd:76}
-data modify storage voxel-planes:weapon d4y2.base.bomb.data.bombs append value {kind:60kg,type:normal,offset:[3.1d,-0.8d,3d],damage:300,weight:60,cmd:76}
+data modify storage voxel-planes:weapon d4y2.base.bomb.data.bombs append value {kind:60kg,type:normal,offset:[-3.1d,-0.7d,3.3d],damage:300,weight:60,cmd:76}
+data modify storage voxel-planes:weapon d4y2.base.bomb.data.bombs append value {kind:60kg,type:normal,offset:[3.1d,-0.7d,3.3d],damage:300,weight:60,cmd:76}
 data modify storage voxel-planes:weapon d4y2.base.bomb.data.bombs append value {kind:250kg,type:normal,offset:[0d,-0.8d,3d],damage:1250,weight:250,cmd:77}
-data modify storage voxel-planes:weapon d4y2.additional.500kg set value [{kind:500kg,type:normal,offset:[0d,-0.8d,3d],damage:2500,weight:500,cmd:105}]
+data modify storage voxel-planes:weapon d4y2.additional.500kg set value [{kind:500kg,type:normal,offset:[0d,-0.7d,3d],damage:2500,weight:500,cmd:105}]
 
 #デフォルトロケット弾データセット
 data modify storage voxel-planes:weapon d4y2.base.rocket.data set value {name:rocket,type:rocket,max-ammunition:4,current-ammunition:4,max-reload:500,current-reload:0,rockets:[]}
-data modify storage voxel-planes:weapon d4y2.additional.aa-rocket set value [{type:normal,damage:50,offset:[-3.1d,-0.6d,3d],weight:10,kind:10kg,cmd:106}]
-data modify storage voxel-planes:weapon d4y2.additional.aa-rocket append value {type:normal,damage:50,offset:[3.1d,-0.6d,3d],weight:10,kind:10kg,cmd:106}
-data modify storage voxel-planes:weapon d4y2.additional.aa-rocket append value {type:normal,damage:50,offset:[-3.5d,-0.6d,3d],weight:10,kind:10kg,cmd:106}
-data modify storage voxel-planes:weapon d4y2.additional.aa-rocket append value {type:normal,damage:50,offset:[3.5d,-0.6d,3d],weight:10,kind:10kg,cmd:106}
+data modify storage voxel-planes:weapon d4y2.additional.aa-rocket set value [{type:normal,damage:50,offset:[-3.1d,-0.5d,3.3d],weight:10,kind:10kg,cmd:106}]
+data modify storage voxel-planes:weapon d4y2.additional.aa-rocket append value {type:normal,damage:50,offset:[3.1d,-0.5d,3.3d],weight:10,kind:10kg,cmd:106}
+data modify storage voxel-planes:weapon d4y2.additional.aa-rocket append value {type:normal,damage:50,offset:[-3.5d,-0.5d,3.3d],weight:10,kind:10kg,cmd:106}
+data modify storage voxel-planes:weapon d4y2.additional.aa-rocket append value {type:normal,damage:50,offset:[3.5d,-0.5d,3.3d],weight:10,kind:10kg,cmd:106}

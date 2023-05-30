@@ -32,16 +32,16 @@ data modify storage voxel-planes:weapon il2.base.7p7mm.data set value {name:"7.7
 
 #デフォルト爆弾データセット
 data modify storage voxel-planes:weapon il2.base.bomb.data set value {name:bomb,type:bomb,max-ammunition:0,current-ammunition:0,max-reload:800,current-reload:0,bombs:[]}
-data modify storage voxel-planes:weapon il2.additional.100kg set value [{kind:100kg,type:normal,offset:[1.1d,-0.7d,1.2d],damage:500,weight:100,cmd:203}]
-data modify storage voxel-planes:weapon il2.additional.100kg append value {kind:100kg,type:normal,offset:[0.7d,-0.7d,1.2d],damage:500,weight:100,cmd:203}
-data modify storage voxel-planes:weapon il2.additional.100kg append value {kind:100kg,type:normal,offset:[-1.1d,-0.7d,1.2d],damage:500,weight:100,cmd:203}
-data modify storage voxel-planes:weapon il2.additional.100kg append value {kind:100kg,type:normal,offset:[-0.7d,-0.7d,1.2d],damage:500,weight:100,cmd:203}
-data modify storage voxel-planes:weapon il2.additional.250kg set value [{kind:250kg,type:normal,offset:[0.9d,-0.8d,1.5d],damage:1250,weight:250,cmd:204}]
-data modify storage voxel-planes:weapon il2.additional.250kg append value {kind:250kg,type:normal,offset:[-0.9d,-0.8d,1.5d],damage:1250,weight:250,cmd:204}
+data modify storage voxel-planes:weapon il2.additional.100kg set value [{kind:100kg,type:normal,offset:[1.1d,-0.8d,1.2d],damage:500,weight:100,cmd:203}]
+data modify storage voxel-planes:weapon il2.additional.100kg append value {kind:100kg,type:normal,offset:[0.7d,-0.8d,1.2d],damage:500,weight:100,cmd:203}
+data modify storage voxel-planes:weapon il2.additional.100kg append value {kind:100kg,type:normal,offset:[-1.1d,-0.8d,1.2d],damage:500,weight:100,cmd:203}
+data modify storage voxel-planes:weapon il2.additional.100kg append value {kind:100kg,type:normal,offset:[-0.7d,-0.8d,1.2d],damage:500,weight:100,cmd:203}
+data modify storage voxel-planes:weapon il2.additional.250kg set value [{kind:250kg,type:normal,offset:[0.9d,-0.9d,1.5d],damage:1250,weight:250,cmd:204}]
+data modify storage voxel-planes:weapon il2.additional.250kg append value {kind:250kg,type:normal,offset:[-0.9d,-0.9d,1.5d],damage:1250,weight:250,cmd:204}
 
 #デフォルトロケット弾データセット
 data modify storage voxel-planes:weapon il2.base.rocket.data set value {name:rocket,type:rocket,max-ammunition:0,current-ammunition:0,max-reload:600,current-reload:0,rockets:[]}
-data modify storage voxel-planes:weapon il2.additional.rs132 set value [{kind:10kg,type:normal,offset:[2.5d,-0.6d,1.2d],damage:500,weight:10,cmd:205}]
-data modify storage voxel-planes:weapon il2.additional.rs132 append value {kind:10kg,type:normal,offset:[2.8d,-0.6d,1.2d],damage:500,weight:10,cmd:205}
-data modify storage voxel-planes:weapon il2.additional.rs132 append value {kind:10kg,type:normal,offset:[-2.5d,-0.6d,1.2d],damage:500,weight:10,cmd:205}
-data modify storage voxel-planes:weapon il2.additional.rs132 append value {kind:10kg,type:normal,offset:[-2.8d,-0.6d,1.2d],damage:500,weight:10,cmd:205}
+data modify storage voxel-planes:weapon il2.additional.rs132 set value [{kind:10kg,type:normal,offset:[2.5d,-0.7d,2.3d],damage:500,weight:10,cmd:205}]
+data modify storage voxel-planes:weapon il2.additional.rs132 append value {kind:10kg,type:normal,offset:[2.8d,-0.7d,2.3d],damage:500,weight:10,cmd:205}
+data modify storage voxel-planes:weapon il2.additional.rs132 append value {kind:10kg,type:normal,offset:[-2.5d,-0.7d,2.3d],damage:500,weight:10,cmd:205}
+data modify storage voxel-planes:weapon il2.additional.rs132 append value {kind:10kg,type:normal,offset:[-2.8d,-0.7d,2.3d],damage:500,weight:10,cmd:205}

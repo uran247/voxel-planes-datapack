@@ -30,21 +30,21 @@ data modify storage voxel-planes:plane b17g.plane-data.hitbox merge value {cockp
 
 #デフォルト爆弾データセット
 data modify storage voxel-planes:weapon b17g.base.bomb.data set value {name:bomb,type:bomb,max-ammunition:0,current-ammunition:0,max-reload:600,current-reload:0,bombs:[]}
-data modify storage voxel-planes:weapon b17g.additional.500lb set value [{kind:500lb,type:normal,offset:[0.8d,-0.5d,4.4d],damage:1140,weight:227.0f,cmd:164}]
-data modify storage voxel-planes:weapon b17g.additional.500lb append value {kind:500lb,type:normal,offset:[0.8d,0d,4.4d],damage:1140,weight:227.0f,cmd:164}
-data modify storage voxel-planes:weapon b17g.additional.500lb append value {kind:500lb,type:normal,offset:[0.8d,0.5d,4.4d],damage:1140,weight:227.0f,cmd:164}
-data modify storage voxel-planes:weapon b17g.additional.500lb append value {kind:500lb,type:normal,offset:[0.3d,-0.5d,4.4d],damage:1140,weight:227.0f,cmd:164}
-data modify storage voxel-planes:weapon b17g.additional.500lb append value {kind:500lb,type:normal,offset:[0.3d,0d,4.4d],damage:1140,weight:227.0f,cmd:164}
-data modify storage voxel-planes:weapon b17g.additional.500lb append value {kind:500lb,type:normal,offset:[0.3d,0.5d,4.4d],damage:1140,weight:227.0f,cmd:164}
-data modify storage voxel-planes:weapon b17g.additional.500lb append value {kind:500lb,type:normal,offset:[-0.8d,-0.5d,4.4d],damage:1140,weight:227.0f,cmd:164}
-data modify storage voxel-planes:weapon b17g.additional.500lb append value {kind:500lb,type:normal,offset:[-0.8d,0d,4.4d],damage:1140,weight:227.0f,cmd:164}
-data modify storage voxel-planes:weapon b17g.additional.500lb append value {kind:500lb,type:normal,offset:[-0.8d,0.5d,4.4d],damage:1140,weight:227.0f,cmd:164}
-data modify storage voxel-planes:weapon b17g.additional.500lb append value {kind:500lb,type:normal,offset:[-0.3d,-0.5d,4.4d],damage:1140,weight:227.0f,cmd:164}
-data modify storage voxel-planes:weapon b17g.additional.500lb append value {kind:500lb,type:normal,offset:[-0.3d,0d,4.4d],damage:1140,weight:227.0f,cmd:164}
-data modify storage voxel-planes:weapon b17g.additional.500lb append value {kind:500lb,type:normal,offset:[-0.3d,0.5d,4.4d],damage:1140,weight:227.0f,cmd:164}
-data modify storage voxel-planes:weapon b17g.additional.1000lb set value [{kind:1000lb,type:normal,offset:[0.6d,-0.4d,4.4d],damage:2270,weight:500,cmd:122}]
+data modify storage voxel-planes:weapon b17g.additional.500lb set value [{kind:500lb,type:normal,offset:[0.8d,-0.9d,4.4d],damage:1140,weight:227.0f,cmd:164}]
+data modify storage voxel-planes:weapon b17g.additional.500lb append value {kind:500lb,type:normal,offset:[0.8d,-0.4d,4.4d],damage:1140,weight:227.0f,cmd:164}
+data modify storage voxel-planes:weapon b17g.additional.500lb append value {kind:500lb,type:normal,offset:[0.8d,0.1d,4.4d],damage:1140,weight:227.0f,cmd:164}
+data modify storage voxel-planes:weapon b17g.additional.500lb append value {kind:500lb,type:normal,offset:[0.3d,-0.9d,4.4d],damage:1140,weight:227.0f,cmd:164}
+data modify storage voxel-planes:weapon b17g.additional.500lb append value {kind:500lb,type:normal,offset:[0.3d,-0.4d,4.4d],damage:1140,weight:227.0f,cmd:164}
+data modify storage voxel-planes:weapon b17g.additional.500lb append value {kind:500lb,type:normal,offset:[0.3d,0.1d,4.4d],damage:1140,weight:227.0f,cmd:164}
+data modify storage voxel-planes:weapon b17g.additional.500lb append value {kind:500lb,type:normal,offset:[-0.8d,-0.9d,4.4d],damage:1140,weight:227.0f,cmd:164}
+data modify storage voxel-planes:weapon b17g.additional.500lb append value {kind:500lb,type:normal,offset:[-0.8d,-0.4d,4.4d],damage:1140,weight:227.0f,cmd:164}
+data modify storage voxel-planes:weapon b17g.additional.500lb append value {kind:500lb,type:normal,offset:[-0.8d,0.1d,4.4d],damage:1140,weight:227.0f,cmd:164}
+data modify storage voxel-planes:weapon b17g.additional.500lb append value {kind:500lb,type:normal,offset:[-0.3d,-0.9d,4.4d],damage:1140,weight:227.0f,cmd:164}
+data modify storage voxel-planes:weapon b17g.additional.500lb append value {kind:500lb,type:normal,offset:[-0.3d,-0.4d,4.4d],damage:1140,weight:227.0f,cmd:164}
+data modify storage voxel-planes:weapon b17g.additional.500lb append value {kind:500lb,type:normal,offset:[-0.3d,0.1d,4.4d],damage:1140,weight:227.0f,cmd:164}
+data modify storage voxel-planes:weapon b17g.additional.1000lb set value [{kind:1000lb,type:normal,offset:[0.6d,-1.0d,4.4d],damage:2270,weight:500,cmd:122}]
+data modify storage voxel-planes:weapon b17g.additional.1000lb append value {kind:1000lb,type:normal,offset:[0.6d,-0.4d,4.4d],damage:2270,weight:500,cmd:122}
 data modify storage voxel-planes:weapon b17g.additional.1000lb append value {kind:1000lb,type:normal,offset:[0.6d,0.2d,4.4d],damage:2270,weight:500,cmd:122}
-data modify storage voxel-planes:weapon b17g.additional.1000lb append value {kind:1000lb,type:normal,offset:[0.6d,0.8d,4.4d],damage:2270,weight:500,cmd:122}
+data modify storage voxel-planes:weapon b17g.additional.1000lb append value {kind:1000lb,type:normal,offset:[-0.6d,-1.0d,4.4d],damage:2270,weight:500,cmd:122}
 data modify storage voxel-planes:weapon b17g.additional.1000lb append value {kind:1000lb,type:normal,offset:[-0.6d,-0.4d,4.4d],damage:2270,weight:500,cmd:122}
 data modify storage voxel-planes:weapon b17g.additional.1000lb append value {kind:1000lb,type:normal,offset:[-0.6d,0.2d,4.4d],damage:2270,weight:500,cmd:122}
-data modify storage voxel-planes:weapon b17g.additional.1000lb append value {kind:1000lb,type:normal,offset:[-0.6d,0.8d,4.4d],damage:2270,weight:500,cmd:122}

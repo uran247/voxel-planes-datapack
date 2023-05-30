@@ -32,4 +32,4 @@ data modify storage voxel-planes:weapon sbd3.base.12p7mm.data set value {name:"1
 
 #デフォルト爆弾データセット
 data modify storage voxel-planes:weapon sbd3.base.bomb.data set value {name:bomb,type:bomb,max-ammunition:1,current-ammunition:1,max-reload:500,current-reload:0,bombs:[]}
-data modify storage voxel-planes:weapon sbd3.base.bomb.data.bombs append value {kind:1000lb,type:normal,offset:[0.4d,-1.1d,1.3d],damage:2300,weight:454.0f,cmd:122}
+data modify storage voxel-planes:weapon sbd3.base.bomb.data.bombs append value {kind:1000lb,type:normal,offset:[0d,-1.2d,2.3d],damage:2300,weight:454.0f,cmd:122}

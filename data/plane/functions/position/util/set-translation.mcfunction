@@ -10,9 +10,6 @@
 #
 # @within function plane:position/position
 
-#モデル本体のoffset分y軸offsetをずらす
-scoreboard players operation @s vp.new-offsetY += @s vp.model-offset-y
-
 #初期化
 data modify storage minecraft:plane-datapack temporary.translation set value [0f,0f,0f]
 

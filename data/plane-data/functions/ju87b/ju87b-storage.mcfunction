@@ -37,5 +37,5 @@ data modify storage voxel-planes:weapon ju87b.base.bomb.data.bombs append value 
 data modify storage voxel-planes:weapon ju87b.base.bomb.data.bombs append value {kind:50kg,type:normal,offset:[4.3d,-0.58d,2.6d],damage:250,weight:50f,cmd:123}
 data modify storage voxel-planes:weapon ju87b.base.bomb.data.bombs append value {kind:50kg,type:normal,offset:[-4d,-0.58d,2.6d],damage:250,weight:50f,cmd:123}
 data modify storage voxel-planes:weapon ju87b.base.bomb.data.bombs append value {kind:50kg,type:normal,offset:[4d,-0.58d,2.6d],damage:250,weight:50f,cmd:123}
-data modify storage voxel-planes:weapon ju87b.base.bomb.data.bombs append value {kind:250kg,type:normal,offset:[0.0d,-0.9d,3.1d],damage:1250,weight:250f,cmd:33}
+data modify storage voxel-planes:weapon ju87b.base.bomb.data.bombs append value {kind:250kg,type:normal,offset:[0.0d,-1.0d,3.1d],damage:1250,weight:250f,cmd:33}
 

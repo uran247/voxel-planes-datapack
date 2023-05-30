@@ -33,5 +33,5 @@ data modify storage voxel-planes:weapon p39n.base.37mm set value {data:{name:"37
 
 #デフォルト爆弾データセット
 data modify storage voxel-planes:weapon p39n.base.bomb.data set value {name:bomb,type:bomb,max-ammunition:0,current-ammunition:0,max-reload:3600,current-reload:0,bombs:[]}
-data modify storage voxel-planes:weapon p39n.additional.500lb set value [{kind:500lb,type:normal,offset:[0d,-0.7d,2d],damage:1140,weight:227.0f,cmd:164}]
+data modify storage voxel-planes:weapon p39n.additional.500lb set value [{kind:500lb,type:normal,offset:[0d,-0.7d,2.7d],damage:1140,weight:227.0f,cmd:164}]
 

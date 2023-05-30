@@ -31,25 +31,25 @@ data modify storage voxel-planes:weapon meteorf8.base.20mm.data set value {name:
 
 #デフォルト爆弾データセット
 data modify storage voxel-planes:weapon meteorf8.base.bomb.data set value {name:bomb,type:bomb,max-ammunition:0,current-ammunition:0,max-reload:3600,current-reload:0,rockets:[]}
-data modify storage voxel-planes:weapon meteorf8.additional.1000lb set value [{kind:1000lb,type:normal,offset:[3.5d,-0.6d,0.3d],damage:2300,weight:454.0f,cmd:133}]
-data modify storage voxel-planes:weapon meteorf8.additional.1000lb append value {kind:1000lb,type:normal,offset:[-3.5d,-0.6d,0.3d],damage:2300,weight:454.0f,cmd:133}
+data modify storage voxel-planes:weapon meteorf8.additional.1000lb set value [{kind:1000lb,type:normal,offset:[3.5d,-0.8d,0.5d],damage:2300,weight:454.0f,cmd:133}]
+data modify storage voxel-planes:weapon meteorf8.additional.1000lb append value {kind:1000lb,type:normal,offset:[-3.5d,-0.8d,0.5d],damage:2300,weight:454.0f,cmd:133}
 
 #デフォルトロケット弾データセット
 data modify storage voxel-planes:weapon meteorf8.base.rocket.data set value {name:rocket,type:rocket,max-ammunition:0,current-ammunition:0,max-reload:1200,current-reload:0,rockets:[]}
-data modify storage voxel-planes:weapon meteorf8.additional.ag-rocket set value [{type:normal,damage:300,offset:[-3d,-0.44d,0.3d],weight:36.0f,kind:10kg,cmd:134}]
-data modify storage voxel-planes:weapon meteorf8.additional.ag-rocket append value {type:normal,damage:300,offset:[3d,-0.44d,0.3d],weight:36.0f,kind:10kg,cmd:134}
-data modify storage voxel-planes:weapon meteorf8.additional.ag-rocket append value {type:normal,damage:300,offset:[-3.3d,-0.44d,0.3d],weight:36.0f,kind:10kg,cmd:134}
-data modify storage voxel-planes:weapon meteorf8.additional.ag-rocket append value {type:normal,damage:300,offset:[3.3d,-0.44d,0.3d],weight:36.0f,kind:10kg,cmd:134}
-data modify storage voxel-planes:weapon meteorf8.additional.ag-rocket append value {type:normal,damage:300,offset:[-3.6d,-0.44d,0.3d],weight:36.0f,kind:10kg,cmd:134}
-data modify storage voxel-planes:weapon meteorf8.additional.ag-rocket append value {type:normal,damage:300,offset:[3.6d,-0.44d,0.3d],weight:36.0f,kind:10kg,cmd:134}
-data modify storage voxel-planes:weapon meteorf8.additional.ag-rocket append value {type:normal,damage:300,offset:[-3.9d,-0.44d,0.3d],weight:36.0f,kind:10kg,cmd:134}
-data modify storage voxel-planes:weapon meteorf8.additional.ag-rocket append value {type:normal,damage:300,offset:[3.9d,-0.44d,0.3d],weight:36.0f,kind:10kg,cmd:134}
-data modify storage voxel-planes:weapon meteorf8.additional.ag-rocket append value {type:normal,damage:300,offset:[-3.15d,-0.6d,0.3d],weight:36.0f,kind:10kg,cmd:134}
-data modify storage voxel-planes:weapon meteorf8.additional.ag-rocket append value {type:normal,damage:300,offset:[3.15d,-0.6d,0.3d],weight:36.0f,kind:10kg,cmd:134}
-data modify storage voxel-planes:weapon meteorf8.additional.ag-rocket append value {type:normal,damage:300,offset:[-3.45d,-0.6d,0.3d],weight:36.0f,kind:10kg,cmd:134}
-data modify storage voxel-planes:weapon meteorf8.additional.ag-rocket append value {type:normal,damage:300,offset:[3.45d,-0.6d,0.3d],weight:36.0f,kind:10kg,cmd:134}
-data modify storage voxel-planes:weapon meteorf8.additional.ag-rocket append value {type:normal,damage:300,offset:[-3.75d,-0.6d,0.3d],weight:36.0f,kind:10kg,cmd:134}
-data modify storage voxel-planes:weapon meteorf8.additional.ag-rocket append value {type:normal,damage:300,offset:[3.75d,-0.6d,0.3d],weight:36.0f,kind:10kg,cmd:134}
-data modify storage voxel-planes:weapon meteorf8.additional.ag-rocket append value {type:normal,damage:300,offset:[-4.05d,-0.6d,0.3d],weight:36.0f,kind:10kg,cmd:134}
-data modify storage voxel-planes:weapon meteorf8.additional.ag-rocket append value {type:normal,damage:300,offset:[4.05d,-0.6d,0.3d],weight:36.0f,kind:10kg,cmd:134}
+data modify storage voxel-planes:weapon meteorf8.additional.ag-rocket set value [{type:normal,damage:300,offset:[-3d,-0.64d,0.5d],weight:36.0f,kind:10kg,cmd:134}]
+data modify storage voxel-planes:weapon meteorf8.additional.ag-rocket append value {type:normal,damage:300,offset:[3d,-0.64d,0.5d],weight:36.0f,kind:10kg,cmd:134}
+data modify storage voxel-planes:weapon meteorf8.additional.ag-rocket append value {type:normal,damage:300,offset:[-3.3d,-0.64d,0.5d],weight:36.0f,kind:10kg,cmd:134}
+data modify storage voxel-planes:weapon meteorf8.additional.ag-rocket append value {type:normal,damage:300,offset:[3.3d,-0.64d,0.5d],weight:36.0f,kind:10kg,cmd:134}
+data modify storage voxel-planes:weapon meteorf8.additional.ag-rocket append value {type:normal,damage:300,offset:[-3.6d,-0.64d,0.5d],weight:36.0f,kind:10kg,cmd:134}
+data modify storage voxel-planes:weapon meteorf8.additional.ag-rocket append value {type:normal,damage:300,offset:[3.6d,-0.64d,0.5d],weight:36.0f,kind:10kg,cmd:134}
+data modify storage voxel-planes:weapon meteorf8.additional.ag-rocket append value {type:normal,damage:300,offset:[-3.9d,-0.64d,0.5d],weight:36.0f,kind:10kg,cmd:134}
+data modify storage voxel-planes:weapon meteorf8.additional.ag-rocket append value {type:normal,damage:300,offset:[3.9d,-0.64d,0.5d],weight:36.0f,kind:10kg,cmd:134}
+data modify storage voxel-planes:weapon meteorf8.additional.ag-rocket append value {type:normal,damage:300,offset:[-3.15d,-0.8d,0.5d],weight:36.0f,kind:10kg,cmd:134}
+data modify storage voxel-planes:weapon meteorf8.additional.ag-rocket append value {type:normal,damage:300,offset:[3.15d,-0.8d,0.5d],weight:36.0f,kind:10kg,cmd:134}
+data modify storage voxel-planes:weapon meteorf8.additional.ag-rocket append value {type:normal,damage:300,offset:[-3.45d,-0.8d,0.5d],weight:36.0f,kind:10kg,cmd:134}
+data modify storage voxel-planes:weapon meteorf8.additional.ag-rocket append value {type:normal,damage:300,offset:[3.45d,-0.8d,0.5d],weight:36.0f,kind:10kg,cmd:134}
+data modify storage voxel-planes:weapon meteorf8.additional.ag-rocket append value {type:normal,damage:300,offset:[-3.75d,-0.8d,0.5d],weight:36.0f,kind:10kg,cmd:134}
+data modify storage voxel-planes:weapon meteorf8.additional.ag-rocket append value {type:normal,damage:300,offset:[3.75d,-0.8d,0.5d],weight:36.0f,kind:10kg,cmd:134}
+data modify storage voxel-planes:weapon meteorf8.additional.ag-rocket append value {type:normal,damage:300,offset:[-4.05d,-0.8d,0.5d],weight:36.0f,kind:10kg,cmd:134}
+data modify storage voxel-planes:weapon meteorf8.additional.ag-rocket append value {type:normal,damage:300,offset:[4.05d,-0.8d,0.5d],weight:36.0f,kind:10kg,cmd:134}
 

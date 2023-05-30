@@ -31,6 +31,6 @@ data modify storage voxel-planes:weapon ki44.base.12p7mm.data set value {name:"1
 
 #デフォルト爆弾データセット
 data modify storage voxel-planes:weapon ki44.base.bomb.data set value {name:bomb,type:bomb,max-ammunition:2,current-ammunition:2,max-reload:3600,current-reload:0,bombs:[]}
-data modify storage voxel-planes:weapon ki44.additional.100kg set value [{kind:100kg,type:normal,offset:[-2.6d,-0.7d,1.5d],damage:500,weight:100,cmd:117}]
-data modify storage voxel-planes:weapon ki44.additional.100kg append value {kind:100kg,type:normal,offset:[2.6d,-0.7d,1.5d],damage:500,weight:100,cmd:117}
+data modify storage voxel-planes:weapon ki44.additional.100kg set value [{kind:100kg,type:normal,offset:[-2.6d,-0.7d,2d],damage:500,weight:100,cmd:117}]
+data modify storage voxel-planes:weapon ki44.additional.100kg append value {kind:100kg,type:normal,offset:[2.6d,-0.7d,2d],damage:500,weight:100,cmd:117}
 

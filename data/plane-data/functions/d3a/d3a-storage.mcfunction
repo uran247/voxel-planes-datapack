@@ -33,7 +33,7 @@ data modify storage voxel-planes:weapon d3a.base.7p7mm.data set value {name:"7.7
 
 #デフォルト爆弾データセット
 data modify storage voxel-planes:weapon d3a.base.bomb.data set value {name:bomb,type:bomb,max-ammunition:3,current-ammunition:3,max-reload:500,current-reload:0,bombs:[]}
-data modify storage voxel-planes:weapon d3a.base.bomb.data.bombs append value {kind:60kg,type:normal,offset:[-4.62d,-0.58d,0.8d],damage:300,weight:60f,cmd:76}
-data modify storage voxel-planes:weapon d3a.base.bomb.data.bombs append value {kind:60kg,type:normal,offset:[4.62d,-0.58d,0.8d],damage:300,weight:60f,cmd:76}
-data modify storage voxel-planes:weapon d3a.base.bomb.data.bombs append value {kind:250kg,type:normal,offset:[0.075d,-0.9d,0.8d],damage:1250,weight:250f,cmd:77}
+data modify storage voxel-planes:weapon d3a.base.bomb.data.bombs append value {kind:60kg,type:normal,offset:[-4.62d,-0.7d,0.8d],damage:300,weight:60f,cmd:76}
+data modify storage voxel-planes:weapon d3a.base.bomb.data.bombs append value {kind:60kg,type:normal,offset:[4.62d,-0.7d,0.8d],damage:300,weight:60f,cmd:76}
+data modify storage voxel-planes:weapon d3a.base.bomb.data.bombs append value {kind:250kg,type:normal,offset:[0.075d,-1.1d,0.8d],damage:1250,weight:250f,cmd:77}
 

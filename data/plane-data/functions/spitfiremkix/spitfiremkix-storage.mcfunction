@@ -33,4 +33,4 @@ data modify storage voxel-planes:weapon spitfiremkix.base.12p7mm.data set value 
 
 #デフォルト爆弾データセット
 data modify storage voxel-planes:weapon spitfiremkix.base.bomb.data set value {name:bomb,type:bomb,max-ammunition:1,current-ammunition:1,max-reload:3600,current-reload:0,bombs:[]}
-data modify storage voxel-planes:weapon spitfiremkix.additional.250lb set value [{kind:250lb,type:normal,offset:[0d,-0.9d,-0.4d],damage:500,weight:113,cmd:131}]
+data modify storage voxel-planes:weapon spitfiremkix.additional.250lb set value [{kind:250lb,type:normal,offset:[0d,-0.9d,0.3d],damage:500,weight:113,cmd:131}]

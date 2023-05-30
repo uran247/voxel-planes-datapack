@@ -31,8 +31,8 @@ data modify storage voxel-planes:weapon la5.base.gun set value {data:{name:"20mm
 
 #デフォルト爆弾データセット
 data modify storage voxel-planes:weapon la5.base.bomb.data set value {name:bomb,type:bomb,max-ammunition:2,current-ammunition:2,max-reload:3600,current-reload:0,bombs:[]}
-data modify storage voxel-planes:weapon la5.additional.50kg set value [{kind:50kg,type:bomb,offset:[-2.5d,-0.6d,0d],damage:250,weight:50,cmd:202}]
-data modify storage voxel-planes:weapon la5.additional.50kg append value {kind:50kg,type:bomb,offset:[2.5d,-0.6d,0d],damage:250,weight:50,cmd:202}
+data modify storage voxel-planes:weapon la5.additional.50kg set value [{kind:50kg,type:bomb,offset:[-2.5d,-0.6d,0.7d],damage:250,weight:50,cmd:202}]
+data modify storage voxel-planes:weapon la5.additional.50kg append value {kind:50kg,type:bomb,offset:[2.5d,-0.6d,0.7d],damage:250,weight:50,cmd:202}
 
 
 ##デフォルトロケット弾データセット

@@ -33,5 +33,5 @@ data modify storage voxel-planes:weapon fw190d9.base.13mm.data set value {name:"
 
 #デフォルト爆弾データセット
 data modify storage voxel-planes:weapon fw190d9.base.bomb.data set value {name:bomb,type:bomb,max-ammunition:1,current-ammunition:1,max-reload:3600,current-reload:0,bombs:[]}
-data modify storage voxel-planes:weapon fw190d9.additional.500kg set value [{kind:500kg,type:normal,offset:[0d,-0.7d,0.3d],damage:2500,weight:500,cmd:124}]
+data modify storage voxel-planes:weapon fw190d9.additional.500kg set value [{kind:500kg,type:normal,offset:[0d,-0.7d,1.3d],damage:2500,weight:500,cmd:124}]
 

@@ -32,8 +32,8 @@ data modify storage voxel-planes:weapon fireflymkv.base.gun.data set value {name
 
 #デフォルト爆弾データセット
 data modify storage voxel-planes:weapon fireflymkv.base.bomb.data set value {name:bomb,type:bomb,max-ammunition:2,current-ammunition:2,max-reload:900,current-reload:0,bombs:[]}
-data modify storage voxel-planes:weapon fireflymkv.additional.500kg set value [{kind:1000lb,type:normal,offset:[-2.9d,-1d,2.4d],damage:2300,weight:454.0f,cmd:133}]
-data modify storage voxel-planes:weapon fireflymkv.additional.500kg append value {kind:1000lb,type:normal,offset:[2.9d,-1d,2.4d],damage:2300,weight:454.0f,cmd:133}
+data modify storage voxel-planes:weapon fireflymkv.additional.500kg set value [{kind:1000lb,type:normal,offset:[-2.9d,-1d,2.7d],damage:2300,weight:454.0f,cmd:133}]
+data modify storage voxel-planes:weapon fireflymkv.additional.500kg append value {kind:1000lb,type:normal,offset:[2.9d,-1d,2.7d],damage:2300,weight:454.0f,cmd:133}
 
 #デフォルトロケット弾データセット
 data modify storage voxel-planes:weapon fireflymkv.base.rocket.data set value {name:rocket,type:rocket,max-ammunition:16,current-ammunition:16,max-reload:600,current-reload:0,rockets:[]}

@@ -39,3 +39,7 @@ scoreboard players operation @s vp.new-offsetY += #sin-x-offsetX vp.reg1
 
 scoreboard players operation @s vp.new-offsetX /= #1000 vp.Num
 scoreboard players operation @s vp.new-offsetY /= #1000 vp.Num
+
+#対象がitem_displayの場合model-offset-yを足してtranslationによるずれを補正する
+execute if entity @s[type=item_display] run scoreboard players operation @s vp.new-offsetY += #model-offset-y vp.input
+

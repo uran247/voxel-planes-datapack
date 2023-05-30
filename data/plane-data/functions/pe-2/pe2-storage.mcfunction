@@ -29,22 +29,22 @@ data modify storage voxel-planes:plane pe2.plane-data.hitbox merge value {body:{
 
 #デフォルト爆弾データセット
 data modify storage voxel-planes:weapon pe2.base.bomb.data set value {name:bomb,type:bomb,max-ammunition:4,current-ammunition:4,max-reload:600,current-reload:0,bombs:[]}
-data modify storage voxel-planes:weapon pe2.additional.250kg set value [{kind:250kg,type:normal,offset:[-0.7d,-0.7d,3d],damage:1250,weight:250,cmd:204}]
-data modify storage voxel-planes:weapon pe2.additional.250kg append value {kind:250kg,type:normal,offset:[0.7d,-0.7d,3d],damage:1250,weight:250,cmd:204}
-data modify storage voxel-planes:weapon pe2.additional.250kg append value {kind:250kg,type:normal,offset:[-1.4d,-0.7d,3d],damage:1250,weight:250,cmd:204}
-data modify storage voxel-planes:weapon pe2.additional.250kg append value {kind:250kg,type:normal,offset:[1.4d,-0.7d,3d],damage:1250,weight:250,cmd:204}
-data modify storage voxel-planes:weapon pe2.additional.500kg set value [{kind:500kg,type:normal,offset:[1.1d,-0.7d,2.8d],damage:2500,weight:500,cmd:206}]
-data modify storage voxel-planes:weapon pe2.additional.500kg append value {kind:500kg,type:normal,offset:[-1.1d,-0.7d,2.8d],damage:2500,weight:500,cmd:206}
+data modify storage voxel-planes:weapon pe2.additional.250kg set value [{kind:250kg,type:normal,offset:[-0.7d,-0.9d,3d],damage:1250,weight:250,cmd:204}]
+data modify storage voxel-planes:weapon pe2.additional.250kg append value {kind:250kg,type:normal,offset:[0.7d,-0.9d,3d],damage:1250,weight:250,cmd:204}
+data modify storage voxel-planes:weapon pe2.additional.250kg append value {kind:250kg,type:normal,offset:[-1.4d,-0.9d,3d],damage:1250,weight:250,cmd:204}
+data modify storage voxel-planes:weapon pe2.additional.250kg append value {kind:250kg,type:normal,offset:[1.4d,-0.9d,3d],damage:1250,weight:250,cmd:204}
+data modify storage voxel-planes:weapon pe2.additional.500kg set value [{kind:500kg,type:normal,offset:[1.1d,-0.9d,2.8d],damage:2500,weight:500,cmd:206}]
+data modify storage voxel-planes:weapon pe2.additional.500kg append value {kind:500kg,type:normal,offset:[-1.1d,-0.9d,2.8d],damage:2500,weight:500,cmd:206}
 
 #デフォルトロケット弾データセット
 data modify storage voxel-planes:weapon pe2.base.rocket.data set value {name:rocket,type:rocket,max-ammunition:0,current-ammunition:0,max-reload:600,current-reload:0,rockets:[]}
-data modify storage voxel-planes:weapon pe2.additional.rs132 set value [{kind:10kg,type:normal,offset:[5d,-0.3d,3d],damage:500,weight:10,cmd:205}]
-data modify storage voxel-planes:weapon pe2.additional.rs132 append value {kind:10kg,type:normal,offset:[5.3d,-0.25d,3d],damage:500,weight:10,cmd:205}
-data modify storage voxel-planes:weapon pe2.additional.rs132 append value {kind:10kg,type:normal,offset:[5.6d,-0.2d,3d],damage:500,weight:10,cmd:205}
-data modify storage voxel-planes:weapon pe2.additional.rs132 append value {kind:10kg,type:normal,offset:[5.9d,-0.15d,3d],damage:500,weight:10,cmd:205}
-data modify storage voxel-planes:weapon pe2.additional.rs132 append value {kind:10kg,type:normal,offset:[6.2d,-0.1d,3d],damage:500,weight:10,cmd:205}
-data modify storage voxel-planes:weapon pe2.additional.rs132 append value {kind:10kg,type:normal,offset:[-5d,-0.3d,3d],damage:500,weight:10,cmd:205}
-data modify storage voxel-planes:weapon pe2.additional.rs132 append value {kind:10kg,type:normal,offset:[-5.3d,-0.25d,3d],damage:500,weight:10,cmd:205}
-data modify storage voxel-planes:weapon pe2.additional.rs132 append value {kind:10kg,type:normal,offset:[-5.6d,-0.2d,3d],damage:500,weight:10,cmd:205}
-data modify storage voxel-planes:weapon pe2.additional.rs132 append value {kind:10kg,type:normal,offset:[-5.9d,-0.15d,3d],damage:500,weight:10,cmd:205}
-data modify storage voxel-planes:weapon pe2.additional.rs132 append value {kind:10kg,type:normal,offset:[-6.2d,-0.1d,3d],damage:500,weight:10,cmd:205}
+data modify storage voxel-planes:weapon pe2.additional.rs132 set value [{kind:10kg,type:normal,offset:[5d,-0.4d,3d],damage:500,weight:10,cmd:205}]
+data modify storage voxel-planes:weapon pe2.additional.rs132 append value {kind:10kg,type:normal,offset:[5.3d,-0.35d,3d],damage:500,weight:10,cmd:205}
+data modify storage voxel-planes:weapon pe2.additional.rs132 append value {kind:10kg,type:normal,offset:[5.6d,-0.3d,3d],damage:500,weight:10,cmd:205}
+data modify storage voxel-planes:weapon pe2.additional.rs132 append value {kind:10kg,type:normal,offset:[5.9d,-0.25d,3d],damage:500,weight:10,cmd:205}
+data modify storage voxel-planes:weapon pe2.additional.rs132 append value {kind:10kg,type:normal,offset:[6.2d,-0.2d,3d],damage:500,weight:10,cmd:205}
+data modify storage voxel-planes:weapon pe2.additional.rs132 append value {kind:10kg,type:normal,offset:[-5d,-0.4d,3d],damage:500,weight:10,cmd:205}
+data modify storage voxel-planes:weapon pe2.additional.rs132 append value {kind:10kg,type:normal,offset:[-5.3d,-0.35d,3d],damage:500,weight:10,cmd:205}
+data modify storage voxel-planes:weapon pe2.additional.rs132 append value {kind:10kg,type:normal,offset:[-5.6d,-0.3d,3d],damage:500,weight:10,cmd:205}
+data modify storage voxel-planes:weapon pe2.additional.rs132 append value {kind:10kg,type:normal,offset:[-5.9d,-0.25d,3d],damage:500,weight:10,cmd:205}
+data modify storage voxel-planes:weapon pe2.additional.rs132 append value {kind:10kg,type:normal,offset:[-6.2d,-0.2d,3d],damage:500,weight:10,cmd:205}

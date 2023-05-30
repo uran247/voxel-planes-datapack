@@ -32,6 +32,6 @@ data modify storage voxel-planes:weapon n1k2.base.20mm.data set value {name:"20m
 
 #デフォルト爆弾データセット
 data modify storage voxel-planes:weapon n1k2.base.bomb.data set value {name:bomb,type:bomb,max-ammunition:2,current-ammunition:2,max-reload:3600,current-reload:0,bombs:[]}
-data modify storage voxel-planes:weapon n1k2.additional.250kg set value [{kind:250kg,type:normal,offset:[-2.6d,-0.7d,1.2d],damage:1250,weight:250,cmd:77}]
-data modify storage voxel-planes:weapon n1k2.additional.250kg append value {kind:250kg,type:normal,offset:[2.6d,-0.7d,1.2d],damage:1250,weight:250,cmd:77}
+data modify storage voxel-planes:weapon n1k2.additional.250kg set value [{kind:250kg,type:normal,offset:[-2.6d,-0.7d,1.9d],damage:1250,weight:250,cmd:77}]
+data modify storage voxel-planes:weapon n1k2.additional.250kg append value {kind:250kg,type:normal,offset:[2.6d,-0.7d,1.9d],damage:1250,weight:250,cmd:77}
 

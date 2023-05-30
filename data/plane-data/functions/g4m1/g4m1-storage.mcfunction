@@ -30,12 +30,12 @@ data modify storage voxel-planes:plane g4m1.plane-data.hitbox merge value {cockp
 
 #デフォルト爆弾データセット
 data modify storage voxel-planes:weapon g4m1.base.bomb.data set value {name:bomb,type:bomb,max-ammunition:4,current-ammunition:4,max-reload:600,current-reload:0,bombs:[]}
-data modify storage voxel-planes:weapon g4m1.base.bomb.data.bombs append value {kind:250kg,type:normal,offset:[-0.5d,0d,4d],damage:1250,weight:250,cmd:77}
-data modify storage voxel-planes:weapon g4m1.base.bomb.data.bombs append value {kind:250kg,type:normal,offset:[0.5d,0d,4d],damage:1250,weight:250,cmd:77}
-data modify storage voxel-planes:weapon g4m1.base.bomb.data.bombs append value {kind:250kg,type:normal,offset:[-0.5d,0d,2d],damage:1250,weight:250,cmd:77}
-data modify storage voxel-planes:weapon g4m1.base.bomb.data.bombs append value {kind:250kg,type:normal,offset:[0.5d,0d,2d],damage:1250,weight:250,cmd:77}
-data modify storage voxel-planes:weapon g4m1.additional.800kg set value [{kind:800kg,type:normal,offset:[0d,0d,3d],damage:4000,weight:800,cmd:118}]
+data modify storage voxel-planes:weapon g4m1.base.bomb.data.bombs append value {kind:250kg,type:normal,offset:[-0.5d,1.6d,4d],damage:1250,weight:250,cmd:77}
+data modify storage voxel-planes:weapon g4m1.base.bomb.data.bombs append value {kind:250kg,type:normal,offset:[0.5d,1.6d,4d],damage:1250,weight:250,cmd:77}
+data modify storage voxel-planes:weapon g4m1.base.bomb.data.bombs append value {kind:250kg,type:normal,offset:[-0.5d,1.6d,2d],damage:1250,weight:250,cmd:77}
+data modify storage voxel-planes:weapon g4m1.base.bomb.data.bombs append value {kind:250kg,type:normal,offset:[0.5d,1.6d,2d],damage:1250,weight:250,cmd:77}
+data modify storage voxel-planes:weapon g4m1.additional.800kg set value [{kind:800kg,type:normal,offset:[0d,1.6d,3d],damage:4000,weight:800,cmd:118}]
 
 #魚雷データセット
 data modify storage voxel-planes:weapon g4m1.base.torpedo.data set value {name:torpedo,type:torpedo,max-ammunition:0,current-ammunition:0,max-reload:500,current-reload:0,torpedos:[]}
-data modify storage voxel-planes:weapon g4m1.additional.torpedo set value [{kind:1600lb,type:normal,offset:[0d,0.5d,0d],damage:3600,weight:680,cmd:48}]
+data modify storage voxel-planes:weapon g4m1.additional.torpedo set value [{kind:1600lb,type:normal,offset:[0d,2.1d,0d],damage:3600,weight:680,cmd:48}]
