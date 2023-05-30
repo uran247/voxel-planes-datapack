@@ -23,6 +23,6 @@ execute at @s run loot spawn ~ ~ ~ mine 0 1 0 air{load:1b}
 data merge block 0 1 0 {Items:[]}
 
 #キル
-execute as @e[tag=plane2item-plane-parts] at @s run tp @s ~ -40 ~
+execute as @e[tag=plane2item-plane-parts] at @s run tp @s ~ -256 ~
 kill @e[tag=plane2item-plane-parts]
 kill @s 
