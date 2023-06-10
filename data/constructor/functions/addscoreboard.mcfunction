@@ -110,6 +110,7 @@ scoreboard objectives add vp.new-offsetX dummy
 scoreboard objectives add vp.new-offsetY dummy
 scoreboard objectives add vp.new-offsetZ dummy
 scoreboard objectives add vp.model-offset-y dummy
+scoreboard objectives add vp.central-axis-offset-y dummy
 
 #ダメージ関連
 scoreboard objectives add vp.taken-damage dummy

@@ -20,13 +20,14 @@ data modify storage voxel-planes:plane b17g.plane-data.model-data.leftwing set v
 data modify storage voxel-planes:plane b17g.plane-data.model-data.landing-pitch set value -7.0
 data modify storage voxel-planes:plane b17g.plane-data.model-data.scale set value [4.488f,4.488f,4.488f]
 data modify storage voxel-planes:plane b17g.plane-data.model-data.translation set value [0f,1.1f,1.5f]
+data modify storage voxel-planes:plane b17g.plane-data.model-data.central-axis-offset set value 1.875
 data modify storage voxel-planes:plane b17g.plane-data.hitbox set value {}
 data modify storage voxel-planes:plane b17g.plane-data.hitbox merge value {body:{max-hp:420d,offset:[0d,0d,0d]}}
-data modify storage voxel-planes:plane b17g.plane-data.hitbox merge value {engine-r:{max-hp:400d,offset:[-2.6d,0.25d,7.3d]},engine-l:{max-hp:400d,offset:[2.6d,0.25d,7.3d]},engine-r2:{max-hp:400d,offset:[-5.6d,0.25d,7.3d]},engine-l2:{max-hp:400d,offset:[5.6d,0.25d,7.3d]}}
-data modify storage voxel-planes:plane b17g.plane-data.hitbox merge value {aileron-r:{max-hp:310d,offset:[-5.4d,0d,4.2d]},aileron-l:{max-hp:310d,offset:[5.4d,0d,4.2d]},aileron-r2:{max-hp:310d,offset:[-10.4d,0.8d,4.2d]},aileron-l2:{max-hp:310d,offset:[10.4d,0.8d,4.2d]}}
-data modify storage voxel-planes:plane b17g.plane-data.hitbox merge value {elevator-r:{max-hp:310d,offset:[-2.8d,0.6d,-5.7d]},elevator-l:{max-hp:310d,offset:[2.8d,0.6d,-5.7d]}}
-data modify storage voxel-planes:plane b17g.plane-data.hitbox merge value {radder:{max-hp:310d,offset:[0d,2.4d,-6.8d]}}
-data modify storage voxel-planes:plane b17g.plane-data.hitbox merge value {cockpit:{offset:[0d,1d,8.3d]}}
+data modify storage voxel-planes:plane b17g.plane-data.hitbox merge value {engine-r:{max-hp:400d,offset:[-3.2d,-0.6d,7.3d],width:1.1,height:1.1},engine-l:{max-hp:400d,offset:[3.2d,-0.6d,7.3d],width:1.1,height:1.1},engine-r2:{max-hp:400d,offset:[-6.7d,-0.4d,6.9d],width:1.1,height:1.1},engine-l2:{max-hp:400d,offset:[6.7d,-0.4d,6.9d],width:1.1,height:1.1}}
+data modify storage voxel-planes:plane b17g.plane-data.hitbox merge value {aileron-r:{max-hp:310d,offset:[-5.2d,-0.8d,3.3d],width:2,height:2},aileron-l:{max-hp:310d,offset:[5.2d,-0.8d,3.3d],width:2,height:2},aileron-r2:{max-hp:310d,offset:[-10.4d,-0.5d,3.3d],width:2,height:2},aileron-l2:{max-hp:310d,offset:[10.4d,-0.5d,3.3d],width:2,height:2}}
+data modify storage voxel-planes:plane b17g.plane-data.hitbox merge value {elevator-r:{max-hp:310d,offset:[-3.3d,0.1d,-7.6d],width:1.5,height:1.5},elevator-l:{max-hp:310d,offset:[3.3d,0.1d,-7.6d],width:1.5,height:1.5}}
+data modify storage voxel-planes:plane b17g.plane-data.hitbox merge value {radder:{max-hp:310d,offset:[0d,2.4d,-8.2d],width:1.8,height:1.8}}
+data modify storage voxel-planes:plane b17g.plane-data.hitbox merge value {cockpit:{offset:[0d,0.5d,8.3d],width:1,height:1}}
 
 #デフォルト爆弾データセット
 data modify storage voxel-planes:weapon b17g.base.bomb.data set value {name:bomb,type:bomb,max-ammunition:0,current-ammunition:0,max-reload:600,current-reload:0,bombs:[]}

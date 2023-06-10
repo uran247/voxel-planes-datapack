@@ -18,13 +18,14 @@ data modify storage voxel-planes:plane il2.plane-data.model-data.body set value 
 data modify storage voxel-planes:plane il2.plane-data.model-data.landing-pitch set value -11
 data modify storage voxel-planes:plane il2.plane-data.model-data.scale set value [2f,2f,2f]
 data modify storage voxel-planes:plane il2.plane-data.model-data.translation set value [0f,0.3f,-1.5f]
+data modify storage voxel-planes:plane il2.plane-data.model-data.central-axis-offset set value 1.5
 data modify storage voxel-planes:plane il2.plane-data.hitbox set value {}
-data modify storage voxel-planes:plane il2.plane-data.hitbox merge value {engine:{max-hp:210d,offset:[0d,1.5d,4.5d]}}
-data modify storage voxel-planes:plane il2.plane-data.hitbox merge value {aileron-r:{max-hp:200d,offset:[-3.5d,1.3d,2d]},aileron-l:{max-hp:200d,offset:[3.5d,1.3d,2d]}}
-data modify storage voxel-planes:plane il2.plane-data.hitbox merge value {elevator-r:{max-hp:190d,offset:[-1.3d,1.6d,-4.1d]},elevator-l:{max-hp:190d,offset:[1.3d,1.6d,-4.1d]}}
-data modify storage voxel-planes:plane il2.plane-data.hitbox merge value {radder:{max-hp:190d,offset:[0d,2.6d,-4.4d]}}
-data modify storage voxel-planes:plane il2.plane-data.hitbox merge value {body:{max-hp:220d,offset:[0d,1.5d,0d]}}
-data modify storage voxel-planes:plane il2.plane-data.hitbox merge value {cockpit:{offset:[0d,2.2d,2d]}}
+data modify storage voxel-planes:plane il2.plane-data.hitbox merge value {engine:{max-hp:210d,offset:[0d,-0.4d,4.2d],width:1,height:1}}
+data modify storage voxel-planes:plane il2.plane-data.hitbox merge value {aileron-r:{max-hp:200d,offset:[-3.5d,-1d,1.6d],width:1.8,height:1.8},aileron-l:{max-hp:200d,offset:[3.5d,-1d,1.6d],width:1.8,height:1.8}}
+data modify storage voxel-planes:plane il2.plane-data.hitbox merge value {elevator-r:{max-hp:190d,offset:[-1.3d,-0.3d,-4.4d],width:1.2,height:1.2},elevator-l:{max-hp:190d,offset:[1.3d,-0.3d,-4.4d],width:1.2,height:1.2}}
+data modify storage voxel-planes:plane il2.plane-data.hitbox merge value {radder:{max-hp:190d,offset:[0d,0.7d,-4.4d],width:1.1,height:1.1}}
+data modify storage voxel-planes:plane il2.plane-data.hitbox merge value {body:{max-hp:220d,offset:[0d,-0.5d,0d],width:1.1,height:1.1}}
+data modify storage voxel-planes:plane il2.plane-data.hitbox merge value {cockpit:{offset:[0d,0.6d,2d],width:0.5,height:0.5}}
 
 #デフォルト機銃データセット
 data modify storage voxel-planes:weapon il2.base.23mm.data set value {name:"23mm gun",type:gun,size:23mm,max-ammunition:150,current-ammunition:150,max-cooltime:2,current-cooltime:0,max-reload:280,current-reload:0,tracer:"yellow",damage:61,speed:11.3d,bullets:[{offset:[2.6d,1.2d,4.3d]},{offset:[-2.7d,1.2d,4.3d]}]}

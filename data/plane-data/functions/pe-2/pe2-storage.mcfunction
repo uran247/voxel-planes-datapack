@@ -19,13 +19,14 @@ data modify storage voxel-planes:plane pe2.plane-data.model-data.tail set value 
 data modify storage voxel-planes:plane pe2.plane-data.model-data.landing-pitch set value -12.0
 data modify storage voxel-planes:plane pe2.plane-data.model-data.scale set value [2f,2f,2f]
 data modify storage voxel-planes:plane pe2.plane-data.model-data.translation set value [0f,0.1f,0f]
+data modify storage voxel-planes:plane pe2.plane-data.model-data.central-axis-offset set value 1.375
 data modify storage voxel-planes:plane pe2.plane-data.hitbox set value {}
-data modify storage voxel-planes:plane pe2.plane-data.hitbox merge value {engine-r:{max-hp:190d,offset:[-2.5d,1d,5.5d]},engine-l:{max-hp:190d,offset:[2.3d,1d,5.5d]}}
-data modify storage voxel-planes:plane pe2.plane-data.hitbox merge value {aileron-r:{max-hp:180d,offset:[-5d,1.3d,3.3d]},aileron-l:{max-hp:180d,offset:[5d,1.3d,3.3d]}}
-data modify storage voxel-planes:plane pe2.plane-data.hitbox merge value {elevator-r:{max-hp:150d,offset:[-1.3d,1.7d,-3.5d]},elevator-l:{max-hp:150d,offset:[1.3d,1.7d,-3.5d]}}
-data modify storage voxel-planes:plane pe2.plane-data.hitbox merge value {radder-r:{max-hp:170d,offset:[-2.5d,2.2d,-3.5d]},radder-l:{max-hp:150d,offset:[2.5d,2.2d,-3.5d]}}
-data modify storage voxel-planes:plane pe2.plane-data.hitbox merge value {cockpit:{offset:[0d,2.1d,6d]}}
-data modify storage voxel-planes:plane pe2.plane-data.hitbox merge value {body:{max-hp:200d,offset:[0d,1.5d,0d]}}
+data modify storage voxel-planes:plane pe2.plane-data.hitbox merge value {engine-r:{max-hp:190d,offset:[-2.3d,-0.7d,5.5d],width:0.9,height:0.9},engine-l:{max-hp:190d,offset:[2.3d,-0.7d,5.5d],width:0.9,height:0.9}}
+data modify storage voxel-planes:plane pe2.plane-data.hitbox merge value {aileron-r:{max-hp:180d,offset:[-5d,-0.8d,3.5d],width:1.7,height:1.7},aileron-l:{max-hp:180d,offset:[5d,-0.8d,3.5d],width:1.7,height:1.7}}
+data modify storage voxel-planes:plane pe2.plane-data.hitbox merge value {elevator-r:{max-hp:150d,offset:[-1.3d,-0.2d,-3.3d],width:1.2,height:1.2},elevator-l:{max-hp:150d,offset:[1.3d,-0.2d,-3.3d],width:1.2,height:1.2}}
+data modify storage voxel-planes:plane pe2.plane-data.hitbox merge value {radder-r:{max-hp:170d,offset:[-2.5d,0.2d,-3.4d],width:1,height:1},radder-l:{max-hp:150d,offset:[2.5d,0.2d,-3.4d],width:1,height:1}}
+data modify storage voxel-planes:plane pe2.plane-data.hitbox merge value {cockpit:{offset:[0d,0.4d,5.8d],width:0.6,height:0.6}}
+data modify storage voxel-planes:plane pe2.plane-data.hitbox merge value {body:{max-hp:200d,offset:[0d,-0.5d,0d],width:1,height:1}}
 
 #デフォルト爆弾データセット
 data modify storage voxel-planes:weapon pe2.base.bomb.data set value {name:bomb,type:bomb,max-ammunition:4,current-ammunition:4,max-reload:600,current-reload:0,bombs:[]}

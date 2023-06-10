@@ -17,14 +17,15 @@ data modify storage voxel-planes:plane ki44.plane-data.model-data.body set value
 data modify storage voxel-planes:plane ki44.plane-data.model-data.landing-pitch set value -11.5
 data modify storage voxel-planes:plane ki44.plane-data.model-data.scale set value [1f,1f,1f]
 data modify storage voxel-planes:plane ki44.plane-data.model-data.translation set value [0f,0f,0.7f]
+data modify storage voxel-planes:plane ki44.plane-data.model-data.central-axis-offset set value 1.375
 data modify storage voxel-planes:plane ki44.plane-data.hp set value {engine:110d,body:120d,aileron:110d,elevetor:100d,radder:100d}
 data modify storage voxel-planes:plane ki44.plane-data.hitbox set value {}
-data modify storage voxel-planes:plane ki44.plane-data.hitbox merge value {body:{max-hp:120d,offset:[0d,0d,0d]}}
-data modify storage voxel-planes:plane ki44.plane-data.hitbox merge value {engine:{max-hp:110d,offset:[0d,0d,2.9d]}}
-data modify storage voxel-planes:plane ki44.plane-data.hitbox merge value {aileron-r:{max-hp:110d,offset:[-3d,-0.4d,1.4d]},aileron-l:{max-hp:110d,offset:[3d,-0.4d,1.4d]}}
-data modify storage voxel-planes:plane ki44.plane-data.hitbox merge value {elevator-r:{max-hp:100d,offset:[-1d,-0.1d,-3.5d]},elevator-l:{max-hp:100d,offset:[1d,-0.1d,-3.5d]}}
-data modify storage voxel-planes:plane ki44.plane-data.hitbox merge value {radder:{max-hp:100d,offset:[0d,0.7d,-4.3d]}}
-data modify storage voxel-planes:plane ki44.plane-data.hitbox merge value {cockpit:{offset:[0d,0.7d,0.7d]}}
+data modify storage voxel-planes:plane ki44.plane-data.hitbox merge value {body:{max-hp:120d,offset:[0d,-0.5d,0d],width:1,height:1}}
+data modify storage voxel-planes:plane ki44.plane-data.hitbox merge value {engine:{max-hp:110d,offset:[0d,-0.5d,3.1d],width:1.1,height:1.1}}
+data modify storage voxel-planes:plane ki44.plane-data.hitbox merge value {aileron-r:{max-hp:110d,offset:[-2.8d,-0.8d,2d],width:1.2,height:1.2},aileron-l:{max-hp:110d,offset:[2.8d,-0.8d,2d],width:1.2,height:1.2}}
+data modify storage voxel-planes:plane ki44.plane-data.hitbox merge value {elevator-r:{max-hp:100d,offset:[-1d,-0.3d,-2.7d],width:0.6,height:0.6},elevator-l:{max-hp:100d,offset:[1d,-0.3d,-2.7d],width:0.6,height:0.6}}
+data modify storage voxel-planes:plane ki44.plane-data.hitbox merge value {radder:{max-hp:100d,offset:[0d,0.3d,-3.6d],width:0.7,height:0.7}}
+data modify storage voxel-planes:plane ki44.plane-data.hitbox merge value {cockpit:{offset:[0d,0.6d,1.6d],width:0.3,height:0.3}}
 
 #デフォルト機銃データセット
 data modify storage voxel-planes:weapon ki44.base.12p7mm.data set value {name:"12.7mm gun",type:gun,size:12p7mm,max-ammunition:250,current-ammunition:250,max-cooltime:2,current-cooltime:0,max-reload:210,current-reload:0,tracer:"orange",damage:32,speed:10d,bullets:[{offset:[0.2d,0.6d,3.3d]},{offset:[-0.2d,0.6d,3.3d]},{offset:[1.74d,0.6d,3.3d]},{offset:[-1.74d,0.6d,3.3d]}]}

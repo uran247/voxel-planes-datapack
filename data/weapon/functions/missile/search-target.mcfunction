@@ -16,7 +16,7 @@
 
     #say target-candidate0
 #候補エンティティにタグ付け
-execute positioned ^ ^ ^128 as @e[type=armor_stand,tag=plane-hitbox,distance=..127.9] run tag @s add target-candidate
+execute positioned ^ ^ ^128 as @e[tag=plane-hitbox,distance=..127.9] run tag @s add target-candidate
     #execute if entity @e[tag=target-candidate,tag=!dummy-sun] run say target-candidate1
 
 # 機種から±30度範囲にエンティティがいるか

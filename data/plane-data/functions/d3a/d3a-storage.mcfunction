@@ -18,14 +18,15 @@ data modify storage voxel-planes:plane d3a.plane-data.model-data.body set value 
 data modify storage voxel-planes:plane d3a.plane-data.model-data.landing-pitch set value -12.5
 data modify storage voxel-planes:plane d3a.plane-data.model-data.scale set value [2f,2f,2f]
 data modify storage voxel-planes:plane d3a.plane-data.model-data.translation set value [0f,0.3f,-3.3f]
+data modify storage voxel-planes:plane d3a.plane-data.model-data.central-axis-offset set value 1.5
 data modify storage voxel-planes:plane d3a.plane-data.hp set value {engine:50d,body:50d,aileron:50d,elevetor:40d,radder:40d}
 data modify storage voxel-planes:plane d3a.plane-data.hitbox set value {}
-data modify storage voxel-planes:plane d3a.plane-data.hitbox merge value {body:{max-hp:50d,offset:[0d,0d,0d]}}
-data modify storage voxel-planes:plane d3a.plane-data.hitbox merge value {engine:{max-hp:50d,offset:[0d,0d,3d]}}
-data modify storage voxel-planes:plane d3a.plane-data.hitbox merge value {aileron-r:{max-hp:50d,offset:[-4d,-0.1d,1d]},aileron-l:{max-hp:50d,offset:[4d,-0.1d,1d]}}
-data modify storage voxel-planes:plane d3a.plane-data.hitbox merge value {elevator-r:{max-hp:40d,offset:[-1.2d,0.1d,-4.9d]},elevator-l:{max-hp:40d,offset:[1.2d,0.1d,-4.9d]}}
-data modify storage voxel-planes:plane d3a.plane-data.hitbox merge value {radder:{max-hp:40d,offset:[0d,1.1d,-4.9d]}}
-data modify storage voxel-planes:plane d3a.plane-data.hitbox merge value {cockpit:{offset:[0d,0.9d,0.9d]}}
+data modify storage voxel-planes:plane d3a.plane-data.hitbox merge value {body:{max-hp:50d,offset:[0d,-0.5d,0d],width:1.2,height:1.2}}
+data modify storage voxel-planes:plane d3a.plane-data.hitbox merge value {engine:{max-hp:50d,offset:[0d,-0.4d,3d],width:1.1,height:1.1}}
+data modify storage voxel-planes:plane d3a.plane-data.hitbox merge value {aileron-r:{max-hp:50d,offset:[-4d,-1d,0.3d],width:1.8,height:1.8},aileron-l:{max-hp:50d,offset:[4d,-1d,0.3d],width:1.8,height:1.8}}
+data modify storage voxel-planes:plane d3a.plane-data.hitbox merge value {elevator-r:{max-hp:40d,offset:[-1.2d,-0.2d,-5.2d],width:0.9,height:0.9},elevator-l:{max-hp:40d,offset:[1.2d,-0.2d,-5.2d],width:0.9,height:0.9}}
+data modify storage voxel-planes:plane d3a.plane-data.hitbox merge value {radder:{max-hp:40d,offset:[0d,0.9d,-5.2d],width:0.9,height:0.9}}
+data modify storage voxel-planes:plane d3a.plane-data.hitbox merge value {cockpit:{offset:[0d,0.6d,1.2d],width:0.5,height:0.5}}
 
 
 #デフォルト機銃データセット

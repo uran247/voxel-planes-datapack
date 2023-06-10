@@ -18,14 +18,15 @@ data modify storage voxel-planes:plane a6m5.plane-data.model-data.body set value
 data modify storage voxel-planes:plane a6m5.plane-data.model-data.landing-pitch set value -12.5
 data modify storage voxel-planes:plane a6m5.plane-data.model-data.scale set value [1f,1f,1f]
 data modify storage voxel-planes:plane a6m5.plane-data.model-data.translation set value [0f,0f,0.8f]
+data modify storage voxel-planes:plane a6m5.plane-data.model-data.central-axis-offset set value 1.375
 data modify storage voxel-planes:plane a6m5.plane-data.hp set value {engine:100d,body:110d,aileron:90d,elevetor:70d,radder:70d}
 data modify storage voxel-planes:plane a6m5.plane-data.hitbox set value {}
-data modify storage voxel-planes:plane a6m5.plane-data.hitbox merge value {engine:{max-hp:100d,offset:[0d,0d,2.7d]}}
-data modify storage voxel-planes:plane a6m5.plane-data.hitbox merge value {aileron-r:{max-hp:90d,offset:[-2.7d,0d,0.5d]},aileron-l:{max-hp:90d,offset:[2.7d,0d,0.5d]}}
-data modify storage voxel-planes:plane a6m5.plane-data.hitbox merge value {elevator-r:{max-hp:70d,offset:[-1.3d,0.1d,-4.2d]},elevator-l:{max-hp:70d,offset:[1.3d,0.1d,-4.2d]}}
-data modify storage voxel-planes:plane a6m5.plane-data.hitbox merge value {radder:{max-hp:70d,offset:[-0.1d,1d,-4.6d]}}
-data modify storage voxel-planes:plane a6m5.plane-data.hitbox merge value {body:{max-hp:110d,offset:[0d,0d,0d]}}
-data modify storage voxel-planes:plane a6m5.plane-data.hitbox merge value {cockpit:{offset:[0d,0.7d,1.1d]}}
+data modify storage voxel-planes:plane a6m5.plane-data.hitbox merge value {engine:{max-hp:100d,offset:[0d,-0.5d,2.7d],width:1,height:1}}
+data modify storage voxel-planes:plane a6m5.plane-data.hitbox merge value {aileron-r:{max-hp:90d,offset:[-2.7d,-0.8d,0.9d],width:1.3,height:1.3},aileron-l:{max-hp:90d,offset:[2.7d,-0.8d,0.9d],width:1.3,height:1.3}}
+data modify storage voxel-planes:plane a6m5.plane-data.hitbox merge value {elevator-r:{max-hp:70d,offset:[-1.3d,-0.2d,-3.6d],width:0.7,height:0.7},elevator-l:{max-hp:70d,offset:[1.3d,-0.2d,-3.6d],width:0.7,height:0.7}}
+data modify storage voxel-planes:plane a6m5.plane-data.hitbox merge value {radder:{max-hp:70d,offset:[-0.1d,0.6d,-4.0d],width:0.9,height:0.9}}
+data modify storage voxel-planes:plane a6m5.plane-data.hitbox merge value {body:{max-hp:110d,offset:[0d,-0.4d,0d],width:1,height:1}}
+data modify storage voxel-planes:plane a6m5.plane-data.hitbox merge value {cockpit:{offset:[0d,0.6d,1.5d],width:0.4,height:0.4}}
 
 #デフォルト機銃データセット
 data modify storage voxel-planes:weapon a6m5.base.20mm.data set value {name:"20mm gun",type:gun,size:20mm,max-ammunition:125,current-ammunition:125,max-cooltime:2,current-cooltime:0,max-reload:280,current-reload:0,tracer:"yellow",damage:72,speed:9.5d,bullets:[{offset:[1.9d,0.2d,2.1d]},{offset:[-1.95d,0.2d,2.1d]}]}

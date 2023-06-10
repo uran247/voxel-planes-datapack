@@ -18,14 +18,15 @@ data modify storage voxel-planes:plane ki49.plane-data.model-data.rightwing set 
 data modify storage voxel-planes:plane ki49.plane-data.model-data.landing-pitch set value -6.0
 data modify storage voxel-planes:plane ki49.plane-data.model-data.scale set value [4f,4f,4f]
 data modify storage voxel-planes:plane ki49.plane-data.model-data.translation set value [0f,0.5f,1f]
+data modify storage voxel-planes:plane ki49.plane-data.model-data.central-axis-offset set value 1.5
 data modify storage voxel-planes:plane ki49.plane-data.hp set value {engine:60d,body:80d,aileron:70d,elevetor:60d,radder:70d}
 data modify storage voxel-planes:plane ki49.plane-data.hitbox set value {}
-data modify storage voxel-planes:plane ki49.plane-data.hitbox merge value {body:{max-hp:80d,offset:[0d,0d,0d]}}
-data modify storage voxel-planes:plane ki49.plane-data.hitbox merge value {engine-r:{max-hp:60d,offset:[-2.6d,0.25d,6.3d]},engine-l:{max-hp:60d,offset:[2.6d,0.25d,6.3d]}}
-data modify storage voxel-planes:plane ki49.plane-data.hitbox merge value {aileron-r:{max-hp:70d,offset:[-7.4d,0.8d,3.2d]},aileron-l:{max-hp:70d,offset:[7.4d,0.8d,3.2d]}}
-data modify storage voxel-planes:plane ki49.plane-data.hitbox merge value {elevator-r:{max-hp:60d,offset:[-2.3d,0.6d,-5.7d]},elevator-l:{max-hp:60d,offset:[2.3d,0.6d,-5.7d]}}
-data modify storage voxel-planes:plane ki49.plane-data.hitbox merge value {radder:{max-hp:70d,offset:[0d,2.4d,-5.8d]}}
-data modify storage voxel-planes:plane ki49.plane-data.hitbox merge value {cockpit:{offset:[0d,1.1d,6.6d]}}
+data modify storage voxel-planes:plane ki49.plane-data.hitbox merge value {body:{max-hp:80d,offset:[0d,-0.2d,0d],width:1.5,height:1.5}}
+data modify storage voxel-planes:plane ki49.plane-data.hitbox merge value {engine-r:{max-hp:60d,offset:[-2.3d,-0.0d,6.0d],width:1,height:1},engine-l:{max-hp:60d,offset:[2.3d,-0.0d,6.0d],width:1,height:1}}
+data modify storage voxel-planes:plane ki49.plane-data.hitbox merge value {aileron-r:{max-hp:70d,offset:[-6d,-0.4d,2.7d],width:2.4,height:2.4},aileron-l:{max-hp:70d,offset:[6d,-0.4d,2.7d],width:2.4,height:2.4}}
+data modify storage voxel-planes:plane ki49.plane-data.hitbox merge value {elevator-r:{max-hp:60d,offset:[-2.3d,0d,-5.9d],width:1.2,height:1.2},elevator-l:{max-hp:60d,offset:[2.3d,0d,-5.9d],width:1.2,height:1.2}}
+data modify storage voxel-planes:plane ki49.plane-data.hitbox merge value {radder:{max-hp:70d,offset:[0d,1.4d,-5.9d],width:1.3,height:1.3}}
+data modify storage voxel-planes:plane ki49.plane-data.hitbox merge value {cockpit:{offset:[0d,0.8d,6d],width:0.6,height:0.6}}
 
 #デフォルト爆弾データセット
 data modify storage voxel-planes:weapon ki49.base.bomb.data set value {name:bomb,type:bomb,max-ammunition:4,current-ammunition:4,max-reload:600,current-reload:0,bombs:[]}

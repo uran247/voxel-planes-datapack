@@ -18,13 +18,14 @@ data modify storage voxel-planes:plane tbf.plane-data.model-data.body set value 
 data modify storage voxel-planes:plane tbf.plane-data.model-data.landing-pitch set value -11f
 data modify storage voxel-planes:plane tbf.plane-data.model-data.scale set value [2f,2f,2f]
 data modify storage voxel-planes:plane tbf.plane-data.model-data.translation set value [0f,0.1f,2.3f]
+data modify storage voxel-planes:plane tbf.plane-data.model-data.central-axis-offset set value 1.3
 data modify storage voxel-planes:plane tbf.plane-data.hitbox set value {}
-data modify storage voxel-planes:plane tbf.plane-data.hitbox merge value {engine:{max-hp:150,offset:[0d,0d,6d]}}
-data modify storage voxel-planes:plane tbf.plane-data.hitbox merge value {aileron-r:{max-hp:150,offset:[-4d,0d,2.5d]},aileron-l:{max-hp:150,offset:[4d,0d,2.5d]}}
-data modify storage voxel-planes:plane tbf.plane-data.hitbox merge value {elevator-r:{max-hp:140,offset:[-2d,0.9d,-3.4d]},elevator-l:{max-hp:140,offset:[2d,0.9d,-3.4d]}}
-data modify storage voxel-planes:plane tbf.plane-data.hitbox merge value {radder:{max-hp:130,offset:[0d,2d,-3.5d]}}
-data modify storage voxel-planes:plane tbf.plane-data.hitbox merge value {cockpit:{offset:[0d,1d,4d]}}
-data modify storage voxel-planes:plane tbf.plane-data.hitbox merge value {body:{max-hp:160,offset:[0d,0d,0d]}}
+data modify storage voxel-planes:plane tbf.plane-data.hitbox merge value {engine:{max-hp:150,offset:[0d,-0.5d,5.7d],width:1.2,height:1.2}}
+data modify storage voxel-planes:plane tbf.plane-data.hitbox merge value {aileron-r:{max-hp:150,offset:[-4d,-0.9d,2.5d],width:2,height:2},aileron-l:{max-hp:150,offset:[4d,-0.9d,2.5d],width:2,height:2}}
+data modify storage voxel-planes:plane tbf.plane-data.hitbox merge value {elevator-r:{max-hp:140,offset:[-2d,0.3d,-3.7d],width:1.4,height:1.4},elevator-l:{max-hp:140,offset:[2d,0.3d,-3.7d],width:1.4,height:1.4}}
+data modify storage voxel-planes:plane tbf.plane-data.hitbox merge value {radder:{max-hp:130,offset:[0d,1.5d,-3.7d],width:1,height:1}}
+data modify storage voxel-planes:plane tbf.plane-data.hitbox merge value {cockpit:{offset:[0d,1d,3.8d],width:0.5,height:0.5}}
+data modify storage voxel-planes:plane tbf.plane-data.hitbox merge value {body:{max-hp:160,offset:[0d,-0.6d,0d],width:1.3,height:1.3}}
 
 #デフォルト機銃データセット
 data modify storage voxel-planes:weapon tbf.base.12p7mm.data set value {name:"12.7mm gun",type:gun,size:12p7mm,max-ammunition:310,current-ammunition:310,max-cooltime:2,current-cooltime:0,max-reload:140,current-reload:0,tracer:"lightblue",damage:13,speed:11,bullets:[{offset:[2.1d,1.4d,4.8d]},{offset:[-2.1d,1.4d,4.8d]}]}

@@ -19,13 +19,14 @@ data modify storage voxel-planes:plane seafuryfb11.plane-data.model-data.landing
 data modify storage voxel-planes:plane seafuryfb11.plane-data.model-data.scale set value [1f,1f,1f]
 data modify storage voxel-planes:plane seafuryfb11.plane-data.model-data.translation set value [0f,0f,0f]
 data modify storage voxel-planes:plane seafuryfb11.plane-data.hp set value {engine:220d,body:250d,aileron:200d,elevetor:200d,radder:210d}
+data modify storage voxel-planes:plane seafuryfb11.plane-data.model-data.central-axis-offset set value 1.375
 data modify storage voxel-planes:plane seafuryfb11.plane-data.hitbox set value {}
-data modify storage voxel-planes:plane seafuryfb11.plane-data.hitbox merge value {body:{max-hp:250d,offset:[0d,0d,0d]}}
-data modify storage voxel-planes:plane seafuryfb11.plane-data.hitbox merge value {engine:{max-hp:220d,offset:[0d,0d,4.7d]}}
-data modify storage voxel-planes:plane seafuryfb11.plane-data.hitbox merge value {aileron-r:{max-hp:200d,offset:[-3.6d,-0.5d,2.5d]},aileron-l:{max-hp:200d,offset:[3.6d,-0.5d,2.5d]}}
-data modify storage voxel-planes:plane seafuryfb11.plane-data.hitbox merge value {elevator-r:{max-hp:200d,offset:[-1.2d,0.5d,-3.6d]},elevator-l:{max-hp:200d,offset:[1.2d,0.5d,-3.6d]}}
-data modify storage voxel-planes:plane seafuryfb11.plane-data.hitbox merge value {radder:{max-hp:210d,offset:[0d,1.6d,-4.0d]}}
-data modify storage voxel-planes:plane seafuryfb11.plane-data.hitbox merge value {cockpit:{offset:[0d,1d,1.8d]}}
+data modify storage voxel-planes:plane seafuryfb11.plane-data.hitbox merge value {body:{max-hp:250d,offset:[0d,-0.4d,0d],width:1.1,height:1.1}}
+data modify storage voxel-planes:plane seafuryfb11.plane-data.hitbox merge value {engine:{max-hp:220d,offset:[0d,-0.5d,4.3d],width:1.1,height:1.1}}
+data modify storage voxel-planes:plane seafuryfb11.plane-data.hitbox merge value {aileron-r:{max-hp:200d,offset:[-3.6d,-1.3d,2.3d],width:1.6,height:1.6},aileron-l:{max-hp:200d,offset:[3.6d,-1.3d,2.3d],width:1.6,height:1.6}}
+data modify storage voxel-planes:plane seafuryfb11.plane-data.hitbox merge value {elevator-r:{max-hp:200d,offset:[-1.2d,0d,-3.6d],width:1,height:1},elevator-l:{max-hp:200d,offset:[1.2d,0d,-3.6d],width:1,height:1}}
+data modify storage voxel-planes:plane seafuryfb11.plane-data.hitbox merge value {radder:{max-hp:210d,offset:[0d,1d,-4d],width:1,height:1}}
+data modify storage voxel-planes:plane seafuryfb11.plane-data.hitbox merge value {cockpit:{offset:[0d,0.7d,1.4d],width:0.5,height:0.5}}
 
 #デフォルト機銃データセット
 data modify storage voxel-planes:weapon seafuryfb11.base.20mm.data set value {name:"20mm gun",type:gun,size:20mm,max-ammunition:145,current-ammunition:145,max-cooltime:2,current-cooltime:0,max-reload:280,current-reload:0,tracer:"orange",damage:88,speed:11d,bullets:[{offset:[1.95d,0.9d,4d]},{offset:[-1.95d,0.9d,4d]},{offset:[2.25d,0.9d,4.1d]},{offset:[-2.25d,0.9d,4.1d]}]}

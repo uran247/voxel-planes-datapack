@@ -17,14 +17,15 @@ data modify storage voxel-planes:plane p38l.plane-data.flight-model.energy-loss-
 data modify storage voxel-planes:plane p38l.plane-data.model-data.body set value {parking-cmd:144,rolling-cmd:145,flying-cmd:146}
 data modify storage voxel-planes:plane p38l.plane-data.model-data.landing-pitch set value -5
 data modify storage voxel-planes:plane p38l.plane-data.model-data.scale set value [2f,2f,2f]
+data modify storage voxel-planes:plane p38l.plane-data.model-data.central-axis-offset set value 1.125
 data modify storage voxel-planes:plane p38l.plane-data.model-data.translation set value [0f,0f,1.5f]
 data modify storage voxel-planes:plane p38l.plane-data.hitbox set value {}
-data modify storage voxel-planes:plane p38l.plane-data.hitbox merge value {engine-r:{max-hp:330d,offset:[-2.4d,0.25d,6d]},engine-l:{max-hp:330d,offset:[2.4d,0.25d,6d]}}
-data modify storage voxel-planes:plane p38l.plane-data.hitbox merge value {body:{max-hp:360d,offset:[0d,0d,5d]}}
-data modify storage voxel-planes:plane p38l.plane-data.hitbox merge value {aileron-r:{max-hp:300d,offset:[-5.6d,0.6d,4.4d]},aileron-l:{max-hp:300d,offset:[5.6d,0.6d,4.4d]}}
-data modify storage voxel-planes:plane p38l.plane-data.hitbox merge value {elevator:{max-hp:230d,offset:[0d,0.6d,-2d]}}
-data modify storage voxel-planes:plane p38l.plane-data.hitbox merge value {radder-r:{max-hp:230d,offset:[-2.3d,1.2d,-2d]},radder-l:{max-hp:230d,offset:[2.3d,1.2d,-2d]}}
-data modify storage voxel-planes:plane p38l.plane-data.hitbox merge value {cockpit:{offset:[0d,0.7d,5d]}}
+data modify storage voxel-planes:plane p38l.plane-data.hitbox merge value {engine-r:{max-hp:330d,offset:[-2.4d,-0.1d,6.2d],width:1,height:1},engine-l:{max-hp:330d,offset:[2.4d,-0.1d,6.2d],width:1,height:1}}
+data modify storage voxel-planes:plane p38l.plane-data.hitbox merge value {body:{max-hp:360d,offset:[0d,-0.3d,5d],width:1,height:1}}
+data modify storage voxel-planes:plane p38l.plane-data.hitbox merge value {aileron-r:{max-hp:300d,offset:[-5.6d,0.5d,4.4d],width:1.3,height:1.3},aileron-l:{max-hp:300d,offset:[5.6d,0.5d,4.4d],width:1.3,height:1.3}}
+data modify storage voxel-planes:plane p38l.plane-data.hitbox merge value {elevator:{max-hp:230d,offset:[0d,0.3d,-1.9d],width:1,height:1}}
+data modify storage voxel-planes:plane p38l.plane-data.hitbox merge value {radder-r:{max-hp:230d,offset:[-2.3d,1.0d,-2d],width:0.9,height:0.9},radder-l:{max-hp:230d,offset:[2.3d,1.0d,-2d],width:0.9,height:0.9}}
+data modify storage voxel-planes:plane p38l.plane-data.hitbox merge value {cockpit:{offset:[0d,0.7d,5.5d],width:0.5,height:0.5}}
 
 #デフォルト機銃データセット
 data modify storage voxel-planes:weapon p38l.base.20mm.data set value {name:"20mm gun",type:gun,size:20mm,max-ammunition:150,current-ammunition:150,max-cooltime:2,current-cooltime:0,max-reload:280,current-reload:0,tracer:"yellow",damage:60,speed:9d,bullets:[{offset:[-0.27d,1.65d,8.8d]}]}

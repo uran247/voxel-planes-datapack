@@ -18,13 +18,14 @@ data modify storage voxel-planes:plane p39n.plane-data.model-data.body set value
 data modify storage voxel-planes:plane p39n.plane-data.model-data.landing-pitch set value -1.0
 data modify storage voxel-planes:plane p39n.plane-data.model-data.scale set value [1f,1f,1f]
 data modify storage voxel-planes:plane p39n.plane-data.model-data.translation set value [0f,0f,0.7f]
+data modify storage voxel-planes:plane p39n.plane-data.model-data.central-axis-offset set value 1.75
 data modify storage voxel-planes:plane p39n.plane-data.hitbox set value {}
-data modify storage voxel-planes:plane p39n.plane-data.hitbox merge value {engine:{max-hp:170d,offset:[0d,0.2d,5d]}}
-data modify storage voxel-planes:plane p39n.plane-data.hitbox merge value {aileron-r:{max-hp:170d,offset:[-2.5d,0d,2d]},aileron-l:{max-hp:170d,offset:[2.5d,0d,2d]}}
-data modify storage voxel-planes:plane p39n.plane-data.hitbox merge value {elevator-r:{max-hp:150d,offset:[-1d,0.5d,-2d]},elevator-l:{max-hp:150d,offset:[1d,0.5d,-2d]}}
-data modify storage voxel-planes:plane p39n.plane-data.hitbox merge value {radder:{max-hp:160d,offset:[0d,1.5d,-2.3d]}}
-data modify storage voxel-planes:plane p39n.plane-data.hitbox merge value {cockpit:{offset:[0d,1d,3.5d]}}
-data modify storage voxel-planes:plane p39n.plane-data.hitbox merge value {body:{max-hp:190d,offset:[0d,0d,0d]}}
+data modify storage voxel-planes:plane p39n.plane-data.hitbox merge value {engine:{max-hp:170d,offset:[0d,-0.6d,2.5d],width:1,height:1}}
+data modify storage voxel-planes:plane p39n.plane-data.hitbox merge value {aileron-r:{max-hp:170d,offset:[-2.7d,-1d,2.6d],width:1.5,height:1.5},aileron-l:{max-hp:170d,offset:[2.7d,-1d,2.6d],width:1.5,height:1.5}}
+data modify storage voxel-planes:plane p39n.plane-data.hitbox merge value {elevator-r:{max-hp:150d,offset:[-1.2d,0.0d,-1.7d],width:0.8,height:0.8},elevator-l:{max-hp:150d,offset:[1.2d,0.0d,-1.7d],width:0.8,height:0.8}}
+data modify storage voxel-planes:plane p39n.plane-data.hitbox merge value {radder:{max-hp:160d,offset:[0d,0.5d,-1.9d],width:0.9,height:0.9}}
+data modify storage voxel-planes:plane p39n.plane-data.hitbox merge value {cockpit:{offset:[0d,0.4d,3.2d],width:0.4,height:0.4}}
+data modify storage voxel-planes:plane p39n.plane-data.hitbox merge value {body:{max-hp:190d,offset:[0d,-0.5d,1d],width:1,height:1}}
 
 #デフォルト機銃データセット
 data modify storage voxel-planes:weapon p39n.base.7p7mm set value {data:{name:"7.7mm gun",type:gun,size:7p7mm,max-ammunition:300,current-ammunition:300,max-cooltime:1,current-cooltime:0,max-reload:140,current-reload:0,tracer:"lightgreen",damage:12,speed:10.5,bullets:[{offset:[-2.9d,1.45d,3.5d]},{offset:[-2.8d,1.45d,3.5d]},{offset:[2.9d,1.45d,3.5d]},{offset:[2.8d,1.45d,3.5d]}]}}

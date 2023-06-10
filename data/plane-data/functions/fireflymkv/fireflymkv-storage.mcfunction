@@ -18,14 +18,15 @@ data modify storage voxel-planes:plane fireflymkv.plane-data.model-data.body set
 data modify storage voxel-planes:plane fireflymkv.plane-data.model-data.landing-pitch set value -12.5
 data modify storage voxel-planes:plane fireflymkv.plane-data.model-data.scale set value [1f,1f,1f]
 data modify storage voxel-planes:plane fireflymkv.plane-data.model-data.translation set value [0f,0f,0.7f]
+data modify storage voxel-planes:plane fireflymkv.plane-data.model-data.central-axis-offset set value 1.375
 data modify storage voxel-planes:plane fireflymkv.plane-data.hp set value {engine:130d,body:140d,aileron:140d,elevetor:120d,radder:120d}
 data modify storage voxel-planes:plane fireflymkv.plane-data.hitbox set value {}
-data modify storage voxel-planes:plane fireflymkv.plane-data.hitbox merge value {body:{max-hp:140d,offset:[0d,0d,0d]}}
-data modify storage voxel-planes:plane fireflymkv.plane-data.hitbox merge value {engine:{max-hp:130d,offset:[0d,0d,5.5d]}}
-data modify storage voxel-planes:plane fireflymkv.plane-data.hitbox merge value {aileron-r:{max-hp:140d,offset:[-3.4d,-0.5d,2.5d]},aileron-l:{max-hp:140d,offset:[3.4d,-0.5d,2.5d]}}
-data modify storage voxel-planes:plane fireflymkv.plane-data.hitbox merge value {elevator-r:{max-hp:120d,offset:[-1d,0.3d,-2.8d]},elevator-l:{max-hp:120d,offset:[1d,0.3d,-2.8d]}}
-data modify storage voxel-planes:plane fireflymkv.plane-data.hitbox merge value {radder:{max-hp:120d,offset:[0d,1.1d,-3.4d]}}
-data modify storage voxel-planes:plane fireflymkv.plane-data.hitbox merge value {cockpit:{offset:[0d,0.7d,3.1d]}}
+data modify storage voxel-planes:plane fireflymkv.plane-data.hitbox merge value {body:{max-hp:140d,offset:[0d,-0.6d,0d],width:1.2,height:1.2}}
+data modify storage voxel-planes:plane fireflymkv.plane-data.hitbox merge value {engine:{max-hp:130d,offset:[0d,-0.6d,5.8d],width:1.1,height:1.1}}
+data modify storage voxel-planes:plane fireflymkv.plane-data.hitbox merge value {aileron-r:{max-hp:140d,offset:[-3.4d,-1.1d,3.1d],width:1.5,height:1.5},aileron-l:{max-hp:140d,offset:[3.4d,-1.1d,3.1d],width:1.5,height:1.5}}
+data modify storage voxel-planes:plane fireflymkv.plane-data.hitbox merge value {elevator-r:{max-hp:120d,offset:[-1d,0d,-2d],width:1,height:1},elevator-l:{max-hp:120d,offset:[1d,0d,-2d],width:1,height:1}}
+data modify storage voxel-planes:plane fireflymkv.plane-data.hitbox merge value {radder:{max-hp:120d,offset:[0d,0.7d,-2.7d],width:0.9,height:0.9}}
+data modify storage voxel-planes:plane fireflymkv.plane-data.hitbox merge value {cockpit:{offset:[0d,0.4d,3.9d],width:0.5,height:0.5}}
 
 #デフォルト機銃データセット
 data modify storage voxel-planes:weapon fireflymkv.base.gun.data set value {name:"20mm gun",type:gun,size:20mm,max-ammunition:160,current-ammunition:160,max-cooltime:2,current-cooltime:0,max-reload:220,current-reload:0,tracer:"lightblue",damage:73,speed:11d,bullets:[{offset:[-2.7d,0.9d,4.6d]},{offset:[2.7d,0.9d,4.6d]},{offset:[-3d,0.95d,4.6d]},{offset:[3d,0.95d,4.6d]}]}

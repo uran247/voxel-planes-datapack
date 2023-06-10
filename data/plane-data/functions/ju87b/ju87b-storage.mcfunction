@@ -18,14 +18,15 @@ data modify storage voxel-planes:plane ju87b.plane-data.model-data.body set valu
 data modify storage voxel-planes:plane ju87b.plane-data.model-data.landing-pitch set value -12
 data modify storage voxel-planes:plane ju87b.plane-data.model-data.scale set value [2f,2f,2f]
 data modify storage voxel-planes:plane ju87b.plane-data.model-data.translation set value [0f,0.2f,-1.5f]
+data modify storage voxel-planes:plane ju87b.plane-data.model-data.central-axis-offset set value 1.4
 data modify storage voxel-planes:plane ju87b.plane-data.hp set value {engine:70d,body:70d,aileron:70d,elevetor:60d,radder:60d}
 data modify storage voxel-planes:plane ju87b.plane-data.hitbox set value {}
-data modify storage voxel-planes:plane ju87b.plane-data.hitbox merge value {body:{max-hp:70d,offset:[0d,0d,0d]}}
-data modify storage voxel-planes:plane ju87b.plane-data.hitbox merge value {engine:{max-hp:70d,offset:[0d,0d,5d]}}
-data modify storage voxel-planes:plane ju87b.plane-data.hitbox merge value {aileron-r:{max-hp:70d,offset:[-3d,-0.3d,2.7d]},aileron-l:{max-hp:70d,offset:[3d,-0.3d,2.7d]}}
-data modify storage voxel-planes:plane ju87b.plane-data.hitbox merge value {elevator-r:{max-hp:60d,offset:[-1.2d,0.6d,-3d]},elevator-l:{max-hp:60d,offset:[1.2d,0.6d,-3d]}}
-data modify storage voxel-planes:plane ju87b.plane-data.hitbox merge value {radder:{max-hp:60d,offset:[0d,1.1d,-3.3d]}}
-data modify storage voxel-planes:plane ju87b.plane-data.hitbox merge value {cockpit:{offset:[0d,0.7d,3.4d]}}
+data modify storage voxel-planes:plane ju87b.plane-data.hitbox merge value {body:{max-hp:70d,offset:[0d,-0.5d,0d],width:1,height:1}}
+data modify storage voxel-planes:plane ju87b.plane-data.hitbox merge value {engine:{max-hp:70d,offset:[0d,-0.4d,4.7d],width:1,height:1}}
+data modify storage voxel-planes:plane ju87b.plane-data.hitbox merge value {aileron-r:{max-hp:70d,offset:[-3d,-1.0d,2.4d],width:1.5,height:1.5},aileron-l:{max-hp:70d,offset:[3d,-1.0d,2.4d],width:1.5,height:1.5}}
+data modify storage voxel-planes:plane ju87b.plane-data.hitbox merge value {elevator-r:{max-hp:60d,offset:[-1.2d,0.3d,-3.3d],width:0.8,height:0.8},elevator-l:{max-hp:60d,offset:[1.2d,0.3d,-3.3d],width:0.8,height:0.8}}
+data modify storage voxel-planes:plane ju87b.plane-data.hitbox merge value {radder:{max-hp:60d,offset:[0d,0.9d,-3.7d],width:0.9,height:0.9}}
+data modify storage voxel-planes:plane ju87b.plane-data.hitbox merge value {cockpit:{offset:[0d,0.6d,2.8d],width:0.5,height:0.5}}
 
 
 #デフォルト機銃データセット

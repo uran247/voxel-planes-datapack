@@ -19,13 +19,14 @@ data modify storage voxel-planes:plane bf109g.plane-data.model-data.landing-pitc
 data modify storage voxel-planes:plane bf109g.plane-data.hp set value {engine:350d,body:350d,aileron:250d,elevetor:230d,radder:230d}
 data modify storage voxel-planes:plane bf109g.plane-data.hitbox set value {}
 data modify storage voxel-planes:plane bf109g.plane-data.model-data.scale set value [1f,1f,1f]
+data modify storage voxel-planes:plane bf109g.plane-data.model-data.central-axis-offset set value 1.375
 data modify storage voxel-planes:plane bf109g.plane-data.model-data.translation set value [0f,0f,0.7f]
-data modify storage voxel-planes:plane bf109g.plane-data.hitbox merge value {engine:{max-hp:100d,offset:[0d,0d,2d]}}
-data modify storage voxel-planes:plane bf109g.plane-data.hitbox merge value {body:{max-hp:330d,offset:[0.3d,0d,0d]}}
-data modify storage voxel-planes:plane bf109g.plane-data.hitbox merge value {aileron-r:{max-hp:210d,offset:[-3.6d,0d,-0.2d]},aileron-l:{max-hp:210d,offset:[3.6d,0d,-0.2d]}}
-data modify storage voxel-planes:plane bf109g.plane-data.hitbox merge value {elevator-r:{max-hp:180d,offset:[-1d,0.8d,-5.3d]},elevator-l:{max-hp:180d,offset:[1d,0.8d,-5.3d]}}
-data modify storage voxel-planes:plane bf109g.plane-data.hitbox merge value {radder:{max-hp:200d,offset:[0d,1.2d,-5.5d]}}
-data modify storage voxel-planes:plane bf109g.plane-data.hitbox merge value {cockpit:{offset:[0d,0.7d,-0.5d]}}
+data modify storage voxel-planes:plane bf109g.plane-data.hitbox merge value {engine:{max-hp:100d,offset:[0d,-0.5d,2.2d],width:1,height:1}}
+data modify storage voxel-planes:plane bf109g.plane-data.hitbox merge value {body:{max-hp:330d,offset:[0.3d,-0.5d,0d],width:1,height:1}}
+data modify storage voxel-planes:plane bf109g.plane-data.hitbox merge value {aileron-r:{max-hp:210d,offset:[-2.5d,-0.5d,0.4d],width:1,height:1},aileron-l:{max-hp:210d,offset:[2.5d,-0.5d,0.4d],width:1,height:1}}
+data modify storage voxel-planes:plane bf109g.plane-data.hitbox merge value {elevator-r:{max-hp:180d,offset:[-0.7d,0.5d,-4.6d],width:0.6,height:0.6},elevator-l:{max-hp:180d,offset:[0.7d,0.5d,-4.6d],width:0.6,height:0.6}}
+data modify storage voxel-planes:plane bf109g.plane-data.hitbox merge value {radder:{max-hp:200d,offset:[0d,0.9d,-4.7d],width:0.6,height:0.6}}
+data modify storage voxel-planes:plane bf109g.plane-data.hitbox merge value {cockpit:{offset:[0d,0.7d,0.5d],width:0.3,height:0.3}}
 
 #デフォルト機銃データセット
 data modify storage voxel-planes:weapon bf109g.base.20mm.data set value {name:"20mm gun",type:gun,size:20mm,max-ammunition:200,current-ammunition:200,max-cooltime:2,current-cooltime:0,max-reload:280,current-reload:0,tracer:"lightgreen",damage:90,speed:9d,bullets:[{offset:[0d,1.4d,3.3d]}]}

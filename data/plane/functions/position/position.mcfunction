@@ -26,6 +26,7 @@
 #   function plane:position/position
 #   function plane:position/util/calc-displacement
     #declare score_holder #model-offset-y #モデルのtranslationのy軸の大きさx1000
+    #declare score_holder #central-axis-offset-y #モデルのZ回転軸とエンティティ位置のy軸のずれx1000
 
 #入力：entity plane-root
 #処理：飛行機の位置修正
@@ -68,6 +69,7 @@ scoreboard players operation #cos vp.reg1 = #cos vp.return
 scoreboard players operation @s[tag=need-calc-offset] vp.sin = #sin vp.return
 scoreboard players operation @s[tag=need-calc-offset] vp.cos = #cos vp.return
 execute if entity @s[tag=need-calc-offset] run scoreboard players operation #model-offset-y vp.input = @s vp.model-offset-y
+execute if entity @s[tag=need-calc-offset] run scoreboard players operation #central-axis-offset-y vp.input = @s vp.central-axis-offset-y
 execute at @s[tag=need-calc-offset] as @e[tag=has-offset,tag=target-parts,distance=..30] run function plane:position/util/calc-displacement
 execute at @s[tag=need-calc-offset] as @e[type=!item_display,tag=has-offset,tag=target-parts,distance=..30] at @s rotated ~ ~ run function plane:position/calc-offset
 execute at @s as @e[type=!item_display,tag=has-offset,tag=target-parts,distance=..30] run function plane:position/util/move-parts
