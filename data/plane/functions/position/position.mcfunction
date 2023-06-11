@@ -38,7 +38,7 @@ tag @s add plane-position-executer
 execute if score @s vp.AngX-old = @s vp.AngX if score @s vp.AngY-old = @s vp.AngY if score @s vp.AngZ-old = @s vp.AngZ run tag @s add angle-not-changed
 tag @s[tag=!angle-not-changed] add need-calc-offset
 
-#自分と同じIDのパーツを自分の位置へ
+#シートとクリック検知以外の自分と同じIDのパーツを自分の位置へ
 execute at @s run tp @e[tag=target-parts,tag=!plane-seat,distance=..32] ~ ~ ~ ~ ~
 
 #ヘルスチェック
@@ -89,6 +89,9 @@ function plane:position/force-packet
 
 #seatの位置表示
 execute if entity @s[tag=!has-rider,tag=!no-move] at @e[type=armor_stand,tag=target-parts,tag=plane-seat,tag=!no-particle,distance=..20] run particle minecraft:happy_villager ~ ~2.8 ~ 0.1 0.1 0.1 1 1 force @a[tag=!plane-rider,distance=..8]
+
+#飛行機にriderがいない場合クリック検知のrideをはがす
+execute if entity @s[tag=!has-rider,tag=!no-move] as @e[type=donkey,tag=target-parts,tag=plane-seat,distance=..32] on passengers run ride @s dismount
 
 #Ang-oldに現在のAng代入
 scoreboard players operation @s vp.AngX-old = @s vp.AngX

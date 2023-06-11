@@ -42,7 +42,7 @@ execute store result score #pos-z vp.reg1 run data get storage minecraft:plane-d
 execute store result storage minecraft:plane-datapack temporary.Pos[0] double 0.01 run scoreboard players operation #pos-x vp.reg1 += @s vp.speedX
 execute store result storage minecraft:plane-datapack temporary.Pos[1] double 0.01 run scoreboard players operation #pos-y vp.reg1 += @s vp.speedY
 execute store result storage minecraft:plane-datapack temporary.Pos[2] double 0.01 run scoreboard players operation #pos-z vp.reg1 += @s vp.speedZ
-    tellraw @p [{"score" : {"name":"@s", "objective":"vp.speedY"}}]
+    #tellraw @p [{"score" : {"name":"@s", "objective":"vp.speedY"}}]
 
 #爆弾の衝突判定のときに使うスコアを取っておく
 scoreboard players operation #plane-id vp.reg1 = @s vp.plane-id

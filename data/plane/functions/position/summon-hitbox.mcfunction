@@ -38,6 +38,10 @@ execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.radd
 #cockpit
 execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.cockpit unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.cockpit{hp:0d} unless entity @e[tag=plane-hitbox,tag=cockpit,tag=target-parts,distance=..30] run summon interaction ~ ~ ~ {Tags:[plane-init,target-parts,plane,plane-hitbox,cockpit,has-offset],NoGravity:1b,width:1f,height:1f,response:0b}
 
+#click detector
+execute unless entity @e[tag=plane-click-detector,tag=target-parts,distance=..30] run summon interaction ~ ~ ~ {Tags:[plane-init,target-parts,plane,plane-click-detector],NoGravity:1b,width:1.1f,height:2.1f,response:0b}
+
+
 #ステータスセット
 #body
 data remove storage voxel-planes:input input

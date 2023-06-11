@@ -20,6 +20,7 @@
 #> 
 # @private
     #declare score_holder #plane-id #操縦者のplane-idを示す
+    #declare tag target-click-detector  #紐づけ対象のクリック検知であることを示す
 
 #透明にしとく
 effect give @s minecraft:invisibility 1 1 true
@@ -29,13 +30,19 @@ execute as @s[tag=!plane-rider] run scoreboard players reset @s vp.rightClick
 
 #seatを参照して実行者にid、タグ付け
 execute store result score @s vp.plane-id run data get entity @s RootVehicle.Entity.Attributes[{Name:"minecraft:generic.movement_speed"}].Base
-tag @s add plane-rider
-tag @s add entity-nohit
 
 #実行者と対象機体にタグ付け
 tag @s add controller
 scoreboard players operation #plane-id vp.reg1 = @s vp.plane-id
 execute as @e[type=armor_stand,tag=plane-root,distance=..20] if score @s vp.plane-id = #plane-id vp.reg1 run tag @s add controll-target
+
+#クリック検知をシートに乗せてプレイヤーに重ねる
+execute if entity @s[tag=!plane-rider] at @e[tag=controll-target,distance=..20,sort=nearest,limit=1] as @e[tag=plane-click-detector,distance=..1] if score @s vp.plane-id = #plane-id vp.reg1 run tag @s add target-click-detector 
+execute if entity @s[tag=!plane-rider] on vehicle run ride @e[tag=plane-click-detector,tag=target-click-detector,distance=..20,limit=1] mount @s
+
+#実行者に搭乗者用タグ付け
+tag @s add plane-rider
+tag @s add entity-nohit
 
 #選択スロット判定(plane:controll/rolling plane:controll/flying plane:controll/weaponで使用)
 function util:get-player-slot
@@ -62,6 +69,7 @@ execute at @e[tag=controll-target,distance=..20,sort=nearest,limit=1] run functi
 execute as @s run function plane:controll/clean-inventory
 
 #タグ削除
+tag @e[tag=target-click-detector,distance=..20,sort=nearest,limit=1] remove target-click-detector
 tag @e[tag=controll-target,tag=plane-root,distance=..20,sort=nearest,limit=1] remove controll-target
 #tag @e[tag=controll-parts,distance=..20] remove controll-parts
 tag @s remove controller

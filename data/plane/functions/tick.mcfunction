@@ -22,9 +22,14 @@
     #declare tag no-delete #削除禁止飛行機パーツであることを示す
     #declare score_holder #gtime #ゲーム内の時間[s]
 
+#> public
+#   @public
+    #declare score_holder #ticktime #game内時間[tick]
+
 #現在時刻取得
 execute store result score #gtime vp.reg1 run time query gametime
 scoreboard players operation #gtime vp.reg1 %= #20 vp.Num
+execute store result score #ticktime vp.reg1 run time query gametime
 
 #プレイヤーのplaneid、rider、keyinputタグリセット アイテム削除
 execute as @a[tag=plane-rider,nbt=!{RootVehicle:{Entity:{Tags:[plane-seat]}}}] run function plane:controll/plane-leave
