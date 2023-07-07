@@ -21,11 +21,8 @@
 #機体召喚
 summon minecraft:armor_stand ~ ~ ~ {Invisible:1b,NoGravity:0b,Tags:[saab29f,plane-init,plane-root,plane,entity-nohit,need-calc-offset,delay-rotation,tier1],DisabledSlots:256}
 summon minecraft:armor_stand ~ ~ ~ {Invisible:1b,NoGravity:0b,Tags:[saab29f,plane-init,plane,entity-nohit,plane-seat],Passengers:[{id:"donkey",Attributes:[{Name:"generic.max_health",Base:20d}],Invulnerable:1b,DeathLootTable:"minecraft:entities/bat",SaddleItem:{id:"minecraft:saddle",Count:1b},Tame:1b,NoAI:1b,Silent:1b,ChestedHorse:1b,ActiveEffects:[{Id:14b,Amplifier:0b,Duration:1000000,ShowParticles:0b}],Tags:[saab29f,plane-init,plane,plane-seat,entity-nohit]}],DisabledSlots:256}
-summon armor_stand ~ ~ ~ {Tags:[plane-body,saab29f,plane-init,plane,has-model,model-changeable,entity-nohit],NoGravity:1b,Invisible:1b,HandItems:[{id:"minecraft:diamond_sword",Count:1b,tag:{CustomModelData:85,Unbreakable:1b}},{}],Pose:{LeftArm:[0f,0f,0f],RightArm:[-12f,0f,0f]},DisabledSlots:256}
+summon item_display ~ ~ ~ {Tags:[plane-body,saab29f,plane-init,plane,has-model,model-changeable,entity-nohit],NoGravity:1b,item:{id:"minecraft:diamond_sword",Count:1b,tag:{CustomModelData:85,Unbreakable:1b}},interpolation_duration:0,view_range:4.0f,transformation:{right_rotation:{angle:0f,axis:[0f,1f,0f]},left_rotation:{angle:0f,axis:[0f,0f,1f]},scale:[1f,1f,1f],translation:[0f,1.5f,0f]},item_display:"thirdperson_righthand"}
 ride @e[tag=plane-init,tag=plane-body,distance=..1,limit=1] mount @e[tag=plane-init,tag=plane-root,distance=..1,limit=1] 
-
-#ID付与
-execute as @e[tag=plane-init,tag=plane-root,distance=..1,limit=1] at @s run function plane:summon/set-plane-id
 
 #ohmydat呼び出し
 execute as @e[tag=plane-init,tag=plane-root,distance=..1] run function oh_my_dat:please
@@ -34,6 +31,12 @@ execute as @e[tag=plane-init,tag=plane-root,distance=..1] run function oh_my_dat
 data remove storage voxel-planes:input input
 data modify storage voxel-planes:input input set from storage voxel-planes:plane saab29f.plane-data
 function plane-data:util/set-plane-sotrage
+
+#afterburner召喚
+execute if data storage voxel-planes:input input.model-data.afterburner as @e[tag=plane-init,tag=plane-root,distance=..1,limit=1] run function plane:summon/summon-afterburner
+
+#ID付与
+execute as @e[tag=plane-init,tag=plane-root,distance=..1,limit=1] at @s run function plane:summon/set-plane-id
 
 #飛行スコアセット
 execute as @e[tag=plane-init,tag=plane-root,distance=..1] run function plane-data:util/set-plane-score

@@ -9,6 +9,7 @@
 #   plane:**
 #   plane-data:**
     #declare tag has-rider #飛行機にパイロットがいるかどうか
+    #declare tag has-wep #WEPがあるかどうか
     #declare tag has-dummy-rider #飛行機に偽パイロットがいるかどうか
     #declare tag has-ai #偽パイロットにAIがあるかどうか
     #declare tag plane-root #planeのrootを示すタグ

@@ -69,10 +69,12 @@ execute as @e[tag=plane-init,tag=has-model,distance=..1] run data modify entity 
 execute store result score @s vp.model-offset-y run data get storage voxel-planes:input input.model-data.translation[1] 1000
 execute store result score @s vp.central-axis-offset-y run data get storage voxel-planes:input input.model-data.central-axis-offset 1000
 
-#エンジン数、馬力、推力設定
+#エンジン数、馬力、推力、WEP有無設定
 execute store result score @s vp.max-engine run data get storage voxel-planes:input input.flight-model.engine.number
 execute store result score @s vp.horse-power run data get storage voxel-planes:input input.flight-model.engine.horse-power
 execute store result score @s vp.thrust run data get storage voxel-planes:input input.flight-model.engine.thrust
+execute store result score @s vp.wep-thrust run data get storage voxel-planes:input input.flight-model.engine.wep-thrust
+execute if score @s vp.wep-thrust matches 1.. run tag @s add has-wep
 
 #機体重量設定
 execute store result score @s vp.weight run data get storage voxel-planes:input input.flight-model.weight

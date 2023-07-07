@@ -34,8 +34,11 @@ execute if score @s vp.speed < @s vp.gear-ret run data modify storage plane-data
 execute if score @s vp.speed >= @s vp.gear-ret run data modify storage plane-datapack plane-info[0] set value "[{\"score\":{\"name\":\"#speed\",\"objective\":\"vp.reg1\"},\"color\":\"red\"},{\"text\":\"km/h\",\"color\":\"red\"}]"
 
 #throt計算
-scoreboard players operation #throttle vp.reg1 = @s vp.throttle
-scoreboard players operation #throttle vp.reg1 *= #5 vp.Num
+data remove storage minecraft:plane-datapack temporary.throttle-num
+execute unless entity @s[tag=use-wep] store result storage minecraft:plane-datapack temporary.throttle-num int 5 run scoreboard players get @s vp.throttle
+data remove storage minecraft:plane-datapack temporary.throttle
+execute unless entity @s[tag=use-wep] run data modify storage minecraft:plane-datapack temporary.throttle set value "% Alt:"
+execute if entity @s[tag=use-wep] run data modify storage minecraft:plane-datapack temporary.throttle set value "WEP Alt:"
 
 #高度取得
 scoreboard players operation #altitude vp.reg1 = @s vp.PosY
@@ -77,7 +80,7 @@ execute unless score #weapon-number vp.reg1 matches 5.. run data modify storage 
 data modify storage plane-datapack plane-info append from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data.name
 
 #飛行機情報表示
-title @p[tag=plane-rider] actionbar ["",{"nbt":"plane-info[0]","storage":"plane-datapack","interpret":true},{"text":" Throt:","color":"red"},{"score":{"name":"#throttle","objective":"vp.reg1"},"color":"red"},{"text":"% Alt:","color":"red"},{"score":{"name":"#altitude","objective":"vp.reg1"},"color":"red"},{"text":" Wpn:","color":"yellow"},{"nbt":"plane-info[6]","storage":"plane-datapack","color":"yellow"},{"text":" Ammo:{","color":"green"},{"nbt":"plane-info[1]","storage":"plane-datapack","interpret":true},{"nbt":"plane-info[2]","storage":"plane-datapack","interpret":true},{"nbt":"plane-info[3]","storage":"plane-datapack","interpret":true},{"nbt":"plane-info[4]","storage":"plane-datapack","interpret":true},{"text":"}","color":"green"}]
+title @p[tag=plane-rider] actionbar ["",{"nbt":"plane-info[0]","storage":"plane-datapack","interpret":true},{"text":" Throt:","color":"red"},{"nbt":"temporary.throttle-num","storage":"plane-datapack","color":"red"},{"nbt":"temporary.throttle","storage":"plane-datapack","color":"red"},{"score":{"name":"#altitude","objective":"vp.reg1"},"color":"red"},{"text":" Wpn:","color":"yellow"},{"nbt":"plane-info[6]","storage":"plane-datapack","color":"yellow"},{"text":" Ammo:{","color":"green"},{"nbt":"plane-info[1]","storage":"plane-datapack","interpret":true},{"nbt":"plane-info[2]","storage":"plane-datapack","interpret":true},{"nbt":"plane-info[3]","storage":"plane-datapack","interpret":true},{"nbt":"plane-info[4]","storage":"plane-datapack","interpret":true},{"text":"}","color":"green"}]
 
 #失速してたら警告表示
 execute if entity @s[tag=stall] run title @p[tag=plane-rider] times 0 1 1

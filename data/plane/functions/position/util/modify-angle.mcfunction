@@ -21,6 +21,7 @@ scoreboard players operation #ang-z vp.reg1 = @s vp.AngZ
 data modify storage minecraft:plane-datapack temporary.Angle set value {angle:0,axis:[0f,0f,1f]}
 execute store result storage minecraft:plane-datapack temporary.Angle.angle float 0.0001745 run scoreboard players get #ang-z vp.reg1
 execute as @e[type=item_display,tag=has-model,tag=target-parts,distance=..10] run data modify entity @s transformation.left_rotation set from storage minecraft:plane-datapack temporary.Angle
+execute as @e[type=block_display,tag=target-parts,distance=..10] run data modify entity @s transformation.right_rotation set from storage minecraft:plane-datapack temporary.Angle
 
 #Rootの向き修正
 execute store result entity @s Rotation[0] float 0.01 run scoreboard players get @s vp.AngY
@@ -28,4 +29,4 @@ execute store result entity @s Rotation[1] float 0.01 run scoreboard players get
 
 #パーツのX角度補正
 scoreboard players operation #ang-z vp.reg1 = @s vp.AngZ
-execute as @e[type=!item_display,tag=target-parts,distance=..32] store result entity @s Rotation[1] float 0.01 run scoreboard players get #ang-z vp.reg1
+execute as @e[type=!item_display,type=!block_display,tag=target-parts,distance=..32] store result entity @s Rotation[1] float 0.01 run scoreboard players get #ang-z vp.reg1

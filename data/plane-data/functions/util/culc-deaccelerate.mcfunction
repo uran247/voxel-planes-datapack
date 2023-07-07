@@ -24,6 +24,7 @@
 execute store result score #weight vp.reg1 run data get storage voxel-planes:input input.flight-model.weight
 execute store result score #horse-power vp.reg1 run data get storage voxel-planes:input input.flight-model.engine.horse-power
 execute store result score #thrust vp.reg1 run data get storage voxel-planes:input input.flight-model.engine.thrust
+execute if score #thrust vp.reg1 matches 0 store result score #thrust vp.reg1 run data get storage voxel-planes:input input.flight-model.engine.wep-thrust
 execute store result score #engine-number vp.reg1 run data get storage voxel-planes:input input.flight-model.engine.number
 execute store result score #cruise-speed vp.reg1 run data get storage voxel-planes:input input.flight-model.speed.cruise-speed 34.72
 scoreboard players set #deaccelerate vp.return 1837500

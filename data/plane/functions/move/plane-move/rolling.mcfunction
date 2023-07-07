@@ -31,6 +31,7 @@ scoreboard players operation #speed vp.input /= #2 vp.Num
 scoreboard players operation #horse-power vp.input = @s vp.horse-power
 scoreboard players operation #horse-power vp.input *= @s vp.engine
 scoreboard players operation #thrust vp.input = @s vp.thrust
+execute if entity @s[tag=use-wep] unless score @s vp.wep-thrust matches ..0 run scoreboard players operation #thrust vp.input = @s vp.wep-thrust
 scoreboard players operation #thrust vp.input *= @s vp.engine
 scoreboard players operation #weight vp.input = @s vp.weight
 scoreboard players operation #weight vp.input += @s vp.add-weight 

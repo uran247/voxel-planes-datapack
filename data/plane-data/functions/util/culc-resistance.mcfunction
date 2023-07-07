@@ -35,6 +35,7 @@ scoreboard players operation #resistance vp.return /= #max-speed vp.reg1
 
 # for jet
 execute store result score #thrust vp.reg1 run data get storage voxel-planes:input input.flight-model.engine.thrust
+execute if score #thrust vp.reg1 matches 0 store result score #thrust vp.reg1 run data get storage voxel-planes:input input.flight-model.engine.wep-thrust
 scoreboard players set #jet-resistance vp.return 245
 scoreboard players operation #jet-resistance vp.return *= #thrust vp.reg1
 scoreboard players operation #jet-resistance vp.return *= #engine-number vp.reg1

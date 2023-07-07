@@ -42,6 +42,7 @@
     #declare tag plane-bomb #爆弾であることを示す
     #declare tag plane-rocket #ロケット弾であることを示す
     #declare tag plane-torpedo #ロケット弾であることを示す
+    #declare tag plane-afterburner #アフターバーナーの見た目であることを示す
     #declare tag has-torpedo #魚雷を持っていることを示す
     #declare tag has-rocket #ロケット弾を持っていることを示す
     #declare tag plane-missile #ミサイルであることを示す

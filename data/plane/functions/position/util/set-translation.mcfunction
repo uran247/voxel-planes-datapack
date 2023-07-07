@@ -19,3 +19,8 @@ execute store result storage minecraft:plane-datapack temporary.translation[1] f
 execute store result storage minecraft:plane-datapack temporary.translation[2] float 0.001 run scoreboard players get @s vp.offsetZ
 
 data modify entity @s transformation.translation set from storage minecraft:plane-datapack temporary.translation
+
+    #tellraw @p [{"score" : {"name":"@s", "objective":"vp.new-offsetY"}}]
+    #tellraw @p [{"score" : {"name":"@s", "objective":"vp.new-offsetX"}}]
+    #tellraw @p [{"nbt":"transformation.translation","entity": "@s"}]
+

@@ -56,9 +56,11 @@ scoreboard objectives add vp.body dummy
 scoreboard objectives add vp.max-engine dummy
 scoreboard objectives add vp.horse-power dummy
 scoreboard objectives add vp.thrust dummy
+scoreboard objectives add vp.wep-thrust dummy
 scoreboard objectives add vp.weight dummy
 scoreboard objectives add vp.add-weight dummy
 scoreboard objectives add vp.throttle dummy
+scoreboard objectives add vp.use-wep dummy
 scoreboard objectives add vp.yaw-gap dummy
 scoreboard objectives add vp.pitch-gap dummy
 scoreboard objectives add vp.sound dummy
