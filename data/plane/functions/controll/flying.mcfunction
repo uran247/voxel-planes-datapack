@@ -48,7 +48,7 @@ execute if entity @s[scores={vp.key-storoke=4..6}] as @e[tag=controll-target,tag
 #throttle20の時Wを3tick押下でWEP、WEP時Sを3tick押下でWEP解除、WEP解除後にSを押しっぱなしにしてもスロットルを下げないようにロック
 execute if entity @s[scores={vp.key-storoke=1..2}] as @e[tag=controll-target,scores={vp.throttle=20},distance=..1,limit=1] run scoreboard players add @s vp.use-wep 1
 execute if entity @s[scores={vp.key-storoke=8}] as @e[tag=controll-target,scores={vp.throttle=20},distance=..1,limit=1] run scoreboard players add @s vp.use-wep 1
-execute as @e[tag=controll-target,tag=has-wep,scores={vp.use-wep=3..},distance=..1,limit=1] run tag @s add use-wep
+execute as @e[tag=controll-target,tag=has-wep,tag=!reloading-wep,scores={vp.use-wep=3..},distance=..1,limit=1] run tag @s add use-wep
 
 execute if entity @s[scores={vp.key-storoke=4..6}] as @e[tag=controll-target,tag=use-wep,scores={vp.throttle=20},distance=..1,limit=1] run tag @s add throttle-change-lock
 execute if entity @s[scores={vp.key-storoke=4..6}] as @e[tag=controll-target,tag=use-wep,scores={vp.throttle=20},distance=..1,limit=1] run tag @s remove use-wep
