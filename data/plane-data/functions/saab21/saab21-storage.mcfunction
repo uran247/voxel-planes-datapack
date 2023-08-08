@@ -17,14 +17,15 @@ data modify storage voxel-planes:plane saab21.plane-data.flight-model.energy-los
 data modify storage voxel-planes:plane saab21.plane-data.model-data.body set value {parking-cmd:19,rolling-cmd:20,flying-cmd:21}
 data modify storage voxel-planes:plane saab21.plane-data.model-data.landing-pitch set value 0
 data modify storage voxel-planes:plane saab21.plane-data.model-data.scale set value [1f,1f,1f]
-data modify storage voxel-planes:plane saab21.plane-data.model-data.translation set value [0f,0f,0.7f]
+data modify storage voxel-planes:plane saab21.plane-data.model-data.translation set value [-0.4f,0f,0.7f]
+data modify storage voxel-planes:plane saab21.plane-data.model-data.central-axis-offset set value 1.375
 data modify storage voxel-planes:plane saab21.plane-data.hitbox set value {}
-data modify storage voxel-planes:plane saab21.plane-data.hitbox merge value {engine:{max-hp:150d,offset:[0d,0.5d,-2d]}}
-data modify storage voxel-planes:plane saab21.plane-data.hitbox merge value {aileron-r:{max-hp:150d,offset:[-3d,0d,0d]},aileron-l:{max-hp:150d,offset:[3d,0d,0d]}}
-data modify storage voxel-planes:plane saab21.plane-data.hitbox merge value {elevator:{max-hp:120d,offset:[0d,0.6d,-4d]}}
-data modify storage voxel-planes:plane saab21.plane-data.hitbox merge value {radder-r:{max-hp:130d,offset:[-2.3d,1.2d,-4d]},radder-l:{max-hp:130d,offset:[2.3d,1.2d,-4d]}}
-data modify storage voxel-planes:plane saab21.plane-data.hitbox merge value {cockpit:{offset:[0d,1d,1d]}}
-data modify storage voxel-planes:plane saab21.plane-data.hitbox merge value {body:{max-hp:160,offset:[0d,1d,0d]}}
+data modify storage voxel-planes:plane saab21.plane-data.hitbox merge value {engine:{max-hp:150d,offset:[0d,0.4d,-0.6d],width:1,height:1}}
+data modify storage voxel-planes:plane saab21.plane-data.hitbox merge value {aileron-r:{max-hp:150d,offset:[-3d,-0.3d,0.1d],width:1.5,height:1.5},aileron-l:{max-hp:150d,offset:[3d,-0.3d,0.1d],width:1.5,height:1.5}}
+data modify storage voxel-planes:plane saab21.plane-data.hitbox merge value {elevator:{max-hp:120d,offset:[0d,0.5d,-5.1d],width:1,height:1}}
+data modify storage voxel-planes:plane saab21.plane-data.hitbox merge value {radder-r:{max-hp:130d,offset:[-1.5d,0.7d,-5.2d],width:0.9,height:0.9},radder-l:{max-hp:130d,offset:[1.5d,0.7d,-5.2d],width:0.9,height:0.9}}
+data modify storage voxel-planes:plane saab21.plane-data.hitbox merge value {cockpit:{offset:[0d,1d,2d],width:0.6,height:0.6}}
+data modify storage voxel-planes:plane saab21.plane-data.hitbox merge value {body:{max-hp:160,offset:[0d,0.4d,0.5d],width:1,height:1}}
 
 #デフォルト機銃データセット
 data modify storage voxel-planes:weapon saab21.base.20mm set value {data:{name:"20mm gun",type:gun,size:20mm,max-ammunition:140,current-ammunition:140,max-cooltime:2,current-cooltime:0,max-reload:280,current-reload:0,tracer:"yellow",damage:60,speed:10.5d,bullets:[{offset:[0.4d,2.4d,4.7d]}]}}

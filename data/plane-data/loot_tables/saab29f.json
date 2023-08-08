@@ -11,14 +11,14 @@
                         {
                             "function": "set_name",
                             "name": {
-                                "text": "$PLANE_NAME"
+                                "text": "SAAB29F"
                             }
                         },
                         {
                             "function": "set_lore",
                             "lore": [
                                 {
-                                    "translate": "$PLANE_TYPE",
+                                    "translate": "戦闘機",
                                     "color": "green",
                                     "bold": true
                                 },
@@ -26,7 +26,7 @@
                                     "translate": " 武装"
                                 },
                                 {
-                                    "translate": "  $WEAPON_NAME_AND_NUMBER",
+                                    "translate": "  20mm機関砲 x4",
                                     "color": "blue"
                                 }
                             ]

@@ -50,3 +50,4 @@ execute as @s[tag=saab21] at @s run function plane-data:saab21/saab21-2-item
 execute as @s[tag=mc202] at @s run function plane-data:mc202/mc202-2-item
 execute as @s[tag=d520] at @s run function plane-data:d520/d520-2-item
 execute as @s[tag=me163b] at @s run function plane-data:me163b/me163b-2-item
+execute as @s[tag=re2005] at @s run function plane-data:re2005/re2005-2-item

@@ -6,6 +6,9 @@
 #   executer @p
 #   position @e[tag=plane-root]
 #
+# @output
+#   tag executer add need-use-weapon
+#
 # @within function plane:controll/weapon
 
 #> prv

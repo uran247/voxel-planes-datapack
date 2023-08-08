@@ -1,27 +1,34 @@
-#処理：装備の変更処理
-#入力：entity plane-root
+#> plane-data:re2005/re2005-equip
+#
+# 装備の変更処理
+# @input
+#   executer @e[tag=plane-root]
+#
+# @within function plane:equip/equip-manager
+
+#> private
+# @private
+    #declare score_holder #100kg #100kgを入力
+    #declare score_holder #500kg #100kgを入力
 
 #装備品チェック
-execute store success score #250kg vp.reg1 if entity @e[distance=..30,type=minecraft:donkey,tag=target-parts,nbt={Items:[{tag:{item-type:250kg-bomb}}]}]
+execute store success score #100kg vp.reg1 if entity @e[type=minecraft:donkey,tag=target-parts,nbt={Items:[{tag:{item-type:100kg-bomb}}]},distance=..30]
+execute store success score #500kg vp.reg1 if entity @e[type=minecraft:donkey,tag=target-parts,nbt={Items:[{tag:{item-type:500kg-bomb}}]},distance=..30]
 
-#初期タグ設定
-tag @s remove 250kg-normal
+#排他装備品判定
 
-#装備
-execute if score #250kg vp.reg1 matches 1.. run tag @s add 250kg-normal
+#ストレージリセット
+data remove storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{data:{type:bomb}}]
 
-#装備種別変更
-scoreboard players set @s vp.weapon-types 2
-#weapon-id
-# 2: 20mm gun
-# 3: bomb
+#weapon-listに武器データアペンド
+execute if score #100kg vp.reg1 matches 1.. unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{data:{type:bomb}}] run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list append from storage voxel-planes:weapon re2005.base.bomb
+execute if score #100kg vp.reg1 matches 1.. run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{data:{type:bomb}}].data.bombs append from storage voxel-planes:weapon re2005.additional.100kg[]
+execute if score #500kg vp.reg1 matches 1.. unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{data:{type:bomb}}] run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list append from storage voxel-planes:weapon re2005.base
+execute if score #500kg vp.reg1 matches 1.. run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{data:{type:bomb}}].data.bombs append from storage voxel-planes:weapon re2005.additional.500kg[]
 
-#装備済み爆弾削除
-scoreboard players set #kill-weapon vp.reg1 0
-execute if entity @s[tag=!250kg-normal] if entity @e[tag=target-parts,tag=250kg,tag=bomb-normal,distance=..32] run scoreboard players set #kill-weapon vp.reg1 1
-execute if score #kill-weapon vp.reg1 matches 1.. run kill @e[tag=target-parts,tag=plane-bomb,distance=..32]
+#弾数変更
+execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{data:{type:bomb}}] store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{data:{type:bomb}}].data.current-ammunition int 1 run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{data:{type:bomb}}].data.bombs
+execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{data:{type:bomb}}] store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{data:{type:bomb}}].data.max-ammunition int 1 run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{data:{type:bomb}}].data.bombs
 
-#弾薬リセット
-
-#ステータス変更
-#装備に応じて右記ステータス変更：最高速度　巡航速度　旋回力
+#不要装備削除
+execute if entity @e[tag=target-parts,tag=plane-bomb,distance=..32] run kill @e[tag=target-parts,tag=plane-bomb]

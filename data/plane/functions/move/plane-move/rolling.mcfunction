@@ -1,6 +1,7 @@
 #> plane:move/plane-move/rolling
 #
 # 角度/速度スコアからベクトルを計算して機体のMotionに反映する
+# 12で割ってる部分は桁合わせの割り算(/10)に加えてマイクラ世界での速度補正値を追加したもの
 #
 # @input
 #   executer @e[tag=plane-root,tag=flying,scores={speed=1..}]

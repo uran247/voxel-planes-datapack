@@ -13,7 +13,7 @@
     #declare tag bomb-init #初期化中の爆弾であることを示す
 
 #爆弾召喚
-summon item_display ~ ~ ~ {Tags:[weapon-init,plane,has-offset,has-model,plane-bomb,plane-parts,entity-nohit,bomb-init,position-processed],NoGravity:1b,item:{id:"minecraft:diamond_sword",Count:1b,tag:{CustomModelData:0}},interpolation_duration:0,view_range:4.0f,transformation:{right_rotation:{angle:0f,axis:[0f,1f,0f]},left_rotation:{angle:0f,axis:[0f,0f,1f]},scale:[1f,1f,1f],translation:[0f,1.5f,0f]},item_display:"thirdperson_righthand",brightness:{block:15,sky:15}}
+summon item_display ~ ~ ~ {Tags:[weapon-init,plane,has-offset,has-model,plane-bomb,plane-parts,entity-nohit,bomb-init,position-processed],NoGravity:1b,item:{id:"minecraft:diamond_sword",Count:1b,tag:{CustomModelData:0}},interpolation_duration:0,view_range:4.0f,transformation:{right_rotation:{angle:0f,axis:[0f,1f,0f]},left_rotation:{angle:0f,axis:[0f,0f,1f]},scale:[1f,1f,1f],translation:[0f,1.5f,0f]},item_display:"thirdperson_righthand",brightness:{block:0,sky:15}}
 
 #データセット
 execute store result score @e[type=item_display,tag=bomb-init,distance=..1,limit=1] vp.offsetX run data get storage minecraft:plane-datapack temporary.weapon.offset[0] 1000

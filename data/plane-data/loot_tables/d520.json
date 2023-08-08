@@ -11,14 +11,14 @@
                         {
                             "function": "set_name",
                             "name": {
-                                "text": "$PLANE_NAME"
+                                "text": "D.520"
                             }
                         },
                         {
                             "function": "set_lore",
                             "lore": [
                                 {
-                                    "translate": "$PLANE_TYPE",
+                                    "translate": "戦闘機",
                                     "color": "green",
                                     "bold": true
                                 },
@@ -26,14 +26,18 @@
                                     "translate": " 武装"
                                 },
                                 {
-                                    "translate": "  $WEAPON_NAME_AND_NUMBER",
+                                    "translate": "  20mm機関砲 x1",
+                                    "color": "blue"
+                                },
+                                {
+                                    "translate": "  7.5mm機銃 x4",
                                     "color": "blue"
                                 }
                             ]
                         },
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{item-type:d520,CustomModelData:43,HideFlags:18,EntityTag:{Silent:1b,Tags:[d520-spawner,plane-spawner],ActiveEffects:[{Id:14b,Amplifier:1b,Duration:100,ShowParticles:0b}]}}"
+                            "tag": "{item-type:d520,CustomModelData:42,HideFlags:18,EntityTag:{Silent:1b,Tags:[d520-spawner,plane-spawner],ActiveEffects:[{Id:14b,Amplifier:1b,Duration:100,ShowParticles:0b}]}}"
                         }
                     ]
                 }

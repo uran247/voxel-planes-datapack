@@ -34,3 +34,8 @@ recipe take @a plane-data:plane/la5-recipe
 recipe take @a plane-data:plane/il2-recipe
 recipe take @a plane-data:plane/pe-2-recipe
 recipe take @a plane-data:plane/mig15bis-recipe
+recipe take @a plane-data:plane/d520-recipe
+recipe take @a plane-data:plane/mc202-recipe
+recipe take @a plane-data:plane/saab21-recipe
+recipe take @a plane-data:plane/saab29f-recipe
+recipe take @a plane-data:plane/re2005-recipe

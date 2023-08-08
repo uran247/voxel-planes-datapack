@@ -34,3 +34,8 @@ recipe take @s[advancements={plane-data:crafting/plane/la5=true}] plane-data:pla
 recipe take @s[advancements={plane-data:crafting/plane/il2=true}] plane-data:plane/il2-recipe
 recipe take @s[advancements={plane-data:crafting/plane/pe-2=true}] plane-data:plane/pe-2-recipe
 recipe take @s[advancements={plane-data:crafting/plane/mig15bis=true}] plane-data:plane/mig15bis-recipe
+recipe take @s[advancements={plane-data:crafting/plane/d520=true}] plane-data:plane/d520-recipe
+recipe take @s[advancements={plane-data:crafting/plane/mc202=true}] plane-data:plane/mc202-recipe
+recipe take @s[advancements={plane-data:crafting/plane/saab21=true}] plane-data:plane/saab21-recipe
+recipe take @s[advancements={plane-data:crafting/plane/saab29f=true}] plane-data:plane/saab29f-recipe
+recipe take @s[advancements={plane-data:crafting/plane/re2005=true}] plane-data:plane/re2005-recipe
