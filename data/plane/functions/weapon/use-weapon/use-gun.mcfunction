@@ -86,13 +86,13 @@ scoreboard players operation #cos vp.reg1 = #cos vp.return
 execute as @e[tag=gun-init,distance=..5] run function plane-data:util/gun-set-position
 
 #音
-execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data{size:7p7mm} run playsound minecraft:weapon.gun-7p7mm.fire master @a ~ ~ ~ 1 1 1
-execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data{size:12p7mm} run playsound minecraft:weapon.gun-12p7mm-2.fire master @a ~ ~ ~ 1 1 1
-execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data{size:13mm} run playsound minecraft:weapon.gun-12p7mm-2.fire master @a ~ ~ ~ 1 1 1
-execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data{size:20mm} run playsound minecraft:weapon.gun-37mm.fire master @a ~ ~ ~ 1 2 1
-execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data{size:23mm} run playsound minecraft:weapon.gun-37mm.fire master @a ~ ~ ~ 1 2 1
-execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data{size:30mm} run playsound minecraft:weapon.gun-37mm.fire master @a ~ ~ ~ 1 1 1
-execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data{size:37mm} run playsound minecraft:weapon.gun-37mm.fire master @a ~ ~ ~ 1 1 1
+execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data{size:7p7mm} run playsound minecraft:weapon.gun-7p7mm.fire master @a ~ ~ ~ 1 1
+execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data{size:12p7mm} run playsound minecraft:weapon.gun-12p7mm-2.fire master @a ~ ~ ~ 1 1
+execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data{size:13mm} run playsound minecraft:weapon.gun-12p7mm-2.fire master @a ~ ~ ~ 1 1
+execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data{size:20mm} run playsound minecraft:weapon.gun-37mm.fire master @a ~ ~ ~ 1 2
+execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data{size:23mm} run playsound minecraft:weapon.gun-37mm.fire master @a ~ ~ ~ 1 2
+execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data{size:30mm} run playsound minecraft:weapon.gun-37mm.fire master @a ~ ~ ~ 1 1
+execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data{size:37mm} run playsound minecraft:weapon.gun-37mm.fire master @a ~ ~ ~ 1 1
 
 #発射炎
 #execute as @e[tag=gun-init,distance=..10] at @s run particle minecraft:cloud ^ ^ ^ 0.1 0.1 0.1 0.1 1 force

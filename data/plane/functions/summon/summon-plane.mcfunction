@@ -15,7 +15,6 @@ execute at @s[tag=n1k2-spawner] as @p run function plane-data:n1k2/n1k2
 execute at @s[tag=a6m5-spawner] as @p run function plane-data:a6m5/a6m5
 execute at @s[tag=ki49-spawner] as @p run function plane-data:ki-49/ki-49
 execute at @s[tag=ki61-spawner] as @p run function plane-data:ki-61/ki-61
-#execute at @s[tag=re2005-spawner] as @p run function plane-data:re2005/re2005
 execute at @s[tag=f4u1-spawner] as @p run function plane-data:f4u-1/f4u1
 execute at @s[tag=fw190d9-spawner] as @p run function plane-data:fw190d-9/fw190d9
 execute at @s[tag=seafuryfb11-spawner] as @p run function plane-data:seafuryfb11/seafuryfb11
