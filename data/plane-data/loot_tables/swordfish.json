@@ -24,7 +24,7 @@
                         },
                         {
                             "function": "minecraft:set_nbt",
-                            "tag":"{item-type:swordfish,tier:1,CustomModelData:17,CanPlaceOn:[\"minecraft:stone\",\"minecraft:grass_path\"],HideFlags:18,EntityTag:{Silent:1b,Tags:[swordfish-spawner,plane-spawner],ActiveEffects:[{Id:14b,Amplifier:1b,Duration:100,ShowParticles:0b}]}}"
+                            "tag":"{item-type:swordfish,tier:1,CustomModelData:17,CanPlaceOn:[\"minecraft:stone\",\"minecraft:grass_path\"],HideFlags:18,EntityTag:{Silent:1b,Tags:[swordfish-spawner,plane-spawner],active_effects:[{id:\"minecraft:invisibility\",amplifier:1b,duration:-1,show_particles:0b}]}}"
                         }
                     ]
                 }

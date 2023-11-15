@@ -38,7 +38,7 @@
                         },
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{item-type:yak9u,CustomModelData:38,HideFlags:18,EntityTag:{Silent:1b,Tags:[yak9u-spawner,plane-spawner],ActiveEffects:[{Id:14b,Amplifier:1b,Duration:100,ShowParticles:0b}]}}"
+                            "tag": "{item-type:yak9u,CustomModelData:38,HideFlags:18,EntityTag:{Silent:1b,Tags:[yak9u-spawner,plane-spawner],active_effects:[{id:\"minecraft:invisibility\",amplifier:1b,duration:-1,show_particles:0b}]}}"
                         }
                     ]
                 }

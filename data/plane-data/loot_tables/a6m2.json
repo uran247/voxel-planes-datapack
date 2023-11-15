@@ -23,7 +23,7 @@
                         },
                         {
                             "function": "minecraft:set_nbt",
-                            "tag":"{item-type:a6m2,tier:2,CustomModelData:5,CanPlaceOn:[\"minecraft:stone\",\"minecraft:grass_path\"],HideFlags:18,EntityTag:{Silent:1b,Tags:[a6m2-spawner,plane-spawner],ActiveEffects:[{Id:14b,Amplifier:1b,Duration:100,ShowParticles:0b}]}}"
+                            "tag":"{item-type:a6m2,tier:2,CustomModelData:5,CanPlaceOn:[\"minecraft:stone\",\"minecraft:grass_path\"],HideFlags:18,EntityTag:{Silent:1b,Tags:[a6m2-spawner,plane-spawner],active_effects:[{id:\"minecraft:invisibility\",amplifier:1b,duration:-1,show_particles:0b}]}}"
                         }
                     ]
                 }

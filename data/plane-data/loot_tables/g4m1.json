@@ -22,7 +22,7 @@
                         },
                         {
                             "function": "minecraft:set_nbt",
-                            "tag":"{item-type:g4m1,weapon:250kg,tier:2,CustomModelData:10,CanPlaceOn:[\"minecraft:stone\",\"minecraft:grass_path\"],HideFlags:18,EntityTag:{Silent:1b,Tags:[g4m1-spawner,plane-spawner,250kg],ActiveEffects:[{Id:14b,Amplifier:1b,Duration:100,ShowParticles:0b}]}}"
+                            "tag":"{item-type:g4m1,weapon:250kg,tier:2,CustomModelData:10,CanPlaceOn:[\"minecraft:stone\",\"minecraft:grass_path\"],HideFlags:18,EntityTag:{Silent:1b,Tags:[g4m1-spawner,plane-spawner,250kg],active_effects:[{id:\"minecraft:invisibility\",amplifier:1b,duration:-1,show_particles:0b}]}}"
                         }
                     ]
                 }
