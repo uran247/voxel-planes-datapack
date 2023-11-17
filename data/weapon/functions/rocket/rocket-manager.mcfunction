@@ -72,12 +72,10 @@ scoreboard players add @s vp.fall-speed 1
 
 #命中してた場合ダメージ処理
 execute if score #hit-flag vp.reg1 matches 1.. at @s run function weapon:rocket/damage/damage
-execute if score #hit-flag vp.reg1 matches 1.. on passengers run kill @s
 execute if score #hit-flag vp.reg1 matches 1.. run kill @s
 
 #向き修正
 data modify entity @s Rotation set from storage minecraft:plane-datapack temporary.Rotation
-execute on passengers run tp @s ~ ~ ~ ~ ~
 
 #音
 playsound minecraft:entity.horse.breathe ambient @a ~ ~ ~ 1 0

@@ -56,13 +56,11 @@ scoreboard players remove @s vp.speedY 1
 #ダメージを与える/地形破壊
 execute if score #hit-flag vp.reg1 matches 1.. at @s run function weapon:dropping/damage/damage
 execute if score #destroy-terrain vp.config matches 1.. if score #hit-flag vp.reg1 matches 1.. at @s run function weapon:dropping/damage/destroy-terrain
-execute if score #hit-flag vp.reg1 matches 1.. on passengers run kill @s
 execute if score #hit-flag vp.reg1 matches 1.. run kill @s
 
 #向き修正
 data modify entity @s Rotation set from storage minecraft:plane-datapack temporary.Rotation
 execute at @s run tp @s ~ ~ ~ ~ ~0.4
-execute on passengers run tp @s ~ ~ ~ ~ ~0.4
 #execute store result score #x-ang vp.reg1 run data get entity @s Rotation[1] 1
 #scoreboard players remove #x-ang vp.reg1 90
 #execute store result entity @s Pose.RightArm[2] float 1 run scoreboard players get #x-ang vp.reg1
@@ -75,5 +73,4 @@ scoreboard players remove @s vp.age 1
 tag @e[tag=hit-weapon,distance=..26] remove hit-weapon
 tag @s remove bomb-move-executer
 tag @e[tag=hit-on-line,distance=..21] remove hit-on-line
-execute as @s[scores={vp.age=0}] on passengers run kill @s
 kill @s[scores={vp.age=0}]

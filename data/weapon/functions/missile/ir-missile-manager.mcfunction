@@ -119,15 +119,12 @@ function weapon:util/set-sun-dummy
 
 #向き修正
 data modify entity @s Rotation set from storage minecraft:plane-datapack temporary.Rotation
-execute on passengers run tp @s ~ ~ ~ ~ ~
-    #execute on passengers run say passenger
 
 #速度更新
 execute if score @s vp.speed < @s vp.max-speed run scoreboard players add @s vp.speed 2
 
 #命中してた場合ダメージ処理
 execute if score #hit-flag vp.reg1 matches 1.. at @s run function weapon:missile/damage/damage
-execute if score #hit-flag vp.reg1 matches 1.. on passengers run kill @s
 execute if score #hit-flag vp.reg1 matches 1.. run kill @s
 
 #音
@@ -144,6 +141,5 @@ scoreboard players remove @s vp.age 1
 tag @e[tag=hit-weapon,distance=..26] remove hit-weapon
 tag @e[tag=hit-on-line,distance=..21] remove hit-on-line
 execute at @s run tag @s remove missile-move-executer
-execute as @s[scores={vp.age=0}] on passengers run kill @s
 kill @s[scores={vp.age=0}]
 

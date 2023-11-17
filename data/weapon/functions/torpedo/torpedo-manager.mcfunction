@@ -50,7 +50,6 @@ scoreboard players remove @s[tag=!sailing] vp.speedY 1
 #ダメージを与える
     #tellraw @p [{"score" : {"name":"#hit-flag", "objective":"vp.reg1"}}]
 execute if score #hit-flag vp.reg1 matches 1.. at @s[tag=sailing] run function weapon:torpedo/damage/damage
-execute if score #hit-flag vp.reg1 matches 1.. on passengers run kill @s
 execute if score #hit-flag vp.reg1 matches 1.. run kill @s
 
 #航行中のパーティクル
@@ -59,7 +58,6 @@ execute if entity @s[tag=sailing] anchored eyes positioned ^ ^ ^-0.8 run particl
 #向き修正
 data modify entity @s Rotation set from storage minecraft:plane-datapack temporary.Rotation
 execute if entity @s[tag=!sailing] at @s run tp @s ~ ~ ~ ~ ~0.4
-execute if entity @s[tag=!sailing] on passengers run tp @s ~ ~ ~ ~ ~0.4
 
 # 水中にいるか判定し航行モードにチェンジ
 execute at @s[tag=!sailing] anchored eyes if block ~ ~3 ~ minecraft:water if block ~ ~ ~ minecraft:water run function weapon:torpedo/mode/mode-change
@@ -72,5 +70,4 @@ scoreboard players remove @s vp.age 1
 tag @e[tag=hit-weapon,distance=..26] remove hit-weapon
 tag @s remove torpedo-move-executer
 tag @e[tag=hit-on-line,distance=..21] remove hit-on-line
-execute as @s[scores={vp.age=0}] on passengers run kill @s
 kill @s[scores={vp.age=0}]
