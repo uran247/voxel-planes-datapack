@@ -17,15 +17,15 @@ data modify storage voxel-planes:plane f4u1.plane-data.flight-model.energy-loss-
 data modify storage voxel-planes:plane f4u1.plane-data.model-data.body set value {parking-cmd:1,rolling-cmd:2,flying-cmd:3}
 data modify storage voxel-planes:plane f4u1.plane-data.model-data.landing-pitch set value -12.0
 data modify storage voxel-planes:plane f4u1.plane-data.model-data.scale set value [2f,2f,2f]
-data modify storage voxel-planes:plane f4u1.plane-data.model-data.translation set value [0f,0.3f,0.8f]
+data modify storage voxel-planes:plane f4u1.plane-data.model-data.translation set value [0f,-0.2f,0.8f]
 data modify storage voxel-planes:plane f4u1.plane-data.model-data.central-axis-offset set value 1.5
 data modify storage voxel-planes:plane f4u1.plane-data.hp set value {engine:300d,body:330d,aileron:240d,elevetor:210d,radder:210d}
 data modify storage voxel-planes:plane f4u1.plane-data.hitbox set value {}
-data modify storage voxel-planes:plane f4u1.plane-data.hitbox merge value {engine:{max-hp:210d,offset:[0.3d,-0.4d,4.5d],width:1.1,height:1.1}}
-data modify storage voxel-planes:plane f4u1.plane-data.hitbox merge value {body:{max-hp:220d,offset:[0.3d,-0.5d,0d],width:1.1,height:1.1}}
+data modify storage voxel-planes:plane f4u1.plane-data.hitbox merge value {engine:{max-hp:210d,offset:[0d,-0.4d,4.5d],width:1.1,height:1.1}}
+data modify storage voxel-planes:plane f4u1.plane-data.hitbox merge value {body:{max-hp:220d,offset:[0d,-0.5d,0d],width:1.1,height:1.1}}
 data modify storage voxel-planes:plane f4u1.plane-data.hitbox merge value {aileron-r:{max-hp:200d,offset:[-3.5d,-1.0d,2.2d],width:1.5,height:1.5},aileron-l:{max-hp:200d,offset:[3.5d,-1.0d,2.2d],width:1.5,height:1.5}}
 data modify storage voxel-planes:plane f4u1.plane-data.hitbox merge value {elevator-r:{max-hp:190d,offset:[-1.3d,-0.2d,-3.5d],width:0.8,height:0.8},elevator-l:{max-hp:190d,offset:[1.3d,-0.2d,-3.5d],width:0.8,height:0.8}}
-data modify storage voxel-planes:plane f4u1.plane-data.hitbox merge value {radder:{max-hp:200d,offset:[0.3d,0.8d,-2.8d],width:0.9,height:0.9}}
+data modify storage voxel-planes:plane f4u1.plane-data.hitbox merge value {radder:{max-hp:200d,offset:[0d,0.8d,-2.8d],width:0.9,height:0.9}}
 data modify storage voxel-planes:plane f4u1.plane-data.hitbox merge value {cockpit:{offset:[0.0d,0.7d,1.4d],width:0.4,height:0.4}}
 
 #デフォルト機銃データセット
