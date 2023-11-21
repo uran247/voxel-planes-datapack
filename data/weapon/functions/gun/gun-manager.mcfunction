@@ -47,7 +47,12 @@ execute store result storage minecraft:plane-datapack temporary.Pos[2] double 0.
 scoreboard players operation #plane-id vp.reg1 = @s vp.plane-id
 
 # 弾の移動および衝突判定
-execute as @e[tag=block-checker,distance=..1,x=0,y=1,z=0,limit=1] run function weapon:gun/move
+data remove storage voxel-planes:input input
+execute store result storage voxel-planes:input input.x double 0.01 run scoreboard players get @s vp.speedX
+execute store result storage voxel-planes:input input.y double 0.01 run scoreboard players get @s vp.speedY
+execute store result storage voxel-planes:input input.z double 0.01 run scoreboard players get @s vp.speedZ
+function weapon:gun/move with storage voxel-planes:input input
+#execute as @e[tag=block-checker,distance=..1,x=0,y=1,z=0,limit=1] run function weapon:gun/move
 
 #命中してた場合ダメージ処理
 execute if score #hit-flag vp.reg1 matches 2 run function weapon:gun/damage/damage

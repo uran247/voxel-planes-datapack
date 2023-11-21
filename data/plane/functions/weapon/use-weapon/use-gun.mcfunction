@@ -77,13 +77,11 @@ scoreboard players add @e[type=armor_stand,tag=gun-init,distance=..1] vp.max-age
 
 #tellraw @p [{"nbt":"Tags","entity": "@e[tag=bullet1,distance=..1,limit=1]"}]
 
-#スコア付与
-
-#発射位置に移動
+#発射位置に移動してスコア付与
 function plane:position/util/calc-triangle-ratio
 scoreboard players operation #sin vp.reg1 = #sin vp.return
 scoreboard players operation #cos vp.reg1 = #cos vp.return
-execute as @e[tag=gun-init,distance=..5] run function plane-data:util/gun-set-position
+execute as @e[tag=gun-init,distance=..5] run function plane-data:util/gun-set-position-and-speed
 
 #音
 execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data{size:7p7mm} run playsound minecraft:weapon.gun-7p7mm.fire master @a ~ ~ ~ 1 1

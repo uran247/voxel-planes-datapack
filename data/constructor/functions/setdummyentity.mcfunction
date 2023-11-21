@@ -29,7 +29,7 @@ summon minecraft:marker 0.0 1.0 0.0 {Tags:[entity-nohit,dummy-entity],UUID:[I;0,
 #0-0-0-0-9,a: 爆弾照準用、どこにでも移動しうる
 summon minecraft:marker 0.0 1.0 0.0 {Tags:[entity-nohit,dummy-entity],UUID:[I;0,0,0,9]}
 summon minecraft:marker 0.0 1.0 0.0 {Tags:[entity-nohit,dummy-entity],UUID:[I;0,0,0,10]}
-#近接信管系の当たり判定認識用、どこにでも移動しうる
+#0-0-0-0-b 近接信管系の当たり判定認識用、どこにでも移動しうる
 summon minecraft:marker 0.0 1.0 0.0 {Tags:[entity-nohit,dummy-entity],UUID:[I;0,0,0,11]}
 #0-0-0-0-c: 疑似太陽
 summon minecraft:marker 0.0 1.0 0.0 {Tags:[entity-nohit,dummy-entity,dummy-sun],UUID:[I;0,0,0,12]}
