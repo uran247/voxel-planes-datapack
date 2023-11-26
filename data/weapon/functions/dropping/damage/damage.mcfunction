@@ -35,8 +35,7 @@ scoreboard players operation #bomb-id vp.reg1 = @s vp.plane-id
 execute as @a if score @s vp.plane-id = #bomb-id vp.reg1 run tag @s add weapon-owner
 
 #### ダメージ判定 ####
-#hpからダメージを引く]
-execute as @e[tag=!entity-nohit,distance=..32] run function weapon:util/set-entity-hp
+#hpからダメージを引く
 scoreboard players operation #damage vp.reg1 = @s vp.damage
 #execute as @e[tag=base,distance=..50] run function weapon:dropping/damage/base-damage
 scoreboard players set @e[tag=!entity-nohit,distance=..32] vp.input 0
@@ -72,15 +71,12 @@ scoreboard players operation #damage vp.reg1 /= #2 vp.Num
 scoreboard players operation @e[tag=!entity-nohit,distance=..30] vp.input += #damage vp.reg1
 scoreboard players operation #damage vp.reg1 /= #2 vp.Num
 scoreboard players operation @e[tag=!entity-nohit,distance=..32] vp.input += #damage vp.reg1
-execute as @e[type=!player,tag=!plane-hitbox,tag=!entity-nohit,distance=..32] if score @s vp.input matches 1.. run function weapon:util/calc-entity-damage
+
+#飛行機当たり判定へのダメージ
 execute as @e[type=!player,tag=plane-hitbox,tag=!entity-nohit,distance=..32] if score @s vp.input matches 1.. run function weapon:util/calc-hitbox-damage
 
-#スコアをエンティティのHPに反映
-execute as @e[type=!spawner_minecart,tag=!cockpit,tag=!entity-nohit,distance=..32] store result entity @s Health float 1 run scoreboard players get @s vp.reg1
-
-#飛行機に乗ってないプレイヤーにダメージ反映
-execute as @a[tag=!entity-nohit,distance=..32] run scoreboard players operation @s vp.taken-damage = @s vp.input
-execute as @a[tag=!entity-nohit,distance=..32] run function weapon:util/damage
+# entityへのダメージ
+execute as @e[tag=!plane-hitbox,tag=!entity-nohit,distance=..32] run function weapon:util/blast-damage
 
 #撃墜者/クリアスコアをプラス
 #execute as @p[tag=weapon-owner] run function weapon:dropping/damage/set-shotdown-score

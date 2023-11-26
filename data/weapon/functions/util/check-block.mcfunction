@@ -5,28 +5,30 @@
 #
 # @input
 #   executer @e
-#       視線終端点entity
-#   position at @e
-#       視線主エンティティ
+#       視線主entity
+#   at @e
+#       視線主entity
+#   score #range vp.input
+#       何ブロック先までチェックするか[block*10]
 #
 # @output
 #   storage voxel-planes:return return #ブロックが見つかった地点の座標
-#   score #x vp.return
-#   score #y vp.return
-#   score #z vp.return
 #
 # @public
-#
+   #declare score_holder #current-range
+
+
+#> within
+# @within
+#   function weapon:util/check-block/check-block-recursive
+#   function weapon:util/check-block
+   #declare score_holder #range
 
 tp 0-0-0-0-9 0.0 1.0 0.0
 
-execute facing entity @s eyes positioned ^ ^ ^25.6 run function weapon:util/check-block/step1
-
+scoreboard players set #current-range vp.reg1 0
+function weapon:util/check-block/check-block-recursive
 data remove storage voxel-planes:return return
 data modify storage voxel-planes:return return set from entity 0-0-0-0-9 Pos
-execute store result score #x vp.return run data get storage voxel-planes:return return[0] 100
-execute store result score #y vp.return run data get storage voxel-planes:return return[1] 100
-execute store result score #z vp.return run data get storage voxel-planes:return return[2] 100
-#tellraw @p [{"nbt":"Pos","entity":"0-0-0-0-9"}] 
 
 tp 0-0-0-0-9 0.0 1.0 0.0

@@ -52,8 +52,11 @@ execute as @e[tag=use-init,distance=..1,limit=1] store result score @s vp.new-of
 execute as @e[tag=use-init,distance=..1,limit=1] store result score @s vp.new-offsetY run data get entity @s transformation.translation[1] 1000
 execute as @e[tag=use-init,distance=..1,limit=1] store result score @s vp.offsetZ run scoreboard players get @s vp.offsetZ
 data modify entity @e[tag=use-init,distance=..1,limit=1] transformation.translation set value [0f,0f,0f]
-execute as @e[tag=use-init,distance=..20,limit=1] at @s run function plane:position/calc-offset
-execute as @e[tag=use-init,distance=..20,limit=1] at @s run function plane:position/util/move-parts
+#アマスタにライドしてマウントポイントが2ブロック上にずれているので補正
+execute as @e[tag=use-init,distance=..1,limit=1] run scoreboard players add @s vp.new-offsetY 2000
+
+data modify entity @e[tag=use-init,distance=..1,limit=1] transformation.translation set value [0f,0f,0f]
+execute at @s as @e[tag=use-init,distance=..1,limit=1] run function plane:position/move-to-offset
 
 #tellraw @p [{"score" : {"name":"@e[tag=use-init,distance=..5,limit=1]", "objective":"speed"}}, {"text":" "}, {"score" : {"name":"@e[tag=drop-init,distance=..5,limit=1]", "objective":"age"}}]
 

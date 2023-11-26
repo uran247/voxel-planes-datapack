@@ -64,8 +64,9 @@ execute if entity @s[tag=radder] store result storage oh_my_dat: _[-4][-4][-4][-
 execute if entity @s[tag=radder-r] store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.radder-r.hp double 1 run scoreboard players get #current-hp vp.reg1
 execute if entity @s[tag=radder-l] store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.radder-l.hp double 1 run scoreboard players get #current-hp vp.reg1
 
-execute if entity @s[tag=cockpit] run scoreboard players operation @p[tag=parts-owner] vp.taken-damage = @s vp.input
-execute if entity @s[tag=cockpit] as @p[tag=parts-owner] run function weapon:util/damage
+execute if entity @s[tag=cockpit] run data remove storage voxel-planes:input input
+execute if entity @s[tag=cockpit] store result storage voxel-planes:input input.damage float 1 run scoreboard players get @s vp.input
+execute if entity @s[tag=cockpit] as @p[tag=parts-owner] run function weapon:util/damage with storage voxel-planes:input input
 
 #機体破壊判定
 execute as @e[tag=plane-root,tag=parts-owner,distance=..32] at @s run function util:parts-health

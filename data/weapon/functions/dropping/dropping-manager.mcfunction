@@ -34,21 +34,16 @@ data modify storage minecraft:plane-datapack temporary.Rotation set from entity 
 #ヒットフラグ初期化
 scoreboard players set #hit-flag vp.reg1 0
 
-# 実行者を変える前に移動量計算に必要なスコアを取っておく
-data modify storage minecraft:plane-datapack temporary.Pos set from entity @s Pos
-execute store result score #pos-x vp.reg1 run data get storage minecraft:plane-datapack temporary.Pos[0] 100
-execute store result score #pos-y vp.reg1 run data get storage minecraft:plane-datapack temporary.Pos[1] 100
-execute store result score #pos-z vp.reg1 run data get storage minecraft:plane-datapack temporary.Pos[2] 100
-execute store result storage minecraft:plane-datapack temporary.Pos[0] double 0.01 run scoreboard players operation #pos-x vp.reg1 += @s vp.speedX
-execute store result storage minecraft:plane-datapack temporary.Pos[1] double 0.01 run scoreboard players operation #pos-y vp.reg1 += @s vp.speedY
-execute store result storage minecraft:plane-datapack temporary.Pos[2] double 0.01 run scoreboard players operation #pos-z vp.reg1 += @s vp.speedZ
-    #tellraw @p [{"score" : {"name":"@s", "objective":"vp.speedY"}}]
-
 #爆弾の衝突判定のときに使うスコアを取っておく
 scoreboard players operation #plane-id vp.reg1 = @s vp.plane-id
 
 #移動&ヒット判定
-execute as @e[tag=block-checker,distance=..1,x=0,y=1,z=0,limit=1] run function weapon:dropping/move
+data remove storage voxel-planes:input input
+execute store result storage voxel-planes:input input.x double 0.01 run scoreboard players get @s vp.speedX
+execute store result storage voxel-planes:input input.y double 0.01 run scoreboard players get @s vp.speedY
+execute store result storage voxel-planes:input input.z double 0.01 run scoreboard players get @s vp.speedZ
+function weapon:dropping/move with storage voxel-planes:input input
+    #execute if entity @s[scores={vp.age=1200}] run tellraw @p [{"nbt":"Pos","entity": "@s"}]
 
 #y方向の速度更新
 scoreboard players remove @s vp.speedY 1
@@ -61,10 +56,7 @@ execute if score #hit-flag vp.reg1 matches 1.. run kill @s
 #向き修正
 data modify entity @s Rotation set from storage minecraft:plane-datapack temporary.Rotation
 execute at @s run tp @s ~ ~ ~ ~ ~0.4
-#execute store result score #x-ang vp.reg1 run data get entity @s Rotation[1] 1
-#scoreboard players remove #x-ang vp.reg1 90
-#execute store result entity @s Pose.RightArm[2] float 1 run scoreboard players get #x-ang vp.reg1
-#tellraw @p [{"nbt":"Rotation","entity":"@s"}] 
+    #tellraw @p [{"nbt":"Rotation","entity":"@s"}] 
 
 #age更新
 scoreboard players remove @s vp.age 1

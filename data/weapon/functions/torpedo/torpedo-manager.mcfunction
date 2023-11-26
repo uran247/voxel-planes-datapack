@@ -28,20 +28,15 @@ tag @s add torpedo-move-executer
 #元々の向きを保存
 data modify storage minecraft:plane-datapack temporary.Rotation set from entity @s Rotation
 
-# 実行者を変える前に移動量計算に必要なスコアを取っておく
-data modify storage minecraft:plane-datapack temporary.Pos set from entity @s Pos
-execute store result score #pos-x vp.reg1 run data get storage minecraft:plane-datapack temporary.Pos[0] 100
-execute store result score #pos-y vp.reg1 run data get storage minecraft:plane-datapack temporary.Pos[1] 100
-execute store result score #pos-z vp.reg1 run data get storage minecraft:plane-datapack temporary.Pos[2] 100
-execute store result storage minecraft:plane-datapack temporary.Pos[0] double 0.01 run scoreboard players operation #pos-x vp.reg1 += @s vp.speedX
-execute store result storage minecraft:plane-datapack temporary.Pos[1] double 0.01 run scoreboard players operation #pos-y vp.reg1 += @s vp.speedY
-execute store result storage minecraft:plane-datapack temporary.Pos[2] double 0.01 run scoreboard players operation #pos-z vp.reg1 += @s vp.speedZ
-
 #ヒットフラグ初期化
 scoreboard players set #hit-flag vp.reg1 0
 
 # 移動&ヒット判定
-execute as @e[tag=block-checker,distance=..1,x=0,y=1,z=0,limit=1] run function weapon:torpedo/move
+data remove storage voxel-planes:input input
+execute store result storage voxel-planes:input input.x double 0.01 run scoreboard players get @s vp.speedX
+execute store result storage voxel-planes:input input.y double 0.01 run scoreboard players get @s vp.speedY
+execute store result storage voxel-planes:input input.z double 0.01 run scoreboard players get @s vp.speedZ
+execute at @s run function weapon:torpedo/move with storage voxel-planes:input input
 
 #y方向の速度更新
 scoreboard players remove @s[tag=!sailing] vp.speedY 1

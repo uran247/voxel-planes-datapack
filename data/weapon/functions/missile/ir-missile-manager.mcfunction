@@ -36,6 +36,9 @@
 #実行者にタグ付け
 tag @s add missile-move-executer
 
+#ヒットフラグ初期化
+scoreboard players set #hit-flag vp.reg1 0
+
 #dummy sun初期化
 execute positioned 0.0 0.0 0.0 unless entity @e[tag=dummy-sun,distance=..0.01] run tp @e[tag=dummy-sun] 0.0 0.0 0.0
 execute positioned 0.0 0.0 0.0 unless entity @e[tag=dummy-sun,distance=..0.01] run kill @e[type=marker,tag=dummy-sun]
@@ -75,6 +78,7 @@ function weapon:util/set-sun-dummy
 
     #speedX,Y,Z更新
     execute at @s run function math:vector
+        #execute if entity @e[tag=ir-missile-target] run tellraw @p [{"nbt":"Rotation","entity":"@s"}] 
 
     #reset
     tag @s remove turn-left
@@ -101,21 +105,17 @@ function weapon:util/set-sun-dummy
 
         #tellraw @p [{"score" : {"name":"#speedX", "objective":"vp.reg1"}}," ",{"score" : {"name":"#speedY", "objective":"vp.reg1"}}," ",{"score" : {"name":"#speedZ", "objective":"vp.reg1"}}]
 
-    data modify storage minecraft:plane-datapack temporary.Pos set from entity @s Pos
-    execute store result score #pos-x vp.reg1 run data get storage minecraft:plane-datapack temporary.Pos[0] 100
-    execute store result score #pos-y vp.reg1 run data get storage minecraft:plane-datapack temporary.Pos[1] 100
-    execute store result score #pos-z vp.reg1 run data get storage minecraft:plane-datapack temporary.Pos[2] 100
-    execute store result storage minecraft:plane-datapack temporary.Pos[0] double 0.01 run scoreboard players operation #pos-x vp.reg1 += #speedX vp.reg1
-    execute store result storage minecraft:plane-datapack temporary.Pos[1] double 0.01 run scoreboard players operation #pos-y vp.reg1 += #speedY vp.reg1
-    execute store result storage minecraft:plane-datapack temporary.Pos[2] double 0.01 run scoreboard players operation #pos-z vp.reg1 += #speedZ vp.reg1
-
     scoreboard players operation #plane-id vp.reg1 = @s vp.plane-id
 
     #元々の向きを保存
     data modify storage minecraft:plane-datapack temporary.Rotation set from entity @s Rotation
 
-    #移動&ヒット判定
-    execute as @e[tag=block-checker,distance=..1,x=0,y=1,z=0,limit=1] run function weapon:missile/move
+    # 弾の移動および衝突判定
+    data remove storage voxel-planes:input input
+    execute store result storage voxel-planes:input input.x double 0.01 run scoreboard players get #speedX vp.reg1
+    execute store result storage voxel-planes:input input.y double 0.01 run scoreboard players get #speedY vp.reg1
+    execute store result storage voxel-planes:input input.z double 0.01 run scoreboard players get #speedZ vp.reg1
+    execute at @s run function weapon:missile/move with storage voxel-planes:input input
 
 #向き修正
 data modify entity @s Rotation set from storage minecraft:plane-datapack temporary.Rotation

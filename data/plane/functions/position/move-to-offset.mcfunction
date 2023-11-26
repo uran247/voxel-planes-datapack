@@ -13,5 +13,7 @@ data remove storage voxel-planes:input input
 execute store result storage voxel-planes:input input.x float 0.001 run scoreboard players get @s vp.new-offsetX
 execute store result storage voxel-planes:input input.y float 0.001 run scoreboard players get @s vp.new-offsetY
 execute store result storage voxel-planes:input input.z float 0.001 run scoreboard players get @s vp.offsetZ
+    #execute if entity @s[nbt={UUID:[I;0,0,0,10]}] run tellraw @p [{"nbt":"input","storage":"voxel-planes:input"}]
+    #execute if entity @s[nbt={UUID:[I;0,0,0,10]}] run tellraw @p [{"score":{"name": "@s","objective": "vp.new-offsetX"}}]
 
-execute as @s at @s run function util:scoretp with storage voxel-planes:input input
+function util:scoretp with storage voxel-planes:input input

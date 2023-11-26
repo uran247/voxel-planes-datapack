@@ -17,8 +17,6 @@
 tag @s add bombing-executer
 
 #投下対象判定
-#scoreboard players operation #plane-id vp.reg1 = @s vp.plane-id
-#execute as @e[tag=plane-bomb,tag=target-parts,tag=plane,distance=..20,limit=1] if score @s vp.plane-id = #plane-id vp.reg1 run tag @s add use-init
 scoreboard players set #init-tag-add vp.reg1 0
 execute on passengers if entity @s[tag=plane-bomb] run function plane:weapon/use-weapon/tags-first-weapon
 
@@ -53,13 +51,14 @@ ride @e[tag=use-init,distance=..1,limit=1] dismount
 execute as @e[tag=use-init,distance=..1,limit=1] store result score @s vp.new-offsetX run data get entity @s transformation.translation[0] 1000
 execute as @e[tag=use-init,distance=..1,limit=1] store result score @s vp.new-offsetY run data get entity @s transformation.translation[1] 1000
 execute as @e[tag=use-init,distance=..1,limit=1] store result score @s vp.offsetZ run scoreboard players get @s vp.offsetZ
-data modify entity @e[tag=use-init,distance=..20,limit=1] transformation.translation set value [0f,0f,0f]
-#execute as @e[tag=use-init,distance=..20,limit=1] at @s run function plane:position/calc-offset
-#execute as @e[tag=use-init,distance=..20,limit=1] at @s run function plane:position/util/move-parts
-execute at @s as @e[tag=use-init,distance=..20,limit=1] run function plane:position/move-to-offset
+#アマスタにライドしてマウントポイントが2ブロック上にずれているので補正
+execute as @e[tag=use-init,distance=..1,limit=1] run scoreboard players add @s vp.new-offsetY 2000
 
-#tellraw @p [{"score" : {"name":"@e[tag=use-init,distance=..5,limit=1]", "objective":"speed"}}, {"text":" "}, {"score" : {"name":"@e[tag=use-init,distance=..5,limit=1]", "objective":"age"}}]
-
+data modify entity @e[tag=use-init,distance=..1,limit=1] transformation.translation set value [0f,0f,0f]
+execute at @s as @e[tag=use-init,distance=..1,limit=1] run function plane:position/move-to-offset
+    #tellraw @p [{"score" : {"name":"@e[tag=use-init,distance=..5,limit=1]", "objective":"speed"}}, {"text":" "}, {"score" : {"name":"@e[tag=use-init,distance=..5,limit=1]", "objective":"age"}}]
+    #execute as @e[tag=use-init,limit=1] run tellraw @p [{"nbt":"Pos","entity": "@s"}]
+    
 #cooltime時間設定
 data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data.current-cooltime set value 4
 

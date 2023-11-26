@@ -13,10 +13,7 @@ $tp @s ~ ~ ~ facing ~$(x) ~$(y) ~$(z)
 
 #移動予定先までの間にブロックがあるか判定
 scoreboard players operation #current-range vp.reg1 = @s vp.speed
-execute at @s run function weapon:util/check-block-new
-#execute unless score #x vp.return matches 0 unless score #y vp.return matches 100 unless score #z vp.return matches 0 run scoreboard players set #hit-flag vp.reg1 1
-#execute if score #hit-flag vp.reg1 matches 1 run tag @s add hit-weapon
-#execute if score #hit-flag vp.reg1 matches 1 run data modify entity @s Pos set from storage voxel-planes:return return
+execute at @s run function weapon:util/check-block
 execute unless data storage voxel-planes:return {return:[0d,1.0d,0d]} run scoreboard players set #hit-flag vp.reg1 1
 execute if score #hit-flag vp.reg1 matches 1 run data modify entity 0-0-0-0-4 Pos set from storage voxel-planes:return return
 execute if score #hit-flag vp.reg1 matches 1 run tag 0-0-0-0-4 add hit-weapon
@@ -25,8 +22,9 @@ execute if score #hit-flag vp.reg1 matches 1 run tag @s add hit-weapon
 #移動予定先までの間にエンティティがいるか判定
 data remove storage voxel-planes:input input
 execute store result storage voxel-planes:input input.range float 0.05 run scoreboard players get @s vp.speed
-execute facing entity @s eyes run function weapon:util/check-entity-new with storage voxel-planes:input input
+execute at @s run function weapon:util/check-entity with storage voxel-planes:input input
 execute if entity @e[tag=hit-on-line,tag=!entity-nohit,distance=..20] run scoreboard players set #hit-flag vp.reg1 2
+
 
 #移動予定先までの間のエンティティで命中可能なやつにタグ付け
 execute if score #hit-flag vp.reg1 matches 2 as @e[tag=hit-on-line,tag=!entity-nohit,distance=..20] unless score @s vp.plane-id = #plane-id vp.reg1 run tag @s add hit-weapon
@@ -40,5 +38,4 @@ execute if score #hit-flag vp.reg1 matches 1.. run tp @s @e[tag=hit-weapon,dista
     #tellraw @p {"score":{"name": "#hit-flag", "objective": "vp.reg1"}}
 
 # entity返却
-tag 0-0-0-0-4 remove hit-weapon
 tp 0-0-0-0-4 0.0 1.0 0.0

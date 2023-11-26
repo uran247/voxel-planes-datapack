@@ -1,23 +1,14 @@
 #> weapon:util/damage
 #
-# プレイヤーのスコアに今回のtickで受けるべきダメージを保存する
+# エンティティに引数分のダメージを与える
 #
 # @input
-#   executer @p
-#   score @s vp.taken-damage
-#
-# @output
-#   score @s vp.total-damage
+#   as @s ダメージを与えられるエンティティ
+#   @p[tag=weapon-owner] ダメージを与えるプレイヤー
+#   with storage voxel-planes:input input.damage　ダメージ量
 #
 # @within function weapon:**
 #
 
-#合計ダメージ計算
-scoreboard players operation @s vp.total-damage += @s vp.taken-damage
-
-#ダメージを受けたフラグをつける
-tag @s add get-damage
-
-#taken-damege削除
-scoreboard players reset @s vp.taken-damage
-
+$damage @s $(damage) explosion by @p[tag=weapon-owner] 
+    #$say $(damage)

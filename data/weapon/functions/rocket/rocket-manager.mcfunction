@@ -38,7 +38,10 @@ data modify storage minecraft:plane-datapack temporary.Rotation set from entity 
 #ヒットフラグ初期化
 scoreboard players set #hit-flag vp.reg1 0
 
-# 実行者を変える前に移動量計算に必要なスコアを取っておく
+#弾の衝突判定のときに使うスコアを取っておく
+scoreboard players operation #plane-id vp.reg1 = @s vp.plane-id
+
+# 移動速度を更新
 scoreboard players operation #speedX vp.reg1 = @s vp.speedX
 scoreboard players operation #speedY vp.reg1 = @s vp.speedY
 scoreboard players operation #speedZ vp.reg1 = @s vp.speedZ
@@ -48,21 +51,14 @@ scoreboard players operation #speedZ vp.reg1 *= @s vp.speed
 scoreboard players operation #speedX vp.reg1 /= #10 vp.Num
 scoreboard players operation #speedY vp.reg1 /= #10 vp.Num
 scoreboard players operation #speedZ vp.reg1 /= #10 vp.Num
-
-data modify storage minecraft:plane-datapack temporary.Pos set from entity @s Pos
-execute store result score #pos-x vp.reg1 run data get storage minecraft:plane-datapack temporary.Pos[0] 100
-execute store result score #pos-y vp.reg1 run data get storage minecraft:plane-datapack temporary.Pos[1] 100
-execute store result score #pos-z vp.reg1 run data get storage minecraft:plane-datapack temporary.Pos[2] 100
-scoreboard players operation #pos-y vp.reg1 -= @s vp.fall-speed
-execute store result storage minecraft:plane-datapack temporary.Pos[0] double 0.01 run scoreboard players operation #pos-x vp.reg1 += #speedX vp.reg1
-execute store result storage minecraft:plane-datapack temporary.Pos[1] double 0.01 run scoreboard players operation #pos-y vp.reg1 += #speedY vp.reg1
-execute store result storage minecraft:plane-datapack temporary.Pos[2] double 0.01 run scoreboard players operation #pos-z vp.reg1 += #speedZ vp.reg1
-
-#弾の衝突判定のときに使うスコアを取っておく
-scoreboard players operation #plane-id vp.reg1 = @s vp.plane-id
+scoreboard players operation #speedY vp.reg1 -= @s vp.fall-speed
 
 # 弾の移動および衝突判定
-execute as @e[tag=block-checker,distance=..1,x=0,y=1,z=0,limit=1] run function weapon:rocket/move
+data remove storage voxel-planes:input input
+execute store result storage voxel-planes:input input.x double 0.01 run scoreboard players get #speedX vp.reg1
+execute store result storage voxel-planes:input input.y double 0.01 run scoreboard players get #speedY vp.reg1
+execute store result storage voxel-planes:input input.z double 0.01 run scoreboard players get #speedZ vp.reg1
+function weapon:rocket/move with storage voxel-planes:input input
 
 #速度更新
 scoreboard players add @s[scores={vp.speed=..48}] vp.speed 2
@@ -72,6 +68,7 @@ scoreboard players add @s vp.fall-speed 1
 
 #命中してた場合ダメージ処理
 execute if score #hit-flag vp.reg1 matches 1.. at @s run function weapon:rocket/damage/damage
+execute if score #destroy-terrain vp.config matches 1.. if score #hit-flag vp.reg1 matches 1.. at @s run function weapon:rocket/damage/destroy-terrain
 execute if score #hit-flag vp.reg1 matches 1.. run kill @s
 
 #向き修正
@@ -81,8 +78,8 @@ data modify entity @s Rotation set from storage minecraft:plane-datapack tempora
 playsound minecraft:entity.horse.breathe ambient @a ~ ~ ~ 1 0
 
 #particle
-execute at @s positioned ~ ~ ~ run particle minecraft:cloud ^ ^ ^-2 0 0 0 0 3 force
-execute at @s positioned ~ ~ ~ run particle minecraft:flame ^ ^ ^-2 0 0 0 0.03 3 force
+execute at @s[scores={vp.speed=..48}] positioned ~ ~ ~ run particle minecraft:cloud ^ ^ ^-2 0 0 0 0 3 force
+execute at @s[scores={vp.speed=..48}] positioned ~ ~ ~ run particle minecraft:flame ^ ^ ^-2 0 0 0 0.03 3 force
 
 #タグ削除
 tag @e[tag=hit-weapon,distance=..26] remove hit-weapon

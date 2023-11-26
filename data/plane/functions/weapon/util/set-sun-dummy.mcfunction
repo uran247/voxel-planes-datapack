@@ -26,5 +26,5 @@ function util:get-sun-rotation
 #太陽がいる場合ダミーエンティティ設置
 execute if data storage voxel-planes:return sun-rotation run data modify entity 0-0-0-0-1 Rotation set from storage voxel-planes:return sun-rotation
 execute if data storage voxel-planes:return sun-rotation positioned 0.0 1.0 0.0 run tag @e[tag=dummy-sun,limit=1] add target-candidate
-execute if data storage voxel-planes:return sun-rotation positioned 0.0 1.0 0.0 rotated as 0-0-0-0-1 positioned as @s run tp @e[tag=dummy-sun,limit=1] ^ ^ ^16
+execute if data storage voxel-planes:return sun-rotation positioned 0.0 1.0 0.0 rotated as 0-0-0-0-1 positioned as @s if loaded ^ ^ ^16 run tp @e[tag=dummy-sun,limit=1] ^ ^ ^16
 #execute if data storage voxel-planes:return sun-rotation positioned 0.0 0.0 0.0 rotated as 0-0-0-0-1 positioned as @s run particle dust 1 1 1 2 ^ ^ ^16 0 0 0 0 100 force
