@@ -17,7 +17,7 @@ data modify storage voxel-planes:plane p47d.plane-data.flight-model.energy-loss-
 data modify storage voxel-planes:plane p47d.plane-data.model-data.body set value {parking-cmd:56,rolling-cmd:57,flying-cmd:58}
 data modify storage voxel-planes:plane p47d.plane-data.model-data.landing-pitch set value -12.5
 data modify storage voxel-planes:plane p47d.plane-data.model-data.scale set value [1f,1f,1f]
-data modify storage voxel-planes:plane p47d.plane-data.model-data.translation set value [0f,0f,0.7f]
+data modify storage voxel-planes:plane p47d.plane-data.model-data.translation set value [0f,-0.5f,0.7f]
 data modify storage voxel-planes:plane p47d.plane-data.model-data.central-axis-offset set value 1.375
 data modify storage voxel-planes:plane p47d.plane-data.hitbox set value {}
 data modify storage voxel-planes:plane p47d.plane-data.hitbox merge value {engine:{max-hp:280d,offset:[0d,-0.6d,5d],width:1.2,height:1.2}}

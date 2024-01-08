@@ -17,7 +17,7 @@ data modify storage voxel-planes:plane spitfiremkix.plane-data.flight-model.ener
 data modify storage voxel-planes:plane spitfiremkix.plane-data.model-data.body set value {parking-cmd:16,rolling-cmd:17,flying-cmd:18}
 data modify storage voxel-planes:plane spitfiremkix.plane-data.model-data.landing-pitch set value -11.0
 data modify storage voxel-planes:plane spitfiremkix.plane-data.model-data.scale set value [1f,1f,1f]
-data modify storage voxel-planes:plane spitfiremkix.plane-data.model-data.translation set value [0f,0f,0.7f]
+data modify storage voxel-planes:plane spitfiremkix.plane-data.model-data.translation set value [0f,-0.5f,0.7f]
 data modify storage voxel-planes:plane spitfiremkix.plane-data.hp set value {engine:130d,body:140d,aileron:130d,elevetor:120d,radder:120d}
 data modify storage voxel-planes:plane spitfiremkix.plane-data.model-data.central-axis-offset set value 1.3
 data modify storage voxel-planes:plane spitfiremkix.plane-data.hitbox set value {}

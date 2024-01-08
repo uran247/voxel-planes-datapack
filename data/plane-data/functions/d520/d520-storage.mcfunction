@@ -17,7 +17,7 @@ data modify storage voxel-planes:plane d520.plane-data.flight-model.energy-loss-
 data modify storage voxel-planes:plane d520.plane-data.model-data.body set value {parking-cmd:41,rolling-cmd:42,flying-cmd:43}
 data modify storage voxel-planes:plane d520.plane-data.model-data.landing-pitch set value -12
 data modify storage voxel-planes:plane d520.plane-data.model-data.scale set value [1f,1f,1f]
-data modify storage voxel-planes:plane d520.plane-data.model-data.translation set value [-0.3f,0f,0f]
+data modify storage voxel-planes:plane d520.plane-data.model-data.translation set value [-0.3f,-0.5f,0f]
 data modify storage voxel-planes:plane d520.plane-data.model-data.central-axis-offset set value 1.375
 data modify storage voxel-planes:plane d520.plane-data.hitbox set value {}
 data modify storage voxel-planes:plane d520.plane-data.hitbox merge value {engine:{max-hp:160d,offset:[0d,-0.2d,2.5d],width:1,height:1}}

@@ -17,7 +17,7 @@ data modify storage voxel-planes:plane saab29f.plane-data.flight-model.energy-lo
 data modify storage voxel-planes:plane saab29f.plane-data.model-data.body set value {parking-cmd:211,rolling-cmd:211,flying-cmd:212}
 data modify storage voxel-planes:plane saab29f.plane-data.model-data.landing-pitch set value -1
 data modify storage voxel-planes:plane saab29f.plane-data.model-data.scale set value [1f,1f,1f]
-data modify storage voxel-planes:plane saab29f.plane-data.model-data.translation set value [0f,0f,0f]
+data modify storage voxel-planes:plane saab29f.plane-data.model-data.translation set value [0f,-0.5f,0f]
 data modify storage voxel-planes:plane saab29f.plane-data.model-data.central-axis-offset set value 1.375
 data modify storage voxel-planes:plane saab29f.plane-data.model-data.afterburner set value [{scale:[0.5f,0.5f,1.8f],translation:[-0.25f,-0.4f,-8f]}]
 data modify storage voxel-planes:plane saab29f.plane-data.hitbox set value {}

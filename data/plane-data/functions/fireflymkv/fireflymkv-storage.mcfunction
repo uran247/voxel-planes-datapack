@@ -17,7 +17,7 @@ data modify storage voxel-planes:plane fireflymkv.plane-data.flight-model.energy
 data modify storage voxel-planes:plane fireflymkv.plane-data.model-data.body set value {parking-cmd:38,rolling-cmd:39,flying-cmd:40}
 data modify storage voxel-planes:plane fireflymkv.plane-data.model-data.landing-pitch set value -12.5
 data modify storage voxel-planes:plane fireflymkv.plane-data.model-data.scale set value [1f,1f,1f]
-data modify storage voxel-planes:plane fireflymkv.plane-data.model-data.translation set value [0f,0f,0.7f]
+data modify storage voxel-planes:plane fireflymkv.plane-data.model-data.translation set value [0f,-0.5f,0.7f]
 data modify storage voxel-planes:plane fireflymkv.plane-data.model-data.central-axis-offset set value 1.375
 data modify storage voxel-planes:plane fireflymkv.plane-data.hp set value {engine:130d,body:140d,aileron:140d,elevetor:120d,radder:120d}
 data modify storage voxel-planes:plane fireflymkv.plane-data.hitbox set value {}

@@ -20,7 +20,7 @@ data modify storage voxel-planes:plane bf109g.plane-data.hp set value {engine:35
 data modify storage voxel-planes:plane bf109g.plane-data.hitbox set value {}
 data modify storage voxel-planes:plane bf109g.plane-data.model-data.scale set value [1f,1f,1f]
 data modify storage voxel-planes:plane bf109g.plane-data.model-data.central-axis-offset set value 1.375
-data modify storage voxel-planes:plane bf109g.plane-data.model-data.translation set value [0f,0f,0.7f]
+data modify storage voxel-planes:plane bf109g.plane-data.model-data.translation set value [0f,-0.5f,0.7f]
 data modify storage voxel-planes:plane bf109g.plane-data.hitbox merge value {engine:{max-hp:100d,offset:[0d,-0.5d,2.2d],width:1,height:1}}
 data modify storage voxel-planes:plane bf109g.plane-data.hitbox merge value {body:{max-hp:330d,offset:[0.3d,-0.5d,0d],width:1,height:1}}
 data modify storage voxel-planes:plane bf109g.plane-data.hitbox merge value {aileron-r:{max-hp:210d,offset:[-2.5d,-0.5d,0.4d],width:1,height:1},aileron-l:{max-hp:210d,offset:[2.5d,-0.5d,0.4d],width:1,height:1}}

@@ -17,7 +17,7 @@ data modify storage voxel-planes:plane a5m.plane-data.flight-model.energy-loss-r
 data modify storage voxel-planes:plane a5m.plane-data.model-data.body set value {parking-cmd:85,rolling-cmd:86,flying-cmd:86}
 data modify storage voxel-planes:plane a5m.plane-data.model-data.landing-pitch set value -14.0
 data modify storage voxel-planes:plane a5m.plane-data.model-data.scale set value [1f,1f,1f]
-data modify storage voxel-planes:plane a5m.plane-data.model-data.translation set value [0f,0f,0.5f]
+data modify storage voxel-planes:plane a5m.plane-data.model-data.translation set value [0f,-0.5f,0.5f]
 data modify storage voxel-planes:plane a5m.plane-data.model-data.central-axis-offset set value 1.125
 data modify storage voxel-planes:plane a5m.plane-data.hp set value {engine:50d,body:50d,aileron:50d,elevetor:40d,radder:40d}
 data modify storage voxel-planes:plane a5m.plane-data.hitbox set value {}

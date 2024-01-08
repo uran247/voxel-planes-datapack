@@ -17,7 +17,7 @@ data modify storage voxel-planes:plane j2m3.plane-data.flight-model.energy-loss-
 data modify storage voxel-planes:plane j2m3.plane-data.model-data.body set value {parking-cmd:93,rolling-cmd:94,flying-cmd:95}
 data modify storage voxel-planes:plane j2m3.plane-data.model-data.landing-pitch set value -11.5
 data modify storage voxel-planes:plane j2m3.plane-data.model-data.scale set value [1f,1f,1f]
-data modify storage voxel-planes:plane j2m3.plane-data.model-data.translation set value [0f,0f,0.7f]
+data modify storage voxel-planes:plane j2m3.plane-data.model-data.translation set value [0f,-0.5f,0.7f]
 data modify storage voxel-planes:plane j2m3.plane-data.model-data.central-axis-offset set value 1.375
 data modify storage voxel-planes:plane j2m3.plane-data.hp set value {engine:90d,body:110d,aileron:100d,elevetor:80d,radder:90d}
 data modify storage voxel-planes:plane j2m3.plane-data.hitbox set value {}
@@ -29,5 +29,5 @@ data modify storage voxel-planes:plane j2m3.plane-data.hitbox merge value {radde
 data modify storage voxel-planes:plane j2m3.plane-data.hitbox merge value {cockpit:{offset:[0d,0.6d,1.6d],width:0.5,height:0.5}}
 
 #デフォルト機銃データセット
-data modify storage voxel-planes:weapon j2m3.base.model1-20mm.data set value {name:"Model1 20mm gun",type:gun,size:20mm,max-ammunition:100,current-ammunition:100,max-cooltime:2,current-cooltime:0,max-reload:280,current-reload:0,tracer:"yellow",damage:60,speed:7.5d,bullets:[{offset:[2.26d,-0.35d,2.7d]},{offset:[-2.46d,-0.35d,2.7d]}]}
-data modify storage voxel-planes:weapon j2m3.base.model2-20mm.data set value {name:"Model2 20mm gun",type:gun,size:20mm,max-ammunition:100,current-ammunition:100,max-cooltime:2,current-cooltime:0,max-reload:280,current-reload:0,tracer:"lightblue",damage:60,speed:9.5,bullets:[{offset:[1.86d,-0.4d,3.2d]},{offset:[-2.08d,-0.4d,3.2d]}]}
+data modify storage voxel-planes:weapon j2m3.base.model1-20mm.data set value {name:"Model1 20mm gun",type:gun,size:20mm,max-ammunition:100,current-ammunition:100,max-cooltime:2,current-cooltime:0,max-reload:280,current-reload:0,tracer:"yellow",damage:60,speed:7.5d,bullets:[{offset:[2.4d,1.1d,3.6d]},{offset:[-2.25d,1.1d,3.6d]}]}
+data modify storage voxel-planes:weapon j2m3.base.model2-20mm.data set value {name:"Model2 20mm gun",type:gun,size:20mm,max-ammunition:100,current-ammunition:100,max-cooltime:2,current-cooltime:0,max-reload:280,current-reload:0,tracer:"lightblue",damage:60,speed:9.5,bullets:[{offset:[2d,1.05d,4.1d]},{offset:[-1.95d,1.05d,4.1d]}]}

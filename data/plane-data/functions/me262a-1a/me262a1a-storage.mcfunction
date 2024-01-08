@@ -17,7 +17,7 @@ data modify storage voxel-planes:plane me262a1a.plane-data.flight-model.energy-l
 data modify storage voxel-planes:plane me262a1a.plane-data.model-data.body set value {parking-cmd:128,rolling-cmd:128,flying-cmd:129}
 data modify storage voxel-planes:plane me262a1a.plane-data.model-data.landing-pitch set value 0
 data modify storage voxel-planes:plane me262a1a.plane-data.model-data.scale set value [2f,2f,2f]
-data modify storage voxel-planes:plane me262a1a.plane-data.model-data.translation set value [0f,0.5f,-0.3f]
+data modify storage voxel-planes:plane me262a1a.plane-data.model-data.translation set value [0f,0.0f,-0.3f]
 data modify storage voxel-planes:plane me262a1a.plane-data.model-data.central-axis-offset set value 1.75
 data modify storage voxel-planes:plane me262a1a.plane-data.hp set value {engine:400d,body:430d,aileron:420d,elevetor:400d,radder:400d}
 data modify storage voxel-planes:plane me262a1a.plane-data.hitbox set value {}

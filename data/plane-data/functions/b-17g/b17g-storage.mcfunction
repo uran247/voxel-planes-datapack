@@ -19,7 +19,7 @@ data modify storage voxel-planes:plane b17g.plane-data.model-data.rightwing set 
 data modify storage voxel-planes:plane b17g.plane-data.model-data.leftwing set value {parking-cmd:158,rolling-cmd:159,flying-cmd:159,offset:[3.1d,0d,0d]}
 data modify storage voxel-planes:plane b17g.plane-data.model-data.landing-pitch set value -7.0
 data modify storage voxel-planes:plane b17g.plane-data.model-data.scale set value [4.488f,4.488f,4.488f]
-data modify storage voxel-planes:plane b17g.plane-data.model-data.translation set value [0f,1.1f,1.5f]
+data modify storage voxel-planes:plane b17g.plane-data.model-data.translation set value [0f,0.6f,1.5f]
 data modify storage voxel-planes:plane b17g.plane-data.model-data.central-axis-offset set value 1.875
 data modify storage voxel-planes:plane b17g.plane-data.hitbox set value {}
 data modify storage voxel-planes:plane b17g.plane-data.hitbox merge value {body:{max-hp:420d,offset:[0d,0d,0d]}}

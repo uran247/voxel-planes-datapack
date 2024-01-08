@@ -17,7 +17,7 @@ data modify storage voxel-planes:plane mig15bis.plane-data.flight-model.energy-l
 data modify storage voxel-planes:plane mig15bis.plane-data.model-data.body set value {parking-cmd:175,rolling-cmd:175,flying-cmd:176}
 data modify storage voxel-planes:plane mig15bis.plane-data.model-data.landing-pitch set value 0
 data modify storage voxel-planes:plane mig15bis.plane-data.model-data.scale set value [1f,1f,1f]
-data modify storage voxel-planes:plane mig15bis.plane-data.model-data.translation set value [0f,0f,0f]
+data modify storage voxel-planes:plane mig15bis.plane-data.model-data.translation set value [0f,-0.5f,0f]
 data modify storage voxel-planes:plane mig15bis.plane-data.model-data.central-axis-offset set value 1.375
 data modify storage voxel-planes:plane mig15bis.plane-data.hitbox set value {}
 data modify storage voxel-planes:plane mig15bis.plane-data.hitbox merge value {engine:{max-hp:310d,offset:[0d,-0.6d,-0.5d],width:1.2,height:1.2}}
@@ -28,8 +28,8 @@ data modify storage voxel-planes:plane mig15bis.plane-data.hitbox merge value {c
 data modify storage voxel-planes:plane mig15bis.plane-data.hitbox merge value {body:{max-hp:320d,offset:[0d,-0.6d,0d],width:1.2,height:1.2}}
 
 #デフォルト機銃データセット
-data modify storage voxel-planes:weapon mig15bis.base.23mm set value {data:{name:"23mm",type:gun,size:23mm,max-ammunition:80,current-ammunition:80,max-cooltime:2,current-cooltime:0,max-reload:300,current-reload:0,tracer:"orange",damage:170,speed:8.6f,bullets:[{offset:[0.1d,0d,5d]},{offset:[0.4d,0d,5d]}]}}
-data modify storage voxel-planes:weapon mig15bis.base.37mm set value {data:{name:"37mm",type:gun,size:37mm,max-ammunition:40,current-ammunition:40,max-cooltime:4,current-cooltime:0,max-reload:300,current-reload:0,tracer:"lightgreen",damage:290,speed:8.6f,bullets:[{offset:[-0.3d,0d,5d]}]}}
+data modify storage voxel-planes:weapon mig15bis.base.23mm set value {data:{name:"23mm",type:gun,size:23mm,max-ammunition:80,current-ammunition:80,max-cooltime:2,current-cooltime:0,max-reload:300,current-reload:0,tracer:"orange",damage:170,speed:8.6f,bullets:[{offset:[0.32d,0.7d,2.9d]},{offset:[0.4d,0.7d,3.3d]}]}}
+data modify storage voxel-planes:weapon mig15bis.base.37mm set value {data:{name:"37mm",type:gun,size:37mm,max-ammunition:40,current-ammunition:40,max-cooltime:4,current-cooltime:0,max-reload:300,current-reload:0,tracer:"lightgreen",damage:290,speed:8.6f,bullets:[{offset:[-0.2d,0.7d,3.3d]}]}}
 
 #デフォルト爆弾データセット
 data modify storage voxel-planes:weapon mig15bis.base.bomb.data set value {name:bomb,type:bomb,max-ammunition:0,current-ammunition:0,max-reload:3600,current-reload:0,bombs:[]}

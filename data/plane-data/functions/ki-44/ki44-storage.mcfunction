@@ -16,7 +16,7 @@ data modify storage voxel-planes:plane ki44.plane-data.flight-model.energy-loss-
 data modify storage voxel-planes:plane ki44.plane-data.model-data.body set value {parking-cmd:90,rolling-cmd:91,flying-cmd:92}
 data modify storage voxel-planes:plane ki44.plane-data.model-data.landing-pitch set value -11.5
 data modify storage voxel-planes:plane ki44.plane-data.model-data.scale set value [1f,1f,1f]
-data modify storage voxel-planes:plane ki44.plane-data.model-data.translation set value [0f,0f,0.7f]
+data modify storage voxel-planes:plane ki44.plane-data.model-data.translation set value [0f,-0.5f,0.7f]
 data modify storage voxel-planes:plane ki44.plane-data.model-data.central-axis-offset set value 1.375
 data modify storage voxel-planes:plane ki44.plane-data.hp set value {engine:110d,body:120d,aileron:110d,elevetor:100d,radder:100d}
 data modify storage voxel-planes:plane ki44.plane-data.hitbox set value {}

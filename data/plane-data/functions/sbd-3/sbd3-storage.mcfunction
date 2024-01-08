@@ -17,7 +17,7 @@ data modify storage voxel-planes:plane sbd3.plane-data.flight-model.energy-loss-
 data modify storage voxel-planes:plane sbd3.plane-data.model-data.body set value {parking-cmd:22,rolling-cmd:23,flying-cmd:24}
 data modify storage voxel-planes:plane sbd3.plane-data.model-data.landing-pitch set value -13
 data modify storage voxel-planes:plane sbd3.plane-data.model-data.scale set value [2f,2f,2f]
-data modify storage voxel-planes:plane sbd3.plane-data.model-data.translation set value [0f,0.1f,-2f]
+data modify storage voxel-planes:plane sbd3.plane-data.model-data.translation set value [0f,-0.4f,-2f]
 data modify storage voxel-planes:plane sbd3.plane-data.model-data.central-axis-offset set value 1.3
 data modify storage voxel-planes:plane sbd3.plane-data.hitbox set value {}
 data modify storage voxel-planes:plane sbd3.plane-data.hitbox merge value {body:{max-hp:150d,offset:[0.0d,-0.6d,0d],width:1.2,height:1.2}}
