@@ -31,36 +31,36 @@
 #入力：entity plane-root
 #処理：飛行機の位置修正
 
-#自分と同じIDを判定しタグ付け
+# 実行者マーク
 tag @s add plane-position-executer
 
-#角度スコアが前tickから変化したか判定しタグ付け
+# パーツ位置を再計算する必要があるかチェック
 execute if score @s vp.AngX-old = @s vp.AngX if score @s vp.AngY-old = @s vp.AngY if score @s vp.AngZ-old = @s vp.AngZ run tag @s add angle-not-changed
 tag @s[tag=!angle-not-changed] add need-calc-offset
 
-#シートとクリック検知以外の自分と同じIDのパーツを自分の位置へ
+# シートとクリック検知以外の自分と同じIDのパーツを自分の位置へ
 execute at @s run tp @e[tag=target-parts,tag=!plane-seat,distance=..32] ~ ~ ~ ~ ~
 
-#ヘルスチェック
+# パーツのヘルスチェック
 execute as @s at @s run function util:parts-health
 
-#体力表示更新
+# 体力表示更新(本来は表示処理でやるべきだがパーツが1座標に集まるタイミングここなので軽さのために実行)
 execute at @s as @e[type=minecraft:donkey,tag=target-parts,tag=plane-seat,distance=..30] run function plane:position/util/renew-health-display
 
-#移動力補正スコア収集
+# 移動力補正スコア収集(本来は移動処理でやるべきだがパーツが1座標に集まるタイミングここなので軽さのために実行)
 execute as @s at @s run function plane:position/util/get-corret-param
 
-#航空機ごとの個別処理
+# 航空機ごとの個別処理
 function plane:position/position-individual
 
-#hitbox召喚/削除
+# hitbox補充/削除
 function plane:position/summon-controll-entity
 function plane:position/delete-hitbox
 
-#武器召喚
+# 武器召喚
 function plane:position/summon-weapon
 
-#パーツをオフセット位置へ
+# パーツをオフセット位置へ
 execute at @s[tag=need-calc-offset] run function plane:position/util/calc-triangle-ratio
 scoreboard players operation #sin vp.reg1 = #sin vp.return
 scoreboard players operation #cos vp.reg1 = #cos vp.return
@@ -74,33 +74,33 @@ execute on passengers if entity @s[type=item_display,tag=has-offset] run functio
 execute on passengers if entity @s[type=block_display,tag=has-offset] run function plane:position/util/set-translation
 tag @s remove need-calc-offset
 
-#afterburner on/off
+# afterburnerの見た目on/off
 function plane:position/util/toggle-afterburner
 
-#角度スコアが変化していた場合ベクトル計算
+# 角度スコアが変化していた場合ベクトル再計算
 execute if entity @s[tag=!angle-not-changed] run function math:vector
 
-#角度補正
+# 角度をエンティティに反映
 execute at @s[tag=!angle-not-changed] run function plane:position/util/modify-angle
 #execute at @s[tag=angle-not-changed] run function plane:position/util/stable-display
 
-#パケット強制送信で描画ズレを阻止
+# パケット強制送信で描画ズレを阻止
 function plane:position/force-packet
 
-#seatの位置表示
+# seatの位置表示
 execute if entity @s[tag=!has-rider,tag=!no-move] at @e[type=armor_stand,tag=target-parts,tag=plane-seat,tag=!no-particle,distance=..20] run particle minecraft:happy_villager ~ ~2.8 ~ 0.1 0.1 0.1 1 1 force @a[tag=!plane-rider,distance=..8]
 
-#飛行機にriderがいない場合クリック検知のrideをはがす
+# 飛行機にriderがいない場合クリック検知のrideをはがす
 execute if entity @s[tag=!has-rider,tag=!no-move] as @e[type=donkey,tag=target-parts,tag=plane-seat,distance=..32] on passengers run ride @s dismount
 
-#Ang-oldに現在のAng代入
+# 変化前angleの保持
 scoreboard players operation @s vp.AngX-old = @s vp.AngX
 scoreboard players operation @s vp.AngY-old = @s vp.AngY
 scoreboard players operation @s vp.AngZ-old = @s vp.AngZ
 
-#処理済みタグ付与
+# 処理済みのエンティティをマーク
 tag @e[tag=target-parts,distance=..32] add position-processed
 
-#タグ削除
+# マーク削除
 tag @s remove plane-position-executer
 execute if entity @s[tag=angle-not-changed] run tag @s remove angle-not-changed

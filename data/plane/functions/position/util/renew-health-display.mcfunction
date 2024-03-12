@@ -29,7 +29,7 @@
     #declare score_holder #radder-r
     #declare score_holder #radder-l
 
-#各パーツの体力取得
+# 各パーツの体力取得
 execute store result score #body vp.reg1 run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.body.hp
 execute store result score #engine vp.reg1 run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.engine.hp
 execute store result score #engine-r vp.reg1 run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.engine-r.hp
@@ -47,7 +47,7 @@ execute store result score #radder vp.reg1 run data get storage oh_my_dat: _[-4]
 execute store result score #radder-r vp.reg1 run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.radder-r.hp
 execute store result score #radder-l vp.reg1 run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.radder-l.hp
 
-#パーツの合計体力取得
+# パーツの合計体力取得
 scoreboard players set #total-health vp.reg1 0
 scoreboard players operation #total-health vp.reg1 += #body vp.reg1
 scoreboard players operation #total-health vp.reg1 += #engine vp.reg1
@@ -68,7 +68,7 @@ scoreboard players operation #total-health vp.reg1 += #radder-l vp.reg1
 
 #tellraw @p [{"score" : {"name":"#total-health", "objective":"vp.reg1"}}]
 
-#パーツの体力を体力表示に反映
+# パーツの体力を体力表示に反映
 execute store result score @s vp.reg1 run data get entity @s Health
 scoreboard players operation #total-health vp.reg1 /= #50 vp.Num
 execute if score #total-health vp.reg1 matches ..0 run scoreboard players set #total-health vp.reg1 1

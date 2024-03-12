@@ -37,7 +37,7 @@ execute if entity @s[tag=has-dummy-rider,tag=has-ai] run function plane:controll
 # 移動
 execute as @s[tag=!no-move] at @s run function plane:move/plane-move
 
-# 位置補正
+# 飛行機の見た目をあるべき状態に補正
 execute as @s at @s run function plane:position/position
 
 # 武器使用

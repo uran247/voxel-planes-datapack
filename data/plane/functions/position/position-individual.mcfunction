@@ -5,7 +5,7 @@
 # @within function plane:position/position
 #
 
-#航空機ごとの個別処理
+# 航空機ごとの個別処理
 execute as @s[tag=d3a] run function plane-data:d3a/d3a-position
 execute as @s[tag=ki21] run function plane-data:ki-21/ki-21-position
 execute as @s[tag=ki43] run function plane-data:ki-43/ki-43-position

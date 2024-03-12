@@ -22,4 +22,4 @@
 
 scoreboard players operation #angle vp.input1 = @s vp.AngZ
 function math:sincos
-#tellraw @p [{"score" : {"name":"#angle", "objective":"input1"}}]
+    #tellraw @p [{"score" : {"name":"#angle", "objective":"input1"}}]

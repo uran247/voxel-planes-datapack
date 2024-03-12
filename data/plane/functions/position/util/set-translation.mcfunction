@@ -10,10 +10,10 @@
 #
 # @within function plane:position/position
 
-#初期化
+# 初期化
 data modify storage minecraft:plane-datapack temporary.translation set value [0f,0f,0f]
 
-#代入
+# 代入
 execute store result storage minecraft:plane-datapack temporary.translation[0] float 0.001 run scoreboard players get @s vp.new-offsetX
 execute store result storage minecraft:plane-datapack temporary.translation[1] float 0.001 run scoreboard players get @s vp.new-offsetY
 execute store result storage minecraft:plane-datapack temporary.translation[2] float 0.001 run scoreboard players get @s vp.offsetZ
