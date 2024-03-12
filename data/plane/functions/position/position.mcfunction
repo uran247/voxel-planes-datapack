@@ -54,7 +54,7 @@ execute as @s at @s run function plane:position/util/get-corret-param
 function plane:position/position-individual
 
 #hitbox召喚/削除
-function plane:position/summon-hitbox
+function plane:position/summon-controll-entity
 function plane:position/delete-hitbox
 
 #武器召喚
@@ -70,8 +70,6 @@ scoreboard players operation @s[tag=need-calc-offset] vp.cos = #cos vp.return
 execute if entity @s[tag=need-calc-offset] run scoreboard players operation #model-offset-y vp.input = @s vp.model-offset-y
 execute if entity @s[tag=need-calc-offset] run scoreboard players operation #central-axis-offset-y vp.input = @s vp.central-axis-offset-y
 execute at @s[tag=need-calc-offset] as @e[tag=has-offset,tag=target-parts,distance=..30] run function plane:position/util/calc-displacement
-#execute at @s[tag=need-calc-offset] as @e[type=!item_display,type=!block_display,tag=has-offset,tag=target-parts,distance=..30] at @s rotated ~ ~ run function plane:position/calc-offset
-#execute at @s as @e[type=!item_display,type=!block_display,tag=has-offset,tag=target-parts,distance=..30] run function plane:position/util/move-parts
 execute at @s as @e[type=!item_display,type=!block_display,tag=has-offset,tag=target-parts,distance=..30] at @s run function plane:position/move-to-offset
 execute on passengers if entity @s[type=item_display,tag=has-offset] run function plane:position/util/set-translation
 execute on passengers if entity @s[type=block_display,tag=has-offset] run function plane:position/util/set-translation

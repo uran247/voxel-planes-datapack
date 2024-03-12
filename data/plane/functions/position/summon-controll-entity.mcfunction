@@ -1,4 +1,4 @@
-#> plane:position/summon-hitbox
+#> plane:position/summon-controll-entity
 #
 # @input
 #   executer @e[tag=plane-root]
@@ -41,6 +41,9 @@ execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.cock
 #click detector
 execute unless entity @e[tag=plane-click-detector,tag=target-parts,distance=..30] run summon interaction ~ ~ ~ {Tags:[plane-init,target-parts,plane,plane-click-detector],NoGravity:1b,width:1.1f,height:2.1f,response:0b}
 
+#display entity
+execute unless entity @e[tag=plane-display-base,tag=target-parts,distance=..30] run summon armor_stand ~ ~ ~ {Tags:[plane-init,target-parts,plane,plane-display-base,plane-display],NoGravity:1b,Small:1b,Invisible:1b,Invulnerable:1b,DisabledSlots:4144959}
+execute unless entity @e[tag=plane-display-lockon,tag=target-parts,distance=..30] run summon text_display ~ ~ ~ {Tags:[plane-init,target-parts,plane,plane-display-lockon,plane-display],NoGravity:1b,background:0,view_range:0.05f,teleport_duration:1,transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,-10f],scale:[5f,5f,5f]}}
 
 #ステータスセット
 #body

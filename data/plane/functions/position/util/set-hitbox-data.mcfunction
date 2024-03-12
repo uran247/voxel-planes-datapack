@@ -5,7 +5,7 @@
 # @input
 #   executer @e[type=slime,tag=plane-init,tag=plane-hitbox]
 #
-# @within function plane:position/summon-hitbox
+# @within function plane:position/summon-controll-entity
 #
 
 execute store result score @s vp.offsetX run data get storage voxel-planes:input input.offset[0] 1000
