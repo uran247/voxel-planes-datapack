@@ -1,0 +1,48 @@
+#> plane:weapon/util/gun-fcs/particle
+#
+# 偏差位置のパーティクル表示
+#
+# @within function plane:weapon/util/gun-fcs
+
+# [ImportKey]: NobwRALgngDgpmAXGAxgSwE4oDYIDRgCuhaAJkmAIYoAcNADAMwqkC0plAnAEasAsAdhqdWNUgFY+7OCgEC+AJgEKUjemAIA7SgFsEyQGGKAAgCMGsDEoZdAZyTgUAe0KaISPvQIo4ruBntgAG6U2IT64AAeSJ5gUNEAvvEE1qRohHaIJgB04gQ2EFZuiDFw2NhoMDb6JvQxGI4FEPoxaDYAomUVVW0AjoQh2FAAypbe5IgAZiFViQC6QA_3
+# 円 1
+particle composter ^0 ^-1.5 ^ 0 0 0 0 1 force @p[tag=plane-pilot]
+particle composter ^0.23465 ^-1.48153 ^ 0 0 0 0 1 force @p[tag=plane-pilot]
+particle composter ^0.46353 ^-1.42658 ^ 0 0 0 0 1 force @p[tag=plane-pilot]
+particle composter ^0.68099 ^-1.33651 ^ 0 0 0 0 1 force @p[tag=plane-pilot]
+particle composter ^0.88168 ^-1.21353 ^ 0 0 0 0 1 force @p[tag=plane-pilot]
+particle composter ^1.06066 ^-1.06066 ^ 0 0 0 0 1 force @p[tag=plane-pilot]
+particle composter ^1.21353 ^-0.88168 ^ 0 0 0 0 1 force @p[tag=plane-pilot]
+particle composter ^1.33651 ^-0.68099 ^ 0 0 0 0 1 force @p[tag=plane-pilot]
+particle composter ^1.42658 ^-0.46353 ^ 0 0 0 0 1 force @p[tag=plane-pilot]
+particle composter ^1.48153 ^-0.23465 ^ 0 0 0 0 1 force @p[tag=plane-pilot]
+particle composter ^1.5 ^0 ^ 0 0 0 0 1 force @p[tag=plane-pilot]
+particle composter ^1.48153 ^0.23465 ^ 0 0 0 0 1 force @p[tag=plane-pilot]
+particle composter ^1.42658 ^0.46353 ^ 0 0 0 0 1 force @p[tag=plane-pilot]
+particle composter ^1.33651 ^0.68099 ^ 0 0 0 0 1 force @p[tag=plane-pilot]
+particle composter ^1.21353 ^0.88168 ^ 0 0 0 0 1 force @p[tag=plane-pilot]
+particle composter ^1.06066 ^1.06066 ^ 0 0 0 0 1 force @p[tag=plane-pilot]
+particle composter ^0.88168 ^1.21353 ^ 0 0 0 0 1 force @p[tag=plane-pilot]
+particle composter ^0.68099 ^1.33651 ^ 0 0 0 0 1 force @p[tag=plane-pilot]
+particle composter ^0.46353 ^1.42658 ^ 0 0 0 0 1 force @p[tag=plane-pilot]
+particle composter ^0.23465 ^1.48153 ^ 0 0 0 0 1 force @p[tag=plane-pilot]
+particle composter ^0 ^1.5 ^ 0 0 0 0 1 force @p[tag=plane-pilot]
+particle composter ^-0.23465 ^1.48153 ^ 0 0 0 0 1 force @p[tag=plane-pilot]
+particle composter ^-0.46353 ^1.42658 ^ 0 0 0 0 1 force @p[tag=plane-pilot]
+particle composter ^-0.68099 ^1.33651 ^ 0 0 0 0 1 force @p[tag=plane-pilot]
+particle composter ^-0.88168 ^1.21353 ^ 0 0 0 0 1 force @p[tag=plane-pilot]
+particle composter ^-1.06066 ^1.06066 ^ 0 0 0 0 1 force @p[tag=plane-pilot]
+particle composter ^-1.21353 ^0.88168 ^ 0 0 0 0 1 force @p[tag=plane-pilot]
+particle composter ^-1.33651 ^0.68099 ^ 0 0 0 0 1 force @p[tag=plane-pilot]
+particle composter ^-1.42658 ^0.46353 ^ 0 0 0 0 1 force @p[tag=plane-pilot]
+particle composter ^-1.48153 ^0.23465 ^ 0 0 0 0 1 force @p[tag=plane-pilot]
+particle composter ^-1.5 ^0 ^ 0 0 0 0 1 force @p[tag=plane-pilot]
+particle composter ^-1.48153 ^-0.23465 ^ 0 0 0 0 1 force @p[tag=plane-pilot]
+particle composter ^-1.42658 ^-0.46353 ^ 0 0 0 0 1 force @p[tag=plane-pilot]
+particle composter ^-1.33651 ^-0.68099 ^ 0 0 0 0 1 force @p[tag=plane-pilot]
+particle composter ^-1.21353 ^-0.88168 ^ 0 0 0 0 1 force @p[tag=plane-pilot]
+particle composter ^-1.06066 ^-1.06066 ^ 0 0 0 0 1 force @p[tag=plane-pilot]
+particle composter ^-0.88168 ^-1.21353 ^ 0 0 0 0 1 force @p[tag=plane-pilot]
+particle composter ^-0.68099 ^-1.33651 ^ 0 0 0 0 1 force @p[tag=plane-pilot]
+particle composter ^-0.46353 ^-1.42658 ^ 0 0 0 0 1 force @p[tag=plane-pilot]
+particle composter ^-0.23465 ^-1.48153 ^ 0 0 0 0 1 force @p[tag=plane-pilot]

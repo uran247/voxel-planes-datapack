@@ -18,6 +18,9 @@
     #declare tag plane-root #飛行機の中核エンティティであることを示す
     #declare tag plane-hitbox #飛行機の当たり判定エンティティであることを示す
     #declare tag plane-click-detector #飛行機のクリック判定エンティティであることを示す
+    #declare tag plane-display #HUDを乗せるテキストディスプレイのパーツであることを示す
+    #declare tag plane-display-base #HUDを乗せるテキストディスプレイのベースであることを示す
+    #declare tag plane-display-lockon #ロックオン用テキストディスプレイであることを示す
     #declare tag model-changeable #モデルが飛行機の状態によって変化することを示す
     #declare tag body #胴体の当たり判定であることを示す
     #declare tag engine #エンジンの当たり判定であることを示す
