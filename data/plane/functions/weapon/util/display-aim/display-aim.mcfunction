@@ -25,11 +25,11 @@
     #declare score_holder #drop-time
     #declare score_holder #drop-speed
 
-#地面までの距離用変数セット
+# 地面までの距離用変数セット
 data remove storage voxel-planes:input input
 data modify storage voxel-planes:input input set from entity @s Pos
 
-#着弾までの時間用変数セット
+# 着弾までの時間用変数セット
 scoreboard players operation #drop-speed vp.input = @s vp.speed
 scoreboard players operation #drop-speed vp.input *= @s vp.speedY
 scoreboard players operation #drop-speed vp.input /= #-10000 vp.Num
@@ -42,5 +42,5 @@ scoreboard players operation #speed-z vp.input *= @s vp.speed
 scoreboard players operation #speed-x vp.input /= #10000 vp.Num
 scoreboard players operation #speed-z vp.input /= #10000 vp.Num
 
-#block-checkerの移動を伴う処理を実行
-execute as @e[tag=block-checker,distance=..1,x=0,y=1,z=0,limit=1] run function plane:weapon/util/display-aim/display-aim-2
+# 着弾位置の計算とパーティクル表示
+execute as @e[tag=block-checker,distance=..1,x=0,y=1,z=0,limit=1] run function plane:weapon/util/display-aim/calc-ground0-and-display

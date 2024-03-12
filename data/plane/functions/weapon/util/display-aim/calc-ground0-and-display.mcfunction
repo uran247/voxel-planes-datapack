@@ -1,6 +1,7 @@
-#> plane:weapon/util/display-aim/display-aim-2
+#> plane:weapon/util/display-aim/calc-ground0-and-display
 #
-# block-checkerを実行者にしておかないと行方不明になるため、実行者をblock-checkerを動かす処理はこっちでやる
+# 着弾位置を計算してその位置を示すパーティクルを表示
+# block-checkerを実行者にしておかないと行方不明になるため、実行者をblock-checkerにして動かす処理はこっちでやる
 #
 # @input
 #   as @e[tag=block-checker,distance=..1,x=0,y=1,z=0,limit=1]
@@ -43,8 +44,9 @@ function plane:weapon/util/calc-droppoint
 #execute at @s run particle electric_spark ~ ~2 ~ 5 0 0.01 0 500 force @p
 #execute at @s run particle electric_spark ~ ~2 ~ 0.01 0 5 0 500 force @p
 
-execute at @p[tag=plane-rider] facing entity @s eyes positioned ^ ^ ^30 run particle electric_spark ~ ~2 ~ 3 0 0.01 0 500 force @p
-execute at @p[tag=plane-rider] facing entity @s eyes positioned ^ ^ ^30 run particle electric_spark ~ ~2 ~ 0.01 0 3 0 500 force @p
+# パーティクル表示
+execute at @p[tag=plane-rider] facing entity @s eyes positioned ^ ^ ^30 run particle electric_spark ~ ~2 ~ 3 0 0.01 0 500 force @p[tag=plane-pilot]
+execute at @p[tag=plane-rider] facing entity @s eyes positioned ^ ^ ^30 run particle electric_spark ~ ~2 ~ 0.01 0 3 0 500 force @p[tag=plane-pilot]
 
 # reset
 scoreboard players reset #altitude vp.return
