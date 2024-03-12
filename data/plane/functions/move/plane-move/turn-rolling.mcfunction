@@ -20,13 +20,13 @@ scoreboard players operation #current-angle vp.input = @s vp.AngY
 scoreboard players operation #max-turning vp.input = #max-yaw vp.reg1
 function util:fill-angle-gap
 
-# yaw-gapをdelta-angle分減少
+# 旋回した分yaw-gapを減少
 scoreboard players operation @s vp.yaw-gap -= #angle-gap vp.return
 
-# delta-angleを現在のY軸角度に加算
+# 旋回実施
 scoreboard players operation @s vp.AngY += #angle-gap vp.return
 
-# AngYを-18000 - 18000に補正
+# AngYを想定範囲内に補正
 scoreboard players remove @s[scores={vp.AngY=18100..}] vp.AngY 36000
 scoreboard players add @s[scores={vp.AngY=..-18100}] vp.AngY 36000
 

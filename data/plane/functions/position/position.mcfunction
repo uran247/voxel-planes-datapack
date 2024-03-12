@@ -61,7 +61,6 @@ function plane:position/delete-hitbox
 function plane:position/summon-weapon
 
 #パーツをオフセット位置へ
-#execute at @s run scoreboard players operation @e[tag=has-offset,tag=target-parts,distance=..30] vp.input1 = @s AngZ
 execute at @s[tag=need-calc-offset] run function plane:position/util/calc-triangle-ratio
 scoreboard players operation #sin vp.reg1 = #sin vp.return
 scoreboard players operation #cos vp.reg1 = #cos vp.return
