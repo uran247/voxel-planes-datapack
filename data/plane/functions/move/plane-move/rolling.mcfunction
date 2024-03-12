@@ -1,7 +1,8 @@
 #> plane:move/plane-move/rolling
 #
-# 角度/速度スコアからベクトルを計算して機体のMotionに反映する
-# 12で割ってる部分は桁合わせの割り算(/10)に加えてマイクラ世界での速度補正値を追加したもの
+# 速度を変更
+# 角度/速度からベクトルを計算して機体のMotionに反映する
+# 速度が変わったことでトリガーされる処理を実行
 #
 # @input
 #   executer @e[tag=plane-root,tag=flying,scores={speed=1..}]
@@ -23,7 +24,7 @@
     #declare score_holder #displacementX #現在のX方向の1tickの移動量を示す
     #declare score_holder #displacementZ #現在のX方向の1tickの移動量を示す
 
-#実行者にタグ付け
+# 実行者にタグ付け
 tag @s add flying-executer
 
 # 基本加速量決定  #base-accelerate vp.reg1に代入される
@@ -42,7 +43,7 @@ scoreboard players operation #base-accelerate vp.reg1 = #base-accelerate vp.retu
 
 #tellraw @p [{"score" : {"name":"@s", "objective":"vp.engine"}}]
 
-#減速量決定　#base-resistance vp.reg1に代入される
+# 減速量決定　#base-resistance vp.reg1に代入される
 scoreboard players operation #speed vp.input = @s vp.speed
 scoreboard players operation #max-speed vp.input = @s vp.max-speed
 scoreboard players operation #resistance vp.input = @s vp.resistance
@@ -56,44 +57,45 @@ scoreboard players add #base-resistance vp.reg1 30
 # speed決定 
 scoreboard players operation @s vp.speed += #base-accelerate vp.reg1
 scoreboard players operation @s vp.speed -= #base-resistance vp.reg1
-#speedが0未満だったら0にする
+# speedが0未満だったら0にする
 scoreboard players set @s[scores={vp.speed=..-1}] vp.speed 0
-#speedが最高速度を超えないようにする
+# speedが最高速度を超えないようにする
 execute if score @s vp.speed > @s vp.max-speed run scoreboard players operation @s vp.speed = @s vp.max-speed
 
-#x方向ベクトル×speedをMotionに代入
+# 12で割る部分は桁合わせの割り算(/10)に加えてマイクラ世界での速度補正値を追加したもの
+# x方向ベクトル×speedをMotionに代入
 scoreboard players operation #displacementX vp.reg1 = @s vp.speedX
 scoreboard players operation #displacementX vp.reg1 *= @s vp.speed
 execute store result storage minecraft:plane-datapack temporary.Pos[0] double 0.00001 run scoreboard players operation #displacementX vp.reg1 /= #12 vp.Num
 
-#Y方向ベクトルに0.05を代入
+# Y方向ベクトルに0.05を代入
 execute store result storage minecraft:plane-datapack temporary.Pos[1] double -0.05 run scoreboard players get #1 vp.Num
 
-#z方向ベクトル×speedをMotionに代入
+# z方向ベクトル×speedをMotionに代入
 scoreboard players operation #displacementZ vp.reg1 = @s vp.speedZ
 scoreboard players operation #displacementZ vp.reg1 *= @s vp.speed
 execute store result storage minecraft:plane-datapack temporary.Pos[2] double 0.00001 run scoreboard players operation #displacementZ vp.reg1 /= #12 vp.Num
 
-#作成したベクトルをMotionに代入
+# 作成したベクトルをMotionに代入
 data modify entity @s Motion set from storage minecraft:plane-datapack temporary.Pos
 
-#speedがtakeoff-speedを超えスロットルが51%以上なら飛行状態に遷移
+# speedがtakeoff-speedを超えスロットルが51%以上なら飛行状態に遷移
 execute as @s[scores={vp.throttle=11..}] if score @s vp.takeoff-speed < @s vp.speed run function plane:move/plane-move/rolling/takeoff
 
-#speedがpropeller-stopだったら停止モデル、propeller-startだったら滑走モデルに切り替え
+# speedがpropeller-stopだったら停止モデル、propeller-startだったら滑走モデルに切り替え
 function plane:move/plane-move/rolling/change-plpr-model
 
-#音
+# 音
 function plane:move/plane-move/rolling/rolling-sound
-#speedが1になったらエンジン始動音を鳴らす
+# speedが1になったらエンジン始動音を鳴らす
 function plane:move/plane-move/rolling/engine-start-sound
 
-#speedが0なら音停止
+# speedが0なら音停止
 execute if entity @s[scores={vp.speed=..0}] at @s run stopsound @a[distance=..10] * minecraft:plane.engine.recipro-rolling
 execute if entity @s[scores={vp.speed=..0}] at @s run stopsound @a[distance=..10] * minecraft:plane.engine.jet-rolling
 
-#登場者がいるか判定して、いないならスピードを下げる
+# 登場者がいるか判定して、いないならスピードを下げる
 execute at @s[tag=!has-rider,tag=!has-dummy-rider] run scoreboard players remove @s[scores={vp.throttle=5..}] vp.throttle 5
 
-#タグ解除
+# タグ解除
 tag @s remove flying-executer

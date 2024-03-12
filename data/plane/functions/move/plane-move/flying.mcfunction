@@ -1,7 +1,8 @@
 #> plane:move/plane-move/flying
 #
-# 角度/速度スコアからベクトルを計算して機体の座標に反映する
-# 失速判定と墜落判定をやる
+# 機体の速度を変更
+# 角度/速度移動先位置を計算し機体の座標に反映する
+# 速度が変わったことでトリガーされる処理を実行
 #
 # @input
 #   executer @e[tag=plane-root,tag=flying,scores={speed=1..}]
@@ -36,7 +37,7 @@
 #実行者にタグ付け
 tag @s add flying-executer
 
-#### 基本加速量決定####
+# 基本加速量決定
 scoreboard players operation #half-cruise-speed vp.reg1 = @s vp.cruise-speed
 scoreboard players operation #half-cruise-speed vp.reg1 /= #2 vp.Num
 scoreboard players operation #speed vp.input = @s vp.speed
@@ -51,9 +52,9 @@ scoreboard players operation #weight vp.input += @s vp.add-weight
 scoreboard players operation #throttle vp.input = @s vp.throttle
 function plane:move/plane-move/set-base-accelerate
 scoreboard players operation #base-accelerate vp.reg1 = #base-accelerate vp.return
-#tellraw @p [{"score" : {"name":"#base-accelerate", "objective":"vp.reg1"}}]
+    #tellraw @p [{"score" : {"name":"#base-accelerate", "objective":"vp.reg1"}}]
 
-####減速量決定####
+# 減速量決定
 scoreboard players operation #speed vp.input = @s vp.speed
 scoreboard players operation #max-speed vp.input = @s vp.max-speed
 scoreboard players operation #resistance vp.input = @s vp.resistance
@@ -61,7 +62,7 @@ scoreboard players operation #energy-loss vp.input = @s vp.energy-loss
 scoreboard players operation #ang-z vp.input = @s vp.AngZ
 function plane:move/plane-move/set-base-resistance
 scoreboard players operation #base-resistance vp.reg1 = #base-resistance vp.return
-#tellraw @p [{"score" : {"name":"#base-resistance", "objective":"vp.reg1"}}]
+    #tellraw @p [{"score" : {"name":"#base-resistance", "objective":"vp.reg1"}}]
 
 #ピッチによって減速量調整
 scoreboard players operation #speedY vp.input = @s vp.speedY
@@ -71,7 +72,7 @@ function plane:move/plane-move/set-base-deaccelerate
 scoreboard players operation #base-deaccelerate vp.reg1 = #base-deaccelerate vp.return
   #execute run tellraw @p [{"score" : {"name":"#speedY", "objective":"vp.input"}}]
 
-#### speed決定 ####
+# speed決定
 #speed+#base-accelerate-#base-resistance-#base-deaccelerate
 scoreboard players operation @s vp.speed += #base-accelerate vp.reg1
 scoreboard players operation @s vp.speed -= #base-resistance vp.reg1

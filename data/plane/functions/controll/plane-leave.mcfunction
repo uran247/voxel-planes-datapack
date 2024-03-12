@@ -1,6 +1,6 @@
 #> plane:controll/plane-leave
 # 
-# 飛行機から降りるときの処理
+# プレイヤーのplaneid/keyinputスコア、riderタグリセット アイテム削除
 #
 # @input
 #   executer @p

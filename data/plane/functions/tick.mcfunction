@@ -32,16 +32,16 @@ execute store result score #gtime vp.reg1 run time query gametime
 scoreboard players operation #gtime vp.reg1 %= #20 vp.Num
 execute store result score #ticktime vp.reg1 run time query gametime
 
-#プレイヤーのplaneid、rider、keyinputタグリセット アイテム削除
+# 飛行機から降りるときの処理
 execute as @a[tag=plane-rider,nbt=!{RootVehicle:{Entity:{Tags:[plane-seat]}}}] run function plane:controll/plane-leave
 
-#飛行機操作(搭乗時)
+# プレイヤーの飛行機操作受付(搭乗時)
 execute as @a[nbt={RootVehicle:{Entity:{Tags:[plane-seat]}}}] at @s run function plane:controll/controll
 
-#飛行機操作(降機時)
+# プレイヤーの飛行機操作受付(降機時)
 execute as @a[scores={vp.rightClick=1..},nbt={SelectedItem:{tag:{item-type:wrench}}},nbt=!{RootVehicle:{Entity:{Tags:[plane-seat]}}}] at @s run function plane:controll/controll-ground
 
-#飛行機移動、向き修正
+# 飛行機を設定されたあるべき状態と一致させる
 execute as @e[tag=plane-root] at @s run function plane:plane-manager
 
 #位置処理がされなかった=rootがいなかったエンティティを削除
