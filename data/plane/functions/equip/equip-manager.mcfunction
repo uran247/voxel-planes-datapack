@@ -8,7 +8,7 @@
 # @within plane:plane-manager
 #
 
-#航空機ごとの個別処理
+# 航空機ごとの個別処理
 #execute if entity @s[tag=d3a] run 
 #execute if entity @s[tag=ki21] run 
 execute if entity @s[tag=ki43] run function plane-data:ki-43/ki-43-equip

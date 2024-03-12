@@ -21,10 +21,10 @@
 #### スコア情報をActionbarに表示 ####
 #入力：entity 機体
 
-#weaponチャットコンポーネント用タグをチェストの本にいれる
+# ストレージ初期化
 data modify storage plane-datapack plane-info set value [""]
 
-#speed計算
+# speed表示作成
 scoreboard players operation #speed vp.reg1 = @s vp.speed
 scoreboard players operation #speed vp.reg1 *= #288 vp.Num
 scoreboard players operation #speed vp.reg1 /= #10000 vp.Num
@@ -33,18 +33,18 @@ scoreboard players operation #speed vp.reg1 /= #10000 vp.Num
 execute if score @s vp.speed < @s vp.gear-ret run data modify storage plane-datapack plane-info[0] set value "[{\"score\":{\"name\":\"#speed\",\"objective\":\"vp.reg1\"},\"color\":\"blue\"},{\"text\":\"km/h\",\"color\":\"blue\"}]"
 execute if score @s vp.speed >= @s vp.gear-ret run data modify storage plane-datapack plane-info[0] set value "[{\"score\":{\"name\":\"#speed\",\"objective\":\"vp.reg1\"},\"color\":\"red\"},{\"text\":\"km/h\",\"color\":\"red\"}]"
 
-#throt計算
+# throt表示作成
 data remove storage minecraft:plane-datapack temporary.throttle-num
 execute unless entity @s[tag=use-wep] store result storage minecraft:plane-datapack temporary.throttle-num int 5 run scoreboard players get @s vp.throttle
 data remove storage minecraft:plane-datapack temporary.throttle
 execute unless entity @s[tag=use-wep] run data modify storage minecraft:plane-datapack temporary.throttle set value "% Alt:"
 execute if entity @s[tag=use-wep] run data modify storage minecraft:plane-datapack temporary.throttle set value "WEP Alt:"
 
-#高度取得
+# 高度表示作成
 scoreboard players operation #altitude vp.reg1 = @s vp.PosY
 scoreboard players operation #altitude vp.reg1 /= #10000 vp.Num
 
-#武器の名前表示
+# 武器の名前表示作成
 execute store result score #weapon-number vp.reg1 run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list
 
 execute store result score #ammunition vp.reg1 run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[0].current-ammunition
@@ -79,13 +79,13 @@ execute unless score #weapon-number vp.reg1 matches 5.. run data modify storage 
 
 data modify storage plane-datapack plane-info append from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data.name
 
-#飛行機情報表示
+# 飛行機情報表示
 title @p[tag=plane-rider] actionbar ["",{"nbt":"plane-info[0]","storage":"plane-datapack","interpret":true},{"text":" Throt:","color":"red"},{"nbt":"temporary.throttle-num","storage":"plane-datapack","color":"red"},{"nbt":"temporary.throttle","storage":"plane-datapack","color":"red"},{"score":{"name":"#altitude","objective":"vp.reg1"},"color":"red"},{"text":" Wpn:","color":"yellow"},{"nbt":"plane-info[6]","storage":"plane-datapack","color":"yellow"},{"text":" Ammo:{","color":"green"},{"nbt":"plane-info[1]","storage":"plane-datapack","interpret":true},{"nbt":"plane-info[2]","storage":"plane-datapack","interpret":true},{"nbt":"plane-info[3]","storage":"plane-datapack","interpret":true},{"nbt":"plane-info[4]","storage":"plane-datapack","interpret":true},{"text":"}","color":"green"}]
 
-#失速してたら警告表示
+# 失速してたら警告表示
 execute if entity @s[tag=stall] run title @p[tag=plane-rider] times 0 1 1
 execute if entity @s[tag=stall] run title @p[tag=plane-rider] title [{"text":"失速！！","color":"dark_red"}]
 
-#墜落判定が出たら表示
+# 墜落判定が出たら表示
 execute if entity @s[tag=destroyed,tag=flying] run title @p[tag=plane-rider] times 0 2 0
 execute if entity @s[tag=destroyed,tag=flying] run title @p[tag=plane-rider] title [{"text":"墜落！！操作不能","color":"dark_red"}]
