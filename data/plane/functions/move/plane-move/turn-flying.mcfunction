@@ -6,8 +6,8 @@
 #   executer @e[tag=plane-root,tag=!flying]
 #
 # @within function plane:move/plane-move
-    #declare score_holder #base-angle #機体の現在のY軸角度
-    #declare score_holder #change-ammount #現在のY軸旋回角度
+    #declare score_holder #current-angle #機体の現在のY軸角度
+    #declare score_holder #max-turning #現在のY軸旋回角度
 
 #> private
 # @private
@@ -15,7 +15,7 @@
     #declare score_holder #pitch-gap #X軸角度の目標角度と現在角度の差分
     #declare score_holder #roll-speed #機体のロール速度
 
-#angle-gap取得
+# angle-gap取得
 scoreboard players operation #yaw-gap vp.reg1 = @s vp.yaw-gap
 scoreboard players operation #pitch-gap vp.reg1 = @s vp.pitch-gap
 
@@ -33,19 +33,19 @@ scoreboard players operation #max-pitch vp.reg1 = #max-pitch vp.return
 
 #### プレイヤーの向きに応じてAngXYZのスコア変更 失速してた場合は旋回をしない ####
 #yaw
-scoreboard players operation #delta-angle vp.input = #yaw-gap vp.reg1
-scoreboard players operation #base-angle vp.input = @s vp.AngY
-scoreboard players operation #change-ammount vp.input = #max-yaw vp.reg1
+scoreboard players operation #angle-gap vp.input = #yaw-gap vp.reg1
+scoreboard players operation #current-angle vp.input = @s vp.AngY
+scoreboard players operation #max-turning vp.input = #max-yaw vp.reg1
 function util:fill-angle-gap
-scoreboard players operation @s vp.yaw-gap -= #delta-angle vp.return
-scoreboard players operation @s[tag=!stall] vp.AngY += #delta-angle vp.return
+scoreboard players operation @s vp.yaw-gap -= #angle-gap vp.return
+scoreboard players operation @s[tag=!stall] vp.AngY += #angle-gap vp.return
 #pitch
-scoreboard players operation #delta-angle vp.input = #pitch-gap vp.reg1
-scoreboard players operation #base-angle vp.input = @s vp.AngX
-scoreboard players operation #change-ammount vp.input = #max-pitch vp.reg1
+scoreboard players operation #angle-gap vp.input = #pitch-gap vp.reg1
+scoreboard players operation #current-angle vp.input = @s vp.AngX
+scoreboard players operation #max-turning vp.input = #max-pitch vp.reg1
 function util:fill-angle-gap
-scoreboard players operation @s vp.pitch-gap -= #delta-angle vp.return
-scoreboard players operation @s[tag=!stall] vp.AngX += #delta-angle vp.return
+scoreboard players operation @s vp.pitch-gap -= #angle-gap vp.return
+scoreboard players operation @s[tag=!stall] vp.AngX += #angle-gap vp.return
 
 #yawが変化してたらrollも変化(-9000..9000)
 scoreboard players operation #roll-speed vp.reg1 = @s vp.roll-speed
