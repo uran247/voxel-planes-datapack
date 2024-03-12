@@ -45,8 +45,8 @@ execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.engi
 execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.engine-l2 unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.engine-l2{hp:0d} run scoreboard players add @s vp.engine 1
 scoreboard players operation @s vp.plane-parts += @s vp.engine
 
-#以下条件のどれかを満たしたら墜落タグ
-#生存パーツが5個以下　bodyが破損 aileronのどっちかが破損
+# 以下条件のどれかを満たしたら墜落タグ
+# 生存パーツが5個以下　bodyが破損 aileronのどっちかが破損
 tag @s remove destroyed
 tag @s[scores={vp.aileron=..0}] add destroyed
 tag @s[scores={vp.plane-parts=..5}] add destroyed

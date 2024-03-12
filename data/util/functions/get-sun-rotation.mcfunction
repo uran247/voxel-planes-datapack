@@ -36,7 +36,7 @@ execute if score #daytime vp.reg1 matches -1000..13000 run data modify storage v
 execute if score #daytime vp.reg1 matches -1000..13000 store result storage voxel-planes:return sun-rotation[0] float 0.001 run scoreboard players get #sun-y vp.reg1
 execute if score #daytime vp.reg1 matches -1000..13000 store result storage voxel-planes:return sun-rotation[1] float 0.001 run scoreboard players get #sun-x vp.reg1
 
-#score リセット
+# score リセット
 scoreboard players reset #daytime vp.reg1
 scoreboard players reset #sun-x vp.reg1
 scoreboard players reset #sun-y vp.reg1
