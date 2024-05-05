@@ -23,7 +23,32 @@
         }
     },
     "result": {
-        "item": "minecraft:phantom_spawn_egg",
-        "count": 1
+        "id": "minecraft:bat_spawn_egg",
+        "count": 1,
+        "components": {
+            "minecraft:custom_data": {"item-type": "swordfish"},
+            "minecraft:custom_model_data": 17,
+            "minecraft:entity_data": {
+                "id": "minecraft:bat",
+                "Silent": 1,
+                "Tags": ["swordfish-spawner","plane-spawner"],
+                "active_effects": [
+                    {
+                        "id": "minecraft:invisibility",
+                        "amplifier": 1,
+                        "duration": -1,
+                        "show_particles": 0
+                    }
+                ]
+            },
+            "minecraft:lore": [
+                "{'translate':'雷撃機','color':'green','bold':true}",
+                "{'translate':' 武装'}",
+                "{'translate':'  7.7mm機銃×1','color':'blue'}",
+                "{'translate':'  250lb爆弾×2','color':'blue'}",
+                "{'translate':'  500lb爆弾×2','color':'blue'}"
+            ],
+            "minecraft:item_name": "{'text':'Fairey Swordfish'}"
+        }
     }
 }

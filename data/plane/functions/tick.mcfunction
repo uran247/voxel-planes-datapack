@@ -39,7 +39,7 @@ execute as @a[tag=plane-rider,nbt=!{RootVehicle:{Entity:{Tags:[plane-seat]}}}] r
 execute as @a[nbt={RootVehicle:{Entity:{Tags:[plane-seat]}}}] at @s run function plane:controll/controll
 
 # プレイヤーの飛行機操作受付(降機時)
-execute as @a[scores={vp.rightClick=1..},nbt={SelectedItem:{tag:{item-type:wrench}}},nbt=!{RootVehicle:{Entity:{Tags:[plane-seat]}}}] at @s run function plane:controll/controll-ground
+execute as @a[scores={vp.rightClick=1..},nbt={SelectedItem:{components:{"minecraft:custom_data":{item-type:wrench}}}},nbt=!{RootVehicle:{Entity:{Tags:[plane-seat]}}}] at @s run function plane:controll/controll-ground
 
 # 飛行機を設定されたあるべき状態と一致させる
 execute as @e[tag=plane-root] at @s run function plane:plane-manager
@@ -49,7 +49,7 @@ execute if score #gtime vp.reg1 matches 0 run kill @e[tag=plane,tag=!plane-root,
 execute if score #gtime vp.reg1 matches 0 run tag @e[tag=position-processed] remove position-processed
 
 #揮発性アイテムを削除
-execute at @a run kill @e[type=item,nbt={Item:{tag:{volatile:1}}},distance=..32]
+execute at @a run kill @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{volatile:1}}}},distance=..32]
 
 #スポナー使用時に飛行機召喚
 execute at @a as @e[type=bat,tag=plane-spawner,distance=..10] run function plane:summon/spawner-manager

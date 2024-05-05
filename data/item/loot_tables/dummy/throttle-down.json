@@ -13,7 +13,7 @@
                             "name":{"text":"スロットルダウン"}
                         },
                         {
-                            "function": "minecraft:set_nbt",
+                            "function": "minecraft:set_custom_data",
                             "tag":"{item-type:indicator,CustomModelData:12,volatile:1}"
                         }
                     ]

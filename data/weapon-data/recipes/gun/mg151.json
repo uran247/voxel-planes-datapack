@@ -23,7 +23,16 @@
         }
     },
     "result": {
-        "item": "minecraft:phantom_spawn_egg",
-        "count": 1
+        "id": "minecraft:arrow",
+        "count": 1,
+        "components": {
+            "minecraft:custom_data": {"item-type":"mg151"},
+            "minecraft:custom_model_data": 10,
+            "minecraft:max_stack_size": 1,
+            "minecraft:lore": [
+                "{'translate':'20mm航空機関砲','color':'gray','bold':true}"
+            ],
+            "minecraft:item_name": "{'text':'MG 151航空機関砲'}"
+        }
     }
 }

@@ -11,7 +11,7 @@
     #declare score_holder #60kg #60kg爆弾アイテムを装備していることを示す
 
 #装備品チェック
-execute store success score #60kg vp.reg1 if entity @e[type=minecraft:donkey,tag=target-parts,nbt={Items:[{tag:{item-type:60kg-bomb}}]},distance=..30]
+execute store success score #60kg vp.reg1 if entity @e[type=minecraft:donkey,tag=target-parts,nbt={Items:[{components:{"minecraft:custom_data":{item-type:60kg-bomb}}}]},distance=..30]
 
 #ストレージリセット
 data remove storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{data:{type:bomb}}]

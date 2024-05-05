@@ -23,7 +23,31 @@
         }
     },
     "result": {
-        "item": "minecraft:phantom_spawn_egg",
-        "count": 1
+        "id": "minecraft:bat_spawn_egg",
+        "count": 1,
+        "components": {
+            "minecraft:custom_data": {"item-type": "spitfiremkix"},
+            "minecraft:custom_model_data": 18,
+            "minecraft:entity_data": {
+                "id": "minecraft:bat",
+                "Silent": 1,
+                "Tags": ["spitfiremkix-spawner","plane-spawner"],
+                "active_effects": [
+                    {
+                        "id": "minecraft:invisibility",
+                        "amplifier": 1,
+                        "duration": -1,
+                        "show_particles": 0
+                    }
+                ]
+            },
+            "minecraft:lore": [
+                "{'translate':'戦闘機','color':'green','bold':true}",
+                "{'translate':' 武装'}",
+                "{'translate':' Hispano Mk.II 20mm機銃x2','color':'blue'}",
+                "{'translate':' AN/M2 12.7mm機銃×2','color':'blue'}"
+            ],
+            "minecraft:item_name": "{'text':'Spitfire Mk.IX'}"
+        }
     }
 }

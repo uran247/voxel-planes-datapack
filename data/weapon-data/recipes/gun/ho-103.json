@@ -20,7 +20,16 @@
         }
     },
     "result": {
-        "item": "minecraft:phantom_spawn_egg",
-        "count": 1
+        "id": "minecraft:arrow",
+        "count": 1,
+        "components": {
+            "minecraft:custom_data": {"item-type":"ho-103"},
+            "minecraft:custom_model_data": 1,
+            "minecraft:max_stack_size": 1,
+            "minecraft:lore": [
+                "{'translate':'12.7mm航空機関銃','color':'gray','bold':true}"
+            ],
+            "minecraft:item_name": "{'text':'ホ103航空機関銃'}"
+        }
     }
 }

@@ -10,30 +10,44 @@
                     "functions": [
                         {
                             "function": "set_name",
-                            "name": {
-                                "text": "Lancaster B Mk III"
-                            }
+                            "target": "item_name",
+                            "name": {"text": "Lancaster B Mk III"}
                         },
                         {
                             "function": "set_lore",
+                            "mode":"replace_all",
                             "lore": [
-                                {
-                                    "translate": "爆撃機",
-                                    "color": "green",
-                                    "bold": true
-                                },
-                                {
-                                    "translate": " 武装"
-                                },
-                                {
-                                    "translate": "  $WEAPON_NAME_AND_NUMBER",
-                                    "color": "blue"
-                                }
+                                {"translate": "爆撃機","color": "green","bold": true},
+                                {"translate": " 武装"},
+                                {"translate": "  $WEAPON_NAME_AND_NUMBER","color": "blue"}
                             ]
                         },
                         {
-                            "function": "minecraft:set_nbt",
-                            "tag": "{item-type:lancastermk3,CustomModelData:36,HideFlags:18,EntityTag:{Silent:1b,Tags:[lancastermk3-spawner,plane-spawner],active_effects:[{id:\"minecraft:invisibility\",amplifier:1b,duration:-1,show_particles:0b}]}}"
+                            "function": "minecraft:set_custom_data",
+                            "tag": "{item-type:lancastermk3}"
+                        },
+                        {
+                            "function": "minecraft:set_custom_model_data",
+                            "value": 36
+                        },
+                        {
+                          "function": "minecraft:set_components",
+                          "components": {
+                            "minecraft:entity_data": {
+                              "id": "minecraft:bat",
+                              "Silent":1,
+                              "Tags":["lancastermk3-spawner","plane-spawner"],
+                              "active_effects":[
+                                    {
+                                        "id":"minecraft:invisibility",
+                                        "amplifier":1,
+                                        "duration":-1,
+                                        "show_particles":0
+                                    }
+                                ]
+
+                            }
+                          }
                         }
                     ]
                 }

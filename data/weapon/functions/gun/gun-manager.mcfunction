@@ -52,10 +52,10 @@ execute if score #hit-flag vp.reg1 matches 1.. at @s run function weapon:gun/dam
 #scoreboard players remove @s speedY 5
 
 #曳光弾ならモデル表示
-execute as @s[tag=lightblue,scores={vp.age=1}] run data merge entity @s {Pose:{Head:[0f,0f,0f]},ArmorItems:[{},{},{},{id:"minecraft:potion",Count:1b,tag:{CustomPotionColor:65535,CustomModelData:1,Enchantments:[{id:"fire_aspect",lvl:1}]}}]}
-execute as @s[tag=lightgreen,scores={vp.age=1}] run data merge entity @s {Pose:{Head:[0f,0f,0f]},ArmorItems:[{},{},{},{id:"minecraft:potion",Count:1b,tag:{CustomPotionColor:44167220,CustomModelData:1,Enchantments:[{id:"fire_aspect",lvl:1}]}}]}
-execute as @s[tag=orange,scores={vp.age=1}] run data merge entity @s {Pose:{Head:[0f,0f,0f]},ArmorItems:[{},{},{},{id:"minecraft:potion",Count:1b,tag:{CustomPotionColor:16747622,CustomModelData:1,Enchantments:[{id:"fire_aspect",lvl:1}]}}]}
-execute as @s[tag=yellow,scores={vp.age=1}] run data merge entity @s {Pose:{Head:[0f,0f,0f]},ArmorItems:[{},{},{},{id:"minecraft:potion",Count:1b,tag:{CustomPotionColor:16776960,CustomModelData:1,Enchantments:[{id:"fire_aspect",lvl:1}]}}]}
+execute as @s[tag=lightblue,scores={vp.age=1}] run data merge entity @s {Pose:{Head:[0f,0f,0f]},ArmorItems:[{},{},{},{id:"minecraft:potion",Count:1b,components:{"minecraft:potion_contents":{custom_color:65535},"minecraft:custom_model_data":1,"minecraft:enchantments":{levels:{"minecraft:fire_aspect":1}}}}]}
+execute as @s[tag=lightgreen,scores={vp.age=1}] run data merge entity @s {Pose:{Head:[0f,0f,0f]},ArmorItems:[{},{},{},{id:"minecraft:potion",Count:1b,components:{"minecraft:potion_contents":{custom_color:44167220},"minecraft:custom_model_data":1,"minecraft:enchantments":{levels:{"minecraft:fire_aspect":1}}}}]}
+execute as @s[tag=orange,scores={vp.age=1}] run data merge entity @s {Pose:{Head:[0f,0f,0f]},ArmorItems:[{},{},{},{id:"minecraft:potion",Count:1b,components:{"minecraft:potion_contents":{custom_color:16747622},"minecraft:custom_model_data":1,"minecraft:enchantments":{levels:{"minecraft:fire_aspect":1}}}}]}
+execute as @s[tag=yellow,scores={vp.age=1}] run data merge entity @s {Pose:{Head:[0f,0f,0f]},ArmorItems:[{},{},{},{id:"minecraft:potion",Count:1b,components:{"minecraft:potion_contents":{custom_color:16776960},"minecraft:custom_model_data":1,"minecraft:enchantments":{levels:{"minecraft:fire_aspect":1}}}}]}
 #execute as @s at @s run particle minecraft:dust 1 0 0 2 ~ ~ ~ 0 0 0 20000 1 force
 
 #particle

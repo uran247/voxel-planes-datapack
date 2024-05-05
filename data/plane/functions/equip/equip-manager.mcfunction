@@ -47,3 +47,4 @@ execute if entity @s[tag=mig15bis] run function plane-data:mig15bis/mig15bis-equ
 execute if entity @s[tag=mc202] run function plane-data:mc202/mc202-equip
 execute if entity @s[tag=saab29f] run function plane-data:saab29f/saab29f-equip
 execute if entity @s[tag=re2005] run function plane-data:re2005/re2005-equip
+

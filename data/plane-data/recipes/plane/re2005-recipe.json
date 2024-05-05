@@ -20,7 +20,31 @@
         }
     },
     "result": {
-        "item": "minecraft:phantom_spawn_egg",
-        "count": 1
+        "id": "minecraft:bat_spawn_egg",
+        "count": 1,
+        "components": {
+            "minecraft:custom_data": {"item-type": "re2005"},
+            "minecraft:custom_model_data": 46,
+            "minecraft:entity_data": {
+                "id": "minecraft:bat",
+                "Silent": 1,
+                "Tags": ["re2005-spawner","plane-spawner"],
+                "active_effects": [
+                    {
+                        "id": "minecraft:invisibility",
+                        "amplifier": 1,
+                        "duration": -1,
+                        "show_particles": 0
+                    }
+                ]
+            },
+            "minecraft:lore": [
+                "{'translate':'戦闘機','color':'green','bold':true}",
+                "{'translate':' 武装'}",
+                "{'translate':'  20mm機関砲×3','color':'blue'}",
+                "{'translate':'  12.7mm機銃x2','color':'blue'}"
+            ],
+            "minecraft:item_name": "{'text':'Re.2005'}"
+        }
     }
 }

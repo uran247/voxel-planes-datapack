@@ -13,8 +13,8 @@
     #declare score_holder #kill-weapon #現在装備中の武器を消すべきであるとのフラグ
 
 #装備品チェック
-execute store success score #500kg vp.reg1 if entity @e[type=minecraft:donkey,tag=target-parts,nbt={Items:[{tag:{item-type:500kg-bomb}}]},distance=..30]
-execute store success score #rocket vp.reg1 if entity @e[type=minecraft:donkey,tag=target-parts,nbt={Items:[{tag:{item-type:aa-rocket}}]},distance=..30]
+execute store success score #500kg vp.reg1 if entity @e[type=minecraft:donkey,tag=target-parts,nbt={Items:[{components:{"minecraft:custom_data":{item-type:500kg-bomb}}}]},distance=..30]
+execute store success score #rocket vp.reg1 if entity @e[type=minecraft:donkey,tag=target-parts,nbt={Items:[{components:{"minecraft:custom_data":{item-type:aa-rocket}}}]},distance=..30]
 
 #ストレージリセット
 data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{data:{type:bomb}}] set from storage voxel-planes:weapon d4y2.base.bomb

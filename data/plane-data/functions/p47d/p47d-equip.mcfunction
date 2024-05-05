@@ -13,9 +13,9 @@
     #declare score_holder #ag-rocket 
 
 #装備品チェック
-execute store success score #500kg-bomb vp.reg1 if entity @e[type=minecraft:donkey,tag=target-parts,nbt={Items:[{tag:{item-type:500kg-bomb}}]},distance=..30]
-execute store success score #250kg-bomb vp.reg1 if entity @e[type=minecraft:donkey,tag=target-parts,nbt={Items:[{tag:{item-type:250kg-bomb}}]},distance=..30]
-execute store success score #ag-rocket vp.reg1 if entity @e[type=minecraft:donkey,tag=target-parts,nbt={Items:[{tag:{item-type:ag-rocket}}]},distance=..30]
+execute store success score #500kg-bomb vp.reg1 if entity @e[type=minecraft:donkey,tag=target-parts,nbt={Items:[{components:{"minecraft:custom_data":{item-type:500kg-bomb}}}]},distance=..30]
+execute store success score #250kg-bomb vp.reg1 if entity @e[type=minecraft:donkey,tag=target-parts,nbt={Items:[{components:{"minecraft:custom_data":{item-type:250kg-bomb}}}]},distance=..30]
+execute store success score #ag-rocket vp.reg1 if entity @e[type=minecraft:donkey,tag=target-parts,nbt={Items:[{components:{"minecraft:custom_data":{item-type:ag-rocket}}}]},distance=..30]
 
 #排他装備品判定
 execute if score #ag-rocket vp.reg1 matches 1.. run scoreboard players reset #500kg-bomb vp.reg1

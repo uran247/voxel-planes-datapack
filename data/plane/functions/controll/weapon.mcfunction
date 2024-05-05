@@ -11,10 +11,10 @@
     #declare tag weapon-user
 
 #武器使用者にタグ付け
-tag @s[nbt={Inventory:[{Slot:-106b,tag:{item-type:controll-rod}}]}] add weapon-user
+execute if items entity @s weapon.offhand *[minecraft:custom_data~{item-type:controll-rod}] run tag @s add weapon-user
 
 #使用武器変更判定
-execute if entity @s[nbt=!{Inventory:[{Slot:-106b,tag:{item-type:controll-rod}}]}] at @s run function plane:controll/weapon/switch-weapon
+execute unless items entity @s weapon.offhand *[minecraft:custom_data~{item-type:controll-rod}] at @s run function plane:controll/weapon/switch-weapon
 
 #右クリック判定
 function plane:controll/detect-interract

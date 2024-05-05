@@ -12,8 +12,8 @@
 # @private
     #declare tag flying-model
 
-execute if entity @s[tag=flying-model,tag=!stall] if score @s vp.speed <= @s vp.gear-ret as @e[tag=target-parts,tag=model-changeable,distance=..30] store result entity @s item.tag.CustomModelData int 1 run scoreboard players get @s vp.rolling-cmd
+execute if entity @s[tag=flying-model,tag=!stall] if score @s vp.speed <= @s vp.gear-ret as @e[tag=target-parts,tag=model-changeable,distance=..30] store result entity @s item.components.minecraft:custom_model_data int 1 run scoreboard players get @s vp.rolling-cmd
 execute if entity @s[tag=flying-model,tag=!stall] if score @s vp.speed <= @s vp.gear-ret run tag @s remove flying-model
 
-execute if entity @s[tag=!flying-model] if score @s vp.speed > @s vp.gear-ret as @e[tag=target-parts,tag=model-changeable,distance=..30] store result entity @s item.tag.CustomModelData int 1 run scoreboard players get @s vp.flying-cmd
+execute if entity @s[tag=!flying-model] if score @s vp.speed > @s vp.gear-ret as @e[tag=target-parts,tag=model-changeable,distance=..30] store result entity @s item.components.minecraft:custom_model_data int 1 run scoreboard players get @s vp.flying-cmd
 execute if entity @s[tag=!flying-model] if score @s vp.speed > @s vp.gear-ret run tag @s add flying-model

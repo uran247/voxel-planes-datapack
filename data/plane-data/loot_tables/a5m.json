@@ -10,19 +10,44 @@
                     "functions": [
                         {
                             "function":"set_name",
+                            "target": "item_name",
                             "name":{"text":"九六式艦上戦闘機"}
                         },
                         {
                             "function":"set_lore",
+                            "mode":"replace_all",
                             "lore":[
                                 {"translate":"戦闘機","color":"green","bold":true},
-                                {"translate":" 武装"},
+                                {"translate":" 武装","mode":"replace_all"},
                                 {"translate":"  九七式7.7mm機銃×2","color":"blue"}
                             ]
                         },
                         {
-                            "function": "minecraft:set_nbt",
-                            "tag":"{item-type:a5m,tier:1,CustomModelData:1,CanPlaceOn:[\"minecraft:stone\",\"minecraft:grass_path\"],HideFlags:18,EntityTag:{Silent:1b,Tags:[a5m-spawner,plane-spawner],active_effects:[{id:\"minecraft:invisibility\",amplifier:1b,duration:-1,show_particles:0b}]}}"
+                            "function": "minecraft:set_custom_data",
+                            "tag":"{item-type:a5m}"
+                        },
+                        {
+                            "function": "minecraft:set_custom_model_data",
+                            "value": 1
+                        },
+                        {
+                          "function": "minecraft:set_components",
+                          "components": {
+                            "minecraft:entity_data": {
+                              "id": "minecraft:bat",
+                              "Silent":1,
+                              "Tags":["a5m-spawner","plane-spawner"],
+                              "active_effects":[
+                                    {
+                                        "id":"minecraft:invisibility",
+                                        "amplifier":1,
+                                        "duration":-1,
+                                        "show_particles":0
+                                    }
+                                ]
+
+                            }
+                          }
                         }
                     ]
                 }

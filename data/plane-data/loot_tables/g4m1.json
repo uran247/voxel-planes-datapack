@@ -10,10 +10,12 @@
                     "functions": [
                         {
                             "function":"set_name",
+                            "target": "item_name",
                             "name":{"text":"一式陸上攻撃機"}
                         },
                         {
                             "function":"set_lore",
+                            "mode":"replace_all",
                             "lore":[
                                 {"translate":"爆撃機","color":"green","bold":true},
                                 {"translate":" 武装"},
@@ -21,8 +23,31 @@
                             ]
                         },
                         {
-                            "function": "minecraft:set_nbt",
-                            "tag":"{item-type:g4m1,weapon:250kg,tier:2,CustomModelData:10,CanPlaceOn:[\"minecraft:stone\",\"minecraft:grass_path\"],HideFlags:18,EntityTag:{Silent:1b,Tags:[g4m1-spawner,plane-spawner,250kg],active_effects:[{id:\"minecraft:invisibility\",amplifier:1b,duration:-1,show_particles:0b}]}}"
+                            "function": "minecraft:set_custom_data",
+                            "tag":"{item-type:g4m1}"
+                        },
+                        {
+                            "function": "minecraft:set_custom_model_data",
+                            "value": 10
+                        },
+                        {
+                          "function": "minecraft:set_components",
+                          "components": {
+                            "minecraft:entity_data": {
+                              "id": "minecraft:bat",
+                              "Silent":1,
+                              "Tags":["g4m1-spawner","plane-spawner"],
+                              "active_effects":[
+                                    {
+                                        "id":"minecraft:invisibility",
+                                        "amplifier":1,
+                                        "duration":-1,
+                                        "show_particles":0
+                                    }
+                                ]
+
+                            }
+                          }
                         }
                     ]
                 }

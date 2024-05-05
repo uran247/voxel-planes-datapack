@@ -13,8 +13,12 @@
                             "name":{"text":"旋回ロック"}
                         },
                         {
-                            "function": "minecraft:set_nbt",
-                            "tag":"{item-type:indicator,CustomModelData:13,volatile:1}"
+                            "function": "minecraft:set_custom_model_data",
+                            "value": 13
+                        },
+                        {
+                            "function": "minecraft:set_custom_data",
+                            "tag":"{item-type:indicator,volatile:1}"
                         }
                     ]
                 }

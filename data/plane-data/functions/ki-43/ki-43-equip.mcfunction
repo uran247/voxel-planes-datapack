@@ -12,7 +12,7 @@
     #declare score_holder #12p7mm-gun #12.7mm機銃アイテムを装備していることを示す
 
 #装備品チェック
-execute store success score #12p7mm-gun vp.reg1 if entity @e[type=minecraft:donkey,tag=target-parts,nbt={Items:[{tag:{item-type:ho-103}}]},distance=..30]
+execute store success score #12p7mm-gun vp.reg1 if entity @e[type=minecraft:donkey,tag=target-parts,nbt={Items:[{components:{"minecraft:custom_data":{item-type:ho-103}}}]},distance=..30]
 
 #ストレージリセット
 data remove storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{data:{type:gun}}]

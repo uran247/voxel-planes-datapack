@@ -13,7 +13,7 @@
                             "name":{"text":"スロットルアップ"}
                         },
                         {
-                            "function": "minecraft:set_nbt",
+                            "function": "minecraft:set_custom_data",
                             "tag":"{item-type:indicator,CustomModelData:11,volatile:1}"
                         }
                     ]

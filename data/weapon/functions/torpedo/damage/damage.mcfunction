@@ -79,7 +79,7 @@ execute as @e[tag=!plane-hitbox,tag=!entity-nohit,distance=..32] run function we
 
 #### ダメージ時エフェクト ####
 #命中地点にパーティクル
-execute at @s[tag=sailing] run particle minecraft:block minecraft:water ^ ^5 ^-5 1 6 1 1 5000 force
+execute at @s[tag=sailing] run particle minecraft:block{block_state: "minecraft:water"} ^ ^5 ^-5 1 6 1 1 5000 force
 execute at @s[tag=!sailing] run particle minecraft:explosion ^ ^ ^ 3 3 3 0 500 force
 
 #音

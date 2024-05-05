@@ -20,7 +20,30 @@
         }
     },
     "result": {
-        "item": "minecraft:phantom_spawn_egg",
-        "count": 1
+        "id": "minecraft:bat_spawn_egg",
+        "count": 1,
+        "components": {
+            "minecraft:custom_data": {"item-type": "la5"},
+            "minecraft:custom_model_data": 39,
+            "minecraft:entity_data": {
+                "id": "minecraft:bat",
+                "Silent": 1,
+                "Tags": ["la5-spawner","plane-spawner"],
+                "active_effects": [
+                    {
+                        "id": "minecraft:invisibility",
+                        "amplifier": 1,
+                        "duration": -1,
+                        "show_particles": 0
+                    }
+                ]
+            },
+            "minecraft:lore": [
+                "{'translate':'戦闘機','color':'green','bold':true}",
+                "{'translate':' 武装'}",
+                "{'translate': '  20mm ShVAK x2','color': 'blue'}"
+            ],
+            "minecraft:item_name": "{'text': 'La-5FN'}"
+        }
     }
 }

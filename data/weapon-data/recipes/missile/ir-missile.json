@@ -20,7 +20,17 @@
         }
     },
     "result": {
-        "item": "minecraft:phantom_spawn_egg",
-        "count": 1
+        "id": "minecraft:arrow",
+        "count": 1,
+        "components": {
+            "minecraft:custom_data": {"item-type":"ir-missile"},
+            "minecraft:custom_model_data": 13,
+            "minecraft:max_stack_size": 1,
+            "minecraft:lore": [
+                "{'translate':'IR Missile','color':'gray','bold':true}",
+                "{'translate':'赤外線誘導のミサイル','color':'gray'}"
+            ],
+            "minecraft:item_name": "{'text':'空対空ミサイル'}"
+        }
     }
 }

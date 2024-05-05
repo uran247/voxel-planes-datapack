@@ -12,8 +12,8 @@
     #declare score_holder #ag-rocket #$ITEM_TYPEを入力
 
 #装備品チェック
-execute store success score #ir-missile vp.reg1 if entity @e[type=minecraft:donkey,tag=target-parts,nbt={Items:[{tag:{item-type:ir-missile}}]},distance=..30]
-execute store success score #ag-rocket vp.reg1 if entity @e[type=minecraft:donkey,tag=target-parts,nbt={Items:[{tag:{item-type:ag-rocket}}]},distance=..30]
+execute store success score #ir-missile vp.reg1 if entity @e[type=minecraft:donkey,tag=target-parts,nbt={Items:[{components:{"minecraft:custom_data":{item-type:ir-missile}}}]},distance=..30]
+execute store success score #ag-rocket vp.reg1 if entity @e[type=minecraft:donkey,tag=target-parts,nbt={Items:[{components:{"minecraft:custom_data":{item-type:ag-rocket}}}]},distance=..30]
 
 #排他装備品判定
 

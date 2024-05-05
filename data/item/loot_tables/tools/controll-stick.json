@@ -14,6 +14,7 @@
                         },
                         {
                             "function":"set_lore",
+                            "mode":"replace_all",
                             "lore":[
                                 {"translate":"武器の操作を行うときに使用","color":"blue"},
                                 [{"translate":"  ","color":"yellow"},{"keybind":"key.use","color":"yellow"},{"translate":"：武器使用","color":"yellow"}],
@@ -21,8 +22,12 @@
                             ]
                         },
                         {
-                            "function": "minecraft:set_nbt",
-                            "tag":"{item-type:controll-rod,CustomModelData:1,volatile:1}"
+                            "function": "minecraft:set_custom_data",
+                            "tag":"{item-type:controll-rod,volatile:1}"
+                        },
+                        {
+                            "function": "minecraft:set_custom_model_data",
+                            "value": 1
                         },
                         {
                             "function": "minecraft:set_enchantments",

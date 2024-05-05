@@ -19,7 +19,7 @@ function item:plane2item/plane2item-individual-plane
 #ロバチェスト内のアイテム放出
 data merge block 0 1 0 {Items:[]}
 data modify block 0 1 0 Items set from entity @e[type=minecraft:donkey,tag=plane2item-plane-parts,tag=plane-seat,limit=1] Items
-execute at @s run loot spawn ~ ~ ~ mine 0 1 0 air{load:1b}
+execute at @s run loot spawn ~ ~ ~ mine 0 1 0 stick[minecraft:custom_data={"load":"1b"}]
 data merge block 0 1 0 {Items:[]}
 
 #キル

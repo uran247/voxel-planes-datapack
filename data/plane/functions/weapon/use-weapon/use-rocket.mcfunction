@@ -35,7 +35,7 @@ scoreboard players set @e[tag=use-init,distance=..1] vp.fall-speed 0
 scoreboard players operation @e[tag=use-init,distance=..1] vp.plane-id = @s vp.plane-id
 
 # 飛翔モデルに変更
-execute as @e[tag=use-init,distance=..1,limit=1] if score @s vp.launched-cmd matches 1.. store result entity @s item.tag.CustomModelData int 1 run scoreboard players get @s vp.launched-cmd
+execute as @e[tag=use-init,distance=..1,limit=1] if score @s vp.launched-cmd matches 1.. store result entity @s item.components.minecraft:custom_model_data int 1 run scoreboard players get @s vp.launched-cmd
 
 # 角度代入
 function math:get-rand

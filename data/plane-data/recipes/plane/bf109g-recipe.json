@@ -23,7 +23,32 @@
         }
     },
     "result": {
-        "item": "minecraft:phantom_spawn_egg",
-        "count": 1
+        "id": "minecraft:bat_spawn_egg",
+        "count": 1,
+        "components": {
+            "minecraft:custom_data": {"item-type": "bf109g"},
+            "minecraft:custom_model_data": 21,
+            "minecraft:entity_data": {
+                "id": "minecraft:bat",
+                "Silent": 1,
+                "Tags": ["bf109g-spawner","plane-spawner"],
+                "active_effects": [
+                    {
+                        "id": "minecraft:invisibility",
+                        "amplifier": 1,
+                        "duration": -1,
+                        "show_particles": 0
+                    }
+                ]
+            },
+            "minecraft:lore": [
+                "{'translate':'戦闘機','color':'green','bold':true}",
+                "{'translate':' 武装'}",
+                "{'translate':'  MG151 20mm機関砲×1','color':'blue'}",
+                "{'translate':'  MG131 13mm機関銃×2','color':'blue'}"
+            ],
+            "minecraft:item_name": "{'text':'Bf 109 G'}"
+    
+        }
     }
 }

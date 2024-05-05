@@ -10,30 +10,44 @@
                     "functions": [
                         {
                             "function": "set_name",
-                            "name": {
-                                "text": "流星"
-                            }
+                            "target": "item_name",
+                            "name": {"text": "流星"}
                         },
                         {
                             "function": "set_lore",
+                            "mode":"replace_all",
                             "lore": [
-                                {
-                                    "translate": "雷撃機",
-                                    "color": "green",
-                                    "bold": true
-                                },
-                                {
-                                    "translate": " 武装"
-                                },
-                                {
-                                    "translate": "  20mm機銃 x2",
-                                    "color": "blue"
-                                }
+                                {"translate": "雷撃機","color": "green","bold": true},
+                                {"translate": " 武装"},
+                                {"translate": "  20mm機銃 x2","color": "blue"}
                             ]
                         },
                         {
-                            "function": "minecraft:set_nbt",
-                            "tag": "{item-type:b7a,CustomModelData:46,HideFlags:18,EntityTag:{Silent:1b,Tags:[b7a-spawner,plane-spawner],active_effects:[{id:\"minecraft:invisibility\",amplifier:1b,duration:-1,show_particles:0b}]}}"
+                            "function": "minecraft:set_custom_data",
+                            "tag": "{item-type:b7a}"
+                        },
+                        {
+                            "function": "minecraft:set_custom_model_data",
+                            "value": 46
+                        },
+                        {
+                          "function": "minecraft:set_components",
+                          "components": {
+                            "minecraft:entity_data": {
+                              "id": "minecraft:bat",
+                              "Silent":1,
+                              "Tags":["b7a-spawner","plane-spawner"],
+                              "active_effects":[
+                                    {
+                                        "id":"minecraft:invisibility",
+                                        "amplifier":1,
+                                        "duration":-1,
+                                        "show_particles":0
+                                    }
+                                ]
+
+                            }
+                          }
                         }
                     ]
                 }

@@ -14,25 +14,24 @@
                         },
                         {
                             "function":"set_lore",
+                            "mode":"replace_all",
                             "lore":[
                                 {"translate":"12.7mm航空機関銃","color":"gray","bold":true}
                             ]
                         },
                         {
-                            "function": "minecraft:set_nbt",
-                            "tag":"{CustomModelData:1,item-type:ho-103}"
+                            "function": "minecraft:set_custom_model_data",
+                            "value": 1
                         },
                         {
-                            "function": "minecraft:set_attributes",
-                            "modifiers":[
-                                {
-                                    "name":"cannot_stack",
-                                    "attribute":"generic.follow_range",
-                                    "operation":"multiply_base",
-                                    "amount":1.0,
-                                    "slot":"mainhand"
-                                }
-                            ]
+                            "function": "minecraft:set_custom_data",
+                            "tag":"{item-type:ho-103}"
+                        },
+                        {
+                            "function": "minecraft:set_components",
+                            "components": {
+                              "minecraft:max_stack_size": 1
+                            }
                         }
                     ]
                 }

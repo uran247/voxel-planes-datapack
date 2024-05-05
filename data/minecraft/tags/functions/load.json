@@ -5,7 +5,6 @@
         "constructor:setdummyentity",
         "constructor:setscore",
         "constructor:reset-score/get-plane-score",
-        "constructor:take-recipes",
         "score_to_health:load",
         "oh_my_dat:sys/load"
     ]

@@ -20,7 +20,31 @@
         }
     },
     "result": {
-        "item": "minecraft:phantom_spawn_egg",
-        "count": 1
+        "id": "minecraft:bat_spawn_egg",
+        "count": 1,
+        "components": {
+            "minecraft:custom_data": {"item-type": "mig15bis"},
+            "minecraft:custom_model_data": 31,
+            "minecraft:entity_data": {
+                "id": "minecraft:bat",
+                "Silent": 1,
+                "Tags": ["mig15bis-spawner","plane-spawner"],
+                "active_effects": [
+                    {
+                        "id": "minecraft:invisibility",
+                        "amplifier": 1,
+                        "duration": -1,
+                        "show_particles": 0
+                    }
+                ]
+            },
+            "minecraft:lore": [
+                "{'translate':'戦闘機','color':'green','bold':true}",
+                "{'translate':' 武装'}",
+                "{'translate': '  37mm N-37 x1','color': 'blue'}",
+                "{'translate': '  23mm NR-23 x2','color': 'blue'}"
+            ],
+            "minecraft:item_name": "{'text': 'MiG-15 bis'}"
+        }
     }
 }

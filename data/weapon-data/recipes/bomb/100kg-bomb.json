@@ -14,7 +14,17 @@
         }
     },
     "result": {
-        "item": "minecraft:phantom_spawn_egg",
-        "count": 1
+        "id": "minecraft:arrow",
+        "count": 1,
+        "components": {
+            "minecraft:custom_data": {"item-type":"100kg-bomb"},
+            "minecraft:custom_model_data": 6,
+            "minecraft:max_stack_size": 1,
+            "minecraft:lore": [
+                "{'translate':'爆弾','color':'gray','bold':true}",
+                "{'translate':'100kgの通常爆弾','color':'gray'}"
+            ],
+            "minecraft:item_name": "{'text':'100kg爆弾'}"
+        }
     }
 }

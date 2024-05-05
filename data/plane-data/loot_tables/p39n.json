@@ -10,38 +10,46 @@
                     "functions": [
                         {
                             "function": "set_name",
-                            "name": {
-                                "text": "P-39N Airacobra"
-                            }
+                            "target": "item_name",
+                            "name": {"text": "P-39N Airacobra"}
                         },
                         {
                             "function": "set_lore",
+                            "mode":"replace_all",
                             "lore": [
-                                {
-                                    "translate": "戦闘機",
-                                    "color": "green",
-                                    "bold": true
-                                },
-                                {
-                                    "translate": " 武装"
-                                },
-                                {
-                                    "translate": "  7.7mm機銃 x4",
-                                    "color": "blue"
-                                },
-                                {
-                                    "translate": "  12.7mm機銃 x2",
-                                    "color": "blue"
-                                },
-                                {
-                                    "translate": "  37mm機銃 x1",
-                                    "color": "blue"
-                                }
+                                {"translate": "戦闘機","color": "green","bold": true},
+                                {"translate": " 武装"},
+                                {"translate": "  7.7mm機銃 x4","color": "blue"},
+                                {"translate": "  12.7mm機銃 x2","color": "blue"},
+                                {"translate": "  37mm機銃 x1","color": "blue"}
                             ]
                         },
                         {
-                            "function": "minecraft:set_nbt",
-                            "tag": "{item-type:p39n,CustomModelData:34,HideFlags:18,EntityTag:{Silent:1b,Tags:[p39n-spawner,plane-spawner],active_effects:[{id:\"minecraft:invisibility\",amplifier:1b,duration:-1,show_particles:0b}]}}"
+                            "function": "minecraft:set_custom_data",
+                            "tag": "{item-type:p39n}"
+                        },
+                        {
+                            "function": "minecraft:set_custom_model_data",
+                            "value": 34
+                        },
+                        {
+                          "function": "minecraft:set_components",
+                          "components": {
+                            "minecraft:entity_data": {
+                              "id": "minecraft:bat",
+                              "Silent":1,
+                              "Tags":["p39n-spawner","plane-spawner"],
+                              "active_effects":[
+                                    {
+                                        "id":"minecraft:invisibility",
+                                        "amplifier":1,
+                                        "duration":-1,
+                                        "show_particles":0
+                                    }
+                                ]
+
+                            }
+                          }
                         }
                     ]
                 }

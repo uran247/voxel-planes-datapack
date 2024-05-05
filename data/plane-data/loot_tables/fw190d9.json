@@ -10,10 +10,12 @@
                     "functions": [
                         {
                             "function":"set_name",
+                            "target": "item_name",
                             "name":{"text":"Fw190 D-9"}
                         },
                         {
                             "function":"set_lore",
+                            "mode":"replace_all",
                             "lore":[
                                 {"translate":"戦闘機","color":"green","bold":true},
                                 {"translate":" 武装"},
@@ -22,8 +24,30 @@
                             ]
                         },
                         {
-                            "function": "minecraft:set_nbt",
-                            "tag":"{item-type:fw190d,tier:4,CustomModelData:16,CanPlaceOn:[\"minecraft:stone\",\"minecraft:grass_path\"],HideFlags:18,EntityTag:{Silent:1b,Tags:[fw190d9-spawner,plane-spawner],active_effects:[{id:\"minecraft:invisibility\",amplifier:1b,duration:-1,show_particles:0b}]}}"
+                            "function": "minecraft:set_custom_data",
+                            "tag":"{item-type:fw190d9}"
+                        },
+                        {
+                            "function": "minecraft:set_custom_model_data",
+                            "value": 16
+                        },
+                        {
+                          "function": "minecraft:set_components",
+                          "components": {
+                            "minecraft:entity_data": {
+                              "id": "minecraft:bat",
+                              "Silent":1,
+                              "Tags":["fw190d9-spawner","plane-spawner"],
+                              "active_effects":[
+                                    {
+                                        "id":"minecraft:invisibility",
+                                        "amplifier":1,
+                                        "duration":-1,
+                                        "show_particles":0
+                                    }
+                                ]
+                            }
+                          }
                         }
                     ]
                 }

@@ -10,28 +10,45 @@
                     "functions": [
                         {
                             "function": "set_name",
-                            "name": {
-                                "text": "TBF Avenger"
-                            }
+                            "target": "item_name",
+                            "name": {"text": "TBF Avenger"}
                         },
                         {
                             "function": "set_lore",
+                            "mode":"replace_all",
                             "lore": [
-                                {
-                                    "translate": "爆撃機",
-                                    "color": "green",
-                                    "bold": true
-                                },
-                                {
-                                    "translate": " 武装"
-                                },
+                                {"translate": "爆撃機","color": "green","bold": true},
+                                {"translate": " 武装"},
                                 {"translate":"  12.7mm機銃×2","color":"blue"},
                                 {"translate":"  250kg爆弾×4","color":"blue"}
                             ]
                         },
                         {
-                            "function": "minecraft:set_nbt",
-                            "tag": "{item-type:tbf,CustomModelData:33,HideFlags:18,EntityTag:{Silent:1b,Tags:[tbf-spawner,plane-spawner],active_effects:[{id:\"minecraft:invisibility\",amplifier:1b,duration:-1,show_particles:0b}]}}"
+                            "function": "minecraft:set_custom_data",
+                            "tag": "{item-type:tbf}"
+                        },
+                        {
+                            "function": "minecraft:set_custom_model_data",
+                            "value": 33
+                        },
+                        {
+                          "function": "minecraft:set_components",
+                          "components": {
+                            "minecraft:entity_data": {
+                              "id": "minecraft:bat",
+                              "Silent":1,
+                              "Tags":["tbf-spawner","plane-spawner"],
+                              "active_effects":[
+                                    {
+                                        "id":"minecraft:invisibility",
+                                        "amplifier":1,
+                                        "duration":-1,
+                                        "show_particles":0
+                                    }
+                                ]
+
+                            }
+                          }
                         }
                     ]
                 }

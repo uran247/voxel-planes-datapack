@@ -14,13 +14,18 @@
                         },
                         {
                             "function":"set_lore",
+                            "mode":"replace_all",
                             "lore":[
                                 {"translate":"右クリックで飛行機をアイテム化する","color":"blue"}
                             ]
                         },
                         {
-                            "function": "minecraft:set_nbt",
-                            "tag":"{item-type:wrench,CustomModelData:2}"
+                            "function": "minecraft:set_custom_model_data",
+                            "value": 2
+                        },
+                        {
+                            "function": "minecraft:set_custom_data",
+                            "tag":"{item-type:wrench}"
                         }
                     ]
                 }

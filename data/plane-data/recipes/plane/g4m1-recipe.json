@@ -23,7 +23,30 @@
         }
     },
     "result": {
-        "item": "minecraft:phantom_spawn_egg",
-        "count": 1
+        "id": "minecraft:bat_spawn_egg",
+        "count": 1,
+        "components": {
+            "minecraft:custom_data": {"item-type": "g4m1"},
+            "minecraft:custom_model_data": 10,
+            "minecraft:entity_data": {
+                "id": "minecraft:bat",
+                "Silent": 1,
+                "Tags": ["g4m1-spawner","plane-spawner"],
+                "active_effects": [
+                    {
+                        "id": "minecraft:invisibility",
+                        "amplifier": 1,
+                        "duration": -1,
+                        "show_particles": 0
+                    }
+                ]
+            },
+            "minecraft:lore": [
+                "{'translate':'爆撃機','color':'green','bold':true}",
+                "{'translate':' 武装'}",
+                "{'translate':'  250kg爆弾×4','color':'blue'}"
+            ],
+            "minecraft:item_name": "{'text':'一式陸上攻撃機'}"
+        }
     }
 }

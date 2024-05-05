@@ -10,35 +10,44 @@
                     "functions": [
                         {
                             "function": "set_name",
-                            "name": {
-                                "text": "Yak-9U"
-                            }
+                            "target": "item_name",
+                            "name": {"text": "Yak-9U"}
                         },
                         {
                             "function": "set_lore",
+                            "mode":"replace_all",
                             "lore": [
-                                {
-                                    "translate": "戦闘機",
-                                    "color": "green",
-                                    "bold": true
-                                },
-                                {
-                                    "translate": " 武装"
-                                },
-                                {
-                                    "translate": "  20mm ShVAK x1",
-                                    "color": "blue"
-                                },
-                                {
-                                    "translate": "  12.7 mm Berezin UB x2",
-                                    "color": "blue"
-                                }
-
+                                {"translate": "戦闘機","color": "green","bold": true},
+                                {"translate": " 武装"},
+                                {"translate": "  20mm ShVAK x1","color": "blue"},
+                                {"translate": "  12.7 mm Berezin UB x2","color": "blue"}
                             ]
                         },
                         {
-                            "function": "minecraft:set_nbt",
-                            "tag": "{item-type:yak9u,CustomModelData:38,HideFlags:18,EntityTag:{Silent:1b,Tags:[yak9u-spawner,plane-spawner],active_effects:[{id:\"minecraft:invisibility\",amplifier:1b,duration:-1,show_particles:0b}]}}"
+                            "function": "minecraft:set_custom_data",
+                            "tag": "{item-type:yak9u}"
+                        },
+                        {
+                            "function": "minecraft:set_custom_model_data",
+                            "value": 38
+                        },
+                        {
+                          "function": "minecraft:set_components",
+                          "components": {
+                            "minecraft:entity_data": {
+                              "id": "minecraft:bat",
+                              "Silent":1,
+                              "Tags":["yak9u-spawner","plane-spawner"],
+                              "active_effects":[
+                                    {
+                                        "id":"minecraft:invisibility",
+                                        "amplifier":1,
+                                        "duration":-1,
+                                        "show_particles":0
+                                    }
+                                ]
+                            }
+                          }
                         }
                     ]
                 }

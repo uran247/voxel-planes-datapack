@@ -14,26 +14,25 @@
                         },
                         {
                             "function":"set_lore",
+                            "mode":"replace_all",
                             "lore":[
                                 {"translate":"ロケット弾","color":"gray","bold":true},
                                 {"translate":"対航空機用のロケット弾","color":"gray"}
                             ]
                         },
                         {
-                            "function": "minecraft:set_nbt",
-                            "tag":"{CustomModelData:4,item-type:aa-rocket}"
+                            "function": "minecraft:set_custom_model_data",
+                            "value": 4
                         },
                         {
-                            "function": "minecraft:set_attributes",
-                            "modifiers":[
-                                {
-                                    "name":"cannot_stack",
-                                    "attribute":"generic.follow_range",
-                                    "operation":"multiply_base",
-                                    "amount":1.0,
-                                    "slot":"mainhand"
-                                }
-                            ]
+                            "function": "minecraft:set_custom_data",
+                            "tag":"{item-type:aa-rocket}"
+                        },
+                        {
+                            "function": "minecraft:set_components",
+                            "components": {
+                              "minecraft:max_stack_size": 1
+                            }
                         }
                     ]
                 }

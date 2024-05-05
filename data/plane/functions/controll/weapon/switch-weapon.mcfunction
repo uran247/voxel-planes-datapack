@@ -9,10 +9,11 @@
 # @within plane:controll/weapon
 
 #オフハンド入れ直し
-execute if data entity @s Inventory[{Slot:-106b}] unless data entity @s Inventory[{Slot:-106b,tag:{item-type:indicator}}] run item replace block 0 1 0 container.1 from entity @s weapon.offhand
-clear @s minecraft:crossbow{item-type:controll-rod}
+execute if items entity @s weapon.offhand * unless items entity @s weapon.offhand *[minecraft:custom_data~{item-type:indicator}] run item replace block 0 1 0 container.1 from entity @s weapon.offhand
+
+clear @s minecraft:crossbow[minecraft:custom_data~{item-type:controll-rod}]
 loot replace entity @s weapon.offhand loot item:tools/controll-stick
-loot give @s mine 0 1 0 air{load:1b}
+loot give @s mine 0 1 0 stick[minecraft:custom_data={"load":"1b"}]
 item replace block 0 1 0 container.1 with minecraft:air
 
 #武装変更フラグを立てる

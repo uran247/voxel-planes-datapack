@@ -14,7 +14,15 @@
         }
     },
     "result": {
-        "item": "minecraft:phantom_spawn_egg",
-        "count": 1
+        "id": "minecraft:carrot_on_a_stick",
+        "count": 1,
+        "components": {
+            "minecraft:custom_data": {"item-type":"wrench"},
+            "minecraft:custom_model_data": 2,
+            "minecraft:lore": [
+                "{'translate':'右クリックで飛行機をアイテム化する','color':'blue'}"
+            ],
+            "minecraft:item_name": "{'text':'レンチ'}"
+        }
     }
 }

@@ -14,7 +14,17 @@
         }
     },
     "result": {
-        "item": "minecraft:phantom_spawn_egg",
-        "count": 1
+        "id": "minecraft:arrow",
+        "count": 1,
+        "components": {
+            "minecraft:custom_data": {"item-type":"aa-rocket"},
+            "minecraft:custom_model_data": 4,
+            "minecraft:max_stack_size": 1,
+            "minecraft:lore": [
+                "{'translate':'ロケット弾','color':'gray','bold':true}",
+                "{'translate':'対航空機用のロケット弾','color':'gray'}"
+            ],
+            "minecraft:item_name": "{'text':'ロケット弾'}"
+        }
     }
 }

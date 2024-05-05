@@ -11,7 +11,7 @@
     #declare score_holder #250kg-bomb #250kg-bombを入力
 
 #装備品チェック
-execute store success score #250kg-bomb vp.reg1 if entity @e[type=minecraft:donkey,tag=target-parts,nbt={Items:[{tag:{item-type:250kg-bomb}}]},distance=..30]
+execute store success score #250kg-bomb vp.reg1 if entity @e[type=minecraft:donkey,tag=target-parts,nbt={Items:[{components:{"minecraft:custom_data":{item-type:250kg-bomb}}}]},distance=..30]
 
 #排他装備品判定
 

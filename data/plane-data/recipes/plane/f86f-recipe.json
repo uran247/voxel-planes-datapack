@@ -26,7 +26,31 @@
         }
     },
     "result": {
-        "item": "minecraft:phantom_spawn_egg",
-        "count": 1
+        "id": "minecraft:bat_spawn_egg",
+        "count": 1,
+        "components": {
+            "minecraft:custom_data": {"item-type": "f86f"},
+            "minecraft:custom_model_data": 30,
+            "minecraft:entity_data": {
+                "id": "minecraft:bat",
+                "Silent": 1,
+                "Tags": ["f86f-spawner","plane-spawner"],
+                "active_effects": [
+                    {
+                        "id": "minecraft:invisibility",
+                        "amplifier": 1,
+                        "duration": -1,
+                        "show_particles": 0
+                    }
+                ]
+            },
+            "minecraft:lore": [
+                "{'translate': '戦闘機','color': 'green','bold': true}",
+                "{'translate': ' 武装'}",
+                "{'translate': '  12.7mm機銃 x6','color': 'blue'}"
+            ],
+            "minecraft:item_name": "{'text': 'F-86F'}"
+    
+        }
     }
 }

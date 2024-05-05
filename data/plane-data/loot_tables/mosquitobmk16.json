@@ -10,30 +10,44 @@
                     "functions": [
                         {
                             "function": "set_name",
-                            "name": {
-                                "text": "$PLANE_NAME"
-                            }
+                            "target": "item_name",
+                            "name": {"text": "$PLANE_NAME"}
                         },
                         {
                             "function": "set_lore",
+                            "mode":"replace_all",
                             "lore": [
-                                {
-                                    "translate": "$PLANE_TYPE",
-                                    "color": "green",
-                                    "bold": true
-                                },
-                                {
-                                    "translate": " 武装"
-                                },
-                                {
-                                    "translate": "  $WEAPON_NAME_AND_NUMBER",
-                                    "color": "blue"
-                                }
+                                {"translate": "$PLANE_TYPE","color": "green","bold": true},
+                                {"translate": " 武装"},
+                                {"translate": "  $WEAPON_NAME_AND_NUMBER","color": "blue"}
                             ]
                         },
                         {
-                            "function": "minecraft:set_nbt",
-                            "tag": "{item-type:mosquitobmk16,CustomModelData:29,HideFlags:18,EntityTag:{Silent:1b,Tags:[mosquitobmk16-spawner,plane-spawner],active_effects:[{id:\"minecraft:invisibility\",amplifier:1b,duration:-1,show_particles:0b}]}}"
+                            "function": "minecraft:set_custom_data",
+                            "tag": "{item-type:mosquitobmk16}"
+                        },
+                        {
+                            "function": "minecraft:set_custom_model_data",
+                            "value": 29
+                        },
+                        {
+                          "function": "minecraft:set_components",
+                          "components": {
+                            "minecraft:entity_data": {
+                              "id": "minecraft:bat",
+                              "Silent":1,
+                              "Tags":["mosquitobmk16-spawner","plane-spawner"],
+                              "active_effects":[
+                                    {
+                                        "id":"minecraft:invisibility",
+                                        "amplifier":1,
+                                        "duration":-1,
+                                        "show_particles":0
+                                    }
+                                ]
+
+                            }
+                          }
                         }
                     ]
                 }
