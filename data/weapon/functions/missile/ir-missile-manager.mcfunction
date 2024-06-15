@@ -1,7 +1,9 @@
 #> weapon:missile/ir-missile-manager
 #
 # スコア分向いてる方向にTP
-# 実行者：弾体
+# @input
+#   as @e[tag=missile-moving,tag=ir-missile]
+#   at @e[tag=missile-moving,tag=ir-missile]
 #
 # @within function weapon:tick
 
@@ -54,7 +56,10 @@ function weapon:util/set-sun-dummy
 #向き変更
         #tellraw @p [{"nbt":"Rotation","entity":"@s"}] 
     #ターゲットが右にいるか左にいるか探索
-    function weapon:missile/search-target
+    data remove storage voxel-planes:input input
+    execute store result storage voxel-planes:input input.sight int 1 run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].data.seeker-sight-chord 1000
+    execute store result storage voxel-planes:input input.angle int 1 run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].data.missile-target-angle-chord 1000
+    function weapon:missile/search-target with storage voxel-planes:input input
     execute as @e[tag=ir-missile-target,distance=..256,limit=1] positioned ^1000 ^ ^ if entity @s[distance=..999.9] positioned ^-1000 ^ ^ run tag @e[tag=missile-move-executer,distance=..0.01] add turn-left
     execute as @e[tag=ir-missile-target,distance=..256,limit=1] positioned ^-1000 ^ ^ if entity @s[distance=..999.9] positioned ^1000 ^ ^ run tag @e[tag=missile-move-executer,distance=..0.01] add turn-right
     execute as @e[tag=ir-missile-target,distance=..256,limit=1] positioned ^ ^1000 ^ if entity @s[distance=..999.9] positioned ^ ^-1000 ^ run tag @e[tag=missile-move-executer,distance=..0.01] add turn-up
@@ -66,15 +71,24 @@ function weapon:util/set-sun-dummy
         #execute if entity @s[tag=turn-down] run say down
 
     #ターゲットの方向に向けて旋回
-    execute as @s[tag=turn-left] store result score #AngY vp.reg1 run data get entity @s Rotation[0] 100
-    execute as @s[tag=turn-right] store result score #AngY vp.reg1 run data get entity @s Rotation[0] 100
-    execute as @s[tag=turn-up] store result score #AngX vp.reg1 run data get entity @s Rotation[1] 100
-    execute as @s[tag=turn-down] store result score #AngX vp.reg1 run data get entity @s Rotation[1] 100
+    execute if entity @e[tag=ir-missile-target,distance=..256,limit=1] run function weapon:missile/turn-propotional
+    #execute as @s[tag=turn-left] store result score #AngY vp.reg1 run data get entity @s Rotation[0] 100
+    #execute as @s[tag=turn-right] store result score #AngY vp.reg1 run data get entity @s Rotation[0] 100
+    #execute as @s[tag=turn-up] store result score #AngX vp.reg1 run data get entity @s Rotation[1] 100
+    #execute as @s[tag=turn-down] store result score #AngX vp.reg1 run data get entity @s Rotation[1] 100
+#
+    #execute as @s[tag=turn-left] store result entity @s Rotation[0] float 0.01 run scoreboard players operation #AngY vp.reg1 -= @s vp.turn-rate
+    #execute as @s[tag=turn-right] store result entity @s Rotation[0] float 0.01 run scoreboard players operation #AngY vp.reg1 += @s vp.turn-rate
+    #execute as @s[tag=turn-up] store result entity @s Rotation[1] float 0.01 run scoreboard players operation #AngX vp.reg1 -= @s vp.turn-rate
+    #execute as @s[tag=turn-down] store result entity @s Rotation[1] float 0.01 run scoreboard players operation #AngX vp.reg1 += @s vp.turn-rate
+        #tellraw @p [{"score":{"objective": "vp.turn-rate","name": "@s"}}]
 
-    execute as @s[tag=turn-left] store result entity @s Rotation[0] float 0.01 run scoreboard players operation #AngY vp.reg1 -= @s vp.turn-rate
-    execute as @s[tag=turn-right] store result entity @s Rotation[0] float 0.01 run scoreboard players operation #AngY vp.reg1 += @s vp.turn-rate
-    execute as @s[tag=turn-up] store result entity @s Rotation[1] float 0.01 run scoreboard players operation #AngX vp.reg1 -= @s vp.turn-rate
-    execute as @s[tag=turn-down] store result entity @s Rotation[1] float 0.01 run scoreboard players operation #AngX vp.reg1 += @s vp.turn-rate
+    execute if entity @e[tag=ir-missile-target,distance=..256,limit=1] run data remove storage voxel-planes:input input
+    execute if entity @e[tag=ir-missile-target,distance=..256,limit=1] run data modify storage voxel-planes:input input set from storage voxel-planes:return return
+    execute if entity @e[tag=ir-missile-target,distance=..256,limit=1] run execute at @s run function util:scoreturn with storage voxel-planes:input input
+        #execute if entity @e[tag=ir-missile-target,distance=..256,limit=1] run tellraw @p [{"nbt":"Tags","entity": "@e[tag=ir-missile-target,distance=..256,limit=1]"}]
+        #execute unless entity @e[tag=ir-missile-target,distance=..256,limit=1] run say lost
+        #tellraw @p [{"nbt":"input","storage": "voxel-planes:input"}]
 
     #speedX,Y,Z更新
     execute at @s run function math:vector

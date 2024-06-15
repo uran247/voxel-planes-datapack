@@ -31,7 +31,7 @@ summon minecraft:marker 0.0 1.0 0.0 {Tags:[entity-nohit,dummy-entity],UUID:[I;0,
 summon minecraft:marker 0.0 1.0 0.0 {Tags:[entity-nohit,dummy-entity],UUID:[I;0,0,0,10]}
 #0-0-0-0-b 近接信管系の当たり判定認識用、どこにでも移動しうる
 summon minecraft:marker 0.0 1.0 0.0 {Tags:[entity-nohit,dummy-entity],UUID:[I;0,0,0,11]}
-#0-0-0-0-c: 疑似太陽
+#0-0-0-0-c: 疑似太陽、どこにでも移動しうる
 summon minecraft:marker 0.0 1.0 0.0 {Tags:[entity-nohit,dummy-entity,dummy-sun],UUID:[I;0,0,0,12]}
 
 #block検出用　何処にでも移動しうる

@@ -3,8 +3,8 @@
 # IRミサイルの攻撃対象をロックオンする
 #
 # @input
-#   executer @e[tag=plane-root]
-#   position at @e[tag=plane-root]
+#   as @e[tag=plane-root]
+#   at @e[tag=plane-root]
 #
 # @within
 #   function plane:weapon/weapon-manager
@@ -21,7 +21,11 @@ execute store result score #exectime vp.reg1 run time query gametime
 scoreboard players operation #exectime vp.reg1 %= #10 vp.Num
 
 # 目標探知
-execute if score #exectime vp.reg1 matches 0 run function plane:weapon/util/ir-search-target
+data remove storage voxel-planes:input input
+execute store result storage voxel-planes:input input.sight int 1 run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data.missiles[0].seeker-sight-chord 1000
+execute store result storage voxel-planes:input input.angle int 1 run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data.missiles[0].missile-target-angle-chord 1000
+    #tellraw @p [{"nbt":"input.missile-target-angle-chord","storage":"voxel-planes:input"}] 
+execute if score #exectime vp.reg1 matches 0 run function plane:weapon/util/ir-search-target with storage voxel-planes:input input
 
 # ロックオン中メッセージ表示
 execute unless score @s vp.lockon-time matches 5.. run title @p[tag=plane-pilot] subtitle [{"text": "locking on ..."}]

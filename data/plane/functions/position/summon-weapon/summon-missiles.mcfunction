@@ -5,6 +5,7 @@
 # @input
 #   executer @e[tag=plane-root,tag=plane-position-executer]
 #   entity @e[tag=target-parts]
+#   oh_my_dat @e[tag=plane-root]
 #
 # @within plane:position/summon-weapon
 

@@ -37,5 +37,5 @@ data modify storage voxel-planes:weapon f86f.additional.1000lb append value {kin
 
 #デフォルトミサイルデータセット
 data modify storage voxel-planes:weapon f86f.base.missile.data set value {name:missile,type:ir-missile,max-ammunition:2,current-ammunition:2,max-reload:600,current-reload:0,lockon-time:0,missiles:[]}
-data modify storage voxel-planes:weapon f86f.additional.missile set value [{kind:70kg,type:ir-missile,offset:[-2.2d,-0.6d,-0.8d],damage:730,weight:70,cmd:174,turn-rate:9.6f,max-speed:7.2f}]
-data modify storage voxel-planes:weapon f86f.additional.missile append value {kind:70kg,type:ir-missile,offset:[2.2d,-0.6d,-0.8d],damage:730,weight:70,cmd:174,turn-rate:9.6f,max-speed:7.2f}
+data modify storage voxel-planes:weapon f86f.additional.missile set value [{kind:70kg,type:ir-missile,offset:[-2.2d,-0.6d,-0.8d],damage:730,weight:70,cmd:174,turn-rate:9.6f,max-speed:7.2f,seeker-sight-chord:0.518f,missile-target-angle-chord:0.518f}]
+data modify storage voxel-planes:weapon f86f.additional.missile append value {kind:70kg,type:ir-missile,offset:[2.2d,-0.6d,-0.8d],damage:730,weight:70,cmd:174,turn-rate:9.6f,max-speed:7.2f,seeker-sight-chord:0.518f,missile-target-angle-chord:0.518f}

@@ -74,7 +74,7 @@ scoreboard objectives add vp.torp-damage dummy
 scoreboard objectives add vp.enable-weapon dummy
 scoreboard objectives add vp.launched-cmd dummy
 scoreboard objectives add vp.lockon-time dummy
-#ミサイルの旋回速度[degree/s]*100
+#ミサイルの旋回速度[degree/tick]*100
 scoreboard objectives add vp.turn-rate dummy
 
 #飛行機パラメータ

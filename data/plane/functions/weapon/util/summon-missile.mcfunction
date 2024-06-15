@@ -4,6 +4,7 @@
 #   executer @e[tag=plane-root]
 #   position @s
 #   storage minecraft:plane-datapack temporary.weapon
+#   oh_my_dat @e[tag=plane-root]
 #
 # @public
 
@@ -27,6 +28,10 @@ execute store result score @e[type=item_display,tag=missile-init,distance=..1,li
 data modify entity @e[type=item_display,tag=missile-init,distance=..1,limit=1] Tags append from storage minecraft:plane-datapack temporary.weapon.kind
 data modify entity @e[type=item_display,tag=missile-init,distance=..1,limit=1] Tags append from storage minecraft:plane-datapack temporary.weapon.type
 execute store result entity @e[type=item_display,tag=missile-init,distance=..1,limit=1] item.components.minecraft:custom_model_data int 1 run data get storage minecraft:plane-datapack temporary.weapon.cmd
+execute as @e[type=item_display,tag=missile-init,distance=..1,limit=1] run function oh_my_dat:please
+data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].data.seeker-sight-chord set from storage minecraft:plane-datapack temporary.weapon.seeker-sight-chord 
+data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].data.missile-target-angle-chord set from storage minecraft:plane-datapack temporary.weapon.missile-target-angle-chord
+function oh_my_dat:please
 
 #rootに紐づけ
 ride @e[type=item_display,tag=missile-init,distance=..1,limit=1] mount @s
