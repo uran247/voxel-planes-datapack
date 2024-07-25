@@ -13,4 +13,3 @@
     #declare tag aagun #対空砲弾であることを示す
     #declare tag torpedo-dropping #投下された魚雷であることを示す
     #declare tag he #榴弾であることを示す
-    #declare tag get-damage #ダメージを受けたエンティティであることを示す
