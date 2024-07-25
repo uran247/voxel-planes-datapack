@@ -5,7 +5,6 @@
 #
 # @input
 #   executer @e[tag=gun-move-executer]
-#   entity @e[tag=hit-weapon]
 #
 # @within weapon:rocket/rocket-manager
 #

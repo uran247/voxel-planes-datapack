@@ -26,7 +26,7 @@ tag @s add check-executer
 
 #実効者 @e[tag=block-checker,distance=..1,x=0,y=1,z=0,limit=1] の直線上にいるエンティティにタグ付け
 tp 0-0-0-0-b ~ ~ ~
-execute positioned ^ ^ ^10 as @e[tag=!check-executer,distance=..10] positioned as @s positioned ^ ^ ^1000 facing entity 0-0-0-0-b feet positioned ^ ^ ^1000 positioned ~-0.5 ~-0.5 ~-0.5 if entity @s[dx=0,dy=0,dz=0] run tag @s add hit-on-line
+execute positioned ^ ^ ^10 as @e[tag=!check-executer,tag=!entity-nohit,distance=..10] positioned as @s positioned ^ ^ ^1000 facing entity 0-0-0-0-b feet positioned ^ ^ ^1000 positioned ~-0.5 ~-0.5 ~-0.5 if entity @s[dx=0,dy=0,dz=0] run tag @s add hit-on-line
 
 # 視線終点entityより向こうにいるやつのタグを削除
 execute positioned as @s as @e[tag=hit-on-line,distance=..20] positioned ^ ^ ^1000 if entity @s[distance=..1000] run tag @s remove hit-on-line

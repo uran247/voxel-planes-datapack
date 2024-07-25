@@ -83,5 +83,4 @@ execute at @s[scores={vp.speed=..48}] positioned ~ ~ ~ run particle minecraft:fl
 
 #タグ削除
 tag @e[tag=hit-weapon,distance=..26] remove hit-weapon
-tag @e[tag=hit-on-line,distance=..21] remove hit-on-line
 execute at @s run tag @s remove rocket-move-executer

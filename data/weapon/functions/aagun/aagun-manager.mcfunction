@@ -48,7 +48,7 @@ execute if score #hit-flag vp.reg1 matches 1.. at @e[tag=hit-aagun,distance=..20
 scoreboard players remove @s vp.speedY 5
 
 #particle
-execute at @s run particle minecraft:dust 0 0 0 1000 ~ ~2 ~ 0.2 0.2 0.2 1 3 force
+execute at @s run particle dust{color:[0.000,0.000,0.000],scale:4} ~ ~2 ~ 0.2 0.2 0.2 1 3 force
 #tellraw @p [{"score" : {"name":"#pos-y", "objective":"vp.reg1"}}]
 
 #### age更新 + ダメージ処理 ####

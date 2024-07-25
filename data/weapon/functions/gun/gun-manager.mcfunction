@@ -72,5 +72,4 @@ execute if score #gametime vp.reg1 > @s[type=armor_stand] vp.max-age run kill @s
 
 #タグ削除
 tag @e[tag=hit-weapon,distance=..20] remove hit-weapon
-tag @e[tag=hit-on-line,distance=..21] remove hit-on-line
 execute at @s run tag @s remove gun-move-executer

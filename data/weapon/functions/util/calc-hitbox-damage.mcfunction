@@ -3,7 +3,7 @@
 # hitboxに対応するストレージのダメージ/防御率分HPをへらす
 #
 # @input
-#   executer @e[type=!player,tag=hit-weapon,tag=plane-hitbox,distance=..20]
+#   executer @e[type=!player,tag=plane-hitbox,distance=..20]
 #   score @s vp.input #ダメージ量
 #
 # @within function weapon:**

@@ -50,6 +50,7 @@ scoreboard players remove @s vp.speedY 1
 
 #ダメージを与える/地形破壊
 execute if score #hit-flag vp.reg1 matches 1.. at @s run function weapon:dropping/damage/damage
+    #tellraw @p [{"score" : {"name":"#hit-flag", "objective":"vp.reg1"}}]
 execute if score #destroy-terrain vp.config matches 1.. if score #hit-flag vp.reg1 matches 1.. at @s run function weapon:dropping/damage/destroy-terrain
 execute if score #hit-flag vp.reg1 matches 1.. run kill @s
 
@@ -62,7 +63,6 @@ execute at @s run tp @s ~ ~ ~ ~ ~0.4
 scoreboard players remove @s vp.age 1
 
 #終了処理
-tag @e[tag=hit-weapon,distance=..26] remove hit-weapon
+execute if score #hit-flag vp.reg1 matches 1.. run tag @e[tag=hit-weapon] remove hit-weapon
 tag @s remove bomb-move-executer
-tag @e[tag=hit-on-line,distance=..21] remove hit-on-line
 kill @s[scores={vp.age=0}]

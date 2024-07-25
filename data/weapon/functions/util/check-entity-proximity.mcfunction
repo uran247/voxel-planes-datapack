@@ -26,7 +26,7 @@
 tag @s add check-executer
 
 #実効者 の直線上にいるエンティティにタグ付け
-execute positioned ^ ^ ^10.5 as @e[tag=!check-executer,distance=..11] positioned ^-1002 ^ ^ unless entity @s[distance=..1000] positioned ^2004 ^ ^ unless entity @s[distance=..1000] positioned ^-1002 ^-1002 ^ unless entity @s[distance=..1000] positioned ^ ^2004 ^ unless entity @s[distance=..1000] positioned ^ ^-1002 ^-1010.5 unless entity @s[distance=..1000] run tag @s add hit-candidate
+execute positioned ^ ^ ^10.5 as @e[tag=!check-executer,tag=!entity-nohit,distance=..11] positioned ^-1002 ^ ^ unless entity @s[distance=..1000] positioned ^2004 ^ ^ unless entity @s[distance=..1000] positioned ^-1002 ^-1002 ^ unless entity @s[distance=..1000] positioned ^ ^2004 ^ unless entity @s[distance=..1000] positioned ^ ^-1002 ^-1010.5 unless entity @s[distance=..1000] run tag @s add hit-candidate
     #execute if entity @e[tag=hit-candidate] run say hit-candidate
 tag @e[tag=hit-candidate,distance=..22] add hit-on-line
     #execute if entity @e[tag=hit-on-line] run say hit-on-line

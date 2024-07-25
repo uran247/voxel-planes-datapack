@@ -64,5 +64,4 @@ scoreboard players remove @s vp.age 1
 #終了処理
 tag @e[tag=hit-weapon,distance=..26] remove hit-weapon
 tag @s remove torpedo-move-executer
-tag @e[tag=hit-on-line,distance=..21] remove hit-on-line
 kill @s[scores={vp.age=0}]
