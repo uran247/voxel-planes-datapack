@@ -17,4 +17,3 @@ execute as @e[tag=torpedo-dropping] at @s run function weapon:torpedo/torpedo-ma
 execute as @e[tag=he] at @s run function weapon:howitzer/howitzer-manager
 execute as @e[tag=he] at @s run function weapon:howitzer/howitzer-manager
 execute as @e[tag=missile-moving,tag=ir-missile] at @s run function weapon:missile/ir-missile-manager
-execute as @a[tag=get-damage] at @a run function weapon:util/damage-tick
