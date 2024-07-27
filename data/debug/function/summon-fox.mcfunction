@@ -1,0 +1,1 @@
+summon fox ~ ~ ~ {Type:"snow",NoAI:1b,Silent:1b,Sleeping:1b,Tags:[mascot]}

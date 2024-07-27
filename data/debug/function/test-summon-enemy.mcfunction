@@ -1,0 +1,15 @@
+execute at @p run summon phantom ^25 ^-15 ^30 {Size:20,PersistenceRequired:1b} 
+execute at @p run summon phantom ^12 ^-15 ^30 {Size:20,PersistenceRequired:1b} 
+execute at @p run summon phantom ^ ^-15 ^30 {Size:20,PersistenceRequired:1b} 
+execute at @p run summon phantom ^-12 ^-15 ^30 {Size:20,PersistenceRequired:1b} 
+execute at @p run summon phantom ^-25 ^-15 ^30 {Size:20,PersistenceRequired:1b} 
+execute at @p run summon phantom ^25 ^ ^30 {Size:20,PersistenceRequired:1b} 
+execute at @p run summon phantom ^12 ^ ^30 {Size:20,PersistenceRequired:1b} 
+execute at @p run summon phantom ^ ^ ^30 {Size:20,PersistenceRequired:1b} 
+execute at @p run summon phantom ^-12 ^ ^30 {Size:20,PersistenceRequired:1b} 
+execute at @p run summon phantom ^-25 ^ ^30 {Size:20,PersistenceRequired:1b} 
+execute at @p run summon phantom ^25 ^15 ^30 {Size:20,PersistenceRequired:1b} 
+execute at @p run summon phantom ^12 ^15 ^30 {Size:20,PersistenceRequired:1b} 
+execute at @p run summon phantom ^ ^15 ^30 {Size:20,PersistenceRequired:1b} 
+execute at @p run summon phantom ^-12 ^15 ^30 {Size:20,PersistenceRequired:1b} 
+execute at @p run summon phantom ^-25 ^15 ^30 {Size:20,PersistenceRequired:1b} 
