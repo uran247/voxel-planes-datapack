@@ -1,7 +1,7 @@
 /.datapack/cache.json
 /recipe/
 /dev_tips.md
-/data/debug/functions/
-/data/debug/predicates/
+/data/debug/function
+/data/debug/predicate
 /.vscode
 spyglass.json
