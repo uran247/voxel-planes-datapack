@@ -62,7 +62,7 @@ execute at @s as @e[tag=use-init,distance=..1,limit=1] run function plane:positi
 data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].weapon.weapon-list[{current-weapon:1b}].data.current-cooltime set value 4
 
 # 音
-playsound minecraft:block.piston.contract ambient @a ~ ~ ~ 1 1.5
+playsound minecraft:block.piston.contract ambient @a ~ ~ ~ 1 1.5 1
 
 # 残弾数減算
 scoreboard players remove #ammunition vp.reg1 1
