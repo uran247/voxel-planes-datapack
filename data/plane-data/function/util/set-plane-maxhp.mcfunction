@@ -68,4 +68,4 @@ scoreboard players operation #total-health vp.reg1 += #radder-l vp.reg1
 #ロバの最大体力に代入
 scoreboard players operation #total-health vp.reg1 /= #50 vp.Num
 execute if score #total-health vp.reg1 matches ..0 run scoreboard players set #total-health vp.reg1 1
-execute as @e[type=minecraft:donkey,tag=plane-init,tag=plane-seat,distance=..30] store result entity @s Attributes[{id:"minecraft:generic.max_health"}].Base double 1 run scoreboard players get #total-health vp.reg1
+execute as @e[type=minecraft:donkey,tag=plane-init,tag=plane-seat,distance=..30] store result entity @s Attributes[{id:"minecraft:generic.max_health"}].base double 1 run scoreboard players get #total-health vp.reg1

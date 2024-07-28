@@ -110,7 +110,7 @@ execute as @e[tag=plane-init,tag=cockpit,distance=..1,limit=1] run function plan
 
 # plane-idセット
 scoreboard players operation @e[tag=plane-init,distance=..1] vp.plane-id = #plane-id vp.reg1
-execute as @e[tag=plane-init,distance=..1] store result entity @s Attributes[{id:"minecraft:generic.movement_speed"}].Base double 1 run scoreboard players get #plane-id vp.reg1
+execute as @e[tag=plane-init,distance=..1] store result entity @s Attributes[{id:"minecraft:generic.movement_speed"}].base double 1 run scoreboard players get #plane-id vp.reg1
 
 # 召喚した場合need-calc-offsetタグ付与
 execute if entity @e[tag=plane-init,distance=..1] run tag @s add need-calc-offset

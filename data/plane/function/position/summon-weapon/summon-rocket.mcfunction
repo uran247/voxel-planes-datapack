@@ -93,7 +93,7 @@ execute if score #summon-number vp.reg1 matches 24.. run function plane:weapon/u
     #tellraw @p [{"score" : {"name":"#summon-number", "objective":"vp.reg1"}}]
 
 scoreboard players operation @e[type=item_display,tag=weapon-init,distance=..1] vp.plane-id = @s vp.plane-id
-execute as @e[type=item_display,tag=weapon-init,distance=..1] store result entity @s Attributes[{id:"minecraft:generic.movement_speed"}].Base double 1 run scoreboard players get @s vp.plane-id
+execute as @e[type=item_display,tag=weapon-init,distance=..1] store result entity @s Attributes[{id:"minecraft:generic.movement_speed"}].base double 1 run scoreboard players get @s vp.plane-id
 tag @e[type=item_display,tag=weapon-init,distance=..1] remove weapon-init
 
 scoreboard players set #return vp.reg1 1

@@ -22,7 +22,7 @@
 
 #機体召喚
 summon armor_stand ~ ~ ~ {Invisible:1b,NoGravity:0b,Tags:[g4m1,plane-init,plane-root,plane,entity-nohit,need-calc-offset,delay-rotation,tier2,bomber],DisabledSlots:256}
-summon armor_stand ~ ~ ~ {Invisible:1b,NoGravity:0b,Tags:[g4m1,plane-init,plane,entity-nohit,plane-seat],Passengers:[{id:"donkey",Attributes:[{id:"generic.max_health",Base:20d}],Invulnerable:1b,DeathLootTable:"minecraft:entities/bat",SaddleItem:{id:"minecraft:saddle",Count:1b},Tame:1b,NoAI:1b,Silent:1b,ChestedHorse:1b,active_effects:[{id:"minecraft:invisibility",amplifier:1b,duration:-1,show_particles:0b}],Tags:[g4m1,plane-init,plane,plane-seat,entity-nohit]}],DisabledSlots:256}
+summon armor_stand ~ ~ ~ {Invisible:1b,NoGravity:0b,Tags:[g4m1,plane-init,plane,entity-nohit,plane-seat],Passengers:[{id:"donkey",Attributes:[{id:"generic.max_health",base:20d}],Invulnerable:1b,DeathLootTable:"minecraft:entities/bat",SaddleItem:{id:"minecraft:saddle",Count:1b},Tame:1b,NoAI:1b,Silent:1b,ChestedHorse:1b,active_effects:[{id:"minecraft:invisibility",amplifier:1b,duration:-1,show_particles:0b}],Tags:[g4m1,plane-init,plane,plane-seat,entity-nohit]}],DisabledSlots:256}
 summon item_display ~ ~ ~ {Tags:["plane-body","g4m1",plane-init,plane,has-model,model-changeable,plane-parts,entity-nohit],NoGravity:1b,item:{id:"minecraft:diamond_sword",Count:1b,components:{"minecraft:custom_model_data":96,Unbreakable:1b}},interpolation_duration:0,view_range:4.0f,transformation:{right_rotation:{angle:0f,axis:[0f,1f,0f]},left_rotation:{angle:0f,axis:[0f,0f,1f]},scale:[3.981f,3.981f,3.981f],translation:[0f,1.5f,0f]},item_display:"thirdperson_righthand"}
 ride @e[tag=plane-init,tag=plane-body,distance=..1,limit=1] mount @e[tag=plane-init,tag=plane-root,distance=..1,limit=1] 
 

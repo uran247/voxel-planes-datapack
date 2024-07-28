@@ -5,7 +5,7 @@ summon armor_stand ~ ~ ~ {Tags:[test-torpedo-init,plane-torpedo,entity-nohit,250
 scoreboard players set @e[tag=test-torpedo-init] vp.torp-damage 8000
 scoreboard players set @e[tag=test-torpedo-init] vp.damage 0
 scoreboard players set @e[tag=test-torpedo-init] vp.plane-id 1
-execute as @e[tag=test-torpedo-init] store result entity @s Attributes[{id:"minecraft:generic.movement_speed"}].Base double 1 run scoreboard players get @s vp.plane-id
+execute as @e[tag=test-torpedo-init] store result entity @s Attributes[{id:"minecraft:generic.movement_speed"}].base double 1 run scoreboard players get @s vp.plane-id
 tag @e[tag=test-torpedo-init] remove test-torpedo-init
 
 #スコア付与

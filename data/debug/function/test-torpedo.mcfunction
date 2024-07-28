@@ -4,7 +4,7 @@
 summon armor_stand ~ ~ ~ {Tags:[test-torpedo-init,plane-torpedo,entity-nohit,torpedo-normal,torpedo-dropping,drop-init],NoGravity:1b,Invisible:1,HandItems:[{id:"minecraft:diamond_sword",Count:1b,tag:{CustomModelData:52}},{}],Pose:{RightArm:[0f,0f,0f]},DisabledSlots:256}
 scoreboard players set @e[tag=test-torpedo-init] vp.torp-damage 1250
 scoreboard players set @e[tag=test-torpedo-init] vp.plane-id 1
-execute as @e[tag=test-torpedo-init] store result entity @s Attributes[{id:"minecraft:generic.movement_speed"}].Base double 1 run scoreboard players get @s vp.plane-id
+execute as @e[tag=test-torpedo-init] store result entity @s Attributes[{id:"minecraft:generic.movement_speed"}].base double 1 run scoreboard players get @s vp.plane-id
 tag @e[tag=test-torpedo-init] remove test-torpedo-init
 
 #スコア付与
