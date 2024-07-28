@@ -25,7 +25,7 @@ execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.radd
 scoreboard players operation @s vp.plane-parts += @s vp.radder
 
 scoreboard players set @s vp.elevator 0
-execute store success score @s vp.elevator if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.elevator unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.elevator{hp:0d} 
+execute store success score @s vp.elevator if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.elevator unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.elevator{hp:0d}
 execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.elevator-r unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.elevator-r{hp:0d} run scoreboard players add @s vp.elevator 1
 execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.elevator-l unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].status.elevator-l{hp:0d} run scoreboard players add @s vp.elevator 1
 scoreboard players operation @s vp.plane-parts += @s vp.elevator

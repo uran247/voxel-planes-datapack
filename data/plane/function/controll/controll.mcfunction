@@ -29,7 +29,7 @@ effect give @s minecraft:invisibility 1 1 true
 execute as @s[tag=!plane-rider] run scoreboard players reset @s vp.rightClick
 
 #seatを参照して実行者にid、タグ付け
-execute store result score @s vp.plane-id run data get entity @s RootVehicle.Entity.Attributes[{Name:"minecraft:generic.movement_speed"}].Base
+execute store result score @s vp.plane-id run data get entity @s RootVehicle.Entity.Attributes[{id:"minecraft:generic.movement_speed"}].Base
 
 #実行者と対象機体にタグ付け
 tag @s add controller
