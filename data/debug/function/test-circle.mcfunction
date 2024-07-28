@@ -1,5 +1,0 @@
-tp 0-0-0-0-3 0.5 2 0.5001
-tp 0-0-0-0-4 0.5 2.01 0.5
-execute as @e[tag=axis] at @s facing entity @e[tag=axis,sort=furthest,limit=1] feet run tp @s ~ ~ ~ ~ ~
-execute as @s at @s rotated as @e[tag=axis,limit=2] rotated ~90 0 positioned ^ ^ ^1 rotated as @e[tag=axis,distance=..0.1,x=0.5,y=2.0,z=0.5,limit=2] positioned ^ ^ ^1 facing entity @s feet positioned as @s positioned ^ ^ ^1 rotated as @e[tag=axis,distance=..0.1,x=0.5,y=2.0,z=0.5,limit=2] positioned ^ ^ ^1 facing entity @s feet positioned as @s positioned ^ ^ ^1 rotated as @e[tag=axis,distance=..0.1,x=0.5,y=2.0,z=0.5,limit=2] positioned ^ ^ ^1 facing entity @s feet positioned as @s positioned ^ ^ ^1 rotated as @e[tag=axis,distance=..0.1,x=0.5,y=2.0,z=0.5,limit=2] positioned ^ ^ ^1 facing entity @s feet positioned as @s positioned ^ ^ ^1 rotated as @e[tag=axis,distance=..0.1,x=0.5,y=2.0,z=0.5,limit=2] positioned ^ ^ ^1 facing entity @s feet positioned as @s positioned ^ ^ ^15 run particle minecraft:happy_villager ~ ~ ~ 0.5 0.5 0.5 0 1 force
-#tellraw @p [{"nbt":"Rotation","entity":"0-0-0-0-3"},{"nbt":"Rotation","entity":"0-0-0-0-4"}] 
