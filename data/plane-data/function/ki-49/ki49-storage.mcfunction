@@ -19,6 +19,8 @@ data modify storage voxel-planes:plane ki49.plane-data.model-data.landing-pitch 
 data modify storage voxel-planes:plane ki49.plane-data.model-data.scale set value [4f,4f,4f]
 data modify storage voxel-planes:plane ki49.plane-data.model-data.translation set value [0f,0.0f,1f]
 data modify storage voxel-planes:plane ki49.plane-data.model-data.central-axis-offset set value 1.5
+data modify storage voxel-planes:plane ki49.plane-data.seat.position.ridden set value {x:0,y:1.5,z:-5}
+data modify storage voxel-planes:plane ki49.plane-data.seat.position.vacant set value {x:0,y:0,z:6.5}
 data modify storage voxel-planes:plane ki49.plane-data.hp set value {engine:60d,body:80d,aileron:70d,elevetor:60d,radder:70d}
 data modify storage voxel-planes:plane ki49.plane-data.hitbox set value {}
 data modify storage voxel-planes:plane ki49.plane-data.hitbox merge value {body:{max-hp:80d,offset:[0d,-0.2d,0d],width:1.5,height:1.5}}

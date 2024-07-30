@@ -19,6 +19,8 @@ data modify storage voxel-planes:plane mig15bis.plane-data.model-data.landing-pi
 data modify storage voxel-planes:plane mig15bis.plane-data.model-data.scale set value [1f,1f,1f]
 data modify storage voxel-planes:plane mig15bis.plane-data.model-data.translation set value [0f,-0.5f,0f]
 data modify storage voxel-planes:plane mig15bis.plane-data.model-data.central-axis-offset set value 1.375
+data modify storage voxel-planes:plane mig15bis.plane-data.seat.position.ridden set value {x:0,y:0,z:-4.5}
+data modify storage voxel-planes:plane mig15bis.plane-data.seat.position.vacant set value {x:0,y:-0.5,z:2}
 data modify storage voxel-planes:plane mig15bis.plane-data.hitbox set value {}
 data modify storage voxel-planes:plane mig15bis.plane-data.hitbox merge value {engine:{max-hp:310d,offset:[0d,-0.6d,-0.5d],width:1.2,height:1.2}}
 data modify storage voxel-planes:plane mig15bis.plane-data.hitbox merge value {aileron-r:{max-hp:300d,offset:[-2.5d,-0.6d,-1.4d],width:1.2,height:1.2},aileron-l:{max-hp:300d,offset:[2.5d,-0.6d,-1.4d],width:1.2,height:1.2}}

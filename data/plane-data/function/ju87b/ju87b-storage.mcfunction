@@ -19,6 +19,8 @@ data modify storage voxel-planes:plane ju87b.plane-data.model-data.landing-pitch
 data modify storage voxel-planes:plane ju87b.plane-data.model-data.scale set value [2f,2f,2f]
 data modify storage voxel-planes:plane ju87b.plane-data.model-data.translation set value [0f,-0.3f,-1.5f]
 data modify storage voxel-planes:plane ju87b.plane-data.model-data.central-axis-offset set value 1.4
+data modify storage voxel-planes:plane ju87b.plane-data.seat.position.ridden set value {x:0,y:0.3,z:-2.7}
+data modify storage voxel-planes:plane ju87b.plane-data.seat.position.vacant set value {x:0,y:-0.2,z:3}
 data modify storage voxel-planes:plane ju87b.plane-data.hp set value {engine:70d,body:70d,aileron:70d,elevetor:60d,radder:60d}
 data modify storage voxel-planes:plane ju87b.plane-data.hitbox set value {}
 data modify storage voxel-planes:plane ju87b.plane-data.hitbox merge value {body:{max-hp:70d,offset:[0d,-0.5d,0d],width:1,height:1}}

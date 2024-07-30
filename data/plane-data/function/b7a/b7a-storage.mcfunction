@@ -16,6 +16,8 @@ data modify storage voxel-planes:plane b7a.plane-data.flight-model.turn-rate set
 data modify storage voxel-planes:plane b7a.plane-data.flight-model.energy-loss-rate set value 0.3
 data modify storage voxel-planes:plane b7a.plane-data.model-data.body set value {parking-cmd:207,rolling-cmd:208,flying-cmd:209}
 data modify storage voxel-planes:plane b7a.plane-data.model-data.landing-pitch set value -11.5
+data modify storage voxel-planes:plane b7a.plane-data.seat.position.ridden set value {x:0,y:0,z:-3}
+data modify storage voxel-planes:plane b7a.plane-data.seat.position.vacant set value {x:0,y:-0.3,z:4}
 data modify storage voxel-planes:plane b7a.plane-data.hitbox set value {}
 data modify storage voxel-planes:plane b7a.plane-data.hitbox merge value {body:{max-hp:140d,offset:[0d,0d,0d]}}
 data modify storage voxel-planes:plane b7a.plane-data.hitbox merge value {engine:{max-hp:120d,offset:[0d,0d,3d]}}

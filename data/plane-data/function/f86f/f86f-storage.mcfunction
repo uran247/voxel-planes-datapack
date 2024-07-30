@@ -19,6 +19,8 @@ data modify storage voxel-planes:plane f86f.plane-data.model-data.landing-pitch 
 data modify storage voxel-planes:plane f86f.plane-data.model-data.scale set value [1f,1f,1f]
 data modify storage voxel-planes:plane f86f.plane-data.model-data.translation set value [0f,-0.5f,0f]
 data modify storage voxel-planes:plane f86f.plane-data.model-data.central-axis-offset set value 1.375
+data modify storage voxel-planes:plane f86f.plane-data.seat.position.ridden set value {x:0,y:1.5,z:-9}
+data modify storage voxel-planes:plane f86f.plane-data.seat.position.vacant set value {x:0,y:0,z:2}
 data modify storage voxel-planes:plane f86f.plane-data.hitbox set value {}
 data modify storage voxel-planes:plane f86f.plane-data.hitbox merge value {engine:{max-hp:410d,offset:[0d,-0.3d,-2d],width:1.2,height:1.2}}
 data modify storage voxel-planes:plane f86f.plane-data.hitbox merge value {aileron-r:{max-hp:400d,offset:[-3d,-0.7d,-1.5d],width:1.4,height:1.4},aileron-l:{max-hp:400d,offset:[3d,-0.7d,-1.5d],width:1.4,height:1.4}}

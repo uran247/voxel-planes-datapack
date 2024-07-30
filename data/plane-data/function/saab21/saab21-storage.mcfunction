@@ -19,6 +19,8 @@ data modify storage voxel-planes:plane saab21.plane-data.model-data.landing-pitc
 data modify storage voxel-planes:plane saab21.plane-data.model-data.scale set value [1f,1f,1f]
 data modify storage voxel-planes:plane saab21.plane-data.model-data.translation set value [-0.4f,-0.5f,0.7f]
 data modify storage voxel-planes:plane saab21.plane-data.model-data.central-axis-offset set value 1.375
+data modify storage voxel-planes:plane saab21.plane-data.seat.position.ridden set value {x:0,y:0,z:-4.5}
+data modify storage voxel-planes:plane saab21.plane-data.seat.position.vacant set value {x:0,y:0.3,z:2.5}
 data modify storage voxel-planes:plane saab21.plane-data.hitbox set value {}
 data modify storage voxel-planes:plane saab21.plane-data.hitbox merge value {engine:{max-hp:150d,offset:[0d,0.4d,-0.6d],width:1,height:1}}
 data modify storage voxel-planes:plane saab21.plane-data.hitbox merge value {aileron-r:{max-hp:150d,offset:[-3d,-0.3d,0.1d],width:1.5,height:1.5},aileron-l:{max-hp:150d,offset:[3d,-0.3d,0.1d],width:1.5,height:1.5}}

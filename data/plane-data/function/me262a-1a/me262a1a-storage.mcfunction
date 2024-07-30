@@ -19,6 +19,8 @@ data modify storage voxel-planes:plane me262a1a.plane-data.model-data.landing-pi
 data modify storage voxel-planes:plane me262a1a.plane-data.model-data.scale set value [2f,2f,2f]
 data modify storage voxel-planes:plane me262a1a.plane-data.model-data.translation set value [0f,0.0f,-0.3f]
 data modify storage voxel-planes:plane me262a1a.plane-data.model-data.central-axis-offset set value 1.75
+data modify storage voxel-planes:plane me262a1a.plane-data.seat.position.ridden set value {x:0,y:0.5,z:-4.7}
+data modify storage voxel-planes:plane me262a1a.plane-data.seat.position.vacant set value {x:0,y:-0.4,z:1}
 data modify storage voxel-planes:plane me262a1a.plane-data.hp set value {engine:400d,body:430d,aileron:420d,elevetor:400d,radder:400d}
 data modify storage voxel-planes:plane me262a1a.plane-data.hitbox set value {}
 data modify storage voxel-planes:plane me262a1a.plane-data.hitbox merge value {engine-r:{max-hp:400d,offset:[-2.3d,-1.1d,1d],width:0.8,height:0.8},engine-l:{max-hp:400d,offset:[2.3d,-1.1d,1d],width:0.8,height:0.8}}

@@ -20,6 +20,8 @@ data modify storage voxel-planes:plane saab29f.plane-data.model-data.scale set v
 data modify storage voxel-planes:plane saab29f.plane-data.model-data.translation set value [0f,-0.5f,0f]
 data modify storage voxel-planes:plane saab29f.plane-data.model-data.central-axis-offset set value 1.375
 data modify storage voxel-planes:plane saab29f.plane-data.model-data.afterburner set value [{scale:[0.5f,0.5f,1.8f],translation:[-0.25f,-0.4f,-8f]}]
+data modify storage voxel-planes:plane saab29f.plane-data.seat.position.ridden set value {x:0,y:0.8,z:-8}
+data modify storage voxel-planes:plane saab29f.plane-data.seat.position.vacant set value {x:0,y:0,z:0}
 data modify storage voxel-planes:plane saab29f.plane-data.hitbox set value {}
 data modify storage voxel-planes:plane saab29f.plane-data.hitbox merge value {engine:{max-hp:200,offset:[0d,-0.5d,-3d],width:1.2,height:1.2}}
 data modify storage voxel-planes:plane saab29f.plane-data.hitbox merge value {aileron-r:{max-hp:200,offset:[-3d,-0.4d,-2.8d],width:1.5,height:1.5},aileron-l:{max-hp:200,offset:[3d,-0.4d,-2.8d],width:1.5,height:1.5}}

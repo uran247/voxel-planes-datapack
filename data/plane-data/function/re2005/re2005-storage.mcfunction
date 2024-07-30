@@ -19,6 +19,8 @@ data modify storage voxel-planes:plane re2005.plane-data.model-data.landing-pitc
 data modify storage voxel-planes:plane re2005.plane-data.model-data.scale set value [1f,1f,1f]
 data modify storage voxel-planes:plane re2005.plane-data.model-data.translation set value [0f,-0.4f,0f]
 data modify storage voxel-planes:plane re2005.plane-data.model-data.central-axis-offset set value 1.375
+data modify storage voxel-planes:plane re2005.plane-data.seat.position.ridden set value {x:0,y:0.5,z:-4.2}
+data modify storage voxel-planes:plane re2005.plane-data.seat.position.vacant set value {x:0,y:-0.5,z:0}
 data modify storage voxel-planes:plane re2005.plane-data.hitbox set value {}
 data modify storage voxel-planes:plane re2005.plane-data.hitbox merge value {engine:{max-hp:170f,offset:[0d,-0.4d,2.6d],width:1,height:1}}
 data modify storage voxel-planes:plane re2005.plane-data.hitbox merge value {aileron-r:{max-hp:180f,offset:[-3d,-1d,0.8d],width:1.4,height:1.4},aileron-l:{max-hp:180f,offset:[3d,-1d,0.8d],width:1.4,height:1.4}}

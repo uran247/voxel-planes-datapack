@@ -20,6 +20,8 @@ data modify storage voxel-planes:plane swordfish.plane-data.model-data.scale set
 data modify storage voxel-planes:plane swordfish.plane-data.model-data.translation set value [0f,-0.2f,-2.8f]
 data modify storage voxel-planes:plane swordfish.plane-data.hp set value {engine:70d,body:80d,aileron:80d,elevetor:50d,radder:50d}
 data modify storage voxel-planes:plane swordfish.plane-data.model-data.central-axis-offset set value 1.5
+data modify storage voxel-planes:plane swordfish.plane-data.seat.position.ridden set value {x:0,y:0.5,z:-3}
+data modify storage voxel-planes:plane swordfish.plane-data.seat.position.vacant set value {x:0,y:-0.2,z:2}
 data modify storage voxel-planes:plane swordfish.plane-data.hitbox set value {}
 data modify storage voxel-planes:plane swordfish.plane-data.hitbox merge value {engine:{max-hp:70d,offset:[0d,-0.4d,4.2d],width:1.2,height:1.2}}
 data modify storage voxel-planes:plane swordfish.plane-data.hitbox merge value {aileron-r:{max-hp:80d,offset:[-3.8d,-0.5d,2.3d],width:1.8,height:1.8},aileron-l:{max-hp:80d,offset:[3.8d,-0.5d,2.3d],width:1.8,height:1.8}}

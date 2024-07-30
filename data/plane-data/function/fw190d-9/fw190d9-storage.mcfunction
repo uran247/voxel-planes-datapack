@@ -20,6 +20,8 @@ data modify storage voxel-planes:plane fw190d9.plane-data.model-data.scale set v
 data modify storage voxel-planes:plane fw190d9.plane-data.model-data.translation set value [0f,-0.5f,1f]
 data modify storage voxel-planes:plane fw190d9.plane-data.model-data.central-axis-offset set value 1.625
 data modify storage voxel-planes:plane fw190d9.plane-data.hp set value {engine:400d,body:440d,aileron:320d,elevetor:280d,radder:280d}
+data modify storage voxel-planes:plane fw190d9.plane-data.seat.position.ridden set value {x:0,y:0,z:-3.5}
+data modify storage voxel-planes:plane fw190d9.plane-data.seat.position.vacant set value {x:0,y:-0.4,z:1}
 data modify storage voxel-planes:plane fw190d9.plane-data.hitbox set value {}
 data modify storage voxel-planes:plane fw190d9.plane-data.hitbox merge value {body:{max-hp:440d,offset:[0d,-0.4d,0d],width:1.1,height:1.1}}
 data modify storage voxel-planes:plane fw190d9.plane-data.hitbox merge value {engine:{max-hp:400d,offset:[0d,-0.4d,3d],width:1.1,height:1.1}}

@@ -19,6 +19,8 @@ data modify storage voxel-planes:plane p38l.plane-data.model-data.landing-pitch 
 data modify storage voxel-planes:plane p38l.plane-data.model-data.scale set value [2f,2f,2f]
 data modify storage voxel-planes:plane p38l.plane-data.model-data.central-axis-offset set value 1.125
 data modify storage voxel-planes:plane p38l.plane-data.model-data.translation set value [0f,-0.5f,1.5f]
+data modify storage voxel-planes:plane p38l.plane-data.seat.position.ridden set value {x:0,y:-0.2,z:-1.5}
+data modify storage voxel-planes:plane p38l.plane-data.seat.position.vacant set value {x:0,y:-0.4,z:5.7}
 data modify storage voxel-planes:plane p38l.plane-data.hitbox set value {}
 data modify storage voxel-planes:plane p38l.plane-data.hitbox merge value {engine-r:{max-hp:330d,offset:[-2.4d,-0.1d,6.2d],width:1,height:1},engine-l:{max-hp:330d,offset:[2.4d,-0.1d,6.2d],width:1,height:1}}
 data modify storage voxel-planes:plane p38l.plane-data.hitbox merge value {body:{max-hp:360d,offset:[0d,-0.3d,5d],width:1,height:1}}

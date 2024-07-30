@@ -19,6 +19,8 @@ data modify storage voxel-planes:plane meteorf8.plane-data.model-data.landing-pi
 data modify storage voxel-planes:plane meteorf8.plane-data.model-data.scale set value [2f,2f,2f]
 data modify storage voxel-planes:plane meteorf8.plane-data.model-data.translation set value [0f,-0.3f,-0.8f]
 data modify storage voxel-planes:plane meteorf8.plane-data.model-data.central-axis-offset set value 1.375
+data modify storage voxel-planes:plane meteorf8.plane-data.seat.position.ridden set value {x:0,y:0,z:-4.1}
+data modify storage voxel-planes:plane meteorf8.plane-data.seat.position.vacant set value {x:0,y:-0.4,z:4}
 data modify storage voxel-planes:plane meteorf8.plane-data.hitbox set value {}
 data modify storage voxel-planes:plane meteorf8.plane-data.hitbox merge value {engine-r:{max-hp:400d,offset:[-2.3d,-0.6d,1.4d],width:1,height:1},engine-l:{max-hp:400d,offset:[2.3d,-0.6d,1.4d],width:1,height:1}}
 data modify storage voxel-planes:plane meteorf8.plane-data.hitbox merge value {aileron-r:{max-hp:420d,offset:[-4d,-1.1d,0.5d],width:1.8,height:1.8},aileron-l:{max-hp:420d,offset:[4d,-1.1d,0.5d],width:1.8,height:1.8}}

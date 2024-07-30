@@ -52,7 +52,8 @@ execute at @s as @e[type=minecraft:donkey,tag=target-parts,tag=plane-seat,distan
 execute as @s at @s run function plane:position/util/get-corret-param
 
 # 航空機ごとの個別処理
-function plane:position/position-individual
+execute at @s[tag=has-rider] run function plane:position/adjust-seat-pos with storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].plane-data.seat.position.ridden
+execute at @s[tag=!has-rider] run function plane:position/adjust-seat-pos with storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].plane-data.seat.position.vacant
 
 # hitbox補充/削除
 function plane:position/summon-controll-entity

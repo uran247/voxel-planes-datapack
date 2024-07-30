@@ -18,6 +18,8 @@ data modify storage voxel-planes:plane seafuryfb11.plane-data.model-data.body se
 data modify storage voxel-planes:plane seafuryfb11.plane-data.model-data.landing-pitch set value -14.0
 data modify storage voxel-planes:plane seafuryfb11.plane-data.model-data.scale set value [1f,1f,1f]
 data modify storage voxel-planes:plane seafuryfb11.plane-data.model-data.translation set value [0f,-0.5f,0f]
+data modify storage voxel-planes:plane seafuryfb11.plane-data.seat.position.ridden set value {x:0,y:0,z:-3.5}
+data modify storage voxel-planes:plane seafuryfb11.plane-data.seat.position.vacant set value {x:0,y:-0.4,z:1}
 data modify storage voxel-planes:plane seafuryfb11.plane-data.hp set value {engine:220d,body:250d,aileron:200d,elevetor:200d,radder:210d}
 data modify storage voxel-planes:plane seafuryfb11.plane-data.model-data.central-axis-offset set value 1.375
 data modify storage voxel-planes:plane seafuryfb11.plane-data.hitbox set value {}
