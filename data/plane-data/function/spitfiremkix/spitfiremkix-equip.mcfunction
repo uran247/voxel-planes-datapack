@@ -9,8 +9,8 @@
 
 #> within
 # @within
-#   plane-data:ki-61/spitfiremkix-equip
-#   plane-data:ki-61/spitfiremkix-weapon-manager
+#   plane-data:spitfiremkix/spitfiremkix-equip
+#   plane-data:spitfiremkix/spitfiremkix-weapon-manager
        #declare tag mg151 #mg151機銃を装備していることを示す
        #declare tag 250kg #100kg通常爆弾を装備していることを示す
 

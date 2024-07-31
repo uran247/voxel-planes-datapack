@@ -44,7 +44,7 @@ execute as @s at @s run function plane:position/position
 execute at @s run function plane:weapon/weapon-manager
 
 # 駐機時の装備変更
-execute if entity @a[tag=plane-pilot,tag=change-inventory] at @s[tag=!engine-started,scores={vp.speed=..0}] run function plane:equip/equip-manager
+execute if entity @a[tag=plane-pilot,tag=change-inventory] at @s[tag=!engine-started,scores={vp.speed=..0}] run function plane:equip/equip-manager with storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].plane-data
 tag @a[tag=plane-pilot,tag=change-inventory] remove change-inventory
 
 # 選択装備変更
