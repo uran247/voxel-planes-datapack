@@ -7,6 +7,7 @@ data modify storage voxel-planes:weapon ki43 set value {base:{},additional:{}}
 data modify storage voxel-planes:plane ki43 set value {}
 
 #飛行機データセット
+data modify storage voxel-planes:plane ki43.plane-data.name set value ki43
 data modify storage voxel-planes:plane ki43.plane-data.plane-type set value fighter
 data modify storage voxel-planes:plane ki43.plane-data.tier set value 1
 data modify storage voxel-planes:plane ki43.plane-data.flight-model.weight set value 2590.0

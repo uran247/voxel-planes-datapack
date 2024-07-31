@@ -7,6 +7,7 @@ data modify storage voxel-planes:weapon tbf set value {base:{},additional:{}}
 data modify storage voxel-planes:plane tbf set value {}
 
 #飛行機データセット
+data modify storage voxel-planes:plane tbf.plane-data.name set value tbf
 data modify storage voxel-planes:plane tbf.plane-data.plane-type set value bomber
 data modify storage voxel-planes:plane tbf.plane-data.tier set value 1
 data modify storage voxel-planes:plane tbf.plane-data.flight-model.weight set value 7047

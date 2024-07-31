@@ -7,6 +7,7 @@ data modify storage voxel-planes:weapon swordfish set value {base:{},additional:
 data modify storage voxel-planes:plane swordfish set value {}
 
 #飛行機データセット
+data modify storage voxel-planes:plane swordfish.plane-data.name set value swordfish
 data modify storage voxel-planes:plane swordfish.plane-data.plane-type set value bomber
 data modify storage voxel-planes:plane swordfish.plane-data.tier set value 2
 data modify storage voxel-planes:plane swordfish.plane-data.flight-model.weight set value 2690

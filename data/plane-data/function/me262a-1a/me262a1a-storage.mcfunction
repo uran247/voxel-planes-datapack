@@ -7,6 +7,7 @@ data modify storage voxel-planes:weapon me262a1a set value {base:{},additional:{
 data modify storage voxel-planes:plane me262a1a set value {}
 
 #飛行機データセット
+data modify storage voxel-planes:plane me262a1a.plane-data.name set value me262a1a
 data modify storage voxel-planes:plane me262a1a.plane-data.plane-type set value fighter
 data modify storage voxel-planes:plane me262a1a.plane-data.tier set value 5
 data modify storage voxel-planes:plane me262a1a.plane-data.flight-model.weight set value 6473.0

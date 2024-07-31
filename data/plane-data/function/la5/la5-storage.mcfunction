@@ -7,6 +7,7 @@ data modify storage voxel-planes:weapon la5 set value {base:{},additional:{}}
 data modify storage voxel-planes:plane la5 set value {}
 
 #飛行機データセット
+data modify storage voxel-planes:plane la5.plane-data.name set value la5
 data modify storage voxel-planes:plane la5.plane-data.plane-type set value fighter
 data modify storage voxel-planes:plane la5.plane-data.tier set value 3
 data modify storage voxel-planes:plane la5.plane-data.flight-model.weight set value 3168

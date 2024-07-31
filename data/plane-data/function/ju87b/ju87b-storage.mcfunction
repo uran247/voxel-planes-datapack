@@ -7,6 +7,7 @@ data modify storage voxel-planes:weapon ju87b set value {base:{},additional:{}}
 data modify storage voxel-planes:plane ju87b set value {}
 
 #飛行機データセット
+data modify storage voxel-planes:plane ju87b.plane-data.name set value ju87b
 data modify storage voxel-planes:plane ju87b.plane-data.plane-type set value bomber
 data modify storage voxel-planes:plane ju87b.plane-data.tier set value 1
 data modify storage voxel-planes:plane ju87b.plane-data.flight-model.weight set value 3420

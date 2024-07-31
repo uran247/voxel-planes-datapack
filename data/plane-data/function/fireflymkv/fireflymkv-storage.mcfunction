@@ -7,6 +7,7 @@ data modify storage voxel-planes:weapon fireflymkv set value {base:{},additional
 data modify storage voxel-planes:plane fireflymkv set value {}
 
 #飛行機データセット
+data modify storage voxel-planes:plane fireflymkv.plane-data.name set value fireflymkv
 data modify storage voxel-planes:plane fireflymkv.plane-data.plane-type set value attacker
 data modify storage voxel-planes:plane fireflymkv.plane-data.tier set value 3
 data modify storage voxel-planes:plane fireflymkv.plane-data.flight-model.weight set value 4388

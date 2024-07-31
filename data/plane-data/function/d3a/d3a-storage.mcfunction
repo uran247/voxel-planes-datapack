@@ -7,6 +7,7 @@ data modify storage voxel-planes:weapon d3a set value {base:{},additional:{}}
 data modify storage voxel-planes:plane d3a set value {}
 
 #飛行機データセット
+data modify storage voxel-planes:plane d3a.plane-data.name set value d3a
 data modify storage voxel-planes:plane d3a.plane-data.plane-type set value bomber
 data modify storage voxel-planes:plane d3a.plane-data.tier set value 1
 data modify storage voxel-planes:plane d3a.plane-data.flight-model.weight set value 3140

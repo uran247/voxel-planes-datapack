@@ -7,6 +7,7 @@ data modify storage voxel-planes:weapon yak9u set value {base:{},additional:{}}
 data modify storage voxel-planes:plane yak9u set value {}
 
 #飛行機データセット
+data modify storage voxel-planes:plane yak9u.plane-data.name set value yak9u
 data modify storage voxel-planes:plane yak9u.plane-data.plane-type set value fighter
 data modify storage voxel-planes:plane yak9u.plane-data.tier set value 4
 data modify storage voxel-planes:plane yak9u.plane-data.flight-model.weight set value 3204

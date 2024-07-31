@@ -7,6 +7,7 @@ data modify storage voxel-planes:weapon bf109g set value {base:{},additional:{}}
 data modify storage voxel-planes:plane bf109g set value {}
 
 #飛行機データセット
+data modify storage voxel-planes:plane bf109g.plane-data.name set value bf109g
 data modify storage voxel-planes:plane bf109g.plane-data.plane-type set value fighter
 data modify storage voxel-planes:plane bf109g.plane-data.tier set value 4
 data modify storage voxel-planes:plane bf109g.plane-data.flight-model.weight set value 3148.0

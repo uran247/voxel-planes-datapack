@@ -7,6 +7,7 @@ data modify storage voxel-planes:weapon mc202 set value {base:{},additional:{}}
 data modify storage voxel-planes:plane mc202 set value {}
 
 #飛行機データセット
+data modify storage voxel-planes:plane mc202.plane-data.name set value mc202
 data modify storage voxel-planes:plane mc202.plane-data.plane-type set value fighter
 data modify storage voxel-planes:plane mc202.plane-data.tier set value 2
 data modify storage voxel-planes:plane mc202.plane-data.flight-model.weight set value 2700

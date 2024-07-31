@@ -7,6 +7,7 @@ data modify storage voxel-planes:weapon il2 set value {base:{},additional:{}}
 data modify storage voxel-planes:plane il2 set value {}
 
 #飛行機データセット
+data modify storage voxel-planes:plane il2.plane-data.name set value il2
 data modify storage voxel-planes:plane il2.plane-data.plane-type set value attacker
 data modify storage voxel-planes:plane il2.plane-data.tier set value 3
 data modify storage voxel-planes:plane il2.plane-data.flight-model.weight set value 5500

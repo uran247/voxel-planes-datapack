@@ -7,6 +7,7 @@ data modify storage voxel-planes:weapon sbd3 set value {base:{},additional:{}}
 data modify storage voxel-planes:plane sbd3 set value {}
 
 #飛行機データセット
+data modify storage voxel-planes:plane sbd3.plane-data.name set value sbd3
 data modify storage voxel-planes:plane sbd3.plane-data.plane-type set value bomber
 data modify storage voxel-planes:plane sbd3.plane-data.tier set value 1
 data modify storage voxel-planes:plane sbd3.plane-data.flight-model.weight set value 3660

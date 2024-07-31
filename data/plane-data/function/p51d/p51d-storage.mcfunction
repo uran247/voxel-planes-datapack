@@ -7,6 +7,7 @@ data modify storage voxel-planes:weapon p51d set value {base:{},additional:{}}
 data modify storage voxel-planes:plane p51d set value {}
 
 #飛行機データセット
+data modify storage voxel-planes:plane p51d.plane-data.name set value p51d
 data modify storage voxel-planes:plane p51d.plane-data.plane-type set value fighter
 data modify storage voxel-planes:plane p51d.plane-data.tier set value 4
 data modify storage voxel-planes:plane p51d.plane-data.flight-model.weight set value 4173

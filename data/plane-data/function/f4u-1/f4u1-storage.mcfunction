@@ -7,6 +7,7 @@ data modify storage voxel-planes:weapon f4u1 set value {base:{},additional:{}}
 data modify storage voxel-planes:plane f4u1 set value {}
 
 #飛行機データセット
+data modify storage voxel-planes:plane f4u1.plane-data.name set value f4u1
 data modify storage voxel-planes:plane f4u1.plane-data.plane-type set value fighter
 data modify storage voxel-planes:plane f4u1.plane-data.tier set value 2
 data modify storage voxel-planes:plane f4u1.plane-data.flight-model.weight set value 4800.0

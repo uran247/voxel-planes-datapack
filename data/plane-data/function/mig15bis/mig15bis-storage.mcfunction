@@ -7,6 +7,7 @@ data modify storage voxel-planes:weapon mig15bis set value {base:{},additional:{
 data modify storage voxel-planes:plane mig15bis set value {}
 
 #飛行機データセット
+data modify storage voxel-planes:plane mig15bis.plane-data.name set value mig15bis
 data modify storage voxel-planes:plane mig15bis.plane-data.plane-type set value fighter
 data modify storage voxel-planes:plane mig15bis.plane-data.tier set value 5
 data modify storage voxel-planes:plane mig15bis.plane-data.flight-model.weight set value 5044

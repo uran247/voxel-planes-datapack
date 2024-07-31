@@ -7,6 +7,7 @@ data modify storage voxel-planes:weapon p39n set value {base:{},additional:{}}
 data modify storage voxel-planes:plane p39n set value {}
 
 #飛行機データセット
+data modify storage voxel-planes:plane p39n.plane-data.name set value p39n
 data modify storage voxel-planes:plane p39n.plane-data.plane-type set value fighter
 data modify storage voxel-planes:plane p39n.plane-data.tier set value 2
 data modify storage voxel-planes:plane p39n.plane-data.flight-model.weight set value 3370

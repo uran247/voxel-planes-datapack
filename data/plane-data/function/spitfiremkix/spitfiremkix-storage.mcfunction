@@ -7,6 +7,7 @@ data modify storage voxel-planes:weapon spitfiremkix set value {base:{},addition
 data modify storage voxel-planes:plane spitfiremkix set value {}
 
 #飛行機データセット
+data modify storage voxel-planes:plane spitfiremkix.plane-data.name set value spitfiremkix
 data modify storage voxel-planes:plane spitfiremkix.plane-data.plane-type set value fighter
 data modify storage voxel-planes:plane spitfiremkix.plane-data.tier set value 3
 data modify storage voxel-planes:plane spitfiremkix.plane-data.flight-model.weight set value 3354

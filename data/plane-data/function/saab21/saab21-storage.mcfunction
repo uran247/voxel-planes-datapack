@@ -7,6 +7,7 @@ data modify storage voxel-planes:weapon saab21 set value {base:{},additional:{}}
 data modify storage voxel-planes:plane saab21 set value {}
 
 #飛行機データセット
+data modify storage voxel-planes:plane saab21.plane-data.name set value saab21
 data modify storage voxel-planes:plane saab21.plane-data.plane-type set value fighter
 data modify storage voxel-planes:plane saab21.plane-data.tier set value 3
 data modify storage voxel-planes:plane saab21.plane-data.flight-model.weight set value 4413

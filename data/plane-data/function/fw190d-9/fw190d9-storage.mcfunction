@@ -7,6 +7,7 @@ data modify storage voxel-planes:weapon fw190d9 set value {base:{},additional:{}
 data modify storage voxel-planes:plane fw190d9 set value {}
 
 #飛行機データセット
+data modify storage voxel-planes:plane fw190d9.plane-data.name set value fw190d9
 data modify storage voxel-planes:plane fw190d9.plane-data.plane-type set value fighter
 data modify storage voxel-planes:plane fw190d9.plane-data.tier set value 4
 data modify storage voxel-planes:plane fw190d9.plane-data.flight-model.weight set value 4270

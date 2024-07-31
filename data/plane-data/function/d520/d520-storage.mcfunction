@@ -7,6 +7,7 @@ data modify storage voxel-planes:weapon d520 set value {base:{},additional:{}}
 data modify storage voxel-planes:plane d520 set value {}
 
 #飛行機データセット
+data modify storage voxel-planes:plane d520.plane-data.name set value d520
 data modify storage voxel-planes:plane d520.plane-data.plane-type set value fighter
 data modify storage voxel-planes:plane d520.plane-data.tier set value 2
 data modify storage voxel-planes:plane d520.plane-data.flight-model.weight set value 2452

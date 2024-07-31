@@ -7,6 +7,7 @@ data modify storage voxel-planes:weapon d4y2 set value {base:{},additional:{}}
 data modify storage voxel-planes:plane d4y2 set value {}
 
 #飛行機データセット
+data modify storage voxel-planes:plane d4y2.plane-data.name set value d4y2
 data modify storage voxel-planes:plane d4y2.plane-data.plane-type set value bomber
 data modify storage voxel-planes:plane d4y2.plane-data.tier set value 2
 data modify storage voxel-planes:plane d4y2.plane-data.flight-model.weight set value 3670

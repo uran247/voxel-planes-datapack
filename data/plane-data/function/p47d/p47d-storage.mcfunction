@@ -7,6 +7,7 @@ data modify storage voxel-planes:weapon p47d set value {base:{},additional:{}}
 data modify storage voxel-planes:plane p47d set value {}
 
 #飛行機データセット
+data modify storage voxel-planes:plane p47d.plane-data.name set value p47d
 data modify storage voxel-planes:plane p47d.plane-data.plane-type set value fighter
 data modify storage voxel-planes:plane p47d.plane-data.tier set value 3
 data modify storage voxel-planes:plane p47d.plane-data.flight-model.weight set value 6577

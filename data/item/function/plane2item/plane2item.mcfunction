@@ -1,6 +1,10 @@
 #> item:plane2item/plane2item
 #
-#入力　entity:plane
+# @input
+#   as @e[tag=plane-root]
+#   at @e[tag=plane-root]
+#   oh_my_dat @e[tag=plane-root]
+#
 #処理　機種に応じたplane2itemを実行
 #
 # @within function plane:controll/controll-ground
@@ -9,12 +13,15 @@
 # @private
     #declare tag plane2item-plane-parts
 
+# ohmydat呼び出し
+function oh_my_dat:please
+
 #同じIDのパーツ取得
 scoreboard players operation #plane-id vp.reg1 = @s vp.plane-id
 execute as @e[tag=plane] if score @s vp.plane-id = #plane-id vp.reg1 run tag @s add plane2item-plane-parts
 
 #個別処理
-function item:plane2item/plane2item-individual-plane
+function item:plane2item/call-loottable with storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].plane-data
 
 #ロバチェスト内のアイテム放出
 data merge block 0 1 0 {Items:[]}

@@ -6,6 +6,7 @@ data modify storage voxel-planes:weapon b17g set value {base:{},additional:{}}
 data modify storage voxel-planes:plane b17g set value {}
 
 #飛行機データセット
+data modify storage voxel-planes:plane b17g.plane-data.name set value b17g
 data modify storage voxel-planes:plane b17g.plane-data.plane-type set value fighter
 data modify storage voxel-planes:plane b17g.plane-data.tier set value 4
 data modify storage voxel-planes:plane b17g.plane-data.flight-model.weight set value 24500

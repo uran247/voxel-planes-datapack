@@ -6,6 +6,7 @@ data modify storage voxel-planes:weapon pe2 set value {base:{},additional:{}}
 data modify storage voxel-planes:plane pe2 set value {}
 
 #飛行機データセット
+data modify storage voxel-planes:plane pe2.plane-data.name set value pe2
 data modify storage voxel-planes:plane pe2.plane-data.plane-type set value bomber
 data modify storage voxel-planes:plane pe2.plane-data.tier set value 2
 data modify storage voxel-planes:plane pe2.plane-data.flight-model.weight set value 7563

@@ -7,6 +7,7 @@ data modify storage voxel-planes:weapon seafuryfb11 set value {base:{},additiona
 data modify storage voxel-planes:plane seafuryfb11 set value {}
 
 #飛行機データセット
+data modify storage voxel-planes:plane seafuryfb11.plane-data.name set value seafuryfb11
 data modify storage voxel-planes:plane seafuryfb11.plane-data.plane-type set value fighter
 data modify storage voxel-planes:plane seafuryfb11.plane-data.tier set value 4
 data modify storage voxel-planes:plane seafuryfb11.plane-data.flight-model.weight set value 5602

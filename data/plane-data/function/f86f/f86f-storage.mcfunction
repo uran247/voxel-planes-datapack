@@ -7,6 +7,7 @@ data modify storage voxel-planes:weapon f86f set value {base:{},additional:{}}
 data modify storage voxel-planes:plane f86f set value {}
 
 #飛行機データセット
+data modify storage voxel-planes:plane f86f.plane-data.name set value f86f
 data modify storage voxel-planes:plane f86f.plane-data.plane-type set value fighter
 data modify storage voxel-planes:plane f86f.plane-data.tier set value 5
 data modify storage voxel-planes:plane f86f.plane-data.flight-model.weight set value 6894
