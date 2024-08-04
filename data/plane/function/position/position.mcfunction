@@ -51,7 +51,7 @@ execute at @s as @e[type=minecraft:donkey,tag=target-parts,tag=plane-seat,distan
 # 移動力補正スコア収集(本来は移動処理でやるべきだがパーツが1座標に集まるタイミングここなので軽さのために実行)
 execute as @s at @s run function plane:position/util/get-corret-param
 
-# 航空機ごとの個別処理
+# 座席の位置調整
 execute at @s[tag=has-rider] run function plane:position/adjust-seat-pos with storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].plane-data.seat.position.ridden
 execute at @s[tag=!has-rider] run function plane:position/adjust-seat-pos with storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].plane-data.seat.position.vacant
 
