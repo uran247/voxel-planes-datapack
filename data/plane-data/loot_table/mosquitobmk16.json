@@ -11,15 +11,15 @@
                         {
                             "function": "set_name",
                             "target": "item_name",
-                            "name": {"text": "$PLANE_NAME"}
+                            "name": {"text": "Mosquito B Mk. XVI"}
                         },
                         {
                             "function": "set_lore",
                             "mode":"replace_all",
                             "lore": [
-                                {"translate": "$PLANE_TYPE","color": "green","bold": true},
+                                {"translate": "爆撃機","color": "green","bold": true},
                                 {"translate": " 武装"},
-                                {"translate": "  $WEAPON_NAME_AND_NUMBER","color": "blue"}
+                                {"translate": "  500lb爆弾 x4","color": "blue"}
                             ]
                         },
                         {
@@ -28,7 +28,7 @@
                         },
                         {
                             "function": "minecraft:set_custom_model_data",
-                            "value": 29
+                            "value": 49
                         },
                         {
                           "function": "minecraft:set_components",

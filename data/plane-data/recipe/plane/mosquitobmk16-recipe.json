@@ -1,0 +1,57 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "BGR",
+        "##g"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:iron_trapdoor"
+        },
+        "B": {
+            "item": "minecraft:blue_dye"
+        },
+        "G": {
+            "item": "minecraft:gray_dye"
+        },
+        "R": {
+            "item": "minecraft:red_dye"
+        },
+        "g": {
+            "item": "minecraft:gunpowder"
+        }
+    },
+    "result": {
+        "id": "minecraft:bat_spawn_egg",
+        "count": 1,
+        "components": {
+            "minecraft:custom_data": {
+                "item-type": "mosquitobmk16"
+            },
+            "minecraft:custom_model_data": 49,
+            "minecraft:entity_data": {
+                "id": "minecraft:bat",
+                "Silent": 1,
+                "Tags": [
+                    "mosquitobmk16-spawner",
+                    "plane-spawner"
+                ],
+                "active_effects": [
+                    {
+                        "id": "minecraft:invisibility",
+                        "amplifier": 1,
+                        "duration": -1,
+                        "show_particles": 0
+                    }
+                ]
+            },
+            "minecraft:lore": [
+                "{'translate':'爆撃機','color':'green','bold':true}",
+                "{'translate':' 武装'}",
+                "{'translate':'  500lb爆弾 x4','color': 'blue'}"
+            ],
+            "minecraft:item_name": "{'text': 'Mosquito B Mk. XVI'}"
+        }
+    }
+}
