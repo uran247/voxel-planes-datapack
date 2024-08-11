@@ -82,20 +82,23 @@ execute as @e[tag=!plane-hitbox,tag=!entity-nohit,distance=..32] run function we
 
 #### ダメージ時エフェクト ####
 #命中地点にパーティクル
-execute if score @s vp.weight matches 0..99 at @s run particle minecraft:large_smoke ~ ~1 ~ 1.0 1.0 1.0 0.05 500 force
-execute if score @s vp.weight matches 0..99 at @s run particle minecraft:flame ~ ~1 ~ 1 1.2 1 0.03 100 force
+execute if score @s vp.weight matches 0..99 at @s run particle minecraft:large_smoke ~ ~1 ~ 2 2 2 0.2 125 force
+execute if score @s vp.weight matches 0..99 at @s run particle minecraft:flame ~ ~1 ~ 1.2 1.2 1.2 0.12 310 force
 
-execute if score @s vp.weight matches 100..199 at @s run particle minecraft:large_smoke ~ ~1 ~ 1 1 1 0.05 600 force
-execute if score @s vp.weight matches 100..199 at @s run particle minecraft:flame ~ ~1 ~ 1 1.2 1 0.03 120 force
+execute if score @s vp.weight matches 100..199 at @s run particle minecraft:large_smoke ~ ~1 ~ 2 2 2 0.25 250 force
+execute if score @s vp.weight matches 100..199 at @s run particle minecraft:flame ~ ~1 ~ 1.2 1.2 1.2 0.15 625 force
 
-execute if score @s vp.weight matches 200..399 at @s run particle minecraft:large_smoke ~ ~1 ~ 2 1 2 0.25 2500 force
-execute if score @s vp.weight matches 200..399 at @s run particle minecraft:flame ~ ~1 ~ 2 2.4 2 0.25 500 force
+execute if score @s vp.weight matches 200..399 at @s run particle minecraft:large_smoke ~ ~1 ~ 2 2 2 0.32 500 force
+execute if score @s vp.weight matches 200..399 at @s run particle minecraft:flame ~ ~1 ~ 1 1 1 0.2 1250 force
 
-execute if score @s vp.weight matches 400..799 at @s run particle minecraft:large_smoke ~ ~1 ~ 4 2 4 0.25 5000 force
-execute if score @s vp.weight matches 400..799 at @s run particle minecraft:flame ~ ~1 ~ 4 5 4 0.25 2000 force
+execute if score @s vp.weight matches 400..799 at @s run particle minecraft:large_smoke ~ ~1 ~ 2 2 2 0.4 1000 force
+execute if score @s vp.weight matches 400..799 at @s run particle minecraft:flame ~ ~1 ~ 1 1 1 0.24 2500 force
 
-execute if score @s vp.weight matches 800..1499 at @s run particle minecraft:large_smoke ~ ~1 ~ 5 1.5 5 0.25 5000 force
-execute if score @s vp.weight matches 800..1499 at @s run particle minecraft:flame ~ ~1 ~ 5 6 5 0.25 2000 force
+execute if score @s vp.weight matches 800..1499 at @s run particle minecraft:large_smoke ~ ~1 ~ 1.2 1.2 1.2 0.5 2000 force
+execute if score @s vp.weight matches 800..1499 at @s run particle minecraft:flame ~ ~1 ~ 1 1 1 0.3 5000 force
+
+execute if score @s vp.weight matches 1500..2500 at @s run particle minecraft:large_smoke ~ ~1 ~ 1.2 1.2 1.2 0.63 4000 force
+execute if score @s vp.weight matches 1500..2500 at @s run particle minecraft:flame ~ ~1 ~ 1 1 1 0.38 10000 force
 
 #音
 execute at @s run playsound minecraft:entity.generic.explode master @a ~ ~ ~ 3 1.2 0
