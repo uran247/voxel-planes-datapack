@@ -1,7 +1,9 @@
 #> weapon:dropping/dropping-manager
 #
-# as @e[tag=dropping]
-# at @e[tag=dropping]
+# @input
+#   as @e[tag=dropping]
+#   at @e[tag=dropping]
+#   ohmydat: @e[tag=dropping]
 #
 # @within function weapon:tick
 
@@ -24,6 +26,9 @@
     #declare score_holder #hit-flag #当たったことのフラグ 1:ブロック命中 2:エンティティ命中
     #declare tag hit-weapon #武器がヒットしたエンティティにつく
 
+
+# エンティティデータ取得
+function oh_my_dat:please
 
 #実行者にタグ付け
 tag @s add bomb-move-executer
@@ -53,6 +58,9 @@ execute if score #hit-flag vp.reg1 matches 1.. at @s run function weapon:droppin
     #tellraw @p [{"score" : {"name":"#hit-flag", "objective":"vp.reg1"}}]
 execute if score #destroy-terrain vp.config matches 1.. if score #hit-flag vp.reg1 matches 1.. at @s run function weapon:dropping/damage/destroy-terrain
 execute if score #hit-flag vp.reg1 matches 1.. run kill @s
+
+# 落下音を鳴らす
+execute at @s as @a[distance=..16] run function weapon:dropping/drop-sound
 
 #向き修正
 data modify entity @s Rotation set from storage minecraft:plane-datapack temporary.Rotation

@@ -101,8 +101,10 @@ execute if score @s vp.weight matches 1500..2500 at @s run particle minecraft:la
 execute if score @s vp.weight matches 1500..2500 at @s run particle minecraft:flame ~ ~1 ~ 1 1 1 0.38 10000 force
 
 #音
-execute at @s run playsound minecraft:entity.generic.explode master @a ~ ~ ~ 3 1.2 0
-execute at @s as @a[tag=weapon-owner] at @s run playsound minecraft:entity.generic.explode master @s ~ ~ ~ 1 1.2 0
+execute at @s run playsound minecraft:entity.generic.explode master @a ~ ~ ~ 3 0.5 0
+execute at @s run playsound minecraft:entity.breeze.wind_burst master @a ~ ~ ~ 1.0 0.5 0.0
+execute at @s as @a[tag=weapon-owner] at @s run playsound minecraft:entity.generic.explode master @s ~ ~ ~ 1 0.5 0
+execute at @s as @a[tag=weapon-owner] at @s run playsound minecraft:entity.breeze.wind_burst master @a ~ ~ ~ 1.0 0.5 0.0
 
 #タグ除去
 tag @a remove weapon-owner
