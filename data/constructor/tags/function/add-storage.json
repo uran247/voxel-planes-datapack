@@ -35,7 +35,6 @@
         "plane-data:tbf/tbf-storage",
         "plane-data:p39n/p39n-storage",
         "plane-data:bf110g2/bf110g2-storage",
-        "plane-data:hunterf6/hunterf6-storage",
         "plane-data:yak9u/yak9u-storage",
         "plane-data:la5/la5-storage",
         "plane-data:il2/il2-storage",
@@ -48,6 +47,7 @@
         "plane-data:re2005/re2005-storage",
         "plane-data:hurricanemkiic/hurricanemkiic-storage",
         "plane-data:spitfiremkv/spitfiremkv-storage",
-        "plane-data:lancastermk3/lancastermk3-storage"
+        "plane-data:lancastermk3/lancastermk3-storage",
+        "plane-data:hunterf6/hunterf6-storage"
     ]
 }
