@@ -51,3 +51,4 @@ execute at @s[tag=hurricanemkiic-spawner] as @p run function plane-data:hurrican
 execute at @s[tag=spitfiremkv-spawner] as @p run function plane-data:spitfiremkv/spitfiremkv
 execute at @s[tag=lancastermk3-spawner] as @p run function plane-data:lancastermk3/lancastermk3
 execute at @s[tag=hunterf6-spawner] as @p run function plane-data:hunterf6/hunterf6
+execute at @s[tag=venomfb4-spawner] as @p run function plane-data:venomfb4/venomfb4
