@@ -10,6 +10,7 @@
                     "functions": [
                         {
                             "function":"set_name",
+                            "target": "item_name",
                             "name":{"text":"空対空ミサイル","bold":true}
                         },
                         {

@@ -10,6 +10,7 @@
                     "functions": [
                         {
                             "function":"set_name",
+                            "target": "item_name",
                             "name":{"text":"MG 151航空機関砲","bold":true}
                         },
                         {
